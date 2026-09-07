@@ -144,13 +144,13 @@ async def setup_marine_scene(
 
     ocean_data = OceanAnimationDataModel(
         name="Ocean",
-        size=5000.0,
-        resolution=64,
+        size=16000.0,
+        resolution=128,
         wave_height=40.0,
         wave_length=650.0,
         choppiness=0.55,
         speed=0.7,
-        target_fps=20.0,
+        target_fps=15.0,
         position=(0.0, 0.0, 0.0),
     )
 
@@ -291,8 +291,8 @@ async def setup_marine_scene(
 
         vertical_follow_rate=40.0,
 
-        world_half_extent=2500.0,
-        turn_margin=400.0,
+        world_half_extent=7500.0,
+        turn_margin=1000.0,
         turn_rate=30.0,
     )
 

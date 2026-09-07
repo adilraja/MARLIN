@@ -16,6 +16,7 @@ import omni.usd
 
 from .api import router
 from . import scene_setup as _scene_setup
+from . import cetacean_gallery as _cetacean_gallery
 from .cetacean import shutdown_cetacean_swimming
 from .ocean import shutdown_ocean_animation
 from .water_material import RTX_WATER_SETTINGS

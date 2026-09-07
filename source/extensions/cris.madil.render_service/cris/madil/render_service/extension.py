@@ -12,6 +12,7 @@ import omni.ext
 import carb.settings
 from omni.services.core import main
 from .camera import shutdown_chase_camera
+from .cetacean_gallery import shutdown_gallery_swimming
 from .service import router, shutdown_cetacean_swimming, shutdown_ocean_animation
 from .underwater_api import (
     shutdown_underwater_cue,
@@ -44,6 +45,7 @@ class MyExtension(omni.ext.IExt):
 
     def on_shutdown(self):
         shutdown_chase_camera(restore_viewport=True)
+        shutdown_gallery_swimming()
         shutdown_cetacean_swimming()
         shutdown_ocean_animation()
         shutdown_underwater_cue()

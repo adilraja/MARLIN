@@ -25,7 +25,7 @@ class OceanDataModel(BaseModel):
     )
 
     size: float = Field(
-        default=5000.0,
+        default=16000.0,
         gt=0.0,
         description="Total width/depth of the ocean in stage units",
     )
@@ -560,7 +560,7 @@ class OceanAnimationDataModel(BaseModel):
     )
 
     size: float = Field(
-        default=5000.0,
+        default=16000.0,
         gt=0.0,
     )
 
@@ -1154,6 +1154,7 @@ async def start_ocean_animation(
 
     _ocean_animation_state = {
         "ocean_path": ocean_path,
+        "size": float(data.size),
         "resolution": data.resolution,
         "base_grid": base_grid,
         "waves": waves,
@@ -1204,6 +1205,7 @@ async def start_ocean_animation(
     return {
         "ok": True,
         "ocean_path": ocean_path,
+        "size": data.size,
         "resolution": data.resolution,
         "vertices": (
             data.resolution + 1
@@ -1256,6 +1258,7 @@ async def ocean_animation_status():
     return {
         "running": True,
         "ocean_path": _ocean_animation_state["ocean_path"],
+        "size": _ocean_animation_state["size"],
         "resolution": _ocean_animation_state["resolution"],
         "speed": _ocean_animation_state["speed"],
         "choppiness": _ocean_animation_state["choppiness"],

@@ -3,6 +3,62 @@ import os
 import sys
 
 
+def calculate_world_bounds(objects):
+    """Return combined evaluated world-space bounds for all mesh vertices."""
+    depsgraph = bpy.context.evaluated_depsgraph_get()
+    bounds_min = [float("inf")] * 3
+    bounds_max = [float("-inf")] * 3
+    mesh_count = 0
+    vertex_count = 0
+
+    bpy.context.view_layer.update()
+
+    for obj in objects:
+        if obj.type != "MESH":
+            continue
+
+        evaluated_obj = obj.evaluated_get(depsgraph)
+        mesh = evaluated_obj.to_mesh()
+
+        try:
+            matrix_world = evaluated_obj.matrix_world
+            mesh_count += 1
+
+            for vertex in mesh.vertices:
+                world_position = matrix_world @ vertex.co
+                vertex_count += 1
+
+                for axis in range(3):
+                    coordinate = float(world_position[axis])
+                    bounds_min[axis] = min(bounds_min[axis], coordinate)
+                    bounds_max[axis] = max(bounds_max[axis], coordinate)
+        finally:
+            evaluated_obj.to_mesh_clear()
+
+    if vertex_count == 0:
+        raise RuntimeError(
+            "The imported model contains no mesh vertices to measure."
+        )
+
+    dimensions = [
+        bounds_max[axis] - bounds_min[axis]
+        for axis in range(3)
+    ]
+
+    return {
+        "bounds_min": tuple(bounds_min),
+        "bounds_max": tuple(bounds_max),
+        "dimensions": tuple(dimensions),
+        "maximum_dimension": max(dimensions),
+        "mesh_count": mesh_count,
+        "vertex_count": vertex_count,
+    }
+
+
+def format_vector(values):
+    return tuple(round(float(value), 6) for value in values)
+
+
 def get_args():
     argv = sys.argv
 
@@ -67,6 +123,34 @@ for obj in bpy.context.scene.objects:
         print(
             f"{obj.type}: {obj.name}"
         )
+
+world_bounds = calculate_world_bounds(
+    bpy.context.scene.objects
+)
+
+print("\nWORLD-SPACE MODEL BOUNDS:")
+print(
+    "  minimum:",
+    format_vector(world_bounds["bounds_min"]),
+)
+print(
+    "  maximum:",
+    format_vector(world_bounds["bounds_max"]),
+)
+print(
+    "  dimensions X/Y/Z:",
+    format_vector(world_bounds["dimensions"]),
+)
+print(
+    "  maximum dimension:",
+    round(float(world_bounds["maximum_dimension"]), 6),
+)
+print(
+    "  measured meshes / vertices:",
+    world_bounds["mesh_count"],
+    "/",
+    world_bounds["vertex_count"],
+)
 
 os.makedirs(
     os.path.dirname(dst),

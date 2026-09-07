@@ -1,5 +1,8 @@
 # Omniverse Kit App Template
 
+> **MARLIN users:** See [Installing and Running MARLIN](INSTALL.md) for the
+> project-specific clone, build, launch, and API verification instructions.
+
 <p align="center">
   <img src="readme-assets/kit_app_template_banner.png" width=100% />
 </p>
