@@ -1,0 +1,18 @@
+[package]
+title = "CRIS Render Service"
+version = "0.1.0"
+description = "HTTP rendering service for CRIS"
+category = "CRIS"
+keywords = ["cris", "render", "service", "http", "usd"]
+
+[dependencies]
+"omni.kit.commands" = {}
+"omni.kit.renderer.capture" = {}
+"omni.kit.viewport.utility" = {}
+"omni.services.core" = {}
+"omni.services.transport.server.http" = {}
+"omni.timeline" = {}
+"omni.usd" = {}
+
+[[python.module]]
+name = "cris.madil.render_service"

@@ -1,0 +1,1311 @@
+# SPDX-FileCopyrightText: Copyright (c) 2024 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: LicenseRef-NvidiaProprietary
+#
+# NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+# property and proprietary rights in and to this material, related
+# documentation and any modifications thereto. Any use, reproduction,
+# disclosure or distribution of this material and related documentation
+# without an express license agreement from NVIDIA CORPORATION or
+# its affiliates is strictly prohibited.
+
+from pathlib import Path
+from pydantic import BaseModel, Field
+
+import omni.kit.commands
+import omni.usd
+from omni.services.core.routers import ServiceAPIRouter
+
+router = ServiceAPIRouter(tags=["CRIS Render Service"])
+
+
+class CubeDataModel(BaseModel):
+    """Model of a request for generating a cube."""
+
+    asset_write_location: str = Field(
+        default="/asset_write_path",
+        title="Asset Path",
+        description="Location on device to write generated asset",
+    )
+
+    asset_name: str = Field(
+        default="cube",
+        title="Asset Name",
+        description="Name of the asset to be generated, .usda will be appended to the name",
+    )
+
+    cube_scale: float = Field(
+        default=100,
+        title="Cube Scale",
+        description="Scale of the cube",
+    )
+
+
+@router.post(
+    "/generate_cube",
+    summary="Generate a cube",
+    description="An endpoint to generate a usda file containing a cube of given scale",
+)
+async def generate_cube(cube_data: CubeDataModel):
+    print("[CRIS Render Service] generate_cube was called")
+
+    # Create a new stage
+    usd_context = omni.usd.get_context()
+    usd_context.new_stage()
+    stage = omni.usd.get_context().get_stage()
+
+    # Set the default prim
+    default_prim_path = "/World"
+    stage.DefinePrim(default_prim_path, "Xform")
+    prim = stage.GetPrimAtPath(default_prim_path)
+    stage.SetDefaultPrim(prim)
+
+    # Create cube
+    prim_type = "Cube"
+    prim_path = f"/World/{prim_type}"
+
+    omni.kit.commands.execute(
+        "CreatePrim",
+        prim_path=prim_path,
+        prim_type=prim_type,
+        attributes={"size": cube_data.cube_scale},
+        select_new_prim=False,
+    )
+
+    # save stage
+    asset_file_path = str(Path(
+        cube_data.asset_write_location).joinpath(f"{cube_data.asset_name}.usda")
+    )
+    stage.GetRootLayer().Export(asset_file_path)
+    msg = f"[CRIS Render Service] Wrote a cube to this path: {asset_file_path}"
+    print(msg)
+    return msg
+
+
+# -------------------------------------------------------------------------
+# CRIS live-stage API
+# -------------------------------------------------------------------------
+
+from pxr import Gf, Sdf, UsdGeom
+
+
+class LiveCubeDataModel(BaseModel):
+    """Request model for creating/updating a cube on the live Kit stage."""
+
+    name: str = Field(
+        default="LiveCube",
+        title="Cube Name",
+        description="USD prim name under /World",
+    )
+
+    size: float = Field(
+        default=100.0,
+        gt=0.0,
+        title="Cube Size",
+        description="Edge length of the cube",
+    )
+
+    position: tuple[float, float, float] = Field(
+        default=(0.0, 0.0, 0.0),
+        title="Position",
+        description="XYZ translation",
+    )
+
+    rotation: tuple[float, float, float] = Field(
+        default=(0.0, 0.0, 0.0),
+        title="Rotation",
+        description="XYZ rotation in degrees",
+    )
+
+    scale: tuple[float, float, float] = Field(
+        default=(1.0, 1.0, 1.0),
+        title="Scale",
+        description="XYZ scale",
+    )
+
+
+@router.post(
+    "/scene/cube",
+    summary="Create or update a cube on the live stage",
+)
+async def create_live_cube(data: LiveCubeDataModel):
+    """Create or update a cube directly on the currently displayed USD stage."""
+
+    # Ensure the supplied name is a legal USD path component.
+    if not Sdf.Path.IsValidIdentifier(data.name):
+        return {
+            "ok": False,
+            "error": f"Invalid USD prim name: {data.name}",
+        }
+
+    # Get the stage currently owned/displayed by Kit.
+    stage = omni.usd.get_context().get_stage()
+
+    if stage is None:
+        return {
+            "ok": False,
+            "error": "No USD stage is currently open in Kit.",
+        }
+
+    # Ensure /World exists.
+    UsdGeom.Xform.Define(stage, "/World")
+
+    prim_path = f"/World/{data.name}"
+
+    # Define() creates the cube if necessary and gives us access
+    # to it if the prim already exists.
+    cube = UsdGeom.Cube.Define(stage, prim_path)
+    cube.GetSizeAttr().Set(data.size)
+
+    # Author normal USD transform operations.
+    xform = UsdGeom.XformCommonAPI(cube)
+
+    xform.SetTranslate(
+        Gf.Vec3d(
+            data.position[0],
+            data.position[1],
+            data.position[2],
+        )
+    )
+
+    xform.SetRotate(
+        Gf.Vec3f(
+            data.rotation[0],
+            data.rotation[1],
+            data.rotation[2],
+        ),
+        UsdGeom.XformCommonAPI.RotationOrderXYZ,
+    )
+
+    xform.SetScale(
+        Gf.Vec3f(
+            data.scale[0],
+            data.scale[1],
+            data.scale[2],
+        )
+    )
+
+    print(
+        f"[CRIS Render Service] Live cube updated: "
+        f"{prim_path} position={data.position}"
+    )
+
+    return {
+        "ok": True,
+        "prim_path": prim_path,
+        "size": data.size,
+        "position": data.position,
+        "rotation": data.rotation,
+        "scale": data.scale,
+    }
+
+
+# =========================================================================
+# CRIS Procedural Ocean
+# =========================================================================
+
+import math
+
+
+class OceanDataModel(BaseModel):
+    """Parameters for creating a procedural ocean on the live USD stage."""
+
+    name: str = Field(
+        default="Ocean",
+        description="USD prim name for the ocean",
+    )
+
+    size: float = Field(
+        default=5000.0,
+        gt=0.0,
+        description="Total width/depth of the ocean in stage units",
+    )
+
+    resolution: int = Field(
+        default=96,
+        ge=8,
+        le=256,
+        description="Number of grid divisions along each axis",
+    )
+
+    wave_height: float = Field(
+        default=40.0,
+        ge=0.0,
+        description="Approximate maximum wave amplitude",
+    )
+
+    wave_length: float = Field(
+        default=650.0,
+        gt=0.0,
+        description="Base wavelength in stage units",
+    )
+
+    choppiness: float = Field(
+        default=0.55,
+        ge=0.0,
+        le=1.5,
+        description="Horizontal displacement applied to wave crests",
+    )
+
+    position: tuple[float, float, float] = Field(
+        default=(0.0, 0.0, 0.0),
+        description="XYZ position of the complete ocean",
+    )
+
+
+@router.post(
+    "/scene/ocean",
+    summary="Create a procedural ocean on the live stage",
+)
+async def create_ocean(data: OceanDataModel):
+    """Generate a Gerstner-style procedural ocean mesh on the live Kit stage."""
+
+    if not Sdf.Path.IsValidIdentifier(data.name):
+        return {
+            "ok": False,
+            "error": f"Invalid USD prim name: {data.name}",
+        }
+
+    stage = omni.usd.get_context().get_stage()
+
+    if stage is None:
+        return {
+            "ok": False,
+            "error": "No USD stage is currently open in Kit.",
+        }
+
+    UsdGeom.Xform.Define(stage, "/World")
+
+    ocean_path = f"/World/{data.name}"
+
+    # Replace a previous ocean with the same name.
+    if stage.GetPrimAtPath(ocean_path):
+        stage.RemovePrim(ocean_path)
+
+    ocean = UsdGeom.Mesh.Define(stage, ocean_path)
+
+    resolution = data.resolution
+    vertex_count = resolution + 1
+    spacing = data.size / resolution
+    half_size = data.size * 0.5
+
+    # Several waves travelling in different directions.
+    # Together they produce a substantially more natural surface
+    # than a single sine wave.
+    wave_definitions = [
+        # direction X, direction Z, amplitude multiplier,
+        # wavelength multiplier, phase
+        (1.00,  0.15, 0.52, 1.00, 0.00),
+        (0.35,  1.00, 0.25, 0.58, 1.30),
+        (-0.70, 0.55, 0.15, 0.34, 2.10),
+        (0.80, -0.60, 0.08, 0.19, 3.40),
+    ]
+
+    points = []
+
+    min_x = float("inf")
+    min_y = float("inf")
+    min_z = float("inf")
+
+    max_x = float("-inf")
+    max_y = float("-inf")
+    max_z = float("-inf")
+
+    for row in range(vertex_count):
+
+        z = -half_size + row * spacing
+
+        for column in range(vertex_count):
+
+            x = -half_size + column * spacing
+
+            displaced_x = x
+            displaced_z = z
+            height = 0.0
+
+            for (
+                direction_x,
+                direction_z,
+                amplitude_factor,
+                wavelength_factor,
+                phase_offset,
+            ) in wave_definitions:
+
+                # Normalize the wave direction.
+                direction_length = math.sqrt(
+                    direction_x * direction_x +
+                    direction_z * direction_z
+                )
+
+                dx = direction_x / direction_length
+                dz = direction_z / direction_length
+
+                amplitude = data.wave_height * amplitude_factor
+                wavelength = data.wave_length * wavelength_factor
+
+                k = (2.0 * math.pi) / wavelength
+
+                theta = (
+                    k * (dx * x + dz * z)
+                    + phase_offset
+                )
+
+                # Vertical displacement.
+                height += amplitude * math.sin(theta)
+
+                # Gerstner-style horizontal displacement.
+                horizontal = (
+                    data.choppiness
+                    * amplitude
+                    * math.cos(theta)
+                )
+
+                displaced_x += dx * horizontal
+                displaced_z += dz * horizontal
+
+            point = Gf.Vec3f(
+                displaced_x,
+                height,
+                displaced_z,
+            )
+
+            points.append(point)
+
+            min_x = min(min_x, displaced_x)
+            min_y = min(min_y, height)
+            min_z = min(min_z, displaced_z)
+
+            max_x = max(max_x, displaced_x)
+            max_y = max(max_y, height)
+            max_z = max(max_z, displaced_z)
+
+    # ------------------------------------------------------------------
+    # Build quad topology.
+    #
+    # Winding is chosen so the surface normals face +Y.
+    # ------------------------------------------------------------------
+
+    face_vertex_counts = []
+    face_vertex_indices = []
+
+    for row in range(resolution):
+
+        for column in range(resolution):
+
+            i0 = row * vertex_count + column
+            i1 = i0 + 1
+            i3 = (row + 1) * vertex_count + column
+            i2 = i3 + 1
+
+            face_vertex_counts.append(4)
+
+            face_vertex_indices.extend([
+                i0,
+                i3,
+                i2,
+                i1,
+            ])
+
+    ocean.GetPointsAttr().Set(points)
+    ocean.GetFaceVertexCountsAttr().Set(face_vertex_counts)
+    ocean.GetFaceVertexIndicesAttr().Set(face_vertex_indices)
+
+    # Render the mesh exactly as generated rather than applying
+    # subdivision automatically.
+    ocean.GetSubdivisionSchemeAttr().Set(UsdGeom.Tokens.none)
+        # ------------------------------------------------------------------
+    # Smooth per-vertex normals
+    #
+    # Without authored normals, a polygonal mesh using subdivision
+    # scheme "none" is shaded face-by-face.  For water we want the
+    # lighting to flow smoothly across the generated wave surface.
+    # ------------------------------------------------------------------
+
+    normals = []
+
+    for row in range(vertex_count):
+
+        for column in range(vertex_count):
+
+            # Neighboring grid points used to estimate the local
+            # tangent directions.
+            left_col = max(column - 1, 0)
+            right_col = min(column + 1, resolution)
+
+            back_row = max(row - 1, 0)
+            front_row = min(row + 1, resolution)
+
+            p_left = points[
+                row * vertex_count + left_col
+            ]
+
+            p_right = points[
+                row * vertex_count + right_col
+            ]
+
+            p_back = points[
+                back_row * vertex_count + column
+            ]
+
+            p_front = points[
+                front_row * vertex_count + column
+            ]
+
+            # Tangent across X.
+            tx = p_right - p_left
+
+            # Tangent across Z.
+            tz = p_front - p_back
+
+            # tz × tx gives an upward-facing normal (+Y)
+            # for a flat X/Z surface.
+            nx = (
+                tz[1] * tx[2]
+                - tz[2] * tx[1]
+            )
+
+            ny = (
+                tz[2] * tx[0]
+                - tz[0] * tx[2]
+            )
+
+            nz = (
+                tz[0] * tx[1]
+                - tz[1] * tx[0]
+            )
+
+            normal_length = math.sqrt(
+                nx * nx
+                + ny * ny
+                + nz * nz
+            )
+
+            if normal_length > 1e-8:
+
+                nx /= normal_length
+                ny /= normal_length
+                nz /= normal_length
+
+            else:
+
+                nx = 0.0
+                ny = 1.0
+                nz = 0.0
+
+            normals.append(
+                Gf.Vec3f(nx, ny, nz)
+            )
+
+    ocean.CreateNormalsAttr().Set(normals)
+
+    ocean.SetNormalsInterpolation(
+        UsdGeom.Tokens.vertex
+    )
+
+    # Visible from above and below.
+    ocean.GetDoubleSidedAttr().Set(True)
+
+    # Explicit bounding box helps Kit/viewport framing.
+    ocean.GetExtentAttr().Set([
+        Gf.Vec3f(min_x, min_y, min_z),
+        Gf.Vec3f(max_x, max_y, max_z),
+    ])
+
+    # Temporary ocean colour.
+    #
+    # This is NOT the final water material. It simply makes the
+    # procedural surface easy to identify before we add realistic
+    # transmission/reflection/refraction.
+    ocean_prim = ocean.GetPrim()
+
+    ocean_prim.CreateAttribute(
+        "primvars:displayColor",
+        Sdf.ValueTypeNames.Color3fArray,
+    ).Set([
+        Gf.Vec3f(0.025, 0.16, 0.24)
+    ])
+
+    ocean_prim.CreateAttribute(
+        "primvars:displayColor:interpolation",
+        Sdf.ValueTypeNames.Token,
+    ).Set("constant")
+
+    # Position the entire ocean.
+    xform = UsdGeom.XformCommonAPI(ocean)
+
+    xform.SetTranslate(
+        Gf.Vec3d(
+            data.position[0],
+            data.position[1],
+            data.position[2],
+        )
+    )
+
+    total_vertices = len(points)
+    total_faces = len(face_vertex_counts)
+
+    print(
+        f"[CRIS Render Service] Procedural ocean created: "
+        f"{ocean_path}, "
+        f"vertices={total_vertices}, "
+        f"faces={total_faces}"
+    )
+
+    return {
+        "ok": True,
+        "prim_path": ocean_path,
+        "size": data.size,
+        "resolution": data.resolution,
+        "vertices": total_vertices,
+        "faces": total_faces,
+        "wave_height": data.wave_height,
+        "wave_length": data.wave_length,
+        "choppiness": data.choppiness,
+        "position": data.position,
+    }
+
+
+# =========================================================================
+# CRIS Ocean Water Material
+# =========================================================================
+
+from pxr import UsdShade
+
+
+class OceanMaterialDataModel(BaseModel):
+    """Physically based water appearance for the CRIS procedural ocean."""
+
+    ocean_name: str = Field(
+        default="Ocean",
+        description="Name of the ocean mesh under /World",
+    )
+
+    material_name: str = Field(
+        default="OceanWater",
+        description="Name of the water material under /World/Looks",
+    )
+
+    roughness: float = Field(
+        default=0.06,
+        ge=0.0,
+        le=1.0,
+        description="Surface reflection roughness",
+    )
+
+    ior: float = Field(
+        default=1.333,
+        ge=1.0,
+        le=3.0,
+        description="Index of refraction. Water is approximately 1.333",
+    )
+
+    transmission: float = Field(
+        default=0.35,
+        ge=0.0,
+        le=1.0,
+        description="Amount of light transmitted through the water surface",
+    )
+
+    base_weight: float = Field(
+        default=0.08,
+        ge=0.0,
+        le=1.0,
+        description="Small diffuse component used for the initial ocean appearance",
+    )
+
+    base_color: tuple[float, float, float] = Field(
+        default=(0.015, 0.12, 0.16),
+        description="Base ocean colour",
+    )
+
+    transmission_color: tuple[float, float, float] = Field(
+        default=(0.30, 0.55, 0.62),
+        description="Colour transmitted through the water",
+    )
+
+    thin_walled: bool = Field(
+        default=True,
+        description="Use thin-surface transmission for the current open ocean mesh",
+    )
+
+
+@router.post(
+    "/scene/ocean/material",
+    summary="Apply a physically based water material to the live ocean",
+)
+async def apply_ocean_material(data: OceanMaterialDataModel):
+
+    stage = omni.usd.get_context().get_stage()
+
+    if stage is None:
+        return {
+            "ok": False,
+            "error": "No live USD stage is currently open.",
+        }
+
+    ocean_path = f"/World/{data.ocean_name}"
+    ocean_prim = stage.GetPrimAtPath(ocean_path)
+
+    if not ocean_prim or not ocean_prim.IsValid():
+        return {
+            "ok": False,
+            "error": f"Ocean does not exist: {ocean_path}",
+        }
+
+    if not Sdf.Path.IsValidIdentifier(data.material_name):
+        return {
+            "ok": False,
+            "error": f"Invalid material name: {data.material_name}",
+        }
+
+    # ------------------------------------------------------------------
+    # Material hierarchy
+    # ------------------------------------------------------------------
+
+    UsdGeom.Scope.Define(stage, "/World/Looks")
+
+    material_path = Sdf.Path(
+        f"/World/Looks/{data.material_name}"
+    )
+
+    shader_path = material_path.AppendChild("Shader")
+
+    material = UsdShade.Material.Define(
+        stage,
+        material_path,
+    )
+
+    shader = UsdShade.Shader.Define(
+        stage,
+        shader_path,
+    )
+
+    # ------------------------------------------------------------------
+    # Use NVIDIA OmniSurface MDL
+    # ------------------------------------------------------------------
+
+    shader.CreateImplementationSourceAttr(
+        UsdShade.Tokens.sourceAsset
+    )
+
+    shader.SetSourceAsset(
+        "OmniSurface.mdl",
+        "mdl",
+    )
+
+    shader.SetSourceAssetSubIdentifier(
+        "OmniSurface",
+        "mdl",
+    )
+
+    shader.CreateOutput(
+        "out",
+        Sdf.ValueTypeNames.Token,
+    )
+
+    material.CreateSurfaceOutput(
+        "mdl"
+    ).ConnectToSource(
+        shader.ConnectableAPI(),
+        "out",
+    )
+
+    material.CreateVolumeOutput(
+        "mdl"
+    ).ConnectToSource(
+        shader.ConnectableAPI(),
+        "out",
+    )
+
+    material.CreateDisplacementOutput(
+        "mdl"
+    ).ConnectToSource(
+        shader.ConnectableAPI(),
+        "out",
+    )
+
+    # ------------------------------------------------------------------
+    # Base layer
+    # ------------------------------------------------------------------
+
+    shader.CreateInput(
+        "diffuse_reflection_weight",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.base_weight)
+
+    shader.CreateInput(
+        "diffuse_reflection_color",
+        Sdf.ValueTypeNames.Color3f,
+    ).Set(
+        Gf.Vec3f(*data.base_color)
+    )
+
+    shader.CreateInput(
+        "metalness",
+        Sdf.ValueTypeNames.Float,
+    ).Set(0.0)
+
+    # ------------------------------------------------------------------
+    # Water reflection
+    # ------------------------------------------------------------------
+
+    shader.CreateInput(
+        "specular_reflection_weight",
+        Sdf.ValueTypeNames.Float,
+    ).Set(1.0)
+
+    shader.CreateInput(
+        "specular_reflection_color",
+        Sdf.ValueTypeNames.Color3f,
+    ).Set(
+        Gf.Vec3f(1.0, 1.0, 1.0)
+    )
+
+    shader.CreateInput(
+        "specular_reflection_roughness",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.roughness)
+
+    shader.CreateInput(
+        "specular_reflection_ior",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.ior)
+
+    # ------------------------------------------------------------------
+    # Water transmission
+    # ------------------------------------------------------------------
+
+    shader.CreateInput(
+        "enable_specular_transmission",
+        Sdf.ValueTypeNames.Bool,
+    ).Set(True)
+
+    shader.CreateInput(
+        "specular_transmission_weight",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.transmission)
+
+    shader.CreateInput(
+        "specular_transmission_color",
+        Sdf.ValueTypeNames.Color3f,
+    ).Set(
+        Gf.Vec3f(*data.transmission_color)
+    )
+
+    # We currently have a geometrically thin ocean surface rather
+    # than a closed body of water.
+    shader.CreateInput(
+        "thin_walled",
+        Sdf.ValueTypeNames.Bool,
+    ).Set(data.thin_walled)
+
+    # ------------------------------------------------------------------
+    # Bind material to ocean
+    # ------------------------------------------------------------------
+
+    binding_api = UsdShade.MaterialBindingAPI.Apply(
+        ocean_prim
+    )
+
+    binding_api.Bind(material)
+
+    print(
+        f"[CRIS Render Service] Water material bound: "
+        f"{material_path} -> {ocean_path}"
+    )
+
+    return {
+        "ok": True,
+        "ocean_path": ocean_path,
+        "material_path": str(material_path),
+        "roughness": data.roughness,
+        "ior": data.ior,
+        "transmission": data.transmission,
+        "base_color": data.base_color,
+        "transmission_color": data.transmission_color,
+        "thin_walled": data.thin_walled,
+    }
+
+
+# =========================================================================
+# CRIS Natural Environment: Sky + Sun
+# =========================================================================
+
+import os
+from pxr import UsdLux
+
+
+class EnvironmentDataModel(BaseModel):
+    """Create a sky/environment and directional sun on the live stage."""
+
+    sky_texture: str | None = Field(
+        default=None,
+        description=(
+            "Optional absolute path to an HDR/EXR environment image. "
+            "If omitted, the DomeLight uses a constant sky colour."
+        ),
+    )
+
+    sky_intensity: float = Field(
+        default=500.0,
+        ge=0.0,
+        description="Intensity of the sky DomeLight",
+    )
+
+    sky_exposure: float = Field(
+        default=0.0,
+        description="Exposure adjustment for the sky DomeLight",
+    )
+
+    sky_color: tuple[float, float, float] = Field(
+        default=(0.45, 0.65, 1.0),
+        description="Sky colour when no HDRI texture is supplied",
+    )
+
+    sky_rotation: float = Field(
+        default=0.0,
+        description="Rotation of the environment around the vertical axis",
+    )
+
+    sun_intensity: float = Field(
+        default=3000.0,
+        ge=0.0,
+        description="Intensity of the directional sunlight",
+    )
+
+    sun_angle: float = Field(
+        default=0.53,
+        ge=0.0,
+        description="Angular diameter of the sun in degrees",
+    )
+
+    sun_rotation: tuple[float, float, float] = Field(
+        default=(-35.0, 25.0, 0.0),
+        description="XYZ rotation of the sun in degrees",
+    )
+
+    sun_color: tuple[float, float, float] = Field(
+        default=(1.0, 0.92, 0.78),
+        description="RGB colour of the sunlight",
+    )
+
+
+@router.post(
+    "/scene/environment",
+    summary="Create a natural sky and sun environment",
+)
+async def create_environment(data: EnvironmentDataModel):
+
+    stage = omni.usd.get_context().get_stage()
+
+    if stage is None:
+        return {
+            "ok": False,
+            "error": "No USD stage is currently open in Kit.",
+        }
+
+    UsdGeom.Xform.Define(stage, "/World")
+
+    environment_path = "/World/Environment"
+
+    # Replacing the environment makes repeated HTTP requests predictable.
+    if stage.GetPrimAtPath(environment_path):
+        stage.RemovePrim(environment_path)
+
+    UsdGeom.Xform.Define(stage, environment_path)
+
+    # ------------------------------------------------------------------
+    # SKY / ENVIRONMENT
+    # ------------------------------------------------------------------
+
+    sky_path = f"{environment_path}/Sky"
+
+    sky = UsdLux.DomeLight.Define(
+        stage,
+        sky_path,
+    )
+
+    sky.CreateIntensityAttr().Set(
+        data.sky_intensity
+    )
+
+    sky.CreateExposureAttr().Set(
+        data.sky_exposure
+    )
+
+    sky.CreateColorAttr().Set(
+        Gf.Vec3f(*data.sky_color)
+    )
+
+    # Make the dome orientation conform to the stage up axis.
+    sky.OrientToStageUpAxis()
+
+    sky_texture_used = None
+
+    if data.sky_texture:
+
+        sky_texture = os.path.abspath(
+            os.path.expanduser(data.sky_texture)
+        )
+
+        if not os.path.isfile(sky_texture):
+            return {
+                "ok": False,
+                "error": f"Sky texture does not exist: {sky_texture}",
+            }
+
+        sky.CreateTextureFileAttr().Set(
+            Sdf.AssetPath(sky_texture)
+        )
+
+        # Most HDRI skies use latitude/longitude mapping.
+        sky.CreateTextureFormatAttr().Set(
+            UsdLux.Tokens.latlong
+        )
+
+        sky_texture_used = sky_texture
+
+    # Rotate the environment around Y.
+    sky_xform = UsdGeom.XformCommonAPI(
+        sky.GetPrim()
+    )
+
+    sky_xform.SetRotate(
+        Gf.Vec3f(
+            0.0,
+            data.sky_rotation,
+            0.0,
+        ),
+        UsdGeom.XformCommonAPI.RotationOrderXYZ,
+    )
+
+    # ------------------------------------------------------------------
+    # SUN
+    # ------------------------------------------------------------------
+
+    sun_path = f"{environment_path}/Sun"
+
+    sun = UsdLux.DistantLight.Define(
+        stage,
+        sun_path,
+    )
+
+    sun.CreateIntensityAttr().Set(
+        data.sun_intensity
+    )
+
+    sun.CreateAngleAttr().Set(
+        data.sun_angle
+    )
+
+    sun.CreateColorAttr().Set(
+        Gf.Vec3f(*data.sun_color)
+    )
+
+    sun_xform = UsdGeom.XformCommonAPI(
+        sun.GetPrim()
+    )
+
+    sun_xform.SetRotate(
+        Gf.Vec3f(
+            data.sun_rotation[0],
+            data.sun_rotation[1],
+            data.sun_rotation[2],
+        ),
+        UsdGeom.XformCommonAPI.RotationOrderXYZ,
+    )
+
+    print(
+        "[CRIS Render Service] Natural environment created: "
+        f"Sky={sky_path}, Sun={sun_path}"
+    )
+
+    return {
+        "ok": True,
+        "environment_path": environment_path,
+        "sky_path": sky_path,
+        "sun_path": sun_path,
+        "sky_texture": sky_texture_used,
+        "sky_intensity": data.sky_intensity,
+        "sky_exposure": data.sky_exposure,
+        "sun_intensity": data.sun_intensity,
+        "sun_angle": data.sun_angle,
+        "sun_rotation": data.sun_rotation,
+    }
+
+
+# =========================================================================
+# CRIS Environment: procedural sky illumination + sun
+# =========================================================================
+
+from pxr import UsdLux
+
+
+class EnvironmentDataModel(BaseModel):
+    sky_intensity: float = Field(
+        default=1.0,
+        ge=0.0,
+        description="Brightness of the ambient sky light",
+    )
+
+    sky_exposure: float = Field(
+        default=0.0,
+        description="Exposure adjustment for the sky light",
+    )
+
+    sky_color: tuple[float, float, float] = Field(
+        default=(0.35, 0.55, 0.90),
+        description="RGB colour of the sky illumination",
+    )
+
+    sun_intensity: float = Field(
+        default=3000.0,
+        ge=0.0,
+        description="Brightness of the directional sun",
+    )
+
+    sun_angle: float = Field(
+        default=0.53,
+        ge=0.0,
+        description="Angular diameter of the sun in degrees",
+    )
+
+    sun_rotation: tuple[float, float, float] = Field(
+        default=(-35.0, 25.0, 0.0),
+        description="XYZ rotation of the sun in degrees",
+    )
+
+    sun_color: tuple[float, float, float] = Field(
+        default=(1.0, 0.92, 0.78),
+        description="RGB colour of the sunlight",
+    )
+
+
+@router.post(
+    "/scene/environment",
+    summary="Create a procedural sky light and sun",
+)
+async def create_environment(data: EnvironmentDataModel):
+
+    stage = omni.usd.get_context().get_stage()
+
+    if stage is None:
+        return {
+            "ok": False,
+            "error": "No live USD stage is currently open.",
+        }
+
+    UsdGeom.Xform.Define(stage, "/World")
+
+    environment_path = "/World/Environment"
+
+    if stage.GetPrimAtPath(environment_path):
+        stage.RemovePrim(environment_path)
+
+    UsdGeom.Xform.Define(stage, environment_path)
+
+    # ---------------------------------------------------------------
+    # Ambient sky illumination
+    # ---------------------------------------------------------------
+
+    sky_path = f"{environment_path}/Sky"
+
+    sky = UsdLux.DomeLight.Define(
+        stage,
+        sky_path,
+    )
+
+    sky.CreateIntensityAttr().Set(
+        data.sky_intensity
+    )
+
+    sky.CreateExposureAttr().Set(
+        data.sky_exposure
+    )
+
+    sky.CreateColorAttr().Set(
+        Gf.Vec3f(*data.sky_color)
+    )
+
+    sky.OrientToStageUpAxis()
+
+    # ---------------------------------------------------------------
+    # Directional sunlight
+    # ---------------------------------------------------------------
+
+    sun_path = f"{environment_path}/Sun"
+
+    sun = UsdLux.DistantLight.Define(
+        stage,
+        sun_path,
+    )
+
+    sun.CreateIntensityAttr().Set(
+        data.sun_intensity
+    )
+
+    sun.CreateAngleAttr().Set(
+        data.sun_angle
+    )
+
+    sun.CreateColorAttr().Set(
+        Gf.Vec3f(*data.sun_color)
+    )
+
+    sun_xform = UsdGeom.XformCommonAPI(
+        sun.GetPrim()
+    )
+
+    sun_xform.SetRotate(
+        Gf.Vec3f(*data.sun_rotation),
+        UsdGeom.XformCommonAPI.RotationOrderXYZ,
+    )
+
+    print(
+        "[CRIS Render Service] Environment created: "
+        f"{sky_path}, {sun_path}"
+    )
+
+    return {
+        "ok": True,
+        "environment_path": environment_path,
+        "sky_path": sky_path,
+        "sun_path": sun_path,
+        "sky_intensity": data.sky_intensity,
+        "sun_intensity": data.sun_intensity,
+        "sun_rotation": data.sun_rotation,
+    }
+
+
+# =========================================================================
+# CRIS Basic Ocean Material - robust diagnostic version
+# =========================================================================
+
+from pxr import UsdShade
+
+
+class BasicOceanMaterialDataModel(BaseModel):
+    ocean_name: str = "Ocean"
+
+    color: tuple[float, float, float] = Field(
+        default=(0.015, 0.12, 0.18),
+        description="Ocean RGB colour",
+    )
+
+    roughness: float = Field(
+        default=0.18,
+        ge=0.0,
+        le=1.0,
+    )
+
+    metallic: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+    )
+
+
+@router.post(
+    "/scene/ocean/material_basic",
+    summary="Apply a basic opaque water-like material",
+)
+async def apply_basic_ocean_material(data: BasicOceanMaterialDataModel):
+
+    stage = omni.usd.get_context().get_stage()
+
+    if stage is None:
+        return {
+            "ok": False,
+            "error": "No live USD stage is open.",
+        }
+
+    ocean_path = f"/World/{data.ocean_name}"
+    ocean_prim = stage.GetPrimAtPath(ocean_path)
+
+    if not ocean_prim or not ocean_prim.IsValid():
+        return {
+            "ok": False,
+            "error": f"Ocean not found: {ocean_path}",
+        }
+
+    UsdGeom.Scope.Define(stage, "/World/Looks")
+
+    material_path = "/World/Looks/OceanBasic"
+    shader_path = "/World/Looks/OceanBasic/Shader"
+
+    if stage.GetPrimAtPath(material_path):
+        stage.RemovePrim(material_path)
+
+    material = UsdShade.Material.Define(
+        stage,
+        material_path,
+    )
+
+    shader = UsdShade.Shader.Define(
+        stage,
+        shader_path,
+    )
+
+    shader.CreateIdAttr("UsdPreviewSurface")
+
+    shader.CreateInput(
+        "diffuseColor",
+        Sdf.ValueTypeNames.Color3f,
+    ).Set(
+        Gf.Vec3f(*data.color)
+    )
+
+    shader.CreateInput(
+        "roughness",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.roughness)
+
+    shader.CreateInput(
+        "metallic",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.metallic)
+
+    shader.CreateInput(
+        "ior",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.ior)
+
+    shader.CreateInput(
+        "clearcoat",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.clearcoat)
+
+    shader.CreateInput(
+        "clearcoatRoughness",
+        Sdf.ValueTypeNames.Float,
+    ).Set(data.clearcoat_roughness)
+
+    # Crucial: stay fully visible.
+    shader.CreateInput(
+        "opacity",
+        Sdf.ValueTypeNames.Float,
+    ).Set(1.0)
+    shader.CreateOutput(
+        "surface",
+        Sdf.ValueTypeNames.Token,
+    )
+
+    material.CreateSurfaceOutput().ConnectToSource(
+        shader.ConnectableAPI(),
+        "surface",
+    )
+
+    UsdShade.MaterialBindingAPI.Apply(
+        ocean_prim
+    ).Bind(material)
+
+    print(
+        f"[CRIS Render Service] Basic ocean material bound to {ocean_path}"
+    )
+
+    return {
+        "ok": True,
+        "ocean_path": ocean_path,
+        "material_path": material_path,
+        "color": data.color,
+        "roughness": data.roughness,
+    }

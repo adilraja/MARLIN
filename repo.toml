@@ -123,8 +123,7 @@ publish_pip_cache = false
 
 [repo_precache_exts]
 # Apps to run and precache
-apps = [
-]
+apps = ["${root}/source/apps/cris.madil.kit", "${root}/source/apps/cris.madil_streaming.kit", "${root}/source/apps/cris.madil_nvcf.kit"]
 
 # registries = [
 #     { name = "kit/default", url = "https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/${kit_version_short}/shared" },
@@ -284,3 +283,6 @@ package_cmd = "_package"
 enabled = true
 gui_cli = true
 auto_generate = true
+container = [
+    {kit_app = "cris.madil.kit", dockerfile = "tools/containers/Dockerfile", entrypoint = "tools/containers/entrypoint.sh", extra_files = ["tools/containers/*.py"], name = "cris-madil"},
+]
