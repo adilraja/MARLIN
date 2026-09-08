@@ -1,0 +1,77 @@
+{
+  "preset_id": "survey_fixed_v1",
+  "version": "1.0.0",
+  "status": "visual_QA_pending",
+  "ocean": {
+    "name": "Ocean",
+    "size": 16000,
+    "resolution": 64,
+    "wave_height": 0,
+    "wave_length": 650,
+    "choppiness": 0,
+    "speed": 0,
+    "target_fps": 1,
+    "position": [
+      0,
+      0,
+      0
+    ]
+  },
+  "environment": {
+    "sky_intensity": 500,
+    "sky_exposure": 0,
+    "sky_color": [
+      0.75,
+      0.75,
+      0.75
+    ],
+    "sun_intensity": 0,
+    "sun_angle": 0.53,
+    "sun_rotation": [
+      -35,
+      25,
+      0
+    ],
+    "sun_color": [
+      1,
+      1,
+      1
+    ]
+  },
+  "material": {
+    "ocean_name": "Ocean",
+    "material_name": "OceanWater",
+    "ior": 1.333,
+    "roughness": 0.15,
+    "transmission": 1,
+    "base_weight": 0.02,
+    "base_color": [
+      0.02,
+      0.1,
+      0.13
+    ],
+    "transmission_color": [
+      0.78,
+      0.92,
+      0.95
+    ],
+    "transmission_depth": 100,
+    "scattering_color": [
+      0.005,
+      0.02,
+      0.03
+    ],
+    "scattering_anisotropy": 0,
+    "thin_walled": true
+  },
+  "underwater_cue": {
+    "enabled": false
+  },
+  "notes": [
+    "Engineering appearance preset, not measured environmental optics.",
+    "Flat ocean at Y=0 retains shared ocean sampler with zero wave amplitudes.",
+    "No directional sun; uniform diffuse dome. Reflections remain physically possible.",
+    "No precipitation system is created. Additional lights or weather require inspection.",
+    "Camera exposure and renderer settings still require calibration and recording."
+  ]
+}

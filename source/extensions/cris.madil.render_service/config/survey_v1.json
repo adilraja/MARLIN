@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0.0",
+  "status": "draft_requires_calibration",
+  "source": "MARLIN_AGENTS_revised_instructions-from-Ger.md",
+  "coordinate_system": {
+    "up_axis": "Y",
+    "heading_zero": "+Z",
+    "heading_90": "+X",
+    "meters_per_scene_unit": null
+  },
+  "gsd_levels_cm_px": [
+    0.5,
+    1,
+    2,
+    3,
+    4
+  ],
+  "environment": {
+    "sea": "calm",
+    "lighting": "overcast_diffuse",
+    "sun_glint": false,
+    "water_preset": "survey_fixed_v1",
+    "precipitation": false,
+    "randomisation": false
+  },
+  "cameras": {
+    "hidef": {
+      "model": "Prosilica GT6600C",
+      "focal_length_mm": 150,
+      "altitude_m": 549,
+      "nominal_gsd_cm_px": 2,
+      "image_size_px": [
+        6576,
+        2192
+      ],
+      "pixel_pitch_um": null,
+      "pitch_deg": 30,
+      "roll_cases_deg": [
+        7.77,
+        23.17
+      ],
+      "pose_convention": null,
+      "expected_local_gsd_cm_px": [
+        2.22,
+        3.36
+      ],
+      "approximate_swath_m": null
+    },
+    "sony": {
+      "model": "Sony ILX-LR1",
+      "focal_length_mm": 85,
+      "altitude_m": 150,
+      "nominal_gsd_cm_px": 0.663,
+      "image_size_px": null,
+      "pixel_pitch_um": null,
+      "pitch_deg": null,
+      "roll_cases_deg": [],
+      "pose_convention": null,
+      "expected_local_gsd_cm_px": null,
+      "approximate_swath_m": 63
+    }
+  },
+  "tasks": {
+    "detection": {
+      "metric": "recall",
+      "threshold": 0.9,
+      "status": "candidate",
+      "iou_threshold": null
+    },
+    "group_classification": {
+      "metric": null,
+      "threshold": null,
+      "status": "pending_PI"
+    },
+    "species_classification": {
+      "metric": null,
+      "threshold": null,
+      "status": "pending_PI"
+    }
+  },
+  "randomisation": {
+    "master_seed": 20260908,
+    "strategy": "paired_stratified_across_gsd",
+    "variables": [
+      "pose",
+      "heading",
+      "image_position",
+      "surfacing_state",
+      "bird_state",
+      "bird_altitude_m",
+      "individual_placement"
+    ],
+    "strata": null,
+    "samples_per_stratum": null,
+    "rules": [
+      "Use identical nuisance strata and counts at every GSD.",
+      "Draw nuisance conditions once per condition_id; reuse across all GSD levels.",
+      "Apply bird-only variables only to birds; on-water altitude is zero relative to the surface.",
+      "Record target-plane effective GSD for flying birds.",
+      "Validate equal stratum counts before rendering."
+    ]
+  },
+  "splits": {
+    "group_by": [
+      "scene_id",
+      "asset_instance_id",
+      "sequence_id",
+      "condition_id"
+    ],
+    "ratios": null,
+    "policy": "Assign connected groups sharing any protected identifier to one split before expanding GSD variants."
+  },
+  "sweep": {
+    "method": null,
+    "local_gsd": "Future oblique camera projection must report directional local GSD at target position.",
+    "pixels_on_target": [
+      "visible_mask_area_px",
+      "bbox_width_px",
+      "bbox_height_px"
+    ],
+    "threshold_output": "Coarsest acceptable GSD (largest cm/px meeting the approved criterion)."
+  },
+  "annotations": {
+    "source": "simulator_ground_truth",
+    "required_formats": [
+      "coco_json",
+      "frame_metadata_json"
+    ],
+    "optional_formats": [
+      "yolo_boxes",
+      "frame_metadata_csv"
+    ],
+    "required_fields": [
+      "frame_id",
+      "species_id",
+      "group_id",
+      "task_labels",
+      "world_position",
+      "image_position",
+      "orientation",
+      "heading_deg",
+      "state",
+      "bird_altitude_m",
+      "camera_id",
+      "camera_pose",
+      "nominal_gsd_cm_px",
+      "local_gsd_x_cm_px",
+      "local_gsd_y_cm_px",
+      "visible_mask_area_px",
+      "bbox_xywh_px",
+      "scene_id",
+      "asset_instance_id",
+      "sequence_id",
+      "condition_id",
+      "split",
+      "seed",
+      "spec_version"
+    ],
+    "bbox_convention": "COCO top-left x,y,width,height in pixels; image origin top-left",
+    "bird_altitude_convention": "Metres above local water surface; null for non-avian targets."
+  },
+  "open_decisions": [
+    "Physical scene unit calibration",
+    "Camera pixel pitch and crop/sensor mode",
+    "HiDef pitch/roll reference axes and rotation order",
+    "Sony image dimensions and pose",
+    "Species identity and both bird poses verified visually",
+    "Classification metrics and thresholds; detection IoU and confidence selection",
+    "Sweep mechanism, sample counts, nuisance strata and flight altitude range",
+    "Split fractions and asset diversity",
+    "Controlled water/lighting preset implementation"
+  ],
+  "evaluation": "synthetic_to_synthetic"
+}
