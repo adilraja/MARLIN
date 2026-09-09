@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "test_kind": "engineering_nadir_planar_target",
+  "scientific_camera_calibrated": false,
+  "config": {
+    "meters_per_scene_unit": 0.01,
+    "image_width_px": 1024,
+    "image_height_px": 768,
+    "focal_length_mm": 50.0,
+    "pixel_pitch_um": 5.0,
+    "height_above_target_m": 100.0,
+    "target_width_m": 2.0,
+    "target_height_m": 1.0,
+    "target_plane_y_m": 1000.0
+  },
+  "gsd_cm_px": 1.0,
+  "expected_bbox_xywh_px": [
+    412.0,
+    334.0,
+    200.0,
+    100.0
+  ],
+  "intrinsics_px": {
+    "fx": 10000.0,
+    "fy": 10000.0,
+    "cx": 512.0,
+    "cy": 384.0
+  },
+  "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+  "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+  "camera_position_m": [
+    0,
+    1100.0,
+    0
+  ],
+  "camera_rotation_xyz_deg": [
+    -90,
+    0,
+    0
+  ],
+  "world_up": "Y",
+  "image_right_world": "+X",
+  "image_down_world": "+Z",
+  "seed": 0,
+  "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+  "actual_viewport_resolution": [
+    1024,
+    768
+  ],
+  "actual_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      2.220446049250313e-16,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      2.220446049250313e-16,
+      0.0
+    ],
+    [
+      0.0,
+      -2.4424906541753444e-11,
+      -110000.0,
+      1.0
+    ]
+  ],
+  "actual_projection_matrix": [
+    [
+      18.459916024425617,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      26.041667248743284,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0100502512562815,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -201.00502512562815,
+      0.0
+    ]
+  ],
+  "usd_context": "marlin_calibration_e7fc2a0bb12748e0baf8dceb4c413109",
+  "default_stage_retained": true,
+  "scene_sha256": "ec31a750a1dc05aea353c94859a9fb2deca9ef84beb1a0a5a5cc10e9d7f04ae0",
+  "rendered_image": "rgb.png",
+  "scene_file": "scene.usda",
+  "validation_status": "rendered_not_yet_measured"
+}

@@ -1,0 +1,83 @@
+#usda 1.0
+(
+    defaultPrim = "Calibration"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "Calibration"
+{
+    def Mesh "Target_00" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_00>
+        point3f[] points = [(-100, 100000, -50), (-100, 100000, 50), (100, 100000, 50), (100, 100000, -50)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def "Looks"
+    {
+        def Material "Target_00"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_00/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Background"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Background/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+    }
+
+    def Mesh "Background" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Background>
+        point3f[] points = [(-5120, 99999, -3840), (-5120, 99999, 3840), (5120, 99999, 3840), (5120, 99999, -3840)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Camera "Camera"
+    {
+        float2 clippingRange = (100, 50000)
+        float focalLength = 50
+        float fStop = 0
+        float horizontalAperture = 5.12
+        float horizontalApertureOffset = 0
+        token projection = "perspective"
+        float verticalAperture = 3.84
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (0, 110000, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+

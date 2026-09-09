@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0.0",
+  "inputs": {
+    "schema_version": "1.0.0",
+    "camera_to_plane_m": 549,
+    "focal_length_mm": 150,
+    "sensor_width_mm": 36,
+    "sensor_height_mm": 12,
+    "image_width_px": 6576,
+    "image_height_px": 2192,
+    "pitch_from_nadir_deg": 30,
+    "rolls_deg": [
+      7.7675,
+      23.1748
+    ],
+    "principal_point_assumption": "output centre; nominal reconstruction, deployed ROI origin unresolved",
+    "rotation_assumption": "Apply roll about world +Z to nadir basis, then pitch about world +X: Rx(pitch) Rz(roll) R_nadir",
+    "array_assumption": "Four cameras at coincident origin with mirrored rolls; mechanical baselines unknown",
+    "target_plane": "Y=0, flat; camera at (0,549,0) metres",
+    "parameter_fitting": false
+  },
+  "input_sha256": "b3a2fb382f218c240cb5b4cf0ebc9de4ea05ab3df7a5a996591bdbc7c3711bca",
+  "parameter_fitting": false,
+  "nominal_nadir_gsd_width_height_cm_px": [
+    2.0036496350364965,
+    2.0036496350364965
+  ],
+  "map_sampling": "Full resolution. Forward pixel-centre neighbour spacing; width last column and height last row are NaN. Area uses pixel-edge quadrilaterals.",
+  "storage": "float32 .npy maps; extrema/comparisons calculated in float64; plots subsampled every 8 pixels",
+  "anisotropy_definition": "height / width, not averaged GSD; not necessarily >=1",
+  "cases": [
+    {
+      "roll_deg": 7.7675,
+      "gsd_width_cm_px": {
+        "simulated_min": 2.230197718526864,
+        "simulated_max": 2.4969436526053075,
+        "published_min": 2.22,
+        "absolute_error_min": 0.01019771852686402,
+        "relative_error_min": 0.004593566903992801,
+        "published_max": 2.49,
+        "absolute_error_max": 0.006943652605307271,
+        "relative_error_max": 0.002788615504139466
+      },
+      "gsd_height_cm_px": {
+        "simulated_min": 2.5354291049304685,
+        "simulated_max": 2.8999989364864844,
+        "published_min": 2.53,
+        "absolute_error_min": 0.0054291049304686645,
+        "relative_error_min": 0.002145891276865085,
+        "published_max": 2.89,
+        "absolute_error_max": 0.009998936486484311,
+        "relative_error_max": 0.0034598396147004534
+      },
+      "anisotropy_height_over_width": {
+        "simulated_min": 1.1094976177244813,
+        "simulated_max": 1.1900318900151134
+      },
+      "effective_pixel_area_cm2": {
+        "simulated_min": 5.654354393014186,
+        "simulated_max": 7.174485273551115
+      },
+      "footprint": {
+        "roll_deg": 7.7675,
+        "corners_xz_m": [
+          [
+            10.472384186270945,
+            -346.72293522706326
+          ],
+          [
+            169.2586444810687,
+            -347.73736696665907
+          ],
+          [
+            161.42290228573282,
+            -287.6178057745592
+          ],
+          [
+            10.002836292746307,
+            -288.54189672414674
+          ]
+        ],
+        "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+        "top_edge_length_m": 158.78950069246255,
+        "bottom_edge_length_m": 151.4228857518027,
+        "x_extent_m": 159.2558081883224,
+        "z_extent_m": 60.119561192099866
+      }
+    },
+    {
+      "roll_deg": 23.1748,
+      "gsd_width_cm_px": {
+        "simulated_min": 2.413005344314386,
+        "simulated_max": 3.142100419468102,
+        "published_min": 2.4,
+        "absolute_error_min": 0.013005344314386047,
+        "relative_error_min": 0.00541889346432752,
+        "published_max": 3.14,
+        "absolute_error_max": 0.0021004194681020216,
+        "relative_error_max": 0.0006689233974847202
+      },
+      "gsd_height_cm_px": {
+        "simulated_min": 2.6648225979809683,
+        "simulated_max": 3.364276701982872,
+        "published_min": 2.66,
+        "absolute_error_min": 0.00482259798096818,
+        "relative_error_min": 0.0018130067597624735,
+        "published_max": 3.36,
+        "absolute_error_max": 0.004276701982872222,
+        "relative_error_max": 0.0012728279710929233
+      },
+      "anisotropy_height_over_width": {
+        "simulated_min": 1.0262230379463435,
+        "simulated_max": 1.1521781277550136
+      },
+      "effective_pixel_area_cm2": {
+        "simulated_min": 6.377644899733935,
+        "simulated_max": 10.099892928809531
+      },
+      "footprint": {
+        "roll_deg": 23.1748,
+        "corners_xz_m": [
+          [
+            190.30609893722132,
+            -348.00069004686867
+          ],
+          [
+            376.22218559039385,
+            -351.4533368984618
+          ],
+          [
+            356.8104505209536,
+            -284.25671959663225
+          ],
+          [
+            181.42410416094836,
+            -287.3783940031525
+          ]
+        ],
+        "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+        "top_edge_length_m": 185.94814343443113,
+        "bottom_edge_length_m": 175.41412525966103,
+        "x_extent_m": 194.7980814294455,
+        "z_extent_m": 67.19661730182958
+      }
+    }
+  ],
+  "array_footprints": [
+    {
+      "roll_deg": -23.1748,
+      "corners_xz_m": [
+        [
+          -376.22218559039385,
+          -351.4533368984618
+        ],
+        [
+          -190.30609893722132,
+          -348.00069004686867
+        ],
+        [
+          -181.42410416094836,
+          -287.3783940031525
+        ],
+        [
+          -356.8104505209536,
+          -284.25671959663225
+        ]
+      ],
+      "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+      "top_edge_length_m": 185.94814343443113,
+      "bottom_edge_length_m": 175.41412525966103,
+      "x_extent_m": 194.7980814294455,
+      "z_extent_m": 67.19661730182958
+    },
+    {
+      "roll_deg": -7.7675,
+      "corners_xz_m": [
+        [
+          -169.2586444810687,
+          -347.73736696665907
+        ],
+        [
+          -10.472384186270945,
+          -346.72293522706326
+        ],
+        [
+          -10.002836292746307,
+          -288.54189672414674
+        ],
+        [
+          -161.42290228573282,
+          -287.6178057745592
+        ]
+      ],
+      "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+      "top_edge_length_m": 158.78950069246255,
+      "bottom_edge_length_m": 151.4228857518027,
+      "x_extent_m": 159.2558081883224,
+      "z_extent_m": 60.119561192099866
+    },
+    {
+      "roll_deg": 7.7675,
+      "corners_xz_m": [
+        [
+          10.472384186270945,
+          -346.72293522706326
+        ],
+        [
+          169.2586444810687,
+          -347.73736696665907
+        ],
+        [
+          161.42290228573282,
+          -287.6178057745592
+        ],
+        [
+          10.002836292746307,
+          -288.54189672414674
+        ]
+      ],
+      "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+      "top_edge_length_m": 158.78950069246255,
+      "bottom_edge_length_m": 151.4228857518027,
+      "x_extent_m": 159.2558081883224,
+      "z_extent_m": 60.119561192099866
+    },
+    {
+      "roll_deg": 23.1748,
+      "corners_xz_m": [
+        [
+          190.30609893722132,
+          -348.00069004686867
+        ],
+        [
+          376.22218559039385,
+          -351.4533368984618
+        ],
+        [
+          356.8104505209536,
+          -284.25671959663225
+        ],
+        [
+          181.42410416094836,
+          -287.3783940031525
+        ]
+      ],
+      "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+      "top_edge_length_m": 185.94814343443113,
+      "bottom_edge_length_m": 175.41412525966103,
+      "x_extent_m": 194.7980814294455,
+      "z_extent_m": 67.19661730182958
+    }
+  ],
+  "footprint_gaps": [
+    {
+      "roll_pair_deg": [
+        -23.1748,
+        -7.7675
+      ],
+      "definition": "Across-track X clearance at common world Z, restricted to overlap of facing side edges; negative means overlap",
+      "sections_z_m": [
+        -347.73736696665907,
+        -346.72293522706326,
+        -288.54189672414674,
+        -287.6178057745592
+      ],
+      "gaps_m": [
+        21.008874026582504,
+        20.992462873967753,
+        20.05122861947126,
+        20.03627897129715
+      ],
+      "min_gap_m": 20.03627897129715,
+      "max_gap_m": 21.008874026582504
+    },
+    {
+      "roll_pair_deg": [
+        -7.7675,
+        7.7675
+      ],
+      "definition": "Across-track X clearance at common world Z, restricted to overlap of facing side edges; negative means overlap",
+      "sections_z_m": [
+        -346.72293522706326,
+        -288.54189672414674
+      ],
+      "gaps_m": [
+        20.944768372541887,
+        20.005672585492615
+      ],
+      "min_gap_m": 20.005672585492615,
+      "max_gap_m": 20.944768372541887
+    },
+    {
+      "roll_pair_deg": [
+        7.7675,
+        23.1748
+      ],
+      "definition": "Across-track X clearance at common world Z, restricted to overlap of facing side edges; negative means overlap",
+      "sections_z_m": [
+        -347.73736696665907,
+        -346.72293522706326,
+        -288.54189672414674,
+        -287.6178057745592
+      ],
+      "gaps_m": [
+        21.008874026582504,
+        20.992462873967753,
+        20.05122861947126,
+        20.03627897129715
+      ],
+      "min_gap_m": 20.03627897129715,
+      "max_gap_m": 21.008874026582504
+    }
+  ],
+  "published_gap_description": "20 m at footprint bottom; greater than 21 m at top; reconstructed constraint, not independent mounting measurement",
+  "conclusion": "Independent reconstruction, not a deployment calibration. Differences are reported, not fitted away.",
+  "unresolved": [
+    "deployed camera identity",
+    "ROI versus binning",
+    "ROI origin",
+    "exact rotation composition and yaw",
+    "physical camera baselines and measured mount angles",
+    "historical barometric altitude to sea reference",
+    "lens intrinsics and distortion"
+  ]
+}

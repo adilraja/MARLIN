@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "method": "RGB diagnostic versus projected polygons; NOT wildlife ground truth",
+  "image_size_px": [
+    1024,
+    768
+  ],
+  "contrast_8bit": 228.0,
+  "bbox_tolerance_px": 2,
+  "minimum_polygon_iou": 0.95,
+  "targets": [
+    {
+      "id": "Target_00",
+      "passed": true,
+      "expected_bbox_xywh_px": [
+        412.0,
+        334.0,
+        200.0,
+        100.0
+      ],
+      "measured_boxes_xywh_px": [
+        [
+          412,
+          334,
+          200,
+          100
+        ],
+        [
+          412,
+          334,
+          200,
+          100
+        ],
+        [
+          412,
+          334,
+          200,
+          100
+        ]
+      ],
+      "absolute_errors_px": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "polygon_iou": [
+        0.9851731441800896,
+        0.9851731441800896,
+        0.9850746268656716
+      ],
+      "predicted_local_gsd_xy_cm_px": [
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "review_image": "review.png",
+  "gsd_note": "Directional GSD is ray/plane prediction; render validation checks projected polygons, not a direct GSD measurement."
+}

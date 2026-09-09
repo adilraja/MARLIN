@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "review_date": "2026-09-09",
+  "status": "hardware_evidence_not_trial_calibration",
+  "applied_to_survey_config": false,
+  "hidef": {
+    "model": "Allied Vision Prosilica GT6600C",
+    "model_status": "inferred from metadata; not deployment-certified",
+    "manufacturer_facts_status": "manufacturer specification for candidate model only",
+    "roll_source": "inferred_from_ground_footprint_geometry",
+    "initial_roll_estimates_deg": [7.5, 22.5],
+    "simulation_rolls_deg": [7.7675, 23.1748],
+    "roll_derivation": "Published simulation adjusted rolls to obtain 20 m footprint separation; physical installation may differ",
+    "acquisition": {
+      "recorded_image_dimensions_px": [6576, 2192],
+      "observed_frame_rate_fps": 6.51,
+      "acquisition_mode": "unresolved",
+      "likely_mode": "half-height ROI",
+      "alternative": "vertical binning by factor 2; possible but less likely",
+      "reason": "Paper reports frame rate consistent with theoretical half-height ROI maximum",
+      "roi_centered": null,
+      "roi_origin_px": null,
+      "roi_offset_status": "user-adjustable; deployed origin unresolved"
+    },
+    "altitude": {
+      "nominal_survey_height_m": 549,
+      "historical_altitude_type": "barometric, not radar",
+      "historical_observed_range_m": [437.5, 580.5],
+      "aircraft_pitch_roll_recorded": false,
+      "aircraft_heading_recorded": true,
+      "target_plane_height_reference": "unresolved",
+      "controlled_validation_camera_to_plane_separation_m": 549
+    },
+    "paper_nominal_pinhole": {
+      "status": "published nominal model, not oblique calibration",
+      "sensor_dimensions_mm": [36, 12],
+      "image_dimensions_px": [6576, 2192],
+      "focal_length_mm": 150,
+      "camera_to_plane_separation_m": 549,
+      "expected_gsd_width_height_cm_px": [2.0036, 2.0036]
+    },
+    "manufacturer_model_family": "Prosilica GT 6600",
+    "native_resolution_px": [6576, 4384],
+    "native_pixel_pitch_um": [5.5, 5.5],
+    "source": "https://www.alliedvision.com/assets/support/Camera-Documentation/Allied-Vision/Cameras/Prosilica/Data-Sheets-Discontinued/Prosilica_GT_6600_DataSheet_en.pdf",
+    "pi_output_resolution_px": [6576, 2192],
+    "output_sampling_and_crop_confirmed": false,
+    "pose_convention_confirmed": false,
+    "paper_review": {
+      "citation": "Bartlett et al. (2025), Supporting offshore wind growth: Automating data analysis in digital aerial surveys to enhance wildlife protection and survey efficiency, Ecological Informatics 90, 103242",
+      "doi": "10.1016/j.ecoinf.2025.103242",
+      "evidence_basis": "User-provided paper-review instructions dated 2026-09-09",
+      "nominal_pitch_from_nadir_deg": 30,
+      "pitch_reference_status": "explicit_in_paper_per_review",
+      "glare_handling": "possible 180-deg rig yaw reversal",
+      "glare_handling_status": "interpretation_not_exact_yaw_convention",
+      "pitch_sign_reversal_inferred": false,
+      "exact_yaw_convention": null,
+      "full_rotation_convention_resolved": false
+    },
+    "nadir_consistency_check": {
+      "basis": "manufacturer pitch check, not the paper's 36 x 12 mm nominal model",
+      "height_m": 549,
+      "focal_length_mm": 150,
+      "derived_gsd_cm_px": 2.013,
+      "not_oblique_validation": true
+    }
+  },
+  "sony": {
+    "published_trial_parameters": {
+      "status": "published trial parameters, not complete intrinsic calibration",
+      "camera": "Sony ILX-LR1",
+      "focal_length_mm": 85,
+      "flight_altitude_m": 150,
+      "nominal_gsd_cm_px": 0.6629,
+      "nominal_swath_width_m": 63,
+      "platform": "autonomous fixed-wing UAV",
+      "source_doi": "10.1016/j.ecoinf.2025.103242"
+    },
+    "unresolved_trial_specific": ["image mode", "pixel dimensions", "crop", "RAW/JPEG", "lens correction", "intrinsics", "distortion coefficients", "mounting pitch/roll/yaw", "exact lens model", "focus setting"],
+    "model": "ILX-LR1",
+    "published_sensor_dimensions_mm": [35.7, 23.8],
+    "sensor_source": "https://helpguide.sony.net/ilc/2390/v1/en/contents/221h_specifications.html",
+    "documented_mode": "full-frame 3:2 L JPEG/HEIF still image",
+    "documented_mode_resolution_px": [9504, 6336],
+    "mode_source": "https://helpguide.sony.net/ilc/2390/v1/en/contents/0404M_jpeg_image_size.html",
+    "trial_mode_confirmed": false,
+    "derived_effective_pitch_um": 3.7563131313131315,
+    "pitch_status": "approximation_from_rounded_sensor_dimensions_and_assumed_full_width_output_not_direct_photosite_specification",
+    "pose_convention_confirmed": false,
+    "nadir_consistency_check": {
+      "height_m": 150,
+      "focal_length_mm": 85,
+      "derived_gsd_cm_px": 0.6628787878787881,
+      "derived_horizontal_swath_m": 63.0
+    }
+  }
+}

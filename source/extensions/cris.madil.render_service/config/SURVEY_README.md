@@ -1,6 +1,6 @@
 # Survey specification v1
 
-The specification is a draft implementing Ger's research-specification milestone. It is not a renderer or an approved experimental protocol. Existing Kit APIs are unaffected.
+The specification is a draft implementing Ger's research-specification milestone. It is not a renderer or an approved experimental protocol. Existing Kit APIs are unaffected. See [SURVEY_READINESS.md](SURVEY_READINESS.md) for the 2026-09-09 calibration audit and the distinction between a geometry-only test and a calibrated wildlife capture.
 
 Load and validate with the standard-library-only survey_spec.load_spec(). CameraConfig is the typed camera schema. Unknown camera fields raise TypeError; invalid values raise ValueError. Physical helpers use metres and ideal nadir geometry only. Never use them to claim HiDef local GSD validation: that requires calibrated oblique ray projection, sensor pitch, crop and explicit rotation conventions.
 
@@ -10,11 +10,10 @@ The full taxonomy lives in assets/survey_species/*/manifest.json, with stable ca
 
 Randomisation uses paired strata across all five GSD levels. condition_seed() deliberately excludes GSD. The future generator must balance equal counts per stratum and reuse conditions across levels. Assign connected groups sharing ANY protected split identifier before expanding GSD variants. validate_split_records() detects cross-split reuse. An instance ID denotes the persistent instance, not a fresh ID per render; additional models will be needed to test asset-level generalisation.
 
-Detection recall 0.90 is a candidate. Classification metrics, thresholds, detection IoU, sample counts, strata, flight-altitude range, split proportions and sweep mechanism await decisions. Generation should remain blocked until these and asset/camera calibration are resolved. The fixed water preset is a specification identifier awaiting implementation.
+Detection recall 0.90 is a candidate. Classification metrics, thresholds, detection IoU, sample counts, strata, flight-altitude range, split proportions and sweep mechanism await decisions. Research dataset generation should remain blocked until these and asset/camera calibration are resolved; an explicitly labelled geometry-only engineering test can proceed separately. The fixed water/lighting preset is implemented in survey_environment_v1.json and exposed by POST /scene/survey/environment; visual QA remains pending, and this endpoint does not freeze animal movement.
 
 Annotation fields and COCO/optional YOLO conventions are output contracts for the next milestone; no dataset exporter is added here. Pixels-on-target distinguishes visible mask area from bounding-box dimensions. For planning, report the coarsest acceptable GSD (largest cm/px), avoiding the ambiguity of “minimum acceptable GSD”.
 
 Run tests from the repository root:
 
     python3 -B -m unittest discover -s source/extensions/cris.madil.render_service/cris/madil/render_service/tests -p test_survey_spec.py
-
