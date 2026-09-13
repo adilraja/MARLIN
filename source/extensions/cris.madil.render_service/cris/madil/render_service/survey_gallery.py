@@ -38,6 +38,31 @@ async def survey_gallery_inventory():
     return {'ok': True, 'animals': asset_inventory()}
 
 
+@router.post('/scene/survey/gallery/birds/remove', summary='Remove owned bird inspection instances, preserving assets and marine mammals')
+async def remove_survey_birds():
+    stage = omni.usd.get_context().get_stage()
+    if stage is None:
+        return {'ok': False, 'error': 'No live USD stage is open.'}
+    targets = []
+    for asset in asset_inventory():
+        if asset['kind'] != 'avian':
+            continue
+        path = '/World/Cetaceans/SurveyInspect_' + asset['species_id']
+        prim = stage.GetPrimAtPath(path)
+        if not prim:
+            continue
+        if prim.GetCustomDataByKey('marlinSurveyInspection') != True:
+            return {'ok': False, 'error': 'Refusing to remove unowned prim', 'path': path}
+        targets.append(path)
+    removed = []
+    for path in targets:
+        if not stage.RemovePrim(path):
+            return {'ok': False, 'error': 'Could not remove prim', 'path': path, 'removed': removed}
+        removed.append(path)
+    return {'ok': True, 'removed_count': len(removed), 'removed': removed,
+            'note': 'Live bird inspection instances only. Asset files and marine mammals are unchanged.'}
+
+
 @router.post('/scene/survey/gallery', summary='Create a static inspection gallery for available survey assets')
 async def create_survey_gallery(data: SurveyGalleryRequest):
     if not all(math.isfinite(v) for v in (data.elevation, data.spacing, data.display_size)) or data.display_size >= data.spacing:

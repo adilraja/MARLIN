@@ -19,6 +19,7 @@ from . import scene_setup as _scene_setup
 from . import cetacean_gallery as _cetacean_gallery
 from . import survey_gallery as _survey_gallery
 from . import survey_environment as _survey_environment
+from . import gentle_environment as _gentle_environment
 from . import scene_diagnostics as _scene_diagnostics
 from . import petrel_api as _petrel_api
 from . import calibration_capture as _calibration_capture
