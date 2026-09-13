@@ -40,12 +40,29 @@ async def survey_gallery_inventory():
 
 @router.post('/scene/survey/gallery/birds/remove', summary='Remove owned bird inspection instances, preserving assets and marine mammals')
 async def remove_survey_birds():
+    return _remove_survey_instances(kind='avian')
+
+
+@router.post('/scene/survey/gallery/remove', summary='Remove owned static survey inspection instances only')
+async def remove_survey_inspection():
+    return _remove_survey_instances()
+
+
+@router.post('/debug/viewport/grid/hide', summary='Hide the viewport helper grid without changing the ocean')
+async def hide_viewport_grid():
+    import carb.settings
+    settings = carb.settings.get_settings()
+    settings.set('/app/viewport/grid/enabled', False)
+    return {'ok': True, 'grid_enabled': settings.get('/app/viewport/grid/enabled')}
+
+
+def _remove_survey_instances(kind=None):
     stage = omni.usd.get_context().get_stage()
     if stage is None:
         return {'ok': False, 'error': 'No live USD stage is open.'}
     targets = []
     for asset in asset_inventory():
-        if asset['kind'] != 'avian':
+        if kind is not None and asset['kind'] != kind:
             continue
         path = '/World/Cetaceans/SurveyInspect_' + asset['species_id']
         prim = stage.GetPrimAtPath(path)
@@ -60,7 +77,7 @@ async def remove_survey_birds():
             return {'ok': False, 'error': 'Could not remove prim', 'path': path, 'removed': removed}
         removed.append(path)
     return {'ok': True, 'removed_count': len(removed), 'removed': removed,
-            'note': 'Live bird inspection instances only. Asset files and marine mammals are unchanged.'}
+            'note': 'Owned live inspection instances only. Asset files and swimming-gallery instances are unchanged.'}
 
 
 @router.post('/scene/survey/gallery', summary='Create a static inspection gallery for available survey assets')

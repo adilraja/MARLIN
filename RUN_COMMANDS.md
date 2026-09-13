@@ -129,6 +129,25 @@ The response gives the output path, normally `/tmp/marlin_viewport.png`.
 Each capture overwrites that file. After changing cameras or lighting, wait for
 the viewport to settle and capture twice if the first image shows an older frame.
 
+## HiDef camera geometry validation (oblique, not Sony)
+
+These commands capture nine metric targets in a separate Kit scene. They do
+not replace the marine scene or activate a nadir camera. Preview output is
+1644 × 548; geometry retains the native 6576 × 2192 field of view.
+
+```bash
+curl --fail-with-body -sS -X POST http://localhost:8011/scene/camera/hidef/capture \
+  -H 'Content-Type: application/json' -d '{"roll_deg":7.77,"downsample":4}'
+curl --fail-with-body -sS -X POST http://localhost:8011/scene/camera/hidef/capture \
+  -H 'Content-Type: application/json' -d '{"roll_deg":23.17,"downsample":4}'
+```
+
+Responses identify the scene, image and metadata output directory. Do not label
+preview PNGs as nominal 2 cm/px. Native output requires `downsample:1` and
+`allow_full_resolution:true`, plus adequate GPU headroom; it remains unverified
+on this GPU. Full assumptions/results are in
+`source/extensions/cris.madil.render_service/config/HIDEF_IMPLEMENTATION.md`.
+
 ## Stop Kit
 
 Close the Kit window or press **Ctrl+C** in its launch terminal. The live scene

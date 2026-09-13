@@ -1,0 +1,179 @@
+{
+  "geometry_inputs": {
+    "schema_version": "1.0.0",
+    "camera_to_plane_m": 549,
+    "focal_length_mm": 150,
+    "sensor_width_mm": 36,
+    "sensor_height_mm": 12,
+    "image_width_px": 6576,
+    "image_height_px": 2192,
+    "pitch_from_nadir_deg": 30,
+    "rolls_deg": [
+      7.77,
+      23.17
+    ],
+    "principal_point_assumption": "output centre; nominal reconstruction, deployed ROI origin unresolved",
+    "rotation_assumption": "Apply roll about world +Z to nadir basis, then pitch about world +X: Rx(pitch) Rz(roll) R_nadir",
+    "array_assumption": "Four cameras at coincident origin with mirrored rolls; mechanical baselines unknown",
+    "target_plane": "Y=0, flat; camera at (0,549,0) metres",
+    "parameter_fitting": false
+  },
+  "nominal_nadir_gsd_cm_px": [
+    2.0036496350364965,
+    2.0036496350364965
+  ],
+  "cases": [
+    {
+      "roll_deg": 7.77,
+      "ranges": {
+        "gsd_width_cm_px": {
+          "simulated_min": 2.230200530214302,
+          "simulated_max": 2.4970022086133388,
+          "published_min": 2.22,
+          "absolute_error_min": 0.010200530214302006,
+          "relative_error_min": 0.004594833429865768,
+          "published_max": 2.49,
+          "absolute_error_max": 0.007002208613338556,
+          "relative_error_max": 0.002812131973228336
+        },
+        "gsd_height_cm_px": {
+          "simulated_min": 2.5354312623937125,
+          "simulated_max": 2.900042180947892,
+          "published_min": 2.53,
+          "absolute_error_min": 0.005431262393712721,
+          "relative_error_min": 0.002146744029135463,
+          "published_max": 2.89,
+          "absolute_error_max": 0.010042180947891666,
+          "relative_error_max": 0.0034748030961562855
+        },
+        "anisotropy_height_over_width": {
+          "simulated_min": 1.109488444786529,
+          "simulated_max": 1.1900310766586213
+        },
+        "effective_pixel_area_cm2": {
+          "simulated_min": 5.654366100888417,
+          "simulated_max": 7.17473602771482
+        }
+      },
+      "footprint": {
+        "roll_deg": 7.77,
+        "corners_xz_m": [
+          [
+            10.500701406784835,
+            -346.72295670569457
+          ],
+          [
+            169.2889484866691,
+            -347.73772549593843
+          ],
+          [
+            161.45171629862392,
+            -287.6174796729215
+          ],
+          [
+            10.029883535930988,
+            -288.5418771284018
+          ]
+        ],
+        "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+        "top_edge_length_m": 158.79148959059498,
+        "bottom_edge_length_m": 151.42465435941614,
+        "x_extent_m": 159.25906495073812,
+        "z_extent_m": 60.120245823016944
+      },
+      "published_comparison_roll_deg": 7.7675
+    },
+    {
+      "roll_deg": 23.17,
+      "ranges": {
+        "gsd_width_cm_px": {
+          "simulated_min": 2.4128912892533725,
+          "simulated_max": 3.1417853984441733,
+          "published_min": 2.4,
+          "absolute_error_min": 0.012891289253372573,
+          "relative_error_min": 0.005371370522238572,
+          "published_max": 3.14,
+          "absolute_error_max": 0.0017853984441731363,
+          "relative_error_max": 0.0005685982306283873
+        },
+        "gsd_height_cm_px": {
+          "simulated_min": 2.6647428537097717,
+          "simulated_max": 3.364054936946382,
+          "published_min": 2.66,
+          "absolute_error_min": 0.004742853709771566,
+          "relative_error_min": 0.0017830277104404382,
+          "published_max": 3.36,
+          "absolute_error_max": 0.004054936946382259,
+          "relative_error_max": 0.0012068264721375771
+        },
+        "anisotropy_height_over_width": {
+          "simulated_min": 1.0262567210727533,
+          "simulated_max": 1.1521998713144515
+        },
+        "effective_pixel_area_cm2": {
+          "simulated_min": 6.377186225806034,
+          "simulated_max": 10.098386803447855
+        }
+      },
+      "footprint": {
+        "roll_deg": 23.17,
+        "corners_xz_m": [
+          [
+            190.24690628331385,
+            -347.9999096530326
+          ],
+          [
+            376.1489312473997,
+            -351.4516224015079
+          ],
+          [
+            356.74189088778485,
+            -284.25826173790114
+          ],
+          [
+            181.3678870060142,
+            -287.3791032524285
+          ]
+        ],
+        "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+        "top_edge_length_m": 185.93406682651133,
+        "bottom_edge_length_m": 175.40176991490736,
+        "x_extent_m": 194.78104424138547,
+        "z_extent_m": 67.19336066360677
+      },
+      "published_comparison_roll_deg": 23.1748
+    }
+  ],
+  "parameter_fitting": false,
+  "published_targets": {
+    "source_doi": "10.1016/j.ecoinf.2025.103242",
+    "role": "comparison only; never consumed by ray geometry",
+    "nominal_nadir_cm_px": 2.0036,
+    "cases": [
+      {
+        "roll_deg": 7.7675,
+        "gsd_width_cm_px": [
+          2.22,
+          2.49
+        ],
+        "gsd_height_cm_px": [
+          2.53,
+          2.89
+        ]
+      },
+      {
+        "roll_deg": 23.1748,
+        "gsd_width_cm_px": [
+          2.4,
+          3.14
+        ],
+        "gsd_height_cm_px": [
+          2.66,
+          3.36
+        ]
+      }
+    ],
+    "published_gap_description": "20 m at footprint bottom; greater than 21 m at top; reconstructed constraint, not independent mounting measurement"
+  },
+  "status": "numerical_geometry_not_hardware_or_full_resolution_render_validation"
+}

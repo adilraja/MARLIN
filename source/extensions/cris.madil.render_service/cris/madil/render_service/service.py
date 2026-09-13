@@ -23,6 +23,7 @@ from . import gentle_environment as _gentle_environment
 from . import scene_diagnostics as _scene_diagnostics
 from . import petrel_api as _petrel_api
 from . import calibration_capture as _calibration_capture
+from . import hidef_api as _hidef_api
 from .cetacean import shutdown_cetacean_swimming
 from .ocean import shutdown_ocean_animation
 from .water_material import RTX_WATER_SETTINGS

@@ -1,0 +1,311 @@
+#usda 1.0
+(
+    defaultPrim = "Calibration"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "Calibration"
+{
+    def Mesh "Target_00" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_00>
+        point3f[] points = [(2941.1565, 0, -34175.21), (2941.1565, 0, -33375.21), (3741.1565, 0, -33375.21), (3741.1565, 0, -34175.21)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def "Looks"
+    {
+        def Material "Target_00"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_00/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_01"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_01/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_02"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_02/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_03"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_03/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_04"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_04/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_05"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_05/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_06"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_06/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_07"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_07/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Target_08"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Target_08/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (1, 1, 1)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Background"
+        {
+            token outputs:surface.connect = </Calibration/Looks/Background/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+    }
+
+    def Mesh "Target_01" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_01>
+        point3f[] points = [(8393.426, 0, -34199.434), (8393.426, 0, -33399.434), (9193.426, 0, -33399.434), (9193.426, 0, -34199.434)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_02" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_02>
+        point3f[] points = [(13974.252, 0, -34224.223), (13974.252, 0, -33424.223), (14774.252, 0, -33424.223), (14774.252, 0, -34224.223)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_03" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_03>
+        point3f[] points = [(2887.2612, 0, -32096.53), (2887.2612, 0, -31296.53), (3687.2612, 0, -31296.53), (3687.2612, 0, -32096.53)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_04" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_04>
+        point3f[] points = [(8249.956, 0, -32096.53), (8249.956, 0, -31296.53), (9049.956, 0, -31296.53), (9049.956, 0, -32096.53)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_05" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_05>
+        point3f[] points = [(13737.008, 0, -32096.53), (13737.008, 0, -31296.53), (14537.008, 0, -31296.53), (14537.008, 0, -32096.53)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_06" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_06>
+        point3f[] points = [(2835.0771, 0, -30083.844), (2835.0771, 0, -29283.844), (3635.0771, 0, -29283.844), (3635.0771, 0, -30083.844)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_07" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_07>
+        point3f[] points = [(8111.0923, 0, -30061.146), (8111.0923, 0, -29261.146), (8911.093, 0, -29261.146), (8911.093, 0, -30061.146)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Target_08" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Target_08>
+        point3f[] points = [(13507.469, 0, -30037.93), (13507.469, 0, -29237.93), (14307.469, 0, -29237.93), (14307.469, 0, -30037.93)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Background" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 1
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </Calibration/Looks/Background>
+        point3f[] points = [(-263520, -4, -87840), (-263520, -4, 87840), (263520, -4, 87840), (263520, -4, -87840)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Camera "Camera" (
+        customData = {
+            string cameraModel = "HiDef_Prosilica_GT6600C_reconstruction"
+        }
+    )
+    {
+        float2 clippingRange = (549, 274500)
+        float focalLength = 150
+        float fStop = 0
+        float horizontalAperture = 36
+        float horizontalApertureOffset = 0
+        token projection = "perspective"
+        float verticalAperture = 12
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (0.9908187651661832, 0.11708386287580386, 0.06759839974910657, 0), (0, 0.49999999999999994, -0.8660254037844387, 0), (-0.13519679949821317, 0.8580742211802427, 0.49540938258309153, 0), (0, 54900, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+

@@ -31,7 +31,7 @@ class CalibrationRequest(BaseModel):
     roll_deg: float = Field(default=0, ge=-45, le=45)
 
 
-async def _capture(config):
+async def _capture(config, stage_builder=build_stage):
     from omni.kit.viewport.utility import create_viewport_window, capture_viewport_to_file
     from pxr import Usd
     context_name = 'marlin_calibration_' + uuid.uuid4().hex
@@ -44,7 +44,7 @@ async def _capture(config):
         omni.usd.create_context(context_name)
         context = omni.usd.get_context(context_name)
         stage = Usd.Stage.CreateNew(str(directory / 'scene.usda'))
-        camera = build_stage(stage, config)
+        camera = stage_builder(stage, config)
         stage.GetRootLayer().Save()
         ok, error = await context.attach_stage_async(stage)
         if not ok:
