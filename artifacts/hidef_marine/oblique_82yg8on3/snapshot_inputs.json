@@ -1,0 +1,1723 @@
+{
+  "config": {
+    "schema_version": "1.1.0",
+    "test_kind": "hidef_oblique_reconstruction",
+    "scientific_camera_calibrated": false,
+    "config": {
+      "meters_per_scene_unit": 0.01,
+      "image_width_px": 1644,
+      "image_height_px": 548,
+      "focal_length_mm": 150,
+      "pixel_pitch_um": 21.8978102189781,
+      "height_above_target_m": 549,
+      "target_width_m": 8,
+      "target_height_m": 8,
+      "target_plane_y_m": 0,
+      "pitch_deg": 30,
+      "roll_deg": 23.1748,
+      "aperture_basis": "paper_effective",
+      "downsample": 4
+    },
+    "gsd_cm_px": 8.014598540145986,
+    "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+    "expected_bbox_xywh_px": [
+      777.6699841043966,
+      239.6019174067614,
+      88.69404791561522,
+      68.98050951568956
+    ],
+    "targets": [
+      {
+        "id": "Target_00",
+        "center_world_m": [
+          214.1873832143134,
+          0.0,
+          -338.8580588495866
+        ],
+        "sample_image_px": [
+          246.6,
+          82.2
+        ],
+        "corners_world_m": [
+          [
+            210.1873832143134,
+            0.0,
+            -342.8580588495866
+          ],
+          [
+            210.1873832143134,
+            0.0,
+            -334.8580588495866
+          ],
+          [
+            218.1873832143134,
+            0.0,
+            -334.8580588495866
+          ],
+          [
+            218.1873832143134,
+            0.0,
+            -342.8580588495866
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            201.68042908140035,
+            47.24501650263488
+          ],
+          [
+            214.2997427729655,
+            116.44948681890659
+          ],
+          [
+            291.5546730022875,
+            117.18229882409116
+          ],
+          [
+            278.57630111516573,
+            48.29401913231192
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          201.68042908140035,
+          47.24501650263488,
+          89.87424392088712,
+          69.93728232145628
+        ],
+        "local_gsd_xy_cm_px": [
+          10.402735667262794,
+          11.770492752395057
+        ]
+      },
+      {
+        "id": "Target_01",
+        "center_world_m": [
+          276.2304698565898,
+          0.0,
+          -339.6593856955772
+        ],
+        "sample_image_px": [
+          822.0,
+          82.2
+        ],
+        "corners_world_m": [
+          [
+            272.2304698565898,
+            0.0,
+            -343.6593856955772
+          ],
+          [
+            272.2304698565898,
+            0.0,
+            -335.6593856955772
+          ],
+          [
+            280.2304698565898,
+            0.0,
+            -335.6593856955772
+          ],
+          [
+            280.2304698565898,
+            0.0,
+            -343.6593856955772
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            778.4492226130214,
+            48.47880995029689
+          ],
+          [
+            793.6571401277116,
+            115.2342308877709
+          ],
+          [
+            865.5836076999225,
+            115.94661042767612
+          ],
+          [
+            850.0685833850044,
+            49.48544443253323
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          778.4492226130214,
+          48.47880995029689,
+          87.13438508690103,
+          67.46780047737923
+        ],
+        "local_gsd_xy_cm_px": [
+          11.178202027819305,
+          12.316748647517251
+        ]
+      },
+      {
+        "id": "Target_02",
+        "center_world_m": [
+          342.9879623964971,
+          0.0,
+          -340.5216021622027
+        ],
+        "sample_image_px": [
+          1397.3999999999999,
+          82.2
+        ],
+        "corners_world_m": [
+          [
+            338.9879623964971,
+            0.0,
+            -344.5216021622027
+          ],
+          [
+            338.9879623964971,
+            0.0,
+            -336.5216021622027
+          ],
+          [
+            346.9879623964971,
+            0.0,
+            -336.5216021622027
+          ],
+          [
+            346.9879623964971,
+            0.0,
+            -344.5216021622027
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            1355.2339187668924,
+            49.712637416011916
+          ],
+          [
+            1372.8073582894676,
+            114.01940953422738
+          ],
+          [
+            1439.5967038242538,
+            114.71095612630353
+          ],
+          [
+            1421.7633266446448,
+            50.677291815700045
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          1355.2339187668924,
+          49.712637416011916,
+          84.3627850573614,
+          64.99831871029161
+        ],
+        "local_gsd_xy_cm_px": [
+          12.043724249813293,
+          12.943585562758168
+        ]
+      },
+      {
+        "id": "Target_03",
+        "center_world_m": [
+          210.55168727733152,
+          0.0,
+          -316.9652977851045
+        ],
+        "sample_image_px": [
+          246.6,
+          274.0
+        ],
+        "corners_world_m": [
+          [
+            206.55168727733152,
+            0.0,
+            -320.9652977851045
+          ],
+          [
+            206.55168727733152,
+            0.0,
+            -312.9652977851045
+          ],
+          [
+            214.55168727733152,
+            0.0,
+            -312.9652977851045
+          ],
+          [
+            214.55168727733152,
+            0.0,
+            -320.9652977851045
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            200.90508957868678,
+            238.36549755168988
+          ],
+          [
+            213.73912457261497,
+            309.83237537525787
+          ],
+          [
+            292.33123522011533,
+            309.66282980730705
+          ],
+          [
+            279.1256346183385,
+            238.53318014797728
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          200.90508957868678,
+          238.36549755168988,
+          91.42614564142855,
+          71.46687782356798
+        ],
+        "local_gsd_xy_cm_px": [
+          10.203370890363317,
+          11.374290771735877
+        ]
+      },
+      {
+        "id": "Target_04",
+        "center_world_m": [
+          271.37302696496346,
+          0.0,
+          -316.96529778510444
+        ],
+        "sample_image_px": [
+          822.0,
+          274.0
+        ],
+        "corners_world_m": [
+          [
+            267.37302696496346,
+            0.0,
+            -320.96529778510444
+          ],
+          [
+            267.37302696496346,
+            0.0,
+            -312.96529778510444
+          ],
+          [
+            275.37302696496346,
+            0.0,
+            -312.96529778510444
+          ],
+          [
+            275.37302696496346,
+            0.0,
+            -320.96529778510444
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            777.6699841043966,
+            239.6019174067614
+          ],
+          [
+            793.1472936803866,
+            308.58242692245096
+          ],
+          [
+            866.3640320200118,
+            308.4244775636282
+          ],
+          [
+            850.5685228868138,
+            239.7581911356442
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          777.6699841043966,
+          239.6019174067614,
+          88.69404791561522,
+          68.98050951568956
+        ],
+        "local_gsd_xy_cm_px": [
+          10.950364514246758,
+          11.88738345797226
+        ]
+      },
+      {
+        "id": "Target_05",
+        "center_world_m": [
+          336.7316364074684,
+          0.0,
+          -316.9652977851045
+        ],
+        "sample_image_px": [
+          1397.3999999999999,
+          274.0
+        ],
+        "corners_world_m": [
+          [
+            332.7316364074684,
+            0.0,
+            -320.9652977851045
+          ],
+          [
+            332.7316364074684,
+            0.0,
+            -312.9652977851045
+          ],
+          [
+            340.7316364074684,
+            0.0,
+            -312.9652977851045
+          ],
+          [
+            340.7316364074684,
+            0.0,
+            -320.9652977851045
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            1354.4507810376438,
+            240.8383713520696
+          ],
+          [
+            1372.3482473205447,
+            307.3329254924275
+          ],
+          [
+            1440.3809900331835,
+            307.1861594887226
+          ],
+          [
+            1422.2138371116848,
+            240.98363606697416
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          1354.4507810376438,
+          240.8383713520696,
+          85.93020899553972,
+          66.49455414035788
+        ],
+        "local_gsd_xy_cm_px": [
+          11.782496432306289,
+          12.475693146889409
+        ]
+      },
+      {
+        "id": "Target_06",
+        "center_world_m": [
+          207.03735850674624,
+          0.0,
+          -295.8033630661278
+        ],
+        "sample_image_px": [
+          246.6,
+          465.8
+        ],
+        "corners_world_m": [
+          [
+            203.03735850674624,
+            0.0,
+            -299.8033630661278
+          ],
+          [
+            203.03735850674624,
+            0.0,
+            -291.8033630661278
+          ],
+          [
+            211.03735850674624,
+            0.0,
+            -291.8033630661278
+          ],
+          [
+            211.03735850674624,
+            0.0,
+            -299.8033630661278
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            200.1297605297434,
+            429.48340175597497
+          ],
+          [
+            213.17840828108535,
+            503.249100071085
+          ],
+          [
+            293.1078079166639,
+            502.14595807066644
+          ],
+          [
+            279.6748730019358,
+            428.7394003940585
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          200.1297605297434,
+          428.7394003940585,
+          92.97804738692048,
+          74.5096996770265
+        ],
+        "local_gsd_xy_cm_px": [
+          10.013006698007704,
+          10.997761832545534
+        ]
+      },
+      {
+        "id": "Target_07",
+        "center_world_m": [
+          266.68346572441715,
+          0.0,
+          -295.05555691342744
+        ],
+        "sample_image_px": [
+          822.0,
+          465.8
+        ],
+        "corners_world_m": [
+          [
+            262.68346572441715,
+            0.0,
+            -299.05555691342744
+          ],
+          [
+            262.68346572441715,
+            0.0,
+            -291.05555691342744
+          ],
+          [
+            270.68346572441715,
+            0.0,
+            -291.05555691342744
+          ],
+          [
+            270.68346572441715,
+            0.0,
+            -299.05555691342744
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            776.8907561022559,
+            430.72244794751975
+          ],
+          [
+            792.6373580413547,
+            501.9644469754819
+          ],
+          [
+            867.1444668707901,
+            500.9049419079454
+          ],
+          [
+            851.0683758065124,
+            429.997985419753
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          776.8907561022559,
+          429.997985419753,
+          90.25371076853423,
+          71.96646155572893
+        ],
+        "local_gsd_xy_cm_px": [
+          10.733175937859821,
+          11.480084777325244
+        ]
+      },
+      {
+        "id": "Target_08",
+        "center_world_m": [
+          330.6994607692554,
+          0.0,
+          -294.2529637988246
+        ],
+        "sample_image_px": [
+          1397.3999999999999,
+          465.8
+        ],
+        "corners_world_m": [
+          [
+            326.6994607692554,
+            0.0,
+            -298.2529637988246
+          ],
+          [
+            326.6994607692554,
+            0.0,
+            -290.2529637988246
+          ],
+          [
+            334.6994607692554,
+            0.0,
+            -290.2529637988246
+          ],
+          [
+            334.6994607692554,
+            0.0,
+            -298.2529637988246
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            1353.667653867598,
+            431.96152830148355
+          ],
+          [
+            1371.8890560498598,
+            500.6802533543665
+          ],
+          [
+            1441.1652868247666,
+            499.66395998773226
+          ],
+          [
+            1422.6642695431724,
+            431.2570162436487
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          1353.667653867598,
+          431.2570162436487,
+          87.49763295716866,
+          69.42323711071782
+        ],
+        "local_gsd_xy_cm_px": [
+          11.533929642467749,
+          12.032720143418091
+        ]
+      }
+    ],
+    "intrinsics_px": {
+      "fx": 6850.0,
+      "fy": 6850.0,
+      "cx": 822.0,
+      "cy": 274.0
+    },
+    "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+    "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+    "camera_position_m": [
+      0,
+      549,
+      0
+    ],
+    "world_up": "Y",
+    "camera_basis_right_up_forward": [
+      [
+        0.919308515050204,
+        0.34081357164458953,
+        0.19676880733248153
+      ],
+      [
+        0,
+        0.49999999999999994,
+        -0.8660254037844387
+      ],
+      [
+        0.3935376146649631,
+        -0.7961445279488256,
+        -0.4596542575251019
+      ]
+    ],
+    "pose_convention": "Y-up; Rx(pitch) Rz(roll) R_nadir; roll is cross-track tilt, not optical-axis rotation",
+    "seed": 0,
+    "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+    "camera_model": "Prosilica GT6600C",
+    "model_status": "inferred from survey metadata; not deployment certified",
+    "reference_resolution": [
+      6576,
+      2192
+    ],
+    "downsample": 4,
+    "acquisition_mode": "unresolved; ROI more plausible, binning possible",
+    "aperture_basis": "paper_effective",
+    "effective_sensor_mm": [
+      36.0,
+      12.0
+    ],
+    "principal_point_status": "centred reconstruction assumption; deployed ROI origin unresolved",
+    "roll_status": "geometrically inferred, not measured mounting angle",
+    "altitude_status": "549 m nominal camera-to-plane separation; historical altitude barometric",
+    "distortion_status": "zero assumed; lens model and calibration unavailable",
+    "radiometry_status": "not simulated: Bayer processing, noise, lens MTF, motion blur",
+    "reference_nominal_nadir_gsd_cm_px": 2.0036496350364965,
+    "geometry_only": true
+  },
+  "snapshot": {
+    "captured_utc": "2026-09-14T16:38:40.354552+00:00",
+    "source_timeline_seconds": 0.4575678181818011,
+    "source_time_code": 27.454069090908064,
+    "frozen_time_sampled_attributes": 6,
+    "viewport_render_tree_excluded": true,
+    "method": "Flattened USD composition with every time-sampled attribute evaluated at the recorded time; current procedural mesh points retained."
+  },
+  "camera_translation_m": [
+    -274.37302696496346,
+    0,
+    316.96529778510444
+  ],
+  "camera_target_xz_m": [
+    -3,
+    0
+  ],
+  "animals": [
+    {
+      "path": "/World/Cetaceans/Dolphin_001",
+      "bounds_min_scene_units": [
+        -40.66594839096068,
+        -107.33575886672305,
+        -178.89067027137602
+      ],
+      "bounds_max_scene_units": [
+        41.863530874252305,
+        52.011721225270264,
+        85.13094708239706
+      ],
+      "projected_bounds_xyxy_px": [
+        838.4876392235656,
+        256.0641833032588,
+        856.6171437861094,
+        286.62768406805617
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Bottlenose_Carimam",
+      "bounds_min_scene_units": [
+        -1806.7909305961955,
+        -154.74632411539153,
+        4437.988615035332
+      ],
+      "bounds_max_scene_units": [
+        -1793.2109672156494,
+        -141.35025777686678,
+        4478.039482563624
+      ],
+      "projected_bounds_xyxy_px": [
+        763.7870646086482,
+        677.5304860387465,
+        766.3372392312855,
+        681.8773076835023
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Cuvier_Whale",
+      "bounds_min_scene_units": [
+        -694.5682385287823,
+        -185.75971960330398,
+        -2364.0761694588036
+      ],
+      "bounds_max_scene_units": [
+        -505.4317614712169,
+        -24.677749546707034,
+        -1746.9569241142594
+      ],
+      "projected_bounds_xyxy_px": [
+        734.8337421575211,
+        74.59856766673283,
+        768.8295445551116,
+        134.6964586487428
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Frasers_Dolphin",
+      "bounds_min_scene_units": [
+        580.3985086826367,
+        -175.82843306761907,
+        4371.845349696836
+      ],
+      "bounds_max_scene_units": [
+        619.6014913173633,
+        -122.27709902465274,
+        4520.516130789224
+      ],
+      "projected_bounds_xyxy_px": [
+        985.5115789857418,
+        664.9648580538214,
+        994.2420988344472,
+        681.0182252197881
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Humpback_Whale",
+      "bounds_min_scene_units": [
+        1458.0552594400908,
+        -483.17089505541287,
+        -2917.5083733372544
+      ],
+      "bounds_max_scene_units": [
+        2141.9447405599103,
+        27.909360632809296,
+        -1587.5821383597422
+      ],
+      "projected_bounds_xyxy_px": [
+        906.2106562303858,
+        28.776166607803503,
+        1010.3570668100027,
+        164.71078918908947
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Manatee",
+      "bounds_min_scene_units": [
+        -1874.2363364963342,
+        -229.74867689524405,
+        3054.3435122507876
+      ],
+      "bounds_max_scene_units": [
+        -1725.7636635036667,
+        -70.25132310475603,
+        3457.57332774908
+      ],
+      "projected_bounds_xyxy_px": [
+        727.6435791806355,
+        547.8299683152404,
+        754.9662518194579,
+        592.2086629146481
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Bottlenose_DigitalLife",
+      "bounds_min_scene_units": [
+        -640.6659483909605,
+        -206.67852918589566,
+        -3429.085921756474
+      ],
+      "bounds_max_scene_units": [
+        -558.1364691257475,
+        -97.98121404200145,
+        -3182.7279273531235
+      ],
+      "projected_bounds_xyxy_px": [
+        719.2603827740488,
+        -9.873598809620205,
+        734.7204958244706,
+        16.166513753162178
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Spotted_Dolphin",
+      "bounds_min_scene_units": [
+        573.8604516029266,
+        -174.63430434260061,
+        3151.395848102663
+      ],
+      "bounds_max_scene_units": [
+        626.1395462907035,
+        -106.46560343404255,
+        3378.737036376668
+      ],
+      "projected_bounds_xyxy_px": [
+        959.4122457543858,
+        554.4612533622128,
+        971.4053685073925,
+        578.0589929472965
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Pilot_Whale",
+      "bounds_min_scene_units": [
+        1719.8756990522645,
+        -230.42232319795863,
+        -3387.3271968051513
+      ],
+      "bounds_max_scene_units": [
+        1880.0941843119847,
+        -57.73885738967139,
+        -2875.0434801934007
+      ],
+      "projected_bounds_xyxy_px": [
+        928.5296156864681,
+        -4.841615974853369,
+        958.5310307473375,
+        45.92524541559129
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+      "bounds_min_scene_units": [
+        -1245.732068810367,
+        -199.1667705877103,
+        1894.8577820561109
+      ],
+      "bounds_max_scene_units": [
+        -1154.2679345010015,
+        -101.97915878386881,
+        2242.718757678913
+      ],
+      "projected_bounds_xyxy_px": [
+        765.0334095288684,
+        444.86632800855944,
+        783.6567615047577,
+        480.5571140843063
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Sperm_Whale",
+      "bounds_min_scene_units": [
+        -235.30685638895142,
+        -504.76697557346597,
+        -5422.336814685377
+      ],
+      "bounds_max_scene_units": [
+        235.30685638895142,
+        211.71118540682374,
+        -3480.2678908932
+      ],
+      "projected_bounds_xyxy_px": [
+        709.5912386423466,
+        -187.27402266285333,
+        810.3042167825449,
+        8.197167001146681
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Steno_Dolphin",
+      "bounds_min_scene_units": [
+        1143.7866683279024,
+        -189.37921229756154,
+        1916.2519698062542
+      ],
+      "bounds_max_scene_units": [
+        1256.2133316720954,
+        -87.6055868727703,
+        2234.096372940442
+      ],
+      "projected_bounds_xyxy_px": [
+        985.2758125931332,
+        443.69172618350717,
+        1005.7363434812003,
+        476.5057878100599
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    }
+  ],
+  "asset_dependencies": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+      "authored_path": "OmniSurface.mdl",
+      "sha256": null,
+      "status": "runtime_or_unresolved"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+      "status": "local_hashed"
+    }
+  ],
+  "environment_status": "Diagnostic targets on frozen marine copy; live environment untouched; not wildlife data",
+  "projection_probe": true,
+  "targets": [
+    {
+      "id": "Target_00",
+      "center_world_m": [
+        214.1873832143134,
+        0.0,
+        -338.8580588495866
+      ],
+      "sample_image_px": [
+        246.6,
+        82.2
+      ],
+      "corners_world_m": [
+        [
+          210.1873832143134,
+          0.0,
+          -342.8580588495866
+        ],
+        [
+          210.1873832143134,
+          0.0,
+          -334.8580588495866
+        ],
+        [
+          218.1873832143134,
+          0.0,
+          -334.8580588495866
+        ],
+        [
+          218.1873832143134,
+          0.0,
+          -342.8580588495866
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          201.68042908140035,
+          47.24501650263488
+        ],
+        [
+          214.2997427729655,
+          116.44948681890659
+        ],
+        [
+          291.5546730022875,
+          117.18229882409116
+        ],
+        [
+          278.57630111516573,
+          48.29401913231192
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        201.68042908140035,
+        47.24501650263488,
+        89.87424392088712,
+        69.93728232145628
+      ],
+      "local_gsd_xy_cm_px": [
+        10.402735667262794,
+        11.770492752395057
+      ]
+    },
+    {
+      "id": "Target_01",
+      "center_world_m": [
+        276.2304698565898,
+        0.0,
+        -339.6593856955772
+      ],
+      "sample_image_px": [
+        822.0,
+        82.2
+      ],
+      "corners_world_m": [
+        [
+          272.2304698565898,
+          0.0,
+          -343.6593856955772
+        ],
+        [
+          272.2304698565898,
+          0.0,
+          -335.6593856955772
+        ],
+        [
+          280.2304698565898,
+          0.0,
+          -335.6593856955772
+        ],
+        [
+          280.2304698565898,
+          0.0,
+          -343.6593856955772
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          778.4492226130214,
+          48.47880995029689
+        ],
+        [
+          793.6571401277116,
+          115.2342308877709
+        ],
+        [
+          865.5836076999225,
+          115.94661042767612
+        ],
+        [
+          850.0685833850044,
+          49.48544443253323
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        778.4492226130214,
+        48.47880995029689,
+        87.13438508690103,
+        67.46780047737923
+      ],
+      "local_gsd_xy_cm_px": [
+        11.178202027819305,
+        12.316748647517251
+      ]
+    },
+    {
+      "id": "Target_02",
+      "center_world_m": [
+        342.9879623964971,
+        0.0,
+        -340.5216021622027
+      ],
+      "sample_image_px": [
+        1397.3999999999999,
+        82.2
+      ],
+      "corners_world_m": [
+        [
+          338.9879623964971,
+          0.0,
+          -344.5216021622027
+        ],
+        [
+          338.9879623964971,
+          0.0,
+          -336.5216021622027
+        ],
+        [
+          346.9879623964971,
+          0.0,
+          -336.5216021622027
+        ],
+        [
+          346.9879623964971,
+          0.0,
+          -344.5216021622027
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          1355.2339187668924,
+          49.712637416011916
+        ],
+        [
+          1372.8073582894676,
+          114.01940953422738
+        ],
+        [
+          1439.5967038242538,
+          114.71095612630353
+        ],
+        [
+          1421.7633266446448,
+          50.677291815700045
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        1355.2339187668924,
+        49.712637416011916,
+        84.3627850573614,
+        64.99831871029161
+      ],
+      "local_gsd_xy_cm_px": [
+        12.043724249813293,
+        12.943585562758168
+      ]
+    },
+    {
+      "id": "Target_03",
+      "center_world_m": [
+        210.55168727733152,
+        0.0,
+        -316.9652977851045
+      ],
+      "sample_image_px": [
+        246.6,
+        274.0
+      ],
+      "corners_world_m": [
+        [
+          206.55168727733152,
+          0.0,
+          -320.9652977851045
+        ],
+        [
+          206.55168727733152,
+          0.0,
+          -312.9652977851045
+        ],
+        [
+          214.55168727733152,
+          0.0,
+          -312.9652977851045
+        ],
+        [
+          214.55168727733152,
+          0.0,
+          -320.9652977851045
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          200.90508957868678,
+          238.36549755168988
+        ],
+        [
+          213.73912457261497,
+          309.83237537525787
+        ],
+        [
+          292.33123522011533,
+          309.66282980730705
+        ],
+        [
+          279.1256346183385,
+          238.53318014797728
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        200.90508957868678,
+        238.36549755168988,
+        91.42614564142855,
+        71.46687782356798
+      ],
+      "local_gsd_xy_cm_px": [
+        10.203370890363317,
+        11.374290771735877
+      ]
+    },
+    {
+      "id": "Target_04",
+      "center_world_m": [
+        271.37302696496346,
+        0.0,
+        -316.96529778510444
+      ],
+      "sample_image_px": [
+        822.0,
+        274.0
+      ],
+      "corners_world_m": [
+        [
+          267.37302696496346,
+          0.0,
+          -320.96529778510444
+        ],
+        [
+          267.37302696496346,
+          0.0,
+          -312.96529778510444
+        ],
+        [
+          275.37302696496346,
+          0.0,
+          -312.96529778510444
+        ],
+        [
+          275.37302696496346,
+          0.0,
+          -320.96529778510444
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          777.6699841043966,
+          239.6019174067614
+        ],
+        [
+          793.1472936803866,
+          308.58242692245096
+        ],
+        [
+          866.3640320200118,
+          308.4244775636282
+        ],
+        [
+          850.5685228868138,
+          239.7581911356442
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        777.6699841043966,
+        239.6019174067614,
+        88.69404791561522,
+        68.98050951568956
+      ],
+      "local_gsd_xy_cm_px": [
+        10.950364514246758,
+        11.88738345797226
+      ]
+    },
+    {
+      "id": "Target_05",
+      "center_world_m": [
+        336.7316364074684,
+        0.0,
+        -316.9652977851045
+      ],
+      "sample_image_px": [
+        1397.3999999999999,
+        274.0
+      ],
+      "corners_world_m": [
+        [
+          332.7316364074684,
+          0.0,
+          -320.9652977851045
+        ],
+        [
+          332.7316364074684,
+          0.0,
+          -312.9652977851045
+        ],
+        [
+          340.7316364074684,
+          0.0,
+          -312.9652977851045
+        ],
+        [
+          340.7316364074684,
+          0.0,
+          -320.9652977851045
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          1354.4507810376438,
+          240.8383713520696
+        ],
+        [
+          1372.3482473205447,
+          307.3329254924275
+        ],
+        [
+          1440.3809900331835,
+          307.1861594887226
+        ],
+        [
+          1422.2138371116848,
+          240.98363606697416
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        1354.4507810376438,
+        240.8383713520696,
+        85.93020899553972,
+        66.49455414035788
+      ],
+      "local_gsd_xy_cm_px": [
+        11.782496432306289,
+        12.475693146889409
+      ]
+    },
+    {
+      "id": "Target_06",
+      "center_world_m": [
+        207.03735850674624,
+        0.0,
+        -295.8033630661278
+      ],
+      "sample_image_px": [
+        246.6,
+        465.8
+      ],
+      "corners_world_m": [
+        [
+          203.03735850674624,
+          0.0,
+          -299.8033630661278
+        ],
+        [
+          203.03735850674624,
+          0.0,
+          -291.8033630661278
+        ],
+        [
+          211.03735850674624,
+          0.0,
+          -291.8033630661278
+        ],
+        [
+          211.03735850674624,
+          0.0,
+          -299.8033630661278
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          200.1297605297434,
+          429.48340175597497
+        ],
+        [
+          213.17840828108535,
+          503.249100071085
+        ],
+        [
+          293.1078079166639,
+          502.14595807066644
+        ],
+        [
+          279.6748730019358,
+          428.7394003940585
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        200.1297605297434,
+        428.7394003940585,
+        92.97804738692048,
+        74.5096996770265
+      ],
+      "local_gsd_xy_cm_px": [
+        10.013006698007704,
+        10.997761832545534
+      ]
+    },
+    {
+      "id": "Target_07",
+      "center_world_m": [
+        266.68346572441715,
+        0.0,
+        -295.05555691342744
+      ],
+      "sample_image_px": [
+        822.0,
+        465.8
+      ],
+      "corners_world_m": [
+        [
+          262.68346572441715,
+          0.0,
+          -299.05555691342744
+        ],
+        [
+          262.68346572441715,
+          0.0,
+          -291.05555691342744
+        ],
+        [
+          270.68346572441715,
+          0.0,
+          -291.05555691342744
+        ],
+        [
+          270.68346572441715,
+          0.0,
+          -299.05555691342744
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          776.8907561022559,
+          430.72244794751975
+        ],
+        [
+          792.6373580413547,
+          501.9644469754819
+        ],
+        [
+          867.1444668707901,
+          500.9049419079454
+        ],
+        [
+          851.0683758065124,
+          429.997985419753
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        776.8907561022559,
+        429.997985419753,
+        90.25371076853423,
+        71.96646155572893
+      ],
+      "local_gsd_xy_cm_px": [
+        10.733175937859821,
+        11.480084777325244
+      ]
+    },
+    {
+      "id": "Target_08",
+      "center_world_m": [
+        330.6994607692554,
+        0.0,
+        -294.2529637988246
+      ],
+      "sample_image_px": [
+        1397.3999999999999,
+        465.8
+      ],
+      "corners_world_m": [
+        [
+          326.6994607692554,
+          0.0,
+          -298.2529637988246
+        ],
+        [
+          326.6994607692554,
+          0.0,
+          -290.2529637988246
+        ],
+        [
+          334.6994607692554,
+          0.0,
+          -290.2529637988246
+        ],
+        [
+          334.6994607692554,
+          0.0,
+          -298.2529637988246
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          1353.667653867598,
+          431.96152830148355
+        ],
+        [
+          1371.8890560498598,
+          500.6802533543665
+        ],
+        [
+          1441.1652868247666,
+          499.66395998773226
+        ],
+        [
+          1422.6642695431724,
+          431.2570162436487
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        1353.667653867598,
+        431.2570162436487,
+        87.49763295716866,
+        69.42323711071782
+      ],
+      "local_gsd_xy_cm_px": [
+        11.533929642467749,
+        12.032720143418091
+      ]
+    }
+  ],
+  "renderer_settings": {
+    "/rtx/fog/enabled": false,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/spp": 1,
+    "/rtx/pathtracing/totalSpp": 512,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "RealTimePathTracing",
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "gpu_preflight": {
+    "device_index": 0,
+    "total_mib": 6138,
+    "free_mib": 1593,
+    "driver": "595.84"
+  },
+  "status": "render_pending"
+}

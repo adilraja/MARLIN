@@ -12,6 +12,7 @@ from pydantic import BaseModel, Field
 
 from .api import router
 from .calibration_geometry import CalibrationConfig, build_stage
+from .capture_projection import record_projection
 
 _busy = False
 OUTPUT_ROOT = Path(__file__).resolve().parents[6] / 'artifacts/calibration'
@@ -74,10 +75,8 @@ async def _capture(config, stage_builder=build_stage):
         if omni.usd.get_context().get_stage() != main_stage:
             raise RuntimeError('Default context stage changed during capture')
         metadata = config.metadata()
-        metadata.update(actual_viewport_resolution=list(viewport.resolution),
-                        actual_view_matrix=[list(row) for row in viewport.view],
-                        actual_projection_matrix=[list(row) for row in viewport.projection],
-                        usd_context=context_name, default_stage_retained=True,
+        metadata.update(record_projection(stage,viewport))
+        metadata.update(usd_context=context_name, default_stage_retained=True,
                         scene_sha256=hashlib.sha256((directory/'scene.usda').read_bytes()).hexdigest(),
                         rendered_image='rgb.png', scene_file='scene.usda',
                         validation_status='rendered_not_yet_measured')

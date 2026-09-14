@@ -129,3 +129,14 @@ engineering replay check, not a biological detection threshold.
 The environment is a snapshot of the demonstration scene, not a validated EIA
 controlled-survey preset. Animal sizes, poses, helpers/materials and visibility
 remain provisional. A visually non-blank image does not resolve those issues.
+# Follow-up audit — 2026-09-14
+
+**Resolved for new captures:** [projection fix and raster verification](CAPTURE_PROJECTION_FIX.md).
+Version-2 metadata separates capture-image matrices from UI matrices. The
+warning below continues to apply to historical version-1 artifacts.
+
+See [HIDEF_REVIEW.md](HIDEF_REVIEW.md). Authored USD cameras agree with the ray
+model, but saved `actual_projection_matrix` values do not describe that same
+image mapping. Prior replay success does not validate those matrices as RGB
+intrinsics. Capture-product versus display-viewport projection remains open;
+do not treat the existing metadata field as independently verified calibration.

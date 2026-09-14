@@ -20,6 +20,7 @@ from .hidef_api import HiDefRequest
 from .hidef_camera import configuration
 from .sony_camera import configuration as sony_configuration
 from .calibration_geometry import build_camera
+from .capture_projection import record_projection
 from . import calibration_capture
 from . import capture_state
 from .hidef_maps import export_maps
@@ -39,6 +40,7 @@ SETTING_KEYS = (
 
 
 class MarineRequest(HiDefRequest):
+    projection_probe: bool = False
     target_x_m: float = Field(default=-3,ge=-1000,le=1000)
     target_z_m: float = Field(default=0,ge=-1000,le=1000)
 
@@ -214,6 +216,8 @@ async def _run(data, replay_id, camera_model='hidef'):
         frozen = Usd.Stage.Open(str(directory/'scene.usdc'))
         extra = {key:saved[key] for key in ('snapshot','camera_translation_m','camera_target_xz_m',
                   'animals','asset_dependencies','environment_status')}
+        if saved.get('projection_probe'):
+            extra.update(projection_probe=True,targets=saved['targets'])
     else:
         if data.downsample==1 and not getattr(data, 'allow_full_resolution', False):
             raise ValueError('Full resolution requires allow_full_resolution=true and adequate GPU memory')
@@ -245,6 +249,21 @@ async def _run(data, replay_id, camera_model='hidef'):
                     asset_dependencies=asset_dependencies(frozen),
                     environment_status='Snapshot of existing presentation environment, not a certified controlled survey preset. Lighting, water and animal geometry are not modified.')
         build_camera(frozen,config,camera_path,translation)
+        if getattr(data,'projection_probe',False):
+            # Diagnostic changes exist only on the frozen copy. Same camera,
+            # renderer, capture code, resolution and restoration as marine RGB.
+            from .calibration_geometry import build_stage
+            from pxr import Gf
+            for path in ('/World','/Environment'):
+                prim=frozen.GetPrimAtPath(path)
+                if prim and prim.IsA(UsdGeom.Imageable):
+                    UsdGeom.Imageable(prim).MakeInvisible()
+            build_stage(frozen,config)
+            UsdGeom.Xformable(frozen.GetPrimAtPath('/Calibration')).AddTranslateOp().Set(
+                Gf.Vec3d(*(v/config.meters_per_scene_unit for v in translation)))
+            extra['projection_probe']=True
+            extra['targets']=config.targets()
+            extra['environment_status']='Diagnostic targets on frozen marine copy; live environment untouched; not wildlife data'
     if main_view is None or not main_view.updates_enabled:
         raise ValueError('An active updating viewport is required')
     retained_stages.Insert(frozen)
@@ -282,9 +301,7 @@ async def _run(data, replay_id, camera_model='hidef'):
         for filename in ('warmup.png','rgb.png'):
             capture = capture_viewport_to_file(main_view,file_path=str(directory/filename))
             await capture.wait_for_result(completion_frames=5)
-        metadata.update(actual_viewport_resolution=list(main_view.resolution),
-                        actual_view_matrix=[list(row) for row in main_view.view],
-                        actual_projection_matrix=[list(row) for row in main_view.projection])
+        metadata.update(record_projection(frozen,main_view))
     finally:
         ok,error = await main_context.attach_stage_async(main_stage)
         if not ok:
