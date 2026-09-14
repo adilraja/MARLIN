@@ -155,7 +155,14 @@ def build_stage(stage, config):
         plane(target['id'],c.target_width_m,c.target_height_m,y,1,x,z)
     plane('Background', c.image_width_px*c.gsd_m_px*10, c.image_height_px*c.gsd_m_px*10,
           c.target_plane_y_m-0.01, 0)
-    camera = UsdGeom.Camera.Define(stage, '/Calibration/Camera')
+    return build_camera(stage, c, '/Calibration/Camera')
+
+
+def build_camera(stage, c, path, translation_m=(0, 0, 0)):
+    """Author the ideal camera without adding targets or changing stage metadata."""
+    from pxr import Gf, UsdGeom
+    unit = c.meters_per_scene_unit
+    camera = UsdGeom.Camera.Define(stage, path)
     camera.CreateProjectionAttr('perspective')
     # USD focal length and apertures are expressed in tenths of a scene unit.
     camera.CreateFocalLengthAttr(c.focal_length_mm / (100*unit))
@@ -169,6 +176,6 @@ def build_stage(stage, config):
     matrix = Gf.Matrix4d(1)
     for i,row in enumerate((right,up,tuple(-a for a in forward))):
         matrix.SetRow(i,Gf.Vec4d(*row,0))
-    matrix.SetRow(3,Gf.Vec4d(*(a/unit for a in c.camera_position()),1))
-    camera.AddTransformOp().Set(matrix)
+    matrix.SetRow(3,Gf.Vec4d(*((a+b)/unit for a,b in zip(c.camera_position(),translation_m)),1))
+    camera.MakeMatrixXform().Set(matrix)
     return camera

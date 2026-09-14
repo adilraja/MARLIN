@@ -122,6 +122,9 @@ def _set_camera_transform(stage, state):
 
 
 def _update_chase_camera(event):
+    from . import capture_state
+    if capture_state.paused:
+        return
     global _chase_camera_state
 
     state = _chase_camera_state

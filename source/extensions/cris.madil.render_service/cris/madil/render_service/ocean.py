@@ -897,6 +897,10 @@ def _calculate_animated_ocean(state, elapsed_time):
 def _update_animated_ocean(event):
     """Called from Kit's update loop."""
 
+    from . import capture_state
+    if capture_state.paused:
+        return
+
     global _ocean_animation_state
 
     state = _ocean_animation_state

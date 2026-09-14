@@ -646,6 +646,9 @@ def _discover_authored_animation(stage, root_prim):
 
 
 def _update_cetacean_swimming(event):
+    from . import capture_state
+    if capture_state.paused:
+        return
 
     global _cetacean_swim_state
 

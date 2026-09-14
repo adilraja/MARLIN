@@ -148,6 +148,44 @@ preview PNGs as nominal 2 cm/px. Native output requires `downsample:1` and
 on this GPU. Full assumptions/results are in
 `source/extensions/cris.madil.render_service/config/HIDEF_IMPLEMENTATION.md`.
 
+## HiDef marine snapshot + directional GSD maps
+
+With the marine scene loaded:
+
+```bash
+cd /home/madil/kit-app-template
+python3 tools/capture_hidef_marine.py
+```
+
+This briefly pauses MARLIN updates and uses the existing viewport to render a
+frozen scene, then restores the live stage, overview camera, selection, display
+options, resolution and recorded render settings. It does not open a second RTX
+renderer. Output is **1644 × 548**, not native 6576 × 2192.
+
+The response gives a `capture_id` and paths to `rgb.png`, `scene.usdc`,
+`metadata.json`, `directional_gsd.npz` and diagnostic map PNGs.
+
+Re-render an existing snapshot (replace the ID with your own):
+
+```bash
+python3 tools/capture_hidef_marine.py --replay oblique_6h25133y
+```
+
+The saved scene is used even if the live animals have moved. Replay refuses
+changed tracked renderer settings or changed hashed texture files. RTX pixels
+need not be bit-for-bit identical. A low-memory refusal means no render was
+attempted; do not repeatedly retry or lower the safety check.
+
+Defaults: roll 7.77°, pitch 30° **from nadir**, 150 mm, 549 m above Y=0,
+principal ray aimed at X=-3 m, Z=0 m. The 3 m framing shift keeps the default
+footprint inside the 160 m demonstration ocean; it does not change GSD or tune
+camera intrinsics. Other framing can be requested with `--target-x`/`--target-z`.
+`--roll 23.17` is supported but may extend beyond this finite ocean mesh.
+
+These maps describe the **flat reference sea plane**, not the wavy surface,
+submerged animals or biological detectability. See [HIDEF_CAPTURE.md](HIDEF_CAPTURE.md)
+for assumptions, verification and the artifact layout.
+
 ## Stop Kit
 
 Close the Kit window or press **Ctrl+C** in its launch terminal. The live scene

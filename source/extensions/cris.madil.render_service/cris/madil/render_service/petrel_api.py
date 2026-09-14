@@ -15,6 +15,9 @@ _last_error = None
 
 
 def _update(event):
+    from . import capture_state
+    if capture_state.paused:
+        return
     global _subscription, _last_error
     stage = omni.usd.get_context().get_stage()
     for name, player in list(_players.items()):

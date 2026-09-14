@@ -323,6 +323,9 @@ def shutdown_gallery_swimming():
 
 
 def _update_gallery_swimming(event):
+    from . import capture_state
+    if capture_state.paused:
+        return
     global _gallery_swim_elapsed
     global _gallery_deformation_elapsed
 
