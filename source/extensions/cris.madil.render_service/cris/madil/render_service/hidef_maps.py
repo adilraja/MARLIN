@@ -19,7 +19,9 @@ def write_heatmap(path, values):
     valid = np.isfinite(values)
     lo, hi = float(values[valid].min()), float(values[valid].max())
     t = np.zeros(values.shape)
-    t[valid] = (values[valid]-lo)/max(hi-lo, 1e-12)
+    # A constant nadir map must not amplify floating-point roundoff into bands.
+    if hi-lo > max(abs(lo),abs(hi),1)*1e-9:
+        t[valid] = (values[valid]-lo)/(hi-lo)
     rgb = np.stack((255*t, 80+175*t, 180*(1-t)), axis=-1).astype('uint8')
     rgb[~valid] = 0
     h, w = values.shape
@@ -54,6 +56,6 @@ def export_maps(directory, config, translation_m):
                 nominal_nadir_gsd_cm_px=nominal(c),
                 definition='Forward pixel-centre neighbour distances; image width and height separate. Last column width and last row height are NaN. Pixel area uses projected pixel corners.',
                 anisotropy_definition='height-direction spacing divided by width-direction spacing',
-                heatmap_legend='Per-map linear scale: blue=reported minimum, yellow=maximum, black=NaN; no shared scale.',
+                heatmap_legend='Per-map linear scale: blue=reported minimum, yellow=maximum, black=NaN; no shared scale. Numerically uniform ranges (relative spread <=1e-9) use solid blue; numeric maps are unchanged.',
                 applicability='Flat mean sea reference plane only. Not wave-surface, body-surface or refracted underwater GSD.',
                 sampling='Actual preview pixels, not native sensor pixels; no upsampling or relabelling.')

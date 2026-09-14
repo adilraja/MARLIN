@@ -186,6 +186,25 @@ These maps describe the **flat reference sea plane**, not the wavy surface,
 submerged animals or biological detectability. See [HIDEF_CAPTURE.md](HIDEF_CAPTURE.md)
 for assumptions, verification and the artifact layout.
 
+## Sony ILX-LR1 provisional camera capture
+
+With the marine scene loaded:
+
+```bash
+python3 tools/capture_sony_marine.py
+# Optional framing shift in metres, without moving animals:
+python3 tools/capture_sony_marine.py --target-z -30
+# Replace the placeholder with the returned ID:
+python3 tools/capture_sony_marine.py --replay sony_CAPTURE_ID
+```
+
+This uses the same guarded snapshot/restoration pipeline as HiDef. Sony is a
+separate **assumed-nadir** 85 mm / 150 m profile. Output is **1188 × 792** at
+**5.30303 cm/preview pixel**, retaining the nominal 63 × 42 m footprint.
+Native geometry predicts 0.66288 cm/px; native rendering is deferred.
+The trial image mode, camera mounting and calibration remain unresolved.
+See [SONY_CAMERA.md](SONY_CAMERA.md) for provenance and limitations.
+
 ## Stop Kit
 
 Close the Kit window or press **Ctrl+C** in its launch terminal. The live scene

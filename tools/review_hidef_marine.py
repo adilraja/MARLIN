@@ -36,24 +36,27 @@ def review(original, replay):
                      fraction_channels_identical=float((delta==0).mean()))
         # Engineering replay tolerance, not a wildlife detection criterion.
         checks['replay_mean_pixel_error_le_2']=metrics['mean_absolute_rgb_error_0_255']<=2
-        panel=Image.new('RGB',(1280,1510),'white')
+        image_height=round(1200*shape[0]/shape[1])
+        row_height=image_height+80
+        panel=Image.new('RGB',(1280,70+3*row_height),'white')
         draw=ImageDraw.Draw(panel)
         try:
             font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',21)
         except OSError:
             font=ImageFont.load_default()
-        draw.text((30,15),'HiDef marine snapshot: 30° from nadir; roll %.2f°; %d × %d preview'%(
-            a['config']['roll_deg'],shape[1],shape[0]),fill='black',font=font)
+        label='Sony provisional' if a.get('camera_model')=='Sony ILX-LR1' else 'HiDef'
+        draw.text((30,15),'%s: pitch %.2f° from nadir; roll %.2f°; %d × %d preview'%(
+            label,a['config']['pitch_deg'],a['config']['roll_deg'],shape[1],shape[0]),fill='black',font=font)
         for i,(filename,title,key) in enumerate((('rgb.png','Captured RGB (uncalibrated animals)',None),
             ('gsd_width_cm_px.png','Image-width direction — flat reference sea plane','gsd_width_cm_px'),
             ('gsd_height_cm_px.png','Image-height direction — flat reference sea plane','gsd_height_cm_px'))):
-            top=60+i*480
+            top=60+i*row_height
             draw.text((30,top),title,fill='black',font=font)
             with Image.open(original/filename) as im:
-                panel.paste(im.convert('RGB').resize((1200,400)),(30,top+35))
+                panel.paste(im.convert('RGB').resize((1200,image_height)),(30,top+35))
             if key:
                 lo,hi=float(np.nanmin(ma[key])),float(np.nanmax(ma[key]))
-                draw.text((30,top+440),'Blue %.4f  →  yellow %.4f cm/preview pixel; black = invalid edge'%(lo,hi),fill='black',font=font)
+                draw.text((30,top+image_height+40),'Blue %.4f  →  yellow %.4f cm/preview pixel; black = invalid edge'%(lo,hi),fill='black',font=font)
         panel.save(original/'review.png')
     report=dict(status='passed' if all(checks.values()) else 'failed',checks=checks,
                 original=a['capture_id'],replay=b['capture_id'],pixel_comparison=metrics,
@@ -61,7 +64,7 @@ def review(original, replay):
                 caveats=['Some animals intersect frame edges; this is not a claim that every specimen fits wholly inside the image.',
                          'Water appearance is the saved demonstration material and lighting, not a validated controlled-survey environment.',
                          'External runtime MDL dependencies are not bundled. Same runtime and unchanged local texture files are required.',
-                         'Not a native-resolution 2 cm/px image; directional preview GSD is recorded separately.',
+                         'Not a native-resolution image; directional preview GSD is recorded separately.',
                          'Image non-blank and replay similarity checks do not prove biological realism or visibility through water.'])
     (original/'verification.json').write_text(json.dumps(report,indent=2)+'\n')
     print(json.dumps(report,indent=2))

@@ -18,6 +18,7 @@ from pydantic import Field
 from .api import router
 from .hidef_api import HiDefRequest
 from .hidef_camera import configuration
+from .sony_camera import configuration as sony_configuration
 from .calibration_geometry import build_camera
 from . import calibration_capture
 from . import capture_state
@@ -152,9 +153,9 @@ def animals_record(stage, config, translation):
     return records
 
 
-async def run_capture(data=None, replay_id=None):
+async def run_capture(data=None, replay_id=None, camera_model='hidef'):
     if calibration_capture._busy:
-        return {'ok':False,'error':'Another calibration or HiDef capture is running'}
+        return {'ok':False,'error':'Another camera capture is running'}
     calibration_capture._busy = True
     capture_state.paused = True
     timeline = omni.timeline.get_timeline_interface()
@@ -162,7 +163,7 @@ async def run_capture(data=None, replay_id=None):
     original_time = timeline.get_current_time()
     timeline.pause()
     try:
-        return await asyncio.wait_for(_run(data,replay_id),timeout=180)
+        return await asyncio.wait_for(_run(data,replay_id,camera_model),timeout=180)
     except Exception as exc:
         return {'ok':False,'error':str(exc) or type(exc).__name__}
     finally:
@@ -173,7 +174,13 @@ async def run_capture(data=None, replay_id=None):
         calibration_capture._busy = False
 
 
-async def _run(data, replay_id):
+async def _run(data, replay_id, camera_model='hidef'):
+    if camera_model not in ('hidef', 'sony'):
+        raise ValueError('Unsupported camera profile')
+    sony = camera_model == 'sony'
+    root = ROOT.parent/'sony_marine' if sony else ROOT
+    camera_path = '/MarlinSonyCapture/Camera' if sony else CAMERA_PATH
+    prefix = 'sony_' if sony else 'oblique_'
     main_context = omni.usd.get_context()
     main_stage = main_context.get_stage()
     if main_stage is None:
@@ -189,9 +196,9 @@ async def _run(data, replay_id):
     main_camera = str(main_view.camera_path) if main_view else None
     main_resolution = tuple(main_view.resolution) if main_view else None
     if replay_id is not None:
-        if not re.fullmatch(r'oblique_[a-z0-9_]+',replay_id):
+        if not re.fullmatch(prefix+r'[a-z0-9_]+',replay_id):
             raise ValueError('Use the capture_id from a successful marine capture')
-        directory = ROOT/replay_id
+        directory = root/replay_id
         saved = json.loads((directory/'metadata.json').read_text())
         if digest(directory/'scene.usdc') != saved['scene_sha256']:
             raise ValueError('Saved scene hash mismatch')
@@ -200,18 +207,22 @@ async def _run(data, replay_id):
         for dependency in saved['asset_dependencies']:
             if dependency['sha256'] and digest(dependency['path']) != dependency['sha256']:
                 raise ValueError('Asset dependency changed: '+dependency['path'])
-        config = configuration(saved['config']['roll_deg'],saved['config']['downsample'],saved['config']['aperture_basis'])
+        config = (sony_configuration(saved['config']['downsample']) if sony else
+                  configuration(saved['config']['roll_deg'],saved['config']['downsample'],saved['config']['aperture_basis']))
+        if sony and config.downsample != 8:
+            raise ValueError('Native Sony rendering is deferred; only preview replay is enabled')
         frozen = Usd.Stage.Open(str(directory/'scene.usdc'))
         extra = {key:saved[key] for key in ('snapshot','camera_translation_m','camera_target_xz_m',
                   'animals','asset_dependencies','environment_status')}
     else:
-        if data.downsample==1 and not data.allow_full_resolution:
+        if data.downsample==1 and not getattr(data, 'allow_full_resolution', False):
             raise ValueError('Full resolution requires allow_full_resolution=true and adequate GPU memory')
         if not main_stage.GetPrimAtPath('/World/Ocean') or not main_stage.GetPrimAtPath('/World/Cetaceans'):
             raise ValueError('Expected /World/Ocean and /World/Cetaceans in the live marine scene')
         if UsdGeom.GetStageUpAxis(main_stage)!='Y' or not math.isclose(UsdGeom.GetStageMetersPerUnit(main_stage),.01):
             raise ValueError('Marine capture requires the current Y-up centimetre stage')
-        config = configuration(data.roll_deg,data.downsample,data.aperture_basis)
+        config = (sony_configuration(data.downsample) if sony else
+                  configuration(data.roll_deg,data.downsample,data.aperture_basis))
         seconds = omni.timeline.get_timeline_interface().get_current_time()
         time_code = seconds*main_stage.GetTimeCodesPerSecond()
         # No await until the copy is complete: main-thread animation cannot
@@ -233,12 +244,12 @@ async def _run(data, replay_id):
                     animals=animals_record(frozen,config,translation),
                     asset_dependencies=asset_dependencies(frozen),
                     environment_status='Snapshot of existing presentation environment, not a certified controlled survey preset. Lighting, water and animal geometry are not modified.')
-        build_camera(frozen,config,CAMERA_PATH,translation)
+        build_camera(frozen,config,camera_path,translation)
     if main_view is None or not main_view.updates_enabled:
         raise ValueError('An active updating viewport is required')
     retained_stages.Insert(frozen)
-    ROOT.mkdir(parents=True,exist_ok=True)
-    directory = Path(tempfile.mkdtemp(prefix='oblique_',dir=ROOT))
+    root.mkdir(parents=True,exist_ok=True)
+    directory = Path(tempfile.mkdtemp(prefix=prefix,dir=root))
     frozen.GetRootLayer().Export(str(directory/'scene.usdc'))
     (directory/'snapshot_inputs.json').write_text(json.dumps(dict(config=config.metadata(),**extra,
                         renderer_settings=before,gpu_preflight=gpu,status='render_pending'),indent=2)+'\n')
@@ -257,7 +268,7 @@ async def _run(data, replay_id):
         restore_settings(before)
         main_context.get_selection().clear_selected_prim_paths()
         settings.set(display_key,0)
-        main_view.camera_path = CAMERA_PATH
+        main_view.camera_path = camera_path
         main_view.fill_frame = False
         main_view.resolution = (config.image_width_px,config.image_height_px)
         for _ in range(90):
@@ -290,7 +301,7 @@ async def _run(data, replay_id):
     for field in ('targets','expected_bbox_xywh_px','gsd_cm_px'):
         metadata.pop(field,None)
     metadata.update(extra)
-    metadata.update(test_kind='hidef_marine_snapshot_preview',capture_id=directory.name,
+    metadata.update(test_kind=camera_model+'_marine_snapshot_preview',capture_id=directory.name,
                     replay_of=replay_id,renderer_settings=before,
                     gpu_preflight=gpu,
                     scene_sha256=digest(directory/'scene.usdc'),scene_file='scene.usdc',rendered_image='rgb.png',
