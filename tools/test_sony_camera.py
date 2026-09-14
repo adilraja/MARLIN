@@ -16,6 +16,18 @@ maps = importlib.import_module('_marine_test.hidef_maps')
 
 
 class SonyTests(unittest.TestCase):
+    def test_nine_metric_targets_cover_frame_and_fit(self):
+        for divisor in (1,8):
+            c=camera.configuration(divisor)
+            self.assertEqual(len(c.targets()),9)
+            for target in c.targets():
+                x,y,w,h=target['expected_bbox_xywh_px']
+                self.assertGreater(min(x,y),4)
+                self.assertLess(x+w,c.image_width_px-4)
+                self.assertLess(y+h,c.image_height_px-4)
+                self.assertAlmostEqual(w,8/c.gsd_m_px)
+                self.assertAlmostEqual(h,8/c.gsd_m_px)
+
     def test_native_geometry_independent_targets(self):
         c = camera.configuration(1)
         self.assertAlmostEqual(c.gsd_m_px*100, .6628787878788, places=10)

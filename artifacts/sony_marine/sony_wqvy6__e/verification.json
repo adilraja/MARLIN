@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "checks": {
+    "original_restored": true,
+    "replay_restored": true,
+    "replay_link": true,
+    "image_dimensions": true,
+    "camera_identical": true,
+    "scene_file_identical": true,
+    "sony_wqvy6__e/warmup.png_hash": true,
+    "sony_wqvy6__e/anisotropy_height_over_width.png_hash": true,
+    "sony_wqvy6__e/gsd_height_cm_px.png_hash": true,
+    "sony_wqvy6__e/rgb.png_hash": true,
+    "sony_wqvy6__e/effective_pixel_area_cm2.png_hash": true,
+    "sony_wqvy6__e/directional_gsd.npz_hash": true,
+    "sony_wqvy6__e/gsd_width_cm_px.png_hash": true,
+    "sony_c7jigenz/warmup.png_hash": true,
+    "sony_c7jigenz/anisotropy_height_over_width.png_hash": true,
+    "sony_c7jigenz/gsd_height_cm_px.png_hash": true,
+    "sony_c7jigenz/rgb.png_hash": true,
+    "sony_c7jigenz/effective_pixel_area_cm2.png_hash": true,
+    "sony_c7jigenz/directional_gsd.npz_hash": true,
+    "sony_c7jigenz/gsd_width_cm_px.png_hash": true,
+    "gsd_width_cm_px_repeatable": true,
+    "gsd_width_cm_px_shape": true,
+    "gsd_height_cm_px_repeatable": true,
+    "gsd_height_cm_px_shape": true,
+    "anisotropy_height_over_width_repeatable": true,
+    "anisotropy_height_over_width_shape": true,
+    "effective_pixel_area_cm2_repeatable": true,
+    "effective_pixel_area_cm2_shape": true,
+    "image_not_blank": true,
+    "replay_mean_pixel_error_le_2": true
+  },
+  "original": "sony_wqvy6__e",
+  "replay": "sony_c7jigenz",
+  "pixel_comparison": {
+    "mean_absolute_rgb_error_0_255": 0.06377644287997823,
+    "max_absolute_rgb_error_0_255": 33.0,
+    "fraction_channels_identical": 0.9505659144758472
+  },
+  "biological_detectability_tested": false,
+  "caveats": [
+    "Some animals intersect frame edges; this is not a claim that every specimen fits wholly inside the image.",
+    "Water appearance is the saved demonstration material and lighting, not a validated controlled-survey environment.",
+    "External runtime MDL dependencies are not bundled. Same runtime and unchanged local texture files are required.",
+    "Not a native-resolution image; directional preview GSD is recorded separately.",
+    "Image non-blank and replay similarity checks do not prove biological realism or visibility through water."
+  ]
+}

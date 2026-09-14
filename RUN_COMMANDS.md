@@ -205,6 +205,17 @@ Native geometry predicts 0.66288 cm/px; native rendering is deferred.
 The trial image mode, camera mounting and calibration remain unresolved.
 See [SONY_CAMERA.md](SONY_CAMERA.md) for provenance and limitations.
 
+Sony image/GSD diagnostic: nine known targets on a frozen copy, with the live
+marine viewport restored afterward. This is not a wildlife-data capture:
+
+```bash
+curl -s -X POST http://localhost:8011/scene/camera/sony/marine/capture \
+  -H 'Content-Type: application/json' -d '{"projection_probe":true}'
+# NumPy/Pillow required; substitute the returned directory:
+python3 tools/capture_calibration_target.py --measure-existing CAPTURE_DIRECTORY
+python3 tools/verify_capture_projection.py CAPTURE_DIRECTORY
+```
+
 ## Stop Kit
 
 Close the Kit window or press **Ctrl+C** in its launch terminal. The live scene

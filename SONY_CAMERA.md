@@ -63,6 +63,55 @@ the reviewer supports both cameras and preserves their image aspect ratios.
 
 ## Limits and tests
 
+### Sony-specific image/GSD validation — 2026-09-14
+
+The version-2 capture path has now been checked with nine 8 × 8 m targets at
+15%, 50% and 85% of image width and height. These targets are added only to a
+frozen diagnostic copy; camera geometry and live animals are unchanged.
+
+Probe: `artifacts/sony_marine/sony_39sl5rol`. All nine targets passed the existing
+2-pixel bounding-box / 0.95 polygon-IoU thresholds at three contrast thresholds.
+Maximum bbox error: **1.142857 px**. Minimum IoU: **0.986453**.
+Expected target dimensions: 150.857143 × 150.857143 pixels; thresholded raster
+boxes were 151 or 152 pixels wide/high. Integer raster measurements do not imply
+subpixel physical calibration.
+
+Both directional maps range from 5.303030303029743 to 5.303030303030454 cm/px;
+anisotropy is 1 within numerical precision; effective pixel area is approximately
+28.1221304 cm² per preview pixel. The missing forward-neighbour boundaries remain
+NaN. Capture-matrix reprojection error was **0.000012684 px**, well below the
+0.001-pixel numerical check. Sampled GSD maps matched the independent scalar rays.
+
+Normal marine capture: `sony_e9yl1vk9`; replay: `sony_60p_93va`. Their scene,
+camera and maps matched; mean absolute RGB difference was **0.007048/255**.
+All restoration checks passed. The normal image was visually inspected: one
+animal near the centre, with most swimmers outside this fixed footprint at
+capture time. Animals were not repositioned or rescaled to fill the image.
+
+Machine-readable evidence is in each folder's `projection_validation.json`,
+the probe's `validation.json`, and the original marine folder's `verification.json`.
+The probe's `review.png` shows predicted outlines over the measured image.
+Six Sony tests, four projection tests and seven shared HiDef regression tests
+passed (17 total). Eleven swimmers and ocean animation remained active afterward.
+Kit was not restarted; controllers were resumed after extension hot-reload.
+
+**Conclusion:** the tested 1188 × 792 Sony preview is geometrically validated
+against its flat-plane GSD maps through the marine capture path. This validates
+the simulation, not the trial's actual mounting, acquisition mode, lens or
+intrinsics. Native rendering and biological detectability remain deferred.
+
+To reproduce the diagnostic (normal capture commands above remain unchanged):
+
+```bash
+curl -s -X POST http://localhost:8011/scene/camera/sony/marine/capture \
+  -H 'Content-Type: application/json' -d '{"projection_probe":true}'
+# With NumPy/Pillow available, use the returned directory:
+python3 tools/capture_calibration_target.py --measure-existing CAPTURE_DIRECTORY
+python3 tools/verify_capture_projection.py CAPTURE_DIRECTORY
+```
+
+### Earlier implementation verification
+
 Verified in running Kit on 2026-09-14: original `sony_32g5ti12`, replay
 `sony_4ek_ada7`, framed at X=0 m, Z=-30 m. Both passed all seven viewport/state
 restoration checks. Frozen scene and numerical maps were identical on replay;

@@ -18,6 +18,11 @@ class SonyConfig(CalibrationConfig):
         if any(getattr(self, key) != value for key, value in expected.items()):
             raise ValueError('Sony provisional profile geometry must remain fixed')
 
+    def target_image_positions(self):
+        # Test the full image, not just the nadir principal point. Diagnostic
+        # targets only: no camera parameter or animal geometry is changed.
+        return [(u,v) for v in (.15,.5,.85) for u in (.15,.5,.85)]
+
     def metadata(self):
         result = super().metadata()
         for key in ('targets', 'expected_bbox_xywh_px', 'gsd_cm_px'):

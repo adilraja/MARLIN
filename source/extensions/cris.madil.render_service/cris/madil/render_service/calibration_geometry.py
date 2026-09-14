@@ -79,8 +79,11 @@ class CalibrationConfig:
         return [100*math.dist(self.ray_plane(u-0.5,v),self.ray_plane(u+0.5,v)),
                 100*math.dist(self.ray_plane(u,v-0.5),self.ray_plane(u,v+0.5))]
 
+    def target_image_positions(self):
+        return [(0.5,0.5)] if self.pitch_deg==0 and self.roll_deg==0 else [(u,v) for v in (0.15,0.5,0.85) for u in (0.15,0.5,0.85)]
+
     def targets(self):
-        positions = [(0.5,0.5)] if self.pitch_deg==0 and self.roll_deg==0 else [(u,v) for v in (0.15,0.5,0.85) for u in (0.15,0.5,0.85)]
+        positions = self.target_image_positions()
         result = []
         for i,(u,v) in enumerate(positions):
             u,v = u*self.image_width_px,v*self.image_height_px

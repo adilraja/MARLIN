@@ -6,6 +6,7 @@ from .hidef_marine import run_capture
 
 
 class SonyRequest(BaseModel):
+    projection_probe: bool = False
     downsample: Literal[8] = 8
     target_x_m: float = Field(default=0, ge=-1000, le=1000)
     target_z_m: float = Field(default=0, ge=-1000, le=1000)

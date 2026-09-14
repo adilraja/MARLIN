@@ -1,0 +1,964 @@
+{
+  "schema_version": "1.1.0",
+  "test_kind": "sony_marine_snapshot_preview",
+  "scientific_camera_calibrated": false,
+  "config": {
+    "meters_per_scene_unit": 0.01,
+    "image_width_px": 1188,
+    "image_height_px": 792,
+    "focal_length_mm": 85,
+    "pixel_pitch_um": 30.050505050505052,
+    "height_above_target_m": 150,
+    "target_width_m": 8,
+    "target_height_m": 8,
+    "target_plane_y_m": 0,
+    "pitch_deg": 0,
+    "roll_deg": 0,
+    "downsample": 8
+  },
+  "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+  "intrinsics_px": {
+    "fx": 2828.5714285714284,
+    "fy": 2828.5714285714284,
+    "cx": 594.0,
+    "cy": 396.0
+  },
+  "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+  "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+  "camera_position_m": [
+    0.0,
+    150,
+    0.0
+  ],
+  "world_up": "Y",
+  "camera_basis_right_up_forward": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      0,
+      -1.0,
+      -0.0
+    ]
+  ],
+  "pose_convention": "Y-up; nadir assumed, image right +X, image down +Z; trial mounting pitch/roll/yaw unresolved",
+  "seed": 0,
+  "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+  "camera_model": "Sony ILX-LR1",
+  "model_status": "published trial camera; not individually calibrated",
+  "reference_resolution": [
+    9504,
+    6336
+  ],
+  "downsample": 8,
+  "effective_sensor_mm": [
+    35.7,
+    23.8
+  ],
+  "reference_nominal_nadir_gsd_cm_px": 0.6628787878787878,
+  "output_nominal_nadir_gsd_cm_px": 5.303030303030303,
+  "nominal_footprint_m": [
+    63.0,
+    42.0
+  ],
+  "acquisition_mode": "9504 x 6336 full-frame 3:2 supported manufacturer mode; trial selection unresolved",
+  "principal_point_status": "centred ideal-pinhole assumption; not measured",
+  "altitude_status": "150 m published flight altitude, assumed camera-to-flat-plane separation; trial height reference unresolved",
+  "distortion_status": "zero assumed, not measured; exact lens and calibration unresolved",
+  "radiometry_status": "No calibrated noise, MTF, shutter/readout, motion blur or lens corrections",
+  "geometry_only": true,
+  "evidence": {
+    "published_trial": {
+      "camera": "Sony ILX-LR1",
+      "focal_length_mm": 85,
+      "flight_altitude_m": 150,
+      "platform": "autonomous fixed-wing UAV"
+    },
+    "manufacturer_specification": {
+      "sensor_mm": [
+        35.7,
+        23.8
+      ],
+      "supported_large_3_2_px": [
+        9504,
+        6336
+      ]
+    },
+    "assumed_for_simulation": [
+      "full-frame large 3:2 mode",
+      "nadir mount",
+      "centred principal point",
+      "zero distortion",
+      "150 m camera-to-plane height"
+    ],
+    "unresolved_trial_specific": [
+      "image mode/crop/format",
+      "mounting pitch/roll/yaw",
+      "exact 85 mm lens",
+      "focus/aperture",
+      "intrinsics/distortion",
+      "lens correction",
+      "shutter mode/exposure/readout",
+      "flight speed/trigger interval",
+      "altitude reference"
+    ]
+  },
+  "manufacturer_sources": [
+    "https://helpguide.sony.net/ilc/2390/v1/en/contents/221h_specifications.html",
+    "https://helpguide.sony.net/ilc/2390/v1/en/contents/0404M_jpeg_image_size.html"
+  ],
+  "validation_targets": {
+    "source": "Bartlett et al. (2025), Ecological Informatics 90, 103242; trial parameters supplied by user",
+    "nominal_gsd_cm_px": 0.6629,
+    "nominal_swath_width_m": 63,
+    "usage": "comparison only; not fitted geometry inputs"
+  },
+  "capture_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -2.220446049250313e-16,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      -2.220446049250313e-16,
+      0.0
+    ],
+    [
+      0.0,
+      3.3306690738754696e-12,
+      -15000.0,
+      1.0
+    ]
+  ],
+  "capture_projection_matrix": [
+    [
+      4.761904660138797,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      7.142857371830575,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0040080160320641,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -300.6012024048096,
+      0.0
+    ]
+  ],
+  "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+  "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+  "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+  "actual_viewport_resolution": [
+    1188,
+    792
+  ],
+  "ui_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -15000.0,
+      1.0
+    ]
+  ],
+  "ui_projection_matrix": [
+    [
+      3.0976268617229,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      7.142856799397022,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0040080160320641,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -300.6012024048096,
+      0.0
+    ]
+  ],
+  "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+  "render_product": {
+    "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+    "camera": "/MarlinSonyCapture/Camera",
+    "resolution": [
+      1188,
+      792
+    ],
+    "pixel_aspect_ratio": 1.0,
+    "data_window_ndc": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "projection_metadata_version": 2,
+  "actual_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -2.220446049250313e-16,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      -2.220446049250313e-16,
+      0.0
+    ],
+    [
+      0.0,
+      3.3306690738754696e-12,
+      -15000.0,
+      1.0
+    ]
+  ],
+  "actual_projection_matrix": [
+    [
+      4.761904660138797,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      7.142857371830575,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0040080160320641,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -300.6012024048096,
+      0.0
+    ]
+  ],
+  "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices",
+  "snapshot": {
+    "captured_utc": "2026-09-14T17:45:16.278598+00:00",
+    "source_timeline_seconds": 0.9960118181818154,
+    "source_time_code": 59.760709090908925,
+    "frozen_time_sampled_attributes": 6,
+    "viewport_render_tree_excluded": true,
+    "method": "Flattened USD composition with every time-sampled attribute evaluated at the recorded time; current procedural mesh points retained."
+  },
+  "camera_translation_m": [
+    0.0,
+    0,
+    0.0
+  ],
+  "camera_target_xz_m": [
+    0.0,
+    0.0
+  ],
+  "animals": [
+    {
+      "path": "/World/Cetaceans/Dolphin_001",
+      "bounds_min_scene_units": [
+        -40.71309864521026,
+        -95.06992301927095,
+        -186.79503332401674
+      ],
+      "bounds_max_scene_units": [
+        41.971960663795464,
+        57.0746223387655,
+        82.67904902097584
+      ],
+      "projected_bounds_xyxy_px": [
+        586.2933492146987,
+        360.6412545799611,
+        601.944942889979,
+        411.65045597777
+      ],
+      "bounds_intersect_frame": true,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Bottlenose_Carimam",
+      "bounds_min_scene_units": [
+        -1806.7890327843484,
+        -154.74632411539156,
+        5379.630447436333
+      ],
+      "bounds_max_scene_units": [
+        -1793.2090694038022,
+        -141.3502577768668,
+        5419.681314964625
+      ],
+      "projected_bounds_xyxy_px": [
+        256.4718569623537,
+        1400.0860239064125,
+        259.3048602272246,
+        1408.4563172031258
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Cuvier_Whale",
+      "bounds_min_scene_units": [
+        -694.568238528783,
+        -185.75971960330395,
+        -5506.406239458832
+      ],
+      "bounds_max_scene_units": [
+        -505.43176147121756,
+        -24.677749546707005,
+        -4889.286994114288
+      ],
+      "projected_bounds_xyxy_px": [
+        463.23940017582254,
+        -640.6454191345701,
+        499.85588959737856,
+        -514.701720097994
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Frasers_Dolphin",
+      "bounds_min_scene_units": [
+        580.3985086826362,
+        -175.82843306761907,
+        5337.153799210733
+      ],
+      "bounds_max_scene_units": [
+        619.6014913173628,
+        -122.27709902465274,
+        5485.824580303121
+      ],
+      "projected_bounds_xyxy_px": [
+        702.178518628213,
+        1390.7740785896158,
+        709.8943897115586,
+        1422.1051671246698
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Humpback_Whale",
+      "bounds_min_scene_units": [
+        1458.0552594400908,
+        -483.17089505541287,
+        -6059.838443337281
+      ],
+      "bounds_max_scene_units": [
+        2141.9447405599103,
+        27.909360632809296,
+        -4729.912208359769
+      ],
+      "projected_bounds_xyxy_px": [
+        860.3674951393593,
+        -748.8425136776398,
+        998.6625044331603,
+        -468.09267345167723
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Manatee",
+      "bounds_min_scene_units": [
+        -1874.2363364963342,
+        -229.74867689524405,
+        6196.67358225084
+      ],
+      "bounds_max_scene_units": [
+        -1725.7636635036667,
+        -70.25132310475603,
+        6599.903397749133
+      ],
+      "projected_bounds_xyxy_px": [
+        242.22011006039907,
+        1546.8879246004285,
+        273.47955710793997,
+        1634.751616144824
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Bottlenose_DigitalLife",
+      "bounds_min_scene_units": [
+        -640.71309864521,
+        -183.51676667136206,
+        -6579.8541637245535
+      ],
+      "bounds_max_scene_units": [
+        -558.0280393362043,
+        -98.64705172707097,
+        -6323.856427032676
+      ],
+      "projected_bounds_xyxy_px": [
+        473.9691946880759,
+        -836.6659089331531,
+        490.0437036646976,
+        -782.0854121461773
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Spotted_Dolphin",
+      "bounds_min_scene_units": [
+        573.8604516029266,
+        -174.63430434260047,
+        6293.725918102717
+      ],
+      "bounds_max_scene_units": [
+        626.1395462907035,
+        -106.46560343404241,
+        6521.067106376722
+      ],
+      "projected_bounds_xyxy_px": [
+        700.9683291759205,
+        1569.1586379060395,
+        711.2398943227299,
+        1617.0204944762936
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Pilot_Whale",
+      "bounds_min_scene_units": [
+        1719.8756990522645,
+        -230.42232319795866,
+        -6529.657266805206
+      ],
+      "bounds_max_scene_units": [
+        1880.0941843119847,
+        -57.738857389671416,
+        -6017.373550193454
+      ],
+      "projected_bounds_xyxy_px": [
+        913.4127621545874,
+        -830.5853564185668,
+        947.1725940484321,
+        -721.5376846375452
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+      "bounds_min_scene_units": [
+        -1245.7320688103664,
+        -199.1667705877104,
+        5037.1878520561395
+      ],
+      "bounds_max_scene_units": [
+        -1154.2679345010008,
+        -101.97915878386893,
+        5385.048827678941
+      ],
+      "projected_bounds_xyxy_px": [
+        360.6767977598023,
+        1333.4228109822989,
+        379.1902443255156,
+        1404.6092091164905
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Sperm_Whale",
+      "bounds_min_scene_units": [
+        -235.30685638895153,
+        -504.7669755734661,
+        -6377.402039106761
+      ],
+      "bounds_max_scene_units": [
+        235.30685638895153,
+        211.7111854068237,
+        -4435.333115314583
+      ],
+      "projected_bounds_xyxy_px": [
+        548.9926121085796,
+        -823.8123408659435,
+        639.0073878914204,
+        -413.1483442440782
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    },
+    {
+      "path": "/World/Cetaceans/Steno_Dolphin",
+      "bounds_min_scene_units": [
+        1143.7866683279028,
+        -189.37921229756165,
+        5058.5820398062815
+      ],
+      "bounds_max_scene_units": [
+        1256.2133316720958,
+        -87.60558687277042,
+        5376.42644294047
+      ],
+      "projected_bounds_xyxy_px": [
+        806.9963473289201,
+        1338.0108897733087,
+        829.5104736599035,
+        1403.9535905650241
+      ],
+      "bounds_intersect_frame": false,
+      "visibility": "inherited",
+      "note": "Projected world AABB only, not segmentation or evidence of visibility through water."
+    }
+  ],
+  "asset_dependencies": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+      "authored_path": "OmniSurface.mdl",
+      "sha256": null,
+      "status": "runtime_or_unresolved"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+      "status": "local_hashed"
+    }
+  ],
+  "environment_status": "Snapshot of existing presentation environment, not a certified controlled survey preset. Lighting, water and animal geometry are not modified.",
+  "capture_id": "sony_e9yl1vk9",
+  "replay_of": null,
+  "renderer_settings": {
+    "/rtx/fog/enabled": false,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/spp": 1,
+    "/rtx/pathtracing/totalSpp": 512,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "RealTimePathTracing",
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "gpu_preflight": {
+    "device_index": 0,
+    "total_mib": 6138,
+    "free_mib": 1164,
+    "driver": "595.84"
+  },
+  "scene_sha256": "9b930d10486a1418cb9fb7ee8414c000cff6e14a9c77042ae9727df7dd7af9ff",
+  "scene_file": "scene.usdc",
+  "rendered_image": "rgb.png",
+  "renderer_lifecycle": "Existing viewport temporarily displays frozen scene; live stage, camera, resolution, selection and controller updates restored afterwards. No second Hydra renderer.",
+  "reproducibility": "Frozen scene, camera and hashed local dependencies; RGB is not promised bitwise identical across RTX frames, drivers or machines.",
+  "biological_detectability_tested": false,
+  "validation_status": "rendered_pending_visual_review",
+  "directional_gsd": {
+    "file": "directional_gsd.npz",
+    "shape_hw": [
+      792,
+      1188
+    ],
+    "geometry_inputs": {
+      "camera_to_plane_m": 150,
+      "focal_length_mm": 85,
+      "sensor_width_mm": 35.7,
+      "sensor_height_mm": 23.8,
+      "image_width_px": 1188,
+      "image_height_px": 792,
+      "pitch_from_nadir_deg": 0,
+      "rolls_deg": [
+        0
+      ]
+    },
+    "ranges": {
+      "gsd_width_cm_px": {
+        "min": 5.303030303029743,
+        "max": 5.303030303030454,
+        "invalid_pixels": 792,
+        "diagnostic_png": "gsd_width_cm_px.png"
+      },
+      "gsd_height_cm_px": {
+        "min": 5.303030303029743,
+        "max": 5.303030303030454,
+        "invalid_pixels": 1188,
+        "diagnostic_png": "gsd_height_cm_px.png"
+      },
+      "anisotropy_height_over_width": {
+        "min": 0.999999999999866,
+        "max": 1.000000000000134,
+        "invalid_pixels": 1979,
+        "diagnostic_png": "anisotropy_height_over_width.png"
+      },
+      "effective_pixel_area_cm2": {
+        "min": 28.122130394853613,
+        "max": 28.122130394859266,
+        "invalid_pixels": 0,
+        "diagnostic_png": "effective_pixel_area_cm2.png"
+      }
+    },
+    "footprint": {
+      "roll_deg": 0,
+      "corners_xz_m": [
+        [
+          -31.500000000000004,
+          -21.000000000000004
+        ],
+        [
+          31.500000000000004,
+          -21.000000000000004
+        ],
+        [
+          31.500000000000004,
+          21.000000000000004
+        ],
+        [
+          -31.500000000000004,
+          21.000000000000004
+        ]
+      ],
+      "edge_order": "top-left, top-right, bottom-right, bottom-left (image edges)",
+      "top_edge_length_m": 63.00000000000001,
+      "bottom_edge_length_m": 63.00000000000001,
+      "x_extent_m": 63.00000000000001,
+      "z_extent_m": 42.00000000000001
+    },
+    "reference_plane_y_m": 0,
+    "nominal_nadir_gsd_cm_px": [
+      5.303030303030303,
+      5.303030303030303
+    ],
+    "definition": "Forward pixel-centre neighbour distances; image width and height separate. Last column width and last row height are NaN. Pixel area uses projected pixel corners.",
+    "anisotropy_definition": "height-direction spacing divided by width-direction spacing",
+    "heatmap_legend": "Per-map linear scale: blue=reported minimum, yellow=maximum, black=NaN; no shared scale. Numerically uniform ranges (relative spread <=1e-9) use solid blue; numeric maps are unchanged.",
+    "applicability": "Flat mean sea reference plane only. Not wave-surface, body-surface or refracted underwater GSD.",
+    "sampling": "Actual preview pixels, not native sensor pixels; no upsampling or relabelling."
+  },
+  "restoration_checks": {
+    "original_stage_retained": true,
+    "renderer_settings_preserved": true,
+    "camera_preserved": true,
+    "resolution_preserved": true,
+    "fill_frame_preserved": true,
+    "selection_preserved": true,
+    "display_options_preserved": true
+  },
+  "renderer_settings_after_restore": {
+    "/rtx/fog/enabled": false,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/spp": 1,
+    "/rtx/pathtracing/totalSpp": 512,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "RealTimePathTracing",
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "renderer_comparison_tolerance": "Only float32 roundtrip tolerance: relative 1e-7, absolute 1e-9; strings/bools exact.",
+  "main_viewport_preserved": true,
+  "output_sha256": {
+    "warmup.png": "c32018214c9be749d8a1947a5799196f337a692ab1f10f873cc04ae5b528080c",
+    "anisotropy_height_over_width.png": "f3318f442778aa7cefea996834a805aee66be74d69fbf5f64b2bda40df95d6b2",
+    "gsd_height_cm_px.png": "b11b58a1cf7718470b1b99bdd7dfc383c435d65b9f0c159a9d9a2a69699f614b",
+    "rgb.png": "ad86641d61488f9889e6e619be68aff455a5a9d88101e7c562260a36c01465b7",
+    "effective_pixel_area_cm2.png": "1a313b0c32db157253ffe2a6995280d9b0c5326f24f8b7cab986075588aaeec3",
+    "directional_gsd.npz": "2b4e82bb9811125708932f3bd64235185387f3e033b3543c26515f7101422d05",
+    "gsd_width_cm_px.png": "ef0a5dcd76f9d8fb68c6c2a3ce03eb7b180a35f2ebe44f4b4ff962386712671d"
+  }
+}
