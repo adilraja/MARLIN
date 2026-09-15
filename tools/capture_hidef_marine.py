@@ -11,6 +11,8 @@ def main(camera_model='hidef'):
     parser.add_argument('--api',default='http://localhost:8011')
     if camera_model == 'hidef':
         parser.add_argument('--roll',type=float,choices=(7.77,23.17,7.7675,23.1748),default=7.77)
+        parser.add_argument('--native',action='store_true',help='Native 6576 x 2192 through memory-bounded tiles')
+        parser.add_argument('--projection-probe',action='store_true',help='Known metric targets on a frozen copy')
     parser.add_argument('--target-x',type=float,default=0 if camera_model=='sony' else -3)
     parser.add_argument('--target-z',type=float,default=0)
     parser.add_argument('--replay',help='Capture ID returned by an earlier successful run')
@@ -20,6 +22,9 @@ def main(camera_model='hidef'):
     body = dict(downsample=8 if camera_model=='sony' else 4,target_x_m=args.target_x,target_z_m=args.target_z)
     if camera_model == 'hidef':
         body['roll_deg'] = args.roll
+        body['projection_probe'] = args.projection_probe
+        if args.native:
+            body.update(downsample=1,allow_full_resolution=True)
     if args.replay:
         import re
         if not re.fullmatch(('sony_' if camera_model=='sony' else 'oblique_')+r'[a-z0-9_]+',args.replay):
@@ -29,7 +34,7 @@ def main(camera_model='hidef'):
     request = Request(args.api.rstrip('/')+path,data=json.dumps(body).encode(),
                       headers={'Content-Type':'application/json'},method='POST')
     try:
-        with urlopen(request,timeout=240) as response:
+        with urlopen(request,timeout=650) as response:
             result = json.load(response)
     except HTTPError as exc:
         print(f'MARLIN returned HTTP {exc.code}: {exc.read().decode()}',file=sys.stderr)

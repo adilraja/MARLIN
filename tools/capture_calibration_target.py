@@ -53,7 +53,7 @@ def measure_targets(directory,metadata):
     config = metadata['config']
     low,high = float(np.percentile(pixels,10)),float(pixels.max())
     passed = ([width,height]==[config['image_width_px'],config['image_height_px']]
-              and metadata['actual_viewport_resolution']==[width,height] and high-low>=40)
+              and metadata.get('assembled_image_resolution',metadata['actual_viewport_resolution'])==[width,height] and high-low>=40)
     review = raw.copy()
     draw = ImageDraw.Draw(review)
     records = []

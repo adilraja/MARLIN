@@ -165,7 +165,7 @@ async def run_capture(data=None, replay_id=None, camera_model='hidef'):
     original_time = timeline.get_current_time()
     timeline.pause()
     try:
-        return await asyncio.wait_for(_run(data,replay_id,camera_model),timeout=180)
+        return await asyncio.wait_for(_run(data,replay_id,camera_model),timeout=600)
     except Exception as exc:
         return {'ok':False,'error':str(exc) or type(exc).__name__}
     finally:
@@ -289,19 +289,23 @@ async def _run(data, replay_id, camera_model='hidef'):
         settings.set(display_key,0)
         main_view.camera_path = camera_path
         main_view.fill_frame = False
-        main_view.resolution = (config.image_width_px,config.image_height_px)
-        for _ in range(90):
-            await omni.kit.app.get_app().next_update_async()
-        main_view.fill_frame = False
-        main_view.resolution = (config.image_width_px,config.image_height_px)
-        for _ in range(30):
-            await omni.kit.app.get_app().next_update_async()
-        if tuple(main_view.resolution)!=(config.image_width_px,config.image_height_px):
-            raise RuntimeError('Viewport resolution mismatch')
-        for filename in ('warmup.png','rgb.png'):
-            capture = capture_viewport_to_file(main_view,file_path=str(directory/filename))
-            await capture.wait_for_result(completion_frames=5)
-        metadata.update(record_projection(frozen,main_view))
+        if config.downsample==1:
+            from .native_tiles import capture_tiles
+            metadata.update(await capture_tiles(frozen,main_view,config,directory,gpu_preflight))
+        else:
+            main_view.resolution = (config.image_width_px,config.image_height_px)
+            for _ in range(90):
+                await omni.kit.app.get_app().next_update_async()
+            main_view.fill_frame = False
+            main_view.resolution = (config.image_width_px,config.image_height_px)
+            for _ in range(30):
+                await omni.kit.app.get_app().next_update_async()
+            if tuple(main_view.resolution)!=(config.image_width_px,config.image_height_px):
+                raise RuntimeError('Viewport resolution mismatch')
+            for filename in ('warmup.png','rgb.png'):
+                capture = capture_viewport_to_file(main_view,file_path=str(directory/filename))
+                await capture.wait_for_result(completion_frames=5)
+            metadata.update(record_projection(frozen,main_view))
     finally:
         ok,error = await main_context.attach_stage_async(main_stage)
         if not ok:
@@ -318,7 +322,7 @@ async def _run(data, replay_id, camera_model='hidef'):
     for field in ('targets','expected_bbox_xywh_px','gsd_cm_px'):
         metadata.pop(field,None)
     metadata.update(extra)
-    metadata.update(test_kind=camera_model+'_marine_snapshot_preview',capture_id=directory.name,
+    metadata.update(test_kind=camera_model+('_marine_snapshot_native_tiled' if config.downsample==1 else '_marine_snapshot_preview'),capture_id=directory.name,
                     replay_of=replay_id,renderer_settings=before,
                     gpu_preflight=gpu,
                     scene_sha256=digest(directory/'scene.usdc'),scene_file='scene.usdc',rendered_image='rgb.png',
@@ -340,6 +344,8 @@ async def _run(data, replay_id, camera_model='hidef'):
     metadata['main_viewport_preserved'] = all(metadata['restoration_checks'].values())
     metadata['output_sha256'] = {p.name:digest(p) for p in directory.iterdir() if p.suffix in ('.png','.npz')}
     (directory/'metadata.json').write_text(json.dumps(metadata,indent=2,allow_nan=False)+'\n')
+    if metadata.get('native_tiling') and not metadata['native_tiling']['overlaps_passed']:
+        return dict(ok=False,error='Native tile overlap validation failed; image is diagnostic only',directory=str(directory))
     if not metadata['main_viewport_preserved']:
         return dict(ok=False,error='Main viewport or renderer settings changed during capture',directory=str(directory))
     return dict(ok=True,capture_id=directory.name,directory=str(directory),

@@ -216,6 +216,18 @@ python3 tools/capture_calibration_target.py --measure-existing CAPTURE_DIRECTORY
 python3 tools/verify_capture_projection.py CAPTURE_DIRECTORY
 ```
 
+## Experimental native HiDef capture
+
+With the marine scene loaded, use memory-bounded native tiles (not preview upscaling):
+
+```bash
+python3 tools/capture_hidef_marine.py --native --roll 7.7675 --projection-probe
+python3 tools/capture_hidef_marine.py --native --roll 7.7675
+```
+
+Native targets passed; marine output must pass overlap checks before acceptance.
+See [NATIVE_CAPTURE.md](NATIVE_CAPTURE.md) for results, limitations and verification.
+
 ## Stop Kit
 
 Close the Kit window or press **Ctrl+C** in its launch terminal. The live scene
