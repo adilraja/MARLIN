@@ -10,7 +10,9 @@ def image_projection(stage, camera_path, resolution, time_code):
     cam = camera.GetCamera(time_code)
     width, height = resolution
     if not math.isclose(cam.horizontalAperture/cam.verticalAperture, width/height, rel_tol=1e-6):
-        raise ValueError('Capture camera aperture and image aspect disagree; conformed projection is not validated')
+        raise ValueError('Capture camera aperture and image aspect disagree; conformed projection is not validated '
+                         '(aperture=%s x %s, image=%s x %s)' %
+                         (cam.horizontalAperture,cam.verticalAperture,width,height))
     frustum = cam.frustum
     return dict(capture_view_matrix=[list(r) for r in frustum.ComputeViewMatrix()],
                 capture_projection_matrix=[list(r) for r in frustum.ComputeProjectionMatrix()],
@@ -47,4 +49,28 @@ def record_projection(stage, viewport):
                   actual_view_matrix=result['capture_view_matrix'],
                   actual_projection_matrix=result['capture_projection_matrix'],
                   actual_matrix_alias_note='Version 2: aliases for capture-camera matrices; version 1 stored UI matrices')
+    return result
+
+
+def record_product_projection(stage, product_path, camera_path, resolution, time_code):
+    """Validate an explicit AOV product, independently of the UI texture size."""
+    product=stage.GetPrimAtPath(product_path)
+    if not product:
+        raise ValueError('Capture render product is missing')
+    cameras=[str(p) for p in product.GetRelationship('camera').GetTargets()]
+    actual=tuple(product.GetAttribute('resolution').Get())
+    if cameras != [str(camera_path)] or actual != tuple(resolution):
+        raise ValueError('Explicit render product camera/resolution differs from request')
+    pixel_aspect=product.GetAttribute('pixelAspectRatio').Get()
+    window=product.GetAttribute('dataWindowNDC').Get()
+    if pixel_aspect is not None and not math.isclose(pixel_aspect,1):
+        raise ValueError('Non-square render-product pixels are unsupported')
+    if window is not None and tuple(window)!=(0,0,1,1):
+        raise ValueError('Cropped render product is unsupported')
+    result=image_projection(stage,str(camera_path),actual,time_code)
+    result.update(projection_metadata_version=2,
+        actual_view_matrix=result['capture_view_matrix'],
+        actual_projection_matrix=result['capture_projection_matrix'],
+        render_product=dict(path=str(product_path),camera=str(camera_path),resolution=list(actual),
+            pixel_aspect_ratio=pixel_aspect,data_window_ndc=list(window) if window is not None else None))
     return result

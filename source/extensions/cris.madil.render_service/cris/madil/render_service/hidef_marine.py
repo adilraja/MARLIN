@@ -1,9 +1,11 @@
 """Snapshot/replay using one existing Kit renderer and a restored live stage."""
 import asyncio
+import gc
 import hashlib
 import json
 import math
 import re
+import shutil
 import subprocess
 import tempfile
 from pathlib import Path
@@ -15,6 +17,8 @@ import omni.kit.app
 import omni.usd
 from pxr import Sdf, Usd, UsdGeom
 from pydantic import Field
+from typing import Literal
+from pydantic import BaseModel
 from .api import router
 from .hidef_api import HiDefRequest
 from .hidef_camera import configuration
@@ -43,6 +47,13 @@ class MarineRequest(HiDefRequest):
     projection_probe: bool = False
     target_x_m: float = Field(default=-3,ge=-1000,le=1000)
     target_z_m: float = Field(default=0,ge=-1000,le=1000)
+
+
+class TileDiagnosticRequest(BaseModel):
+    mode: Literal['baseline','guard64','rendered_frames','pt_denoised','pt_raw','pt_raw_8192','sdk_pair','sdk_single','sdk_smoke','sdk_low_repeat'] = 'baseline'
+
+    class Config:
+        extra = 'forbid'
 
 
 def settings_record():
@@ -112,6 +123,19 @@ def freeze_stage(source, time_code):
     return frozen, sampled
 
 
+def open_snapshot(path):
+    """Read disk into a private layer, bypassing USD's dirty layer cache.
+
+    Kit authors viewport products/exposure onto an attached layer. Reopening
+    its filename with Stage.Open can reuse that dirty layer on the next replay.
+    Snapshots are flattened with resolved asset paths; no source layer is edited.
+    """
+    layer = Sdf.Layer.OpenAsAnonymous(str(path))
+    if layer is None:
+        raise ValueError('Could not read snapshot from disk')
+    return Usd.Stage.Open(layer)
+
+
 def asset_dependencies(stage):
     records = {}
     for prim in stage.TraverseAll():
@@ -155,7 +179,7 @@ def animals_record(stage, config, translation):
     return records
 
 
-async def run_capture(data=None, replay_id=None, camera_model='hidef'):
+async def run_capture(data=None, replay_id=None, camera_model='hidef', diagnostic=None):
     if calibration_capture._busy:
         return {'ok':False,'error':'Another camera capture is running'}
     calibration_capture._busy = True
@@ -165,7 +189,7 @@ async def run_capture(data=None, replay_id=None, camera_model='hidef'):
     original_time = timeline.get_current_time()
     timeline.pause()
     try:
-        return await asyncio.wait_for(_run(data,replay_id,camera_model),timeout=600)
+        return await asyncio.wait_for(_run(data,replay_id,camera_model,diagnostic),timeout=600)
     except Exception as exc:
         return {'ok':False,'error':str(exc) or type(exc).__name__}
     finally:
@@ -176,7 +200,7 @@ async def run_capture(data=None, replay_id=None, camera_model='hidef'):
         calibration_capture._busy = False
 
 
-async def _run(data, replay_id, camera_model='hidef'):
+async def _run(data, replay_id, camera_model='hidef', diagnostic=None):
     if camera_model not in ('hidef', 'sony'):
         raise ValueError('Unsupported camera profile')
     sony = camera_model == 'sony'
@@ -192,6 +216,9 @@ async def _run(data, replay_id, camera_model='hidef'):
     retained_stages = Usd.StageCache()
     retained_stages.Insert(main_stage)
     before = settings_record()
+    # A failed coroutine can leave USD handles in traceback reference cycles.
+    # Collect unreachable objects before checking whether another render fits.
+    gc.collect()
     gpu = gpu_preflight()
     from omni.kit.viewport.utility import get_active_viewport
     main_view = get_active_viewport()
@@ -213,11 +240,18 @@ async def _run(data, replay_id, camera_model='hidef'):
                   configuration(saved['config']['roll_deg'],saved['config']['downsample'],saved['config']['aperture_basis']))
         if sony and config.downsample != 8:
             raise ValueError('Native Sony rendering is deferred; only preview replay is enabled')
-        frozen = Usd.Stage.Open(str(directory/'scene.usdc'))
+        replay_scene = directory/'scene.usdc'
+        frozen = open_snapshot(replay_scene)
         extra = {key:saved[key] for key in ('snapshot','camera_translation_m','camera_target_xz_m',
                   'animals','asset_dependencies','environment_status')}
         if saved.get('projection_probe'):
             extra.update(projection_probe=True,targets=saved['targets'])
+        if diagnostic is not None:
+            if sony or config.downsample!=1:
+                raise ValueError('Tile diagnostics require a native HiDef snapshot')
+            extra['tile_diagnostic']=dict(mode=diagnostic,source_capture=replay_id,
+                source_scene_sha256=saved['scene_sha256'],
+                tile_indices=[3] if diagnostic=='sdk_smoke' else [3,3,3] if diagnostic in ('sdk_single','sdk_low_repeat') else ([3,4,3,4] if diagnostic=='sdk_pair' else [3,4,4,5,11,12,13]),purpose='Focused overlaps and identical-tile repeat; not a complete image')
     else:
         if data.downsample==1 and not getattr(data, 'allow_full_resolution', False):
             raise ValueError('Full resolution requires allow_full_resolution=true and adequate GPU memory')
@@ -269,7 +303,14 @@ async def _run(data, replay_id, camera_model='hidef'):
     retained_stages.Insert(frozen)
     root.mkdir(parents=True,exist_ok=True)
     directory = Path(tempfile.mkdtemp(prefix=prefix,dir=root))
-    frozen.GetRootLayer().Export(str(directory/'scene.usdc'))
+    if replay_id is not None:
+        # Preserve the exact verified source bytes. USD crate reserialization
+        # can change binary layout even when the layer content is identical.
+        shutil.copyfile(replay_scene,directory/'scene.usdc')
+    else:
+        frozen.GetRootLayer().Export(str(directory/'scene.usdc'))
+    if replay_id is not None and digest(directory/'scene.usdc') != saved['scene_sha256']:
+        raise ValueError('Replay copy differs from the saved scene before rendering; refusing a contaminated replay')
     (directory/'snapshot_inputs.json').write_text(json.dumps(dict(config=config.metadata(),**extra,
                         renderer_settings=before,gpu_preflight=gpu,status='render_pending'),indent=2)+'\n')
     original_fill = main_view.fill_frame
@@ -277,6 +318,14 @@ async def _run(data, replay_id, camera_model='hidef'):
     settings = carb.settings.get_settings()
     display_key = '/persistent/app/viewport/displayOptions'
     original_display = settings.get(display_key)
+    # Fixed diagnostic presets only: never accept arbitrary renderer settings.
+    diagnostic_overrides = {}
+    if diagnostic in ('pt_denoised','pt_raw','pt_raw_8192','sdk_pair','sdk_single','sdk_smoke','sdk_low_repeat'):
+        diagnostic_overrides = {'/rtx/rendermode':'PathTracing',
+            '/rtx/pathtracing/spp':64 if diagnostic=='pt_raw_8192' else 8,
+            '/rtx/pathtracing/totalSpp':8192 if diagnostic=='pt_raw_8192' else (16 if diagnostic in ('sdk_smoke','sdk_low_repeat') else 1024),
+            '/rtx/pathtracing/optixDenoiser/enabled':diagnostic=='pt_denoised'}
+    diagnostic_before = {key:settings.get(key) for key in diagnostic_overrides}
     from omni.kit.viewport.utility import capture_viewport_to_file
     metadata = config.metadata()
     try:
@@ -285,13 +334,22 @@ async def _run(data, replay_id, camera_model='hidef'):
         if not ok:
             raise RuntimeError(error)
         restore_settings(before)
+        restore_settings(diagnostic_overrides)
+        if diagnostic_overrides:
+            # Renderer switches can recreate the viewport product and restore
+            # its UI-sized buffer asynchronously. Let that transition finish
+            # before selecting the native tile camera and its resolution.
+            await asyncio.wait_for(main_view.wait_for_rendered_frames(3),timeout=30)
+        if diagnostic is not None:
+            extra['tile_diagnostic']['renderer_overrides'] = diagnostic_overrides
+            extra['tile_diagnostic']['settings_before_override'] = diagnostic_before
         main_context.get_selection().clear_selected_prim_paths()
         settings.set(display_key,0)
         main_view.camera_path = camera_path
         main_view.fill_frame = False
         if config.downsample==1:
             from .native_tiles import capture_tiles
-            metadata.update(await capture_tiles(frozen,main_view,config,directory,gpu_preflight))
+            metadata.update(await capture_tiles(frozen,main_view,config,directory,gpu_preflight,diagnostic))
         else:
             main_view.resolution = (config.image_width_px,config.image_height_px)
             for _ in range(90):
@@ -307,10 +365,14 @@ async def _run(data, replay_id, camera_model='hidef'):
                 await capture.wait_for_result(completion_frames=5)
             metadata.update(record_projection(frozen,main_view))
     finally:
-        ok,error = await main_context.attach_stage_async(main_stage)
+        try:
+            ok,error = await main_context.attach_stage_async(main_stage)
+        finally:
+            # Restore overrides even if stage restoration itself fails.
+            restore_settings(before)
+            restore_settings(diagnostic_before)
         if not ok:
             raise RuntimeError('Could not restore the live stage: '+error)
-        restore_settings(before)
         main_view.camera_path = main_camera
         main_view.resolution = main_resolution
         main_view.fill_frame = original_fill
@@ -319,17 +381,26 @@ async def _run(data, replay_id, camera_model='hidef'):
             settings.destroy_item(display_key)
         else:
             settings.set(display_key,original_display)
+        # The main context owns its restored stage again. Do not retain an
+        # extra cache ownership of either stage after the scoped render ends.
+        retained_stages.Clear()
+        frozen=None
+        gc.collect()
     for field in ('targets','expected_bbox_xywh_px','gsd_cm_px'):
         metadata.pop(field,None)
     metadata.update(extra)
     metadata.update(test_kind=camera_model+('_marine_snapshot_native_tiled' if config.downsample==1 else '_marine_snapshot_preview'),capture_id=directory.name,
                     replay_of=replay_id,renderer_settings=before,
                     gpu_preflight=gpu,
-                    scene_sha256=digest(directory/'scene.usdc'),scene_file='scene.usdc',rendered_image='rgb.png',
+                    scene_sha256=digest(directory/'scene.usdc'),scene_file='scene.usdc',
+                    rendered_image='rgb.png' if diagnostic is None else None,
                     renderer_lifecycle='Existing viewport temporarily displays frozen scene; live stage, camera, resolution, selection and controller updates restored afterwards. No second Hydra renderer.',
                     reproducibility='Frozen scene, camera and hashed local dependencies; RGB is not promised bitwise identical across RTX frames, drivers or machines.',
                     biological_detectability_tested=False,validation_status='rendered_pending_visual_review',
-                    directional_gsd=export_maps(directory,config,extra['camera_translation_m']))
+                    directional_gsd=export_maps(directory,config,extra['camera_translation_m']) if diagnostic is None else {'status':'not generated for tile-only diagnostic'})
+    if diagnostic is not None:
+        metadata['test_kind'] = 'hidef_native_tile_diagnostic_not_full_image'
+        metadata['validation_status'] = 'diagnostic_only_not_certified'
     metadata['camera_position_m'] = [a+b for a,b in zip(config.camera_position(),extra['camera_translation_m'])]
     metadata['restoration_checks'] = dict(
         original_stage_retained=main_stage==main_context.get_stage(),
@@ -339,6 +410,8 @@ async def _run(data, replay_id, camera_model='hidef'):
         fill_frame_preserved=main_view.fill_frame==original_fill,
         selection_preserved=main_context.get_selection().get_selected_prim_paths()==original_selection,
         display_options_preserved=settings.get(display_key)==original_display)
+    metadata['restoration_checks']['diagnostic_settings_preserved'] = same_settings(
+        diagnostic_before,{key:settings.get(key) for key in diagnostic_before})
     metadata['renderer_settings_after_restore'] = settings_record()
     metadata['renderer_comparison_tolerance'] = 'Only float32 roundtrip tolerance: relative 1e-7, absolute 1e-9; strings/bools exact.'
     metadata['main_viewport_preserved'] = all(metadata['restoration_checks'].values())
@@ -349,8 +422,9 @@ async def _run(data, replay_id, camera_model='hidef'):
     if not metadata['main_viewport_preserved']:
         return dict(ok=False,error='Main viewport or renderer settings changed during capture',directory=str(directory))
     return dict(ok=True,capture_id=directory.name,directory=str(directory),
-                image=str(directory/'rgb.png'),metadata=str(directory/'metadata.json'),
-                gsd_maps=str(directory/'directional_gsd.npz'),main_viewport_preserved=True,
+                image=str(directory/'rgb.png') if diagnostic is None else None,metadata=str(directory/'metadata.json'),
+                gsd_maps=str(directory/'directional_gsd.npz') if diagnostic is None else None,
+                diagnostic_only=diagnostic is not None,main_viewport_preserved=True,
                 replay_of=replay_id)
 
 
@@ -362,3 +436,8 @@ async def capture_marine(data: MarineRequest):
 @router.post('/scene/camera/hidef/marine/{capture_id}/replay',summary='Re-render a frozen marine capture and restore the live overview')
 async def replay_marine(capture_id: str):
     return await run_capture(replay_id=capture_id)
+
+
+@router.post('/scene/camera/hidef/marine/{capture_id}/tile-diagnostic',summary='Replay selected native tiles, including an identical repeat; no full-image certification')
+async def diagnose_tiles(capture_id: str, data: TileDiagnosticRequest):
+    return await run_capture(replay_id=capture_id,diagnostic=data.mode)

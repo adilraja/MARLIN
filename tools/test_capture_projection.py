@@ -13,6 +13,25 @@ projection=importlib.import_module('_marine_test.capture_projection')
 
 
 class ProjectionTests(unittest.TestCase):
+    def test_explicit_product_ignores_ui_buffer_but_rejects_product_resize(self):
+        stage,c,view,product=self.setup_case()
+        view.resolution=(1280,720)
+        record=projection.record_product_projection(stage,'/Render/Product','/Camera',(1644,548),view.time)
+        self.assertEqual(record['render_product']['resolution'],[1644,548])
+        product.GetResolutionAttr().Set(Gf.Vec2i(1280,720))
+        with self.assertRaisesRegex(ValueError,'differs from request'):
+            projection.record_product_projection(stage,'/Render/Product','/Camera',(1644,548),view.time)
+
+    def test_explicit_product_rejects_wrong_camera_and_pixel_aspect(self):
+        stage,c,view,product=self.setup_case()
+        product.GetCameraRel().SetTargets(['/WrongCamera'])
+        with self.assertRaises(ValueError):
+            projection.record_product_projection(stage,'/Render/Product','/Camera',(1644,548),view.time)
+        product.GetCameraRel().SetTargets(['/Camera'])
+        product.CreatePixelAspectRatioAttr(2)
+        with self.assertRaises(ValueError):
+            projection.record_product_projection(stage,'/Render/Product','/Camera',(1644,548),view.time)
+
     def setup_case(self):
         stage=Usd.Stage.CreateInMemory()
         config=camera.configuration(7.7675)

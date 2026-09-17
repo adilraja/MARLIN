@@ -17,6 +17,8 @@ sys.modules[package.__name__]=package
 
 def verify(directory):
     meta=json.loads((directory/'metadata.json').read_text())
+    if meta.get('tile_diagnostic') or meta.get('native_tiling',{}).get('complete_image') is False:
+        raise ValueError('Focused tile diagnostic is not a complete image and cannot be certified')
     if meta.get('projection_metadata_version')!=2:
         raise ValueError('Legacy UI matrices are not verified image projection; recapture rather than relabel')
     cfg=meta['config']

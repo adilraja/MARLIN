@@ -22,6 +22,37 @@ maps = importlib.import_module('_marine_test.hidef_maps')
 
 class MarineTests(unittest.TestCase):
     @unittest.skipIf(Usd is None,'Requires USD Python (available in Blender)')
+    def test_replay_reads_disk_not_dirty_cached_layer(self):
+        from pxr import Sdf
+        tree=ast.parse((BASE/'hidef_marine.py').read_text())
+        function=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='open_snapshot')
+        namespace={'Usd':Usd,'Sdf':Sdf}
+        exec(compile(ast.Module(body=[function],type_ignores=[]),'open_snapshot','exec'),namespace)
+        with tempfile.TemporaryDirectory() as directory:
+            path=str(Path(directory)/'scene.usdc')
+            source=Usd.Stage.CreateNew(path)
+            geometry=importlib.import_module('_marine_test.calibration_geometry')
+            geometry.build_camera(source,camera.configuration(7.7675,1),'/Camera')
+            source.GetRootLayer().Save()
+            original_bytes=Path(path).read_bytes()
+            original_text=source.GetRootLayer().ExportToString()
+            # Simulate viewport edits to the already cached disk layer.
+            source.DefinePrim('/Render/UnexpectedProduct')
+            UsdGeom.Camera(source.GetPrimAtPath('/Camera')).GetHorizontalApertureAttr().Set(1)
+            cached=Usd.Stage.Open(path)
+            self.assertTrue(cached.GetPrimAtPath('/Render'))
+            fresh=namespace['open_snapshot'](path)
+            self.assertFalse(fresh.GetPrimAtPath('/Render'))
+            self.assertEqual(UsdGeom.Camera(fresh.GetPrimAtPath('/Camera')).GetHorizontalApertureAttr().Get(),36)
+            out=Path(directory)/'copy.usdc'
+            fresh.GetRootLayer().Export(str(out))
+            self.assertEqual(fresh.GetRootLayer().ExportToString(),original_text)
+            self.assertEqual(Path(path).read_bytes(),original_bytes)
+            fresh.DefinePrim('/Private')
+            again=namespace['open_snapshot'](path)
+            self.assertFalse(again.GetPrimAtPath('/Private'))
+
+    @unittest.skipIf(Usd is None,'Requires USD Python (available in Blender)')
     def test_snapshot_freezes_samples_without_touching_source(self):
         tree=ast.parse((BASE/'hidef_marine.py').read_text())
         function=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='freeze_stage')
@@ -84,11 +115,12 @@ class MarineTests(unittest.TestCase):
             np.testing.assert_allclose(result['footprint']['corners_xz_m'][0],[corner[0]+12,corner[2]-30])
             self.assertEqual((Path(d)/'gsd_width_cm_px.png').read_bytes()[:8],b'\x89PNG\r\n\x1a\n')
 
-    def test_no_hardcoded_renderer_preset_or_engine_release(self):
+    def test_no_unscoped_setting_writes_or_engine_release(self):
         for name in ('hidef_marine.py','calibration_capture.py'):
             tree=ast.parse((BASE/name).read_text())
             calls=[n for n in ast.walk(tree) if isinstance(n,ast.Call)]
-            # These capture modules may read settings; never set/destroy them.
+            # Writes must use recorded/preset dictionaries through the shared
+            # restoration helper, apart from the explicit display-options key.
             for call in calls:
                 if isinstance(call.func,ast.Attribute):
                     self.assertNotIn(call.func.attr,('new_stage','open_stage','release_all_hydra_engines'))

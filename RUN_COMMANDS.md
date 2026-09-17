@@ -18,6 +18,30 @@ curl --fail -sS http://localhost:8011/openapi.json >/dev/null && echo "MARLIN AP
 
 API documentation: <http://localhost:8011/docs>
 
+### Preserve a visual checkpoint before restarting
+
+With the scene loaded, save a frozen visual checkpoint without a new GPU render:
+
+```bash
+curl --fail-with-body -sS -X POST http://localhost:8011/debug/scene/checkpoint
+```
+
+Record the returned `checkpoint_id`. After a clean Kit launch, restore it with:
+
+```bash
+curl --fail-with-body -sS -X POST \
+  http://localhost:8011/debug/scene/checkpoint/checkpoint_ID/restore
+```
+
+Replace `checkpoint_ID` with the complete returned ID. This restores the frozen
+scene, camera and tracked renderer settings; it does **not** resume controllers
+or recover their exact animation phase. External asset dependencies must remain
+available. Use restoration in a fresh Kit session, not over running controllers.
+For a swimming presentation, reload the gallery from original assets before
+starting swimming (step 3); do not use frozen, already-deformed mesh points as
+a new rest pose. The recoverable pre-restart checkpoint from 2026-09-15 is
+`checkpoint_dtrp8kj1` under `artifacts/scene_checkpoints/`.
+
 ## 2. Single-dolphin demonstration
 
 Creates the ocean, lighting and swimming dolphin, with a following camera.
@@ -228,8 +252,68 @@ python3 tools/capture_hidef_marine.py --native --roll 7.7675
 Native targets passed; marine output must pass overlap checks before acceptance.
 See [NATIVE_CAPTURE.md](NATIVE_CAPTURE.md) for results, limitations and verification.
 
+To diagnose selected overlaps from an existing **native HiDef** capture:
+
+```bash
+curl -sS --max-time 650 -X POST \
+  http://localhost:8011/scene/camera/hidef/marine/oblique_CAPTURE_ID/tile-diagnostic \
+  -H 'Content-Type: application/json' -d '{"mode":"baseline"}'
+```
+
+Replace `oblique_CAPTURE_ID` with the saved capture ID. Fixed modes are
+`baseline`, `guard64`, `rendered_frames`, `pt_denoised`, `pt_raw`, and
+`pt_raw_8192`.
+PT modes temporarily use Interactive path tracing (8 samples per iteration,
+1024 total requested) and wait for delivered frames; saved live settings are
+restored afterwards. Do not run below the 768 MiB free-GPU safety threshold.
+The experimental `pt_raw_8192` mode instead requests 64 samples per iteration
+and 8192 total, without denoising. It timed out on this host in the latest test;
+it is not an accepted capture preset. Frame waits are not measured sample counts.
+These capture only seven samples, including a repeat: **not a complete image or
+an accepted dataset**. A failing overlap deliberately returns `ok:false`.
+
+With NumPy/Pillow, compare pristine-source diagnostics on identical pixel regions:
+
+```bash
+python3 tools/analyse_tile_diagnostics.py BASELINE_DIRECTORY OTHER_DIRECTORY \
+  --output artifacts/hidef_marine/tile_diagnostic_comparison.json
+```
+
 ## Stop Kit
+
+### Experimental two-tile SDK diagnostic (not certified)
+
+For a pipeline smoke test, replace `sdk_pair` below with `sdk_smoke` (one tile,
+16 requested samples), `sdk_low_repeat` (three repeats at 16), or `sdk_single`
+(three repeats at 1024). Low-sample modes do not validate image quality.
+After capture, independently check saved PNG dimensions and recorded ray matrices:
+
+```bash
+python3 tools/verify_tile_diagnostic.py artifacts/hidef_marine/CAPTURE_ID
+```
+
+This requires NumPy and Pillow. It writes `tile_geometry_validation.json` and
+does not certify full-image alignment or independently measure GPU sample count.
+
+Enable the fixed NVIDIA capture dependencies explicitly; Kit may download them:
+
+```bash
+curl -sS -X POST http://localhost:8011/debug/capture-capabilities/enable
+curl -sS -X POST \
+  http://localhost:8011/scene/camera/hidef/marine/oblique_htk8y1za/tile-diagnostic \
+  -H 'Content-Type: application/json' -d '{"mode":"sdk_pair"}'
+```
+
+Requires the saved snapshot and matching renderer settings. Tests tiles 3 and 4
+twice, rejects size changes, and retains the 768 MiB memory guard. This path is
+experimental: SDK completion does not independently verify GPU sample count.
+See NATIVE_CAPTURE.md for the observed size-reset failure and unverified fix.
+
+### Shut down
 
 Close the Kit window or press **Ctrl+C** in its launch terminal. The live scene
 is not automatically preserved by Git; recreate it using steps 2–3 next time.
 Avoid broad commands such as `pkill -f kit`, which also match unrelated services.
+
+Kit selected fallback port 8097 during recovery. May I use that port to restore the checkpoint?
+curl -sS --max-time 120 -X POST http://localhost:8097/debug/scene/checkpoint/checkpoint_r7rmq2ii/restore
