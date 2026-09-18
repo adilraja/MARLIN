@@ -279,6 +279,69 @@ python3 tools/analyse_tile_diagnostics.py BASELINE_DIRECTORY OTHER_DIRECTORY \
   --output artifacts/hidef_marine/tile_diagnostic_comparison.json
 ```
 
+## GAMA integration: optional, isolated test animal
+
+For the live step-controlled coordinator (two seeded 20-step trials verified),
+see [live GAMA commands and server-binding warning](integrations/gama/LIVE_COMMUNICATION.md).
+
+The normal launch remains standalone. To enable the bridge, use this launch only
+when Kit is stopped; do not discard a live scene or launch a second instance:
+
+```bash
+cd /home/madil/kit-app-template/_build/linux-x86_64/release
+./cris.madil.kit.sh --enable cris.madil.render_service \
+  --ext-folder /home/madil/kit-app-template/source/extensions \
+  --enable cris.madil.gama_bridge
+```
+
+Load the standard marine scene and eleven swimmers using sections 2–3 above.
+Then replay the previously verified GAMA trajectory, capture with the existing
+HiDef pipeline, and release only the isolated test animal:
+
+```bash
+cd /home/madil/kit-app-template
+python3 -B tools/verify_gama_marine.py \
+  --trajectory artifacts/gama/trajectory_validation.json \
+  --output /tmp/gama-marine-verification-new.json
+```
+
+Choose an unused output filename. The JSON result includes the capture directory.
+This temporarily pauses updates for MARLIN's standard snapshot capture and restores
+the overview. It does not replace existing swimmers. GAMA drives a rigid test actor;
+this is not biological calibration or a skeletal swimming demonstration.
+
+### Audit the saved GAMA capture without running Kit
+
+This command uses the available NumPy/Pillow runtime and Blender's USD Python.
+It reads the original image/snapshot/metadata without changing them. It writes an
+audit report, pixel diagnostic and `projection_validation.json` derived report:
+
+```bash
+cd /home/madil/kit-app-template
+/home/madil/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -B \
+  tools/verify_gama_capture.py artifacts/hidef_marine/oblique_2h82kfx4 \
+  --output artifacts/gama/capture_audit_2h82kfx4
+```
+
+For a new capture, substitute its directory and a separate audit output directory.
+Exit status 0 means geometry/provenance checks passed, **not** instance visibility
+certification. Review the diagnostic and limitations in `verification.json`.
+The original audited actor is only about 4.6 × 2.1 projected pixels.
+See [GAMA capture verification](integrations/gama/CAPTURE_VERIFICATION.md) and
+[GAMA fixture commands](integrations/gama/README.md) for full details.
+
+CPU regression checks (do not contact Kit):
+
+```bash
+python3 -B tools/test_gama_exchange.py
+/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11 -B tools/test_gama_actor.py
+```
+
+Return to standalone by releasing the test actor (the replay script does this
+automatically) and omitting `--enable cris.madil.gama_bridge` on the next launch.
+Disabling the bridge also removes its own private actor layer. Do not disable or
+reload extensions while capture is running.
+
 ## Stop Kit
 
 ### Experimental two-tile SDK diagnostic (not certified)

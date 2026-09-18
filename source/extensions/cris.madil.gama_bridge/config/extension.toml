@@ -1,0 +1,14 @@
+[package]
+title = "MARLIN GAMA State Exchange (Preview)"
+version = "0.1.0"
+description = "Optional GAMA exchange and explicitly owned single-actor fixture"
+category = "CRIS"
+
+[dependencies]
+"cris.madil.render_service" = {}
+"omni.usd" = {}
+"omni.services.core" = {}
+"omni.services.transport.server.http" = {}
+
+[[python.module]]
+name = "cris.madil.gama_bridge"
