@@ -13,6 +13,18 @@ actor = importlib.import_module("_gama_actor_test.actor")
 
 
 class ActorTests(unittest.TestCase):
+    def test_counterfactual_only_authors_visibility(self):
+        module = importlib.import_module("_gama_actor_test.counterfactual")
+        stage = Usd.Stage.CreateInMemory()
+        UsdGeom.Xform.Define(stage, actor.ACTOR)
+        UsdGeom.Camera.Define(stage, "/Camera")
+        before = stage.GetRootLayer().ExportToString()
+        module.hide_only_actor(stage)
+        prim = stage.GetPrimAtPath(actor.ACTOR)
+        self.assertEqual(UsdGeom.Imageable(prim).ComputeVisibility(), "invisible")
+        prim.RemoveProperty("visibility")
+        self.assertEqual(stage.GetRootLayer().ExportToString(), before)
+
     def setUp(self):
         self.stage = Usd.Stage.CreateInMemory()
         UsdGeom.SetStageUpAxis(self.stage, "Y")

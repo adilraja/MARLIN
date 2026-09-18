@@ -1,5 +1,9 @@
 # GAMA marine capture audit — 2026-09-18
 
+Follow-up: [the controlled actor-on/off comparison](COUNTERFACTUAL_VERIFICATION.md)
+has now verified a local pixel contribution. The original RGB-only audit below is
+retained unchanged in scope; recognisable species appearance remains unverified.
+
 Capture: `artifacts/hidef_marine/oblique_2h82kfx4`.
 Original RGB, USD snapshot, camera metadata and GAMA sidecar were retained unchanged.
 This audit was offline: no Kit restart, actor movement, camera change or re-render.

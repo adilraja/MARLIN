@@ -342,6 +342,35 @@ automatically) and omitting `--enable cris.madil.gama_bridge` on the next launch
 Disabling the bridge also removes its own private actor layer. Do not disable or
 reload extensions while capture is running.
 
+### GAMA actor-on/off pixel-contribution check
+
+With MARLIN and the optional bridge running, replay private copies of a saved GAMA
+HiDef preview. This performs four renders (on/off/off/on), preserves the source
+capture, and restores the live viewport after each. Current renderer settings must
+match the saved capture; insufficient GPU headroom fails closed.
+
+```bash
+curl --fail-with-body -sS --max-time 600 -X POST \
+  http://localhost:8011/integration/gama/capture/counterfactual \
+  -H 'Content-Type: application/json' \
+  -d '{"capture_id":"oblique_2h82kfx4"}'
+```
+
+Check JSON `ok`, then analyse the returned directory. To inspect the verified run:
+
+```bash
+cd /home/madil/kit-app-template
+/home/madil/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -B \
+  tools/analyse_gama_counterfactual.py artifacts/gama/counterfactual_i9hp7lh1
+```
+
+The analysis is offline by default. `--observe-live http://localhost:8011` explicitly
+saves a separate current scene audit if a post-capture resumption check is needed.
+Exit status 0 means the controlled comparison was valid; read
+`pixel_contribution_observed` in `analysis.json` for the image result. It does not
+certify biological recognition or provide an instance segmentation mask.
+See [counterfactual results](integrations/gama/COUNTERFACTUAL_VERIFICATION.md).
+
 ## Stop Kit
 
 ### Experimental two-tile SDK diagnostic (not certified)

@@ -95,6 +95,16 @@ class GamaBridgeExtension(omni.ext.IExt):
             except (ValueError, RuntimeError) as error:
                 return {"ok": False, "error": str(error)}
 
+        @self._router.post("/integration/gama/capture/counterfactual")
+        async def counterfactual(payload: dict):
+            try:
+                if set(payload) != {"capture_id"}:
+                    raise ValueError("Expected capture_id only")
+                from .counterfactual import run
+                return await run(payload["capture_id"])
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok":False,"error":str(error)}
+
         main.register_router(self._router)
 
     def on_shutdown(self):
