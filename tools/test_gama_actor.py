@@ -55,6 +55,26 @@ class ActorTests(unittest.TestCase):
         self.assertFalse(self.stage.GetPrimAtPath(actor.ROOT))
         self.assertEqual(self.stage.GetSessionLayer().ExportToString(), self.session)
 
+    def test_candidate_length_and_flat_waterline(self):
+        record=self.owner.calibration
+        self.assertAlmostEqual(record["axial_length_m"],2.6,places=10)
+        self.assertFalse(record["specimen_calibrated"])
+        self.assertGreater(record["mean_plane_clearance_at_fixture_depth_m"],0)
+        # Verify composed USD dimensions, not only the configuration values.
+        bounds=UsdGeom.BBoxCache(Usd.TimeCode.Default(),["default","render"]).ComputeWorldBound(self.stage.GetPrimAtPath(actor.ACTOR)).ComputeAlignedRange()
+        self.assertAlmostEqual(bounds.GetSize()[2]*.01,record["dimensions_m"][2],places=5)
+        self.assertLess(bounds.GetMax()[1],0)
+
+    def test_legacy_profile_and_stage_units(self):
+        self.owner.release(self.token)
+        self.token=self.owner.acquire(self.stage,profile="legacy_preview")["ownership_token"]
+        self.assertEqual(self.owner.calibration["scale_multiplier_relative_to_legacy"],1)
+        self.owner.release(self.token)
+        UsdGeom.SetStageMetersPerUnit(self.stage,1)
+        self.token=self.owner.acquire(self.stage)["ownership_token"]
+        bounds=UsdGeom.BBoxCache(Usd.TimeCode.Default(),["default","render"]).ComputeWorldBound(self.stage.GetPrimAtPath(actor.ACTOR)).ComputeAlignedRange()
+        self.assertAlmostEqual(bounds.GetSize()[2],self.owner.calibration["dimensions_m"][2],places=5)
+
     def test_gates_and_atomic_rejection(self):
         before = self.owner.layer.ExportToString()
         for stage, token, paused in ((self.stage, "wrong", False), (self.stage, self.token, True),

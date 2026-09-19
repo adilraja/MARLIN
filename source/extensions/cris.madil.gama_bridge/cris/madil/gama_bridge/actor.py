@@ -17,8 +17,9 @@ class IsolatedActor:
         self.layer = None
         self.token = None
         self.buffer = StepBuffer()
+        self.calibration = None
 
-    def acquire(self, stage, paused=False):
+    def acquire(self, stage, paused=False, profile="coastal_candidate_v1"):
         if paused:
             raise ValueError("Capture is paused/busy; ownership cannot change")
         if self.stage is not None:
@@ -49,16 +50,22 @@ class IsolatedActor:
         UsdGeom.XformCommonAPI(actor).SetRotate(Gf.Vec3f(0, 0, 0))
         model = UsdGeom.Xform.Define(isolated, ACTOR + "/Model")
         model.GetPrim().GetReferences().AddReference(str(ASSET), source_prim.GetPath())
-        # Match existing provisional gallery appearance, NOT physical calibration.
+        # Preserve the visually checked upright/forward correction, calibrating
+        # only this owned reference. Never change the asset or gallery.
         UsdGeom.XformCommonAPI(model).SetRotate(Gf.Vec3f(-90, 0, 0))
-        UsdGeom.XformCommonAPI(model).SetScale(Gf.Vec3f(1.0 / units))
+        from .calibration import measure
+        calibration = measure(model.GetPrim(), ASSET, profile)
+        UsdGeom.XformCommonAPI(model).SetScale(Gf.Vec3f(calibration["scale_multiplier_relative_to_legacy"] / units))
+        root.GetPrim().SetCustomDataByKey("marlin:calibration_profile", calibration["profile"])
+        root.GetPrim().SetCustomDataByKey("marlin:axial_length_m", calibration["axial_length_m"])
         stage.GetSessionLayer().subLayerPaths.insert(0, layer.identifier)
         self.stage, self.layer, self.units = stage, layer, units
         self.token = secrets.token_urlsafe(24)
         self.buffer.reset()
+        self.calibration = calibration
         return {"ownership_token": self.token, "actor_path": ACTOR,
                 "agent_id": AGENT_ID, "species": SPECIES,
-                "meters_per_scene_unit": units, "calibration": "provisional_gallery_pose"}
+                "meters_per_scene_unit": units, "calibration": calibration}
 
     def _guard(self, stage, token, paused):
         if self.stage is None or token != self.token:
@@ -121,6 +128,7 @@ class IsolatedActor:
                 paths.remove(self.layer.identifier)
         self.stage = self.layer = self.token = None
         self.buffer.reset()
+        self.calibration = None
 
     def status(self):
         pose = None
@@ -129,5 +137,6 @@ class IsolatedActor:
             pose = {"position_scene_units": list(matrix.ExtractTranslation()),
                     "forward_y_up": list(matrix.TransformDir(Gf.Vec3d(0, 0, 1)))}
         return {"owned": self.stage is not None, "actor_path": ACTOR, "world_pose": pose,
+                "calibration": self.calibration,
                 "accepted_steps": self.buffer.accepted_steps, "latest": self.buffer.latest,
                 "motion_policy": "hold_last_state_without_updates"}

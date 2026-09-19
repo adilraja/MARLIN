@@ -135,8 +135,11 @@ during MARLIN's capture pause are rejected. Accepted steps author time/seed meta
 on the private root. `applied:true` means a USD transform update, **not** a verified
 render or annotation. `rendered:false` remains accurate.
 
-The actor matches the existing provisional gallery orientation/scale. Those values
-are not physically calibrated. No camera is selected or reframed; the animal might
+New acquisitions default to the isolated `coastal_candidate_v1` size profile:
+a provisional 2.6 m axial length, not specimen calibration. Explicit
+`{"profile":"legacy_preview"}` restores the earlier preview size on acquisition.
+See [measurements, waterline and evidence](BOTTLENOSE_CALIBRATION.md).
+No gallery asset is rescaled. No camera is selected or reframed; the animal might
 be outside the current viewport. The bridge has no effect on other swimming actors,
 ocean waves, camera geometry or lighting. The actor is removed on extension unload;
 do not disable/reload extensions during capture.

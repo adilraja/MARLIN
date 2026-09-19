@@ -36,6 +36,7 @@ async def capture(owner, token):
     if state is None:
         raise ValueError("Apply a GAMA step before capture")
     pose = owner.status()["world_pose"]
+    calibration = owner.calibration
     result = await run_capture(data=MarineRequest(roll_deg=7.7675, downsample=4))
     if not result.get("ok"):
         return result
@@ -57,6 +58,7 @@ async def capture(owner, token):
     files = {name: hashlib.sha256((directory/name).read_bytes()).hexdigest()
              for name in ("scene.usdc", "rgb.png", "metadata.json")}
     record = {"schema_version": "1.0", "gama_state": state, "actor_path": ACTOR,
+              "asset_calibration": calibration,
               "frozen_pose": frozen_pose, "frozen_state_verified": True,
               "camera_metadata": "metadata.json", "files_sha256": files,
               "biological_calibration": False, "image_visibility_verified": False,

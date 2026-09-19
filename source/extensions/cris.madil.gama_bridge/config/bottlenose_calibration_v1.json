@@ -1,0 +1,35 @@
+{
+  "profile": "coastal_candidate_v1",
+  "status": "provisional_reference_length_not_specimen_calibration",
+  "asset_sha256": "fadd2528f04d15fae568a26ec487819067c950fdaecc35f835eb63f3d812357f",
+  "target_axial_length_m": 2.6,
+  "basis": "NAMMCO reported coastal-ecotype average; selected nominal adult-size candidate, not measured age/sex/specimen",
+  "reference": "https://nammco.no/common-bottlenose-dolphin/",
+  "asset_author": "CARI'MAM",
+  "asset_source": "https://sketchfab.com/3d-models/bottlenose-dolphin-61e066c96a554e2b9c881404d946432d",
+  "asset_license": "CC-BY-NC-SA-4.0 per source/license.txt and glTF extras",
+  "provenance_warning": "Top-level asset license.txt incorrectly identifies DigitalLife Model 61A; preserved for review, not used as provenance here.",
+  "rotation_xyz_deg": [-90.0, 0.0, 0.0],
+  "forward_axis": "+Z",
+  "up_axis": "+Y",
+  "measurement": "Z-projected rostrum-tip to centreline fluke-notch candidate, after complete parent transforms and fixed model rotation; not curved body length",
+  "landmarks": {
+    "rostrum_tip": {"vertices": [959], "review": "visually identified rostrum extremity"},
+    "fluke_notch_candidate": {"vertices": [6838, 6843], "review": "mean of symmetric near-centreline posterior notch vertices; provisional anatomical selection"},
+    "dorsal_tip": {"vertices": [7552], "review": "visually identified dorsal fin extremity"}
+  },
+  "waterline": {
+    "origin_y_m": -0.8,
+    "reference_plane_y_m": 0.0,
+    "policy": "Keep GAMA origin depth unchanged. Check whole mesh maximum Y; no automatic ocean-following offset.",
+    "supported_pose": "static shallow_swim; not a breathing/surface pose",
+    "blowhole_clearance": "Not certified: blowhole landmark not positively identified; report whole-mesh submergence instead.",
+    "waves": "Mean-plane clearance is not instantaneous clearance from animated wave troughs/crests."
+  },
+  "uncertainties": [
+    "Original specimen size, age, sex and ecotype unknown; morphology is illustrative.",
+    "Fluke-notch candidate needs expert anatomical review.",
+    "Axial landmark metric is not claimed identical to every literature measurement protocol.",
+    "No dynamic buoyancy, breathing clearance or skeletal animation calibrated."
+  ]
+}

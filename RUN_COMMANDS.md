@@ -312,6 +312,34 @@ this is not biological calibration or a skeletal swimming demonstration.
 
 ### Audit the saved GAMA capture without running Kit
 
+New isolated actors use the provisional 2.6 m `coastal_candidate_v1` profile.
+See [size/waterline evidence and limits](integrations/gama/BOTTLENOSE_CALIBRATION.md).
+The normal replay command above acquires this candidate and releases it afterwards.
+To acquire the old preview size instead (only when no isolated actor is owned):
+
+```bash
+curl --fail-with-body -sS -X POST http://localhost:8011/integration/gama/actor/acquire \
+  -H 'Content-Type: application/json' -d '{"profile":"legacy_preview"}'
+```
+
+Retain its returned `ownership_token`; release before running the replay script:
+
+```bash
+curl --fail-with-body -sS -X POST http://localhost:8011/integration/gama/actor/release \
+  -H 'Content-Type: application/json' -d '{"ownership_token":"TOKEN_FROM_ACQUIRE"}'
+```
+
+Regenerate the non-destructive landmark measurements and diagram without Kit:
+
+```bash
+cd /home/madil/kit-app-template
+/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11 -B tools/inspect_gama_bottlenose.py
+/home/madil/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -B tools/plot_gama_bottlenose.py
+```
+
+The verified size-candidate capture is `artifacts/hidef_marine/oblique_m7hloime`;
+substitute it below to audit that image rather than the historical legacy preview.
+
 This command uses the available NumPy/Pillow runtime and Blender's USD Python.
 It reads the original image/snapshot/metadata without changing them. It writes an
 audit report, pixel diagnostic and `projection_validation.json` derived report:

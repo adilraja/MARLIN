@@ -48,10 +48,13 @@ class GamaBridgeExtension(omni.ext.IExt):
             return omni.usd.get_context().get_stage(), capture_state.paused
 
         @self._router.post("/integration/gama/actor/acquire")
-        async def acquire():
+        async def acquire(payload: dict = None):
             try:
+                payload = payload or {}
+                if set(payload) - {"profile"}:
+                    raise ValueError("Only profile may be specified")
                 stage, paused = context()
-                return {"ok": True, **actor().acquire(stage, paused)}
+                return {"ok": True, **actor().acquire(stage, paused, payload.get("profile", "coastal_candidate_v1"))}
             except ValueError as error:
                 return {"ok": False, "error": str(error)}
 
