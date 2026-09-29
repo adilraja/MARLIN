@@ -28,7 +28,7 @@ from .capture_projection import record_projection
 from . import calibration_capture
 from . import capture_state
 from .hidef_maps import export_maps
-from .underwater_cue import UNDERWATER_FOG_SETTING_PATHS
+from .underwater_cue import UNDERWATER_FOG_SETTING_PATHS, UNDERWATER_CUE_REQUESTED_SETTING
 from .water_material import RTX_WATER_SETTINGS
 
 ROOT = Path(__file__).resolve().parents[6]/'artifacts/hidef_marine'
@@ -40,6 +40,41 @@ SETTING_KEYS = (
     '/rtx/fog/enabled', '/rtx/raytracing/fractionalCutoutOpacity',
     '/rtx/translucency/enabled', '/rtx/reflections/enabled',
     '/rtx/pathtracing/spp', '/rtx/pathtracing/totalSpp',
+    # Record sampling and post-processing alongside geometry for pilot replay.
+    # Missing keys remain None: documented options may not exist in this Kit.
+    # NVIDIA references: rtx-renderer_pt.html, rtx-renderer_rt.html,
+    # rtx_post-processing.html and omni.replicator.core 1.12.16 API settings.
+    '/rtx/pathtracing/adaptiveSampling/enabled',
+    '/rtx/pathtracing/adaptiveSampling/targetError',
+    '/rtx/pathtracing/aa/op', '/rtx/pathtracing/aa/filterRadius',
+    '/rtx/pathtracing/optixDenoiser/enabled',
+    '/rtx/pathtracing/optixDenoiser/temporalMode/enabled',
+    '/rtx/pathtracing/optixDenoiser/blendFactor',
+    '/rtx/pathtracing/fireflyFilter/enabled',
+    '/rtx/pathtracing/fireflyFilter/maxIntensityPerSample',
+    '/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse',
+    '/rtx/pathtracing/cached/enabled',
+    '/rtx/pathtracing/lightcache/cached/enabled',
+    '/rtx/pathtracing/fractionalCutoutOpacity',
+    '/rtx/resetPtAccumOnAnimTimeChange',
+    '/rtx/post/aa/op', '/rtx/post/dlss/execMode',
+    '/rtx/post/tonemap/cm2Factor', '/rtx/post/tonemap/whitepoint',
+    '/rtx/post/tonemap/colorMode', '/rtx/post/tonemap/enableSrgbToGamma',
+    '/rtx/post/tonemap/wrapValue', '/rtx/post/tonemap/dither',
+    '/rtx/post/tonemap/maxWhiteLuminance', '/rtx/post/tonemap/whiteScale',
+    '/rtx/post/tonemap/ocio/cfgFilePath',
+    '/rtx/post/colorcorr/enabled', '/rtx/post/colorcorr/saturation',
+    '/rtx/post/colorcorr/contrast', '/rtx/post/colorcorr/gamma',
+    '/rtx/post/colorcorr/gain', '/rtx/post/colorcorr/offset',
+    '/rtx/post/colorgrad/enabled', '/rtx/post/colorgrad/blackpoint',
+    '/rtx/post/colorgrad/whitepoint', '/rtx/post/colorgrad/contrast',
+    '/rtx/post/colorgrad/lift', '/rtx/post/colorgrad/gain',
+    '/rtx/post/colorgrad/multiply', '/rtx/post/colorgrad/offset',
+    '/rtx/post/colorgrad/gamma',
+    '/rtx/post/motionblur/enabled', '/rtx/post/dof/enabled',
+    '/rtx/post/chromaticAberration/enabled',
+    '/rtx/post/lensFlares/enabled', '/rtx/post/tvNoise/enabled',
+    UNDERWATER_CUE_REQUESTED_SETTING,
 )
 
 
@@ -231,7 +266,12 @@ async def _run(data, replay_id, camera_model='hidef', diagnostic=None):
         saved = json.loads((directory/'metadata.json').read_text())
         if digest(directory/'scene.usdc') != saved['scene_sha256']:
             raise ValueError('Saved scene hash mismatch')
-        if not same_settings(before,saved['renderer_settings']):
+        # Older captures recorded a smaller allowlist. Verify every setting
+        # they actually saved while keeping the current before/after check
+        # strict; newly recorded keys cannot validate an older render.
+        saved_settings = saved['renderer_settings']
+        recorded_current = {key:before.get(key) for key in saved_settings}
+        if not same_settings(recorded_current,saved_settings):
             raise ValueError('Renderer settings differ from the saved capture; refusing to change global settings. Restore the saved settings before replay.')
         for dependency in saved['asset_dependencies']:
             if dependency['sha256'] and digest(dependency['path']) != dependency['sha256']:
@@ -244,6 +284,9 @@ async def _run(data, replay_id, camera_model='hidef', diagnostic=None):
         frozen = open_snapshot(replay_scene)
         extra = {key:saved[key] for key in ('snapshot','camera_translation_m','camera_target_xz_m',
                   'animals','asset_dependencies','environment_status')}
+        extra['renderer_settings_unverified_against_original_capture'] = sorted(
+            (set(before)-set(saved_settings)) |
+            set(saved.get('renderer_settings_unverified_against_original_capture', [])))
         if saved.get('projection_probe'):
             extra.update(projection_probe=True,targets=saved['targets'])
         if diagnostic is not None:
@@ -281,6 +324,7 @@ async def _run(data, replay_id, camera_model='hidef', diagnostic=None):
                     camera_translation_m=translation,camera_target_xz_m=[data.target_x_m,data.target_z_m],
                     animals=animals_record(frozen,config,translation),
                     asset_dependencies=asset_dependencies(frozen),
+                    renderer_settings_unverified_against_original_capture=[],
                     environment_status='Snapshot of existing presentation environment, not a certified controlled survey preset. Lighting, water and animal geometry are not modified.')
         build_camera(frozen,config,camera_path,translation)
         if getattr(data,'projection_probe',False):

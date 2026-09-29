@@ -1,0 +1,2478 @@
+[
+  {
+    "scene_id": "european_storm_petrel_0000",
+    "runs": [
+      {
+        "attempt": 0,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_w8g562vs",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_w8g562vs",
+          "schema_version": 1,
+          "scene_sha256": "aeea67163bf35845b2f3e925bba5d6fa8aeba5686379a770448a0ba32602fcae",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_hs4vdp1w",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_hs4vdp1w",
+          "schema_version": 1,
+          "scene_sha256": "aeea67163bf35845b2f3e925bba5d6fa8aeba5686379a770448a0ba32602fcae",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      },
+      {
+        "attempt": 1,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_34jgjngw",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_34jgjngw",
+          "schema_version": 1,
+          "scene_sha256": "65f454d1c7635a6d85be458d1375658a0d17ced24843cc307f6d6be5fb48136a",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_2s5hdrzm",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_2s5hdrzm",
+          "schema_version": 1,
+          "scene_sha256": "65f454d1c7635a6d85be458d1375658a0d17ced24843cc307f6d6be5fb48136a",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "european_storm_petrel_0024",
+    "runs": [
+      {
+        "attempt": 0,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_g2y601c1",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_g2y601c1",
+          "schema_version": 1,
+          "scene_sha256": "ef371b9356054bb3bb2fbcd87ca187d97776d9e5c8f01395d567dde604a1cd82",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_j71qyusq",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_j71qyusq",
+          "schema_version": 1,
+          "scene_sha256": "ef371b9356054bb3bb2fbcd87ca187d97776d9e5c8f01395d567dde604a1cd82",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      },
+      {
+        "attempt": 1,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_4it492fu",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_4it492fu",
+          "schema_version": 1,
+          "scene_sha256": "ef371b9356054bb3bb2fbcd87ca187d97776d9e5c8f01395d567dde604a1cd82",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_ien11rpg",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_ien11rpg",
+          "schema_version": 1,
+          "scene_sha256": "ef371b9356054bb3bb2fbcd87ca187d97776d9e5c8f01395d567dde604a1cd82",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "harbour_porpoise_0000",
+    "runs": [
+      {
+        "attempt": 0,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_94vg_3vu",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_94vg_3vu",
+          "schema_version": 1,
+          "scene_sha256": "a1f4faa338e460b2ff34ff83c6ff3aa903a1e9f76632cfadc8bffb8b11c02992",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_od5j5qc4",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_od5j5qc4",
+          "schema_version": 1,
+          "scene_sha256": "a1f4faa338e460b2ff34ff83c6ff3aa903a1e9f76632cfadc8bffb8b11c02992",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      },
+      {
+        "attempt": 1,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_ncod18i_",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_ncod18i_",
+          "schema_version": 1,
+          "scene_sha256": "a1f4faa338e460b2ff34ff83c6ff3aa903a1e9f76632cfadc8bffb8b11c02992",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_nleybv6u",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_nleybv6u",
+          "schema_version": 1,
+          "scene_sha256": "a1f4faa338e460b2ff34ff83c6ff3aa903a1e9f76632cfadc8bffb8b11c02992",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      }
+    ]
+  },
+  {
+    "scene_id": "harbour_porpoise_0024",
+    "runs": [
+      {
+        "attempt": 0,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_1o7dd4yv",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_1o7dd4yv",
+          "schema_version": 1,
+          "scene_sha256": "c366f49769bdee98dacb3ae5367404f567642af0d606b454b1f2f05cb33b2caf",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_mnmug2q_",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_mnmug2q_",
+          "schema_version": 1,
+          "scene_sha256": "c366f49769bdee98dacb3ae5367404f567642af0d606b454b1f2f05cb33b2caf",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      },
+      {
+        "attempt": 1,
+        "immediate": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_mk55qphq",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_mk55qphq",
+          "schema_version": 1,
+          "scene_sha256": "c366f49769bdee98dacb3ae5367404f567642af0d606b454b1f2f05cb33b2caf",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        },
+        "after_wait": {
+          "ok": true,
+          "checkpoint_id": "checkpoint_jd47e1l8",
+          "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_jd47e1l8",
+          "schema_version": 1,
+          "scene_sha256": "c366f49769bdee98dacb3ae5367404f567642af0d606b454b1f2f05cb33b2caf",
+          "camera": "/World/Cameras/PilotCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "fill_frame": false,
+          "renderer_settings": {
+            "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogDistanceDensity": 0.04,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/pathtracing/aa/filterRadius": 1.0,
+            "/rtx/pathtracing/aa/op": 1,
+            "/rtx/pathtracing/adaptiveSampling/enabled": false,
+            "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+            "/rtx/pathtracing/cached/enabled": false,
+            "/rtx/pathtracing/fireflyFilter/enabled": true,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+            "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+            "/rtx/pathtracing/fractionalCutoutOpacity": true,
+            "/rtx/pathtracing/lightcache/cached/enabled": false,
+            "/rtx/pathtracing/maxBounces": 16,
+            "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+            "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+            "/rtx/pathtracing/optixDenoiser/enabled": false,
+            "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+            "/rtx/pathtracing/spp": 8,
+            "/rtx/pathtracing/totalSpp": 128,
+            "/rtx/post/aa/op": 3,
+            "/rtx/post/chromaticAberration/enabled": false,
+            "/rtx/post/colorcorr/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/enabled": false,
+            "/rtx/post/colorcorr/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorcorr/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorcorr/saturation": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/blackpoint": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/contrast": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/enabled": false,
+            "/rtx/post/colorgrad/gain": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/gamma": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/lift": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/multiply": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/colorgrad/offset": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "/rtx/post/colorgrad/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/dlss/execMode": 3,
+            "/rtx/post/dof/enabled": false,
+            "/rtx/post/histogram/enabled": false,
+            "/rtx/post/lensFlares/enabled": false,
+            "/rtx/post/motionblur/enabled": false,
+            "/rtx/post/tonemap/cameraShutter": 50.0,
+            "/rtx/post/tonemap/cm2Factor": 1.0,
+            "/rtx/post/tonemap/colorMode": 0,
+            "/rtx/post/tonemap/dither": 0.0,
+            "/rtx/post/tonemap/enableSrgbToGamma": true,
+            "/rtx/post/tonemap/exposureBias": null,
+            "/rtx/post/tonemap/fNumber": 5.0,
+            "/rtx/post/tonemap/filmIso": 100.0,
+            "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+            "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+            "/rtx/post/tonemap/op": 6,
+            "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+            "/rtx/post/tonemap/whitepoint": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "/rtx/post/tonemap/wrapValue": 0.0,
+            "/rtx/post/tvNoise/enabled": false,
+            "/rtx/raytracing/fractionalCutoutOpacity": false,
+            "/rtx/reflections/enabled": true,
+            "/rtx/rendermode": "PathTracing",
+            "/rtx/resetPtAccumOnAnimTimeChange": false,
+            "/rtx/rtpt/maxBounces": 8,
+            "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+            "/rtx/translucency/enabled": true,
+            "/rtx/translucency/maxRefractionBounces": 8
+          },
+          "display_options": 0,
+          "timeline_seconds": 0.016666666666666666,
+          "frozen_sampled_attributes": 0,
+          "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+        }
+      }
+    ]
+  }
+]

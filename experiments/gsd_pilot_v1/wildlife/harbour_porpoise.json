@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0.0",
+  "calibration_id": "harbour_porpoise_gsd_pilot_v1",
+  "date": "2026-09-29",
+  "species": "harbour_porpoise",
+  "common_name": "Harbour porpoise",
+  "scientific_name": "Phocoena phocoena",
+  "status": "usable_for_provisional_engineering_pilot",
+  "biological_calibration_verified": false,
+  "identity": {
+    "source_id": "digitallife_model75a",
+    "verification": "publisher_description",
+    "independent_taxonomic_verification": false
+  },
+  "asset": {
+    "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+    "sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+    "default_prim": "/root",
+    "publisher_source_id": "digitallife_model75a",
+    "license": "CC-BY-NC-4.0",
+    "dependencies": [
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+        "sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef"
+      },
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+        "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+      },
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+        "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+      },
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+        "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+      }
+    ],
+    "original_modified": false,
+    "source_registry_modified": false
+  },
+  "physical_reference": {
+    "value_m": 1.555,
+    "source_id": "digitallife_model75a",
+    "selection": "Publisher-reported total length of Freja; prior candidate scaled using provisional rostrum/fluke-notch landmark correspondence.",
+    "fit_metric": "euclidean_rostrum_to_fluke_notch_candidate_distance",
+    "status": "provisional",
+    "uncertainty": "Publisher-reported specimen length; equivalence of selected rostrum/fluke-notch endpoints to publisher total-length protocol is unverified. No numerical measurement uncertainty supplied."
+  },
+  "geometry": {
+    "evaluated_vertex_count": 23456,
+    "mesh_count": 2,
+    "source_up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "source_unit_metadata_proves_biological_size": false,
+    "time_code": 1,
+    "private_stage_skinning_evaluated": false,
+    "native_world_bounds": {
+      "minimum": [
+        -0.20961864292621613,
+        -0.7771914601325989,
+        -0.27206262946128845
+      ],
+      "maximum": [
+        0.20961876213550568,
+        0.8242979645729065,
+        0.16072557866573334
+      ],
+      "dimensions_xyz": [
+        0.4192374050617218,
+        1.6014894247055054,
+        0.4327882081270218
+      ],
+      "maximum_dimension": 1.6014894247055054
+    },
+    "corrected_metric_bounds_relative_to_root": {
+      "minimum": [
+        -0.20961864292621613,
+        -0.27206262946128845,
+        -0.8242979645729065
+      ],
+      "maximum": [
+        0.20961876213550568,
+        0.16072557866573337,
+        0.7771914601325989
+      ],
+      "dimensions_xyz": [
+        0.4192374050617218,
+        0.4327882081270218,
+        1.6014894247055054
+      ],
+      "maximum_dimension": 1.6014894247055054
+    },
+    "landmarks": {
+      "rostrum_candidate": {
+        "mesh_path": "/root/PorpoiseBody/Object_0_001",
+        "vertex_index": 3703,
+        "combined_index": 3703,
+        "native_world": [
+          2.859230852081396e-09,
+          -0.7771914601325989,
+          -0.16053958237171173
+        ],
+        "corrected_world": [
+          2.859230852081396e-09,
+          -0.1605395823717119,
+          0.7771914601325989
+        ]
+      },
+      "fluke_notch_candidate": {
+        "mesh_path": "/root/PorpoiseBody/Object_0_001",
+        "vertex_index": 7266,
+        "combined_index": 7266,
+        "native_world": [
+          -2.859230852081396e-09,
+          0.7771914601325989,
+          -0.1167365163564682
+        ],
+        "corrected_world": [
+          -2.859230852081396e-09,
+          -0.11673651635646803,
+          -0.7771914601325989
+        ]
+      }
+    },
+    "native_landmark_distance": 1.5549999908053054
+  },
+  "spawn": {
+    "endpoint": "POST /scene/cetacean/spawn",
+    "required_stage_meters_per_unit": 0.01,
+    "required_stage_up_axis": "Y",
+    "asset_path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+    "scale": 100.0,
+    "model_rotation": [
+      -90,
+      0,
+      0
+    ],
+    "rotation_order": "USD rotateXYZ on Model; root heading is separate Y rotation",
+    "heading_zero_horizontal_forward": "+Z",
+    "heading_90_horizontal_forward": "+X",
+    "dorsal_up": "+Y",
+    "origin": "existing_asset_origin_not_recentered",
+    "metres_per_native_unit": 1.0
+  },
+  "supported_states": [
+    {
+      "id": "static_shallow_swim",
+      "pose_time_code": 1,
+      "animation": "none",
+      "status": "visually_reviewed_static_proxy_not_validated_behaviour",
+      "review_root_y_m": -0.18072557866573336,
+      "placement_provenance": "engineering_review_choice_not_a_biological_parameter",
+      "ocean_surface_y_m": 0.0,
+      "ocean_condition": "flat_static_geometry",
+      "sampling_ranges": "pending_milestone_3",
+      "capture_visibility_by_gsd": "pending_milestone_4",
+      "minimum_surface_clearance_m": 0.02
+    }
+  ],
+  "verification": {
+    "report": "live_validation.json",
+    "passed": true,
+    "checks": [
+      "live_spawn",
+      "every_evaluated_mesh_vertex",
+      "stage_unit_conversion",
+      "cardinal_heading_geometry",
+      "live_heading90_authored",
+      "material_bindings_and_texture_resolution",
+      "static_water_clearance"
+    ],
+    "geometry_tolerance_m": 1e-05,
+    "biological_and_optical_validation": false,
+    "images": [
+      "kit_review/harbour_porpoise_top_complete.png",
+      "kit_review/harbour_porpoise_side.png",
+      "kit_review/harbour_porpoise_oblique.png",
+      "kit_review/harbour_porpoise_heading90.png",
+      "kit_review/harbour_porpoise_shallow_top.png"
+    ]
+  },
+  "limitations": [
+    "Static prior derivative; source animation, armature and helper remain preserved in original assets.",
+    "Dark dorsal appearance and underwater blur remain; no optical calibration or texture tuning.",
+    "Shallow placement is not a validated breathing, surfacing or dive state."
+  ],
+  "sources_file": "sources.json"
+}

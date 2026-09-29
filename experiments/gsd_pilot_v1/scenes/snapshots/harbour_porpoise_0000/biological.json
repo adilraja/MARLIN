@@ -1,0 +1,172 @@
+{
+  "biological_manifest_sha256": "ab1f4d0abdceb574bf54b3facd22a5e59d0e8f3a9b007d639024975166f1fe21",
+  "scene_manifest_sha256": "fe026af22bcf0f5dc29616b59539cf56bf3466accdb250c23b9fda98b2e65edc",
+  "biological": {
+    "scene_id": "harbour_porpoise_0000",
+    "species": "harbour_porpoise",
+    "asset_instance_id": "harbour_porpoise_0000_animal",
+    "sequence_id": "harbour_porpoise_0000_sequence",
+    "condition_id": "harbour_porpoise_0000_condition",
+    "animal": {
+      "asset_path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+      "scale": 100.0,
+      "model_rotation_deg": [
+        -90,
+        0,
+        0
+      ],
+      "position_m": [
+        0.19596963740644524,
+        -0.18695013214163364,
+        0.39021640806957036
+      ],
+      "heading_deg": 274.3649687979848,
+      "pitch_deg": 0.0,
+      "roll_deg": 0.0,
+      "state": "static_shallow_swim",
+      "pose_time_code": 1,
+      "animation": "none",
+      "clearance_m": 0.02622455347590028,
+      "world_y_bounds_m": [
+        -0.4590127616029221,
+        -0.026224553475900275
+      ],
+      "physical_reference_status": "provisional"
+    },
+    "calibration": {
+      "path": "wildlife/harbour_porpoise.json",
+      "sha256": "898aa89c6faa87d07f66e7f8de1cc0e9c90f90d9c2d5571ddef71f665c2f8171",
+      "asset_dependencies": [
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+          "sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+          "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+          "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+          "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+        }
+      ]
+    },
+    "random": {
+      "master_seed": 20260929,
+      "condition_seed": 13616512042211494682,
+      "seed_helper": "survey_spec.condition_seed",
+      "seed_helper_path": "source/extensions/cris.madil.render_service/cris/madil/render_service/survey_spec.py",
+      "seed_helper_sha256": "15ad60a00579811092e0b0078897ac56f4f812ac4c3193e1e948a046ee1b3a1b",
+      "draw_algorithm": "sha256_named_uint64_top53_uniform_v1",
+      "subdraws": {
+        "x_m": {
+          "seed_uint64": 12235873493066737893,
+          "sha256": "a9ce8e1d0edc68e53f99fe84ca5812f155224d1bcb661dbd4957393e172cb398",
+          "unit_interval_value": 0.6633080311720377,
+          "range": [
+            -0.6,
+            0.6
+          ]
+        },
+        "z_m": {
+          "seed_uint64": 15221890547706090697,
+          "sha256": "d33f04cdd9e5d4c9b877ea63d56c3b40f0be76de1a19ada0b61667ce68d39bd1",
+          "unit_interval_value": 0.8251803400579754,
+          "range": [
+            -0.6,
+            0.6
+          ]
+        },
+        "heading_deg": {
+          "seed_uint64": 14058723228354811073,
+          "sha256": "c31a9e4a359f14c1f1423601bec4f70254e71f030b39b4005b9727cd07d6a51c",
+          "unit_interval_value": 0.7621249133277355,
+          "range": [
+            0.0,
+            360.0
+          ]
+        },
+        "porpoise_top_clearance_m": {
+          "seed_uint64": 1913712415717528115,
+          "sha256": "1a8edf4d85191233a176b7882fd4e3446682ce974d37821377b5d29f11aa5772",
+          "unit_interval_value": 0.10374255793167131,
+          "range": [
+            0.02,
+            0.08
+          ]
+        }
+      },
+      "gsd_used": false,
+      "renderer_seed": null,
+      "renderer_seed_reason": "record_separately_if_supported"
+    },
+    "sampling": {
+      "version": "m3_engineering_v1",
+      "distribution": "independent_uniform_lower_inclusive_upper_exclusive",
+      "ranges": {
+        "x_m": [
+          -0.6,
+          0.6
+        ],
+        "z_m": [
+          -0.6,
+          0.6
+        ],
+        "heading_deg": [
+          0.0,
+          360.0
+        ],
+        "porpoise_top_clearance_m": [
+          0.02,
+          0.08
+        ]
+      },
+      "provenance": "provisional_engineering_sampling_not_biological_distributions",
+      "biological_distribution_validated": false,
+      "silent_rejection_or_resampling": false,
+      "replacement_policy": "retain_rejection_reason_then_request_next_numeric_candidate_id"
+    },
+    "coordinates": {
+      "units": "metres",
+      "stage_meters_per_unit": 0.01,
+      "up_axis": "Y",
+      "heading_zero": "+Z",
+      "heading_90": "+X"
+    },
+    "time": {
+      "pose_time_code": 1,
+      "timeline": "frozen",
+      "application_driven_geometry": "must_be_frozen_by_replay_before_capture"
+    },
+    "environment_sha256": "83745470f0391b61d95e8f89a2a788b9125cf4d13faf167431d3a310ea4b3590",
+    "target_geometry_sha256": "5dcab0768593f1b191ae97ce7cbba790cde6a0198d9771e6bb7f298a040c0166",
+    "dependencies": [
+      {
+        "path": "OmniSurface.mdl",
+        "sha256": null,
+        "status": "runtime_or_unresolved"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+        "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+        "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+        "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162",
+        "status": "local_hashed"
+      }
+    ],
+    "pose_time_code": 1
+  },
+  "camera_excluded_from_biological_hash": true
+}

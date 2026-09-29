@@ -1,0 +1,179 @@
+{
+  "environment": {
+    "ok": true,
+    "preset": {
+      "preset_id": "survey_fixed_v1",
+      "version": "1.0.0",
+      "status": "visual_QA_pending",
+      "ocean": {
+        "name": "Ocean",
+        "size": 16000,
+        "resolution": 64,
+        "wave_height": 0,
+        "wave_length": 650,
+        "choppiness": 0,
+        "speed": 0,
+        "target_fps": 1,
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      "environment": {
+        "sky_intensity": 500,
+        "sky_exposure": 0,
+        "sky_color": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "sun_intensity": 0,
+        "sun_angle": 0.53,
+        "sun_rotation": [
+          -35,
+          25,
+          0
+        ],
+        "sun_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "ocean_name": "Ocean",
+        "material_name": "OceanWater",
+        "ior": 1.333,
+        "roughness": 0.15,
+        "transmission": 1,
+        "base_weight": 0.02,
+        "base_color": [
+          0.02,
+          0.1,
+          0.13
+        ],
+        "transmission_color": [
+          0.78,
+          0.92,
+          0.95
+        ],
+        "transmission_depth": 100,
+        "scattering_color": [
+          0.005,
+          0.02,
+          0.03
+        ],
+        "scattering_anisotropy": 0,
+        "thin_walled": true
+      },
+      "underwater_cue": {
+        "enabled": false
+      },
+      "notes": [
+        "Engineering appearance preset, not measured environmental optics.",
+        "Flat ocean at Y=0 retains shared ocean sampler with zero wave amplitudes.",
+        "No directional sun; uniform diffuse dome. Reflections remain physically possible.",
+        "No precipitation system is created. Additional lights or weather require inspection.",
+        "Camera exposure and renderer settings still require calibration and recording."
+      ]
+    },
+    "results": {
+      "ocean": {
+        "ok": true,
+        "ocean_path": "/World/Ocean",
+        "size": 16000.0,
+        "resolution": 64,
+        "vertices": 4225,
+        "speed": 0.0,
+        "target_fps": 1.0
+      },
+      "material": {
+        "ok": true,
+        "renderer": "NVIDIA OmniSurface",
+        "ocean_path": "/World/Ocean",
+        "material_path": "/World/Looks/OceanWater",
+        "roughness": 0.15,
+        "ior": 1.333,
+        "transmission": 1.0,
+        "base_weight": 0.02,
+        "base_color": [
+          0.02,
+          0.1,
+          0.13
+        ],
+        "transmission_color": [
+          0.78,
+          0.92,
+          0.95
+        ],
+        "transmission_depth": 100.0,
+        "scattering_color": [
+          0.005,
+          0.02,
+          0.03
+        ],
+        "scattering_anisotropy": 0.0,
+        "thin_walled": true
+      },
+      "environment": {
+        "ok": true,
+        "environment_path": "/World/Environment",
+        "sky_path": "/World/Environment/Sky",
+        "sun_path": "/World/Environment/Sun",
+        "sky_intensity": 500.0,
+        "sun_intensity": 0.0,
+        "sun_rotation": [
+          -35.0,
+          25.0,
+          0.0
+        ]
+      },
+      "underwater_cue": {
+        "ok": true,
+        "enabled": false,
+        "surface_height": 0.0,
+        "settings": {
+          "/rtx/fog/enabled": false,
+          "/rtx/fog/fogColor": [
+            0.03,
+            0.16,
+            0.2
+          ],
+          "/rtx/fog/fogColorIntensity": 0.5,
+          "/rtx/fog/fogZup/enabled": false,
+          "/rtx/fog/fogStartHeight": 0.0,
+          "/rtx/fog/fogHeightDensity": 0.08,
+          "/rtx/fog/fogHeightFalloff": 0.025,
+          "/rtx/fog/fogStartDist": 0.0,
+          "/rtx/fog/fogEndDist": 1800.0,
+          "/rtx/fog/fogDistanceDensity": 0.04
+        }
+      }
+    },
+    "note": "Appearance preset applied; visual and camera calibration remain pending."
+  },
+  "controllers": {
+    "ocean": {
+      "running": false
+    },
+    "gallery": {
+      "running": false,
+      "mode": "species_specific_gallery_animation",
+      "animal_count": 0,
+      "animals": []
+    },
+    "swimmer": {
+      "running": false
+    },
+    "camera": {
+      "ok": true,
+      "running": false
+    },
+    "petrel": {
+      "ok": true,
+      "players": [],
+      "last_error": null
+    }
+  }
+}

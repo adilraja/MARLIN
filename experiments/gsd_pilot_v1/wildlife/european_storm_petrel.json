@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "calibration_id": "european_storm_petrel_gsd_pilot_v1",
+  "date": "2026-09-29",
+  "species": "european_storm_petrel",
+  "common_name": "European storm petrel",
+  "scientific_name": "Hydrobates pelagicus",
+  "status": "usable_for_provisional_engineering_pilot",
+  "biological_calibration_verified": false,
+  "identity": {
+    "source_id": "museum_petrel",
+    "verification": "publisher_description",
+    "independent_taxonomic_verification": false
+  },
+  "asset": {
+    "path": "assets/birds/european_storm_petrel/usd/glide.usd",
+    "sha256": "ef970e398e5fdb75c9594a2dc80c438eda8b05efbd5e1c97d8f34e60336a0f82",
+    "default_prim": "/root",
+    "publisher_source_id": "museum_petrel",
+    "license": "CC0-1.0",
+    "dependencies": [
+      {
+        "path": "assets/birds/european_storm_petrel/usd/glide.usd",
+        "sha256": "ef970e398e5fdb75c9594a2dc80c438eda8b05efbd5e1c97d8f34e60336a0f82"
+      },
+      {
+        "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+        "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+      },
+      {
+        "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+        "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+      },
+      {
+        "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+        "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+      }
+    ],
+    "original_modified": false,
+    "source_registry_modified": false
+  },
+  "physical_reference": {
+    "value_m": 0.17,
+    "source_id": "naturalis_storm_petrel",
+    "selection": "Midpoint of published 0.15\u20130.19 m species body-length range; not a measurement of museum specimen Z/155/MT.",
+    "fit_metric": "euclidean_beak_to_tail_candidate_distance",
+    "status": "provisional",
+    "uncertainty": "Nominal species midpoint; actual museum specimen length and endpoint equivalence unknown. The published range is not a confidence interval.",
+    "published_species_body_length_range_m": [
+      0.15,
+      0.19
+    ]
+  },
+  "geometry": {
+    "evaluated_vertex_count": 156856,
+    "mesh_count": 6,
+    "source_up_axis": "Z",
+    "source_meters_per_unit": 1.0,
+    "source_unit_metadata_proves_biological_size": false,
+    "time_code": 1,
+    "private_stage_skinning_evaluated": true,
+    "native_world_bounds": {
+      "minimum": [
+        -29.272600173950195,
+        -31.162736892700195,
+        -5.2484588623046875
+      ],
+      "maximum": [
+        24.763500213623047,
+        3.462261438369751,
+        16.81614875793457
+      ],
+      "dimensions_xyz": [
+        54.03610038757324,
+        34.624998331069946,
+        22.064607620239258
+      ],
+      "maximum_dimension": 54.03610038757324
+    },
+    "corrected_metric_bounds_relative_to_root": {
+      "minimum": [
+        -0.15777615052556226,
+        -0.052860112229343496,
+        -0.022121748687972106
+      ],
+      "maximum": [
+        0.10705488823668725,
+        0.05255689429960047,
+        0.1478782513120279
+      ],
+      "dimensions_xyz": [
+        0.2648310387622495,
+        0.10541700652894397,
+        0.16999999999999998
+      ],
+      "maximum_dimension": 0.2648310387622495
+    },
+    "landmarks": {
+      "wing_tip_min_x": {
+        "mesh_path": "/root/EuropeanStormPetrelRig/Object_4/Object_2",
+        "vertex_index": 56287,
+        "combined_index": 56665,
+        "native_world": [
+          -29.200702667236328,
+          -13.49828052520752,
+          12.880049705505371
+        ],
+        "corrected_world": [
+          -33.60627087301326,
+          7.6508233192535,
+          3.586607639686257
+        ]
+      },
+      "wing_tip_max_x": {
+        "mesh_path": "/root/EuropeanStormPetrelRig/Object_5/Object_3",
+        "vertex_index": 17957,
+        "combined_index": 76789,
+        "native_world": [
+          24.612899780273438,
+          3.449960947036743,
+          7.258051872253418
+        ],
+        "corrected_world": [
+          22.802657818548976,
+          7.992609184279308,
+          9.302331855385802
+        ]
+      },
+      "beak_candidate": {
+        "mesh_path": "/root/EuropeanStormPetrelRig/Object_4/Object_2",
+        "vertex_index": 5510,
+        "combined_index": 5888,
+        "native_world": [
+          3.935518264770508,
+          -31.162736892700195,
+          10.115550994873047
+        ],
+        "corrected_world": [
+          -9.803174431311364,
+          -0.8374149992768114,
+          31.49802142633957
+        ]
+      },
+      "tail_candidate": {
+        "mesh_path": "/root/EuropeanStormPetrelRig/Object_5/Object_3",
+        "vertex_index": 2499,
+        "combined_index": 61331,
+        "native_world": [
+          -10.872899055480957,
+          -0.004639431368559599,
+          -0.886448860168457
+        ],
+        "corrected_world": [
+          -9.803175010170825,
+          -0.8374151204095756,
+          -4.7119255737721195
+        ]
+      }
+    },
+    "native_landmark_distance": 36.2099470001117,
+    "posed_wing_tip_distance_m": 0.26619192382816464
+  },
+  "spawn": {
+    "endpoint": "POST /scene/cetacean/spawn",
+    "required_stage_meters_per_unit": 0.01,
+    "required_stage_up_axis": "Y",
+    "asset_path": "assets/birds/european_storm_petrel/usd/glide.usd",
+    "scale": 0.46948425525029247,
+    "model_rotation": [
+      -70.55174997306713,
+      -24.139515839037514,
+      0
+    ],
+    "rotation_order": "USD rotateXYZ on Model; root heading is separate Y rotation",
+    "heading_zero_horizontal_forward": "+Z",
+    "heading_90_horizontal_forward": "+X",
+    "dorsal_up": "+Y",
+    "origin": "existing_asset_origin_not_recentered",
+    "metres_per_native_unit": 0.004694842552502925
+  },
+  "supported_states": [
+    {
+      "id": "static_spread_wing_proxy",
+      "pose_time_code": 1,
+      "animation": "none",
+      "status": "visually_reviewed_static_proxy_not_validated_behaviour",
+      "review_root_y_m": 1.0,
+      "placement_provenance": "engineering_review_choice_not_a_biological_parameter",
+      "ocean_surface_y_m": 0.0,
+      "ocean_condition": "flat_static_geometry",
+      "sampling_ranges": "pending_milestone_3",
+      "capture_visibility_by_gsd": "pending_milestone_4"
+    }
+  ],
+  "verification": {
+    "report": "live_validation.json",
+    "passed": true,
+    "checks": [
+      "live_spawn",
+      "every_evaluated_mesh_vertex",
+      "stage_unit_conversion",
+      "cardinal_heading_geometry",
+      "live_heading90_authored",
+      "material_bindings_and_texture_resolution",
+      "static_water_clearance"
+    ],
+    "geometry_tolerance_m": 1e-05,
+    "biological_and_optical_validation": false,
+    "images": [
+      "kit_review/european_storm_petrel_top_complete.png",
+      "kit_review/european_storm_petrel_side.png",
+      "kit_review/european_storm_petrel_oblique.png",
+      "kit_review/european_storm_petrel_heading90.png"
+    ]
+  },
+  "limitations": [
+    "Taxidermy scan; asymmetric bent wings, feet/contact remnants and damaged feather edges remain.",
+    "The glide filename does not establish natural gliding posture or motion.",
+    "Reference wingspan is not used for scale; see rejected_wingspan_fit.json."
+  ],
+  "sources_file": "sources.json"
+}

@@ -1,0 +1,865 @@
+{
+  "scope": "Engineering static asset/heading/placement review; not GSD or biological behaviour validation",
+  "reframed": {
+    "european_storm_petrel": {
+      "camera": {
+        "ok": true,
+        "target_name": "M2CalibrationPetrel",
+        "target_path": "/World/Cetaceans/M2CalibrationPetrel",
+        "target_available": true,
+        "camera_name": "M2CalibrationCamera",
+        "camera_path": "/World/Cameras/M2CalibrationCamera",
+        "distance": 0.1,
+        "height": 170.0,
+        "side_offset": 0.0,
+        "look_ahead": 6.3,
+        "look_height": 0.0,
+        "responsiveness": 3.0,
+        "aim_responsiveness": 4.5,
+        "documentary_mode": false,
+        "hold_duration": 4.0,
+        "dead_zone": 30.0,
+        "reaction_delay": 0.8,
+        "catch_up_speed": 14.0,
+        "catch_up_acceleration": 8.0,
+        "settle_distance": 12.0,
+        "settle_duration": 1.2,
+        "focal_length": 50.0,
+        "camera_position": [
+          -200.0,
+          270.0,
+          -0.1
+        ],
+        "look_target": [
+          -200.0,
+          100.0,
+          6.3
+        ],
+        "camera_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "motion_mode": "CONTINUOUS",
+        "mode_elapsed": 0.0,
+        "total_time": 0.0,
+        "position_error": 0.0,
+        "viewport_active": true,
+        "previous_camera_path": "/OmniverseKit_Persp"
+      },
+      "file": "experiments/gsd_pilot_v1/wildlife/kit_review/european_storm_petrel_top_complete.png"
+    },
+    "harbour_porpoise": {
+      "camera": {
+        "ok": true,
+        "target_name": "M2CalibrationPorpoise",
+        "target_path": "/World/Cetaceans/M2CalibrationPorpoise",
+        "target_available": true,
+        "camera_name": "M2CalibrationCamera",
+        "camera_path": "/World/Cameras/M2CalibrationCamera",
+        "distance": 0.1,
+        "height": 1000.0,
+        "side_offset": 0.0,
+        "look_ahead": 0.0,
+        "look_height": 0.0,
+        "responsiveness": 3.0,
+        "aim_responsiveness": 4.5,
+        "documentary_mode": false,
+        "hold_duration": 4.0,
+        "dead_zone": 30.0,
+        "reaction_delay": 0.8,
+        "catch_up_speed": 14.0,
+        "catch_up_acceleration": 8.0,
+        "settle_distance": 12.0,
+        "settle_duration": 1.2,
+        "focal_length": 50.0,
+        "camera_position": [
+          200.0,
+          1120.0,
+          -0.1
+        ],
+        "look_target": [
+          200.0,
+          120.0,
+          0.0
+        ],
+        "camera_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "motion_mode": "CONTINUOUS",
+        "mode_elapsed": 0.0,
+        "total_time": 0.0,
+        "position_error": 0.0,
+        "viewport_active": true,
+        "previous_camera_path": "/OmniverseKit_Persp"
+      },
+      "file": "experiments/gsd_pilot_v1/wildlife/kit_review/harbour_porpoise_top_complete.png"
+    }
+  },
+  "heading_checks": {
+    "european_storm_petrel": {
+      "inspection": {
+        "ok": true,
+        "root_layer": "anon:0x747390000d00:World0.usd",
+        "edit_layer": "anon:0x747390000d00:World0.usd",
+        "layers": [
+          "anon:0x747390005250:World0-session.usda",
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "camera": "/World/Cameras/M2CalibrationCamera",
+        "prims": [
+          {
+            "path": "/World",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              -8000.0,
+              -45.27882081270219,
+              -8000.0
+            ],
+            "bounds_max": [
+              8000.0,
+              111.10596393548902,
+              8000.0
+            ],
+            "xform_ops": []
+          },
+          {
+            "path": "/World/Ocean",
+            "type": "Mesh",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              -8000.0,
+              0.0,
+              -8000.0
+            ],
+            "bounds_max": [
+              8000.0,
+              0.0,
+              8000.0
+            ],
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/World/Environment",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": []
+          },
+          {
+            "path": "/Environment",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(1, 1, 1)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/World/Cetaceans/M2CalibrationPetrel",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              -209.72546050186205,
+              91.4681222355611,
+              -13.075636616324532
+            ],
+            "bounds_max": [
+              -178.83649062687425,
+              111.10596393548902,
+              21.907270680712433
+            ],
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(-200, 100, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 90, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(0.46948427, 0.46948427, 0.46948427)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/World/Cetaceans/M2CalibrationPorpoise",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              179.0381357073784,
+              -45.27882081270219,
+              -82.42979645729065
+            ],
+            "bounds_max": [
+              220.96187621355057,
+              -1.9999999999999822,
+              77.71914601325989
+            ],
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(200, -18.072557866573334, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(100, 100, 100)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "capture": {
+        "camera": {
+          "ok": true,
+          "target_name": "M2CalibrationPetrel",
+          "target_path": "/World/Cetaceans/M2CalibrationPetrel",
+          "target_available": true,
+          "camera_name": "M2CalibrationCamera",
+          "camera_path": "/World/Cameras/M2CalibrationCamera",
+          "distance": 0.1,
+          "height": 170.0,
+          "side_offset": 0.0,
+          "look_ahead": 0.0,
+          "look_height": 0.0,
+          "responsiveness": 3.0,
+          "aim_responsiveness": 4.5,
+          "documentary_mode": false,
+          "hold_duration": 4.0,
+          "dead_zone": 30.0,
+          "reaction_delay": 0.8,
+          "catch_up_speed": 14.0,
+          "catch_up_acceleration": 8.0,
+          "settle_distance": 12.0,
+          "settle_duration": 1.2,
+          "focal_length": 50.0,
+          "camera_position": [
+            -200.1,
+            270.0,
+            -2.2204460492503132e-17
+          ],
+          "look_target": [
+            -200.0,
+            100.0,
+            0.0
+          ],
+          "camera_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mode": "CONTINUOUS",
+          "mode_elapsed": 0.0,
+          "total_time": 0.0,
+          "position_error": 0.0,
+          "viewport_active": true,
+          "previous_camera_path": "/OmniverseKit_Persp"
+        },
+        "file": "experiments/gsd_pilot_v1/wildlife/kit_review/european_storm_petrel_heading90.png"
+      }
+    },
+    "harbour_porpoise": {
+      "inspection": {
+        "ok": true,
+        "root_layer": "anon:0x747390000d00:World0.usd",
+        "edit_layer": "anon:0x747390000d00:World0.usd",
+        "layers": [
+          "anon:0x747390005250:World0-session.usda",
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "camera": "/World/Cameras/M2CalibrationCamera",
+        "prims": [
+          {
+            "path": "/World",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              -8000.0,
+              0.0,
+              -8000.0
+            ],
+            "bounds_max": [
+              8000.0,
+              136.07255786657333,
+              8000.0
+            ],
+            "xform_ops": []
+          },
+          {
+            "path": "/World/Ocean",
+            "type": "Mesh",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              -8000.0,
+              0.0,
+              -8000.0
+            ],
+            "bounds_max": [
+              8000.0,
+              0.0,
+              8000.0
+            ],
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/World/Environment",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": []
+          },
+          {
+            "path": "/Environment",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(1, 1, 1)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/World/Cetaceans/M2CalibrationPetrel",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              -221.90727068071246,
+              91.46812223556113,
+              -9.725460501861958
+            ],
+            "bounds_max": [
+              -186.92436338367548,
+              111.10596393548904,
+              21.16350937312586
+            ],
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(-200, 100, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(0.46948427, 0.46948427, 0.46948427)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          },
+          {
+            "path": "/World/Cetaceans/M2CalibrationPorpoise",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x747390000d00:World0.usd"
+            ],
+            "visibility": "inherited",
+            "bounds_min": [
+              117.57020354270941,
+              92.79373705387114,
+              -20.961876213550585
+            ],
+            "bounds_max": [
+              277.7191460132599,
+              136.07255786657333,
+              20.96186429262163
+            ],
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(200, 120, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 90, 0)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(100, 100, 100)",
+                "layers": [
+                  "anon:0x747390000d00:World0.usd"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "capture": {
+        "camera": {
+          "ok": true,
+          "target_name": "M2CalibrationPorpoise",
+          "target_path": "/World/Cetaceans/M2CalibrationPorpoise",
+          "target_available": true,
+          "camera_name": "M2CalibrationCamera",
+          "camera_path": "/World/Cameras/M2CalibrationCamera",
+          "distance": 0.1,
+          "height": 1000.0,
+          "side_offset": 0.0,
+          "look_ahead": 0.0,
+          "look_height": 0.0,
+          "responsiveness": 3.0,
+          "aim_responsiveness": 4.5,
+          "documentary_mode": false,
+          "hold_duration": 4.0,
+          "dead_zone": 30.0,
+          "reaction_delay": 0.8,
+          "catch_up_speed": 14.0,
+          "catch_up_acceleration": 8.0,
+          "settle_distance": 12.0,
+          "settle_duration": 1.2,
+          "focal_length": 50.0,
+          "camera_position": [
+            199.9,
+            1120.0,
+            -2.2204460492503132e-17
+          ],
+          "look_target": [
+            200.0,
+            120.0,
+            0.0
+          ],
+          "camera_velocity": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "motion_mode": "CONTINUOUS",
+          "mode_elapsed": 0.0,
+          "total_time": 0.0,
+          "position_error": 0.0,
+          "viewport_active": true,
+          "previous_camera_path": "/OmniverseKit_Persp"
+        },
+        "file": "experiments/gsd_pilot_v1/wildlife/kit_review/harbour_porpoise_heading90.png"
+      }
+    }
+  },
+  "porpoise_shallow": {
+    "root_y_m": -0.18072557866573336,
+    "top_clearance_below_flat_water_m": 0.02,
+    "placement_status": "engineering_static_clearance_not_biological_depth_or_breathing_waterline",
+    "capture": {
+      "camera": {
+        "ok": true,
+        "target_name": "M2CalibrationPorpoise",
+        "target_path": "/World/Cetaceans/M2CalibrationPorpoise",
+        "target_available": true,
+        "camera_name": "M2CalibrationCamera",
+        "camera_path": "/World/Cameras/M2CalibrationCamera",
+        "distance": 0.1,
+        "height": 1000.0,
+        "side_offset": 0.0,
+        "look_ahead": 0.0,
+        "look_height": 0.0,
+        "responsiveness": 3.0,
+        "aim_responsiveness": 4.5,
+        "documentary_mode": false,
+        "hold_duration": 4.0,
+        "dead_zone": 30.0,
+        "reaction_delay": 0.8,
+        "catch_up_speed": 14.0,
+        "catch_up_acceleration": 8.0,
+        "settle_distance": 12.0,
+        "settle_duration": 1.2,
+        "focal_length": 50.0,
+        "camera_position": [
+          200.0,
+          981.9274421334267,
+          -0.1
+        ],
+        "look_target": [
+          200.0,
+          -18.072557866573334,
+          0.0
+        ],
+        "camera_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "motion_mode": "CONTINUOUS",
+        "mode_elapsed": 0.0,
+        "total_time": 0.0,
+        "position_error": 0.0,
+        "viewport_active": true,
+        "previous_camera_path": "/OmniverseKit_Persp"
+      },
+      "file": "experiments/gsd_pilot_v1/wildlife/kit_review/harbour_porpoise_shallow_top.png"
+    }
+  },
+  "final_inspection": {
+    "ok": true,
+    "root_layer": "anon:0x747390000d00:World0.usd",
+    "edit_layer": "anon:0x747390000d00:World0.usd",
+    "layers": [
+      "anon:0x747390005250:World0-session.usda",
+      "anon:0x747390000d00:World0.usd"
+    ],
+    "camera": "/World/Cameras/M2CalibrationCamera",
+    "prims": [
+      {
+        "path": "/World",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "bounds_min": [
+          -8000.0,
+          -45.27882081270219,
+          -8000.0
+        ],
+        "bounds_max": [
+          8000.0,
+          111.10596393548904,
+          8000.0
+        ],
+        "xform_ops": []
+      },
+      {
+        "path": "/World/Ocean",
+        "type": "Mesh",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "bounds_min": [
+          -8000.0,
+          0.0,
+          -8000.0
+        ],
+        "bounds_max": [
+          8000.0,
+          0.0,
+          8000.0
+        ],
+        "xform_ops": [
+          {
+            "name": "xformOp:translate",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "/World/Environment",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "xform_ops": []
+      },
+      {
+        "path": "/Environment",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "xform_ops": [
+          {
+            "name": "xformOp:translate",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:rotateXYZ",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:scale",
+            "value": "(1, 1, 1)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "/World/Cetaceans/M2CalibrationPetrel",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "bounds_min": [
+          -221.90727068071246,
+          91.46812223556113,
+          -9.725460501861958
+        ],
+        "bounds_max": [
+          -186.92436338367548,
+          111.10596393548904,
+          21.16350937312586
+        ],
+        "xform_ops": [
+          {
+            "name": "xformOp:translate",
+            "value": "(-200, 100, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:rotateXYZ",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:scale",
+            "value": "(0.46948427, 0.46948427, 0.46948427)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          }
+        ]
+      },
+      {
+        "path": "/World/Cetaceans/M2CalibrationPorpoise",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "bounds_min": [
+          179.0381357073784,
+          -45.27882081270219,
+          -82.42979645729065
+        ],
+        "bounds_max": [
+          220.96187621355057,
+          -1.9999999999999822,
+          77.71914601325989
+        ],
+        "xform_ops": [
+          {
+            "name": "xformOp:translate",
+            "value": "(200, -18.072557866573334, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:rotateXYZ",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:scale",
+            "value": "(100, 100, 100)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "final_checkpoint": {
+    "ok": true,
+    "checkpoint_id": "checkpoint_gfirg5og",
+    "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_gfirg5og",
+    "schema_version": 1,
+    "scene_sha256": "281191055703d685b3acfd820365eaca3e61ed052b96dff5df9bf5dd2d031343",
+    "camera": "/World/Cameras/M2CalibrationCamera",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fill_frame": false,
+    "renderer_settings": {
+      "/rtx/fog/enabled": false,
+      "/rtx/fog/fogColor": [
+        0.03,
+        0.16,
+        0.2
+      ],
+      "/rtx/fog/fogColorIntensity": 0.5,
+      "/rtx/fog/fogDistanceDensity": 0.04,
+      "/rtx/fog/fogEndDist": 1800.0,
+      "/rtx/fog/fogHeightDensity": 0.08,
+      "/rtx/fog/fogHeightFalloff": 0.025,
+      "/rtx/fog/fogStartDist": 0.0,
+      "/rtx/fog/fogStartHeight": 0.0,
+      "/rtx/fog/fogZup/enabled": false,
+      "/rtx/pathtracing/maxBounces": 16,
+      "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+      "/rtx/pathtracing/spp": 1,
+      "/rtx/pathtracing/totalSpp": 512,
+      "/rtx/post/histogram/enabled": false,
+      "/rtx/post/tonemap/cameraShutter": 50.0,
+      "/rtx/post/tonemap/exposureBias": null,
+      "/rtx/post/tonemap/fNumber": 5.0,
+      "/rtx/post/tonemap/filmIso": 100.0,
+      "/rtx/post/tonemap/op": 6,
+      "/rtx/raytracing/fractionalCutoutOpacity": false,
+      "/rtx/reflections/enabled": true,
+      "/rtx/rendermode": "RealTimePathTracing",
+      "/rtx/rtpt/maxBounces": 8,
+      "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+      "/rtx/translucency/enabled": true,
+      "/rtx/translucency/maxRefractionBounces": 8
+    },
+    "display_options": null,
+    "timeline_seconds": 0.0,
+    "frozen_sampled_attributes": 0,
+    "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+  },
+  "ocean_status": {
+    "running": true,
+    "ocean_path": "/World/Ocean",
+    "size": 16000.0,
+    "resolution": 64,
+    "speed": 0.0,
+    "choppiness": 0.0,
+    "target_fps": 1.0,
+    "elapsed": 195.0827979999999
+  },
+  "swim_status": {
+    "running": false
+  },
+  "gallery_swim_status": {
+    "running": false,
+    "mode": "species_specific_gallery_animation",
+    "animal_count": 0,
+    "animals": []
+  }
+}

@@ -1,0 +1,509 @@
+{
+  "recorded_at_utc": "2026-09-29T12:52:30.923926+00:00",
+  "source_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
+  "runtime": {
+    "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "usd_version": [
+      0,
+      25,
+      8
+    ],
+    "packages": {
+      "numpy": "1.26.4",
+      "pillow": null,
+      "torch": null,
+      "torchvision": null,
+      "ultralytics": null
+    }
+  },
+  "scope": "Existing offline extension and top-level tool regressions; no live Kit/render certification",
+  "tests_run": 120,
+  "passed": 118,
+  "failures": 0,
+  "errors": 2,
+  "skipped": 0,
+  "successful": false,
+  "records": [
+    {
+      "test": "test_baked_animation.BakedDolphinAnimationTests.test_authored_cycle_contains_full_rig_and_frame_range",
+      "status": "passed"
+    },
+    {
+      "test": "test_baked_animation.BakedDolphinAnimationTests.test_tail_joints_change_during_cycle",
+      "status": "passed"
+    },
+    {
+      "test": "test_bartlett_geometry.BartlettTests.test_bad_inputs",
+      "status": "passed"
+    },
+    {
+      "test": "test_bartlett_geometry.BartlettTests.test_basis_and_projection_against_scalar_intersection",
+      "status": "passed"
+    },
+    {
+      "test": "test_bartlett_geometry.BartlettTests.test_chunking_and_directionality",
+      "status": "passed"
+    },
+    {
+      "test": "test_bartlett_geometry.BartlettTests.test_facing_edge_gaps_not_outer_corner_sections",
+      "status": "passed"
+    },
+    {
+      "test": "test_bartlett_geometry.BartlettTests.test_flat_nadir_spacing_area_and_invalid_boundaries",
+      "status": "passed"
+    },
+    {
+      "test": "test_bartlett_geometry.BartlettTests.test_paper_nominal_not_manufacturer_pitch",
+      "status": "passed"
+    },
+    {
+      "test": "test_calibration_geometry.CalibrationTests.test_authored_usd_projection_in_both_unit_conventions",
+      "status": "passed"
+    },
+    {
+      "test": "test_calibration_geometry.CalibrationTests.test_expected_projection",
+      "status": "passed"
+    },
+    {
+      "test": "test_calibration_geometry.CalibrationTests.test_missing_invalid_and_cropped_inputs",
+      "status": "passed"
+    },
+    {
+      "test": "test_calibration_geometry.CalibrationTests.test_oblique_authored_camera_matches_independent_projection",
+      "status": "passed"
+    },
+    {
+      "test": "test_calibration_geometry.CalibrationTests.test_oblique_ray_projection_and_gsd",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_evidence.CameraEvidenceTests.test_independent_consistency_calculations",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_evidence.CameraEvidenceTests.test_paper_nominal_and_provenance_categories",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_evidence.CameraEvidenceTests.test_paper_review_distinguishes_pitch_from_yaw_inference",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_accelerated_motion_respects_acceleration_and_no_overshoot",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_chase_camera_normalizes_horizontal_forward",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_chase_camera_sits_behind_heading_zero",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_damp_point_moves_toward_target",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_damping_is_frame_rate_independent",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_documentary_camera_holds_then_delays",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_documentary_camera_runs_full_state_cycle",
+      "status": "passed"
+    },
+    {
+      "test": "test_camera_math.CameraMathTests.test_horizontal_error_ignores_wave_height",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_gallery.CetaceanGalleryTests.test_every_gallery_usd_exists",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_gallery.CetaceanGalleryTests.test_gallery_contains_every_converted_model",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_motion.CetaceanMotionTests.test_every_gallery_species_has_a_motion_profile",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_motion.CetaceanMotionTests.test_forward_heading_accounts_for_opposite_tail_ends",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_motion.CetaceanMotionTests.test_forward_heading_handles_horizontal_x_aligned_assets",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_motion.CetaceanMotionTests.test_only_rigged_digital_life_asset_uses_skeletal_backend",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_motion.CetaceanMotionTests.test_torso_stays_rigid_and_tail_reaches_full_envelope",
+      "status": "passed"
+    },
+    {
+      "test": "test_cetacean_motion.CetaceanMotionTests.test_wave_is_dorsoventral_and_periodic",
+      "status": "passed"
+    },
+    {
+      "test": "test_gentle_environment.GentleEnvironmentTests.test_gentle_waves_and_diffuse_sky",
+      "status": "passed"
+    },
+    {
+      "test": "test_gentle_environment.GentleEnvironmentTests.test_no_actor_camera_or_exposure_control",
+      "status": "passed"
+    },
+    {
+      "test": "test_gentle_environment.GentleEnvironmentTests.test_phase_reset_and_stage_guard_documented",
+      "status": "passed"
+    },
+    {
+      "test": "test_gentle_environment.GentleEnvironmentTests.test_restore_scope_excludes_animals",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_camera.HiDefTests.test_nominal_not_actual_oblique_gsd",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_camera.HiDefTests.test_pose_is_cross_track_tilt_not_optical_roll",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_camera.HiDefTests.test_preview_preserves_footprint_not_sampling",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_camera.HiDefTests.test_projection_roundtrip",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_camera.HiDefTests.test_provenance_and_native_sensitivity",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_move_toward_does_not_overshoot",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_move_toward_treats_negative_delta_as_zero",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_natural_attitude_clamps_turn_bank",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_natural_attitude_pitches_into_vertical_motion",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_normalize_heading_wraps_both_directions",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_turn_toward_stops_at_target",
+      "status": "passed"
+    },
+    {
+      "test": "test_movement.MovementTests.test_turn_toward_uses_shortest_path_across_zero",
+      "status": "passed"
+    },
+    {
+      "test": "test_petrel_playback.PetrelPlaybackTests.test_isolation_cleanup_and_no_time_samples",
+      "status": "passed"
+    },
+    {
+      "test": "test_petrel_playback.PetrelPlaybackTests.test_loop_pause_speed_and_timeline_independence",
+      "status": "passed"
+    },
+    {
+      "test": "test_petrel_playback.PetrelPlaybackTests.test_pose_export_rejected",
+      "status": "passed"
+    },
+    {
+      "test": "test_petrel_playback.PetrelPlaybackTests.test_removed_target_and_independent_instances",
+      "status": "passed"
+    },
+    {
+      "test": "test_petrel_playback.PetrelPlaybackTests.test_smooth_transition_and_reversal",
+      "status": "passed"
+    },
+    {
+      "test": "test_petrel_playback.PetrelPlaybackTests.test_validation",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_gallery.SurveyGalleryTests.test_invalid_bounds_fail",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_gallery.SurveyGalleryTests.test_offset_model_fits_center_and_maximum_extent",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_each_split_identity_prevents_leakage",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_gsd_independent_repeatable_seed",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_invalid_camera_inputs",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_inventory_and_provenance",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_physical_calculations_and_bird_height",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_reference_config_and_missing_camera_fields",
+      "status": "passed"
+    },
+    {
+      "test": "test_survey_spec.SurveySpecTests.test_reject_changed_environment_or_oblique_geometry",
+      "status": "passed"
+    },
+    {
+      "test": "test_underwater_cue.UnderwaterCueTests.test_marlin_startup_profile_is_enabled_by_default",
+      "status": "passed"
+    },
+    {
+      "test": "test_underwater_cue.UnderwaterCueTests.test_runtime_ownership_setting_is_extension_scoped",
+      "status": "passed"
+    },
+    {
+      "test": "test_underwater_cue.UnderwaterCueTests.test_underwater_cue_defaults_are_subtle_and_blue_green",
+      "status": "passed"
+    },
+    {
+      "test": "test_underwater_cue.UnderwaterCueTests.test_underwater_cue_maps_every_reported_setting",
+      "status": "passed"
+    },
+    {
+      "test": "test_underwater_cue.UnderwaterCueTests.test_underwater_cue_uses_marlin_y_up_axis",
+      "status": "passed"
+    },
+    {
+      "test": "test_water_material.WaterMaterialTests.test_absorption_and_scattering_are_authored",
+      "status": "passed"
+    },
+    {
+      "test": "test_water_material.WaterMaterialTests.test_defaults_author_physical_water_transmission",
+      "status": "passed"
+    },
+    {
+      "test": "test_water_material.WaterMaterialTests.test_thin_walled_remains_configurable_for_open_surface",
+      "status": "passed"
+    },
+    {
+      "test": "test_water_material.WaterMaterialTests.test_validation_settings_prevent_zero_bounce_refraction",
+      "status": "passed"
+    },
+    {
+      "test": "test_capture_projection.ProjectionTests.test_explicit_product_ignores_ui_buffer_but_rejects_product_resize",
+      "status": "passed"
+    },
+    {
+      "test": "test_capture_projection.ProjectionTests.test_explicit_product_rejects_wrong_camera_and_pixel_aspect",
+      "status": "passed"
+    },
+    {
+      "test": "test_capture_projection.ProjectionTests.test_reject_aperture_aspect",
+      "status": "passed"
+    },
+    {
+      "test": "test_capture_projection.ProjectionTests.test_reject_crop_and_pixel_aspect",
+      "status": "passed"
+    },
+    {
+      "test": "test_capture_projection.ProjectionTests.test_reject_mismatched_product",
+      "status": "passed"
+    },
+    {
+      "test": "test_capture_projection.ProjectionTests.test_ui_aspect_cannot_change_image_projection",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_candidate_length_and_flat_waterline",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_counterfactual_only_authors_visibility",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_existing_root_and_second_ownership_refused",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_gates_and_atomic_rejection",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_legacy_profile_and_stage_units",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_pose_and_exact_release",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_retries_order_disconnect_and_metadata",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_actor.ActorTests.test_stage_replacement_cleanup_targets_original",
+      "status": "passed"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_gama_counterfactual",
+      "status": "error"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_bad_numeric_values",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_buffer_retry_order_seed_and_failed_update_atomicity",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_depth_is_mean_plane_not_wave_relative",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_duplicate_ids_unsafe_names_and_unknown_fields",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_empty_snapshot_and_detached_status",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_extension_lifecycle_and_routes_without_scene_dependencies",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_manual_example_and_default_version",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_position_units_and_cardinal_headings",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_exchange.ExchangeTests.test_schema_matches_supported_states",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_live.ProtocolTests.test_correlated_acknowledgement",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_live.ProtocolTests.test_cycle_time_seed_and_geometry",
+      "status": "passed"
+    },
+    {
+      "test": "test_gama_live.ProtocolTests.test_fail_closed_without_retries",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_capture_gate_precedes_controller_updates",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_export_shape_mask_area_and_translation",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_maps_match_independent_pixel_rays",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_no_unscoped_setting_writes_or_engine_release",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_replay_reads_disk_not_dirty_cached_layer",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_restore_reapplies_saved_values_and_preserves_unrelated_settings",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_snapshot_freezes_samples_without_touching_source",
+      "status": "passed"
+    },
+    {
+      "test": "test_hidef_marine.MarineTests.test_translated_camera_matches_pixel_rays",
+      "status": "passed"
+    },
+    {
+      "test": "test_native_tiles.NativeTilesTests.test_cores_cover_native_frame_once",
+      "status": "passed"
+    },
+    {
+      "test": "test_native_tiles.NativeTilesTests.test_larger_guard_changes_neither_core_nor_native_rays",
+      "status": "passed"
+    },
+    {
+      "test": "test_native_tiles.NativeTilesTests.test_owned_sdk_product_has_exact_dimensions_and_camera",
+      "status": "passed"
+    },
+    {
+      "test": "test_native_tiles.NativeTilesTests.test_resolution_reset_restarts_settling",
+      "status": "passed"
+    },
+    {
+      "test": "test_native_tiles.NativeTilesTests.test_tile_projection_matches_native_rays",
+      "status": "passed"
+    },
+    {
+      "test": "test_native_tiles.NativeTilesTests.test_unstable_resolution_fails_closed",
+      "status": "passed"
+    },
+    {
+      "test": "test_sony_camera.SonyTests.test_directional_maps_and_area",
+      "status": "passed"
+    },
+    {
+      "test": "test_sony_camera.SonyTests.test_native_geometry_independent_targets",
+      "status": "passed"
+    },
+    {
+      "test": "test_sony_camera.SonyTests.test_nine_metric_targets_cover_frame_and_fit",
+      "status": "passed"
+    },
+    {
+      "test": "test_sony_camera.SonyTests.test_preview_preserves_footprint_not_native_sampling",
+      "status": "passed"
+    },
+    {
+      "test": "test_sony_camera.SonyTests.test_provenance_and_profile_isolation",
+      "status": "passed"
+    },
+    {
+      "test": "test_sony_camera.SonyTests.test_usd_camera_matches_rays_without_changing_stage",
+      "status": "passed"
+    },
+    {
+      "test": "unittest.loader._FailedTest.test_tile_diagnostics",
+      "status": "error"
+    }
+  ]
+}

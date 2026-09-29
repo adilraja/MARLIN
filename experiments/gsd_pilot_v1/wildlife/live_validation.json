@@ -1,0 +1,461 @@
+{
+  "passed": true,
+  "scope": "Geometry, units, heading, texture resolution and static clearance; not biological or optical validation",
+  "original_dependencies_unchanged": true,
+  "checks": {
+    "dry": {
+      "checkpoint": "checkpoint_1mkaca7v",
+      "sha256": "44a349a431fe7f77c549b3040277e70366819802080241a7582a745e7966aecc",
+      "animals": {
+        "european_storm_petrel": {
+          "passed": true,
+          "vertex_count": 156856,
+          "mesh_count": 6,
+          "max_point_error_m": 4.828782707022583e-09,
+          "world_bounds_m": {
+            "minimum": [
+              -2.157776155354345,
+              0.9471398861528582,
+              -0.022121749365014348
+            ],
+            "maximum": [
+              -1.8929451084868683,
+              1.0525568959081186,
+              0.14787825583788267
+            ],
+            "dimensions_xyz": [
+              0.2648310468674768,
+              0.10541700975526047,
+              0.17000000520289701
+            ],
+            "maximum_dimension": 0.2648310468674768
+          },
+          "landmark_distance_m": 0.17000000520289704,
+          "heading_cases": [
+            {
+              "heading_deg": 0,
+              "nose_horizontal_direction": [
+                1.59862001093154e-08,
+                0.9999999999999999
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 90,
+              "nose_horizontal_direction": [
+                0.9999999999999999,
+                -1.5986199887270793e-08
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 180,
+              "nose_horizontal_direction": [
+                -1.598619998685072e-08,
+                -0.9999999999999999
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 270,
+              "nose_horizontal_direction": [
+                -0.9999999999999999,
+                1.5986199887270793e-08
+              ],
+              "passed": true
+            }
+          ],
+          "live_heading90_authored": true,
+          "materials": [
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_2/Object_0",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/material",
+              "textures": []
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_3/Object_1",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/material_1",
+              "textures": []
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_4/Object_2",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/ptak",
+              "textures": [
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+                  "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+                  "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+                  "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_5/Object_3",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/ptak",
+              "textures": [
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+                  "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+                  "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+                  "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_6/Object_4",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/ptak",
+              "textures": [
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+                  "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+                  "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+                  "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_7/Object_5",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/zren",
+              "textures": []
+            }
+          ]
+        },
+        "harbour_porpoise": {
+          "passed": true,
+          "vertex_count": 23456,
+          "mesh_count": 2,
+          "max_point_error_m": 4.440892098500626e-16,
+          "world_bounds_m": {
+            "minimum": [
+              1.7903813570737839,
+              0.9279373705387116,
+              -0.8242979645729065
+            ],
+            "maximum": [
+              2.2096187621355057,
+              1.3607255786657333,
+              0.7771914601325989
+            ],
+            "dimensions_xyz": [
+              0.4192374050617218,
+              0.4327882081270217,
+              1.6014894247055054
+            ],
+            "maximum_dimension": 1.6014894247055054
+          },
+          "landmark_distance_m": 1.5549999908053054,
+          "heading_cases": [
+            {
+              "heading_deg": 0,
+              "nose_horizontal_direction": [
+                3.6789271212157576e-09,
+                1.0
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 90,
+              "nose_horizontal_direction": [
+                1.0,
+                -3.6789268991711527e-09
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 180,
+              "nose_horizontal_direction": [
+                -3.678926998751078e-09,
+                -1.0
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 270,
+              "nose_horizontal_direction": [
+                -1.0,
+                3.6789268991711527e-09
+              ],
+              "passed": true
+            }
+          ],
+          "live_heading90_authored": true,
+          "materials": [
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPorpoise/Model/PorpoiseBody/Object_0_001",
+              "material": "/World/Cetaceans/M2CalibrationPorpoise/Model/_materials/porpoise_skin",
+              "textures": [
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+                  "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+                },
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+                  "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+                },
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+                  "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+                },
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+                  "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPorpoise/Model/PorpoiseEyes/Object_1_001",
+              "material": "/World/Cetaceans/M2CalibrationPorpoise/Model/_materials/porpoise_eye",
+              "textures": []
+            }
+          ]
+        }
+      },
+      "passed": true
+    },
+    "shallow": {
+      "checkpoint": "checkpoint_gfirg5og",
+      "sha256": "281191055703d685b3acfd820365eaca3e61ed052b96dff5df9bf5dd2d031343",
+      "animals": {
+        "european_storm_petrel": {
+          "passed": true,
+          "vertex_count": 156856,
+          "mesh_count": 6,
+          "max_point_error_m": 4.828782707022583e-09,
+          "world_bounds_m": {
+            "minimum": [
+              -2.157776155354345,
+              0.9471398861528582,
+              -0.022121749365014348
+            ],
+            "maximum": [
+              -1.8929451084868683,
+              1.0525568959081186,
+              0.14787825583788267
+            ],
+            "dimensions_xyz": [
+              0.2648310468674768,
+              0.10541700975526047,
+              0.17000000520289701
+            ],
+            "maximum_dimension": 0.2648310468674768
+          },
+          "landmark_distance_m": 0.17000000520289704,
+          "heading_cases": [
+            {
+              "heading_deg": 0,
+              "nose_horizontal_direction": [
+                1.59862001093154e-08,
+                0.9999999999999999
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 90,
+              "nose_horizontal_direction": [
+                0.9999999999999999,
+                -1.5986199887270793e-08
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 180,
+              "nose_horizontal_direction": [
+                -1.598619998685072e-08,
+                -0.9999999999999999
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 270,
+              "nose_horizontal_direction": [
+                -0.9999999999999999,
+                1.5986199887270793e-08
+              ],
+              "passed": true
+            }
+          ],
+          "live_heading90_authored": true,
+          "materials": [
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_2/Object_0",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/material",
+              "textures": []
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_3/Object_1",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/material_1",
+              "textures": []
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_4/Object_2",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/ptak",
+              "textures": [
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+                  "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+                  "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+                  "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_5/Object_3",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/ptak",
+              "textures": [
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+                  "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+                  "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+                  "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_6/Object_4",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/ptak",
+              "textures": [
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+                  "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+                  "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+                },
+                {
+                  "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+                  "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPetrel/Model/EuropeanStormPetrelRig/Object_7/Object_5",
+              "material": "/World/Cetaceans/M2CalibrationPetrel/Model/_materials/zren",
+              "textures": []
+            }
+          ]
+        },
+        "harbour_porpoise": {
+          "passed": true,
+          "vertex_count": 23456,
+          "mesh_count": 2,
+          "max_point_error_m": 4.440892098500626e-16,
+          "world_bounds_m": {
+            "minimum": [
+              1.7903813570737839,
+              -0.4527882081270218,
+              -0.8242979645729065
+            ],
+            "maximum": [
+              2.2096187621355057,
+              -0.019999999999999966,
+              0.7771914601325989
+            ],
+            "dimensions_xyz": [
+              0.4192374050617218,
+              0.43278820812702185,
+              1.6014894247055054
+            ],
+            "maximum_dimension": 1.6014894247055054
+          },
+          "landmark_distance_m": 1.5549999908053054,
+          "heading_cases": [
+            {
+              "heading_deg": 0,
+              "nose_horizontal_direction": [
+                3.6789271212157576e-09,
+                1.0
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 90,
+              "nose_horizontal_direction": [
+                1.0,
+                -3.6789268991711527e-09
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 180,
+              "nose_horizontal_direction": [
+                -3.678926998751078e-09,
+                -1.0
+              ],
+              "passed": true
+            },
+            {
+              "heading_deg": 270,
+              "nose_horizontal_direction": [
+                -1.0,
+                3.6789268991711527e-09
+              ],
+              "passed": true
+            }
+          ],
+          "live_heading90_authored": true,
+          "materials": [
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPorpoise/Model/PorpoiseBody/Object_0_001",
+              "material": "/World/Cetaceans/M2CalibrationPorpoise/Model/_materials/porpoise_skin",
+              "textures": [
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+                  "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+                },
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+                  "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+                },
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+                  "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+                },
+                {
+                  "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+                  "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+                }
+              ]
+            },
+            {
+              "mesh": "/World/Cetaceans/M2CalibrationPorpoise/Model/PorpoiseEyes/Object_1_001",
+              "material": "/World/Cetaceans/M2CalibrationPorpoise/Model/_materials/porpoise_eye",
+              "textures": []
+            }
+          ]
+        }
+      },
+      "passed": true
+    }
+  }
+}

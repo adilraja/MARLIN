@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0.0",
+  "selected_date": "2026-09-29",
+  "status": "pilot_engineering_references_with_explicit_uncertainty",
+  "stage_meters_per_unit": 0.01,
+  "targets": {
+    "european_storm_petrel": {
+      "asset_path": "assets/birds/european_storm_petrel/usd/glide.usd",
+      "asset_sha256": "ef970e398e5fdb75c9594a2dc80c438eda8b05efbd5e1c97d8f34e60336a0f82",
+      "reference_length_m": 0.17,
+      "source_id": "naturalis_storm_petrel",
+      "selection_method": "Midpoint of published 0.15\u20130.19 m species body-length range; not a measurement of museum specimen Z/155/MT.",
+      "measurement_status": "provisional",
+      "source_dependencies": [
+        {
+          "path": "assets/birds/european_storm_petrel/usd/glide.usd",
+          "sha256": "ef970e398e5fdb75c9594a2dc80c438eda8b05efbd5e1c97d8f34e60336a0f82"
+        },
+        {
+          "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+          "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+        },
+        {
+          "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+          "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+        },
+        {
+          "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+          "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+        }
+      ]
+    },
+    "harbour_porpoise": {
+      "asset_path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+      "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+      "reference_length_m": 1.555,
+      "source_id": "digitallife_model75a",
+      "selection_method": "Publisher-reported total length of Freja; prior candidate scaled using provisional rostrum/fluke-notch landmark correspondence.",
+      "measurement_status": "provisional",
+      "source_dependencies": [
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+          "sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+          "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+          "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+          "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+        }
+      ]
+    }
+  }
+}

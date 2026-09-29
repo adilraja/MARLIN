@@ -1,0 +1,364 @@
+{
+  "schema_version": "1.2.0",
+  "experiment_id": "gsd_pilot_v1",
+  "created_date": "2026-09-29",
+  "status": "milestone_3_complete_paired_capture_pending",
+  "source_baseline_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
+  "scope": "provisional_synthetic_to_synthetic_detection_pipeline_pilot",
+  "runtime_architecture": "NVIDIA Omniverse Kit with existing Kit Services HTTP API",
+  "gsd_levels_cm_px": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "coordinates": {
+    "up_axis": "Y",
+    "heading_zero": "+Z",
+    "heading_90": "+X",
+    "required_stage_meters_per_unit": 0.01,
+    "metadata_position_units": "metres",
+    "stage_unit_validation": "required_before_spawning_or_capture"
+  },
+  "camera": {
+    "profile_id": "existing_generic_engineering_pinhole",
+    "reuse_module": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py",
+    "image_size_px": [
+      1024,
+      768
+    ],
+    "focal_length_mm": 50.0,
+    "pixel_pitch_um": 5.0,
+    "pitch_deg": 0.0,
+    "roll_deg": 0.0,
+    "principal_point": "centred",
+    "distortion": "zero_assumption",
+    "parameter_status": "engineering_choices_from_existing_fixture_not_survey_hardware_calibration",
+    "gsd_reference_plane": "horizontal_plane_at_recorded_animal_root_y",
+    "camera_to_reference_plane_separations_m": [
+      50.0,
+      100.0,
+      200.0,
+      300.0,
+      400.0
+    ],
+    "paired_variable": "camera_world_y_only",
+    "paired_constants": [
+      "camera_x",
+      "camera_z",
+      "intrinsics",
+      "orientation",
+      "resolution"
+    ],
+    "required_sampling_metadata": [
+      "requested_reference_gsd_cm_px",
+      "actual_reference_gsd_xy_cm_px",
+      "sea_plane_gsd_xy_cm_px",
+      "target_centroid_direct_geometric_gsd_xy_cm_px",
+      "reference_plane_y_m"
+    ],
+    "marine_path_validation": "pending_milestone_4",
+    "interpretation": "altitude_conditioned_gsd_sweep_with_changing_world_footprint_not_pure_downsampling",
+    "hidef_profile_modified": false,
+    "sony_profile_modified": false,
+    "clipping_range_scene_units": [
+      1,
+      100000
+    ]
+  },
+  "targets": {
+    "selected_bird": "european_storm_petrel",
+    "selected_cetacean": "harbour_porpoise",
+    "leading_candidates": [
+      "european_storm_petrel",
+      "harbour_porpoise"
+    ],
+    "selection_status": "pilot_calibrated_with_explicit_provisional_fields",
+    "physical_reference_values": {
+      "european_storm_petrel": {
+        "record": "wildlife/european_storm_petrel.json",
+        "value_m": 0.17,
+        "status": "provisional"
+      },
+      "harbour_porpoise": {
+        "record": "wildlife/harbour_porpoise.json",
+        "value_m": 1.555,
+        "status": "provisional"
+      }
+    },
+    "permitted_states": {
+      "european_storm_petrel": [
+        "static_spread_wing_proxy"
+      ],
+      "harbour_porpoise": [
+        "static_shallow_swim"
+      ]
+    },
+    "state_conditioned_sampling_ranges": {
+      "values": {
+        "x_m": [
+          -0.6,
+          0.6
+        ],
+        "z_m": [
+          -0.6,
+          0.6
+        ],
+        "heading_deg": [
+          0.0,
+          360.0
+        ],
+        "petrel_root_altitude_m": [
+          0.75,
+          1.25
+        ],
+        "porpoise_top_clearance_m": [
+          0.02,
+          0.08
+        ]
+      },
+      "status": "provisional_engineering_sampling_not_biological_distributions",
+      "pitch_deg": 0,
+      "roll_deg": 0,
+      "pose_time_code": 1
+    },
+    "minimum_valid_states_per_target": 1,
+    "allow_provisional_values": true,
+    "require_value_specific_provenance_and_uncertainty": true
+  },
+  "environment": {
+    "preset_id": "gsd_baseline_v1",
+    "source_preset": "source/extensions/cris.madil.render_service/config/survey_environment_v1.json",
+    "policy": "fixed_flat_ocean_diffuse_illumination_no_environment_randomisation",
+    "renderer_settings": "environment.json#/renderer_settings",
+    "validation_status": "geometry_and_recorded_state_reconstruction_passed_milestone_3",
+    "optical_calibration_claim": false,
+    "frozen_record": "environment.json",
+    "remaining_validation": "optics_actual_capture_sampling_and_RGB_repeatability_pending_M4"
+  },
+  "scene_generation": {
+    "master_seed": 20260929,
+    "seed_helper": "survey_spec.condition_seed",
+    "gsd_in_biological_seed": false,
+    "sampling": "bounded_state_conditioned_world_coordinates_once_per_scene",
+    "frame_placement": "project_world_coordinates_no_per_gsd_repositioning",
+    "pairing": "one_frozen_biological_snapshot_and_manifest_hash_per_scene",
+    "time_policy": "freeze_timeline_samples_and_application_driven_geometry",
+    "renderer_seed": "record_separately_if_supported_never_imply_biological_seed_controls_rtx",
+    "rgb_bitwise_repeatability_claim": false,
+    "replacement_policy": "retain_qa_rejection_reasons_and_use_predefined_next_candidate_id_never_result_driven_resampling",
+    "sampler_version": "m3_engineering_v1",
+    "manifest_directory": "scenes/manifests",
+    "initial_candidate_ids": "species_0000 through species_0024; replacements species_0025 onward",
+    "snapshot_directory": "scenes/snapshots",
+    "reconstruction_validation": {
+      "representative_scene_count": 4,
+      "live_snapshot_checks": 16,
+      "world_vertex_tolerance_m": 1e-05,
+      "results": "qa/m3_reconstruction.json"
+    }
+  },
+  "dataset": {
+    "minimum_valid_scenes_per_target": 25,
+    "positive_images_per_scene": 5,
+    "minimum_positive_images": 250,
+    "negative_parent_scenes_per_target": 5,
+    "negative_parent_counts_by_split_per_target": {
+      "train": 3,
+      "validation": 1,
+      "test": 1
+    },
+    "negative_variant": "target_absent_counterpart_all_five_gsds_same_parent_group",
+    "minimum_negative_images": 50,
+    "minimum_total_images": 300,
+    "target_invisible_is_not_render_failure": true,
+    "invisible_target_policy": "retain_all_pair_records_and_explicit_visibility_status_never_silently_drop_one_gsd"
+  },
+  "annotations": {
+    "formats": [
+      "coco_json",
+      "frame_metadata_json"
+    ],
+    "detection_category": "wildlife",
+    "category_id": 1,
+    "species_recorded_separately": true,
+    "bbox_convention": "COCO_xywh_pixel_edges_upper_left_origin",
+    "geometry_source": "evaluated_animal_mesh_projection_with_parent_transforms_and_pose",
+    "current_world_aabb_is_exact_animal_label": false,
+    "bbox_semantics": "amodal_geometric_projection_with_separate_visibility_evidence",
+    "require_visibility_validation_before_accepting_state": true,
+    "segmentation_required": false,
+    "pixels_on_target_fields": [
+      "bbox_width_px",
+      "bbox_height_px",
+      "projected_silhouette_area_px",
+      "visible_target_area_px"
+    ],
+    "unknown_area_policy": "null_with_reason_never_substitute_bbox_area",
+    "underwater_limitation": "direct_projection_does_not_model_refracted_apparent_target_extent"
+  },
+  "splits": {
+    "counts_per_target": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "seed": 20260929,
+    "assignment": "fixed_seeded_permutation_before_gsd_expansion",
+    "implementation_and_id_manifest": "pending_milestone_6",
+    "protected_identifiers": [
+      "scene_id",
+      "asset_instance_id",
+      "sequence_id",
+      "condition_id"
+    ],
+    "validator": "survey_spec.validate_split_records",
+    "negative_counterpart_inherits_parent_split": true,
+    "source_asset_hash_shared_across_splits": true,
+    "unseen_individual_or_mesh_generalisation_claim": false
+  },
+  "model_input": {
+    "original_image_size_px": [
+      1024,
+      768
+    ],
+    "padded_input_size_px": [
+      1024,
+      1024
+    ],
+    "resize_scale": 1.0,
+    "padding_offset_and_value": "resolve_and_lock_with_detector_before_training",
+    "forbidden_augmentations": [
+      "random_scale",
+      "mosaic",
+      "random_crop"
+    ],
+    "require_full_image_to_model_affine_and_box_check": true,
+    "record_original_and_model_input_pixels_on_target": true
+  },
+  "training": {
+    "number_of_baselines": 1,
+    "pool_all_training_gsds": true,
+    "architecture_and_package": null,
+    "dependency_status": "no_detector_found_in_audited_runtimes_resolve_milestone_6",
+    "pretrained_checkpoint_and_hash": null,
+    "optimizer_learning_rate_batch_size_and_nms": null,
+    "seed": 20260929,
+    "epochs": 20,
+    "checkpoint_selection": "best_pooled_validation_AP50",
+    "threshold_selection": "max_pooled_validation_F1_tie_choose_higher_confidence",
+    "same_threshold_for_all_gsds_and_targets": true,
+    "test_set_tuning": false
+  },
+  "evaluation": {
+    "matching": "one_to_one_IoU_at_least_0.5",
+    "metrics": [
+      "TP",
+      "FP",
+      "FN",
+      "precision",
+      "recall",
+      "AP50",
+      "false_positives_per_negative_frame"
+    ],
+    "report_by": [
+      "target_species_metadata",
+      "gsd"
+    ],
+    "same_heldout_scene_groups_at_every_gsd": true,
+    "show_counts_and_uncertainty": true,
+    "cross_gsd_resampling_unit": "scene_group",
+    "operational_gsd_threshold_claim": false
+  },
+  "native_capture": {
+    "current_status": "partially_validated",
+    "evidence": "native_metric_probe_passed_full_marine_overlap_failed_focused_sdk_pair_passed",
+    "pilot_specific_validation": "pending_milestone_4",
+    "overlap_mean_absolute_rgb_error_limit_0_255": 2.0,
+    "minimum_gpu_headroom_mib": 768,
+    "bound": "one_focused_validation_job_no_unlimited_tuning",
+    "fallback": "validated_fixed_size_generic_marine_capture_with_honest_sampling_metadata",
+    "sony_native_required": false,
+    "gama_required": false
+  },
+  "provenance": {
+    "required": [
+      "git_commit",
+      "dirty_diff",
+      "relevant_untracked_source_hashes",
+      "app_extension_versions",
+      "asset_and_calibration_hashes",
+      "camera_specification",
+      "environment_and_renderer_settings",
+      "seeds",
+      "gpu_driver",
+      "dependency_versions",
+      "image_annotation_split_checkpoint_hashes"
+    ],
+    "runtime_external_material_dependencies": "record_unresolved_or_external_do_not_claim_fully_portable_snapshot"
+  },
+  "outstanding_gates": [
+    {
+      "milestone": 4,
+      "gate": "validate_generic_marine_capture_exact_mesh_labels_visibility_and_all_five_actual_gsds"
+    },
+    {
+      "milestone": 4,
+      "gate": "perform_bounded_native_validation_and_report_separate_resource_or_radiometric_failures"
+    },
+    {
+      "milestone": 6,
+      "gate": "lock_detector_dependencies_checkpoint_preprocessing_optimizer_nms_and_split_ids_before_training"
+    }
+  ],
+  "completed_gates": [
+    {
+      "milestone": 2,
+      "gate": "select_targets_and_validate_sourced_scale_axes_supported_state_and_kit_spawning",
+      "status": "passed_for_provisional_engineering_pilot",
+      "evidence": [
+        "wildlife/CALIBRATION.md",
+        "wildlife/live_validation.json",
+        "wildlife/european_storm_petrel.json",
+        "wildlife/harbour_porpoise.json"
+      ]
+    },
+    {
+      "milestone": 3,
+      "gate": "resolve_state_ranges_and_renderer_environment_then_verify_reconstruction",
+      "status": "passed",
+      "evidence": [
+        "environment.json",
+        "scenes/SCENE_GENERATION.md",
+        "qa/m3_scene_geometry.json",
+        "qa/m3_reconstruction.json"
+      ]
+    }
+  ],
+  "revisions": [
+    {
+      "version": "1.1.0",
+      "date": "2026-09-29",
+      "milestone": 2,
+      "reason": "Resolve target selections, sourced scale references and static visual states before dataset generation; no ML results observed.",
+      "previous_specification": "history/milestone_1/specification.json",
+      "unchanged": "GSD, camera, pairing, dataset counts, splits and training/evaluation protocol"
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-09-29",
+      "milestone": 3,
+      "reason": "Freeze engineering sampling ranges, environment and renderer state before dataset generation; add recurring requested animation preview.",
+      "previous_specification": "history/milestone_2/specification.json",
+      "ml_results_observed": false
+    }
+  ],
+  "milestone_finish_check": {
+    "required": "restore_moving_water_and_11_default_animals_swimming_in_live_viewport",
+    "requested_by_user": "2026-09-29",
+    "validation": "check_ocean_time_translation_and_body_pose_then_leave_running_for_visual_review",
+    "applies_to_remaining_milestones": true,
+    "command": "python3 -B experiments/gsd_pilot_v1/scenes/live_session.py preview --milestone N"
+  }
+}

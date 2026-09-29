@@ -1,0 +1,619 @@
+{
+  "milestone": 3,
+  "status": "complete",
+  "completed_at_utc": "2026-09-29T14:10:12.630418+00:00",
+  "next_milestone": 4,
+  "specification_version": "1.2.0",
+  "candidate_scene_count": 50,
+  "fully_reconstructed_representative_scenes": 4,
+  "passed_live_snapshot_checks": 16,
+  "tests_passed": 146,
+  "completion_preview": "moving_water_and_11_default_animals_swimming_in_live_viewport",
+  "actual_body_and_ocean_geometry_animation_verified": true,
+  "remaining_gates": [
+    "M4 actual GSD captures, labels, underwater visibility and RGB repeatability",
+    "M5 dataset acceptance"
+  ],
+  "outputs": [
+    {
+      "path": "README.md",
+      "bytes": 6578,
+      "sha256": "d1c720d713910092163168aa4e0e2aafc40f650a2f67b444d9dc136493253672"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 8339,
+      "sha256": "83745470f0391b61d95e8f89a2a788b9125cf4d13faf167431d3a310ea4b3590"
+    },
+    {
+      "path": "history/milestone_2/README.md",
+      "bytes": 5629,
+      "sha256": "afad50674a0411bd86f3f3e861104a34cc8ac9108c1f2b916693ae08b4733a02"
+    },
+    {
+      "path": "history/milestone_2/path_relocations.json",
+      "bytes": 195,
+      "sha256": "382cd870b228d31c42c06b614a12ea1a91f2ac8b2dbe66e952f4371e062e3d20"
+    },
+    {
+      "path": "history/milestone_2/specification.json",
+      "bytes": 10287,
+      "sha256": "d5667edafa1b0d68ce66b46ccb8d3277e93a92e4fa9829c17db243fa36776502"
+    },
+    {
+      "path": "qa/m3_contract_tests.json",
+      "bytes": 108,
+      "sha256": "131c2acb0cf04ec30962dc75d1462b38450cec1060d8048c01c6cd121686f1dd"
+    },
+    {
+      "path": "qa/m3_contract_tests.log",
+      "bytes": 3704,
+      "sha256": "a56aabf0204b83fe4897099b9da98c84342fce5be0eb9be4be00eaf67fed02c9"
+    },
+    {
+      "path": "qa/m3_package_validation.json",
+      "bytes": 424,
+      "sha256": "1f6176bc4c40b1625f667576a86bac000096856b334414f0351d5e04aeb7002b"
+    },
+    {
+      "path": "qa/m3_reconstruction.json",
+      "bytes": 10208,
+      "sha256": "d5c4181815d763e82e6f2ced87afa27d3b68990060f1d82383b6ce80dff3cbba"
+    },
+    {
+      "path": "qa/m3_regressions/baseline_usd.json",
+      "bytes": 17294,
+      "sha256": "106a32ffa8840c7a331837914f61d410c402c14e89d48e7602f022163aab79b3"
+    },
+    {
+      "path": "qa/m3_regressions/baseline_usd.log",
+      "bytes": 16395,
+      "sha256": "8c9b4e3bd12ab58f7aec9b3f4b8972aa6583160d541970cdb9abafa91fde8766"
+    },
+    {
+      "path": "qa/m3_scene_geometry.json",
+      "bytes": 74616,
+      "sha256": "11393c15cdfdd69cc88de143c3738cad9296affe804d289129599c241157410a"
+    },
+    {
+      "path": "qa/m3_source_provenance.json",
+      "bytes": 968,
+      "sha256": "a7e7d38700e5af67c74b5104ae78475701debcdf34fcbe7cc99a9f7461b0ff1f"
+    },
+    {
+      "path": "qa/m3_source_tracked_diff.patch",
+      "bytes": 5644,
+      "sha256": "432250fb1090e49a0cffc8719de3db4e832a0482d97d43bab2d02e60d02b9276"
+    },
+    {
+      "path": "qa/milestone_3_animation_preview.json",
+      "bytes": 36731,
+      "sha256": "4209556e1a96f9225e0fcdedbc080cf77a8fb6520f807f5f2494c7ba0687348f"
+    },
+    {
+      "path": "qa/run_m3_regressions.py",
+      "bytes": 350,
+      "sha256": "e069948fb97148822ae2a83337d26923eca9f7c1468a5891aaf631082f5bcb67"
+    },
+    {
+      "path": "qa/test_reconstruction_contract.py",
+      "bytes": 6979,
+      "sha256": "c034593c46bf632830cd56f4efc672456a01b61c90c74d14f2bece5a567e7af6"
+    },
+    {
+      "path": "qa/test_scene_sampling.py",
+      "bytes": 12913,
+      "sha256": "1b7df590aceb5d57e7fdcd4ed021e887370df8b0ff54ea2908a7ebfdefc34933"
+    },
+    {
+      "path": "qa/verify_m3_package.py",
+      "bytes": 2994,
+      "sha256": "0c598e8fd710b4c360272b800b5b2844fdb5c40f0319dc84c2baa2bf8cb94a26"
+    },
+    {
+      "path": "qa/verify_m3_reconstruction.py",
+      "bytes": 13457,
+      "sha256": "23bb4571a8132911e663c9ef490cb6706174b7ba1cf3fe5b562972e7d91ed14d"
+    },
+    {
+      "path": "scenes/SCENE_GENERATION.md",
+      "bytes": 9000,
+      "sha256": "a0282fe5916409c02bdbf2d7f9ca77fe5bd297e26e429db59b698ff319084c3e"
+    },
+    {
+      "path": "scenes/base_checkpoint.json",
+      "bytes": 4464,
+      "sha256": "a4931e3bd18adefbfc21b9c2e5aa921f80b6a040e6387aa9bce22b8e5d65092e"
+    },
+    {
+      "path": "scenes/base_setup.json",
+      "bytes": 4271,
+      "sha256": "a33c58ce668cef1741153128282000edf28fde30601f46059d707bcbf143b9d4"
+    },
+    {
+      "path": "scenes/before_m3_checkpoint.json",
+      "bytes": 1494,
+      "sha256": "912da187751a7a9c93f3c22c9206cca0028cab3e40ad24164ff5734a782b71a9"
+    },
+    {
+      "path": "scenes/build_scenes.py",
+      "bytes": 14110,
+      "sha256": "cbfb05439e7cba0e55c110fefb254a2224ae5b10c28b70018f9c40739bba354e"
+    },
+    {
+      "path": "scenes/environment_base.usdc",
+      "bytes": 105671,
+      "sha256": "b732567da03e737ba72df0205d4e11d8e4e48810e709763f5442666d9eeaa4b1"
+    },
+    {
+      "path": "scenes/live_replay.json",
+      "bytes": 97026,
+      "sha256": "1b10fa0ced760acd5992d848c6d3bc6b53e840cf30c246fe91deb546c341ed0f"
+    },
+    {
+      "path": "scenes/live_replay_progress.json",
+      "bytes": 91961,
+      "sha256": "03293eee30b9ddd88c8786d74e852f6bec5567395789ca544ad71259644d71d7"
+    },
+    {
+      "path": "scenes/live_session.py",
+      "bytes": 7618,
+      "sha256": "43f1b0e3e285757449ff2028968f75eb43d2ef482c3a34fa18ee9240825cd9b9"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0000.json",
+      "bytes": 6626,
+      "sha256": "14a574adb80ebdafb9141232e699668c4bbd82289a65b1bed289b51fad4ff07f"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0001.json",
+      "bytes": 6623,
+      "sha256": "05f35102db49f4bda76460888919b68d04bd9487d595cb62cc98cd691f7eb899"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0002.json",
+      "bytes": 6619,
+      "sha256": "3e2b145210bafe60c4a29787c1b3a18b0cf81f667d2d4654e4f0cd5776e3ba39"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0003.json",
+      "bytes": 6619,
+      "sha256": "2ef7acb5f16d8419588eaebfaa0703d3286e736b17909e813b8b60700e746d75"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0004.json",
+      "bytes": 6624,
+      "sha256": "3b5fbf2ec437282c3c7ab883954cbe554f215eba36a6defbf13ed4561a5750a2"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0005.json",
+      "bytes": 6617,
+      "sha256": "8968d803bb29a5faf5bd40d3599685460bb52b22ae78e256bba21aefddecc1f0"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0006.json",
+      "bytes": 6624,
+      "sha256": "79130f5364366c14d458b8f4a07840044c1dcccb2b790cd73d112f4f9e52ec87"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0007.json",
+      "bytes": 6618,
+      "sha256": "79fc4f8c391e2a0041e091cff87e4dc021d234fa9478467711e9a1f5872c5167"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0008.json",
+      "bytes": 6619,
+      "sha256": "b910da9698d8b2d436e236a6fd4cafa299d3a6c246f9ac735c5a3d3e30015465"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0009.json",
+      "bytes": 6618,
+      "sha256": "429b37ceef86946f2583cf48315aba5124829c28912e2c2f12aad9a83f4ad5ec"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0010.json",
+      "bytes": 6627,
+      "sha256": "00da5681e7aee2f3b301f0231dbab19552cb45dd055d54cfb60c3d968e953aaa"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0011.json",
+      "bytes": 6624,
+      "sha256": "3e4ef6ab08cf4addace5b06830d558d663b844b43033f35016c0de1af2063060"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0012.json",
+      "bytes": 6626,
+      "sha256": "e667bb04c8f8627b7da0a14156a4f6a6acf278d6f3520d1ad4be2826927cbe06"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0013.json",
+      "bytes": 6624,
+      "sha256": "4ba6438685ac7a4cfefdd89334f7b498b1cea90f351e3dd5d5f0c878c45c85d4"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0014.json",
+      "bytes": 6615,
+      "sha256": "b6ffc422cc4f464e440b21d5d40b3d66c487f33c42c8cfd9062200510a5dc7c1"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0015.json",
+      "bytes": 6627,
+      "sha256": "1f85af1c24938f111fde8af5a14a8baf1ee60a4ac86f6e9bbe0e64a202f41094"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0016.json",
+      "bytes": 6624,
+      "sha256": "7616b76b624907eb8479724aa467cd10f4b2a199ba4680d8bc59fa0c4eb499fa"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0017.json",
+      "bytes": 6617,
+      "sha256": "25133900985ed4f5805348173dff944737bd70165a7beeffd3050e681448bffc"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0018.json",
+      "bytes": 6619,
+      "sha256": "cb977519f8b317946533a6787daeaac5a852334e01012265c466c5d47c8e0b5c"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0019.json",
+      "bytes": 6623,
+      "sha256": "d3c1fda2d7c2c78fd7310a9a3a490ae926e4c801b390334a8a660792486bce54"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0020.json",
+      "bytes": 6627,
+      "sha256": "67ab4069389b96a632a0cc94462cd4d0c68f0065f49545158eb188f4f71502c3"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0021.json",
+      "bytes": 6627,
+      "sha256": "257dbfca069762d11b2c1a0ccd51bf0633d092b2635dda1a3c49b0e1c226e82b"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0022.json",
+      "bytes": 6611,
+      "sha256": "0936a4cdca1d1fc397870a362bab532da229b76cdd95d89b3e7264d30c2ed30b"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0023.json",
+      "bytes": 6625,
+      "sha256": "3e8078de002487b2666e01fb17e597db1cf8877c144fc8ae53b1e26e7aad3172"
+    },
+    {
+      "path": "scenes/manifests/european_storm_petrel_0024.json",
+      "bytes": 6623,
+      "sha256": "9ebdc07d58a63d438695d748bbe716a6a883cd2fb9311b39b4bd409aa56a5f48"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0000.json",
+      "bytes": 6828,
+      "sha256": "5f1a31c0a866c4c694235b5c5383bd6e723fecc31d622a1cda744278d1f2aeb9"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0001.json",
+      "bytes": 6818,
+      "sha256": "623175b952043ef82a1770024be9048f49024cdfe9793e10bf8fa190d95eeea8"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0002.json",
+      "bytes": 6828,
+      "sha256": "22a19600c4efeee5285d850407ce459c963f1d0e6624f9ae2c8f28fc0e0220f7"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0003.json",
+      "bytes": 6821,
+      "sha256": "5e3f09dfb9945c7fd5fb48bb0e55565e0b8722786958b2f857146b25ee10e89a"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0004.json",
+      "bytes": 6818,
+      "sha256": "dbd90f32f5dbd0e46ae8b99149248fdce007edbed3f81c5635036c679a1e5454"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0005.json",
+      "bytes": 6827,
+      "sha256": "9cf367c63c29894695746616220f9ae610ff8102bff5dd8743f92fa4e974aede"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0006.json",
+      "bytes": 6821,
+      "sha256": "04bde7a7d8a6465350c13a44e6a20067e66aa9d3abda9e22db3d802e6edeeaf5"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0007.json",
+      "bytes": 6826,
+      "sha256": "55d5cbdbc9177c83e92dd822d340fd1e748765e131d02e90414f3416c3164e38"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0008.json",
+      "bytes": 6817,
+      "sha256": "f270337d87b89651aaa1127b745a6e3d83e1612f51d88073ea85091e1acad23a"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0009.json",
+      "bytes": 6824,
+      "sha256": "bdce15b3e605e630b6efac8100e3956b04f7ad0703764ed805d9d1185560f689"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0010.json",
+      "bytes": 6822,
+      "sha256": "54cfb2d7a150855300e23f856aab1e76a9e79c653bab3b1e880ac9881c3fcde8"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0011.json",
+      "bytes": 6821,
+      "sha256": "08c66a963e51a92a8043d55c696c2f0df376bcd7e40d382465334046f5c8c483"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0012.json",
+      "bytes": 6825,
+      "sha256": "49c74f7758a40e6bb0f8ca33fdee471605839942b3c7d2676599b956b63f10d6"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0013.json",
+      "bytes": 6826,
+      "sha256": "9af3a0947c3f6a497d7e0644d561d184128c7a3aea3b3aef78e892f5e73b6f2b"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0014.json",
+      "bytes": 6818,
+      "sha256": "720c39c34ca8a7afff076f75896984cc27d0f7cc69feb469619d262805338f33"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0015.json",
+      "bytes": 6831,
+      "sha256": "60cad7aacda4746e50d1b61d8614213836445aef8388d9409f910321cfc26412"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0016.json",
+      "bytes": 6825,
+      "sha256": "05363c614b286a890d5180e2bde01d90eb08aa74df73296f7704936ae5862c9a"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0017.json",
+      "bytes": 6830,
+      "sha256": "efdcf06136e20a01e01ffe621677c0d67f379ffd0f3000971f7f43d426bf9bab"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0018.json",
+      "bytes": 6818,
+      "sha256": "0e251c9c5cf133d054e2c7cd784829c1a5e8976c5ce19af9651268be3e5885fb"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0019.json",
+      "bytes": 6828,
+      "sha256": "fb7d6d35bf0e2feab81e37eec9ec932e217e28be4438cca57878fe292526ed1c"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0020.json",
+      "bytes": 6821,
+      "sha256": "e6510d1e89a575ee9940ad11108b67f63a5d6774aa53a2699e18db0ef505ab23"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0021.json",
+      "bytes": 6827,
+      "sha256": "eeeb7bcccfdc75412563adf390e9a0d932ef25b9e424ae0c2f42c632372e7bf0"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0022.json",
+      "bytes": 6819,
+      "sha256": "0d722a4e83297718ca74c3b42cd3c1458eeb59f3de0fae20c2a9d13dae7ee218"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0023.json",
+      "bytes": 6820,
+      "sha256": "955e38f98b2931e8b12f668ec66fe89abf55649d73935aa57a4cf86e6bc68897"
+    },
+    {
+      "path": "scenes/manifests/harbour_porpoise_0024.json",
+      "bytes": 6818,
+      "sha256": "e3509ca3d1e48e1dc8021131d7585893bce6db8002e08a1ea90ce5d8da97c83c"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/environment.json",
+      "bytes": 8108,
+      "sha256": "356867d728ae84bf598c9dbd5a36f6723937cbcbcad9baea3612a23dfa0c92b7"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/live_replay.json",
+      "bytes": 97026,
+      "sha256": "5c95f1094c639420bd33de62aa90568d1ac1ee8003c5c30e6be97adadc763fff"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/live_replay_progress.json",
+      "bytes": 91961,
+      "sha256": "384d4c1c69a5da53f52b042f88a2abfc5ad2186702fb228f04eae342d1d766d6"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/reason.json",
+      "bytes": 288,
+      "sha256": "dad5f22b4773321e3ec702822011df1dce5ac5ed706cfd69012c06b159b1ec4b"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshot_index.json",
+      "bytes": 1601,
+      "sha256": "72b7027f3de48bd5d67b1968f29f57561a2938d441c5a94f65a0a3fc99b62882"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/european_storm_petrel_0000/biological.json",
+      "bytes": 6085,
+      "sha256": "b841b3f5de554a4cc4854536e7177f38a8d6995169e7290589834fc7f16d4c9b"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/european_storm_petrel_0000/metadata.json",
+      "bytes": 4344,
+      "sha256": "0c6935de330fda58c1ee0344c073251ff8994ccc85982830e2d956625b9800d9"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/european_storm_petrel_0000/scene.usdc",
+      "bytes": 14977503,
+      "sha256": "1158771af92382ded590c4223e8ba3cab35be27a5e80dfdc73d88f500b90078f"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/european_storm_petrel_0024/biological.json",
+      "bytes": 6082,
+      "sha256": "72b13e4605028fbfbaea905fa987a5c23dd0d3e1c50c2c1b3da8238a91d93146"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/european_storm_petrel_0024/metadata.json",
+      "bytes": 4344,
+      "sha256": "7151fc89ab0d4153434f485e53101c11ce666c2ce4fb0eee518c6aa0a6bae527"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/european_storm_petrel_0024/scene.usdc",
+      "bytes": 14977503,
+      "sha256": "6d6ca015314ecfff9d786c57f732c8a858851da6ecaf1b98b16ce4faedb02a6b"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/harbour_porpoise_0000/biological.json",
+      "bytes": 6403,
+      "sha256": "32a127d830ab5d586cdf7084fc923691318b06e756b17acf1c8761dbbb36df66"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/harbour_porpoise_0000/metadata.json",
+      "bytes": 4344,
+      "sha256": "e66529f216a94a1b656260a53258aadbd4ae6a967bc5c40730e08ddd18be6e9e"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/harbour_porpoise_0000/scene.usdc",
+      "bytes": 4350775,
+      "sha256": "3075282f2be6f78302aefc957d800b183d5dbd61dcbb4fff6fdb98acb9236ae3"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/harbour_porpoise_0024/biological.json",
+      "bytes": 6399,
+      "sha256": "0476567348c0b3389df32f78f6a12b017b69565e507cb960d2062dd61cd0911b"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/harbour_porpoise_0024/metadata.json",
+      "bytes": 4344,
+      "sha256": "b172bb67a8563db414f9baa7d5b81bc52390fc525eef05e94da28a2054a7daed"
+    },
+    {
+      "path": "scenes/rejected_replays/renderer_and_exposure/snapshots/harbour_porpoise_0024/scene.usdc",
+      "bytes": 4350775,
+      "sha256": "212ce987b650f3f0d346f03816897aff2ad7197826b7f17a242bdb113db89b49"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/european_storm_petrel_0000_metadata.json",
+      "bytes": 4343,
+      "sha256": "510558a4814c29d09a7b37c42687ade884fee3998b7c6bb7aebbfbcea0c509e0"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/european_storm_petrel_0024_metadata.json",
+      "bytes": 4343,
+      "sha256": "c7e5ef9663907fb12eb98b9c32c1766d8ce3521b659c407227c84ec2924045eb"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/harbour_porpoise_0000_metadata.json",
+      "bytes": 4343,
+      "sha256": "91385ef0712cc976b85f847709128bafa7262348f2ce1955c8a27c3990953f44"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/harbour_porpoise_0024_metadata.json",
+      "bytes": 4343,
+      "sha256": "0df46ed9dc00da3f76ae6cd05d8c3f6f2fcf09057d2f9a1f31f94b40854cbe6f"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/live_replay.json",
+      "bytes": 96994,
+      "sha256": "97f2f18b8ba10f0472d528816888506caf694b4e3beaec7d6378703aad165eaf"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/live_replay_progress.json",
+      "bytes": 91929,
+      "sha256": "eda22bbb80bb87a7b6401c4350a2c99a93078759920675e603fee2eed1db57f6"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/reason.json",
+      "bytes": 257,
+      "sha256": "87b8b7d7443bddb4e2078faeae15f341ce1dfa35bad92a87918a9aed70dd34e6"
+    },
+    {
+      "path": "scenes/rejected_replays/viewport_fill_frame/snapshot_index.json",
+      "bytes": 1533,
+      "sha256": "63c27507f569c006d8e5e07b7ab593a6d19752993bf066375188fcc8eb748b68"
+    },
+    {
+      "path": "scenes/renderer_resolution.json",
+      "bytes": 451,
+      "sha256": "d0d3daaf2d0d150c34d36f6b08f390d306670ccc9ae1e29e481e92ee21199982"
+    },
+    {
+      "path": "scenes/sampling.py",
+      "bytes": 14957,
+      "sha256": "9e200a0d357399f305f63e4f7a31891df0ee002107a22d180ffb9f3015f0275b"
+    },
+    {
+      "path": "scenes/snapshot_index.json",
+      "bytes": 1533,
+      "sha256": "40ce422fa0239c5b5c46ce82e0a49f454b9b0e7c4a351e0cb9ac3669ac90409e"
+    },
+    {
+      "path": "scenes/snapshots/european_storm_petrel_0000/biological.json",
+      "bytes": 6085,
+      "sha256": "176b625bf67d8162f53ef02cccc544e79c1508a2051bbe7d8db258f7e39bf729"
+    },
+    {
+      "path": "scenes/snapshots/european_storm_petrel_0000/metadata.json",
+      "bytes": 4344,
+      "sha256": "6771e6fb8e31f82645bbb828ef01e2401984a8ae90975ae9ee0acf8b3e0e31bc"
+    },
+    {
+      "path": "scenes/snapshots/european_storm_petrel_0000/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "e21cb1a384e2313baa3c571af2487714aba713fd341786352b55d09856ca7229"
+    },
+    {
+      "path": "scenes/snapshots/european_storm_petrel_0024/biological.json",
+      "bytes": 6082,
+      "sha256": "568183e7e0a233729467c53278399eed2a005c7e7fc779ef250dff0e61c6b289"
+    },
+    {
+      "path": "scenes/snapshots/european_storm_petrel_0024/metadata.json",
+      "bytes": 4344,
+      "sha256": "8f2beda429536279c1063967a7619980f9ac1200ac668e659e4af02830ff99f9"
+    },
+    {
+      "path": "scenes/snapshots/european_storm_petrel_0024/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "fa92a2f2def46ead445eceee0f16b814247fea99dbd3e649e0272d4868830511"
+    },
+    {
+      "path": "scenes/snapshots/harbour_porpoise_0000/biological.json",
+      "bytes": 6403,
+      "sha256": "62d670c369e5e6a060fa0cc21e35be6b596f84e7e096c564112799c2a876cd41"
+    },
+    {
+      "path": "scenes/snapshots/harbour_porpoise_0000/metadata.json",
+      "bytes": 4344,
+      "sha256": "133168108874aad1ac958b2652d279dbdc39c4c7f7bfda3b5b39b42295e00715"
+    },
+    {
+      "path": "scenes/snapshots/harbour_porpoise_0000/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "21b444782095b9ef89d487eadfc9094007b2ceabf5ff12528e4ddf203ba05ecf"
+    },
+    {
+      "path": "scenes/snapshots/harbour_porpoise_0024/biological.json",
+      "bytes": 6399,
+      "sha256": "60a1edf1958aadcf376fc2d15fcdd8bf2bd9f7e7c34e3ea96481647a34a0977b"
+    },
+    {
+      "path": "scenes/snapshots/harbour_porpoise_0024/metadata.json",
+      "bytes": 4344,
+      "sha256": "b199b22616b38b8d453455e6a64790d57197df4cdab7718de94cf22da8045c18"
+    },
+    {
+      "path": "scenes/snapshots/harbour_porpoise_0024/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "5b479527823adc7eec3ef124fe3d2febc5dc1c9188cc26955d721654e1afa23d"
+    },
+    {
+      "path": "specification.json",
+      "bytes": 12452,
+      "sha256": "41dfb17ec59fa5065ba4fdb7193db973cd6fd76383e705237fa9d5987e9baf9a"
+    }
+  ]
+}

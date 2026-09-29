@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0.0",
+  "preset_id": "gsd_baseline_v1",
+  "source_preset": {
+    "path": "source/extensions/cris.madil.render_service/config/survey_environment_v1.json",
+    "sha256": "ea35ccdc358b4407fd5027c8ffc8aa105aa7c252a41dd2ad606a0e0c9e0f943f",
+    "values": {
+      "preset_id": "survey_fixed_v1",
+      "version": "1.0.0",
+      "status": "visual_QA_pending",
+      "ocean": {
+        "name": "Ocean",
+        "size": 16000,
+        "resolution": 64,
+        "wave_height": 0,
+        "wave_length": 650,
+        "choppiness": 0,
+        "speed": 0,
+        "target_fps": 1,
+        "position": [
+          0,
+          0,
+          0
+        ]
+      },
+      "environment": {
+        "sky_intensity": 500,
+        "sky_exposure": 0,
+        "sky_color": [
+          0.75,
+          0.75,
+          0.75
+        ],
+        "sun_intensity": 0,
+        "sun_angle": 0.53,
+        "sun_rotation": [
+          -35,
+          25,
+          0
+        ],
+        "sun_color": [
+          1,
+          1,
+          1
+        ]
+      },
+      "material": {
+        "ocean_name": "Ocean",
+        "material_name": "OceanWater",
+        "ior": 1.333,
+        "roughness": 0.15,
+        "transmission": 1,
+        "base_weight": 0.02,
+        "base_color": [
+          0.02,
+          0.1,
+          0.13
+        ],
+        "transmission_color": [
+          0.78,
+          0.92,
+          0.95
+        ],
+        "transmission_depth": 100,
+        "scattering_color": [
+          0.005,
+          0.02,
+          0.03
+        ],
+        "scattering_anisotropy": 0,
+        "thin_walled": true
+      },
+      "underwater_cue": {
+        "enabled": false
+      },
+      "notes": [
+        "Engineering appearance preset, not measured environmental optics.",
+        "Flat ocean at Y=0 retains shared ocean sampler with zero wave amplitudes.",
+        "No directional sun; uniform diffuse dome. Reflections remain physically possible.",
+        "No precipitation system is created. Additional lights or weather require inspection.",
+        "Camera exposure and renderer settings still require calibration and recording."
+      ]
+    }
+  },
+  "base_scene": {
+    "path": "scenes/environment_base.usdc",
+    "sha256": "b732567da03e737ba72df0205d4e11d8e4e48810e709763f5442666d9eeaa4b1"
+  },
+  "stage_units": {
+    "meters_per_unit": 0.01,
+    "up_axis": "Y"
+  },
+  "lighting_policy": "Only /World/Environment/Sky and Sun; remove Kit /Environment/defaultLight; sun intensity zero",
+  "renderer_settings": {
+    "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+    "/rtx/fog/enabled": false,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/aa/filterRadius": 1.0,
+    "/rtx/pathtracing/aa/op": 1,
+    "/rtx/pathtracing/adaptiveSampling/enabled": false,
+    "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+    "/rtx/pathtracing/cached/enabled": false,
+    "/rtx/pathtracing/fireflyFilter/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+    "/rtx/pathtracing/fractionalCutoutOpacity": true,
+    "/rtx/pathtracing/lightcache/cached/enabled": false,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/pathtracing/optixDenoiser/enabled": false,
+    "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+    "/rtx/pathtracing/spp": 8,
+    "/rtx/pathtracing/totalSpp": 128,
+    "/rtx/post/aa/op": 0,
+    "/rtx/post/chromaticAberration/enabled": false,
+    "/rtx/post/colorcorr/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/enabled": false,
+    "/rtx/post/colorcorr/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorcorr/saturation": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/blackpoint": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/enabled": false,
+    "/rtx/post/colorgrad/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/lift": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/multiply": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/dlss/execMode": 3,
+    "/rtx/post/dof/enabled": false,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/lensFlares/enabled": false,
+    "/rtx/post/motionblur/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/cm2Factor": 1.0,
+    "/rtx/post/tonemap/colorMode": 0,
+    "/rtx/post/tonemap/dither": 0.0,
+    "/rtx/post/tonemap/enableSrgbToGamma": true,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+    "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+    "/rtx/post/tonemap/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/tonemap/wrapValue": 0.0,
+    "/rtx/post/tvNoise/enabled": false,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "PathTracing",
+    "/rtx/resetPtAccumOnAnimTimeChange": false,
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "renderer_overrides": {
+    "/rtx/rendermode": "PathTracing",
+    "/rtx/pathtracing/spp": 8,
+    "/rtx/pathtracing/totalSpp": 128,
+    "/rtx/pathtracing/adaptiveSampling/enabled": false,
+    "/rtx/pathtracing/optixDenoiser/enabled": false,
+    "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+    "/rtx/pathtracing/cached/enabled": false,
+    "/rtx/pathtracing/lightcache/cached/enabled": false,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/motionblur/enabled": false,
+    "/rtx/post/dof/enabled": false,
+    "/rtx/post/aa/op": 0
+  },
+  "unset_settings": [
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample",
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse",
+    "/rtx/post/tonemap/exposureBias"
+  ],
+  "colour_policy": "Record and restore installed numeric tonemap/exposure/color settings exactly; no hardware color calibration",
+  "external_ocio": {
+    "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+    "status": "runtime_dependency_not_inspected_or_hashed"
+  },
+  "renderer_seed": {
+    "value": null,
+    "status": "no_verified_supported_seed_control; biological seed does not control RTX noise"
+  },
+  "sampling_status": "128 total spp requested; actual captured samples and RGB repeatability require M4",
+  "optical_calibration_claim": false,
+  "time_policy": {
+    "pose_time_code": 1,
+    "authored_time_samples_after_freeze": 0,
+    "live_controllers": "all_stopped_before_attach; asserted_before_and_after",
+    "timeline": "all animated data baked at time code 1; timeline position cannot change scene geometry"
+  },
+  "camera_clipping_range_scene_units": [
+    1,
+    100000
+  ]
+}

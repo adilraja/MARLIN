@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "gsd_pilot_v1",
+  "scene_id": "european_storm_petrel_0015",
+  "species": "european_storm_petrel",
+  "candidate_index": 15,
+  "asset_instance_id": "european_storm_petrel_0015_animal",
+  "sequence_id": "european_storm_petrel_0015_sequence",
+  "condition_id": "european_storm_petrel_0015_condition",
+  "candidate_role": "initial",
+  "specification": {
+    "path": "specification.json",
+    "schema_version": "1.2.0",
+    "sampling_contract_sha256": "931877a7b7aa2600f7c0731765567e1d2210550d68bb775d9ea6cbb4c061ba20"
+  },
+  "calibration": {
+    "path": "wildlife/european_storm_petrel.json",
+    "sha256": "6c024be4246ebd155a91731d89091726568880df35491c4baf5cb7992f8138a7",
+    "asset_dependencies": [
+      {
+        "path": "assets/birds/european_storm_petrel/usd/glide.usd",
+        "sha256": "ef970e398e5fdb75c9594a2dc80c438eda8b05efbd5e1c97d8f34e60336a0f82"
+      },
+      {
+        "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+        "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+      },
+      {
+        "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+        "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+      },
+      {
+        "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+        "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+      }
+    ]
+  },
+  "random": {
+    "master_seed": 20260929,
+    "condition_seed": 16889050236667777901,
+    "seed_helper": "survey_spec.condition_seed",
+    "seed_helper_path": "source/extensions/cris.madil.render_service/cris/madil/render_service/survey_spec.py",
+    "seed_helper_sha256": "15ad60a00579811092e0b0078897ac56f4f812ac4c3193e1e948a046ee1b3a1b",
+    "draw_algorithm": "sha256_named_uint64_top53_uniform_v1",
+    "subdraws": {
+      "x_m": {
+        "seed_uint64": 17472818822941913157,
+        "sha256": "f27bec24fe363045ddf81589980ad3b5d76639ab80ae10a041fc8284e715fc14",
+        "unit_interval_value": 0.9472034063639618,
+        "range": [
+          -0.6,
+          0.6
+        ]
+      },
+      "z_m": {
+        "seed_uint64": 9845042670111987488,
+        "sha256": "88a09e25ae9697203cab83c8216b892b48d1df8539dcbdfe6d7ffae2846ed147",
+        "unit_interval_value": 0.5337008325573953,
+        "range": [
+          -0.6,
+          0.6
+        ]
+      },
+      "heading_deg": {
+        "seed_uint64": 10921053548553159287,
+        "sha256": "978f60571687c27788de48a4025f3b8e1aa7092ee5fd100b99d938b2920f856b",
+        "unit_interval_value": 0.5920314991585931,
+        "range": [
+          0.0,
+          360.0
+        ]
+      },
+      "petrel_root_altitude_m": {
+        "seed_uint64": 4812974569939739932,
+        "sha256": "42cb1edf023f251cb921fccf89906b50c397bc1227bc7a8a0f308ed0efcc9ba3",
+        "unit_interval_value": 0.26091187424230755,
+        "range": [
+          0.75,
+          1.25
+        ]
+      }
+    },
+    "gsd_used": false,
+    "renderer_seed": null,
+    "renderer_seed_reason": "record_separately_if_supported"
+  },
+  "sampling": {
+    "version": "m3_engineering_v1",
+    "distribution": "independent_uniform_lower_inclusive_upper_exclusive",
+    "ranges": {
+      "x_m": [
+        -0.6,
+        0.6
+      ],
+      "z_m": [
+        -0.6,
+        0.6
+      ],
+      "heading_deg": [
+        0.0,
+        360.0
+      ],
+      "petrel_root_altitude_m": [
+        0.75,
+        1.25
+      ]
+    },
+    "provenance": "provisional_engineering_sampling_not_biological_distributions",
+    "biological_distribution_validated": false,
+    "silent_rejection_or_resampling": false,
+    "replacement_policy": "retain_rejection_reason_then_request_next_numeric_candidate_id"
+  },
+  "coordinates": {
+    "units": "metres",
+    "stage_meters_per_unit": 0.01,
+    "up_axis": "Y",
+    "heading_zero": "+Z",
+    "heading_90": "+X"
+  },
+  "reference_plane": {
+    "id": "animal_root_horizontal_plane",
+    "y_m": 0.8804559371211538,
+    "sea_plane_y_m": 0.0
+  },
+  "animal": {
+    "asset_path": "assets/birds/european_storm_petrel/usd/glide.usd",
+    "scale": 0.46948425525029247,
+    "model_rotation_deg": [
+      -70.55174997306713,
+      -24.139515839037514,
+      0
+    ],
+    "position_m": [
+      0.5366440876367541,
+      0.8804559371211538,
+      0.04044099906887433
+    ],
+    "heading_deg": 213.13133969709352,
+    "pitch_deg": 0.0,
+    "roll_deg": 0.0,
+    "state": "static_spread_wing_proxy",
+    "pose_time_code": 1,
+    "animation": "none",
+    "clearance_m": null,
+    "world_y_bounds_m": [
+      0.8275958248918103,
+      0.9330128314207542
+    ],
+    "physical_reference_status": "provisional"
+  },
+  "camera": {
+    "shared": {
+      "image_size_px": [
+        1024,
+        768
+      ],
+      "focal_length_mm": 50.0,
+      "pixel_pitch_um": 5.0,
+      "x_m": 0.0,
+      "z_m": 0.0,
+      "view_direction": "-Y",
+      "image_up_world_axis": "-Z",
+      "pitch_deg": 0.0,
+      "roll_deg": 0.0,
+      "orientation": "nadir",
+      "distortion": "zero_assumption"
+    },
+    "paired_variable": "camera_world_y_only",
+    "variants": [
+      {
+        "requested_gsd_cm_px": 0.5,
+        "position_m": [
+          0.0,
+          50.880455937121155,
+          0.0
+        ],
+        "reference_plane_y_m": 0.8804559371211538,
+        "separation_m": 50.0
+      },
+      {
+        "requested_gsd_cm_px": 1.0,
+        "position_m": [
+          0.0,
+          100.88045593712116,
+          0.0
+        ],
+        "reference_plane_y_m": 0.8804559371211538,
+        "separation_m": 100.0
+      },
+      {
+        "requested_gsd_cm_px": 2.0,
+        "position_m": [
+          0.0,
+          200.88045593712116,
+          0.0
+        ],
+        "reference_plane_y_m": 0.8804559371211538,
+        "separation_m": 200.0
+      },
+      {
+        "requested_gsd_cm_px": 3.0,
+        "position_m": [
+          0.0,
+          300.88045593712116,
+          0.0
+        ],
+        "reference_plane_y_m": 0.8804559371211538,
+        "separation_m": 300.0
+      },
+      {
+        "requested_gsd_cm_px": 4.0,
+        "position_m": [
+          0.0,
+          400.88045593712116,
+          0.0
+        ],
+        "reference_plane_y_m": 0.8804559371211538,
+        "separation_m": 400.0
+      }
+    ]
+  },
+  "time": {
+    "pose_time_code": 1,
+    "timeline": "frozen",
+    "application_driven_geometry": "must_be_frozen_by_replay_before_capture"
+  },
+  "validation_scope": "deterministic_geometric_proposal_capture_visibility_pending_milestone_4",
+  "manifest_sha256": "ca59064c396e1a94a4084f04d113ce2ef79c8030ccc411a456e52a8c79dc60b9"
+}

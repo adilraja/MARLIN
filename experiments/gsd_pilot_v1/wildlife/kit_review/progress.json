@@ -1,0 +1,656 @@
+{
+  "before": {
+    "ok": true,
+    "root_layer": "anon:0x747390000d00:World0.usd",
+    "edit_layer": "anon:0x747390000d00:World0.usd",
+    "layers": [
+      "anon:0x747390005250:World0-session.usda",
+      "anon:0x747390000d00:World0.usd"
+    ],
+    "camera": "/OmniverseKit_Persp",
+    "prims": [
+      {
+        "path": "/World",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "xform_ops": []
+      },
+      {
+        "path": "/Environment",
+        "type": "Xform",
+        "prim_stack": [
+          "anon:0x747390000d00:World0.usd"
+        ],
+        "visibility": "inherited",
+        "xform_ops": [
+          {
+            "name": "xformOp:translate",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:rotateXYZ",
+            "value": "(0, 0, 0)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          },
+          {
+            "name": "xformOp:scale",
+            "value": "(1, 1, 1)",
+            "layers": [
+              "anon:0x747390000d00:World0.usd"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "before_checkpoint": {
+    "ok": true,
+    "checkpoint_id": "checkpoint_0si09svp",
+    "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_0si09svp",
+    "schema_version": 1,
+    "scene_sha256": "b09a335e40754997df95cd49abd3dc7088422f4e9e2bb52e1704e24cc9d2a118",
+    "camera": "/OmniverseKit_Persp",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fill_frame": false,
+    "renderer_settings": {
+      "/rtx/fog/enabled": true,
+      "/rtx/fog/fogColor": [
+        0.029999999329447746,
+        0.1599999964237213,
+        0.20000000298023224
+      ],
+      "/rtx/fog/fogColorIntensity": 0.5,
+      "/rtx/fog/fogDistanceDensity": 0.03999999910593033,
+      "/rtx/fog/fogEndDist": 1800.0,
+      "/rtx/fog/fogHeightDensity": 0.07999999821186066,
+      "/rtx/fog/fogHeightFalloff": 0.02500000037252903,
+      "/rtx/fog/fogStartDist": 0.0,
+      "/rtx/fog/fogStartHeight": 0.0,
+      "/rtx/fog/fogZup/enabled": false,
+      "/rtx/pathtracing/maxBounces": 16,
+      "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+      "/rtx/pathtracing/spp": 1,
+      "/rtx/pathtracing/totalSpp": 512,
+      "/rtx/post/histogram/enabled": false,
+      "/rtx/post/tonemap/cameraShutter": 50.0,
+      "/rtx/post/tonemap/exposureBias": null,
+      "/rtx/post/tonemap/fNumber": 5.0,
+      "/rtx/post/tonemap/filmIso": 100.0,
+      "/rtx/post/tonemap/op": 6,
+      "/rtx/raytracing/fractionalCutoutOpacity": false,
+      "/rtx/reflections/enabled": true,
+      "/rtx/rendermode": "RealTimePathTracing",
+      "/rtx/rtpt/maxBounces": 8,
+      "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+      "/rtx/translucency/enabled": true,
+      "/rtx/translucency/maxRefractionBounces": 8
+    },
+    "display_options": null,
+    "timeline_seconds": 0.0,
+    "frozen_sampled_attributes": 0,
+    "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+  },
+  "steps": {
+    "environment": {
+      "ok": true,
+      "preset": {
+        "preset_id": "survey_fixed_v1",
+        "version": "1.0.0",
+        "status": "visual_QA_pending",
+        "ocean": {
+          "name": "Ocean",
+          "size": 16000,
+          "resolution": 64,
+          "wave_height": 0,
+          "wave_length": 650,
+          "choppiness": 0,
+          "speed": 0,
+          "target_fps": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        "environment": {
+          "sky_intensity": 500,
+          "sky_exposure": 0,
+          "sky_color": [
+            0.75,
+            0.75,
+            0.75
+          ],
+          "sun_intensity": 0,
+          "sun_angle": 0.53,
+          "sun_rotation": [
+            -35,
+            25,
+            0
+          ],
+          "sun_color": [
+            1,
+            1,
+            1
+          ]
+        },
+        "material": {
+          "ocean_name": "Ocean",
+          "material_name": "OceanWater",
+          "ior": 1.333,
+          "roughness": 0.15,
+          "transmission": 1,
+          "base_weight": 0.02,
+          "base_color": [
+            0.02,
+            0.1,
+            0.13
+          ],
+          "transmission_color": [
+            0.78,
+            0.92,
+            0.95
+          ],
+          "transmission_depth": 100,
+          "scattering_color": [
+            0.005,
+            0.02,
+            0.03
+          ],
+          "scattering_anisotropy": 0,
+          "thin_walled": true
+        },
+        "underwater_cue": {
+          "enabled": false
+        },
+        "notes": [
+          "Engineering appearance preset, not measured environmental optics.",
+          "Flat ocean at Y=0 retains shared ocean sampler with zero wave amplitudes.",
+          "No directional sun; uniform diffuse dome. Reflections remain physically possible.",
+          "No precipitation system is created. Additional lights or weather require inspection.",
+          "Camera exposure and renderer settings still require calibration and recording."
+        ]
+      },
+      "results": {
+        "ocean": {
+          "ok": true,
+          "ocean_path": "/World/Ocean",
+          "size": 16000.0,
+          "resolution": 64,
+          "vertices": 4225,
+          "speed": 0.0,
+          "target_fps": 1.0
+        },
+        "material": {
+          "ok": true,
+          "renderer": "NVIDIA OmniSurface",
+          "ocean_path": "/World/Ocean",
+          "material_path": "/World/Looks/OceanWater",
+          "roughness": 0.15,
+          "ior": 1.333,
+          "transmission": 1.0,
+          "base_weight": 0.02,
+          "base_color": [
+            0.02,
+            0.1,
+            0.13
+          ],
+          "transmission_color": [
+            0.78,
+            0.92,
+            0.95
+          ],
+          "transmission_depth": 100.0,
+          "scattering_color": [
+            0.005,
+            0.02,
+            0.03
+          ],
+          "scattering_anisotropy": 0.0,
+          "thin_walled": true
+        },
+        "environment": {
+          "ok": true,
+          "environment_path": "/World/Environment",
+          "sky_path": "/World/Environment/Sky",
+          "sun_path": "/World/Environment/Sun",
+          "sky_intensity": 500.0,
+          "sun_intensity": 0.0,
+          "sun_rotation": [
+            -35.0,
+            25.0,
+            0.0
+          ]
+        },
+        "underwater_cue": {
+          "ok": true,
+          "enabled": false,
+          "surface_height": 0.0,
+          "settings": {
+            "/rtx/fog/enabled": false,
+            "/rtx/fog/fogColor": [
+              0.03,
+              0.16,
+              0.2
+            ],
+            "/rtx/fog/fogColorIntensity": 0.5,
+            "/rtx/fog/fogZup/enabled": false,
+            "/rtx/fog/fogStartHeight": 0.0,
+            "/rtx/fog/fogHeightDensity": 0.08,
+            "/rtx/fog/fogHeightFalloff": 0.025,
+            "/rtx/fog/fogStartDist": 0.0,
+            "/rtx/fog/fogEndDist": 1800.0,
+            "/rtx/fog/fogDistanceDensity": 0.04
+          }
+        }
+      },
+      "note": "Appearance preset applied; visual and camera calibration remain pending."
+    },
+    "grid": {
+      "ok": true,
+      "grid_enabled": false
+    }
+  },
+  "animals": {
+    "european_storm_petrel": {
+      "request": {
+        "name": "M2CalibrationPetrel",
+        "asset_path": "/home/madil/kit-app-template/assets/birds/european_storm_petrel/usd/glide.usd",
+        "position": [
+          -200,
+          100,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "model_rotation": [
+          -70.55174997306713,
+          -24.139515839037514,
+          0
+        ],
+        "scale": 0.46948425525029247
+      },
+      "spawn": {
+        "ok": true,
+        "name": "M2CalibrationPetrel",
+        "prim_path": "/World/Cetaceans/M2CalibrationPetrel",
+        "model_path": "/World/Cetaceans/M2CalibrationPetrel/Model",
+        "asset_path": "/home/madil/kit-app-template/assets/birds/european_storm_petrel/usd/glide.usd",
+        "source_prim": "/root",
+        "position": [
+          -200.0,
+          100.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -70.55174997306713,
+          -24.139515839037514,
+          0.0
+        ],
+        "scale": 0.46948425525029247
+      },
+      "views": [
+        {
+          "label": "oblique",
+          "camera": {
+            "ok": true,
+            "target_name": "M2CalibrationPetrel",
+            "target_path": "/World/Cetaceans/M2CalibrationPetrel",
+            "target_available": true,
+            "camera_name": "M2CalibrationCamera",
+            "camera_path": "/World/Cameras/M2CalibrationCamera",
+            "distance": 70.0,
+            "height": 30.0,
+            "side_offset": 50.0,
+            "look_ahead": 0.0,
+            "look_height": 0.0,
+            "responsiveness": 3.0,
+            "aim_responsiveness": 4.5,
+            "documentary_mode": false,
+            "hold_duration": 4.0,
+            "dead_zone": 30.0,
+            "reaction_delay": 0.8,
+            "catch_up_speed": 14.0,
+            "catch_up_acceleration": 8.0,
+            "settle_distance": 12.0,
+            "settle_duration": 1.2,
+            "focal_length": 50.0,
+            "camera_position": [
+              -150.0,
+              130.0,
+              -70.0
+            ],
+            "look_target": [
+              -200.0,
+              100.0,
+              0.0
+            ],
+            "camera_velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "motion_mode": "CONTINUOUS",
+            "mode_elapsed": 0.0,
+            "total_time": 0.0,
+            "position_error": 0.0,
+            "viewport_active": true,
+            "previous_camera_path": "/OmniverseKit_Persp"
+          },
+          "file": "experiments/gsd_pilot_v1/wildlife/kit_review/european_storm_petrel_oblique.png"
+        },
+        {
+          "label": "top",
+          "camera": {
+            "ok": true,
+            "target_name": "M2CalibrationPetrel",
+            "target_path": "/World/Cetaceans/M2CalibrationPetrel",
+            "target_available": true,
+            "camera_name": "M2CalibrationCamera",
+            "camera_path": "/World/Cameras/M2CalibrationCamera",
+            "distance": 1.0,
+            "height": 115.0,
+            "side_offset": 0.0,
+            "look_ahead": 0.0,
+            "look_height": 0.0,
+            "responsiveness": 3.0,
+            "aim_responsiveness": 4.5,
+            "documentary_mode": false,
+            "hold_duration": 4.0,
+            "dead_zone": 30.0,
+            "reaction_delay": 0.8,
+            "catch_up_speed": 14.0,
+            "catch_up_acceleration": 8.0,
+            "settle_distance": 12.0,
+            "settle_duration": 1.2,
+            "focal_length": 50.0,
+            "camera_position": [
+              -200.0,
+              215.0,
+              -1.0
+            ],
+            "look_target": [
+              -200.0,
+              100.0,
+              0.0
+            ],
+            "camera_velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "motion_mode": "CONTINUOUS",
+            "mode_elapsed": 0.0,
+            "total_time": 0.0,
+            "position_error": 0.0,
+            "viewport_active": true,
+            "previous_camera_path": "/OmniverseKit_Persp"
+          },
+          "file": "experiments/gsd_pilot_v1/wildlife/kit_review/european_storm_petrel_top.png"
+        },
+        {
+          "label": "side",
+          "camera": {
+            "ok": true,
+            "target_name": "M2CalibrationPetrel",
+            "target_path": "/World/Cetaceans/M2CalibrationPetrel",
+            "target_available": true,
+            "camera_name": "M2CalibrationCamera",
+            "camera_path": "/World/Cameras/M2CalibrationCamera",
+            "distance": 1.0,
+            "height": 0.0,
+            "side_offset": 115.0,
+            "look_ahead": 0.0,
+            "look_height": 0.0,
+            "responsiveness": 3.0,
+            "aim_responsiveness": 4.5,
+            "documentary_mode": false,
+            "hold_duration": 4.0,
+            "dead_zone": 30.0,
+            "reaction_delay": 0.8,
+            "catch_up_speed": 14.0,
+            "catch_up_acceleration": 8.0,
+            "settle_distance": 12.0,
+            "settle_duration": 1.2,
+            "focal_length": 50.0,
+            "camera_position": [
+              -85.0,
+              100.0,
+              -1.0
+            ],
+            "look_target": [
+              -200.0,
+              100.0,
+              0.0
+            ],
+            "camera_velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "motion_mode": "CONTINUOUS",
+            "mode_elapsed": 0.0,
+            "total_time": 0.0,
+            "position_error": 0.0,
+            "viewport_active": true,
+            "previous_camera_path": "/OmniverseKit_Persp"
+          },
+          "file": "experiments/gsd_pilot_v1/wildlife/kit_review/european_storm_petrel_side.png"
+        }
+      ]
+    },
+    "harbour_porpoise": {
+      "request": {
+        "name": "M2CalibrationPorpoise",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+        "position": [
+          200,
+          120,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "model_rotation": [
+          -90,
+          0,
+          0
+        ],
+        "scale": 100.0
+      },
+      "spawn": {
+        "ok": true,
+        "name": "M2CalibrationPorpoise",
+        "prim_path": "/World/Cetaceans/M2CalibrationPorpoise",
+        "model_path": "/World/Cetaceans/M2CalibrationPorpoise/Model",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+        "source_prim": "/root",
+        "position": [
+          200.0,
+          120.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "views": [
+        {
+          "label": "oblique",
+          "camera": {
+            "ok": true,
+            "target_name": "M2CalibrationPorpoise",
+            "target_path": "/World/Cetaceans/M2CalibrationPorpoise",
+            "target_available": true,
+            "camera_name": "M2CalibrationCamera",
+            "camera_path": "/World/Cameras/M2CalibrationCamera",
+            "distance": 350.0,
+            "height": 180.0,
+            "side_offset": 300.0,
+            "look_ahead": 0.0,
+            "look_height": 0.0,
+            "responsiveness": 3.0,
+            "aim_responsiveness": 4.5,
+            "documentary_mode": false,
+            "hold_duration": 4.0,
+            "dead_zone": 30.0,
+            "reaction_delay": 0.8,
+            "catch_up_speed": 14.0,
+            "catch_up_acceleration": 8.0,
+            "settle_distance": 12.0,
+            "settle_duration": 1.2,
+            "focal_length": 50.0,
+            "camera_position": [
+              500.0,
+              300.0,
+              -350.0
+            ],
+            "look_target": [
+              200.0,
+              120.0,
+              0.0
+            ],
+            "camera_velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "motion_mode": "CONTINUOUS",
+            "mode_elapsed": 0.0,
+            "total_time": 0.0,
+            "position_error": 0.0,
+            "viewport_active": true,
+            "previous_camera_path": "/OmniverseKit_Persp"
+          },
+          "file": "experiments/gsd_pilot_v1/wildlife/kit_review/harbour_porpoise_oblique.png"
+        },
+        {
+          "label": "top",
+          "camera": {
+            "ok": true,
+            "target_name": "M2CalibrationPorpoise",
+            "target_path": "/World/Cetaceans/M2CalibrationPorpoise",
+            "target_available": true,
+            "camera_name": "M2CalibrationCamera",
+            "camera_path": "/World/Cameras/M2CalibrationCamera",
+            "distance": 1.0,
+            "height": 550.0,
+            "side_offset": 0.0,
+            "look_ahead": 0.0,
+            "look_height": 0.0,
+            "responsiveness": 3.0,
+            "aim_responsiveness": 4.5,
+            "documentary_mode": false,
+            "hold_duration": 4.0,
+            "dead_zone": 30.0,
+            "reaction_delay": 0.8,
+            "catch_up_speed": 14.0,
+            "catch_up_acceleration": 8.0,
+            "settle_distance": 12.0,
+            "settle_duration": 1.2,
+            "focal_length": 50.0,
+            "camera_position": [
+              200.0,
+              670.0,
+              -1.0
+            ],
+            "look_target": [
+              200.0,
+              120.0,
+              0.0
+            ],
+            "camera_velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "motion_mode": "CONTINUOUS",
+            "mode_elapsed": 0.0,
+            "total_time": 0.0,
+            "position_error": 0.0,
+            "viewport_active": true,
+            "previous_camera_path": "/OmniverseKit_Persp"
+          },
+          "file": "experiments/gsd_pilot_v1/wildlife/kit_review/harbour_porpoise_top.png"
+        },
+        {
+          "label": "side",
+          "camera": {
+            "ok": true,
+            "target_name": "M2CalibrationPorpoise",
+            "target_path": "/World/Cetaceans/M2CalibrationPorpoise",
+            "target_available": true,
+            "camera_name": "M2CalibrationCamera",
+            "camera_path": "/World/Cameras/M2CalibrationCamera",
+            "distance": 1.0,
+            "height": 0.0,
+            "side_offset": 550.0,
+            "look_ahead": 0.0,
+            "look_height": 0.0,
+            "responsiveness": 3.0,
+            "aim_responsiveness": 4.5,
+            "documentary_mode": false,
+            "hold_duration": 4.0,
+            "dead_zone": 30.0,
+            "reaction_delay": 0.8,
+            "catch_up_speed": 14.0,
+            "catch_up_acceleration": 8.0,
+            "settle_distance": 12.0,
+            "settle_duration": 1.2,
+            "focal_length": 50.0,
+            "camera_position": [
+              750.0,
+              120.0,
+              -1.0
+            ],
+            "look_target": [
+              200.0,
+              120.0,
+              0.0
+            ],
+            "camera_velocity": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "motion_mode": "CONTINUOUS",
+            "mode_elapsed": 0.0,
+            "total_time": 0.0,
+            "position_error": 0.0,
+            "viewport_active": true,
+            "previous_camera_path": "/OmniverseKit_Persp"
+          },
+          "file": "experiments/gsd_pilot_v1/wildlife/kit_review/harbour_porpoise_side.png"
+        }
+      ]
+    }
+  }
+}

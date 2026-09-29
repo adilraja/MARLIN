@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0.0",
+  "experiment_id": "gsd_pilot_v1",
+  "scene_id": "harbour_porpoise_0007",
+  "species": "harbour_porpoise",
+  "candidate_index": 7,
+  "asset_instance_id": "harbour_porpoise_0007_animal",
+  "sequence_id": "harbour_porpoise_0007_sequence",
+  "condition_id": "harbour_porpoise_0007_condition",
+  "candidate_role": "initial",
+  "specification": {
+    "path": "specification.json",
+    "schema_version": "1.2.0",
+    "sampling_contract_sha256": "931877a7b7aa2600f7c0731765567e1d2210550d68bb775d9ea6cbb4c061ba20"
+  },
+  "calibration": {
+    "path": "wildlife/harbour_porpoise.json",
+    "sha256": "898aa89c6faa87d07f66e7f8de1cc0e9c90f90d9c2d5571ddef71f665c2f8171",
+    "asset_dependencies": [
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+        "sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef"
+      },
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+        "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+      },
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+        "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+      },
+      {
+        "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+        "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+      }
+    ]
+  },
+  "random": {
+    "master_seed": 20260929,
+    "condition_seed": 16822646544201515478,
+    "seed_helper": "survey_spec.condition_seed",
+    "seed_helper_path": "source/extensions/cris.madil.render_service/cris/madil/render_service/survey_spec.py",
+    "seed_helper_sha256": "15ad60a00579811092e0b0078897ac56f4f812ac4c3193e1e948a046ee1b3a1b",
+    "draw_algorithm": "sha256_named_uint64_top53_uniform_v1",
+    "subdraws": {
+      "x_m": {
+        "seed_uint64": 145839834979785842,
+        "sha256": "0206208ea6125c72ccb46785b9e35c56e1ab6d8fc6e3942e6511417c4be80c3d",
+        "unit_interval_value": 0.007905993296000502,
+        "range": [
+          -0.6,
+          0.6
+        ]
+      },
+      "z_m": {
+        "seed_uint64": 13404911992863549608,
+        "sha256": "ba07d06f6c0168a80bd9e38bb49c419de3e616b36e5ddc2a2741ced7c7f910cc",
+        "unit_interval_value": 0.7266817352319827,
+        "range": [
+          -0.6,
+          0.6
+        ]
+      },
+      "heading_deg": {
+        "seed_uint64": 13972049841079705745,
+        "sha256": "c1e6b14da99be09130d71bce7a47362b0f9962218a6fa50910920b05f24cc8e6",
+        "unit_interval_value": 0.7574263395887182,
+        "range": [
+          0.0,
+          360.0
+        ]
+      },
+      "porpoise_top_clearance_m": {
+        "seed_uint64": 11769374712479165420,
+        "sha256": "a35537f1b5c92bec84af2139339c1a0cf63287b1300f0c94c4e8ff0c5f0a7e1f",
+        "unit_interval_value": 0.6380190816032935,
+        "range": [
+          0.02,
+          0.08
+        ]
+      }
+    },
+    "gsd_used": false,
+    "renderer_seed": null,
+    "renderer_seed_reason": "record_separately_if_supported"
+  },
+  "sampling": {
+    "version": "m3_engineering_v1",
+    "distribution": "independent_uniform_lower_inclusive_upper_exclusive",
+    "ranges": {
+      "x_m": [
+        -0.6,
+        0.6
+      ],
+      "z_m": [
+        -0.6,
+        0.6
+      ],
+      "heading_deg": [
+        0.0,
+        360.0
+      ],
+      "porpoise_top_clearance_m": [
+        0.02,
+        0.08
+      ]
+    },
+    "provenance": "provisional_engineering_sampling_not_biological_distributions",
+    "biological_distribution_validated": false,
+    "silent_rejection_or_resampling": false,
+    "replacement_policy": "retain_rejection_reason_then_request_next_numeric_candidate_id"
+  },
+  "coordinates": {
+    "units": "metres",
+    "stage_meters_per_unit": 0.01,
+    "up_axis": "Y",
+    "heading_zero": "+Z",
+    "heading_90": "+X"
+  },
+  "reference_plane": {
+    "id": "animal_root_horizontal_plane",
+    "y_m": -0.21900672356193096,
+    "sea_plane_y_m": 0.0
+  },
+  "animal": {
+    "asset_path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+    "scale": 100.0,
+    "model_rotation_deg": [
+      -90,
+      0,
+      0
+    ],
+    "position_m": [
+      -0.5905128080447993,
+      -0.21900672356193096,
+      0.2720180822783792
+    ],
+    "heading_deg": 272.67348225193854,
+    "pitch_deg": 0.0,
+    "roll_deg": 0.0,
+    "state": "static_shallow_swim",
+    "pose_time_code": 1,
+    "animation": "none",
+    "clearance_m": 0.05828114489619761,
+    "world_y_bounds_m": [
+      -0.4910693530232194,
+      -0.058281144896197595
+    ],
+    "physical_reference_status": "provisional"
+  },
+  "camera": {
+    "shared": {
+      "image_size_px": [
+        1024,
+        768
+      ],
+      "focal_length_mm": 50.0,
+      "pixel_pitch_um": 5.0,
+      "x_m": 0.0,
+      "z_m": 0.0,
+      "view_direction": "-Y",
+      "image_up_world_axis": "-Z",
+      "pitch_deg": 0.0,
+      "roll_deg": 0.0,
+      "orientation": "nadir",
+      "distortion": "zero_assumption"
+    },
+    "paired_variable": "camera_world_y_only",
+    "variants": [
+      {
+        "requested_gsd_cm_px": 0.5,
+        "position_m": [
+          0.0,
+          49.78099327643807,
+          0.0
+        ],
+        "reference_plane_y_m": -0.21900672356193096,
+        "separation_m": 50.0
+      },
+      {
+        "requested_gsd_cm_px": 1.0,
+        "position_m": [
+          0.0,
+          99.78099327643807,
+          0.0
+        ],
+        "reference_plane_y_m": -0.21900672356193096,
+        "separation_m": 100.0
+      },
+      {
+        "requested_gsd_cm_px": 2.0,
+        "position_m": [
+          0.0,
+          199.78099327643807,
+          0.0
+        ],
+        "reference_plane_y_m": -0.21900672356193096,
+        "separation_m": 200.0
+      },
+      {
+        "requested_gsd_cm_px": 3.0,
+        "position_m": [
+          0.0,
+          299.7809932764381,
+          0.0
+        ],
+        "reference_plane_y_m": -0.21900672356193096,
+        "separation_m": 300.0
+      },
+      {
+        "requested_gsd_cm_px": 4.0,
+        "position_m": [
+          0.0,
+          399.7809932764381,
+          0.0
+        ],
+        "reference_plane_y_m": -0.21900672356193096,
+        "separation_m": 400.0
+      }
+    ]
+  },
+  "time": {
+    "pose_time_code": 1,
+    "timeline": "frozen",
+    "application_driven_geometry": "must_be_frozen_by_replay_before_capture"
+  },
+  "validation_scope": "deterministic_geometric_proposal_capture_visibility_pending_milestone_4",
+  "manifest_sha256": "99a9f96bf376152e62e38b7ee865942f698428b821be017fbce3653ab78e8562"
+}
