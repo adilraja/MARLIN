@@ -14,7 +14,7 @@ establish operational wildlife detection thresholds or certify survey hardware.
 | 3. Freeze environment and scene generation | Complete | `environment.json`, 50 candidate manifests, 4 reconstructed scenes and 16 live replay checks |
 | 4. Prove paired capture and annotations | Complete with stated limits | 20 settled RGB images, 10 exact direct mesh boxes, paired visibility at five GSDs per target; bounded native status recorded |
 | 5. Generate pilot dataset | Complete for provisional synthetic pilot | 50 valid scene groups, 250 positives, 50 negatives and zero QA rejections |
-| 6. Freeze splits and model inputs | Complete | 30/10/10 scene groups; all 300 PNGs decoded and padded; detector dependencies and weights locked |
+| 6. Freeze splits and model inputs | Pending | No protected identity crosses splits; model-input geometry verified |
 | 7. Train and evaluate baseline | Pending | One reproducible detector and held-out metrics by GSD |
 | 8. Package results | Pending | Provisional curves, pixels-on-target, limitations and reproduction evidence |
 
@@ -61,15 +61,6 @@ See [M5 dataset evidence](qa/M5_DATASET.md) and
 `qa/m5_dataset_validation.json`. Specification 1.4.0 preserved the M4 README
 and specification under `history/milestone_4/`. Split assignment and detector
 input preparation remained for M6.
-
-Milestone 6 assigned whole scene groups to train, validation and test by a
-seeded SHA-256 rank within each species and negative-parent stratum. It checked
-all protected identities for leakage and decoded, hashed and padded all 300
-images. The TorchVision loader preserved 250 boxes and 50 empty negative targets.
-One pretrained detector, its SHA-256-checked checkpoint, dependency versions,
-normalization, optimizer and NMS settings were locked before any training. See
-[M6 split and input evidence](qa/M6_SPLITS_AND_INPUTS.md). Specification 1.5.0
-preserved the M5 README and specification under `history/milestone_5/`.
 
 **Required finish step for every remaining milestone:** restore the existing
 animated demonstration with moving water and the 11 default animals swimming,

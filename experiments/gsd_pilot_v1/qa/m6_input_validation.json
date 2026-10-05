@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "split_summary": {
+    "train": {
+      "scene_groups": 30,
+      "images": 180,
+      "positive_images": 150,
+      "negative_images": 30
+    },
+    "validation": {
+      "scene_groups": 10,
+      "images": 60,
+      "positive_images": 50,
+      "negative_images": 10
+    },
+    "test": {
+      "scene_groups": 10,
+      "images": 60,
+      "positive_images": 50,
+      "negative_images": 10
+    }
+  },
+  "decoded_rgb_pngs": 300,
+  "verified_image_sha256": 300,
+  "verified_amodal_boxes": 250,
+  "verified_negative_images": 50,
+  "protected_identity_leakage": 0,
+  "paired_gsd_and_negative_checks": 50,
+  "original_size_px": [
+    1024,
+    768
+  ],
+  "model_size_px": [
+    1024,
+    1024
+  ],
+  "padding_ltrb_px": [
+    0,
+    128,
+    0,
+    128
+  ],
+  "padding_rgb": [
+    114,
+    114,
+    114
+  ],
+  "original_to_model_affine_3x3": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      128
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "box_roundtrips": 250,
+  "pixel_size_preserved": true,
+  "area_semantics": "bbox_area_only; visible/silhouette area unknown"
+}

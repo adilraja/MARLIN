@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.4.0",
   "experiment_id": "gsd_pilot_v1",
   "created_date": "2026-09-29",
-  "status": "milestone_6_complete_frozen_splits_and_detector_inputs_training_pending",
+  "status": "milestone_5_complete_provisional_300_image_dataset_splits_pending",
   "source_baseline_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
   "scope": "provisional_synthetic_to_synthetic_detection_pipeline_pilot",
   "runtime_architecture": "NVIDIA Omniverse Kit with existing Kit Services HTTP API",
@@ -206,7 +206,7 @@
     },
     "seed": 20260929,
     "assignment": "fixed_seeded_permutation_before_gsd_expansion",
-    "implementation_and_id_manifest": "splits/scene_groups.json and splits/image_assignments.json; m6_freeze.py sha256 rank within species and negative-parent strata",
+    "implementation_and_id_manifest": "pending_milestone_6",
     "protected_identifiers": [
       "scene_id",
       "asset_instance_id",
@@ -228,39 +228,7 @@
       1024
     ],
     "resize_scale": 1.0,
-    "padding_offset_and_value": {
-      "left_top_right_bottom_px": [
-        0,
-        128,
-        0,
-        128
-      ],
-      "constant_rgb": [
-        114,
-        114,
-        114
-      ],
-      "source_rgba_alpha": "verified_opaque_then_explicit_RGB_conversion",
-      "original_to_model_affine_3x3": [
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          128
-        ],
-        [
-          0,
-          0,
-          1
-        ]
-      ],
-      "tiling": false,
-      "internal_detector_resize": false
-    },
+    "padding_offset_and_value": "resolve_and_lock_with_detector_before_training",
     "forbidden_augmentations": [
       "random_scale",
       "mosaic",
@@ -272,38 +240,10 @@
   "training": {
     "number_of_baselines": 1,
     "pool_all_training_gsds": true,
-    "architecture_and_package": {
-      "architecture": "torchvision.models.detection.fasterrcnn_mobilenet_v3_large_fpn",
-      "torch": "2.9.1+cu126",
-      "torchvision": "0.24.1+cu126",
-      "number_of_classes_including_background": 2,
-      "class_mapping": {
-        "0": "background",
-        "1": "wildlife"
-      },
-      "detector_lock": "ml/detector_lock.json"
-    },
-    "dependency_status": "pinned_local_venv_verified; ml/requirements-cu126.lock",
-    "pretrained_checkpoint_and_hash": {
-      "weights": "FasterRCNN_MobileNet_V3_Large_FPN_Weights.COCO_V1",
-      "url": "https://download.pytorch.org/models/fasterrcnn_mobilenet_v3_large_fpn-fb6a3cc7.pth",
-      "sha256": "fb6a3cc702b1df54c18a44b26708cd083614211062d0c36d2ca7bf9270df3533",
-      "bytes": 77844807,
-      "local_ignored_artifact": "artifacts/gsd_pilot_v1_m6/torch_home/hub/checkpoints/fasterrcnn_mobilenet_v3_large_fpn-fb6a3cc7.pth"
-    },
-    "optimizer_learning_rate_batch_size_and_nms": {
-      "optimizer": "SGD",
-      "learning_rate": 0.001,
-      "batch_size": 1,
-      "momentum": 0.9,
-      "weight_decay": 0.0005,
-      "scheduler": "none",
-      "augmentation": [],
-      "pre_selection_score_threshold": 0.001,
-      "box_nms_threshold": 0.5,
-      "rpn_nms_threshold": 0.7,
-      "max_detections_per_image": 100
-    },
+    "architecture_and_package": null,
+    "dependency_status": "no_detector_found_in_audited_runtimes_resolve_milestone_6",
+    "pretrained_checkpoint_and_hash": null,
+    "optimizer_learning_rate_batch_size_and_nms": null,
     "seed": 20260929,
     "epochs": 20,
     "checkpoint_selection": "best_pooled_validation_AP50",
@@ -360,8 +300,8 @@
   },
   "outstanding_gates": [
     {
-      "milestone": 7,
-      "gate": "train_one_pooled_detector_and_evaluate_heldout_test_by_species_and_gsd_without_test_tuning"
+      "milestone": 6,
+      "gate": "lock_detector_dependencies_checkpoint_preprocessing_optimizer_nms_and_split_ids_before_training"
     }
   ],
   "completed_gates": [
@@ -417,19 +357,6 @@
         "annotations/milestone_5_coco.json",
         "qa/m5_dataset_validation.json"
       ]
-    },
-    {
-      "milestone": 6,
-      "gate": "lock_detector_dependencies_checkpoint_preprocessing_optimizer_nms_and_split_ids_before_training",
-      "status": "passed",
-      "evidence": [
-        "splits/scene_groups.json",
-        "splits/image_assignments.json",
-        "qa/m6_input_validation.json",
-        "qa/m6_loader_validation.json",
-        "ml/detector_lock.json",
-        "ml/requirements-cu126.lock"
-      ]
     }
   ],
   "revisions": [
@@ -463,14 +390,6 @@
       "milestone": 5,
       "reason": "Recorded the accepted 300-image provisional dataset and its validation without changing the frozen scene, GSD, label, split or training protocols.",
       "previous_specification": "history/milestone_4/specification.json",
-      "ml_results_observed": false
-    },
-    {
-      "version": "1.5.0",
-      "date": "2026-10-05",
-      "milestone": 6,
-      "reason": "Assigned leakage-free scene-group splits and froze full-frame padding, detector dependencies, pretrained weights and optimizer settings before training; no ML results observed.",
-      "previous_specification": "history/milestone_5/specification.json",
       "ml_results_observed": false
     }
   ],
