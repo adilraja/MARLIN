@@ -1,0 +1,228 @@
+{
+  "passed": true,
+  "positive_images": 10,
+  "negative_images": 10,
+  "species_count": 2,
+  "gsd_levels_cm_px": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "visibility_method": "Paired target-present/absent RGB difference; threshold above background drift inside exact direct mesh box.",
+  "bbox_semantics": "direct amodal evaluated mesh projection",
+  "silhouette_and_exact_visible_area_status": "unknown; not replaced with bbox area",
+  "checks": [
+    {
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 0.5,
+      "positive_image_sha256": "4097fe5a03c85e1e6cc84ff5b39811fd9b8ee9e4f0bc4c30f0ea9cb49b8e77d7",
+      "negative_image_sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 680,
+      "max_channel_difference_inside_amodal_bbox": 176,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        526,
+        290,
+        564,
+        335
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": false
+    },
+    {
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 1.0,
+      "positive_image_sha256": "5c40b92620434610839da230d062e32316edd59cbb174fd3865dd77df3786eff",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 195,
+      "max_channel_difference_inside_amodal_bbox": 172,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        519,
+        337,
+        538,
+        360
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": false
+    },
+    {
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 2.0,
+      "positive_image_sha256": "8f55b429a9207c3c4c794e2b0f2ce5edc12889115bdfd8dac3c98b12ddc9d667",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 58,
+      "max_channel_difference_inside_amodal_bbox": 164,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        515,
+        360,
+        525,
+        372
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": false
+    },
+    {
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 3.0,
+      "positive_image_sha256": "5dbaf237b998a6885a29dc63e8c74d25aca9d64dc94dd72c57e446b1452f3dbe",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 32,
+      "max_channel_difference_inside_amodal_bbox": 161,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        514,
+        368,
+        521,
+        376
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": false
+    },
+    {
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 4.0,
+      "positive_image_sha256": "488e9054b96cfafad3428ba40d4ed73a653729306984d39bd8e13c64c459cfba",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 20,
+      "max_channel_difference_inside_amodal_bbox": 139,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        513,
+        372,
+        518,
+        378
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": false
+    },
+    {
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 0.5,
+      "positive_image_sha256": "1ac5aa58f19a241206ae33174cf3222288990b6ffc6b5a0c14f253bd5d05420c",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 2,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 15940,
+      "max_channel_difference_inside_amodal_bbox": 178,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        396,
+        416,
+        718,
+        508
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": true
+    },
+    {
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 1.0,
+      "positive_image_sha256": "b92e0c712444ce0d7f66fa3a0d514717786a7e0b7d897acb279dc1704ee64314",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 2,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 4014,
+      "max_channel_difference_inside_amodal_bbox": 177,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        454,
+        400,
+        615,
+        446
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": true
+    },
+    {
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 2.0,
+      "positive_image_sha256": "8b8991bd784de36c9c5db4cdf3dd4e6e56d22e0c21cfdbf96f2c1da704d2f7f9",
+      "negative_image_sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf",
+      "background_max_channel_difference_outside_10px_label_margin": 2,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 1032,
+      "max_channel_difference_inside_amodal_bbox": 177,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        483,
+        392,
+        564,
+        415
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": true
+    },
+    {
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 3.0,
+      "positive_image_sha256": "67fe0a77fba5b851a426119ebdefdf6b0acd82f3ee9e74bf413405049ad55569",
+      "negative_image_sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 478,
+      "max_channel_difference_inside_amodal_bbox": 177,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        492,
+        389,
+        547,
+        405
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": true
+    },
+    {
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 4.0,
+      "positive_image_sha256": "e6cfa85209fb9bbe90c2d49098bc09b2f68db3fedb6d86d682810d799e4699d6",
+      "negative_image_sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf",
+      "background_max_channel_difference_outside_10px_label_margin": 1,
+      "difference_threshold_0_255": 5,
+      "significantly_changed_pixels_inside_amodal_bbox": 278,
+      "max_channel_difference_inside_amodal_bbox": 175,
+      "change_bbox_within_amodal_label_xyxy_px": [
+        497,
+        388,
+        538,
+        400
+      ],
+      "target_detected_in_paired_rgb": true,
+      "visible_target_area_px": null,
+      "visible_target_area_reason": "Paired RGB change is evidence of visibility, not an exact occlusion/refraction segmentation.",
+      "direct_projection_underwater_limitation": true
+    }
+  ]
+}

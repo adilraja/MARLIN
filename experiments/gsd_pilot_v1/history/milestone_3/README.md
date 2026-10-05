@@ -12,7 +12,7 @@ establish operational wildlife detection thresholds or certify survey hardware.
 | 1. Audit readiness and freeze protocol | Complete | `READINESS.md`, `PROTOCOL.md`, `specification.json`, `qa/` |
 | 2. Calibrate two targets | Complete for provisional pilot | `wildlife/CALIBRATION.md`, species JSON records, geometry and live Kit evidence |
 | 3. Freeze environment and scene generation | Complete | `environment.json`, 50 candidate manifests, 4 reconstructed scenes and 16 live replay checks |
-| 4. Prove paired capture and annotations | Complete with stated limits | 20 settled RGB images, 10 exact direct mesh boxes, paired visibility at five GSDs per target; bounded native status recorded |
+| 4. Prove paired capture and annotations | Pending | One complete five-GSD set per target; native status documented |
 | 5. Generate pilot dataset | Pending | At least 25 valid paired scene seeds per target and documented QA |
 | 6. Freeze splits and model inputs | Pending | No protected identity crosses splits; model-input geometry verified |
 | 7. Train and evaluate baseline | Pending | One reproducible detector and held-out metrics by GSD |
@@ -41,16 +41,7 @@ Milestone 3 freezes `gsd_baseline_v1` and the engineering sampler. All 50 candid
 records pass geometric footprint checks; four representative scenes pass
 reconstruction and repeated live Kit replay. See [scene generation evidence](scenes/SCENE_GENERATION.md).
 Specification 1.2.0 retains the M2 version under `history/milestone_2/`.
-Milestone 4 captured both targets at all five GSDs with matched target-absent
-counterparts. Every target was visible by paired-image comparison, including the
-smallest petrel image. The boxes project all evaluated animal mesh vertices
-through the authored camera. For the underwater porpoise they are direct amodal
-boxes, not refracted visible outlines. Exact silhouette and visible area remain
-unknown. The bounded native tiled path passed its technical overlap and viewport
-restoration checks, but its oblique image did not establish pilot target content;
-the validated 1024 × 768 generic capture supplies this pilot. See
-[M4 capture evidence](qa/M4_CAPTURE.md). Specification 1.3.0 preserves the M3
-README and specification under `history/milestone_3/`.
+Actual five-GSD capture and visibility validation are next in M4.
 
 **Required finish step for every remaining milestone:** restore the existing
 animated demonstration with moving water and the 11 default animals swimming,
@@ -102,7 +93,7 @@ specification.json         Frozen choices and explicit outstanding gates
 environment.json           M3 resolved preset and renderer settings
 wildlife/                  M2 calibration records and evidence
 scenes/                    M3 scene manifests and frozen snapshots
-renders/milestone_4/       M4 paired scene snapshots, RGB images and settling probes
+renders/gsd_*/             M4–5 images, separated from development captures
 annotations/               M4–5 geometry and visibility records, COCO labels
 splits/                    M6 immutable grouped split manifests
 qa/                        Audit, regression, pairing and capture evidence

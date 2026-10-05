@@ -1,0 +1,806 @@
+{
+  "milestone": 4,
+  "status": "complete_with_explicit_native_content_limit",
+  "completed_at_utc": "2026-10-05T14:03:51.018106+00:00",
+  "next_milestone": 5,
+  "specification_version": "1.3.0",
+  "positive_images": 10,
+  "negative_images": 10,
+  "all_ten_positive_targets_detected_in_paired_rgb": true,
+  "bbox_semantics": "direct_amodal_evaluated_mesh_projection",
+  "native_technical_path": "passed",
+  "native_pilot_target_content": "not_certified; generic capture selected",
+  "completion_preview": "moving_water_and_11_default_animals_swimming_in_live_viewport",
+  "historical_outputs_preserved": {
+    "1": 16,
+    "2": 41,
+    "3": 120
+  },
+  "outputs": [
+    {
+      "path": "README.md",
+      "bytes": 7359,
+      "sha256": "c6cee7c11333ff74b7fff79a445fc0b72506a5294bfb2f1c5abbff1f043a0d9c"
+    },
+    {
+      "path": "annotations/milestone_4_coco.json",
+      "bytes": 13512,
+      "sha256": "f5bd4b020dfe4b57eb4453043d78ea19be7a762c4507c3f782b8abe0c70de343"
+    },
+    {
+      "path": "annotations/milestone_4_geometry.json",
+      "bytes": 37053,
+      "sha256": "72cd8d43103f9ec964638530b3981d2bb1835ea949dcd11af72046079f5b4679"
+    },
+    {
+      "path": "history/milestone_3/README.md",
+      "bytes": 6578,
+      "sha256": "d1c720d713910092163168aa4e0e2aafc40f650a2f67b444d9dc136493253672"
+    },
+    {
+      "path": "history/milestone_3/path_relocations.json",
+      "bytes": 195,
+      "sha256": "839b33358e78286a9158a31d4117bc743d6f7fd2d5cfbcc0cf53bfc249cacd88"
+    },
+    {
+      "path": "history/milestone_3/specification.json",
+      "bytes": 12452,
+      "sha256": "41dfb17ec59fa5065ba4fdb7193db973cd6fd76383e705237fa9d5987e9baf9a"
+    },
+    {
+      "path": "qa/M4_CAPTURE.md",
+      "bytes": 4175,
+      "sha256": "5ca990d262fb7732f9d089e89eff338fbd81f8d74913bdb8340fab8b782cddad"
+    },
+    {
+      "path": "qa/m4_capture.py",
+      "bytes": 4584,
+      "sha256": "a05b57760a81cbeb5aba4361be98307c8fa3bd7fdc818b6db8c2418377068952"
+    },
+    {
+      "path": "qa/m4_capture_validation.json",
+      "bytes": 9863,
+      "sha256": "5844892e92e59aad69ed11d7f48ab20b1e349d300ea8673d92a9092f528ccbb4"
+    },
+    {
+      "path": "qa/m4_diagnostics/first_scene_settle/petrel_0.png",
+      "bytes": 1587021,
+      "sha256": "69e399b12386cc4092b7d8c00131175d18c368c558a99c3649951280c9477d29"
+    },
+    {
+      "path": "qa/m4_diagnostics/first_scene_settle/petrel_1.png",
+      "bytes": 1056320,
+      "sha256": "9088039e9323ca3afe748b25e698445d7aed3d587bb8b785f5857bd846ee2cef"
+    },
+    {
+      "path": "qa/m4_diagnostics/first_scene_settle/petrel_2.png",
+      "bytes": 950644,
+      "sha256": "6ea97a525cb0a382748e7ee4c9663edf15af092011ef8daac2f144b5854bf987"
+    },
+    {
+      "path": "qa/m4_geometry.py",
+      "bytes": 5386,
+      "sha256": "912aeb92bb4052dd90afd2db96be45ad032740ef7369319896485c8f2dcb1c31"
+    },
+    {
+      "path": "qa/m4_native_validation.json",
+      "bytes": 1389,
+      "sha256": "f4555788f0aa8a697cc916639a9e80bd3e95e68eb88d3df1c0081a9a81546002"
+    },
+    {
+      "path": "qa/m4_package.py",
+      "bytes": 4362,
+      "sha256": "3bbbdbd8dc0095a3179a0cbb06a4eb1951dbdb2f4f62cfdd9d8b08957af5a0c3"
+    },
+    {
+      "path": "qa/m4_prepare_variants.py",
+      "bytes": 3853,
+      "sha256": "c59e088cbbad8364e7f6e156160a16b2d2aeca32df39c1f34187dc2f8b0d829a"
+    },
+    {
+      "path": "qa/m4_validate_captures.py",
+      "bytes": 7268,
+      "sha256": "762f26bad5d55676a01207009438098c9441fac63e4b197d48907f3b3e775ead"
+    },
+    {
+      "path": "qa/milestone_4_animation_preview.json",
+      "bytes": 36717,
+      "sha256": "bee7ee77813482a847605f11309796adc4fbf227632ad0a3f161685c44621e4f"
+    },
+    {
+      "path": "renders/milestone_4/before_capture_checkpoint.json",
+      "bytes": 4552,
+      "sha256": "1545a36c745a4cfdc4c92f54cd550760961eebbb5c210a5ee20e1c7c7c32e6a3"
+    },
+    {
+      "path": "renders/milestone_4/capture_complete.json",
+      "bytes": 71,
+      "sha256": "b69116b3a1e72343880de33a80c051e4a5dbdcf0d02a18aec5a9a6ace937f87d"
+    },
+    {
+      "path": "renders/milestone_4/capture_progress.json",
+      "bytes": 133559,
+      "sha256": "e69a20396b434e44e523514cca42ab7250301347b31c8dd03b2204e78d8b4ba1"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "1f19936a081df450e6bb4e82e4c2ce5171c471437a0f7ffb6052ef8a64a361f1"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/scene.usdc",
+      "bytes": 14977611,
+      "sha256": "703ba93a7162be77bc018de133ea3fbeace846a1a24e9746de35279fad9b441e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/settling_probes/capture_01.png",
+      "bytes": 946442,
+      "sha256": "c115e199773bc51e170a4783b8eea13e53baa6d17db2dc494d63d57aff40c366"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/settling_probes/capture_02.png",
+      "bytes": 1119655,
+      "sha256": "38ac55a81a0ccc1f7b5f48cdb31f3033c9f35c43d680e5aead7c0eb15a810c26"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/settling_probes/capture_03.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/geometry.json",
+      "bytes": 3404,
+      "sha256": "40151fc1c7cbbbf06ab567fe50ce517a37e06a652c1c1bdf07998dd14e5248e8"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "4a219ab7ed2ca81e8f38a362ca0ca9b4628353a866b44ed8c188c7461b571161"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/rgb.png",
+      "bytes": 984901,
+      "sha256": "4097fe5a03c85e1e6cc84ff5b39811fd9b8ee9e4f0bc4c30f0ea9cb49b8e77d7"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "e21cb1a384e2313baa3c571af2487714aba713fd341786352b55d09856ca7229"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/settling_probes/capture_01.png",
+      "bytes": 946565,
+      "sha256": "d77cd84afcdb4a8ca6460664326b457e6da601bdcbb31659c376a392f2b0f0c8"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/settling_probes/capture_02.png",
+      "bytes": 1121202,
+      "sha256": "398eceea39bec8a700b871bf65e9563dcbb70808c3f32b00701612e07c2fa6b0"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/settling_probes/capture_03.png",
+      "bytes": 984901,
+      "sha256": "4097fe5a03c85e1e6cc84ff5b39811fd9b8ee9e4f0bc4c30f0ea9cb49b8e77d7"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "c8c7be187f74dae0ed7b645158cbf648397899e0e95c9ae0b35a2e92ec094f60"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/scene.usdc",
+      "bytes": 14977611,
+      "sha256": "27b000dfc58ddd4a28fc98fd5460cbc89d51d328c588218dc87d8db4533b4932"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 944978,
+      "sha256": "60f34098477c1f76eff55411f1191503565a41b678e94222e5d40211f444f412"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1119655,
+      "sha256": "38ac55a81a0ccc1f7b5f48cdb31f3033c9f35c43d680e5aead7c0eb15a810c26"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/geometry.json",
+      "bytes": 3410,
+      "sha256": "78845427d054f3abe8876504a005bb2100957fc538564f1ffb2a314f0398e3d0"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "c8782e5d30204439afd48eb4ee7a929dace04ee6ebe3a47117057c8a8777df99"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/rgb.png",
+      "bytes": 977406,
+      "sha256": "5c40b92620434610839da230d062e32316edd59cbb174fd3865dd77df3786eff"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "e9da9db4741ebc025f584ed6e62fe05048f81340fda7871eafeae1e173498dd9"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1105079,
+      "sha256": "3921a9c806dc08388a49fcc590f59fb6c73bcb47a865ab18a25d0a45b183c70e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/settling_probes/capture_03.png",
+      "bytes": 977406,
+      "sha256": "5c40b92620434610839da230d062e32316edd59cbb174fd3865dd77df3786eff"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "4a7b8b0e5362bb3942afe8f8c7de03fc5e6275800f8a581794e4da4eedb45042"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/scene.usdc",
+      "bytes": 14977611,
+      "sha256": "4d5f5c54b04e8a4088b955b5502803e32235b48e93d5d8dc3fb76381e3fa37fd"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 945631,
+      "sha256": "67582a24b1e84d4a0e0d62de7bb9acfcdbbbcb6bf8797ef49c043460ebe98229"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1105235,
+      "sha256": "c2d5f4612a3236e947ea9aef66c7e337018e5917b94ea69989d7ec22a7d6b4f4"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/geometry.json",
+      "bytes": 3409,
+      "sha256": "27c239ceb3c5e310faa1ae21ebb83c530ecae4b03f854cf396c29cebc5cc5ef5"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "47e36ab1499ddb46da6fba516362a8d3221e83632612355f123064f120b8d470"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/rgb.png",
+      "bytes": 977243,
+      "sha256": "8f55b429a9207c3c4c794e2b0f2ce5edc12889115bdfd8dac3c98b12ddc9d667"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "aa9c7d9cdbcb2315fa8a0cc01c51f15288eebaa6ab542054089203ea2a3e8922"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1105162,
+      "sha256": "fe34ecce03da1cc8e6356a01a81277b52ea93df8f61c63147a4403045c114596"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/settling_probes/capture_03.png",
+      "bytes": 977243,
+      "sha256": "8f55b429a9207c3c4c794e2b0f2ce5edc12889115bdfd8dac3c98b12ddc9d667"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "3d378a46ec2408454fbb034a8458127ba7cbc831a6444fd39cb86c6c63d7550f"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/scene.usdc",
+      "bytes": 14977611,
+      "sha256": "d0ac31f7158b1ad383e1cbbb1fd11c7b4275dbefadf7795d5314f29a7bd4cf2a"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 945477,
+      "sha256": "17fe64484a04b51f89b09311d1304ece1da60dbec27dcb7e5776f04e7133302b"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1105235,
+      "sha256": "c2d5f4612a3236e947ea9aef66c7e337018e5917b94ea69989d7ec22a7d6b4f4"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/geometry.json",
+      "bytes": 3408,
+      "sha256": "38295b0e43cf12b6533459cbdf6216a7c2c5adc336c9e8ce326de02fd6dbe28b"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "6e4d5f560ceac38c303f1259871bcd764f9928a9c83f576d771e35e94938dafb"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/rgb.png",
+      "bytes": 977966,
+      "sha256": "5dbaf237b998a6885a29dc63e8c74d25aca9d64dc94dd72c57e446b1452f3dbe"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "b983a7941547470cc5fd62fe4b7cce973148b471dbb6624acdfbb8c13230ea77"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1105591,
+      "sha256": "e84b1879521b4ddb460504f5ffc9e00295ff01c62c4b04b3bbd0ac17f21469e2"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/settling_probes/capture_03.png",
+      "bytes": 977966,
+      "sha256": "5dbaf237b998a6885a29dc63e8c74d25aca9d64dc94dd72c57e446b1452f3dbe"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "053c69cd04890660980eee4939e1d6a89ce9452ad53de39c86c28f5de16fc4a7"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/scene.usdc",
+      "bytes": 14977611,
+      "sha256": "d2b085abfe778684192825d400e0a26febeb9721821551779fe8390b7753256e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 944982,
+      "sha256": "3794797f86db5ac1ba54ad0cca81c219af55b32e3c25fdab5fdadea614b130e8"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1105235,
+      "sha256": "c2d5f4612a3236e947ea9aef66c7e337018e5917b94ea69989d7ec22a7d6b4f4"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/geometry.json",
+      "bytes": 3405,
+      "sha256": "9348bd7884b26c857a5795af48b186c3b51bd1fa42ff7eadb6e6f43d0859f17f"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "d0e3625bc71a1e19c1d7e75d89fdce2005718ec422fa584e95e0d0b01848161b"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/rgb.png",
+      "bytes": 977233,
+      "sha256": "488e9054b96cfafad3428ba40d4ed73a653729306984d39bd8e13c64c459cfba"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/scene.usdc",
+      "bytes": 14977572,
+      "sha256": "b3e8cb19248fec8fe1453c1744ca495cff2770200c5c2c952f4c90c8d16f4e9e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1105256,
+      "sha256": "887f9f47600dfd0d1ea82529604e9aae804308899c239123bd7a47eed7164ed1"
+    },
+    {
+      "path": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/settling_probes/capture_03.png",
+      "bytes": 977233,
+      "sha256": "488e9054b96cfafad3428ba40d4ed73a653729306984d39bd8e13c64c459cfba"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "9910e7605a6d965105d67f3e99b890798b6edc830c66134328966759ee7bd946"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/scene.usdc",
+      "bytes": 4350893,
+      "sha256": "cdc9e593281302f198f050dcc22ae4268130d001819e868072a0155ddcd9b59a"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/settling_probes/capture_01.png",
+      "bytes": 966502,
+      "sha256": "4bf118b23ab86eac7815e16ad9b9d16c97ee5355352d32c4a244a7f660c3299d"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/settling_probes/capture_02.png",
+      "bytes": 1105235,
+      "sha256": "c2d5f4612a3236e947ea9aef66c7e337018e5917b94ea69989d7ec22a7d6b4f4"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/geometry.json",
+      "bytes": 3034,
+      "sha256": "03c01df4e17100b8385c335a62b867057074085157d4eb1bb9737477a01f11e7"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "fd2bfcbf8aa87e772a04efefd6e8d5f963a3ac6d3c4f4200504d1ff2930deee3"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/rgb.png",
+      "bytes": 1002704,
+      "sha256": "1ac5aa58f19a241206ae33174cf3222288990b6ffc6b5a0c14f253bd5d05420c"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "21b444782095b9ef89d487eadfc9094007b2ceabf5ff12528e4ddf203ba05ecf"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/settling_probes/capture_02.png",
+      "bytes": 1121528,
+      "sha256": "28388e6778c36d1d779191c100193275716fa8b57ab2e67e9dcb37ab6569a7f0"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/settling_probes/capture_03.png",
+      "bytes": 1002704,
+      "sha256": "1ac5aa58f19a241206ae33174cf3222288990b6ffc6b5a0c14f253bd5d05420c"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "f7587e818df37608baf1d0ad28ef32df1050abf2cb0ab2ab4ad599ae34bbf9ec"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/scene.usdc",
+      "bytes": 4350893,
+      "sha256": "53fd088d1f7bf1c6f193e9b2f13565995675b1c76a5288ee8ef783686b00d3e8"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 951983,
+      "sha256": "71d40c422fdec48a42b48ff67a85eb586e0205bab0ef49b17e3c787b5e68ed3a"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1105235,
+      "sha256": "c2d5f4612a3236e947ea9aef66c7e337018e5917b94ea69989d7ec22a7d6b4f4"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/geometry.json",
+      "bytes": 3031,
+      "sha256": "927fd86a83d81ec721c30d626a38ab260ba9230d7e1ac5f46c86ac33c2164d48"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "3529af22c3bb3292c82661e55d606bb1d92aa1902671da9685c7f093b5bab540"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/rgb.png",
+      "bytes": 1005741,
+      "sha256": "b92e0c712444ce0d7f66fa3a0d514717786a7e0b7d897acb279dc1704ee64314"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "c85689650f3391b3c2e23450e3782a575e984149a1a30fad06a145c306d61098"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1124900,
+      "sha256": "bf64b48e8ef6295e3b1952449cf50290df713991c2cf45668b96d117f9305627"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/settling_probes/capture_03.png",
+      "bytes": 1005741,
+      "sha256": "b92e0c712444ce0d7f66fa3a0d514717786a7e0b7d897acb279dc1704ee64314"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "31feda2e3bbf5cde77d5ce6fb379ed67448b9acc09622712c37a453ffd00e9be"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/scene.usdc",
+      "bytes": 4350893,
+      "sha256": "c8e473cb04331e862b583c70d62cc2858b3c3e53e268042afbdb98d9359243c3"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 947189,
+      "sha256": "427bf23bdd3175f898e103fcc7cd902e9214f8fd7ecc55b8e2711dd596a00815"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1119655,
+      "sha256": "38ac55a81a0ccc1f7b5f48cdb31f3033c9f35c43d680e5aead7c0eb15a810c26"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/geometry.json",
+      "bytes": 3030,
+      "sha256": "28422f523744ac6ef37236f1627614450268f1dfbe6d355d80ff18f20e012842"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "2126a3c7bde3fbba237225e41c43cf4cdff03bab3ee0d113b25039b8e9695ff1"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/rgb.png",
+      "bytes": 979370,
+      "sha256": "8b8991bd784de36c9c5db4cdf3dd4e6e56d22e0c21cfdbf96f2c1da704d2f7f9"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "bab131e9c6228f38cb5fd63b8ab6633ed585b10ba65ab92e83d14d2c21432a12"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1106792,
+      "sha256": "02054299852ba95905aef88d99521205158b063bb0328687d9434b490b12c3cd"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/settling_probes/capture_03.png",
+      "bytes": 979370,
+      "sha256": "8b8991bd784de36c9c5db4cdf3dd4e6e56d22e0c21cfdbf96f2c1da704d2f7f9"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "e6c5df998f02773786fbe641b10a99835bc23df8a71ef8f4d33b7084d317f8e4"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/scene.usdc",
+      "bytes": 4350893,
+      "sha256": "dca674c6a2e429bd8a523538538b2e1dbc186d77f17e5e5cba8ed3db72a9f8ea"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 946149,
+      "sha256": "48b736685ff7134a669c318d40d471504127a575913717ed07edcb1b824d3b97"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1105235,
+      "sha256": "c2d5f4612a3236e947ea9aef66c7e337018e5917b94ea69989d7ec22a7d6b4f4"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/geometry.json",
+      "bytes": 3035,
+      "sha256": "d0b8e536383bb6d2eedf2b57a13a1a23428b955253d4292b6d1cf9e3efac5b55"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "3ac00e909ad917aa8567d34ec4876e452208456d0757efc6ba51f0c07942bfa7"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/rgb.png",
+      "bytes": 977827,
+      "sha256": "67fe0a77fba5b851a426119ebdefdf6b0acd82f3ee9e74bf413405049ad55569"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "3f1403e08fecda91d466c52c3a63a4414f3689376ff93d166cddd9b6d161dd61"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1105975,
+      "sha256": "2633cce4ad366052fc75b95ffcdbcb864696a58fa95165616f75adf758e8e789"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/settling_probes/capture_03.png",
+      "bytes": 977827,
+      "sha256": "67fe0a77fba5b851a426119ebdefdf6b0acd82f3ee9e74bf413405049ad55569"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/metadata.json",
+      "bytes": 4339,
+      "sha256": "32782e89149c6fa11fd5487d7fdd3712505684b0977ec5606ba2ab39183387a2"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/scene.usdc",
+      "bytes": 4350893,
+      "sha256": "4f0d85d7462375aa47f6af281361e49bd47751a128333cdbb2c52a2aa4cbed57"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/settling_probes/capture_01.png",
+      "bytes": 945314,
+      "sha256": "80e28e3a4a347669ccc1b2312a689bbde1f9ce179260af256b532a70a43fddd6"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/settling_probes/capture_02.png",
+      "bytes": 1119655,
+      "sha256": "38ac55a81a0ccc1f7b5f48cdb31f3033c9f35c43d680e5aead7c0eb15a810c26"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/settling_probes/capture_03.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/geometry.json",
+      "bytes": 3032,
+      "sha256": "47ec511597f37c33477fbf59b48ec5ed3feebead753fb42f724569617e58015c"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/metadata.json",
+      "bytes": 4339,
+      "sha256": "8d62022b5b602a6f6bbba928320b9af250e94cf9dd1bd4af7635d2a903cac3b3"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/rgb.png",
+      "bytes": 983590,
+      "sha256": "e6cfa85209fb9bbe90c2d49098bc09b2f68db3fedb6d86d682810d799e4699d6"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/scene.usdc",
+      "bytes": 4350838,
+      "sha256": "3814888983a7ea92fde9d28f60a80f06b2aa5b7e8d395e6af8170e098b8e72a5"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/settling_probes/capture_01.png",
+      "bytes": 945348,
+      "sha256": "4eb968aa33bb16d793c39dbc2e0c2445d40f306bd788b00eb4f392402c2ee58e"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/settling_probes/capture_02.png",
+      "bytes": 1120374,
+      "sha256": "94b0bc50593053b410e063f23bd4edf5b1e18188a98af2831ab96de209bbe5aa"
+    },
+    {
+      "path": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/settling_probes/capture_03.png",
+      "bytes": 983590,
+      "sha256": "e6cfa85209fb9bbe90c2d49098bc09b2f68db3fedb6d86d682810d799e4699d6"
+    },
+    {
+      "path": "renders/milestone_4/rejected_initial_pair/capture_progress.json",
+      "bytes": 12140,
+      "sha256": "6dc20bb9697926edf5ae74bf2e5b92d2035569cb9401a8db31e814ecbb4f607c"
+    },
+    {
+      "path": "renders/milestone_4/rejected_initial_pair/reason.txt",
+      "bytes": 151,
+      "sha256": "dbc4f89222cd9e6e9545e940952e65b6bdd233cee512c4c5dd5e18f5eb06b7e3"
+    },
+    {
+      "path": "renders/milestone_4/rejected_initial_pair/target_absent.png",
+      "bytes": 1587021,
+      "sha256": "69e399b12386cc4092b7d8c00131175d18c368c558a99c3649951280c9477d29"
+    },
+    {
+      "path": "renders/milestone_4/rejected_initial_pair/target_present.png",
+      "bytes": 1355812,
+      "sha256": "a8a00929c942d542743a1f3e371e0a8c8909dec89cf48d3e9c20a2efa71b24ef"
+    },
+    {
+      "path": "renders/milestone_4/variant_index.json",
+      "bytes": 13729,
+      "sha256": "07fc19c5e8f481eea85f09ce979e90feddf2f6c433586843e8bbded5c34b3bb0"
+    },
+    {
+      "path": "specification.json",
+      "bytes": 13541,
+      "sha256": "3a2bb717586b04286508fc22a9120c521d7bb222d728af3546751f95ca547242"
+    }
+  ]
+}

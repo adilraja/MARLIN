@@ -1,0 +1,408 @@
+{
+  "info": {
+    "description": "MARLIN M4 bounded pilot: direct amodal mesh boxes; bbox area only",
+    "bbox_convention": "COCO xywh at pixel edges; top-left image origin",
+    "underwater_limitation": "Refraction can displace apparent visible bounds; direct amodal labels require downstream evaluation."
+  },
+  "licenses": [],
+  "categories": [
+    {
+      "id": 1,
+      "name": "wildlife"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 0.5,
+      "intervention": "target_present",
+      "sha256": "4097fe5a03c85e1e6cc84ff5b39811fd9b8ee9e4f0bc4c30f0ea9cb49b8e77d7"
+    },
+    {
+      "id": 2,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 0.5,
+      "intervention": "target_absent",
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "id": 3,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 1.0,
+      "intervention": "target_present",
+      "sha256": "5c40b92620434610839da230d062e32316edd59cbb174fd3865dd77df3786eff"
+    },
+    {
+      "id": 4,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 1.0,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 5,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 2.0,
+      "intervention": "target_present",
+      "sha256": "8f55b429a9207c3c4c794e2b0f2ce5edc12889115bdfd8dac3c98b12ddc9d667"
+    },
+    {
+      "id": 6,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 2.0,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 7,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 3.0,
+      "intervention": "target_present",
+      "sha256": "5dbaf237b998a6885a29dc63e8c74d25aca9d64dc94dd72c57e446b1452f3dbe"
+    },
+    {
+      "id": 8,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 3.0,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 9,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 4.0,
+      "intervention": "target_present",
+      "sha256": "488e9054b96cfafad3428ba40d4ed73a653729306984d39bd8e13c64c459cfba"
+    },
+    {
+      "id": 10,
+      "file_name": "renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "european_storm_petrel_0000",
+      "species": "european_storm_petrel",
+      "requested_gsd_cm_px": 4.0,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 11,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 0.5,
+      "intervention": "target_present",
+      "sha256": "1ac5aa58f19a241206ae33174cf3222288990b6ffc6b5a0c14f253bd5d05420c"
+    },
+    {
+      "id": 12,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 0.5,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 13,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 1.0,
+      "intervention": "target_present",
+      "sha256": "b92e0c712444ce0d7f66fa3a0d514717786a7e0b7d897acb279dc1704ee64314"
+    },
+    {
+      "id": 14,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 1.0,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 15,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 2.0,
+      "intervention": "target_present",
+      "sha256": "8b8991bd784de36c9c5db4cdf3dd4e6e56d22e0c21cfdbf96f2c1da704d2f7f9"
+    },
+    {
+      "id": 16,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 2.0,
+      "intervention": "target_absent",
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "id": 17,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 3.0,
+      "intervention": "target_present",
+      "sha256": "67fe0a77fba5b851a426119ebdefdf6b0acd82f3ee9e74bf413405049ad55569"
+    },
+    {
+      "id": 18,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 3.0,
+      "intervention": "target_absent",
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "id": 19,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 4.0,
+      "intervention": "target_present",
+      "sha256": "e6cfa85209fb9bbe90c2d49098bc09b2f68db3fedb6d86d682810d799e4699d6"
+    },
+    {
+      "id": 20,
+      "file_name": "renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/rgb.png",
+      "width": 1024,
+      "height": 768,
+      "scene_id": "harbour_porpoise_0000",
+      "species": "harbour_porpoise",
+      "requested_gsd_cm_px": 4.0,
+      "intervention": "target_absent",
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        526.7699245057963,
+        290.30509699065453,
+        36.737727764797,
+        44.14831061844683
+      ],
+      "area": 1621.9086167761964,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "european_storm_petrel",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 2,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [
+        519.3825069271701,
+        337.16893845444946,
+        18.36176791941682,
+        22.068650796744805
+      ],
+      "area": 405.2194442244812,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "european_storm_petrel",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 3,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [
+        515.6906399382289,
+        360.58856456707156,
+        9.179110990993763,
+        11.032949626921038
+      ],
+      "area": 101.27266918355144,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "european_storm_petrel",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 4,
+      "image_id": 7,
+      "category_id": 1,
+      "bbox": [
+        514.4602903167308,
+        368.39328624135385,
+        6.119013435158422,
+        7.354994059523904
+      ],
+      "area": 45.00530746573715,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "european_storm_petrel",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 5,
+      "image_id": 9,
+      "category_id": 1,
+      "bbox": [
+        513.8451666260125,
+        372.2953058499202,
+        4.5891123809866485,
+        5.5161309151890805
+      ],
+      "area": 25.314144678037422,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "european_storm_petrel",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 6,
+      "image_id": 11,
+      "category_id": 1,
+      "bbox": [
+        396.57708299313896,
+        416.7377105268566,
+        321.0621029956595,
+        90.26664281548636
+      ],
+      "area": 28981.19817269809,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "harbour_porpoise",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 7,
+      "image_id": 13,
+      "category_id": 1,
+      "bbox": [
+        454.1960402632012,
+        400.3819472377628,
+        160.7013977172371,
+        45.26035108416443
+      ],
+      "area": 7273.401680398091,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "harbour_porpoise",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 8,
+      "image_id": 15,
+      "category_id": 1,
+      "bbox": [
+        483.0748391800131,
+        392.1942505406955,
+        80.393663416202,
+        22.662048885232593
+      ],
+      "area": 1821.885130400905,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "harbour_porpoise",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 9,
+      "image_id": 17,
+      "category_id": 1,
+      "bbox": [
+        492.71140262044133,
+        389.4635622871354,
+        53.60533105492385,
+        15.115127049087448
+      ],
+      "area": 810.2513894035669,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "harbour_porpoise",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    },
+    {
+      "id": 10,
+      "image_id": 19,
+      "category_id": 1,
+      "bbox": [
+        497.531617377171,
+        388.0979449925178,
+        40.20758267575974,
+        11.339007328056368
+      ],
+      "area": 455.91407460387194,
+      "area_semantics": "bbox_area_for_detection_only; not silhouette or visible area",
+      "iscrowd": 0,
+      "species": "harbour_porpoise",
+      "bbox_semantics": "amodal_direct_evaluated_mesh_projection",
+      "visibility_evidence": true
+    }
+  ]
+}

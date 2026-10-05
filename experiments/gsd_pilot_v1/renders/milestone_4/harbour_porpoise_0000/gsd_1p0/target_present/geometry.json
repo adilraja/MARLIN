@@ -1,0 +1,118 @@
+{
+  "scene_id": "harbour_porpoise_0000",
+  "species": "harbour_porpoise",
+  "gsd_cm_px_requested": 1.0,
+  "geometry_source": "all evaluated UsdGeom.Mesh vertices below /World/Cetaceans/PilotTarget with parent world transforms at frozen pose",
+  "mesh_paths": [
+    "/World/Cetaceans/PilotTarget/Model/PorpoiseBody/Object_0_001",
+    "/World/Cetaceans/PilotTarget/Model/PorpoiseEyes/Object_1_001"
+  ],
+  "vertex_count": 23456,
+  "projected_vertices_sha256": "50fd3f87867ae6ae7e0117237ba48cc859bdae0dc607529c22a0a6847e89a3dd",
+  "camera_world_position_m": [
+    0.0,
+    99.81304986785837,
+    0.0
+  ],
+  "camera": "/World/Cameras/PilotCamera",
+  "resolution_px": [
+    1024,
+    768
+  ],
+  "projection": {
+    "capture_view_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -2.220446049250313e-16,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        -2.220446049250313e-16,
+        0.0
+      ],
+      [
+        0.0,
+        2.216294922427106e-12,
+        -9981.304986785837,
+        1.0
+      ]
+    ],
+    "capture_projection_matrix": [
+      [
+        19.531250436557464,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        26.041667248743284,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.000020000200002,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        -2.000020000200002,
+        0.0
+      ]
+    ],
+    "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+    "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+    "capture_projection_validation": "geometry_checked; raster validation recorded separately"
+  },
+  "world_bounds_min_m": [
+    -0.578967566782612,
+    -0.45901276160292215,
+    0.16395059804586706
+  ],
+  "world_bounds_max_m": [
+    1.0297660054402746,
+    -0.026224553475900265,
+    0.6178305853368821
+  ],
+  "depth_range_m": [
+    99.83927442133427,
+    100.27206262946129
+  ],
+  "reference_plane_gsd_cm_px": 0.9999999776482582,
+  "target_vertex_depth_gsd_range_cm_px": [
+    0.9983927218975258,
+    1.0027206038820604
+  ],
+  "target_mean_vertex_depth_gsd_cm_px": 1.001100102224724,
+  "amodal_bbox_xyxy_px": [
+    454.1960402632012,
+    400.3819472377628,
+    614.8974379804383,
+    445.6422983219272
+  ],
+  "amodal_bbox_coco_xywh_px": [
+    454.1960402632012,
+    400.3819472377628,
+    160.7013977172371,
+    45.26035108416443
+  ],
+  "bbox_width_px": 160.7013977172371,
+  "bbox_height_px": 45.26035108416443,
+  "projected_silhouette_area_px": null,
+  "projected_silhouette_area_reason": "Triangle rasterization and self-occlusion have not been validated; bbox area is not a silhouette.",
+  "visible_target_area_px": null,
+  "visible_target_area_reason": "Image-pair appearance and underwater refraction require separate validation.",
+  "annotation_semantics": "amodal direct mesh projection; not a refracted visible box"
+}

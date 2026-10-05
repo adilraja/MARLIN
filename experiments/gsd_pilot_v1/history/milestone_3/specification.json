@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.2.0",
   "experiment_id": "gsd_pilot_v1",
   "created_date": "2026-09-29",
-  "status": "milestone_4_complete_generic_paired_capture_validated_native_pilot_content_not_certified",
+  "status": "milestone_3_complete_paired_capture_pending",
   "source_baseline_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
   "scope": "provisional_synthetic_to_synthetic_detection_pipeline_pilot",
   "runtime_architecture": "NVIDIA Omniverse Kit with existing Kit Services HTTP API",
@@ -135,7 +135,7 @@
     "validation_status": "geometry_and_recorded_state_reconstruction_passed_milestone_3",
     "optical_calibration_claim": false,
     "frozen_record": "environment.json",
-    "remaining_validation": "M4 geometry and paired RGB visibility passed; actual RTX sample count and bitwise RGB repeatability remain unmeasured"
+    "remaining_validation": "optics_actual_capture_sampling_and_RGB_repeatability_pending_M4"
   },
   "scene_generation": {
     "master_seed": 20260929,
@@ -274,7 +274,7 @@
   "native_capture": {
     "current_status": "partially_validated",
     "evidence": "native_metric_probe_passed_full_marine_overlap_failed_focused_sdk_pair_passed",
-    "pilot_specific_validation": "full native tiled image and overlap checks passed in M4; target content was not certified in the oblique image; validated 1024x768 generic top-down capture used for pilot",
+    "pilot_specific_validation": "pending_milestone_4",
     "overlap_mean_absolute_rgb_error_limit_0_255": 2.0,
     "minimum_gpu_headroom_mib": 768,
     "bound": "one_focused_validation_job_no_unlimited_tuning",
@@ -299,6 +299,14 @@
     "runtime_external_material_dependencies": "record_unresolved_or_external_do_not_claim_fully_portable_snapshot"
   },
   "outstanding_gates": [
+    {
+      "milestone": 4,
+      "gate": "validate_generic_marine_capture_exact_mesh_labels_visibility_and_all_five_actual_gsds"
+    },
+    {
+      "milestone": 4,
+      "gate": "perform_bounded_native_validation_and_report_separate_resource_or_radiometric_failures"
+    },
     {
       "milestone": 6,
       "gate": "lock_detector_dependencies_checkpoint_preprocessing_optimizer_nms_and_split_ids_before_training"
@@ -326,25 +334,6 @@
         "qa/m3_scene_geometry.json",
         "qa/m3_reconstruction.json"
       ]
-    },
-    {
-      "milestone": 4,
-      "gate": "validate_generic_marine_capture_exact_mesh_labels_visibility_and_all_five_actual_gsds",
-      "status": "passed_for_amodal_direct_mesh_labels_with_paired_RGB_target_visibility",
-      "evidence": [
-        "renders/milestone_4/variant_index.json",
-        "annotations/milestone_4_geometry.json",
-        "annotations/milestone_4_coco.json",
-        "qa/m4_capture_validation.json"
-      ]
-    },
-    {
-      "milestone": 4,
-      "gate": "perform_bounded_native_validation_and_report_separate_resource_or_radiometric_failures",
-      "status": "technical_native_tiling_passed_pilot_target_content_not_certified_generic_fallback_selected",
-      "evidence": [
-        "qa/m4_native_validation.json"
-      ]
     }
   ],
   "revisions": [
@@ -362,14 +351,6 @@
       "milestone": 3,
       "reason": "Freeze engineering sampling ranges, environment and renderer state before dataset generation; add recurring requested animation preview.",
       "previous_specification": "history/milestone_2/specification.json",
-      "ml_results_observed": false
-    },
-    {
-      "version": "1.3.0",
-      "date": "2026-10-05",
-      "milestone": 4,
-      "reason": "Recorded validated five-GSD generic captures and amodal mesh labels; documented bounded native technical pass and pilot-content limitation.",
-      "previous_specification": "history/milestone_3/specification.json",
       "ml_results_observed": false
     }
   ],
