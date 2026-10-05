@@ -13,7 +13,7 @@ establish operational wildlife detection thresholds or certify survey hardware.
 | 2. Calibrate two targets | Complete for provisional pilot | `wildlife/CALIBRATION.md`, species JSON records, geometry and live Kit evidence |
 | 3. Freeze environment and scene generation | Complete | `environment.json`, 50 candidate manifests, 4 reconstructed scenes and 16 live replay checks |
 | 4. Prove paired capture and annotations | Complete with stated limits | 20 settled RGB images, 10 exact direct mesh boxes, paired visibility at five GSDs per target; bounded native status recorded |
-| 5. Generate pilot dataset | Pending | At least 25 valid paired scene seeds per target and documented QA |
+| 5. Generate pilot dataset | Complete for provisional synthetic pilot | 50 valid scene groups, 250 positives, 50 negatives and zero QA rejections |
 | 6. Freeze splits and model inputs | Pending | No protected identity crosses splits; model-input geometry verified |
 | 7. Train and evaluate baseline | Pending | One reproducible detector and held-out metrics by GSD |
 | 8. Package results | Pending | Provisional curves, pixels-on-target, limitations and reproduction evidence |
@@ -51,6 +51,16 @@ restoration checks, but its oblique image did not establish pilot target content
 the validated 1024 × 768 generic capture supplies this pilot. See
 [M4 capture evidence](qa/M4_CAPTURE.md). Specification 1.3.0 preserves the M3
 README and specification under `history/milestone_3/`.
+
+Milestone 5 expanded that method to 25 scene groups per species, with five
+positive GSD views per group and five predefined negative parent groups per
+species. The accepted set contained 300 images and 250 direct amodal mesh-box
+annotations. All 250 positive targets passed image-local visibility checks;
+all 50 negative pairs were checked. No scene group was rejected or replaced.
+See [M5 dataset evidence](qa/M5_DATASET.md) and
+`qa/m5_dataset_validation.json`. Specification 1.4.0 preserved the M4 README
+and specification under `history/milestone_4/`. Split assignment and detector
+input preparation remained for M6.
 
 **Required finish step for every remaining milestone:** restore the existing
 animated demonstration with moving water and the 11 default animals swimming,
@@ -103,6 +113,7 @@ environment.json           M3 resolved preset and renderer settings
 wildlife/                  M2 calibration records and evidence
 scenes/                    M3 scene manifests and frozen snapshots
 renders/milestone_4/       M4 paired scene snapshots, RGB images and settling probes
+renders/milestone_5/       M5 accepted RGB images and capture/index records
 annotations/               M4–5 geometry and visibility records, COCO labels
 splits/                    M6 immutable grouped split manifests
 qa/                        Audit, regression, pairing and capture evidence

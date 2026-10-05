@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "experiment_id": "gsd_pilot_v1",
   "created_date": "2026-09-29",
-  "status": "milestone_4_complete_generic_paired_capture_validated_native_pilot_content_not_certified",
+  "status": "milestone_5_complete_provisional_300_image_dataset_splits_pending",
   "source_baseline_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
   "scope": "provisional_synthetic_to_synthetic_detection_pipeline_pilot",
   "runtime_architecture": "NVIDIA Omniverse Kit with existing Kit Services HTTP API",
@@ -345,6 +345,18 @@
       "evidence": [
         "qa/m4_native_validation.json"
       ]
+    },
+    {
+      "milestone": 5,
+      "gate": "generate_at_least_25_valid_paired_scene_seeds_per_target_and_document_dataset_QA",
+      "status": "passed_for_provisional_synthetic_dataset",
+      "evidence": [
+        "renders/milestone_5/variant_index.json",
+        "annotations/milestone_5_geometry.json",
+        "annotations/milestone_5_frames.json",
+        "annotations/milestone_5_coco.json",
+        "qa/m5_dataset_validation.json"
+      ]
     }
   ],
   "revisions": [
@@ -370,6 +382,14 @@
       "milestone": 4,
       "reason": "Recorded validated five-GSD generic captures and amodal mesh labels; documented bounded native technical pass and pilot-content limitation.",
       "previous_specification": "history/milestone_3/specification.json",
+      "ml_results_observed": false
+    },
+    {
+      "version": "1.4.0",
+      "date": "2026-10-05",
+      "milestone": 5,
+      "reason": "Recorded the accepted 300-image provisional dataset and its validation without changing the frozen scene, GSD, label, split or training protocols.",
+      "previous_specification": "history/milestone_4/specification.json",
       "ml_results_observed": false
     }
   ],
