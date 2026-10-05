@@ -16,7 +16,7 @@ establish operational wildlife detection thresholds or certify survey hardware.
 | 5. Generate pilot dataset | Complete for provisional synthetic pilot | 50 valid scene groups, 250 positives, 50 negatives and zero QA rejections |
 | 6. Freeze splits and model inputs | Complete | 30/10/10 scene groups; all 300 PNGs decoded and padded; detector dependencies and weights locked |
 | 7. Train and evaluate baseline | Complete for provisional synthetic pilot | One 20-epoch detector; validation-selected checkpoint/threshold; 60-image held-out test by species and GSD |
-| 8. Package results | Complete for provisional synthetic pilot | GSD and pixel-size plots, uncertainty, provenance, regressions, final report and live preview |
+| 8. Package results | Pending | Provisional curves, pixels-on-target, limitations and reproduction evidence |
 
 Milestone 1 completion means the audit and protocol are recorded. It does not
 mean the later implementation, target calibration or live rendering passed.
@@ -79,17 +79,6 @@ between the petrel and porpoise. A zero-proposal RPN score-floor fix was
 documented before training produced a checkpoint or test result. See
 [M7 training and evaluation evidence](qa/M7_TRAINING.md). Specification 1.6.0
 preserved the M6 README and specification under `history/milestone_6/`.
-
-Milestone 8 packaged the full synthetic pilot in the [final report](results/M8_FINAL_REPORT.md).
-It plotted held-out recall and AP50 against GSD, analysed direct amodal
-bounding-box pixels, and recorded Wilson recall intervals plus a paired
-scene-group bootstrap for the pooled GSD difference. It retained camera,
-rendering, label, asset, sample-size and generalisation limits; assembled
-provenance and reproduction instructions; and ran the full Blender/ USD-capable
-MARLIN service suite and reconstruction contracts. Specification 1.7.0
-preserved the M7 README and specification under `history/milestone_7/`.
-The sprint was complete as a provisional synthetic-to-synthetic pipeline, not
-as an operational wildlife survey threshold.
 
 **Required finish step for every remaining milestone:** restore the existing
 animated demonstration with moving water and the 11 default animals swimming,

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "read_only_against_M1_to_M7_evidence": true,
+  "service_tests": 77,
+  "reconstruction_contract_tests": 8,
+  "results": {
+    "blender_usd_service_suite": {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/blender",
+        "--background",
+        "--factory-startup",
+        "--python-exit-code",
+        "1",
+        "--python-expr",
+        "import unittest; suite=unittest.defaultTestLoader.discover('source/extensions/cris.madil.render_service/cris/madil/render_service/tests',pattern='test_*.py'); result=unittest.TextTestRunner(verbosity=1).run(suite); assert result.wasSuccessful()"
+      ],
+      "return_code": 0,
+      "tests": 77,
+      "log": "qa/m8_regression_blender_usd.log",
+      "log_sha256": "285eddb011eb4ee09f5fe56ac52cbd1048565013d8890e2a30531ca32d9947f4"
+    },
+    "reconstruction_contract": {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/qa/test_reconstruction_contract.py"
+      ],
+      "return_code": 0,
+      "tests": 8,
+      "log": "qa/m8_regression_reconstruction.log",
+      "log_sha256": "698d16d7b93c4bd9707d3cfacda6fb1e0fea99ed0cda6e69bedc42772940540a"
+    },
+    "detection_metrics_contract": {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/ml/metrics.py"
+      ],
+      "return_code": 0,
+      "tests": null,
+      "log": "qa/m8_regression_metrics.log",
+      "log_sha256": "501f5553a50c6c5495d60c9ce266f8bf7cbdc8bb66179255673bb843ecf90978"
+    },
+    "m7_historical_package": {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/qa/m7_package.py"
+      ],
+      "return_code": 0,
+      "tests": null,
+      "log": "qa/m8_regression_m7_package.log",
+      "log_sha256": "27ae6323cc7ba870c35da3564e6506d66fcfaf0b9bc46f6591cd84b7c2e7acad"
+    }
+  }
+}

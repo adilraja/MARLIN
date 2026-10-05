@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.7.0",
+  "schema_version": "1.5.0",
   "experiment_id": "gsd_pilot_v1",
   "created_date": "2026-09-29",
-  "status": "eight_milestone_synthetic_pilot_complete_with_provisional_results",
+  "status": "milestone_6_complete_frozen_splits_and_detector_inputs_training_pending",
   "source_baseline_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
   "scope": "provisional_synthetic_to_synthetic_detection_pipeline_pilot",
   "runtime_architecture": "NVIDIA Omniverse Kit with existing Kit Services HTTP API",
@@ -309,14 +309,7 @@
     "checkpoint_selection": "best_pooled_validation_AP50",
     "threshold_selection": "max_pooled_validation_F1_tie_choose_higher_confidence",
     "same_threshold_for_all_gsds_and_targets": true,
-    "test_set_tuning": false,
-    "m7_runtime_precision": "cuda_bfloat16_autocast",
-    "m7_rpn_proposal_score_floor": 0.0,
-    "m7_rpn_proposal_score_floor_reason": "pretrained_default_0p05_returned_zero_proposals_and_nonfinite_roi_loss_on_negative_water_frame_before_any_checkpoint_or_test",
-    "m7_completed_run": "results/m7_training_history.json",
-    "m7_selected_checkpoint_epoch": 10,
-    "m7_selected_checkpoint_sha256": "bc2ccc63ddf4ddab2c6523ca60fee1cd2ea5a88ae3f833a3097cb5ba01510f5d",
-    "m7_validation_selected_confidence_threshold": 0.9477691650390625
+    "test_set_tuning": false
   },
   "evaluation": {
     "matching": "one_to_one_IoU_at_least_0.5",
@@ -365,7 +358,12 @@
     ],
     "runtime_external_material_dependencies": "record_unresolved_or_external_do_not_claim_fully_portable_snapshot"
   },
-  "outstanding_gates": [],
+  "outstanding_gates": [
+    {
+      "milestone": 7,
+      "gate": "train_one_pooled_detector_and_evaluate_heldout_test_by_species_and_gsd_without_test_tuning"
+    }
+  ],
   "completed_gates": [
     {
       "milestone": 2,
@@ -432,33 +430,6 @@
         "ml/detector_lock.json",
         "ml/requirements-cu126.lock"
       ]
-    },
-    {
-      "milestone": 7,
-      "gate": "train_one_pooled_detector_and_evaluate_heldout_test_by_species_and_gsd_without_test_tuning",
-      "status": "passed_for_provisional_synthetic_to_synthetic_pilot",
-      "evidence": [
-        "results/m7_training_history.json",
-        "results/m7_validation_selection.json",
-        "results/m7_test_predictions.json",
-        "results/m7_test_metrics.json",
-        "qa/m7_result_validation.json",
-        "qa/M7_TRAINING.md"
-      ]
-    },
-    {
-      "milestone": 8,
-      "gate": "package_provisional_gsd_curves_pixels_on_target_uncertainty_limitations_and_reproduction_evidence",
-      "status": "passed_for_provisional_synthetic_to_synthetic_pilot",
-      "evidence": [
-        "results/M8_FINAL_REPORT.md",
-        "results/m8_gsd_analysis.json",
-        "results/m8_performance_vs_gsd.png",
-        "results/m8_pixels_on_target.png",
-        "qa/m8_provenance.json",
-        "qa/m8_regression_validation.json",
-        "qa/milestone_8_animation_preview.json"
-      ]
     }
   ],
   "revisions": [
@@ -501,23 +472,6 @@
       "reason": "Assigned leakage-free scene-group splits and froze full-frame padding, detector dependencies, pretrained weights and optimizer settings before training; no ML results observed.",
       "previous_specification": "history/milestone_5/specification.json",
       "ml_results_observed": false
-    },
-    {
-      "version": "1.6.0",
-      "date": "2026-10-05",
-      "milestone": 7,
-      "reason": "Recorded the single completed 20-epoch detector run, validation-only checkpoint and threshold selection, held-out species/GSD metrics, and zero-proposal RPN runtime fix applied before results.",
-      "previous_specification": "history/milestone_6/specification.json",
-      "test_set_tuning": false,
-      "new_baselines": 0
-    },
-    {
-      "version": "1.7.0",
-      "date": "2026-10-05",
-      "milestone": 8,
-      "reason": "Packaged the completed synthetic pilot with descriptive GSD and bounding-box pixel plots, scene-group-aware uncertainty, provenance, regression results and explicit non-operational limitations.",
-      "previous_specification": "history/milestone_7/specification.json",
-      "new_training_or_test_tuning": false
     }
   ],
   "milestone_finish_check": {
@@ -526,16 +480,5 @@
     "validation": "check_ocean_time_translation_and_body_pose_then_leave_running_for_visual_review",
     "applies_to_remaining_milestones": true,
     "command": "python3 -B experiments/gsd_pilot_v1/scenes/live_session.py preview --milestone N"
-  },
-  "results_package": {
-    "report": "results/M8_FINAL_REPORT.md",
-    "gsd_analysis": "results/m8_gsd_analysis.json",
-    "performance_plot_png": "results/m8_performance_vs_gsd.png",
-    "pixels_on_target_plot_png": "results/m8_pixels_on_target.png",
-    "uncertainty": "Wilson_95_per_species_GSD_recall_and_species_stratified_paired_scene_group_bootstrap_for_pooled_4p0_minus_0p5_recall",
-    "provenance": "qa/m8_provenance.json",
-    "regressions": "qa/m8_regression_validation.json",
-    "completion_preview": "qa/milestone_8_animation_preview.json",
-    "operational_threshold_claim": false
   }
 }

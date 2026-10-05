@@ -1,0 +1,324 @@
+{
+  "experiment_id": "gsd_pilot_v1",
+  "specification_version": "1.7.0",
+  "git_head_at_package": "a0f0142f377c57c420a5fd935a9f3e67999bc195",
+  "source_baseline_commit": "a7949fd12577a8cceb3a102aa49506f03567d7ff",
+  "runtime_source_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "runtime_source_diff_bytes": 0,
+  "repository_status_at_package": [
+    " M experiments/gsd_pilot_v1/README.md",
+    " M experiments/gsd_pilot_v1/specification.json",
+    "?? experiments/gsd_pilot_v1/history/milestone_6/",
+    "?? experiments/gsd_pilot_v1/history/milestone_7/",
+    "?? experiments/gsd_pilot_v1/ml/metrics.py",
+    "?? experiments/gsd_pilot_v1/ml/train_evaluate.py",
+    "?? experiments/gsd_pilot_v1/qa/M7_TRAINING.md",
+    "?? experiments/gsd_pilot_v1/qa/m7_package.py",
+    "?? experiments/gsd_pilot_v1/qa/m7_result_validation.json",
+    "?? experiments/gsd_pilot_v1/qa/m7_validate.py",
+    "?? experiments/gsd_pilot_v1/qa/m8_provenance.py",
+    "?? experiments/gsd_pilot_v1/qa/m8_regression_blender_usd.log",
+    "?? experiments/gsd_pilot_v1/qa/m8_regression_m7_package.log",
+    "?? experiments/gsd_pilot_v1/qa/m8_regression_metrics.log",
+    "?? experiments/gsd_pilot_v1/qa/m8_regression_reconstruction.log",
+    "?? experiments/gsd_pilot_v1/qa/m8_regression_validation.json",
+    "?? experiments/gsd_pilot_v1/qa/m8_regressions.py",
+    "?? experiments/gsd_pilot_v1/qa/milestone_7_animation_preview.json",
+    "?? experiments/gsd_pilot_v1/qa/milestone_7_manifest.json",
+    "?? experiments/gsd_pilot_v1/results/"
+  ],
+  "app": {
+    "path": "source/apps/cris.madil.kit",
+    "version": "0.1.0",
+    "sha256": "5aa567d42623bc84cdf33e2c2079d870cb02c8f9ae5cfcccab2f356f79616dd5"
+  },
+  "extension": {
+    "path": "source/extensions/cris.madil.render_service/config/extension.toml",
+    "version": "0.1.0",
+    "sha256": "5d2b72b94b420864990402f730b935fca931ab6a63c71c38fb5498a7ff8bddda"
+  },
+  "assets": {
+    "european_storm_petrel": {
+      "calibration_record": "wildlife/european_storm_petrel.json",
+      "calibration_sha256": "6c024be4246ebd155a91731d89091726568880df35491c4baf5cb7992f8138a7",
+      "license": "CC0-1.0",
+      "asset_dependencies": [
+        {
+          "path": "assets/birds/european_storm_petrel/usd/glide.usd",
+          "sha256": "ef970e398e5fdb75c9594a2dc80c438eda8b05efbd5e1c97d8f34e60336a0f82"
+        },
+        {
+          "path": "assets/birds/european_storm_petrel/usd/textures/ptak_baseColor.png",
+          "sha256": "acad8cfd90712974e1ea2da82c32b32f7a650d79e47ba4e7a704696d70d1e0d5"
+        },
+        {
+          "path": "assets/birds/european_storm_petrel/usd/textures/ptak_metallicRoughness.png",
+          "sha256": "de30a93d7762d0445f80a71f60e9386bb9a7459a7e614063a217f938326fa418"
+        },
+        {
+          "path": "assets/birds/european_storm_petrel/usd/textures/ptak_normal.png",
+          "sha256": "64fe062d8903eb94e885eb9239cd826636aef9aa71f9b7d39baac9e467589260"
+        }
+      ]
+    },
+    "harbour_porpoise": {
+      "calibration_record": "wildlife/harbour_porpoise.json",
+      "calibration_sha256": "898aa89c6faa87d07f66e7f8de1cc0e9c90f90d9c2d5571ddef71f665c2f8171",
+      "license": "CC-BY-NC-4.0",
+      "asset_dependencies": [
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/harbour_porpoise_static_candidate.usd",
+          "sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+          "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+          "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+        },
+        {
+          "path": "assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+          "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+        }
+      ]
+    }
+  },
+  "camera_specification": {
+    "profile_id": "existing_generic_engineering_pinhole",
+    "reuse_module": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py",
+    "image_size_px": [
+      1024,
+      768
+    ],
+    "focal_length_mm": 50.0,
+    "pixel_pitch_um": 5.0,
+    "pitch_deg": 0.0,
+    "roll_deg": 0.0,
+    "principal_point": "centred",
+    "distortion": "zero_assumption",
+    "parameter_status": "engineering_choices_from_existing_fixture_not_survey_hardware_calibration",
+    "gsd_reference_plane": "horizontal_plane_at_recorded_animal_root_y",
+    "camera_to_reference_plane_separations_m": [
+      50.0,
+      100.0,
+      200.0,
+      300.0,
+      400.0
+    ],
+    "paired_variable": "camera_world_y_only",
+    "paired_constants": [
+      "camera_x",
+      "camera_z",
+      "intrinsics",
+      "orientation",
+      "resolution"
+    ],
+    "required_sampling_metadata": [
+      "requested_reference_gsd_cm_px",
+      "actual_reference_gsd_xy_cm_px",
+      "sea_plane_gsd_xy_cm_px",
+      "target_centroid_direct_geometric_gsd_xy_cm_px",
+      "reference_plane_y_m"
+    ],
+    "marine_path_validation": "pending_milestone_4",
+    "interpretation": "altitude_conditioned_gsd_sweep_with_changing_world_footprint_not_pure_downsampling",
+    "hidef_profile_modified": false,
+    "sony_profile_modified": false,
+    "clipping_range_scene_units": [
+      1,
+      100000
+    ]
+  },
+  "environment_record_sha256": "83745470f0391b61d95e8f89a2a788b9125cf4d13faf167431d3a310ea4b3590",
+  "renderer_settings": {
+    "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+    "/rtx/fog/enabled": false,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/aa/filterRadius": 1.0,
+    "/rtx/pathtracing/aa/op": 1,
+    "/rtx/pathtracing/adaptiveSampling/enabled": false,
+    "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+    "/rtx/pathtracing/cached/enabled": false,
+    "/rtx/pathtracing/fireflyFilter/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+    "/rtx/pathtracing/fractionalCutoutOpacity": true,
+    "/rtx/pathtracing/lightcache/cached/enabled": false,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/pathtracing/optixDenoiser/enabled": false,
+    "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+    "/rtx/pathtracing/spp": 8,
+    "/rtx/pathtracing/totalSpp": 128,
+    "/rtx/post/aa/op": 3,
+    "/rtx/post/chromaticAberration/enabled": false,
+    "/rtx/post/colorcorr/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/enabled": false,
+    "/rtx/post/colorcorr/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorcorr/saturation": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/blackpoint": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/enabled": false,
+    "/rtx/post/colorgrad/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/lift": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/multiply": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/dlss/execMode": 3,
+    "/rtx/post/dof/enabled": false,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/lensFlares/enabled": false,
+    "/rtx/post/motionblur/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/cm2Factor": 1.0,
+    "/rtx/post/tonemap/colorMode": 0,
+    "/rtx/post/tonemap/dither": 0.0,
+    "/rtx/post/tonemap/enableSrgbToGamma": true,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+    "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+    "/rtx/post/tonemap/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/tonemap/wrapValue": 0.0,
+    "/rtx/post/tvNoise/enabled": false,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "PathTracing",
+    "/rtx/resetPtAccumOnAnimTimeChange": false,
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "seeds": {
+    "scene_and_split": 20260929,
+    "detector": 20260929,
+    "paired_bootstrap": 20260929
+  },
+  "hardware": {
+    "device": "cuda",
+    "name": "NVIDIA RTX A2000",
+    "total_memory_bytes": 6078922752,
+    "autocast_dtype": "torch.bfloat16",
+    "driver_version": "595.91.07"
+  },
+  "dependencies": {
+    "torch": "2.9.1+cu126",
+    "torchvision": "0.24.1+cu126",
+    "matplotlib_for_m8_plots": "3.11.2",
+    "lock": "ml/requirements-cu126.lock"
+  },
+  "file_sha256": {
+    "specification.json": "6a0035aabf42cb1ce1caa64668c2dee0e0506215def673bd35e771bc00f12471",
+    "environment.json": "83745470f0391b61d95e8f89a2a788b9125cf4d13faf167431d3a310ea4b3590",
+    "renders/milestone_5/variant_index.json": "cc3e52c935e884d1fdb9bbe380f1bb5b533bd5879f1510a8b5f30e4cd0c12114",
+    "annotations/milestone_5_coco.json": "b648118ed23daf0d398cbe4d80517a07712958574364a5314d95432ab7c25a66",
+    "annotations/milestone_5_frames.json": "e2cecf0e06f7a301c4395586b89af9098b7fd1ca6ce4291f7c934b84f4358e63",
+    "splits/scene_groups.json": "11f3fc329fa9ad78c8f30293ebaaac4bb949804e0a1a5c3a879f683f3c072ef1",
+    "splits/image_assignments.json": "ae371fc20edef0d8299cd1c8827b89204898cfb98fa6a0070d71920ec99633ac",
+    "ml/detector_lock.json": "d9a3945da830e44bc8549dfa8e2532082dfd9430f8f4f9ded803c16c032d0b5a",
+    "ml/requirements-cu126.lock": "428f85a88b33931d128cae7e8b8cc309f2a66fe3099a238307289a06c9c3828e",
+    "ml/dataset.py": "d4b0301d1c261484fd54ca0fb89d60893583505faa018b53df97e30ed9d5788a",
+    "ml/metrics.py": "8ddb9e602001f699eda4bfb897ce8ec6dff11dede0b7f239a47efa8a9a7dc2c9",
+    "ml/train_evaluate.py": "deff60170b452cf6f422402c86ccc6b49a43b251de7528a0fea61cd75f8d5df8",
+    "results/m7_test_metrics.json": "983a032c83be3c5ea65dbbef4106164e84221446fa723c6a6d63781fa8843479",
+    "results/m7_test_predictions.json": "77719a09d838b9d2aa26c15a614e2a3dbc28d05aca0140248ed4b5a0ed953e9c",
+    "results/m8_gsd_analysis.json": "bd6c009af4a343072e6d34591c2cf0b9d914f650e46059a84345e18582232867",
+    "results/m8_performance_vs_gsd.png": "e0602b2b4fe974656860b3b136ef6a676a99b7d74ddcf8abe0f89f5029fbfdcc",
+    "results/m8_performance_vs_gsd.svg": "c910ecdfa034b215cc2f37ef9f17d680d2417407c2bc6a18821f6c4807d1b491",
+    "results/m8_pixels_on_target.png": "7f0423a18b88077853ddeefd3aee66c0bcedd8d20db26346d4dcc972925e531e",
+    "results/m8_pixels_on_target.svg": "4e55b54b2feb733ec0e3178fb1b82eb24d6fd56dac3cd031c8715e20b10c1e98"
+  },
+  "best_checkpoint": {
+    "path": "artifacts/gsd_pilot_v1_m7/best.pt",
+    "sha256": "bc2ccc63ddf4ddab2c6523ca60fee1cd2ea5a88ae3f833a3097cb5ba01510f5d",
+    "tracked_in_git": false
+  },
+  "historical_milestone_manifests": {
+    "1": "01361122b0995ef4b69730b5cfad6c1b75264b2ac7c19717dc34575001efe823",
+    "2": "3a28053018312ac872633d5f639a638942268dc7ec49527ba7c5943ac1d61f31",
+    "3": "08749e3946b31ef712b933cf21c095a6cce519673a8e485154bdaf5dee4498d6",
+    "4": "86d3cd29922a9da1fd4baff30c425f05b2d9b55aa9b2fce4a3a5a68a43ef49a0",
+    "5": "c10d1eda0f38765619178cc94ff051352f1541be44b5339e80037fe03a129fdb",
+    "6": "cf9b39089f2019120bd2df085aab31397160d98721dce25c62035588bd761a65",
+    "7": "6c3d5d818a22114f9a1bcbf98a4ff179d1ddc42c8ccdab3a2d7c605d51c4516a"
+  },
+  "unresolved_external_material_dependencies": "record_unresolved_or_external_do_not_claim_fully_portable_snapshot"
+}
