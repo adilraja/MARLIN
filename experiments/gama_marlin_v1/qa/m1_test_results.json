@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-08",
+  "scope": "fresh offline baseline checks, no Kit launch or scene mutation",
+  "tests": [
+    {"command": "python3 -B tools/test_gama_exchange.py", "exit_code": 0, "tests": 9, "result": "OK", "reported_duration_s": 0.003},
+    {"command": "python3 -B tools/test_gama_live.py", "exit_code": 0, "tests": 3, "result": "OK", "reported_duration_s": 0.000},
+    {"command": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11 -B tools/test_gama_actor.py", "exit_code": 0, "tests": 8, "result": "OK", "reported_duration_s": 0.501}
+  ],
+  "total_tests": 20,
+  "passed": true,
+  "current_live_http": {
+    "base_url": "http://127.0.0.1:8011",
+    "paths": ["/integration/gama/status", "/integration/gama/actor/status", "/debug/scene/inspection"],
+    "result": "connection_refused",
+    "kit_restarted": false
+  },
+  "historical_gama_raw_xml_present": false,
+  "historical_live_model_hashes_match_current_source": true,
+  "fresh_gama_execution": false,
+  "biological_approval": false
+}
