@@ -1,0 +1,29 @@
+{
+  "milestone": 4,
+  "reviewer": "Codex visual inspection",
+  "scope": "Diagnostic camera delivery, visible actor, presentation layout and evidence consistency",
+  "accepted_run": "m4_live_03",
+  "raw_frames_inspected": [
+    "frame_000_surface.png",
+    "frame_008_shallow_swim.png",
+    "frame_016_descent.png",
+    "frame_024_submerged_swim.png",
+    "frame_032_ascent.png",
+    "frame_040_surface.png"
+  ],
+  "all_six_frames_show_actual_porpoise_closeup": true,
+  "complete_porpoise_visible": true,
+  "render_product_camera_and_resolution_verified": true,
+  "gif_layout_inspected": true,
+  "gif": "m4_live_03/porpoise_replay_demo.gif",
+  "gif_sha256": "19b4c7a9583896f8c29f43fa6709df96339a3ac9994be2fede6c5f4e270ffb1e",
+  "passed": true,
+  "limitations": [
+    "The diagnostic camera follows the animal; movement and depth are shown by the plots of actual composed transforms.",
+    "Six actual keyframes are held for two seconds each, rather than presented as real-time body animation.",
+    "The existing porpoise texture is dark and other demonstration animals can appear in the background; no optical tuning was performed.",
+    "All state labels use one static upright pose proxy. No biological or anatomical approval was awarded."
+  ],
+  "biological_approval": false,
+  "named_human_behaviour_review_completed": false
+}

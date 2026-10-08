@@ -12,6 +12,10 @@ ASSET = Path(__file__).resolve().parents[6] / "assets/cetaceans/bottlenose_dolph
 
 
 class IsolatedActor:
+    root_path, actor_path = ROOT, ACTOR
+    agent_id, species, asset = AGENT_ID, SPECIES, ASSET
+    initial_depth_m = .8
+
     def __init__(self):
         self.stage = None
         self.layer = None
@@ -29,11 +33,11 @@ class IsolatedActor:
         units = UsdGeom.GetStageMetersPerUnit(stage)
         if not 0 < units < float("inf"):
             raise ValueError("Invalid stage units")
-        if stage.GetPrimAtPath(ROOT):
+        if stage.GetPrimAtPath(self.root_path):
             raise ValueError("Integration root already exists; refusing to overwrite it")
-        if not ASSET.is_file():
-            raise ValueError("Allowlisted bottlenose asset is unavailable")
-        source = Usd.Stage.Open(str(ASSET))
+        if not self.asset.is_file():
+            raise ValueError("Allowlisted animal asset is unavailable")
+        source = Usd.Stage.Open(str(self.asset))
         source_prim = source.GetDefaultPrim()
         if not source_prim:
             roots = list(source.GetPseudoRoot().GetChildren())
@@ -43,19 +47,17 @@ class IsolatedActor:
         layer = Sdf.Layer.CreateAnonymous("marlin_gama_fixture.usda")
         # Construct off-stage, then attach atomically. No inherited parent transforms.
         isolated = Usd.Stage.Open(layer)
-        root = UsdGeom.Xform.Define(isolated, ROOT)
+        root = UsdGeom.Xform.Define(isolated, self.root_path)
         root.GetPrim().SetCustomDataByKey("marlin:owner", "gama_fixture")
-        actor = UsdGeom.Xform.Define(isolated, ACTOR)
-        UsdGeom.XformCommonAPI(actor).SetTranslate(Gf.Vec3d(0, -.8 / units, 0))
+        actor = UsdGeom.Xform.Define(isolated, self.actor_path)
+        UsdGeom.XformCommonAPI(actor).SetTranslate(Gf.Vec3d(0, -self.initial_depth_m / units, 0))
         UsdGeom.XformCommonAPI(actor).SetRotate(Gf.Vec3f(0, 0, 0))
-        model = UsdGeom.Xform.Define(isolated, ACTOR + "/Model")
-        model.GetPrim().GetReferences().AddReference(str(ASSET), source_prim.GetPath())
+        model = UsdGeom.Xform.Define(isolated, self.actor_path + "/Model")
+        model.GetPrim().GetReferences().AddReference(str(self.asset), source_prim.GetPath())
         # Preserve the visually checked upright/forward correction, calibrating
         # only this owned reference. Never change the asset or gallery.
         UsdGeom.XformCommonAPI(model).SetRotate(Gf.Vec3f(-90, 0, 0))
-        from .calibration import measure
-        calibration = measure(model.GetPrim(), ASSET, profile)
-        UsdGeom.XformCommonAPI(model).SetScale(Gf.Vec3f(calibration["scale_multiplier_relative_to_legacy"] / units))
+        calibration = self._calibrate(model, units, profile)
         root.GetPrim().SetCustomDataByKey("marlin:calibration_profile", calibration["profile"])
         root.GetPrim().SetCustomDataByKey("marlin:axial_length_m", calibration["axial_length_m"])
         stage.GetSessionLayer().subLayerPaths.insert(0, layer.identifier)
@@ -63,9 +65,15 @@ class IsolatedActor:
         self.token = secrets.token_urlsafe(24)
         self.buffer.reset()
         self.calibration = calibration
-        return {"ownership_token": self.token, "actor_path": ACTOR,
-                "agent_id": AGENT_ID, "species": SPECIES,
+        return {"ownership_token": self.token, "actor_path": self.actor_path,
+                "agent_id": self.agent_id, "species": self.species,
                 "meters_per_scene_unit": units, "calibration": calibration}
+
+    def _calibrate(self, model, units, profile):
+        from .calibration import measure
+        calibration = measure(model.GetPrim(), self.asset, profile)
+        UsdGeom.XformCommonAPI(model).SetScale(Gf.Vec3f(calibration["scale_multiplier_relative_to_legacy"] / units))
+        return calibration
 
     def _guard(self, stage, token, paused):
         if self.stage is None or token != self.token:
@@ -75,7 +83,7 @@ class IsolatedActor:
         if stage != self.stage:
             raise ValueError("Active stage changed; fixture is frozen")
         if (self.layer.identifier not in stage.GetSessionLayer().subLayerPaths or
-                not stage.GetPrimAtPath(ACTOR)):
+                not stage.GetPrimAtPath(self.actor_path)):
             raise ValueError("Owned layer/actor is missing; fixture is frozen")
         if UsdGeom.GetStageMetersPerUnit(stage) != self.units or UsdGeom.GetStageUpAxis(stage) != "Y":
             raise ValueError("Stage coordinates changed; fixture is frozen")
@@ -132,11 +140,11 @@ class IsolatedActor:
 
     def status(self):
         pose = None
-        if self.stage is not None and self.stage.GetPrimAtPath(ACTOR):
-            matrix = UsdGeom.Xformable(self.stage.GetPrimAtPath(ACTOR)).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
+        if self.stage is not None and self.stage.GetPrimAtPath(self.actor_path):
+            matrix = UsdGeom.Xformable(self.stage.GetPrimAtPath(self.actor_path)).ComputeLocalToWorldTransform(Usd.TimeCode.Default())
             pose = {"position_scene_units": list(matrix.ExtractTranslation()),
                     "forward_y_up": list(matrix.TransformDir(Gf.Vec3d(0, 0, 1)))}
-        return {"owned": self.stage is not None, "actor_path": ACTOR, "world_pose": pose,
+        return {"owned": self.stage is not None, "actor_path": self.actor_path, "world_pose": pose,
                 "calibration": self.calibration,
                 "accepted_steps": self.buffer.accepted_steps, "latest": self.buffer.latest,
                 "motion_policy": "hold_last_state_without_updates"}

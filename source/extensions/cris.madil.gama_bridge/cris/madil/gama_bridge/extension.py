@@ -11,6 +11,7 @@ class GamaBridgeExtension(omni.ext.IExt):
         self._buffer = StepBuffer()
         self._buffer_v2 = exchange_v2.StepBuffer()
         self._actor = None
+        self._actor_v2 = None
         self._router = ServiceAPIRouter(tags=["MARLIN GAMA preview exchange"])
 
         @self._router.post("/integration/gama/validate")
@@ -38,8 +39,8 @@ class GamaBridgeExtension(omni.ext.IExt):
             self._buffer.reset()
             return {"ok": True, "mode": "validation_only", "rendered": False}
 
-        # v2 is a validation/conversion contract in M2. It cannot acquire an
-        # actor, feed the v1 actor, change controllers, or author scene state.
+        # These original v2 routes remain validation-only. Scene ownership is
+        # separately and explicitly acquired through /v2/actor below.
         @self._router.post("/integration/gama/v2/validate")
         async def validate_v2(payload: dict):
             try:
@@ -94,6 +95,79 @@ class GamaBridgeExtension(omni.ext.IExt):
             import omni.usd
             from cris.madil.render_service import capture_state
             return omni.usd.get_context().get_stage(), capture_state.paused
+
+        def actor_v2():
+            if self._actor_v2 is None:
+                from .actor_v2 import PorpoiseActor
+                self._actor_v2 = PorpoiseActor()
+            return self._actor_v2
+
+        @self._router.post("/integration/gama/v2/actor/acquire")
+        async def acquire_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"agent_id"}:
+                    raise ValueError("Expected agent_id only")
+                stage, paused = context()
+                return {"ok": True, **actor_v2().acquire(stage, payload["agent_id"], paused)}
+            except (ValueError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/step")
+        async def apply_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token", "step"}:
+                    raise ValueError("Expected ownership_token and step only")
+                stage, paused = context()
+                return {"ok": True, **actor_v2().apply(stage, payload["ownership_token"], payload["step"], paused)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/reset")
+        async def reset_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                stage, paused = context()
+                actor_v2().reset(stage, payload["ownership_token"], paused)
+                return {"ok": True, "reset": True, "pose_held": True}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.get("/integration/gama/v2/actor/status")
+        async def status_actor_v2():
+            stage, paused = context()
+            return {"ok": True, **actor_v2().status(stage, paused)}
+
+        @self._router.post("/integration/gama/v2/actor/release")
+        async def release_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                _, paused = context()
+                actor_v2().release(payload["ownership_token"], paused)
+                return {"ok": True, "released": True}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/capture")
+        async def capture_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                from .visual_v2 import capture
+                return {"ok": True, **await capture(actor_v2(), payload["ownership_token"])}
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/cleanup-empty-root")
+        async def cleanup_empty_actor_root_v2(payload: dict):
+            try:
+                if payload:
+                    raise ValueError("Expected an empty object; cleanup has a fixed path")
+                stage, paused = context()
+                return {"ok": True, **actor_v2().cleanup_empty_root(stage, paused)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
 
         @self._router.post("/integration/gama/actor/acquire")
         async def acquire(payload: dict = None):
@@ -162,5 +236,7 @@ class GamaBridgeExtension(omni.ext.IExt):
         main.deregister_router(self._router)
         if self._actor is not None:
             self._actor.close()
+        if self._actor_v2 is not None:
+            self._actor_v2.close()
         self._buffer.reset()
         self._buffer_v2.reset()

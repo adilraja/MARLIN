@@ -1,0 +1,220 @@
+{
+  "passed": true,
+  "milestone": 4,
+  "scope": "offline_adapter_and_preservation_checks",
+  "recorded_at_utc": "2026-10-08T16:54:23.082226+00:00",
+  "results": [
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor_v2.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 24,
+      "minimum_expected_tests": 24,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_actor_v2.log",
+      "log_sha256": "1e1f4860019ba9988cbac290ad8fdaacc051f71c41e6ec405360c19e09472f28",
+      "composed_transform_metrics": {
+        "composed_transform_comparisons": 55,
+        "heading_tolerance_deg": 0.0001,
+        "maximum_heading_error_deg": 3.6397059375303797e-06,
+        "maximum_position_error_m": 1.2560739669470201e-15,
+        "position_tolerance_m": 1e-05
+      }
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 8,
+      "minimum_expected_tests": 8,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_legacy_actor.log",
+      "log_sha256": "cb26a1c4786d6fa24898b6a5120bef4c39ae82ab7a5ffbc3537449bbc9bb9c06"
+    },
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_exchange_v2.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 23,
+      "minimum_expected_tests": 23,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_exchange_v2.log",
+      "log_sha256": "344379f9ccd72687effc66b82b15ad67fc508cd2d5bf6c0129bf366fe0a37c92"
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_v2_stage.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 8,
+      "minimum_expected_tests": 8,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_stage_and_routes.log",
+      "log_sha256": "19d3658ca006542e5aedbc8888fcb4a28bbdca131dd8dc647af0bba154c430e0"
+    },
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_exchange.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 9,
+      "minimum_expected_tests": 9,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_legacy_exchange.log",
+      "log_sha256": "fc6bac17daa2ff62a2e4776db10ff0496a859e12218c3dee4ae2bf5bf2b53f59"
+    },
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_live.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 3,
+      "minimum_expected_tests": 3,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_legacy_live_protocol.log",
+      "log_sha256": "571565c686f8e1b96d7369027bbc92847c8d5978e858dd3b50b5c00047ef7f5b"
+    },
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_porpoise.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 11,
+      "minimum_expected_tests": 11,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m4_final2_porpoise_export.log",
+      "log_sha256": "8ea726cdc63c23c40f46442f207ed1e634a85620cee978b3ccb51c93ddf09618"
+    }
+  ],
+  "total_tests": 86,
+  "python_syntax_checked": [
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "sha256": "4bdce48bae4ed348224371485a74d13a2b7f6f92a3e51aec0450b64862e9aee0"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v2.py",
+      "sha256": "769f900b4b095ec25d6baf2ae4e3e689bec24b44167fa6853285f11e3ce63263"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "sha256": "2af227967f23886522956c7a9f257403b6466871ffd83bd9de24d398f5f9b179"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/visual_v2.py",
+      "sha256": "0930661f0a1edd804848dddbd69afd8fc9ae8505c98a6ecf9eaec11eca646ee1"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v2.py",
+      "sha256": "0d577fa94345bf7d252ff624d49a53f75b7d72c400b4789def69df20a2815e3c"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/stage_coordinates.py",
+      "sha256": "f1d9e00ee369b8026aa5e727a3e52f51bf2b90b508a5e35574b9a5d71873250d"
+    },
+    {
+      "path": "tools/test_gama_actor_v2.py",
+      "sha256": "1eb92d5936546f1de7a8d75657ba006d58ca9cefa418817e859bf2d88537b14f"
+    },
+    {
+      "path": "tools/build_gama_porpoise_demo.py",
+      "sha256": "74f8c00c9abcdec74d70b97cef1fdc2f5bb55daee5d945d033a8f9c801a25463"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m4_checks.py",
+      "sha256": "2d4daa55a5f531fc386a9019760ddf0aa13ae8d2ee4cb16fdce82b813bbaa5a8"
+    },
+    {
+      "path": "tools/verify_gama_porpoise_live.py",
+      "sha256": "cf865ab59457a0f76388bff4c62a418c1145d0add6ba32d32839e1d57d850493"
+    }
+  ],
+  "baseline_verification": {
+    "protected_files_checked": 914,
+    "protected_changes": [],
+    "intentional_source_deltas": [
+      {
+        "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+        "changed": true,
+        "previous_sha256": "be5afa77b6d0f81fffe55ae4bb3f8917db4e60b8a1f48f03ed7ba65be435d26e",
+        "current_sha256": "4bdce48bae4ed348224371485a74d13a2b7f6f92a3e51aec0450b64862e9aee0"
+      },
+      {
+        "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "changed": true,
+        "previous_sha256": "1290245e3ce8e06aecfa7a78a9c8c06b14ff06c649ba6e9cdc2d7cb32cb1f387",
+        "current_sha256": "2af227967f23886522956c7a9f257403b6466871ffd83bd9de24d398f5f9b179"
+      }
+    ],
+    "passed": true
+  },
+  "checkpoint_original_and_backup": {
+    "protected_files_checked": 2,
+    "protected_changes": [],
+    "intentional_source_deltas": [],
+    "passed": true
+  },
+  "baseline_archive": {
+    "protected_files_checked": 1,
+    "protected_changes": [],
+    "intentional_source_deltas": [],
+    "passed": true
+  },
+  "prior_milestone_seals": {
+    "2": {
+      "manifest": "experiments/gama_marlin_v1/qa/milestone_2_manifest.json",
+      "manifest_sha256": "61b23528ce699cefa0a87b32276b41fa590fd90bf0640918a1719746918279c8",
+      "protected_files_checked": 17,
+      "protected_changes": [],
+      "intentional_source_deltas": [
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+          "changed": true,
+          "previous_sha256": "3cb6881fb2519a2ffd0ac6e7cc423dfcc050825b420446a244cad51865851527",
+          "current_sha256": "2af227967f23886522956c7a9f257403b6466871ffd83bd9de24d398f5f9b179"
+        }
+      ],
+      "passed": true
+    },
+    "3": {
+      "manifest": "experiments/gama_marlin_v1/qa/milestone_3_manifest.json",
+      "manifest_sha256": "498683096153fa52de772a31faf7caa66c94640d0acad084edd3aaae72a27f9e",
+      "protected_files_checked": 27,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    }
+  },
+  "retained_actual_gama_records": {
+    "protected_files_checked": 18,
+    "protected_changes": [],
+    "intentional_source_deltas": [],
+    "passed": true
+  },
+  "live_http_verified_by_this_script": false,
+  "biological_approval": false
+}
