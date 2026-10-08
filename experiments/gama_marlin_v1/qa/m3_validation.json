@@ -1,0 +1,122 @@
+{
+  "milestone": 3,
+  "passed": true,
+  "actual_gama_runs": 2,
+  "distinct_seeds": 1,
+  "same_seed_fresh_process_sequences_equal": true,
+  "canonical_comparison_excluded_fields": [
+    "run_id"
+  ],
+  "runs": [
+    {
+      "run_id": "m3_seed_184729_a",
+      "execution": "experiments/gama_marlin_v1/trajectories/m3_seed_184729_a/execution.json",
+      "samples": 41,
+      "transitions": [
+        {
+          "state": "surface",
+          "step_index": 0,
+          "simulation_time_s": 0.0
+        },
+        {
+          "state": "shallow_swim",
+          "step_index": 4,
+          "simulation_time_s": 2.0
+        },
+        {
+          "state": "descent",
+          "step_index": 12,
+          "simulation_time_s": 6.0
+        },
+        {
+          "state": "submerged_swim",
+          "step_index": 20,
+          "simulation_time_s": 10.0
+        },
+        {
+          "state": "ascent",
+          "step_index": 28,
+          "simulation_time_s": 14.0
+        },
+        {
+          "state": "surface",
+          "step_index": 36,
+          "simulation_time_s": 18.0
+        }
+      ],
+      "maximum_errors": {
+        "radius_m": 8.881784197001252e-16,
+        "heading_deg": 2.842170943040401e-14,
+        "depth_m": 0.0,
+        "horizontal_chord_m": 7.105427357601002e-15,
+        "clock_s": 0.0
+      },
+      "raw_xml_sha256": "1d88482aea0dab6ae5efb3409ddb584123bd70a76d26cbea09bf9499954cb30f",
+      "canonical_state_sha256": "5c602f67e1c2bb7d551a23785b8bc1d355fc6fd17e84d8fc4c8257cd1ad82fb2"
+    },
+    {
+      "run_id": "m3_seed_184729_b",
+      "execution": "experiments/gama_marlin_v1/trajectories/m3_seed_184729_b/execution.json",
+      "samples": 41,
+      "transitions": [
+        {
+          "state": "surface",
+          "step_index": 0,
+          "simulation_time_s": 0.0
+        },
+        {
+          "state": "shallow_swim",
+          "step_index": 4,
+          "simulation_time_s": 2.0
+        },
+        {
+          "state": "descent",
+          "step_index": 12,
+          "simulation_time_s": 6.0
+        },
+        {
+          "state": "submerged_swim",
+          "step_index": 20,
+          "simulation_time_s": 10.0
+        },
+        {
+          "state": "ascent",
+          "step_index": 28,
+          "simulation_time_s": 14.0
+        },
+        {
+          "state": "surface",
+          "step_index": 36,
+          "simulation_time_s": 18.0
+        }
+      ],
+      "maximum_errors": {
+        "radius_m": 8.881784197001252e-16,
+        "heading_deg": 2.842170943040401e-14,
+        "depth_m": 0.0,
+        "horizontal_chord_m": 7.105427357601002e-15,
+        "clock_s": 0.0
+      },
+      "raw_xml_sha256": "326135b89ba5671faef01223f5ecf43b69a3a66616b25b78ab92dfb36c2e7662",
+      "canonical_state_sha256": "5c602f67e1c2bb7d551a23785b8bc1d355fc6fd17e84d8fc4c8257cd1ad82fb2"
+    }
+  ],
+  "tests": {
+    "command": [
+      "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+      "-B",
+      "tools/test_gama_porpoise.py",
+      "-v"
+    ],
+    "return_code": 0,
+    "count": 11,
+    "log": "experiments/gama_marlin_v1/qa/m3_export_tests.log",
+    "log_sha256": "5438e046085a0c6dd96f2009e59d69eafc516e1d59ddea30dc167902de0cb2ef"
+  },
+  "protected_m1_files_unchanged": 915,
+  "sealed_m2_outputs_unchanged": 18,
+  "checkpoint_original_and_backup_hashes_match": true,
+  "m5_ten_seed_workload_completed": false,
+  "marlin_scene_application_verified": false,
+  "biological_approval": false
+}
