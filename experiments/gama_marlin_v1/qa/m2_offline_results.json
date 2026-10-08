@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_exchange_v2.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 23,
+      "log": "experiments/gama_marlin_v1/qa/m2_exchange_v2.log",
+      "log_sha256": "344379f9ccd72687effc66b82b15ad67fc508cd2d5bf6c0129bf366fe0a37c92"
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_v2_stage.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 8,
+      "log": "experiments/gama_marlin_v1/qa/m2_stage_and_routes.log",
+      "log_sha256": "9b04811a6bdcc0dfefc559fda3cbd0f9527caedb01468376e202c631d7b5df36"
+    },
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_exchange.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 9,
+      "log": "experiments/gama_marlin_v1/qa/m2_legacy_exchange.log",
+      "log_sha256": "854c6b27d032d4c102b2f1e7ef0397154da27ccbd96a3977cd8df9ef19720334"
+    },
+    {
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/test_gama_live.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 3,
+      "log": "experiments/gama_marlin_v1/qa/m2_legacy_live_protocol.log",
+      "log_sha256": "571565c686f8e1b96d7369027bbc92847c8d5978e858dd3b50b5c00047ef7f5b"
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 8,
+      "log": "experiments/gama_marlin_v1/qa/m2_legacy_actor.log",
+      "log_sha256": "2ddcdd40f0ca5e05c4b35246fa17c6dc35aaa723eff4e81c925333e552d48e7d"
+    }
+  ],
+  "total_tests": 51,
+  "python_syntax_checked": [
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v2.py",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/stage_coordinates.py",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py"
+  ],
+  "protected_baseline_files_checked": 915,
+  "protected_baseline_changes": [],
+  "checkpoint_original_and_backup_hashes_match": true,
+  "live_http_verified": false,
+  "biological_approval": false
+}

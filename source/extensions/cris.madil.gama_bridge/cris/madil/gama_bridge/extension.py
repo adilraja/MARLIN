@@ -3,11 +3,13 @@ import omni.ext
 from omni.services.core import main
 from omni.services.core.routers import ServiceAPIRouter
 from .exchange import StepBuffer, validate_step
+from . import exchange_v2
 
 
 class GamaBridgeExtension(omni.ext.IExt):
     def on_startup(self, _ext_id):
         self._buffer = StepBuffer()
+        self._buffer_v2 = exchange_v2.StepBuffer()
         self._actor = None
         self._router = ServiceAPIRouter(tags=["MARLIN GAMA preview exchange"])
 
@@ -35,6 +37,52 @@ class GamaBridgeExtension(omni.ext.IExt):
         async def reset():
             self._buffer.reset()
             return {"ok": True, "mode": "validation_only", "rendered": False}
+
+        # v2 is a validation/conversion contract in M2. It cannot acquire an
+        # actor, feed the v1 actor, change controllers, or author scene state.
+        @self._router.post("/integration/gama/v2/validate")
+        async def validate_v2(payload: dict):
+            try:
+                return {"ok": True, "snapshot": exchange_v2.validate_step(payload),
+                        "mode": "validation_only", "rendered": False}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        @self._router.post("/integration/gama/v2/steps")
+        async def accept_v2(payload: dict):
+            try:
+                return {"ok": True, "mode": "validation_only", **self._buffer_v2.accept(payload)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        @self._router.get("/integration/gama/v2/status")
+        async def status_v2():
+            return {"ok": True, "schema_version": "2.0", "mode": "validation_only",
+                    "rendered": False, "accepted_steps": self._buffer_v2.accepted_steps,
+                    "latest": self._buffer_v2.latest, "scene_control_enabled": False}
+
+        @self._router.post("/integration/gama/v2/reset")
+        async def reset_v2():
+            self._buffer_v2.reset()
+            return {"ok": True, "mode": "validation_only", "rendered": False}
+
+        @self._router.get("/integration/gama/stage")
+        async def stage_coordinates():
+            import omni.usd
+            from .stage_coordinates import inspect_stage
+            return {"ok": True, "stage_coordinates": inspect_stage(omni.usd.get_context().get_stage()),
+                    "rendered": False}
+
+        @self._router.post("/integration/gama/v2/preview")
+        async def preview_v2(payload: dict):
+            try:
+                # Reject invalid data before even reading the current stage.
+                snapshot = exchange_v2.validate_step(payload)
+                import omni.usd
+                from .stage_coordinates import preview_on_stage
+                return {"ok": True, **preview_on_stage(snapshot, omni.usd.get_context().get_stage())}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
 
         def actor():
             if self._actor is None:
@@ -115,3 +163,4 @@ class GamaBridgeExtension(omni.ext.IExt):
         if self._actor is not None:
             self._actor.close()
         self._buffer.reset()
+        self._buffer_v2.reset()

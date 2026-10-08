@@ -1,0 +1,653 @@
+{
+  "started_at_utc": "2026-10-08T14:16:28.993509+00:00",
+  "base_url": "http://127.0.0.1:8011",
+  "scene_actor_acquired": false,
+  "trace": [
+    {
+      "path": "/debug/scene/inspection",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "root_layer": "anon:0x743770000eb0:World0.usd",
+        "edit_layer": "anon:0x743770000eb0:World0.usd",
+        "layers": [
+          "anon:0x743770004080:World0-session.usda",
+          "anon:0x743770000eb0:World0.usd"
+        ],
+        "camera": "/OmniverseKit_Persp",
+        "prims": [
+          {
+            "path": "/World",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x743770000eb0:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": []
+          },
+          {
+            "path": "/Environment",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x743770000eb0:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x743770000eb0:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x743770000eb0:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(1, 1, 1)",
+                "layers": [
+                  "anon:0x743770000eb0:World0.usd"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/integration/gama/status",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "mode": "validation_only",
+        "rendered": false,
+        "accepted_steps": 0,
+        "latest": null
+      }
+    },
+    {
+      "path": "/integration/gama/v2/status",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "schema_version": "2.0",
+        "mode": "validation_only",
+        "rendered": false,
+        "accepted_steps": 0,
+        "latest": null,
+        "scene_control_enabled": false
+      }
+    },
+    {
+      "path": "/integration/gama/stage",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "stage_coordinates": {
+          "stage_available": true,
+          "root_layer": "anon:0x743770000eb0:World0.usd",
+          "meters_per_scene_unit": 0.01,
+          "up_axis": "Y",
+          "meters_per_unit_authored": true,
+          "up_axis_authored": true,
+          "suitable_for_v2": true,
+          "rejection_reasons": [],
+          "mean_sea_level_world_y_m": 0.0,
+          "vertical_datum_source": "v2_contract_fixed_plane_not_measured_ocean_surface"
+        },
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/validate",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "snapshot": {
+          "schema_version": "2.0",
+          "run_id": "contract_fixture_001",
+          "step_index": 10,
+          "simulation_time_s": 5.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                1.25,
+                -2.5
+              ],
+              "heading_deg": 90.0,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.8
+            }
+          ]
+        },
+        "mode": "validation_only",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/preview",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "snapshot": {
+          "schema_version": "2.0",
+          "run_id": "contract_fixture_001",
+          "step_index": 10,
+          "simulation_time_s": 5.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                1.25,
+                -2.5
+              ],
+              "heading_deg": 90.0,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.8
+            }
+          ]
+        },
+        "stage_coordinates": {
+          "stage_available": true,
+          "root_layer": "anon:0x743770000eb0:World0.usd",
+          "meters_per_scene_unit": 0.01,
+          "up_axis": "Y",
+          "meters_per_unit_authored": true,
+          "up_axis_authored": true,
+          "suitable_for_v2": true,
+          "rejection_reasons": [],
+          "mean_sea_level_world_y_m": 0.0,
+          "vertical_datum_source": "v2_contract_fixed_plane_not_measured_ocean_surface"
+        },
+        "transforms": [
+          {
+            "id": "Porpoise_001",
+            "position_m": [
+              1.25,
+              -0.8,
+              -2.5
+            ],
+            "position_scene_units": [
+              125.0,
+              -80.0,
+              -250.0
+            ],
+            "heading_deg": 90.0,
+            "forward_y_up": [
+              1.0,
+              0.0,
+              6.123233995736766e-17
+            ],
+            "speed_scene_units_per_s": 50.0,
+            "vertical_reference": "mean_sea_level"
+          }
+        ],
+        "mode": "conversion_preview_only",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/status",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "schema_version": "2.0",
+        "mode": "validation_only",
+        "rendered": false,
+        "accepted_steps": 0,
+        "latest": null,
+        "scene_control_enabled": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/steps",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "mode": "validation_only",
+        "accepted": true,
+        "duplicate": false,
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/steps",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "mode": "validation_only",
+        "accepted": true,
+        "duplicate": true,
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/steps",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8,
+            "position_m": [
+              1,
+              2,
+              3
+            ]
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": false,
+        "error": "agent: missing fields []; unknown fields ['position_m']",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/steps",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "instantaneous_wave_surface",
+            "depth_m": 0.8
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": false,
+        "error": "vertical_reference must be 'mean_sea_level'",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/steps",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 10,
+        "simulation_time_s": 5.0,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": -1
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": false,
+        "error": "depth_m must be finite and >= 0",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/steps",
+      "request": {
+        "schema_version": "2.0",
+        "run_id": "contract_fixture_001",
+        "step_index": 9,
+        "simulation_time_s": 4.5,
+        "simulation_step_s": 0.5,
+        "seed": 184729,
+        "agents": [
+          {
+            "agent_id": "Porpoise_001",
+            "species": "harbour_porpoise",
+            "behavioural_state": "shallow_swim",
+            "horizontal_position_m": [
+              1.25,
+              -2.5
+            ],
+            "heading_deg": 90.0,
+            "speed_mps": 0.5,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8
+          }
+        ]
+      },
+      "http_status": 200,
+      "response": {
+        "ok": false,
+        "error": "step_index must increase; only an identical latest-step retry is allowed",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/status",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "schema_version": "2.0",
+        "mode": "validation_only",
+        "rendered": false,
+        "accepted_steps": 1,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "contract_fixture_001",
+          "step_index": 10,
+          "simulation_time_s": 5.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                1.25,
+                -2.5
+              ],
+              "heading_deg": 90.0,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.8
+            }
+          ]
+        },
+        "scene_control_enabled": false
+      }
+    },
+    {
+      "path": "/integration/gama/status",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "mode": "validation_only",
+        "rendered": false,
+        "accepted_steps": 0,
+        "latest": null
+      }
+    },
+    {
+      "path": "/debug/scene/inspection",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "root_layer": "anon:0x743770000eb0:World0.usd",
+        "edit_layer": "anon:0x743770000eb0:World0.usd",
+        "layers": [
+          "anon:0x743770004080:World0-session.usda",
+          "anon:0x743770000eb0:World0.usd"
+        ],
+        "camera": "/OmniverseKit_Persp",
+        "prims": [
+          {
+            "path": "/World",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x743770000eb0:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": []
+          },
+          {
+            "path": "/Environment",
+            "type": "Xform",
+            "prim_stack": [
+              "anon:0x743770000eb0:World0.usd"
+            ],
+            "visibility": "inherited",
+            "xform_ops": [
+              {
+                "name": "xformOp:translate",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x743770000eb0:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:rotateXYZ",
+                "value": "(0, 0, 0)",
+                "layers": [
+                  "anon:0x743770000eb0:World0.usd"
+                ]
+              },
+              {
+                "name": "xformOp:scale",
+                "value": "(1, 1, 1)",
+                "layers": [
+                  "anon:0x743770000eb0:World0.usd"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "path": "/integration/gama/stage",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "stage_coordinates": {
+          "stage_available": true,
+          "root_layer": "anon:0x743770000eb0:World0.usd",
+          "meters_per_scene_unit": 0.01,
+          "up_axis": "Y",
+          "meters_per_unit_authored": true,
+          "up_axis_authored": true,
+          "suitable_for_v2": true,
+          "rejection_reasons": [],
+          "mean_sea_level_world_y_m": 0.0,
+          "vertical_datum_source": "v2_contract_fixed_plane_not_measured_ocean_surface"
+        },
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/reset",
+      "request": {},
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "mode": "validation_only",
+        "rendered": false
+      }
+    },
+    {
+      "path": "/integration/gama/v2/status",
+      "request": null,
+      "http_status": 200,
+      "response": {
+        "ok": true,
+        "schema_version": "2.0",
+        "mode": "validation_only",
+        "rendered": false,
+        "accepted_steps": 0,
+        "latest": null,
+        "scene_control_enabled": false
+      }
+    }
+  ],
+  "biological_approval": false,
+  "passed": true,
+  "current_stage": {
+    "stage_available": true,
+    "root_layer": "anon:0x743770000eb0:World0.usd",
+    "meters_per_scene_unit": 0.01,
+    "up_axis": "Y",
+    "meters_per_unit_authored": true,
+    "up_axis_authored": true,
+    "suitable_for_v2": true,
+    "rejection_reasons": [],
+    "mean_sea_level_world_y_m": 0.0,
+    "vertical_datum_source": "v2_contract_fixed_plane_not_measured_ocean_surface"
+  },
+  "live_conversion_preview": "passed",
+  "checks": {
+    "live_routes_registered": true,
+    "valid_state_accepted": true,
+    "latest_duplicate_idempotent": true,
+    "invalid_states_rejected": 4,
+    "buffer_atomic_after_rejection": true,
+    "v1_state_unchanged": true,
+    "scene_inspection_unchanged": true,
+    "stage_metadata_unchanged": true,
+    "preview_did_not_buffer_state": true
+  },
+  "validation_buffer_cleaned": true,
+  "source_sha256": {
+    "extension.py": "3cb6881fb2519a2ffd0ac6e7cc423dfcc050825b420446a244cad51865851527",
+    "exchange_v2.py": "0d577fa94345bf7d252ff624d49a53f75b7d72c400b4789def69df20a2815e3c",
+    "stage_coordinates.py": "f1d9e00ee369b8026aa5e727a3e52f51bf2b90b508a5e35574b9a5d71873250d"
+  }
+}
