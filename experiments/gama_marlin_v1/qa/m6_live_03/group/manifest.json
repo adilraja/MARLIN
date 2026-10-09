@@ -1,0 +1,5605 @@
+{
+  "milestone": 6,
+  "passed": true,
+  "status": "passed",
+  "source_state": {
+    "schema_version": "2.0",
+    "run_id": "m5_positive_seed_184729_a",
+    "step_index": 8,
+    "simulation_time_s": 4.0,
+    "simulation_step_s": 0.5,
+    "seed": 184729,
+    "agents": [
+      {
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "behavioural_state": "shallow_swim",
+        "horizontal_position_m": [
+          -5.229630306507289,
+          6.054004200300862
+        ],
+        "heading_deg": 49.17856275642697,
+        "speed_mps": 0.5,
+        "vertical_reference": "mean_sea_level",
+        "depth_m": 0.5
+      }
+    ]
+  },
+  "source_world_pose": {
+    "position_scene_units": [
+      -522.9630306507289,
+      -50.0,
+      605.4004200300861
+    ],
+    "forward_y_up": [
+      0.7567505182819388,
+      0.0,
+      0.6537037961340113
+    ]
+  },
+  "orders": [
+    [
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      4.0
+    ],
+    [
+      4.0,
+      3.0,
+      2.0,
+      1.0,
+      0.5
+    ]
+  ],
+  "artificial_delay_s": 2.0,
+  "delay_policy": "Applied before every capture in second and later orders",
+  "captures": [
+    {
+      "order_index": 0,
+      "condition_index": 0,
+      "gsd_cm_px": 0.5,
+      "artificial_delay_s": 0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "63e281f22a0bcb01ff8081c6c76a67e74f006a0e7fd6857089b1b57cf80a6f27",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 0.5,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              4950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          0.4999999888241291,
+          0.49999998882412916
+        ],
+        "camera_separation_from_root_plane_m": 50.0,
+        "reference_footprint_wh_m": [
+          5.119999885559082,
+          3.839999914169312
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_0_condition_0/rgb.png",
+      "rgb_sha256": "083f18f381941aa59bdf3da29c03397999ac5c18d977c84001d2ac5576a11b54",
+      "settling_probes": [
+        {
+          "file": "order_0_condition_0/probe_01.png",
+          "sha256": "d07a9ffe556214d6af4e2a39dbeb951665cc4943c7d9cc804738c8f65957f395",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_0_condition_0/probe_02.png",
+          "sha256": "adf944cd13e33f8205780a182299a831459944f174f9be728dc365759846930a",
+          "mean_absolute_rgb_difference_from_previous": 0.017171223958333332
+        },
+        {
+          "file": "order_0_condition_0/probe_03.png",
+          "sha256": "083f18f381941aa59bdf3da29c03397999ac5c18d977c84001d2ac5576a11b54",
+          "mean_absolute_rgb_difference_from_previous": 0.019571092393663194
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 0,
+      "condition_index": 1,
+      "gsd_cm_px": 1.0,
+      "artificial_delay_s": 0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "eb3087785125084ea8c3e9f8d36589d7daebae7abe7397b1063b50747b1852e9",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 1.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              9950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          0.9999999776482582,
+          0.9999999776482583
+        ],
+        "camera_separation_from_root_plane_m": 100.0,
+        "reference_footprint_wh_m": [
+          10.239999771118164,
+          7.679999828338624
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_0_condition_1/rgb.png",
+      "rgb_sha256": "235448da09be2bd2cf10c3bdee56c6743c01fb75c9d11c3a3b9e84a03cad152f",
+      "settling_probes": [
+        {
+          "file": "order_0_condition_1/probe_01.png",
+          "sha256": "4739eb546ad4ae2ca83c783724997c879392506340ebbffd1840071a8b773b2f",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_0_condition_1/probe_02.png",
+          "sha256": "ec9aff00a4a8572b42f853a9126ce5e857b167bfabe1622206fb27c0dc15e25e",
+          "mean_absolute_rgb_difference_from_previous": 0.009812672932942709
+        },
+        {
+          "file": "order_0_condition_1/probe_03.png",
+          "sha256": "235448da09be2bd2cf10c3bdee56c6743c01fb75c9d11c3a3b9e84a03cad152f",
+          "mean_absolute_rgb_difference_from_previous": 0.012791951497395834
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 0,
+      "condition_index": 2,
+      "gsd_cm_px": 2.0,
+      "artificial_delay_s": 0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "3f6c8b22899349f57225886eedd5d6d184dcfcd0d17ab402acd997de55d4503d",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 2.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              19950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          1.9999999552965164,
+          1.9999999552965166
+        ],
+        "camera_separation_from_root_plane_m": 200.0,
+        "reference_footprint_wh_m": [
+          20.479999542236328,
+          15.359999656677248
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_0_condition_2/rgb.png",
+      "rgb_sha256": "11f72b108dc6460d108c0cfceee18f536bd7f93bc40a1780a1de6269dc2da21f",
+      "settling_probes": [
+        {
+          "file": "order_0_condition_2/probe_01.png",
+          "sha256": "5feb317f4c732ead420aef2580b2fc2ebeb9ec1dfdd15f43885a4db1fd33fe5b",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_0_condition_2/probe_02.png",
+          "sha256": "ec1d485f3497b5d2006d3724c4a200257dcf4b4d50e2c0953ac39ce217b80ef6",
+          "mean_absolute_rgb_difference_from_previous": 0.03047900729709201
+        },
+        {
+          "file": "order_0_condition_2/probe_03.png",
+          "sha256": "11f72b108dc6460d108c0cfceee18f536bd7f93bc40a1780a1de6269dc2da21f",
+          "mean_absolute_rgb_difference_from_previous": 0.0393430921766493
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 0,
+      "condition_index": 3,
+      "gsd_cm_px": 3.0,
+      "artificial_delay_s": 0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "d153958c74b091781f930b5a7ef82fcb6cb16eecca355f30b206d38327b3309d",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 3.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              29950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          2.9999999329447746,
+          2.999999932944775
+        ],
+        "camera_separation_from_root_plane_m": 300.0,
+        "reference_footprint_wh_m": [
+          30.719999313354492,
+          23.039999485015873
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_0_condition_3/rgb.png",
+      "rgb_sha256": "4f18d6ba954071f761ca7632adf372285df2bf5ee00acdf7c4f7ff0680becbdc",
+      "settling_probes": [
+        {
+          "file": "order_0_condition_3/probe_01.png",
+          "sha256": "59811cd32a08188002efe701ab06c8d112e310e1611d26bfabe3eaecaac107af",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_0_condition_3/probe_02.png",
+          "sha256": "816996ac2e0b5b51a4dbd5c86cf854bd8d9b2ba176fceea37228e6ba0ef53451",
+          "mean_absolute_rgb_difference_from_previous": 0.05345874362521702
+        },
+        {
+          "file": "order_0_condition_3/probe_03.png",
+          "sha256": "4f18d6ba954071f761ca7632adf372285df2bf5ee00acdf7c4f7ff0680becbdc",
+          "mean_absolute_rgb_difference_from_previous": 0.03532579210069444
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 0,
+      "condition_index": 4,
+      "gsd_cm_px": 4.0,
+      "artificial_delay_s": 0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "e6d022a4290ef00d46e6de3f93a441e1d66f6b62875940579f9b1c6af1a73c59",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 4.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              39950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          3.999999910593033,
+          3.9999999105930333
+        ],
+        "camera_separation_from_root_plane_m": 400.0,
+        "reference_footprint_wh_m": [
+          40.959999084472656,
+          30.719999313354496
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_0_condition_4/rgb.png",
+      "rgb_sha256": "96dc6bd34e1eb049fa3dd6497a82671035836ef221e1a25ace0a91ac9671f359",
+      "settling_probes": [
+        {
+          "file": "order_0_condition_4/probe_01.png",
+          "sha256": "7a1a61832db13c904afa9bcee66aa15648cf4c9502f46195e8e3af4852655c37",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_0_condition_4/probe_02.png",
+          "sha256": "b9055f8458b48ad3cba6eeb4e258a014b3826bae11988da765d26f0d3af3b55a",
+          "mean_absolute_rgb_difference_from_previous": 0.022561391194661457
+        },
+        {
+          "file": "order_0_condition_4/probe_03.png",
+          "sha256": "96dc6bd34e1eb049fa3dd6497a82671035836ef221e1a25ace0a91ac9671f359",
+          "mean_absolute_rgb_difference_from_previous": 0.01944817437065972
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 1,
+      "condition_index": 0,
+      "gsd_cm_px": 4.0,
+      "artificial_delay_s": 2.0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "e6d022a4290ef00d46e6de3f93a441e1d66f6b62875940579f9b1c6af1a73c59",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 4.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              39950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          3.999999910593033,
+          3.9999999105930333
+        ],
+        "camera_separation_from_root_plane_m": 400.0,
+        "reference_footprint_wh_m": [
+          40.959999084472656,
+          30.719999313354496
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            11.322464021192733,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.400420030095,
+            -39950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_1_condition_0/rgb.png",
+      "rgb_sha256": "8be80cbb32c25091047ac5d8e4021e135af93f90e55ccc567e7037d8cd9d77a2",
+      "settling_probes": [
+        {
+          "file": "order_1_condition_0/probe_01.png",
+          "sha256": "d76f724788561e6bdbaa575956765015fbe0f9e1d5c218605880a169c1277fcf",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_1_condition_0/probe_02.png",
+          "sha256": "2eb85d394f5561b42ef302a01f6faeed1c85f92dac2b37e2d79e50a77c41ce39",
+          "mean_absolute_rgb_difference_from_previous": 0.04927741156684028
+        },
+        {
+          "file": "order_1_condition_0/probe_03.png",
+          "sha256": "8be80cbb32c25091047ac5d8e4021e135af93f90e55ccc567e7037d8cd9d77a2",
+          "mean_absolute_rgb_difference_from_previous": 0.017875247531467017
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 1,
+      "condition_index": 1,
+      "gsd_cm_px": 3.0,
+      "artificial_delay_s": 2.0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "d153958c74b091781f930b5a7ef82fcb6cb16eecca355f30b206d38327b3309d",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 3.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              29950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          2.9999999329447746,
+          2.999999932944775
+        ],
+        "camera_separation_from_root_plane_m": 300.0,
+        "reference_footprint_wh_m": [
+          30.719999313354492,
+          23.039999485015873
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300927,
+            -29950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_1_condition_1/rgb.png",
+      "rgb_sha256": "763235ec18b920388fc89d064c289fcd8c29ef29f8740ca935f96c410b5c4296",
+      "settling_probes": [
+        {
+          "file": "order_1_condition_1/probe_01.png",
+          "sha256": "72f7deebce5faf18b723bafd6bc27e18c3972f4b066373448930f6bac0312bbc",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_1_condition_1/probe_02.png",
+          "sha256": "0d68e1e67bfea6ce7c5acc45fba37736250b1268b647d3fcfcbb0ec7880098ec",
+          "mean_absolute_rgb_difference_from_previous": 0.0286865234375
+        },
+        {
+          "file": "order_1_condition_1/probe_03.png",
+          "sha256": "763235ec18b920388fc89d064c289fcd8c29ef29f8740ca935f96c410b5c4296",
+          "mean_absolute_rgb_difference_from_previous": 0.03779305352105035
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 1,
+      "condition_index": 2,
+      "gsd_cm_px": 2.0,
+      "artificial_delay_s": 2.0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "3f6c8b22899349f57225886eedd5d6d184dcfcd0d17ab402acd997de55d4503d",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 2.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              19950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          1.9999999552965164,
+          1.9999999552965166
+        ],
+        "camera_separation_from_root_plane_m": 200.0,
+        "reference_footprint_wh_m": [
+          20.479999542236328,
+          15.359999656677248
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300906,
+            -19950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_1_condition_2/rgb.png",
+      "rgb_sha256": "a727da0ad93210e812654fe31c1d04b08b421e6ba8f881f75f12408491d340a0",
+      "settling_probes": [
+        {
+          "file": "order_1_condition_2/probe_01.png",
+          "sha256": "29baf5c4e8b2059c00b975c957fe7c29b910c5d8bef17e2e7f99d6814b716be9",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_1_condition_2/probe_02.png",
+          "sha256": "fee354a4f80aabd927ce2fdd8771d76744c468b3ba23b916d1b0353cf1b2eea7",
+          "mean_absolute_rgb_difference_from_previous": 0.02880774603949653
+        },
+        {
+          "file": "order_1_condition_2/probe_03.png",
+          "sha256": "a727da0ad93210e812654fe31c1d04b08b421e6ba8f881f75f12408491d340a0",
+          "mean_absolute_rgb_difference_from_previous": 0.038361443413628474
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 1,
+      "condition_index": 3,
+      "gsd_cm_px": 1.0,
+      "artificial_delay_s": 2.0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "eb3087785125084ea8c3e9f8d36589d7daebae7abe7397b1063b50747b1852e9",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 1.0,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              9950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          0.9999999776482582,
+          0.9999999776482583
+        ],
+        "camera_separation_from_root_plane_m": 100.0,
+        "reference_footprint_wh_m": [
+          10.239999771118164,
+          7.679999828338624
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300883,
+            -9950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_1_condition_3/rgb.png",
+      "rgb_sha256": "cec775c4570fc0a198690417e2e03de9ccaa551477ff746fca711e513f2f5d12",
+      "settling_probes": [
+        {
+          "file": "order_1_condition_3/probe_01.png",
+          "sha256": "5d32cb7757edd3e9f00e674d91cbd9449990e0c6a2b65e5c6ef1d051ea06e3bb",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_1_condition_3/probe_02.png",
+          "sha256": "49f5ea9d134d3eeaf0a1af81f31a2b6306041306b637898ff0320da463145d15",
+          "mean_absolute_rgb_difference_from_previous": 0.007699330647786458
+        },
+        {
+          "file": "order_1_condition_3/probe_03.png",
+          "sha256": "cec775c4570fc0a198690417e2e03de9ccaa551477ff746fca711e513f2f5d12",
+          "mean_absolute_rgb_difference_from_previous": 0.010041554768880209
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    },
+    {
+      "order_index": 1,
+      "condition_index": 4,
+      "gsd_cm_px": 0.5,
+      "artificial_delay_s": 2.0,
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "camera_condition": {
+        "camera_condition_hash": "63e281f22a0bcb01ff8081c6c76a67e74f006a0e7fd6857089b1b57cf80a6f27",
+        "camera_condition": {
+          "version": "gama_marlin_camera_condition_v1",
+          "camera_path": "/MarlinGamaPairCamera",
+          "nominal_gsd_cm_px": 0.5,
+          "reference_plane_y_m": -0.5,
+          "anchor_m": [
+            -5.229630306507289,
+            -0.5,
+            6.054004200300862
+          ],
+          "resolution_px": [
+            1024,
+            768
+          ],
+          "meters_per_scene_unit": 0.01,
+          "composed_camera_matrix": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              -1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              -522.9630306507289,
+              4950.0,
+              605.4004200300861,
+              1.0
+            ]
+          ],
+          "projection": "perspective",
+          "focal_length": 50.0,
+          "horizontal_aperture": 5.119999885559082,
+          "vertical_aperture": 3.8399999141693115,
+          "horizontal_aperture_offset": 0.0,
+          "vertical_aperture_offset": 0.0,
+          "clipping_range_scene_units": [
+            1.0,
+            100000.0
+          ],
+          "focus_distance_scene_units": 0.0,
+          "f_stop": 0.0,
+          "authored_exposure_attributes": {
+            "exposure:fStop": 5.0,
+            "exposure:responsivity": 1.1026709079742432,
+            "exposure:time": 0.019999999552965164
+          },
+          "gsd_scope": "Nominal reference-plane sampling; no underwater refraction or anatomical-surface GSD claim"
+        },
+        "actual_render_product_camera_verified": false
+      },
+      "camera_geometry_validation": {
+        "passed": true,
+        "measured_reference_gsd_xy_cm_px": [
+          0.4999999888241291,
+          0.49999998882412916
+        ],
+        "camera_separation_from_root_plane_m": 50.0,
+        "reference_footprint_wh_m": [
+          5.119999885559082,
+          3.839999914169312
+        ],
+        "note": "Direct pinhole reference-plane geometry; underwater refraction remains uncalibrated"
+      },
+      "projection_before_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "projection_after_capture": {
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          1024,
+          768
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300861,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            10.008670154351764,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/MarlinGamaPairCamera",
+          "resolution": [
+            1024,
+            768
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            522.9630306507289,
+            605.4004200300873,
+            -4950.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            19.531250436557464,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            26.041667248743284,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.000020000200002,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000020000200002,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      },
+      "render_product_camera_verified": true,
+      "rgb_file": "order_1_condition_4/rgb.png",
+      "rgb_sha256": "87b63bf641b36bfbc00788864a2a1c5c2446d8c9c1e0a99a912225a733dba1e4",
+      "settling_probes": [
+        {
+          "file": "order_1_condition_4/probe_01.png",
+          "sha256": "3f7e630be2d8081f42f2a69a735266e8f0e71649c2260d3ecc3636f6f15169e5",
+          "mean_absolute_rgb_difference_from_previous": null
+        },
+        {
+          "file": "order_1_condition_4/probe_02.png",
+          "sha256": "aef5bcf4546950c998697444a96966d33016ce06f95c6c2616bfea81e228cf9c",
+          "mean_absolute_rgb_difference_from_previous": 0.03813086615668403
+        },
+        {
+          "file": "order_1_condition_4/probe_03.png",
+          "sha256": "87b63bf641b36bfbc00788864a2a1c5c2446d8c9c1e0a99a912225a733dba1e4",
+          "mean_absolute_rgb_difference_from_previous": 0.050595177544487856
+        }
+      ],
+      "settling_threshold_mean_absolute_rgb": 1.0,
+      "settling_note": "Consecutive-frame settling only; not proof of RTX sample count or bitwise identity"
+    }
+  ],
+  "state_checks": [
+    {
+      "label": "after_attach",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_0_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_1_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_2_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_3_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_0_condition_4_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_0_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_1_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_2_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_3_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_before_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_after_delay",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_after_warmup",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_probe_1_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_probe_1_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_probe_2_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_probe_2_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_probe_3_before",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_probe_3_after",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    },
+    {
+      "label": "order_1_condition_4_complete",
+      "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+      "matches": true
+    }
+  ],
+  "gpu_preflight": {
+    "device_index": 0,
+    "total_mib": 6138,
+    "free_mib": 1174,
+    "driver": "595.91.07"
+  },
+  "protocol": {
+    "image_resolution": [
+      1024,
+      768
+    ],
+    "focal_length_mm": 50,
+    "pixel_pitch_um": 5,
+    "projection": "nadir ideal perspective",
+    "camera_anchor_xz_m": [
+      -5.229630306507289,
+      6.054004200300862
+    ],
+    "reference_plane_y_m": -0.5,
+    "only_camera_y_varies": true,
+    "footprint_policy": "Height and footprint vary with GSD, as in Pilot v1",
+    "environment": "Frozen current presentation environment; Pilot camera geometry, not a reproduction of Pilot's flat-water/diffuse environment",
+    "biological_suitability": "provisional engineering proxy",
+    "rgb_bitwise_reproducibility_claimed": false
+  },
+  "original_source_content_hash": "9b763cf5d3413d942e365dd386d50b9e6ebdb4f5bbddc49ef3bfabe4c0e4a6bb",
+  "resolved_scene_state_hash": "631a6a4615ec8cf267d5688e294e3044107dcf6004d97e0e08567eb4377a7c8b",
+  "environment_clock": {
+    "source_timeline_seconds": 1.1535348181812557,
+    "source_time_code": 69.21208909087534,
+    "ocean": {
+      "running": true,
+      "ocean_path": "/World/Ocean",
+      "size": 16000.0,
+      "resolution": 128,
+      "speed": 0.4,
+      "choppiness": 0.15,
+      "target_fps": 15.0,
+      "elapsed": 12214.925704000056,
+      "accumulator": 0.0,
+      "waves": [
+        {
+          "dx": 0.9889363528682975,
+          "dz": 0.14834045293024462,
+          "amplitude": 2.6,
+          "k": 0.00966643893412244,
+          "phase": 0.0,
+          "phase_rate": 0.7
+        },
+        {
+          "dx": 0.33035042472810605,
+          "dz": 0.9438583563660174,
+          "amplitude": 1.25,
+          "k": 0.016666274024349035,
+          "phase": 1.3,
+          "phase_rate": 1.0
+        },
+        {
+          "dx": -0.7863183388224226,
+          "dz": 0.6178215519319036,
+          "amplitude": 0.75,
+          "k": 0.028430702747418938,
+          "phase": 2.1,
+          "phase_rate": 1.35
+        },
+        {
+          "dx": 0.8,
+          "dz": -0.6,
+          "amplitude": 0.4,
+          "k": 0.050875994390118105,
+          "phase": 3.4,
+          "phase_rate": 1.8
+        }
+      ],
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "clocks_synchronized_to_gama": false
+  },
+  "frozen_sampled_attributes": 3,
+  "pose_mapping": "static_pose_proxy_v1",
+  "animation_phase": "not_applicable_static_pose",
+  "dependencies": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+      "authored_path": "OmniSurface.mdl",
+      "sha256": null,
+      "status": "runtime_or_unresolved"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+      "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+      "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+      "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162",
+      "status": "local_hashed"
+    }
+  ],
+  "source_scene_sha256": "9a5b4a4ed2dd467806952704760fbb0544453d8e61b37f21118e64c02cca5222",
+  "all_state_hashes_equal": true,
+  "new_pair_camera_overs_removed": [],
+  "restored_source_content_hash": "9b763cf5d3413d942e365dd386d50b9e6ebdb4f5bbddc49ef3bfabe4c0e4a6bb",
+  "restoration_checks": {
+    "original_stage": true,
+    "camera": true,
+    "resolution": true,
+    "fill_frame": true,
+    "selection": true,
+    "renderer": true,
+    "display": true,
+    "timeline_time": true,
+    "timeline_playing": true,
+    "source_content": true,
+    "controller_gate": true,
+    "capture_lock": true
+  },
+  "restoration_errors": [],
+  "recovery_required": false,
+  "controller_gate_restored": true
+}

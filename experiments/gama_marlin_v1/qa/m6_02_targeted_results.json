@@ -1,0 +1,21 @@
+{
+  "milestone": 6,
+  "reason": "Wait for timeline setters after stage attachment while retaining strict clock equality",
+  "result": {
+    "command": [
+      "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+      "-B",
+      "tools/test_gama_paired_transaction.py",
+      "-v"
+    ],
+    "return_code": 0,
+    "tests": 12,
+    "minimum_expected_tests": 12,
+    "passed": true,
+    "log": "experiments/gama_marlin_v1/qa/m6_02_paired_transaction.log",
+    "log_sha256": "bc466f4d93afc4fe0070ae13ec569d87f32c68ebaa761e4bf5ae5376591c8aee"
+  },
+  "passed": true,
+  "current_transaction_source_sha256": "67ed36e9bdea10e034cee0dc5cf38dff9f4c622fb3cb57800f22d099eb3cba6a",
+  "prior_regression_report": "experiments/gama_marlin_v1/qa/m6_01_offline_results.json"
+}

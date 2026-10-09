@@ -1,0 +1,1037 @@
+{
+  "schema_version": "1.0",
+  "milestone": 5,
+  "model_version": "engineering_porpoise_v1",
+  "pose_mapping": "static_pose_proxy_v1",
+  "scope": "Audited unchanged engineering demonstration; no behavioural parameter was biologically calibrated by this register.",
+  "human_review": {
+    "assigned_reviewer": "MAR",
+    "status": "pending",
+    "approval": false,
+    "expertise_assumed": false,
+    "decision_record": "Separate M5 review record; actual decision has not been received."
+  },
+  "biological_approval": false,
+  "measured_evidence": {
+    "path": "experiments/gama_marlin_v1/qa/m5_analysis.json",
+    "purpose": "Actual M5 workload measurements; design-derived values in this register are not substitute execution evidence."
+  },
+  "source_files": {
+    "config": {
+      "path": "experiments/gama_marlin_v1/porpoise_model_config.json",
+      "sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7"
+    },
+    "gaml": {
+      "path": "integrations/gama/porpoise_behaviour.gaml",
+      "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+    },
+    "recorder": {
+      "path": "tools/gama_porpoise.py",
+      "sha256": "6585d102d7a91b5f8d43166f92e634d2b0e3e529b3ee114670e7697954bedc96"
+    },
+    "calibration": {
+      "path": "experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+      "sha256": "898aa89c6faa87d07f66e7f8de1cc0e9c90f90d9c2d5571ddef71f665c2f8171"
+    },
+    "publisher_metadata": {
+      "path": "experiments/gsd_pilot_v1/wildlife/sources.json",
+      "sha256": "e62d9882f29bed3cb556b9542a12f5f5587891b63b67c1cf2bd27c87f592a8c6"
+    },
+    "actor": {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v2.py",
+      "sha256": "769f900b4b095ec25d6baf2ae4e3e689bec24b44167fa6853285f11e3ce63263"
+    },
+    "exchange": {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v2.py",
+      "sha256": "0d577fa94345bf7d252ff624d49a53f75b7d72c400b4789def69df20a2815e3c"
+    },
+    "contract": {
+      "path": "integrations/gama/STATE_CONTRACT_V2.md",
+      "sha256": "b9c8f95ec3797bd4e33d298ba68cfdb495ae10055f4b837793c5046ae1c30d9b"
+    },
+    "m4_pose_scope": {
+      "path": "integrations/gama/PORPOISE_REPLAY_V2.md",
+      "sha256": "49f8be74323f3af992ddf6ef85b61cb24f0deebff8a59af3e355dc1da086081d"
+    },
+    "m4_review": {
+      "path": "experiments/gama_marlin_v1/qa/m4_visual_review.json",
+      "sha256": "450266873816ef0b19a6ad21f1b9a2eefdb8dc811ce5028fe749242a3137dcca"
+    },
+    "zero_seed_execution": {
+      "path": "experiments/gama_marlin_v1/trajectories/m5_retry_seed_0_a/execution.json",
+      "sha256": "383e3bc5b93c719741d837bc388f00e4c058fe2b312ce332cdd9cf06a534d5c9"
+    },
+    "zero_seed_raw_xml": {
+      "path": "experiments/gama_marlin_v1/trajectories/m5_retry_seed_0_a/raw/simulation-outputs0.xml",
+      "sha256": "27a5fbc64893198436ea07a3e3586cee3d2db82d9d479223a0f2c4a5f1764647"
+    },
+    "positive_execution_plan": {
+      "path": "experiments/gama_marlin_v1/m5_positive_execution_plan.json",
+      "sha256": "0a34479257f6c02f88a9323fa4675d2a29c968521708297314418cb0c89b19a2"
+    }
+  },
+  "primary_software_reference": {
+    "title": "GAMA model reproducibility guidance",
+    "url": "https://gama-platform.org/wiki/Ensure-model-reproducibility",
+    "scope": "Software reproducibility conditions, not biological parameter evidence."
+  },
+  "execution_scope": {
+    "agents": 1,
+    "display_aspects": 0,
+    "external_input_during_simulation": false,
+    "seeded_random_draws_per_run": 1,
+    "stochastic_variable": "initial_phase_deg",
+    "workload_scheduling": "Sequential fresh GAMA processes",
+    "comparison_scope": "Canonical states under pinned model, configuration and runtime; exclude only run_id from state content. Wall-clock timestamps and machine paths are execution metadata, outside the canonical sequence.",
+    "empirical_limit": "Passing declared repeated-seed runs does not prove repeatability under parallel execution, display-side randomness, changed runtimes or asynchronous external interactions.",
+    "declared_positive_seeds": [
+      1,
+      2,
+      42,
+      1729,
+      184729,
+      20261008,
+      314159,
+      8675309,
+      123456789,
+      2147483647
+    ],
+    "declared_repeat_seeds": [
+      1,
+      184729,
+      2147483647
+    ],
+    "seed_scope": "Only the ten predeclared positive seeds in the positive execution plan; requested seed 0 is explicitly excluded after the retained rejected mismatch."
+  },
+  "measurement_conventions": {
+    "duration": "Use [t_i,t_(i+1)) intervals; no added interval after t=20. Final surface is right-censored by run stop.",
+    "coverage": "Balanced elapsed label coverage is engineered, not wild occupancy. Sample counts differ due to the endpoint.",
+    "horizontal_speed": "Distinguish instantaneous exported speed from sampled horizontal chord speed.",
+    "turning": "Wrap signed heading differences to [-180,180) before dividing by elapsed simulation time.",
+    "vertical_rate": "Depth increase is positive downward; world-Y velocity is negative. Compare sampled secants to curve secants, not continuous peaks.",
+    "interval_state": "Assign a derivative interval the left sample state label.",
+    "pose": "Retained root-relative geometry bounds and fixed mean plane do not determine wave clearance or breathing."
+  },
+  "evidence_category_counts": {
+    "literature-supported": 0,
+    "expert-specified": 0,
+    "engineering assumption": 31,
+    "unresolved": 11
+  },
+  "parameters": [
+    {
+      "parameter_id": "step",
+      "domain": "time",
+      "configured_value_or_rule": 0.5,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/step"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "global.step; global.update_clock"
+        }
+      ],
+      "measurement_or_constraint": "simulation_time_s = step_index * step; 41 samples from t=0 through t=20 inclusive",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "initial_surface_s",
+      "domain": "state duration",
+      "configured_value_or_rule": 2.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/initial_surface_s"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state surface"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: count and finalStep"
+        }
+      ],
+      "measurement_or_constraint": "Initial segment [0,2); exit observed at t=2.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "shallow_swim_s",
+      "domain": "state duration",
+      "configured_value_or_rule": 4.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/shallow_swim_s"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state shallow_swim"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: count and finalStep"
+        }
+      ],
+      "measurement_or_constraint": "Segment [2,6); exit observed at t=6.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "descent_s",
+      "domain": "state duration",
+      "configured_value_or_rule": 4.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/descent_s"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state descent"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: count and finalStep"
+        }
+      ],
+      "measurement_or_constraint": "Segment [6,10); exit observed at t=10.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "submerged_swim_s",
+      "domain": "state duration",
+      "configured_value_or_rule": 4.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/submerged_swim_s"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state submerged_swim"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: count and finalStep"
+        }
+      ],
+      "measurement_or_constraint": "Segment [10,14); exit observed at t=14.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "ascent_s",
+      "domain": "state duration",
+      "configured_value_or_rule": 4.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/ascent_s"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state ascent"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: count and finalStep"
+        }
+      ],
+      "measurement_or_constraint": "Segment [14,18); exit observed at t=18.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "final_surface_s",
+      "domain": "state duration",
+      "configured_value_or_rule": 2.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/final_surface_s"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state final_surface"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: count and finalStep"
+        }
+      ],
+      "measurement_or_constraint": "Observation [18,20]; right-censored by run stop, without an observed FSM exit.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Final duration contributes to the launcher horizon rather than a terminating final_surface transition.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "state_sequence",
+      "domain": "state transitions",
+      "configured_value_or_rule": [
+        "surface",
+        "shallow_swim",
+        "descent",
+        "submerged_swim",
+        "ascent",
+        "surface"
+      ],
+      "units": "ordered labels",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise FSM states and transitions"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "read_trajectory: transition completeness check"
+        }
+      ],
+      "measurement_or_constraint": "New state body owns each boundary sample. Initial and final surface bodies export the same label.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Equal elapsed label coverage is intentional and does not estimate wild occupancy.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "run_horizon",
+      "domain": "time",
+      "configured_value_or_rule": 20.0,
+      "units": "s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/initial_surface_s; /parameters/shallow_swim_s; /parameters/descent_s; /parameters/submerged_swim_s; /parameters/ascent_s; /parameters/final_surface_s"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "validate_config; execute: finalStep"
+        }
+      ],
+      "measurement_or_constraint": "20 observed seconds; no inferred interval after the t=20 endpoint.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Final surface state is right-censored.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "horizontal_speed_mps",
+      "domain": "horizontal speed",
+      "configured_value_or_rule": 0.5,
+      "units": "m/s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/horizontal_speed_mps"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.horizontal_sample; monitor speed_mps"
+        }
+      ],
+      "measurement_or_constraint": "Instantaneous horizontal speed is constant in every exported state. MARLIN does not integrate it.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. This metadata is not total 3D swimming speed.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "path_radius_m",
+      "domain": "turning",
+      "configured_value_or_rule": 8.0,
+      "units": "m",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/path_radius_m"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.horizontal_sample"
+        }
+      ],
+      "measurement_or_constraint": "sqrt(x*x + z*z) = 8 m about X=Z=0.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Circular bounded path, not a species turning-radius estimate.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "horizontal_path",
+      "domain": "horizontal movement",
+      "configured_value_or_rule": "theta = initial_phase + horizontal_speed_mps * t / path_radius_m; x = R*sin(theta); z = R*cos(theta)",
+      "units": "m, rad",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.horizontal_sample"
+        }
+      ],
+      "measurement_or_constraint": "The same continuous XZ circle is sampled in all states.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. No resting or stationary breathing model.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "initial_phase",
+      "domain": "stochastic variable",
+      "configured_value_or_rule": {
+        "draw": "rnd(360.0)",
+        "range_deg": [
+          0,
+          360
+        ],
+        "upper_bound_exclusive": true,
+        "draws_per_run": 1
+      },
+      "units": "degrees",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "global.init: seed assignment; initial_phase_deg <- rnd(360.0)"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "read_trajectory: initial_phase_deg consistency check"
+        }
+      ],
+      "measurement_or_constraint": "Explicit RNG seed is assigned before the sole draw. Same seed is compared in fresh processes; different seeds should vary initial phase.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Only initial phase, position and heading vary with seed; timing, speed, curvature, depth and poses do not.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "heading_rule",
+      "domain": "heading",
+      "configured_value_or_rule": "wrap360(theta + 90 degrees)",
+      "units": "degrees",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.horizontal_sample: heading_deg"
+        },
+        {
+          "source_id": "exchange",
+          "field_or_symbol": "preview_transforms: forward_y_up"
+        }
+      ],
+      "measurement_or_constraint": "0 degrees = +Z; 90 degrees = +X. Differences use ((h_next-h_prev+180) mod 360)-180.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Heading is horizontal root yaw, not body pitch or 3D velocity direction.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "turning_rate",
+      "domain": "turning",
+      "configured_value_or_rule": {
+        "rad_per_s": 0.0625,
+        "deg_per_s": 3.580986219567645,
+        "equation": "horizontal_speed_mps / path_radius_m"
+      },
+      "units": "rad/s, degrees/s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.horizontal_sample"
+        },
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/horizontal_speed_mps; /parameters/path_radius_m"
+        }
+      ],
+      "measurement_or_constraint": "Positive constant wrapped heading difference / delta_t = 3.580986219567645 degrees/s.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Derived design value, not a measured biological maximum.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "sampled_horizontal_chord_speed",
+      "domain": "speed measurement",
+      "configured_value_or_rule": {
+        "expected_mps": 0.4999796551962679,
+        "equation": "2*R*sin(v*delta_t/(2*R))/delta_t"
+      },
+      "units": "m/s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "read_trajectory: horizontal chord calculation"
+        },
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/step; /parameters/path_radius_m; /parameters/horizontal_speed_mps"
+        }
+      ],
+      "measurement_or_constraint": "At delta_t=0.5 s compare measured displacement/delta_t to 0.4999796551962679, not exactly 0.5.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Secant speed differs geometrically from instantaneous speed.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "surface_depth_m",
+      "domain": "depth",
+      "configured_value_or_rule": 0.2,
+      "units": "m below mean plane",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/surface_depth_m"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "global.surface_depth_m; porpoise depth assignments"
+        }
+      ],
+      "measurement_or_constraint": "0.2 <= depth_m <= 3.0; endpoints follow the configured schedule.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Depth is the existing motion-root origin, not anatomical depth or instantaneous-wave clearance.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "shallow_depth_m",
+      "domain": "depth",
+      "configured_value_or_rule": 0.8,
+      "units": "m below mean plane",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/shallow_depth_m"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "global.shallow_depth_m; porpoise depth assignments"
+        }
+      ],
+      "measurement_or_constraint": "0.2 <= depth_m <= 3.0; endpoints follow the configured schedule.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Depth is the existing motion-root origin, not anatomical depth or instantaneous-wave clearance.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "submerged_depth_m",
+      "domain": "depth",
+      "configured_value_or_rule": 3.0,
+      "units": "m below mean plane",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/submerged_depth_m"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "global.submerged_depth_m; porpoise depth assignments"
+        }
+      ],
+      "measurement_or_constraint": "0.2 <= depth_m <= 3.0; endpoints follow the configured schedule.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Depth is the existing motion-root origin, not anatomical depth or instantaneous-wave clearance.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "vertical_reference",
+      "domain": "depth datum",
+      "configured_value_or_rule": {
+        "vertical_reference": "mean_sea_level",
+        "mean_plane_y_m": 0,
+        "position_m": "[x, -depth_m, z]"
+      },
+      "units": "m",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "exchange",
+          "field_or_symbol": "validate_step: vertical_reference; preview_transforms"
+        },
+        {
+          "source_id": "contract",
+          "field_or_symbol": "section Coordinates and vertical interpretation; section Stage units are inspected"
+        }
+      ],
+      "measurement_or_constraint": "One authoritative vertical coordinate. Divide resolved metric position by inspected positive explicitly authored metersPerUnit on a Y-up stage.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Fixed mean-plane convention. No wave following or biological waterline assertion.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "depth_curve",
+      "domain": "depth evolution",
+      "configured_value_or_rule": "d(u) = d0 + (d1-d0)*u^2*(3-2*u); u=(t-t0)/T",
+      "units": "m",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state shallow_swim; descent; ascent"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "expected_vertical"
+        }
+      ],
+      "measurement_or_constraint": "Monotonic between declared endpoints; derivative (d1-d0)*6*u*(1-u)/T is zero at endpoints.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Smooth bounded interpolation is not a supported species dive profile.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "depth_rate_constraints",
+      "domain": "depth evolution",
+      "configured_value_or_rule": [
+        {
+          "state": "shallow_swim",
+          "d0_m": 0.2,
+          "d1_m": 0.8,
+          "duration_s": 4.0,
+          "analytic_peak_depth_rate_mps": 0.22500000000000003,
+          "maximum_magnitude_sampled_secant_mps": 0.22031250000000002
+        },
+        {
+          "state": "descent",
+          "d0_m": 0.8,
+          "d1_m": 3.0,
+          "duration_s": 4.0,
+          "analytic_peak_depth_rate_mps": 0.8250000000000001,
+          "maximum_magnitude_sampled_secant_mps": 0.8078125
+        },
+        {
+          "state": "ascent",
+          "d0_m": 3.0,
+          "d1_m": 0.2,
+          "duration_s": 4.0,
+          "analytic_peak_depth_rate_mps": -1.0499999999999998,
+          "maximum_magnitude_sampled_secant_mps": -1.028125
+        }
+      ],
+      "units": "m/s positive downward",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.state shallow_swim; descent; ascent"
+        },
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/surface_depth_m; /parameters/shallow_depth_m; /parameters/submerged_depth_m; /parameters/shallow_swim_s; /parameters/descent_s; /parameters/ascent_s; /parameters/step"
+        }
+      ],
+      "measurement_or_constraint": "Analytic peak occurs at u=0.5. Sampled 0.5 s finite differences compare to curve secants. World-Y velocity has opposite sign.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. These derived rates are not porpoise physiological limits. Derivative interval retains the left sample state label.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "speed_3d_interpretation",
+      "domain": "speed measurement",
+      "configured_value_or_rule": "sampled_speed_3d = sqrt(horizontal_chord_speed^2 + sampled_depth_rate^2)",
+      "units": "m/s",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "exchange",
+          "field_or_symbol": "preview_transforms: speed is horizontal metadata"
+        },
+        {
+          "source_id": "gaml",
+          "field_or_symbol": "porpoise.horizontal_sample and depth assignments"
+        }
+      ],
+      "measurement_or_constraint": "Report horizontal and 3D displacement-derived speeds separately.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. No species-specific total swimming-speed range is established.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "pose_mapping",
+      "domain": "pose",
+      "configured_value_or_rule": "static_pose_proxy_v1 for all five labels",
+      "units": "mapping ID",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor._calibrate; PorpoiseActor.apply"
+        },
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/supported_states/0"
+        }
+      ],
+      "measurement_or_constraint": "One unchanged static upright mesh; root heading/depth follow GAMA.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. No breathing, rig, stroke, fin motion, body deformation or animated dive-pose certification.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "root_pitch_roll",
+      "domain": "pose",
+      "configured_value_or_rule": {
+        "pitch_x_deg": 0,
+        "roll_z_deg": 0
+      },
+      "units": "degrees",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor.apply: SetRotate(Gf.Vec3f(0, heading, 0))"
+        }
+      ],
+      "measurement_or_constraint": "Root yaw changes; root pitch and roll remain zero in all labels.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Root attitude does not align with the 3D descent/ascent velocity.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "model_child_rotation",
+      "domain": "asset mapping",
+      "configured_value_or_rule": [
+        -90,
+        0,
+        0
+      ],
+      "units": "degrees XYZ",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/spawn/model_rotation; /spawn/rotation_order"
+        },
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor._calibrate"
+        }
+      ],
+      "measurement_or_constraint": "Reuse [-90,0,0] on the Model child, separately from root heading.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Previously checked static orientation; no new anatomical calibration.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "asset_metric_conversion",
+      "domain": "asset mapping",
+      "configured_value_or_rule": {
+        "metres_per_native_unit": 1.0,
+        "scale_rule": "metres_per_native_unit / inspected metersPerUnit",
+        "m4_stage_scale": 100,
+        "m4_stage_meters_per_unit": 0.01
+      },
+      "units": "m/native unit; dimensionless USD scale",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/spawn/metres_per_native_unit; /spawn/scale; /spawn/required_stage_meters_per_unit"
+        },
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor._calibrate"
+        }
+      ],
+      "measurement_or_constraint": "Runtime scale uses actual inspected stage units rather than an assumed fixed stage factor.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Existing provisional scale is reused. Source-unit metadata does not prove biological size.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "asset_origin",
+      "domain": "pose",
+      "configured_value_or_rule": "existing_asset_origin_not_recentered",
+      "units": "origin policy",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/spawn/origin"
+        },
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor._calibrate; PorpoiseActor.apply"
+        }
+      ],
+      "measurement_or_constraint": "Keep the original asset origin; depth refers to that motion-root datum.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. The origin is not established as a blowhole, centre of mass or other anatomical landmark.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "nominal_surface_upper_bound",
+      "domain": "pose constraint",
+      "configured_value_or_rule": {
+        "retained_root_relative_upper_y_m": 0.16072557866573337,
+        "surface_root_depth_m": 0.2,
+        "nominal_world_upper_y_m": -0.039274421334266646,
+        "nominal_clearance_below_mean_plane_m": 0.039274421334266646,
+        "equation": "world_upper_y = -surface_depth_m + corrected_metric_bounds_relative_to_root.maximum[1]"
+      },
+      "units": "m",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/geometry/corrected_metric_bounds_relative_to_root/maximum/1"
+        },
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameters/surface_depth_m"
+        },
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor.apply: zero root pitch/roll"
+        }
+      ],
+      "measurement_or_constraint": "Using retained static bounds, the nominal entire mesh is at least 0.03927442133426663 m below fixed mean Y=0 in the surface label.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Derived from retained bounds, not a new live vertex measurement, instantaneous wave clearance or breathing/exposure proof.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "missing_update_threshold",
+      "domain": "transport constraint",
+      "configured_value_or_rule": 2.0,
+      "units": "wall-clock seconds",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "actor",
+          "field_or_symbol": "MISSING_UPDATE_AFTER_S; PorpoiseActor.status"
+        }
+      ],
+      "measurement_or_constraint": "No valid update beyond 2 seconds reports frozen_updates_missing while holding the composed pose.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Diagnostic transport threshold, not GAMA simulation time or animal behaviour.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "acceptance_tolerances",
+      "domain": "engineering measurement",
+      "configured_value_or_rule": {
+        "position_m": 1e-08,
+        "heading_deg": 1e-08,
+        "depth_m": 1e-08,
+        "speed_mps": 1e-10,
+        "clock_s": 1e-09
+      },
+      "units": "named SI/degrees tolerances",
+      "evidence_category": "engineering assumption",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/tolerances"
+        },
+        {
+          "source_id": "recorder",
+          "field_or_symbol": "read_trajectory"
+        }
+      ],
+      "measurement_or_constraint": "Use declared oracle tolerances. Do not reinterpret them as biological uncertainty.",
+      "scope_and_uncertainty": "Bounded software-demonstration choice; no claim about wild harbour porpoises. Numeric software acceptance only; composed MARLIN transform tolerances were separately declared in M4.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_state_durations",
+      "domain": "state duration",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameter_basis; /biological_approval"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Species- and context-specific state-duration distributions and occupancy frequencies.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_speed",
+      "domain": "speed",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameter_basis; /biological_approval"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Biological horizontal and 3D speed distributions, state dependence and limits.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_turning",
+      "domain": "turning",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameter_basis; /biological_approval"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Species-specific turn-rate/radius distributions, banking and contextual variation.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_dive_profile",
+      "domain": "depth evolution",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "config",
+          "field_or_symbol": "/parameter_basis; /biological_approval"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Species-specific depth distribution, dive timing, ascent/descent rate distributions and physiological interpretation.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_breathing_waterline",
+      "domain": "pose constraint",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/limitations/2; /supported_states/0"
+        },
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor._calibrate: pose_note"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Anatomical waterline, blowhole exposure, breathing and the meaning of the surface label.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_dive_pose",
+      "domain": "pose constraint",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "actor",
+          "field_or_symbol": "PorpoiseActor._calibrate: pose_note"
+        },
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/limitations/0"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Dive/ascent body pitch, body deformation, stroke/fin motion and animation phase.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_anatomical_optical_suitability",
+      "domain": "asset and pose",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/verification/biological_and_optical_validation; /limitations"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Anatomical and optical suitability beyond the provisional static engineering proxy.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_specimen_length_protocol",
+      "domain": "asset calibration",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/physical_reference"
+        },
+        {
+          "source_id": "publisher_metadata",
+          "field_or_symbol": "/sources/1: id=digitallife_model75a"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Publisher-reported length 1.555 m, candidate landmark equivalence and numerical measurement uncertainty.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_taxonomic_identity",
+      "domain": "asset identity",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "calibration",
+          "field_or_symbol": "/identity/verification; /identity/independent_taxonomic_verification"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Independent verification of publisher-described harbour-porpoise identity.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_human_review",
+      "domain": "review",
+      "configured_value_or_rule": null,
+      "units": "not established",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "m4_review",
+          "field_or_symbol": "/named_human_behaviour_review_completed; /biological_approval"
+        }
+      ],
+      "measurement_or_constraint": "No accepted biological numeric constraint or approval has been supplied.",
+      "scope_and_uncertainty": "Named reviewer MAR must review representative trajectories and rendered poses and supply a stated-scope decision.",
+      "human_review_status": "pending"
+    },
+    {
+      "parameter_id": "unresolved_zero_seed_support",
+      "domain": "engineering reproducibility",
+      "configured_value_or_rule": null,
+      "units": "seed value",
+      "evidence_category": "unresolved",
+      "source_fields": [
+        {
+          "source_id": "zero_seed_execution",
+          "field_or_symbol": "/requested_seed; /status; /return_code; /error"
+        },
+        {
+          "source_id": "zero_seed_raw_xml",
+          "field_or_symbol": "Simulation/Step[@id=0]/Variable[@name=actual_seed]"
+        },
+        {
+          "source_id": "positive_execution_plan",
+          "field_or_symbol": "/seeds; /repeat_seeds; /seed_zero_edge_case"
+        }
+      ],
+      "measurement_or_constraint": "Requested seed 0 exported actual_seed 0.0180602312789524 in retained run m5_retry_seed_0_a; unchanged recorder rejected the mismatch even though launcher return_code was 0.",
+      "scope_and_uncertainty": "Support for requested zero seed remains unresolved and outside the final positive-seed acceptance scope. This is one observed runtime/model edge case, not a universal claim about GAMA seed zero. No seed remapping or raw-value repair was used.",
+      "human_review_status": "pending",
+      "observed_case": {
+        "run_id": "m5_retry_seed_0_a",
+        "requested_seed": 0,
+        "raw_exported_actual_seed": 0.0180602312789524,
+        "recorder_status": "failed",
+        "included_in_positive_acceptance_workload": false
+      }
+    }
+  ]
+}

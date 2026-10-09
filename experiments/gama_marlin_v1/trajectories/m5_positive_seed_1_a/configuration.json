@@ -1,0 +1,34 @@
+{
+  "configuration": {
+    "model_version": "engineering_porpoise_v1",
+    "scope": "engineering_demonstration_not_biologically_calibrated",
+    "experiment": "record_porpoise",
+    "parameters": {
+      "step": 0.5,
+      "path_radius_m": 8.0,
+      "horizontal_speed_mps": 0.5,
+      "surface_depth_m": 0.2,
+      "shallow_depth_m": 0.8,
+      "submerged_depth_m": 3.0,
+      "initial_surface_s": 2.0,
+      "shallow_swim_s": 4.0,
+      "descent_s": 4.0,
+      "submerged_swim_s": 4.0,
+      "ascent_s": 4.0,
+      "final_surface_s": 2.0
+    },
+    "parameter_basis": "All numeric behaviour settings are engineering assumptions for a bounded software demonstration, not claims about wild harbour porpoises. Seed affects initial angular phase only. Depth refers to the motion-root origin below fixed mean sea level.",
+    "asset_calibration_record": "experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+    "asset_scope": "Existing Pilot static candidate; no source asset modification, new calibration, pose or animation certification.",
+    "tolerances": {
+      "position_m": 1e-08,
+      "heading_deg": 1e-08,
+      "depth_m": 1e-08,
+      "speed_mps": 1e-10,
+      "clock_s": 1e-09
+    },
+    "biological_approval": false
+  },
+  "run_id": "m5_positive_seed_1_a",
+  "requested_seed": 1
+}

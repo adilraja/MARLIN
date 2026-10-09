@@ -169,6 +169,16 @@ class GamaBridgeExtension(omni.ext.IExt):
             except ValueError as error:
                 return {"ok": False, "error": str(error)}
 
+        @self._router.post("/integration/gama/v2/actor/paired-capture")
+        async def paired_capture_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token", "orders", "delay_s"}:
+                    raise ValueError("Expected ownership_token, orders and delay_s only")
+                from .paired_v2 import run
+                return await run(actor_v2(), payload["ownership_token"], payload["orders"], payload["delay_s"])
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
         @self._router.post("/integration/gama/actor/acquire")
         async def acquire(payload: dict = None):
             try:

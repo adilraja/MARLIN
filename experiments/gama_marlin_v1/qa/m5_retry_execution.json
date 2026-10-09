@@ -1,0 +1,34 @@
+{
+  "milestone": 5,
+  "passed": false,
+  "plan_sha256": "70e0e06a56bb6d12a5eb54c4d2f91f117e113771ace70c0052bc851a01613fd1",
+  "started_at_utc": "2026-10-08T18:23:32.262313+00:00",
+  "runs": [
+    {
+      "run_id": "m5_retry_seed_0_a",
+      "seed": 0,
+      "repeat": false,
+      "recorder_process_id": 82088,
+      "return_code": 1,
+      "command": [
+        "/home/madil/.pyenv/versions/3.12.13/bin/python3",
+        "-B",
+        "tools/gama_porpoise.py",
+        "--run-id",
+        "m5_retry_seed_0_a",
+        "--seed",
+        "0"
+      ],
+      "recorder_log": "experiments/gama_marlin_v1/qa/m5_retry_recorder_logs/m5_retry_seed_0_a.log",
+      "recorder_log_sha256": "383e3bc5b93c719741d837bc388f00e4c058fe2b312ce332cdd9cf06a534d5c9",
+      "directory": "experiments/gama_marlin_v1/trajectories/m5_retry_seed_0_a",
+      "execution_sha256": "383e3bc5b93c719741d837bc388f00e4c058fe2b312ce332cdd9cf06a534d5c9",
+      "status": "failed"
+    }
+  ],
+  "marlin_http_used": false,
+  "scene_actor_acquired": false,
+  "biological_approval": false,
+  "error": "RuntimeError: Run failed; evidence retained: m5_retry_seed_0_a",
+  "finished_at_utc": "2026-10-08T18:23:35.547693+00:00"
+}

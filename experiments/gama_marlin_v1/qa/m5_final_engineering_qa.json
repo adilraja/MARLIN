@@ -1,0 +1,75 @@
+{
+  "milestone": 5,
+  "engineering_passed": true,
+  "recorded_at_utc": "2026-10-08T18:41:49.867454+00:00",
+  "preservation": {
+    "baseline": {
+      "protected_files_checked": 914,
+      "protected_changes": [],
+      "intentional_source_deltas": [
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+          "changed": true,
+          "previous_sha256": "be5afa77b6d0f81fffe55ae4bb3f8917db4e60b8a1f48f03ed7ba65be435d26e",
+          "current_sha256": "4bdce48bae4ed348224371485a74d13a2b7f6f92a3e51aec0450b64862e9aee0"
+        },
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+          "changed": true,
+          "previous_sha256": "1290245e3ce8e06aecfa7a78a9c8c06b14ff06c649ba6e9cdc2d7cb32cb1f387",
+          "current_sha256": "2af227967f23886522956c7a9f257403b6466871ffd83bd9de24d398f5f9b179"
+        }
+      ],
+      "passed": true
+    },
+    "checkpoint_copies": {
+      "protected_files_checked": 2,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "archive": {
+      "protected_files_checked": 1,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "m2_artifacts_excluding_later_documented_m4_source_change": {
+      "protected_files_checked": 17,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "m3_seal": {
+      "protected_files_checked": 27,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "m4_seal": {
+      "protected_files_checked": 56,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    }
+  },
+  "python_syntax_checked": [
+    "tools/run_gama_porpoise_m5.py",
+    "tools/analyze_gama_porpoise.py",
+    "tools/test_gama_porpoise_analysis.py",
+    "tools/plot_gama_porpoise_m5.py",
+    "experiments/gama_marlin_v1/qa/verify_m5.py"
+  ],
+  "source_and_doc_whitespace_passed": true,
+  "plot_pins_verified": 52,
+  "independent_audits": [
+    "Execution provenance and runner/verifier: no blocking findings.",
+    "Behavioural metrics and register: no blocking findings.",
+    "Report, review packet and review-material hashes: no blocking findings."
+  ],
+  "visual_qa": "experiments/gama_marlin_v1/qa/m5_visual_qa.json",
+  "historical_m2_source_change_note": "M4 intentionally changed extension.py; the 17 other M2 outputs remained unchanged. The current extension source is pinned and unchanged in the M4 seal.",
+  "human_review_completed": false,
+  "biological_approval": false,
+  "milestone_6_started": false
+}

@@ -1,0 +1,123 @@
+{
+  "milestone": 5,
+  "campaign": "m5_retry",
+  "orchestrator_sha256": "271fdb8fefdd52e49ab2cb77b580baeafe7d89f29a5ab0534442816a9efc2750",
+  "declared_at_utc": "2026-10-08T18:00:41.034069+00:00",
+  "model_version": "engineering_porpoise_v1",
+  "seeds": [
+    0,
+    1,
+    42,
+    1729,
+    184729,
+    20261008,
+    314159,
+    8675309,
+    123456789,
+    2147483647
+  ],
+  "repeat_seeds": [
+    0,
+    184729,
+    2147483647
+  ],
+  "fresh_process_executions": 13,
+  "launch_policy": "sequential; one new recorder and GAMA launcher/JVM invocation per run; distinct workspace and output",
+  "pins": {
+    "runtime": {
+      "gama.commit": "ab35ccb69a12b3e2ac9e0b902662f24a82367995",
+      "gama.jdk": "21.0.7+6",
+      "gama.version": "2025.6.4"
+    },
+    "launcher": "/opt/gama-platform/headless/gama-headless.sh",
+    "launcher_sha256": "d43692e651a266190de49af73a1496822ba2cfd87436d55abfff6aa565440c12",
+    "runtime_configuration_sha256": "9f51b1826e86deb4995566ff4a8ee9ae560a67ba1657b8b443dcf4661d800055",
+    "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+    "configuration_sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7",
+    "asset_calibration_sha256": "898aa89c6faa87d07f66e7f8de1cc0e9c90f90d9c2d5571ddef71f665c2f8171",
+    "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef"
+  },
+  "canonical_excluded_fields": [
+    "run_id"
+  ],
+  "same_seed_comparison": "exact canonical bytes",
+  "cross_seed_variation": "initial phase and horizontal pose only; seed values alone do not demonstrate variation",
+  "metric_tolerances": {
+    "position_m": 1e-08,
+    "heading_deg": 1e-08,
+    "depth_m": 1e-08,
+    "speed_mps": 1e-10,
+    "clock_s": 1e-09,
+    "turn_rate_deg_per_s": 1e-07
+  },
+  "runs": [
+    {
+      "run_id": "m5_retry_seed_0_a",
+      "seed": 0,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_1_a",
+      "seed": 1,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_42_a",
+      "seed": 42,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_1729_a",
+      "seed": 1729,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_184729_a",
+      "seed": 184729,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_20261008_a",
+      "seed": 20261008,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_314159_a",
+      "seed": 314159,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_8675309_a",
+      "seed": 8675309,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_123456789_a",
+      "seed": 123456789,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_2147483647_a",
+      "seed": 2147483647,
+      "repeat": false
+    },
+    {
+      "run_id": "m5_retry_seed_0_b",
+      "seed": 0,
+      "repeat": true
+    },
+    {
+      "run_id": "m5_retry_seed_184729_b",
+      "seed": 184729,
+      "repeat": true
+    },
+    {
+      "run_id": "m5_retry_seed_2147483647_b",
+      "seed": 2147483647,
+      "repeat": true
+    }
+  ],
+  "reviewer": "MAR",
+  "human_review_completed": false,
+  "biological_approval": false
+}

@@ -1,0 +1,95 @@
+{
+  "milestone": 5,
+  "name": "Validate reproducibility and review the behavioural model",
+  "reviewer": "MAR",
+  "assignment_source": "User explicitly answered MAR to the named human reviewer question on 2026-10-08",
+  "status": "completed",
+  "prepared_at_utc": "2026-10-08T18:39:58.306423+00:00",
+  "human_review_completed": true,
+  "engineering_reproducibility": "passed",
+  "biological_suitability": "provisional",
+  "biological_approval": false,
+  "proposed_use": "Explicitly labelled engineering proxy for deterministic GAMA-to-MARLIN state transfer and capture-pipeline development",
+  "human_decision": "provisional; engineering use only",
+  "decision_source": {
+    "kind": "direct_user_message_in_current_chat",
+    "verbatim": "Many thanks for this. I have reviewed the material and it looks good for now.",
+    "reviewer_identity": "MAR, previously assigned by the user",
+    "received_on_client_date": "2026-10-08"
+  },
+  "review_materials": [
+    {
+      "path": "experiments/gama_marlin_v1/M5_MAR_REVIEW_PACKET.md",
+      "bytes": 4500,
+      "sha256": "811ebc9318db327b295a1c90628a5e6c9706555d75f12a743273c1a646159044"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/M5_BEHAVIOURAL_PARAMETER_REGISTER.md",
+      "bytes": 11591,
+      "sha256": "095152cd7e8025ceca444349e519e76b1535a2c817ad0156b742deda00ad92ea"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/m5_parameter_register.json",
+      "bytes": 42553,
+      "sha256": "f3ad5bf3d9adcc656fa09e447ec3155c3c04080f9aa789cf45826f07c6cc8c0f"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_analysis.json",
+      "bytes": 261042,
+      "sha256": "1db3945ef2beeab2012ce8127cde4aba6164ec278f715e694abd8cc97c79c345"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_review_figures/plot_manifest.json",
+      "bytes": 13752,
+      "sha256": "c94fa8e441e0de940bf9a256c37f90571cc9f28dc6cb91a28ae422a1c350ce2d"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_review_figures/m5_representative_depth_and_states.png",
+      "bytes": 173969,
+      "sha256": "e59a66059bba8c1e296405e64354ccc1e51643d4c99506db664017f07f5a7555"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_review_figures/m5_representative_recorded_poses.png",
+      "bytes": 1009495,
+      "sha256": "34a308f7a8c3317ce59b6ef04aac54c90a7853013f5665c078d074893fa3209d"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_review_figures/m5_representative_speed_and_turning.png",
+      "bytes": 211611,
+      "sha256": "cf8407e15ce8ed7bbef5dbe763916bac5ccbd4b3495d7cfaa34473cead1b0b7e"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_review_figures/m5_ten_seed_trajectories.png",
+      "bytes": 196122,
+      "sha256": "768e3053c7fa6d22a44249d305effc76ac47a4515b6f2c2326fe9059d41e17a1"
+    }
+  ],
+  "limitations": [
+    "Engineering assumptions do not establish realistic animal behaviour.",
+    "Balanced state coverage does not estimate wild occupancy.",
+    "One static pose is used for all five labels; dive pitch, body animation and breathing remain unvalidated.",
+    "Depth is relative to a fixed mean sea-level plane, not anatomical or instantaneous wave clearance.",
+    "Retained actual M4 renders were reused after exact source-state and sealed provenance checks; no new M5 captures.",
+    "Reproducibility acceptance covers declared positive seeds on the pinned installed configuration; the observed seed-zero mismatch was rejected."
+  ],
+  "milestone_6_started": false,
+  "reviewed_at_utc": "2026-10-08T18:51:35.912696+00:00",
+  "decision_interpretation": "The human confirmed reviewing the material and finding it acceptable for now. Recorded conservatively as provisional suitability for the engineering use and limitations presented in the review packet. This is an interpretation, not a verbatim selection of that label or evidence of biological expertise.",
+  "accepted_use": "Explicitly labelled engineering proxy for deterministic GAMA-to-MARLIN state transfer and capture-pipeline development",
+  "overall_milestone_status": "complete",
+  "history": [
+    {
+      "at_utc": "2026-10-08T18:39:58.306423+00:00",
+      "status": "pending",
+      "human_review_completed": false
+    },
+    {
+      "at_utc": "2026-10-08T18:51:35.912696+00:00",
+      "status": "completed",
+      "human_review_completed": true,
+      "biological_suitability": "provisional",
+      "biological_approval": false
+    }
+  ],
+  "historical_snapshot_note": "Pending flags and the unresolved human-review entry in the sealed packet, register, analysis and engineering manifest describe their preparation state. This completed record is authoritative for the subsequent human outcome; biological and numerical unresolved items remain unresolved."
+}

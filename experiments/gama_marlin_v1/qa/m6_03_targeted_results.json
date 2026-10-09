@@ -1,0 +1,26 @@
+{
+  "milestone": 6,
+  "recorded_at_utc": "2026-10-08T19:34:47.139323+00:00",
+  "reason": "Verified unique per-probe PNG targets and fresh output after the fixed temporary-file stale-image failure",
+  "result": {
+    "command": [
+      "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+      "-B",
+      "tools/test_gama_paired_transaction.py"
+    ],
+    "return_code": 0,
+    "tests": 13,
+    "minimum_expected_tests": 13,
+    "passed": true,
+    "log": "experiments/gama_marlin_v1/qa/m6_03_paired_transaction.log",
+    "log_sha256": "044d6fa1b27f96d2f9ddccdc3109cfe6cce5657c12ec9e36dfa8ee0c120dd62a",
+    "retention_note": "Captured output from the already-running plain unittest subprocess; no second test execution"
+  },
+  "passed": true,
+  "current_transaction_source_sha256": "3b59145df4910be95ef7b70b19630402f8f38e97f5efa23e2ecd2073968e95c8",
+  "transaction_test_source_sha256": "49f6fc9271aff515531a1124d32358ecc4f351b24503cd66d0ff60e671d32e51",
+  "prior_regression_report": "experiments/gama_marlin_v1/qa/m6_01_offline_results.json",
+  "prior_regression_report_sha256": "ca04180efed75ed592ec90fa570232bf9ea51e93541fbfe3a1eef95fc96db5f7",
+  "live_calls_made": false,
+  "rgb_fixture_scope": "Actual USD and PorpoiseActor with fake Kit/capture boundaries; synthetic unit-test PNGs only"
+}
