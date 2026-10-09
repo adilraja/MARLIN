@@ -1,0 +1,252 @@
+"""Optional NVIDIA Kit Services exchange and isolated actor control."""
+import omni.ext
+from omni.services.core import main
+from omni.services.core.routers import ServiceAPIRouter
+from .exchange import StepBuffer, validate_step
+from . import exchange_v2
+
+
+class GamaBridgeExtension(omni.ext.IExt):
+    def on_startup(self, _ext_id):
+        self._buffer = StepBuffer()
+        self._buffer_v2 = exchange_v2.StepBuffer()
+        self._actor = None
+        self._actor_v2 = None
+        self._router = ServiceAPIRouter(tags=["MARLIN GAMA preview exchange"])
+
+        @self._router.post("/integration/gama/validate")
+        async def validate(payload: dict):
+            try:
+                return {"ok": True, "snapshot": validate_step(payload), "rendered": False}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        @self._router.post("/integration/gama/steps")
+        async def accept(payload: dict):
+            try:
+                return {"ok": True, **self._buffer.accept(payload)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        @self._router.get("/integration/gama/status")
+        async def status():
+            return {"ok": True, "mode": "validation_only", "rendered": False,
+                    "accepted_steps": self._buffer.accepted_steps,
+                    "latest": self._buffer.latest}
+
+        @self._router.post("/integration/gama/reset")
+        async def reset():
+            self._buffer.reset()
+            return {"ok": True, "mode": "validation_only", "rendered": False}
+
+        # These original v2 routes remain validation-only. Scene ownership is
+        # separately and explicitly acquired through /v2/actor below.
+        @self._router.post("/integration/gama/v2/validate")
+        async def validate_v2(payload: dict):
+            try:
+                return {"ok": True, "snapshot": exchange_v2.validate_step(payload),
+                        "mode": "validation_only", "rendered": False}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        @self._router.post("/integration/gama/v2/steps")
+        async def accept_v2(payload: dict):
+            try:
+                return {"ok": True, "mode": "validation_only", **self._buffer_v2.accept(payload)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        @self._router.get("/integration/gama/v2/status")
+        async def status_v2():
+            return {"ok": True, "schema_version": "2.0", "mode": "validation_only",
+                    "rendered": False, "accepted_steps": self._buffer_v2.accepted_steps,
+                    "latest": self._buffer_v2.latest, "scene_control_enabled": False}
+
+        @self._router.post("/integration/gama/v2/reset")
+        async def reset_v2():
+            self._buffer_v2.reset()
+            return {"ok": True, "mode": "validation_only", "rendered": False}
+
+        @self._router.get("/integration/gama/stage")
+        async def stage_coordinates():
+            import omni.usd
+            from .stage_coordinates import inspect_stage
+            return {"ok": True, "stage_coordinates": inspect_stage(omni.usd.get_context().get_stage()),
+                    "rendered": False}
+
+        @self._router.post("/integration/gama/v2/preview")
+        async def preview_v2(payload: dict):
+            try:
+                # Reject invalid data before even reading the current stage.
+                snapshot = exchange_v2.validate_step(payload)
+                import omni.usd
+                from .stage_coordinates import preview_on_stage
+                return {"ok": True, **preview_on_stage(snapshot, omni.usd.get_context().get_stage())}
+            except ValueError as error:
+                return {"ok": False, "error": str(error), "rendered": False}
+
+        def actor():
+            if self._actor is None:
+                from .actor import IsolatedActor
+                self._actor = IsolatedActor()
+            return self._actor
+
+        def context():
+            import omni.usd
+            from cris.madil.render_service import capture_state
+            return omni.usd.get_context().get_stage(), capture_state.paused
+
+        def actor_v2():
+            if self._actor_v2 is None:
+                from .actor_v2 import PorpoiseActor
+                self._actor_v2 = PorpoiseActor()
+            return self._actor_v2
+
+        @self._router.post("/integration/gama/v2/actor/acquire")
+        async def acquire_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"agent_id"}:
+                    raise ValueError("Expected agent_id only")
+                stage, paused = context()
+                return {"ok": True, **actor_v2().acquire(stage, payload["agent_id"], paused)}
+            except (ValueError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/step")
+        async def apply_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token", "step"}:
+                    raise ValueError("Expected ownership_token and step only")
+                stage, paused = context()
+                return {"ok": True, **actor_v2().apply(stage, payload["ownership_token"], payload["step"], paused)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/reset")
+        async def reset_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                stage, paused = context()
+                actor_v2().reset(stage, payload["ownership_token"], paused)
+                return {"ok": True, "reset": True, "pose_held": True}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.get("/integration/gama/v2/actor/status")
+        async def status_actor_v2():
+            stage, paused = context()
+            return {"ok": True, **actor_v2().status(stage, paused)}
+
+        @self._router.post("/integration/gama/v2/actor/release")
+        async def release_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                _, paused = context()
+                actor_v2().release(payload["ownership_token"], paused)
+                return {"ok": True, "released": True}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/capture")
+        async def capture_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                from .visual_v2 import capture
+                return {"ok": True, **await capture(actor_v2(), payload["ownership_token"])}
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/cleanup-empty-root")
+        async def cleanup_empty_actor_root_v2(payload: dict):
+            try:
+                if payload:
+                    raise ValueError("Expected an empty object; cleanup has a fixed path")
+                stage, paused = context()
+                return {"ok": True, **actor_v2().cleanup_empty_root(stage, paused)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/v2/actor/paired-capture")
+        async def paired_capture_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token", "orders", "delay_s"}:
+                    raise ValueError("Expected ownership_token, orders and delay_s only")
+                from .paired_v2 import run
+                return await run(actor_v2(), payload["ownership_token"], payload["orders"], payload["delay_s"])
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/actor/acquire")
+        async def acquire(payload: dict = None):
+            try:
+                payload = payload or {}
+                if set(payload) - {"profile"}:
+                    raise ValueError("Only profile may be specified")
+                stage, paused = context()
+                return {"ok": True, **actor().acquire(stage, paused, payload.get("profile", "coastal_candidate_v1"))}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/actor/step")
+        async def apply(payload: dict):
+            try:
+                if set(payload) != {"ownership_token", "step"}:
+                    raise ValueError("Expected ownership_token and step only")
+                stage, paused = context()
+                return {"ok": True, **actor().apply(stage, payload["ownership_token"], payload["step"], paused)}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/actor/release")
+        async def release(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                _, paused = context()
+                actor().release(payload["ownership_token"], paused)
+                return {"ok": True, "released": True}
+            except ValueError as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.get("/integration/gama/actor/status")
+        async def actor_status():
+            return {"ok": True, **actor().status()}
+
+        @self._router.get("/integration/gama/marine/audit")
+        async def marine_audit():
+            from .marine_check import audit
+            return await audit()
+
+        @self._router.post("/integration/gama/actor/capture")
+        async def actor_capture(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                from .marine_check import capture
+                return await capture(actor(), payload["ownership_token"])
+            except (ValueError, RuntimeError) as error:
+                return {"ok": False, "error": str(error)}
+
+        @self._router.post("/integration/gama/capture/counterfactual")
+        async def counterfactual(payload: dict):
+            try:
+                if set(payload) != {"capture_id"}:
+                    raise ValueError("Expected capture_id only")
+                from .counterfactual import run
+                return await run(payload["capture_id"])
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok":False,"error":str(error)}
+
+        main.register_router(self._router)
+
+    def on_shutdown(self):
+        main.deregister_router(self._router)
+        if self._actor is not None:
+            self._actor.close()
+        if self._actor_v2 is not None:
+            self._actor_v2.close()
+        self._buffer.reset()
+        self._buffer_v2.reset()

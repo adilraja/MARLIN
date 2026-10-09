@@ -1,0 +1,19 @@
+{
+  "milestone": 7,
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/capture_gama_dataset_v2.py",
+    "--declaration",
+    "experiments/gama_marlin_v1/m7_capture_declaration.json",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m7_live_01"
+  ],
+  "return_code": 1,
+  "log": "command.log",
+  "results": "results.json",
+  "passed": false,
+  "failure": "Third declared snapshot refused by unchanged GPU headroom preflight before rendering; all retained captures and failure records preserved",
+  "replacement_state_selected": false,
+  "recorded_at_utc": "2026-10-09 13:12:35 UTC"
+}

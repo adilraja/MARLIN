@@ -1,0 +1,36 @@
+{
+  "milestone": 7,
+  "recorded_at_utc": "2026-10-09T12:08:00.968165+00:00",
+  "purpose": "Pure client declaration/trajectory split/provenance and honest annotation/YOLO/hash rejection checks",
+  "result": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "tools/test_gama_dataset_client.py",
+      "-v"
+    ],
+    "return_code": 0,
+    "tests": 27,
+    "minimum_expected_tests": 27,
+    "passed": true,
+    "log": "experiments/gama_marlin_v1/qa/m7_02_dataset_client.log",
+    "log_sha256": "ab50259294644eda3ce71a03f2bf05a1ff9d61d8c35e63fcbc0afbc0f7ba6d1e"
+  },
+  "source_hashes_before": {
+    "tools/capture_gama_dataset_v2.py": "6e018399002a8b7e554dc5c6b28dea4766841aeb7dbc430e24da3f7c2bdc8f55",
+    "tools/test_gama_dataset_client.py": "845863da7cecc1299412b0fd0e4fca8a0736f368d9c98b692f48ab3338a73ebf",
+    "tools/verify_gama_paired_live.py": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716"
+  },
+  "source_hashes_after": {
+    "tools/capture_gama_dataset_v2.py": "6e018399002a8b7e554dc5c6b28dea4766841aeb7dbc430e24da3f7c2bdc8f55",
+    "tools/test_gama_dataset_client.py": "845863da7cecc1299412b0fd0e4fca8a0736f368d9c98b692f48ab3338a73ebf",
+    "tools/verify_gama_paired_live.py": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716"
+  },
+  "source_files_unchanged_during_tests": true,
+  "fixture_scope": "Actual sealed GAMA source states; synthetic unit-test annotation rectangles and labels only; no experiment records or rendered images produced",
+  "live_calls_made": false,
+  "usd_runtime_used": false,
+  "passed": true
+}

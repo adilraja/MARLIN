@@ -1,0 +1,44 @@
+{
+  "kind": "m7_independent_pending_group_continuation",
+  "passed": false,
+  "started_at_utc": "2026-10-09T14:20:32.040533+00:00",
+  "campaign": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02",
+  "prior_timeout_report_sha256": "0c912b13f48e2bb2b842bb6a7523b695237d8385d0746f808578235a2c53d153",
+  "already_verified_groups": 11,
+  "source_sha256": {
+    "experiments/gama_marlin_v1/qa/verify_m7_group.py": "c4bb56bb6fd7e75f45868af4a1775d7444bad33b17a9dbecf2bede309b3d2671",
+    "experiments/gama_marlin_v1/qa/verify_m7_campaign_groups.py": "1d694c8f3d2920d6509c4c58ba333859953f56cc328579469e3845a4716e9f94",
+    "experiments/gama_marlin_v1/qa/verify_m6_scene.py": "8a7fcf67565e2a2b6cdf18e32fa1a2b09505e37a5549e9d3cf211723c0a7a957",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py": "56908d2d2bbe3efa5c80f82723e8ee62d9cf0bb27761bc80f2e6fc9da98a147c",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/capture_projection.py": "1ac66e44d62a31da3747691702f90bf82f10adf3af3772c11656f83f149a5021"
+  },
+  "groups": [
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 32,
+      "result": "m5_positive_seed_20261008_a__step_032.json",
+      "result_sha256": "1328f4af34c22b7096d673d47608744bf2af0740a110cd3b62738d19c758d019",
+      "execution": "m5_positive_seed_20261008_a__step_032_execution.json",
+      "execution_sha256": "cdae77b7a9fb111abcec09e30e67b0488656b6363a589f3359630ea3e8246006",
+      "passed": true
+    }
+  ],
+  "error": "ValueError: Campaign finished without every remaining declared accepted group",
+  "finished_at_utc": "2026-10-09T14:24:29.297214+00:00",
+  "pending_groups": [
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 8
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 16
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 32
+    }
+  ]
+}

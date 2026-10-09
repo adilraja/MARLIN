@@ -179,6 +179,16 @@ class GamaBridgeExtension(omni.ext.IExt):
             except (ValueError, RuntimeError, OSError) as error:
                 return {"ok": False, "error": str(error)}
 
+        @self._router.post("/integration/gama/v2/actor/dataset-capture")
+        async def dataset_capture_actor_v2(payload: dict):
+            try:
+                if set(payload) != {"ownership_token"}:
+                    raise ValueError("Expected ownership_token only")
+                from .dataset_v2 import run
+                return await run(actor_v2(), payload["ownership_token"])
+            except (ValueError, RuntimeError, OSError) as error:
+                return {"ok": False, "error": str(error)}
+
         @self._router.post("/integration/gama/actor/acquire")
         async def acquire(payload: dict = None):
             try:

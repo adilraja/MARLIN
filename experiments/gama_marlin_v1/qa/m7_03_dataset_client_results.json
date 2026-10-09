@@ -1,0 +1,41 @@
+{
+  "milestone": 7,
+  "recorded_at_utc": "2026-10-09T13:18:20.605387+00:00",
+  "purpose": "Pure client declaration/annotation regressions plus bounded exact no-render headroom retries and held-state/runtime preservation",
+  "result": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "tools/test_gama_dataset_client.py",
+      "-v"
+    ],
+    "return_code": 0,
+    "tests": 42,
+    "minimum_expected_tests": 42,
+    "passed": true,
+    "log": "experiments/gama_marlin_v1/qa/m7_03_dataset_client.log",
+    "log_sha256": "2b2aadc03258d9f2ff8ee6f5f9dcc1a5000d443f27eea1caabf6d53e3f4d8c6a"
+  },
+  "source_hashes_before": {
+    "tools/capture_gama_dataset_v2.py": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725",
+    "tools/test_gama_dataset_client.py": "3824210fbc376dc55b7bcd2ff6b00a29c88b766a01b8c5f8eb50f9045ab53586",
+    "tools/verify_gama_paired_live.py": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716"
+  },
+  "source_hashes_after": {
+    "tools/capture_gama_dataset_v2.py": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725",
+    "tools/test_gama_dataset_client.py": "3824210fbc376dc55b7bcd2ff6b00a29c88b766a01b8c5f8eb50f9045ab53586",
+    "tools/verify_gama_paired_live.py": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716"
+  },
+  "source_files_unchanged_during_tests": true,
+  "prior_regression_report": "experiments/gama_marlin_v1/qa/m7_02_dataset_client_results.json",
+  "retry_cases_added": 15,
+  "maximum_capture_attempts": 4,
+  "maximum_waits": 3,
+  "wait_seconds_per_retry": 20,
+  "fixture_scope": "Actual retained M7 source snapshot and composed actor status; injected capture/status/clock/code-pin boundaries; no HTTP, Kit or experiment state generation",
+  "live_calls_made": false,
+  "usd_runtime_used": false,
+  "passed": true
+}

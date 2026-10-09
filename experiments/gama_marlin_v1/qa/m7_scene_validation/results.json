@@ -1,0 +1,92 @@
+{
+  "kind": "m7_independent_campaign_group_verification",
+  "passed": false,
+  "started_at_utc": "2026-10-09T13:03:40.905207+00:00",
+  "campaign": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_01",
+  "expected_groups": 15,
+  "source_sha256": {
+    "experiments/gama_marlin_v1/qa/verify_m7_group.py": "c4bb56bb6fd7e75f45868af4a1775d7444bad33b17a9dbecf2bede309b3d2671",
+    "experiments/gama_marlin_v1/qa/verify_m7_campaign_groups.py": "1d694c8f3d2920d6509c4c58ba333859953f56cc328579469e3845a4716e9f94",
+    "experiments/gama_marlin_v1/qa/verify_m6_scene.py": "8a7fcf67565e2a2b6cdf18e32fa1a2b09505e37a5549e9d3cf211723c0a7a957",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py": "56908d2d2bbe3efa5c80f82723e8ee62d9cf0bb27761bc80f2e6fc9da98a147c",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/capture_projection.py": "1ac66e44d62a31da3747691702f90bf82f10adf3af3772c11656f83f149a5021"
+  },
+  "groups": [
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "step_index": 8,
+      "result": "m5_positive_seed_1_a__step_008.json",
+      "result_sha256": "f5c7b22786e709f1001ae2ce3ee8da16c05675c1416bd33fc399fa2e77f6bd09",
+      "execution": "m5_positive_seed_1_a__step_008_execution.json",
+      "execution_sha256": "b9779e86807bacfc9a18abaf9b76fee7b636a0d735e1b222724ae10aa614e401",
+      "passed": true
+    },
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "step_index": 16,
+      "result": "m5_positive_seed_1_a__step_016.json",
+      "result_sha256": "b345bc650640e22cd88e02265cd2310ac03d0ac2708bb834192c69f61524da62",
+      "execution": "m5_positive_seed_1_a__step_016_execution.json",
+      "execution_sha256": "b633265c1687bba7b56620374951d6624f93d221d245da954078bd8078804ae0",
+      "passed": true
+    }
+  ],
+  "error": "ValueError: Campaign finished without all expected accepted retained groups",
+  "finished_at_utc": "2026-10-09T13:07:14.747262+00:00",
+  "pending_groups": [
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "step_index": 32
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "step_index": 8
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "step_index": 16
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "step_index": 32
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 8
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 16
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 32
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 8
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 16
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 32
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 8
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 16
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 32
+    }
+  ]
+}

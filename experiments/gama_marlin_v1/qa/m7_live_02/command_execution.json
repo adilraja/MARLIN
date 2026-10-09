@@ -1,0 +1,21 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/capture_gama_dataset_v2.py",
+    "--declaration",
+    "experiments/gama_marlin_v1/m7_capture_declaration.json",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m7_live_02"
+  ],
+  "return_code": 1,
+  "passed": false,
+  "started_at_utc": "2026-10-09T13:18:48.009804+00:00",
+  "finished_at_utc": "2026-10-09T14:24:26.881976+00:00",
+  "results_sha256": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611",
+  "log_sha256": "267141deb9561fcf23e16888d8eee8da5ac7b7f046f378b9ec19679ce79af4a6",
+  "retained_accepted_images": 120,
+  "declared_state_substituted": false,
+  "failure": "ValueError: A declared trajectory capture failed; no replacement state/trajectory was selected",
+  "all_run_cleanup_checks_passed": true
+}

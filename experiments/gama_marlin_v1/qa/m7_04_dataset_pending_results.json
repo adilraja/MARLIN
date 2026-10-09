@@ -1,0 +1,41 @@
+{
+  "kind": "m7_pure_pending_selection_copy_test_execution",
+  "purpose": "Exact missing-only selection, actual accepted-source revalidation, immutable failed-attempt provenance, and bounded byte-copy refusal checks; no live calls",
+  "started_at_utc": "2026-10-09T15:45:01.374520+00:00",
+  "finished_at_utc": "2026-10-09T15:45:08.750360+00:00",
+  "result": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "tools/test_gama_dataset_pending.py",
+      "-v"
+    ],
+    "return_code": 1,
+    "tests": 31,
+    "minimum_expected_tests": 31,
+    "passed": false,
+    "log": "experiments/gama_marlin_v1/qa/m7_04_dataset_pending.log",
+    "log_sha256": "5fcbb8a741780c2f1cdb1efea479cc392d2112f992aca71b82a373677a4716b8"
+  },
+  "source_pins_before": {
+    "/home/madil/kit-app-template/tools/test_gama_dataset_pending.py": "6ea9907ded505876b316263bdf6edba9d117ac530de459fb1ec51b769080960c",
+    "/home/madil/kit-app-template/tools/capture_gama_dataset_pending_v2.py": "c6c69bbbe8e9e4f7a80b1c81a8c4a50d925f76ca08442a799c1cf67d1edc1a09",
+    "/home/madil/kit-app-template/tools/aggregate_gama_dataset_v2.py": "8effbf8b9dd03c337e6c1e1ae47ba08733b6d43d3c63f646689f411c5de82ff0",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/m7_capture_declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/results.json": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611"
+  },
+  "source_pins_after": {
+    "/home/madil/kit-app-template/tools/test_gama_dataset_pending.py": "6ea9907ded505876b316263bdf6edba9d117ac530de459fb1ec51b769080960c",
+    "/home/madil/kit-app-template/tools/capture_gama_dataset_pending_v2.py": "c6c69bbbe8e9e4f7a80b1c81a8c4a50d925f76ca08442a799c1cf67d1edc1a09",
+    "/home/madil/kit-app-template/tools/aggregate_gama_dataset_v2.py": "8effbf8b9dd03c337e6c1e1ae47ba08733b6d43d3c63f646689f411c5de82ff0",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/m7_capture_declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/results.json": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611"
+  },
+  "source_inputs_unchanged": true,
+  "frozen_capture_protocol_unchanged": true,
+  "syntax_passed": true,
+  "live_calls_made": false,
+  "passed": false
+}

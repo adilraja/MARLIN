@@ -1,0 +1,944 @@
+{
+  "schema_version": "1.0",
+  "milestone": 7,
+  "selection_declared_before_m7_image_inspection": true,
+  "selection_rule": "Fixed step indices 8, 16, 32 from each of five predeclared accepted actual GAMA executions",
+  "seeds": [
+    1,
+    42,
+    184729,
+    20261008,
+    2147483647
+  ],
+  "snapshot_steps": [
+    8,
+    16,
+    32
+  ],
+  "simulation_times_s": [
+    4.0,
+    8.0,
+    16.0
+  ],
+  "gsd_conditions_cm_px": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0
+  ],
+  "snapshots_per_trajectory": 3,
+  "planned_capture_groups": 15,
+  "planned_target_present_captures": 75,
+  "planned_target_absent_captures": 75,
+  "split_policy": "Whole trajectory/encounter, including all snapshots, five GSDs, negative counterparts and related repeated run IDs",
+  "splits": {
+    "train": [
+      "m5_positive_seed_1_a",
+      "m5_positive_seed_42_a",
+      "m5_positive_seed_184729_a"
+    ],
+    "validation": [
+      "m5_positive_seed_20261008_a"
+    ],
+    "test": [
+      "m5_positive_seed_2147483647_a"
+    ]
+  },
+  "runs": [
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "seed": 1,
+      "samples": 41,
+      "split": "train",
+      "encounter_group_id": "gama_engineering_porpoise_seed_1",
+      "raw_gama_reparse_passed": true,
+      "canonical_state_sha256": "f339088635608d611ef909ce39354e00b3eda29f801c488584d3166e43203b8d",
+      "source_files": [
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/execution.json",
+          "bytes": 2079,
+          "sha256": "c06494677795a1400b5046f37b34e65d9af9d40d339ad4ca5e30a43035441e56"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/configuration.json",
+          "bytes": 1298,
+          "sha256": "57457279286e91c31c8e9e881b9d7f9e5d5d22b30a6df817ef5de169c6716bf4"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/model.gaml",
+          "bytes": 5934,
+          "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/experiment.xml",
+          "bytes": 2862,
+          "sha256": "a0659a8475d0c0e43b7248ba6757222780ba8fe6393dbe914d37c6871291299d"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/trajectory.json",
+          "bytes": 23625,
+          "sha256": "44ea58567d85885359773a4d6e63fcae2f957865f10c6124f4c922aa7ae4f201"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/raw/simulation-outputs0.xml",
+          "bytes": 72434,
+          "sha256": "a52bf1b4ce86f4f176045feb302902530dde43d8afd6710552e3496dbb0b9f21"
+        }
+      ],
+      "selected_states": [
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_1_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 1,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -7.365766049119858,
+                3.1217768193183244
+              ],
+              "heading_deg": 22.968319965967225,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_1_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 1,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                -6.364442275398421,
+                4.847048021540675
+              ],
+              "heading_deg": 37.29226484423782,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_1_a",
+          "step_index": 32,
+          "simulation_time_s": 16.0,
+          "simulation_step_s": 0.5,
+          "seed": 1,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "ascent",
+              "horizontal_position_m": [
+                -3.261524948679971,
+                7.304960986147572
+              ],
+              "heading_deg": 65.94015460077895,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.6
+            }
+          ]
+        }
+      ],
+      "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+      "model_configuration_sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7",
+      "runtime": {
+        "gama.commit": "ab35ccb69a12b3e2ac9e0b902662f24a82367995",
+        "gama.jdk": "21.0.7+6",
+        "gama.version": "2025.6.4"
+      },
+      "runtime_configuration_sha256": "9f51b1826e86deb4995566ff4a8ee9ae560a67ba1657b8b443dcf4661d800055",
+      "launcher_sha256": "d43692e651a266190de49af73a1496822ba2cfd87436d55abfff6aa565440c12",
+      "actual_execution": {
+        "started_at_utc": "2026-10-08T18:31:44.943245+00:00",
+        "finished_at_utc": "2026-10-08T18:31:48.220515+00:00",
+        "command": [
+          "/usr/sbin/gama-headless",
+          "-m",
+          "1024m",
+          "-ws",
+          "/home/madil/kit-app-template/artifacts/gama_marlin_v1/workspaces/m5_positive_seed_1_a",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/experiment.xml",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_a/raw"
+        ],
+        "cwd": "/home/madil/kit-app-template",
+        "return_code": 0,
+        "actual_seed": 1
+      },
+      "related_run_ids": [
+        "m5_positive_seed_1_a",
+        "m5_positive_seed_1_b"
+      ],
+      "related_runs_not_rendered": [
+        {
+          "run_id": "m5_positive_seed_1_b",
+          "split": "train",
+          "encounter_group_id": "gama_engineering_porpoise_seed_1",
+          "source_files": [
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_b/execution.json",
+              "bytes": 2078,
+              "sha256": "57039e14df97ef5c8f429a8094270657001afb5e9db6e9170fdabd209dca13a7"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_b/configuration.json",
+              "bytes": 1298,
+              "sha256": "c97a489f32633947458247013937a5a7d2903d2cff58761a8bb10e29e78fad4f"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_b/model.gaml",
+              "bytes": 5934,
+              "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_b/experiment.xml",
+              "bytes": 2862,
+              "sha256": "3fb41b2bab69b9e27fead4493c5edc87f0642593edef58a80418d817e7ad34ed"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_b/trajectory.json",
+              "bytes": 23625,
+              "sha256": "7a56596c0632687210d2f1d77d217330bd357095c23d545420c489922e563362"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_1_b/raw/simulation-outputs0.xml",
+              "bytes": 72434,
+              "sha256": "a9483c94ce8c5cf1cc4b12df0d0430df03ae5c2129615b9522148e5a0b102d20"
+            }
+          ],
+          "canonical_state_sha256": "f339088635608d611ef909ce39354e00b3eda29f801c488584d3166e43203b8d"
+        }
+      ]
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "seed": 42,
+      "samples": 41,
+      "split": "train",
+      "encounter_group_id": "gama_engineering_porpoise_seed_42",
+      "raw_gama_reparse_passed": true,
+      "canonical_state_sha256": "b21c344cb22659d587a0bcc2666c7cb31ed55cf081f2c774238bb02fde95bb6a",
+      "source_files": [
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/execution.json",
+          "bytes": 2085,
+          "sha256": "8c96699c2fc0da32181c97781b79bd04f24864315def6d4353c3e6627dd3aa39"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/configuration.json",
+          "bytes": 1300,
+          "sha256": "9fd8cd5b1d1d1a0828de5cbde4967952a377626ebf4c8d9dbbc42f7a17649177"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/model.gaml",
+          "bytes": 5934,
+          "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/experiment.xml",
+          "bytes": 2866,
+          "sha256": "691efeb27578d37c63397ad56da8ca5673903e4d9b35879ce979d284aa674998"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/trajectory.json",
+          "bytes": 23696,
+          "sha256": "3ec2c3ca27f6dad0d71eb6f24b28b188fa903008b53a64642d8948ab9154c700"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/raw/simulation-outputs0.xml",
+          "bytes": 72505,
+          "sha256": "35980595687483eea69dd781a2f8ba84eb7ea264a53df083b067b46afc514799"
+        }
+      ],
+      "selected_states": [
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_42_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 42,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -2.3415079936792895,
+                7.649662758287844
+              ],
+              "heading_deg": 72.98101870082843,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_42_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 42,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                -0.3761593272483532,
+                7.9911516166647765
+              ],
+              "heading_deg": 87.30496357909897,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_42_a",
+          "step_index": 32,
+          "simulation_time_s": 16.0,
+          "simulation_step_s": 0.5,
+          "seed": 42,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "ascent",
+              "horizontal_position_m": [
+                3.501051301801789,
+                7.193235696274105
+              ],
+              "heading_deg": 115.95285333564016,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.6
+            }
+          ]
+        }
+      ],
+      "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+      "model_configuration_sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7",
+      "runtime": {
+        "gama.commit": "ab35ccb69a12b3e2ac9e0b902662f24a82367995",
+        "gama.jdk": "21.0.7+6",
+        "gama.version": "2025.6.4"
+      },
+      "runtime_configuration_sha256": "9f51b1826e86deb4995566ff4a8ee9ae560a67ba1657b8b443dcf4661d800055",
+      "launcher_sha256": "d43692e651a266190de49af73a1496822ba2cfd87436d55abfff6aa565440c12",
+      "actual_execution": {
+        "started_at_utc": "2026-10-08T18:31:51.533024+00:00",
+        "finished_at_utc": "2026-10-08T18:31:54.710436+00:00",
+        "command": [
+          "/usr/sbin/gama-headless",
+          "-m",
+          "1024m",
+          "-ws",
+          "/home/madil/kit-app-template/artifacts/gama_marlin_v1/workspaces/m5_positive_seed_42_a",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/experiment.xml",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_42_a/raw"
+        ],
+        "cwd": "/home/madil/kit-app-template",
+        "return_code": 0,
+        "actual_seed": 42
+      },
+      "related_run_ids": [
+        "m5_positive_seed_42_a"
+      ],
+      "related_runs_not_rendered": []
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "seed": 184729,
+      "samples": 41,
+      "split": "train",
+      "encounter_group_id": "gama_engineering_porpoise_seed_184729",
+      "raw_gama_reparse_passed": true,
+      "canonical_state_sha256": "5c602f67e1c2bb7d551a23785b8bc1d355fc6fd17e84d8fc4c8257cd1ad82fb2",
+      "source_files": [
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/execution.json",
+          "bytes": 2109,
+          "sha256": "754ed734768e92de995b3bd6940bd6a2a7a0b07efc3cd9c311224acc03a27baa"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/configuration.json",
+          "bytes": 1308,
+          "sha256": "5688a8e4305454dae7fac739b02380bb0db5d59bd429cf3358a35d125e3859f5"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/model.gaml",
+          "bytes": 5934,
+          "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/experiment.xml",
+          "bytes": 2882,
+          "sha256": "7bc87523518602e830b46f15871ca3947efea3c6c3e57cc5f645e284bbb82ff2"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/trajectory.json",
+          "bytes": 24022,
+          "sha256": "25a50e49e823085667d366ac099ebb7d63363f486655633998d78ddb9b93a4d0"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/raw/simulation-outputs0.xml",
+          "bytes": 72790,
+          "sha256": "ec55098d7493232faca3e8930f7176329f255d2275456e716d855e00d57fb6a9"
+        }
+      ],
+      "selected_states": [
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                -3.5692691564314196,
+                7.159631114027268
+              ],
+              "heading_deg": 63.50250763469751,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 32,
+          "simulation_time_s": 16.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "ascent",
+              "horizontal_position_m": [
+                0.30018163267255804,
+                7.994366202983576
+              ],
+              "heading_deg": 92.1503973912387,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.6
+            }
+          ]
+        }
+      ],
+      "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+      "model_configuration_sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7",
+      "runtime": {
+        "gama.commit": "ab35ccb69a12b3e2ac9e0b902662f24a82367995",
+        "gama.jdk": "21.0.7+6",
+        "gama.version": "2025.6.4"
+      },
+      "runtime_configuration_sha256": "9f51b1826e86deb4995566ff4a8ee9ae560a67ba1657b8b443dcf4661d800055",
+      "launcher_sha256": "d43692e651a266190de49af73a1496822ba2cfd87436d55abfff6aa565440c12",
+      "actual_execution": {
+        "started_at_utc": "2026-10-08T18:31:57.972079+00:00",
+        "finished_at_utc": "2026-10-08T18:32:01.199007+00:00",
+        "command": [
+          "/usr/sbin/gama-headless",
+          "-m",
+          "1024m",
+          "-ws",
+          "/home/madil/kit-app-template/artifacts/gama_marlin_v1/workspaces/m5_positive_seed_184729_a",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/experiment.xml",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/raw"
+        ],
+        "cwd": "/home/madil/kit-app-template",
+        "return_code": 0,
+        "actual_seed": 184729
+      },
+      "related_run_ids": [
+        "m5_positive_seed_184729_a",
+        "m5_positive_seed_184729_b"
+      ],
+      "related_runs_not_rendered": [
+        {
+          "run_id": "m5_positive_seed_184729_b",
+          "split": "train",
+          "encounter_group_id": "gama_engineering_porpoise_seed_184729",
+          "source_files": [
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_b/execution.json",
+              "bytes": 2109,
+              "sha256": "613242a6cd56e1df7a1d3b00c37e409c8edbb8ca4b72b6b2273cfed19d80943b"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_b/configuration.json",
+              "bytes": 1308,
+              "sha256": "c308fec4f3fdc1d7340a2b3b355488ab3f86b2641755a9c7bf7a48548dff0e13"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_b/model.gaml",
+              "bytes": 5934,
+              "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_b/experiment.xml",
+              "bytes": 2882,
+              "sha256": "eea76fb7d6c966ebf45775c0b8ec43282acddd11dd9164fd2e8279c256216745"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_b/trajectory.json",
+              "bytes": 24022,
+              "sha256": "3afbe40124fcfc8eacb096fe96710e7e79949b5fb22952daec61f614a50a2e70"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_b/raw/simulation-outputs0.xml",
+              "bytes": 72790,
+              "sha256": "bf97b657b0f8efe5b4a277cee60f68ff5869027b3091d2e8a1c80d8ff128b54e"
+            }
+          ],
+          "canonical_state_sha256": "5c602f67e1c2bb7d551a23785b8bc1d355fc6fd17e84d8fc4c8257cd1ad82fb2"
+        }
+      ]
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "seed": 20261008,
+      "samples": 41,
+      "split": "validation",
+      "encounter_group_id": "gama_engineering_porpoise_seed_20261008",
+      "raw_gama_reparse_passed": true,
+      "canonical_state_sha256": "187c8adacc470a44a7874aaf8ed9e646cf7e408234e7c73c8e86dcda546d0c8b",
+      "source_files": [
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/execution.json",
+          "bytes": 2121,
+          "sha256": "8d9b3e482c45a7f456303f4e7a2e7fd96ad483472f23e9a2db7f9fab8e060740"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/configuration.json",
+          "bytes": 1312,
+          "sha256": "b659f850ef226188457a29f9420da36f6115368ddc9daa6580552557d734b00c"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/model.gaml",
+          "bytes": 5934,
+          "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/experiment.xml",
+          "bytes": 2890,
+          "sha256": "0915d8d477b1744bfbd949951f24ed6341990959b9a645ca7a08dd68f53c857a"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/trajectory.json",
+          "bytes": 24178,
+          "sha256": "5d4e3e8accb6a1a9caf6be8201de6d767814bfd784a2001f3dd97b7994b64be3"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/raw/simulation-outputs0.xml",
+          "bytes": 73028,
+          "sha256": "5d9cc80836d6a34b19bfcd7fc0def76cbb1f2dea10f30b56119e00f476427417"
+        }
+      ],
+      "selected_states": [
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_20261008_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 20261008,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                5.337797361087983,
+                5.958852182422565
+              ],
+              "heading_deg": 131.85322319499608,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_20261008_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 20261008,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                6.646101790276243,
+                4.453013697855297
+              ],
+              "heading_deg": 146.17716807326664,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_20261008_a",
+          "step_index": 32,
+          "simulation_time_s": 16.0,
+          "simulation_step_s": 0.5,
+          "seed": 20261008,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "ascent",
+              "horizontal_position_m": [
+                7.967391526200988,
+                0.7215762386752272
+              ],
+              "heading_deg": 174.8250578298078,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.6
+            }
+          ]
+        }
+      ],
+      "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+      "model_configuration_sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7",
+      "runtime": {
+        "gama.commit": "ab35ccb69a12b3e2ac9e0b902662f24a82367995",
+        "gama.jdk": "21.0.7+6",
+        "gama.version": "2025.6.4"
+      },
+      "runtime_configuration_sha256": "9f51b1826e86deb4995566ff4a8ee9ae560a67ba1657b8b443dcf4661d800055",
+      "launcher_sha256": "d43692e651a266190de49af73a1496822ba2cfd87436d55abfff6aa565440c12",
+      "actual_execution": {
+        "started_at_utc": "2026-10-08T18:32:01.243332+00:00",
+        "finished_at_utc": "2026-10-08T18:32:04.371988+00:00",
+        "command": [
+          "/usr/sbin/gama-headless",
+          "-m",
+          "1024m",
+          "-ws",
+          "/home/madil/kit-app-template/artifacts/gama_marlin_v1/workspaces/m5_positive_seed_20261008_a",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/experiment.xml",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_20261008_a/raw"
+        ],
+        "cwd": "/home/madil/kit-app-template",
+        "return_code": 0,
+        "actual_seed": 20261008
+      },
+      "related_run_ids": [
+        "m5_positive_seed_20261008_a"
+      ],
+      "related_runs_not_rendered": []
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "seed": 2147483647,
+      "samples": 41,
+      "split": "test",
+      "encounter_group_id": "gama_engineering_porpoise_seed_2147483647",
+      "raw_gama_reparse_passed": true,
+      "canonical_state_sha256": "a14011436d2ea0df1312212d6e3dfb09916bddbed3cd7f4ad406c40c6c969948",
+      "source_files": [
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/execution.json",
+          "bytes": 2132,
+          "sha256": "9f720af7de16c1ee650ccae619547b0aa63c2d9dc768c0c1ca9217bb96d46551"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/configuration.json",
+          "bytes": 1316,
+          "sha256": "7fb611b8f037d1e946bc8af535ec8703892928fce896be20cf9b19cdcdee286e"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/model.gaml",
+          "bytes": 5934,
+          "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/experiment.xml",
+          "bytes": 2898,
+          "sha256": "20a977b275054dfeab71b63b3c53f99dc9e0efaa2c2310bd25dadc05ffaf3011"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/trajectory.json",
+          "bytes": 24364,
+          "sha256": "cb3ff9a337a4784797f77ef6fc8ec965eb56ef8910271db62c084b166f606f99"
+        },
+        {
+          "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/raw/simulation-outputs0.xml",
+          "bytes": 73214,
+          "sha256": "2dc76b3c1588a97789f540452f972a06f39198427d0415afd928129e28a2f749"
+        }
+      ],
+      "selected_states": [
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                6.984912380600789,
+                -3.900128079349423
+              ],
+              "heading_deg": 209.1774464578279,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 32,
+          "simulation_time_s": 16.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "ascent",
+              "horizontal_position_m": [
+                2.45230417100461,
+                -7.6148673168265635
+              ],
+              "heading_deg": 252.14928109263963,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.6
+            }
+          ]
+        }
+      ],
+      "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+      "model_configuration_sha256": "9454927778104ab047baa0e7b773bd5d35363375d46d6f3faba58648d41cacd7",
+      "runtime": {
+        "gama.commit": "ab35ccb69a12b3e2ac9e0b902662f24a82367995",
+        "gama.jdk": "21.0.7+6",
+        "gama.version": "2025.6.4"
+      },
+      "runtime_configuration_sha256": "9f51b1826e86deb4995566ff4a8ee9ae560a67ba1657b8b443dcf4661d800055",
+      "launcher_sha256": "d43692e651a266190de49af73a1496822ba2cfd87436d55abfff6aa565440c12",
+      "actual_execution": {
+        "started_at_utc": "2026-10-08T18:32:14.170404+00:00",
+        "finished_at_utc": "2026-10-08T18:32:17.295555+00:00",
+        "command": [
+          "/usr/sbin/gama-headless",
+          "-m",
+          "1024m",
+          "-ws",
+          "/home/madil/kit-app-template/artifacts/gama_marlin_v1/workspaces/m5_positive_seed_2147483647_a",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/experiment.xml",
+          "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_a/raw"
+        ],
+        "cwd": "/home/madil/kit-app-template",
+        "return_code": 0,
+        "actual_seed": 2147483647
+      },
+      "related_run_ids": [
+        "m5_positive_seed_2147483647_a",
+        "m5_positive_seed_2147483647_b"
+      ],
+      "related_runs_not_rendered": [
+        {
+          "run_id": "m5_positive_seed_2147483647_b",
+          "split": "test",
+          "encounter_group_id": "gama_engineering_porpoise_seed_2147483647",
+          "source_files": [
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_b/execution.json",
+              "bytes": 2133,
+              "sha256": "a301858a90ef1bb2f4c2950f0723c48cb131e190b5ed0810e729044b868c16b5"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_b/configuration.json",
+              "bytes": 1316,
+              "sha256": "0ad2154d723691860ca5d5ed9b553207359fa716a47746771d3b61b8ea082302"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_b/model.gaml",
+              "bytes": 5934,
+              "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_b/experiment.xml",
+              "bytes": 2898,
+              "sha256": "23398b5d69e59e8ca6a20d315a4b6499b90d6c03aedc178a26428734204d07e3"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_b/trajectory.json",
+              "bytes": 24364,
+              "sha256": "4a67d2cb0928b8f988cec97ffde16ba0e84092d37f95fa5940e8336ce0c56515"
+            },
+            {
+              "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_2147483647_b/raw/simulation-outputs0.xml",
+              "bytes": 73214,
+              "sha256": "7291167737220cc29a3f7d63a188cb26154b3045dc367d3e6b7a209aab0d8e16"
+            }
+          ],
+          "canonical_state_sha256": "a14011436d2ea0df1312212d6e3dfb09916bddbed3cd7f4ad406c40c6c969948"
+        }
+      ]
+    }
+  ],
+  "no_silent_state_replacement": true,
+  "negative_policy": {
+    "operation": "RemovePrim",
+    "prim_path": "/MarlinGamaPorpoise",
+    "scope": "private_frozen_variant",
+    "same_parent_frozen_snapshot": true,
+    "poor_visibility_is_not_target_absence": true
+  },
+  "scope": {
+    "engineering_test_set_only": true,
+    "biological_approval": false,
+    "pose_mapping": "static_pose_proxy_v1",
+    "visibility": "unknown until reviewed; no image-based reselection",
+    "annotation_semantics": "amodal_direct_evaluated_mesh_projection",
+    "exact_visible_or_refracted_outline_claimed": false,
+    "seed_variation": "initial angular phase only; separate fresh processes do not establish biological stochastic independence",
+    "coverage": "shallow swimming, descent and ascent at motion-root depths 0.5, 1.9 and 1.6 m; no complete five-state pose validation",
+    "environment": "Frozen current marine presentation environment per snapshot; Pilot-style 1024x768 nominal root-plane optics",
+    "new_gama_executions_required": false,
+    "reused_gama_executions": "Five accepted independent fresh processes retained and sealed in M5"
+  },
+  "m7_intentional_existing_source_deltas": [
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py"
+  ],
+  "runtime_code_pin_policy": "Record current bounded client/bridge code hashes before execution and require unchanged hashes after; historical sealed source bytes remain preserved in M6 records",
+  "declared_at_utc": "2026-10-09T11:56:19.444912+00:00",
+  "sealed_m5_manifest": {
+    "path": "experiments/gama_marlin_v1/qa/milestone_5_manifest.json",
+    "bytes": 40757,
+    "sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3"
+  },
+  "sealed_m6_manifest": {
+    "path": "experiments/gama_marlin_v1/qa/milestone_6_manifest.json",
+    "bytes": 28913,
+    "sha256": "97cee0f2401d13b0f5e58473ca0d6278c4c9d17ae9298997aae9622ea17845fd"
+  },
+  "strict_baseline_verification_before_m7_refactor": {
+    "milestone_5": {
+      "passed": true,
+      "outputs_checked": 175,
+      "changes": [],
+      "manifest_sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3"
+    },
+    "milestone_6": {
+      "passed": true,
+      "outputs_checked": 100,
+      "changes": [],
+      "manifest_sha256": "97cee0f2401d13b0f5e58473ca0d6278c4c9d17ae9298997aae9622ea17845fd"
+    },
+    "record_basis": "This agent independently read and checked every sealed output before the approved M7 source refactor; all sizes and SHA-256 values matched."
+  },
+  "historical_m6_source_pins": [
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "bytes": 11627,
+      "sha256": "1d99c7ff2a0a7c6e4b86219633a4d5fa0ecc9686541e2764f55360b1b1c399a7"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py",
+      "bytes": 12512,
+      "sha256": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py",
+      "bytes": 24902,
+      "sha256": "3b59145df4910be95ef7b70b19630402f8f38e97f5efa23e2ecd2073968e95c8"
+    }
+  ]
+}

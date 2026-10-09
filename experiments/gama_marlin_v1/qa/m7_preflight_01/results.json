@@ -1,0 +1,91 @@
+{
+  "milestone": 6,
+  "passed": false,
+  "preflight_only": true,
+  "scene_mutation_attempted": false,
+  "milestone_7_started": false,
+  "biological_approval": false,
+  "declared_tolerances": {
+    "position_euclidean_m": 1e-05,
+    "heading_circular_deg": 0.0001,
+    "renderer_float_relative": 1e-07,
+    "renderer_float_absolute": 1e-09
+  },
+  "m5_before": {
+    "passed": true,
+    "protected_outputs_checked": 175,
+    "manifest": "experiments/gama_marlin_v1/qa/milestone_5_manifest.json",
+    "manifest_sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3",
+    "changes": []
+  },
+  "source_gama_record": {
+    "path": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/trajectory.json",
+    "sha256": "25a50e49e823085667d366ac099ebb7d63363f486655633998d78ddb9b93a4d0",
+    "raw_xml_sha256": "ec55098d7493232faca3e8930f7176329f255d2275456e716d855e00d57fb6a9",
+    "execution_sha256": "754ed734768e92de995b3bd6940bd6a2a7a0b07efc3cd9c311224acc03a27baa",
+    "model_sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f",
+    "configuration_sha256": "5688a8e4305454dae7fac739b02380bb0db5d59bd429cf3358a35d125e3859f5",
+    "canonical_state_sha256": "5c602f67e1c2bb7d551a23785b8bc1d355fc6fd17e84d8fc4c8257cd1ad82fb2",
+    "raw_gama_reparse_passed": true,
+    "samples": 41,
+    "selected_state": {
+      "schema_version": "2.0",
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 8,
+      "simulation_time_s": 4.0,
+      "simulation_step_s": 0.5,
+      "seed": 184729,
+      "agents": [
+        {
+          "agent_id": "Porpoise_001",
+          "species": "harbour_porpoise",
+          "behavioural_state": "shallow_swim",
+          "horizontal_position_m": [
+            -5.229630306507289,
+            6.054004200300862
+          ],
+          "heading_deg": 49.17856275642697,
+          "speed_mps": 0.5,
+          "vertical_reference": "mean_sea_level",
+          "depth_m": 0.5
+        }
+      ]
+    }
+  },
+  "declaration": {
+    "declared_at_utc": "2026-10-09T11:53:49.208096+00:00",
+    "selection_before_image_inspection": true,
+    "source_trajectory": "experiments/gama_marlin_v1/trajectories/m5_positive_seed_184729_a/trajectory.json",
+    "source_sha256": "25a50e49e823085667d366ac099ebb7d63363f486655633998d78ddb9b93a4d0",
+    "selected_step_index": 8,
+    "simulation_time_s": 4.0,
+    "behavioural_state": "shallow_swim",
+    "orders": [
+      [
+        0.5,
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      [
+        4.0,
+        3.0,
+        2.0,
+        1.0,
+        0.5
+      ]
+    ],
+    "delay_s": 2.0,
+    "delay_policy": "Between captures in the second order; the endpoint does not delay the first order",
+    "no_silent_state_replacement": true
+  },
+  "error": "URLError: <urlopen error [Errno 1] Operation not permitted>",
+  "m5_after": {
+    "passed": true,
+    "protected_outputs_checked": 175,
+    "manifest": "experiments/gama_marlin_v1/qa/milestone_5_manifest.json",
+    "manifest_sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3",
+    "changes": []
+  }
+}

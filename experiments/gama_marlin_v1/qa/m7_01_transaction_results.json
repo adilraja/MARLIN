@@ -1,0 +1,57 @@
+{
+  "milestone": 7,
+  "scope": "Offline actual USD/PorpoiseActor with fake Kit and PNG capture; no live calls",
+  "recorded_at_utc": "2026-10-09T12:00:23.361211+00:00",
+  "results": [
+    {
+      "name": "dataset_transaction",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_dataset_transaction.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 11,
+      "minimum_expected_tests": 11,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m7_01_dataset_transaction.log",
+      "log_sha256": "59670d5bfb2c4e2cf0c8bd28698d46e6a4377e00ca87db6324416575d8ecc4be"
+    },
+    {
+      "name": "paired_transaction",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_paired_transaction.py",
+        "-v"
+      ],
+      "return_code": 0,
+      "tests": 13,
+      "minimum_expected_tests": 13,
+      "passed": true,
+      "log": "experiments/gama_marlin_v1/qa/m7_01_paired_transaction.log",
+      "log_sha256": "798ea4dcde06656fdd14769599c4f14c1b37e8ba10818dfaf16799673a75e6a7"
+    }
+  ],
+  "source_hashes_before": {
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py": "9cf249d7ec4663c35e0036b739eca3fa37817894d043252aeef067867f7ff3c3",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_transaction_v2.py": "4496594603e11a9ff26ae4b564f9b48a04f4bce3fb92b2343b664d080452984b",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_v2.py": "7799aa2a8fa473cbc872da1c331d1e93344d04e8f23153fe98ff7178127b0791",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+    "tools/test_gama_dataset_transaction.py": "5f4327f83177360adaf83466326fab609710f106abc1301e03f383aa13f537f1",
+    "tools/test_gama_paired_transaction.py": "49f6fc9271aff515531a1124d32358ecc4f351b24503cd66d0ff60e671d32e51"
+  },
+  "source_hashes_after": {
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py": "9cf249d7ec4663c35e0036b739eca3fa37817894d043252aeef067867f7ff3c3",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_transaction_v2.py": "4496594603e11a9ff26ae4b564f9b48a04f4bce3fb92b2343b664d080452984b",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_v2.py": "7799aa2a8fa473cbc872da1c331d1e93344d04e8f23153fe98ff7178127b0791",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+    "tools/test_gama_dataset_transaction.py": "5f4327f83177360adaf83466326fab609710f106abc1301e03f383aa13f537f1",
+    "tools/test_gama_paired_transaction.py": "49f6fc9271aff515531a1124d32358ecc4f351b24503cd66d0ff60e671d32e51"
+  },
+  "source_files_unchanged_during_tests": true,
+  "m6_test_source_unchanged": true,
+  "live_calls_made": false,
+  "passed": true
+}
