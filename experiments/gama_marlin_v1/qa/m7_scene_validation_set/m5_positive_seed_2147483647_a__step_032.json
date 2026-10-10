@@ -1,0 +1,610 @@
+{
+  "kind": "m7_independent_retained_group_verification",
+  "passed": true,
+  "runtime": {
+    "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+    "usd_version": [
+      0,
+      25,
+      8
+    ]
+  },
+  "group": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_2147483647_a/step_032/group",
+  "verifier_sha256": "c4bb56bb6fd7e75f45868af4a1775d7444bad33b17a9dbecf2bede309b3d2671",
+  "reused_m6_verifier_sha256": "8a7fcf67565e2a2b6cdf18e32fa1a2b09505e37a5549e9d3cf211723c0a7a957",
+  "helper_source_sha256": {
+    "dataset_state_v2": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+    "paired_state_v2": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17",
+    "calibration_geometry": "56908d2d2bbe3efa5c80f82723e8ee62d9cf0bb27761bc80f2e6fc9da98a147c",
+    "capture_projection": "1ac66e44d62a31da3747691702f90bf82f10adf3af3772c11656f83f149a5021"
+  },
+  "inputs": {
+    "manifest_sha256": "67ac95536c8102f339b114a4cc2c93368cd6a6416eb2dcfaa3d9db1c9b5947fc",
+    "resolved_state_sha256": "e0295028c7be769e8b184a37e74f7c038c851cc1a8a3b05c72e421b9ea199668",
+    "absent_resolved_state_sha256": "3223adc70daabdd5d3cad67192cfe0a3587e039a3bd1331f6ff923c07ff181d4",
+    "present_scene_sha256": "e117248a4bea6f6be6e2295b7db047f15ba1fccebd8faa055d9f2accdcca4509",
+    "absent_scene_sha256": "bce337fb59b14169e18635513b3bb5ff35cb7ef03ae322b90575b7191a856b14",
+    "pilot_environment_sha256": "83745470f0391b61d95e8f89a2a788b9125cf4d13faf167431d3a310ea4b3590"
+  },
+  "checks": {
+    "present_identity_exact": true,
+    "present_background_exact": true,
+    "present_zero_time_samples": true,
+    "absent_identity_exact": true,
+    "absent_background_exact": true,
+    "absent_zero_time_samples": true,
+    "positive_source_scene_file_hash": true,
+    "only_owned_target_root_removed": true,
+    "removal_record_exact": true,
+    "positive_actual_gama_pose": true,
+    "five_exact_camera_condition_pairs": true,
+    "only_camera_y_varied": true,
+    "all_ten_actual_annotations_and_images": true,
+    "retained_private_sources_unchanged": true,
+    "all_local_dependency_hashes_before_after": true
+  },
+  "captures": [
+    {
+      "variant": "present",
+      "target_present": true,
+      "gsd_cm_px": 0.5,
+      "camera_condition_hash": "741988c891a6f8625f45a7d44af7a5c79fd71969554e03eadae54d99ec770fbf",
+      "resolved_scene_state_hash": "b6a1149602102bcdf61e6bb2bff45b3ce0e84acd9d7c771f349249d5f42702f3",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "rgb_sha256": "b68b5857fc5f75ca046412d93403da27f0eba13936c2d35f86a1fe4b936a5602",
+      "annotation_sha256": "df431c718b0fa2790915d064a5e47a30bec4b34d55163c9b7004857846afca49",
+      "yolo_sha256": "69d794b1855ed6b27b7f6d2388b8df6a4c03d7c5f9d47186dfa0e4dfc003e6b3",
+      "vertex_count": 23456,
+      "annotation_status": "physically_present_direct_amodal_box",
+      "passed": true
+    },
+    {
+      "variant": "present",
+      "target_present": true,
+      "gsd_cm_px": 1.0,
+      "camera_condition_hash": "aea32d343391c8b4b4a776c5e18ccc0284f6a27f31b0c1c00df46c31b2186c5f",
+      "resolved_scene_state_hash": "b6a1149602102bcdf61e6bb2bff45b3ce0e84acd9d7c771f349249d5f42702f3",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        0.9999999776482582,
+        0.9999999776482582
+      ],
+      "rgb_sha256": "028bb5ebd970e51be2779c2e40c30665c7f24bf7260be6100071068c7e8a0427",
+      "annotation_sha256": "5339adb5800025facf49b4b3fa7c670ce1001a4a5eb7cb2152411d1b6e6ee473",
+      "yolo_sha256": "ea6760318100f0570b3ff942c8e605acba7bee30d8a85f7f71e8680d6b22590c",
+      "vertex_count": 23456,
+      "annotation_status": "physically_present_direct_amodal_box",
+      "passed": true
+    },
+    {
+      "variant": "present",
+      "target_present": true,
+      "gsd_cm_px": 2.0,
+      "camera_condition_hash": "0504443234bb2dd758bded5d69c2e0462ba88a85e61ba396ccbe2cca1b1abd8d",
+      "resolved_scene_state_hash": "b6a1149602102bcdf61e6bb2bff45b3ce0e84acd9d7c771f349249d5f42702f3",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        1.9999999552965164,
+        1.9999999552965164
+      ],
+      "rgb_sha256": "2bfbb51c5d6480f6f43368c74f4fd78dbcad08ffd50504d2118e4464b93d79e3",
+      "annotation_sha256": "bf2ce0dddd9303bff20a7260ce48fed790db58bb0fd3c5d3a81a7e2c3bbdf3a4",
+      "yolo_sha256": "fc918e8ac6c5b959cbe6705ddcf687c3c0af2230f7f0bb0f5247a08383aafc83",
+      "vertex_count": 23456,
+      "annotation_status": "physically_present_direct_amodal_box",
+      "passed": true
+    },
+    {
+      "variant": "present",
+      "target_present": true,
+      "gsd_cm_px": 3.0,
+      "camera_condition_hash": "579882102cb2793767d9078a752bb32865bdda9ff131ef99dce8887a606e26d6",
+      "resolved_scene_state_hash": "b6a1149602102bcdf61e6bb2bff45b3ce0e84acd9d7c771f349249d5f42702f3",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        2.9999999329447746,
+        2.9999999329447746
+      ],
+      "rgb_sha256": "71895c4ad8e36e77b99b5cdca293babf4a937e5e4455c753c8b8d48c7f33733a",
+      "annotation_sha256": "dc67bd21489af5c8b9f32c5a428420dc74d0aae0260bf80136472ac301541d0f",
+      "yolo_sha256": "de7a4ce02083029a85a21f729cdf6d6d7a52d8c8dfd8059be67cd69e47077710",
+      "vertex_count": 23456,
+      "annotation_status": "physically_present_direct_amodal_box",
+      "passed": true
+    },
+    {
+      "variant": "present",
+      "target_present": true,
+      "gsd_cm_px": 4.0,
+      "camera_condition_hash": "8b27cc5098e5510db84045eb152f5d96456bd709e3d8c80495c20ec8450ecef7",
+      "resolved_scene_state_hash": "b6a1149602102bcdf61e6bb2bff45b3ce0e84acd9d7c771f349249d5f42702f3",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        3.9999999105930333,
+        3.9999999105930333
+      ],
+      "rgb_sha256": "671ace84571647af369c267689d606fa6ee2027aa7d282719b76f150fcbbdb72",
+      "annotation_sha256": "f33d2576a663682054e2b9c732b68f52218b15369b994edcb426104d5c526de9",
+      "yolo_sha256": "8e3b2b080bbe1579cf3710e30b2ba0edf80f091ef2f7fb8d4c44f41e8113b0c4",
+      "vertex_count": 23456,
+      "annotation_status": "physically_present_direct_amodal_box",
+      "passed": true
+    },
+    {
+      "variant": "absent",
+      "target_present": false,
+      "gsd_cm_px": 0.5,
+      "camera_condition_hash": "741988c891a6f8625f45a7d44af7a5c79fd71969554e03eadae54d99ec770fbf",
+      "resolved_scene_state_hash": "b49798e281f28a05f93c90ce3ed7820dc67a666ff211fba2dba92bfcf1ccc46f",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        0.4999999888241291,
+        0.4999999888241291
+      ],
+      "rgb_sha256": "4c349a43799af0c9689f18f55a08cddd070c16dad51802562eee371d5fac0bdd",
+      "annotation_sha256": "bfe62ac59aaade4216bfc48dc15c81cf37cca14ea06be34582c1105c52b26c05",
+      "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vertex_count": 0,
+      "annotation_status": "target_physically_removed",
+      "passed": true
+    },
+    {
+      "variant": "absent",
+      "target_present": false,
+      "gsd_cm_px": 1.0,
+      "camera_condition_hash": "aea32d343391c8b4b4a776c5e18ccc0284f6a27f31b0c1c00df46c31b2186c5f",
+      "resolved_scene_state_hash": "b49798e281f28a05f93c90ce3ed7820dc67a666ff211fba2dba92bfcf1ccc46f",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        0.9999999776482582,
+        0.9999999776482582
+      ],
+      "rgb_sha256": "d9f9325a9a247b58b0a383ed70fd7882d4227437916237950e39423959d3b203",
+      "annotation_sha256": "bfe62ac59aaade4216bfc48dc15c81cf37cca14ea06be34582c1105c52b26c05",
+      "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vertex_count": 0,
+      "annotation_status": "target_physically_removed",
+      "passed": true
+    },
+    {
+      "variant": "absent",
+      "target_present": false,
+      "gsd_cm_px": 2.0,
+      "camera_condition_hash": "0504443234bb2dd758bded5d69c2e0462ba88a85e61ba396ccbe2cca1b1abd8d",
+      "resolved_scene_state_hash": "b49798e281f28a05f93c90ce3ed7820dc67a666ff211fba2dba92bfcf1ccc46f",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        1.9999999552965164,
+        1.9999999552965164
+      ],
+      "rgb_sha256": "9c73c9672cc4d286c3e93dc92902072a1c69913fe541cdeec9945afe5ec09dc5",
+      "annotation_sha256": "bfe62ac59aaade4216bfc48dc15c81cf37cca14ea06be34582c1105c52b26c05",
+      "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vertex_count": 0,
+      "annotation_status": "target_physically_removed",
+      "passed": true
+    },
+    {
+      "variant": "absent",
+      "target_present": false,
+      "gsd_cm_px": 3.0,
+      "camera_condition_hash": "579882102cb2793767d9078a752bb32865bdda9ff131ef99dce8887a606e26d6",
+      "resolved_scene_state_hash": "b49798e281f28a05f93c90ce3ed7820dc67a666ff211fba2dba92bfcf1ccc46f",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        2.9999999329447746,
+        2.9999999329447746
+      ],
+      "rgb_sha256": "ca76f9efc1c7cce614d5de957020faf68e7d28c2984ca5f56a58755034fe8dcf",
+      "annotation_sha256": "bfe62ac59aaade4216bfc48dc15c81cf37cca14ea06be34582c1105c52b26c05",
+      "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vertex_count": 0,
+      "annotation_status": "target_physically_removed",
+      "passed": true
+    },
+    {
+      "variant": "absent",
+      "target_present": false,
+      "gsd_cm_px": 4.0,
+      "camera_condition_hash": "8b27cc5098e5510db84045eb152f5d96456bd709e3d8c80495c20ec8450ecef7",
+      "resolved_scene_state_hash": "b49798e281f28a05f93c90ce3ed7820dc67a666ff211fba2dba92bfcf1ccc46f",
+      "background_scene_hash": "e303086d52842aeece2c2a2721dd44825f9f0d3aec135a9bc27bc2402cec657d",
+      "maximum_projection_matrix_error": 0,
+      "measured_reference_gsd_xy_cm_px": [
+        3.9999999105930333,
+        3.9999999105930333
+      ],
+      "rgb_sha256": "ed9179e209a8b266d598c1edb298ea191b1cae21fab06d6148df426997aed355",
+      "annotation_sha256": "bfe62ac59aaade4216bfc48dc15c81cf37cca14ea06be34582c1105c52b26c05",
+      "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "vertex_count": 0,
+      "annotation_status": "target_physically_removed",
+      "passed": true
+    }
+  ],
+  "tolerances": {
+    "position_m": 1e-05,
+    "heading_deg": 0.0001,
+    "matrix_max_abs": 1e-07,
+    "optics_relative": 1e-06
+  },
+  "dependency_checks": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+      "status": "runtime_or_unresolved",
+      "bytes_read": false,
+      "content_verified": false
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+      "before_sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+      "bytes_read": true,
+      "after_sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+      "before_sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+      "bytes_read": true,
+      "after_sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+      "before_sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+      "bytes_read": true,
+      "after_sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+      "before_sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+      "bytes_read": true,
+      "after_sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+      "before_sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+      "bytes_read": true,
+      "after_sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+      "before_sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+      "bytes_read": true,
+      "after_sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+      "before_sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+      "bytes_read": true,
+      "after_sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+      "before_sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+      "bytes_read": true,
+      "after_sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+      "before_sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+      "bytes_read": true,
+      "after_sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+      "before_sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+      "bytes_read": true,
+      "after_sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+      "before_sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+      "bytes_read": true,
+      "after_sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "before_sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "bytes_read": true,
+      "after_sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "before_sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "bytes_read": true,
+      "after_sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7",
+      "before_sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7",
+      "bytes_read": true,
+      "after_sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb",
+      "before_sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb",
+      "bytes_read": true,
+      "after_sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162",
+      "before_sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162",
+      "bytes_read": true,
+      "after_sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+      "before_sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+      "bytes_read": true,
+      "after_sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+      "before_sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+      "bytes_read": true,
+      "after_sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+      "before_sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+      "bytes_read": true,
+      "after_sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+      "before_sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+      "bytes_read": true,
+      "after_sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+      "before_sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+      "bytes_read": true,
+      "after_sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+      "before_sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+      "bytes_read": true,
+      "after_sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+      "before_sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+      "bytes_read": true,
+      "after_sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+      "before_sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+      "bytes_read": true,
+      "after_sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+      "status": "local_hashed",
+      "expected_sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+      "before_sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+      "bytes_read": true,
+      "after_sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+      "status": "local_hashed",
+      "expected_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "before_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "bytes_read": true,
+      "after_sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+      "content_verified": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "resolved_local_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+      "status": "local_hashed",
+      "expected_sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+      "before_sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+      "bytes_read": true,
+      "after_sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+      "content_verified": true
+    }
+  ],
+  "source_pose_measurement": {
+    "position_m": [
+      2.45230417100461,
+      -1.6,
+      -7.6148673168265635
+    ],
+    "heading_deg": 252.14927673339838,
+    "position_error_m": 0.0,
+    "heading_error_deg": 4.359241245310841e-06,
+    "original_gama_depth_m": 1.6
+  },
+  "unresolved_dependency_limitation": {
+    "paths": [
+      "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl"
+    ],
+    "bytes_inspected": false,
+    "note": "Generated/runtime dependencies were not opened; recorded unresolved limitation remained explicit"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "m8_read_only_demo_command_execution",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/verify_gama_m8_demo.py",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m8_live_demo_01"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "started_observation": {
+    "current_time": "2026-10-09 17:21:35 UTC"
+  },
+  "finished_observation": {
+    "current_time": "2026-10-09 17:30:00 UTC"
+  },
+  "return_code": 0,
+  "stdout_stderr": "{\"passed\": true, \"results\": \"/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_live_demo_01/results.json\", \"checks\": {\"eleven_original_swimmers_running\": true, \"all_original_swimmers_advanced\": true, \"controller_configuration_preserved\": true, \"no_deformation_errors\": true, \"ocean_advanced\": true, \"ocean_configuration_preserved\": true, \"renderer_settings_preserved\": true, \"stable_scene_attributes_preserved\": true, \"original_camera_preserved\": true, \"layers_unchanged\": true, \"no_owned_actor_before\": true, \"no_private_root_before\": true, \"no_owned_actor_after\": true, \"no_private_root_after\": true}, \"gpu\": {\"recorded_at_utc\": \"2026-10-09T17:28:55.599791+00:00\", \"command\": [\"nvidia-smi\", \"--query-gpu=memory.used,memory.free\", \"--format=csv,noheader,nounits\"], \"return_code\": 0, \"stdout\": \"5466, 332\\n\", \"stderr\": \"\", \"minimum_free_mib_before_render\": 768, \"gpu_headroom_is_not_a_read_only_demo_check\": true, \"used_mib\": 5466, \"free_mib\": 332, \"below_capture_minimum\": true}, \"error\": null}\n",
+  "final_exec_chunk_id": "4529e4",
+  "scene_mutation_attempted": false,
+  "new_images_rendered": 0,
+  "kit_restarted": false,
+  "biological_approval": false
+}

@@ -1,0 +1,220 @@
+{
+  "kind": "m8_historical_package_failure_disposition",
+  "recorded_at_utc": "2026-10-09T17:33:06.756394+00:00",
+  "status": "failed_obsolete_historical_entrypoint",
+  "original_run_record": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+    "bytes": 73785,
+    "sha256": "75d06b3a84a767ff995b3ede9f21173bb9721a6b6fa03bb2209a20ebff0c2566"
+  },
+  "original_run_passed": false,
+  "original_failed_execution": {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "experiments/gsd_pilot_v1/qa/m7_package.py"
+    ],
+    "cwd": "/home/madil/kit-app-template",
+    "return_code": 1,
+    "started_at_utc": "2026-10-09T17:26:06.933142+00:00",
+    "ended_at_utc": "2026-10-09T17:26:07.358820+00:00",
+    "elapsed_seconds": 0.4256840989983175,
+    "stdout": {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stderr.log",
+      "bytes": 362,
+      "sha256": "04007cdaf968f4732bfb923684e4f7426f205d0caff38be21e3632f6fe2d222b"
+    },
+    "explicit_environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+    },
+    "name": "pilot_sealed_package",
+    "category": "existing_pilot",
+    "scope": "Existing completed-seal branch only: retained historical package/source/result/checkpoint hashes; no seal or training-output rewrite.",
+    "tests": null,
+    "skipped": 0,
+    "expected_stdout": "sealed_manifest_verified",
+    "passed": false
+  },
+  "original_traceback": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py\", line 99, in <module>\n    main()\n    ~~~~^^\n  File \"/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py\", line 33, in main\n    assert spec[\"schema_version\"] == \"1.6.0\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "diagnosis": "The historical M7 package script asserted the M7 schema marker 1.6.0 against the preserved final Pilot specification 1.7.0. The completed baseline and historical M7 snapshot each match their separately recorded preservation hashes.",
+  "expected_schema": "1.6.0",
+  "actual_preserved_final_schema": "1.7.0",
+  "assertion": {
+    "source": {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py",
+      "bytes": 5107,
+      "sha256": "289d381bb7d414e6157e438cef3c5e4467da4864e79f957b1241fd98861fbb03"
+    },
+    "line": 33,
+    "text": "assert spec[\"schema_version\"] == \"1.6.0\""
+  },
+  "preservation_manifest": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/preserved_output_manifest.json",
+    "bytes": 204345,
+    "sha256": "9100230adf3a392101e2697978fe9221f3ec6d26fea8ce1c8ce8e1dead795098"
+  },
+  "preservation_evidence": [
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/specification.json",
+      "bytes": 19709,
+      "sha256": "6a0035aabf42cb1ce1caa64668c2dee0e0506215def673bd35e771bc00f12471",
+      "preserved_baseline_record": {
+        "path": "experiments/gsd_pilot_v1/specification.json",
+        "bytes": 19709,
+        "sha256": "6a0035aabf42cb1ce1caa64668c2dee0e0506215def673bd35e771bc00f12471"
+      },
+      "matches_preserved_baseline": true,
+      "schema_version": "1.7.0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/history/milestone_7/specification.json",
+      "bytes": 18302,
+      "sha256": "c6c777cc19de3b7084b314a76c6c2ce92ef0ee18b938bf33a34e4ab5fc9f815d",
+      "preserved_baseline_record": {
+        "path": "experiments/gsd_pilot_v1/history/milestone_7/specification.json",
+        "bytes": 18302,
+        "sha256": "c6c777cc19de3b7084b314a76c6c2ce92ef0ee18b938bf33a34e4ab5fc9f815d"
+      },
+      "matches_preserved_baseline": true,
+      "schema_version": "1.6.0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/history/milestone_6/specification.json",
+      "bytes": 16840,
+      "sha256": "1b3715da39014ce74dc4758b4b9a53d4b72c8a0f2c96ea79fbd47af139ae3367",
+      "preserved_baseline_record": {
+        "path": "experiments/gsd_pilot_v1/history/milestone_6/specification.json",
+        "bytes": 16840,
+        "sha256": "1b3715da39014ce74dc4758b4b9a53d4b72c8a0f2c96ea79fbd47af139ae3367"
+      },
+      "matches_preserved_baseline": true,
+      "schema_version": "1.5.0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py",
+      "bytes": 5107,
+      "sha256": "289d381bb7d414e6157e438cef3c5e4467da4864e79f957b1241fd98861fbb03",
+      "preserved_baseline_record": {
+        "path": "experiments/gsd_pilot_v1/qa/m7_package.py",
+        "bytes": 5107,
+        "sha256": "289d381bb7d414e6157e438cef3c5e4467da4864e79f957b1241fd98861fbb03"
+      },
+      "matches_preserved_baseline": true,
+      "execution_before_pin": {
+        "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py",
+        "bytes": 5107,
+        "sha256": "289d381bb7d414e6157e438cef3c5e4467da4864e79f957b1241fd98861fbb03"
+      },
+      "execution_after_pin": {
+        "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py",
+        "bytes": 5107,
+        "sha256": "289d381bb7d414e6157e438cef3c5e4467da4864e79f957b1241fd98861fbb03"
+      },
+      "execution_pins_unchanged": true
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/milestone_7_manifest.json",
+      "bytes": 3314,
+      "sha256": "6c3d5d818a22114f9a1bcbf98a4ff179d1ddc42c8ccdab3a2d7c605d51c4516a",
+      "preserved_baseline_record": {
+        "path": "experiments/gsd_pilot_v1/qa/milestone_7_manifest.json",
+        "bytes": 3314,
+        "sha256": "6c3d5d818a22114f9a1bcbf98a4ff179d1ddc42c8ccdab3a2d7c605d51c4516a"
+      },
+      "matches_preserved_baseline": true,
+      "execution_before_pin": {
+        "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/milestone_7_manifest.json",
+        "bytes": 3314,
+        "sha256": "6c3d5d818a22114f9a1bcbf98a4ff179d1ddc42c8ccdab3a2d7c605d51c4516a"
+      },
+      "execution_after_pin": {
+        "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/milestone_7_manifest.json",
+        "bytes": 3314,
+        "sha256": "6c3d5d818a22114f9a1bcbf98a4ff179d1ddc42c8ccdab3a2d7c605d51c4516a"
+      },
+      "execution_pins_unchanged": true
+    }
+  ],
+  "no_package_outputs_written": true,
+  "no_write_basis": {
+    "failure_precedes_only_package_write": true,
+    "only_package_write_line": 93,
+    "only_package_write_expression": "target.write_text(json.dumps(value, indent=2) + \"\\n\")",
+    "existing_manifest_matches_before_after_and_preserved_baseline": true,
+    "stdout_empty": true,
+    "scope": "The package process stopped at line 33 before the only output write. Its existing output seal remained byte-identical. New stdout/stderr/execution evidence was written only by the M8 QA runner."
+  },
+  "rerun_performed": false,
+  "historical_source_or_pilot_artifacts_modified": false,
+  "normal_regressions": {
+    "passed": true,
+    "unittest_cases": 360,
+    "skipped": 0,
+    "categories": {
+      "existing_marlin_service": 77,
+      "existing_camera": 30,
+      "bridge": 100,
+      "capture": 145,
+      "existing_pilot": 8
+    },
+    "additional_metric_self_check_passed": true,
+    "metric_execution": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/ml/metrics.py"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:26:06.921348+00:00",
+      "ended_at_utc": "2026-10-09T17:26:06.932796+00:00",
+      "elapsed_seconds": 0.011452970007667318,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stdout.log",
+        "bytes": 26,
+        "sha256": "501f5553a50c6c5495d60c9ce266f8bf7cbdc8bb66179255673bb843ecf90978"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "pilot_metric_contract",
+      "category": "existing_pilot",
+      "scope": "Existing pure IoU/one-to-one/101-point AP self-test; no model loading, evaluation rerun or training.",
+      "tests": null,
+      "skipped": 0,
+      "expected_stdout": "M7 metric contract passed",
+      "passed": true
+    },
+    "source_input_pins_unchanged": 283,
+    "python_syntax_files_passed": 139,
+    "git_diff_check_return_code": 0
+  },
+  "impact": "This separate historical packaging failure did not fail any current MARLIN, camera, bridge or capture unittest. It does not invalidate an independently retained live demonstration audit. This disposition makes no independent live, GPU render, ML, biological or M7 dataset completion claim.",
+  "original_evidence_preserved": true,
+  "live_kit_calls_made": false,
+  "new_gpu_renders": 0,
+  "ml_training_started": false,
+  "biological_approval": false,
+  "disposition_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/tmp/m8_historical_package_disposition.py"
+  ],
+  "disposition_recipe_pin": {
+    "path": "/tmp/m8_historical_package_disposition.py",
+    "bytes": 9713,
+    "sha256": "6d6960b94044256a8ef1f1cb50282d6a534c22c2b868dad468a848707b188021"
+  }
+}

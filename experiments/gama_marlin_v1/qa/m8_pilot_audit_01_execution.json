@@ -1,0 +1,32 @@
+{
+  "kind": "m8_read_only_pilot_audit_execution",
+  "command": [
+    "/home/madil/kit-app-template/artifacts/gsd_pilot_v1_m6/venv/bin/python",
+    "-B",
+    "experiments/gama_marlin_v1/qa/m8_pilot_audit_check.py",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m8_pilot_audit_01.json"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "started_at_utc": "2026-10-09T17:24:25.114608+00:00",
+  "finished_at_utc": "2026-10-09T17:24:29.327570+00:00",
+  "elapsed_seconds": 4.2129607789975125,
+  "return_code": 1,
+  "checker_sha256": "4c73c486fdca99f683b9c94b6283a556304ea0386f0a3a9e4a1556308c6ee8ac",
+  "actual_combined_stdout_stderr": {
+    "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_01.log",
+    "sha256": "a7d88c190e285f4e94099fe2d94a1ee4102419efb58dd911bd3009112eee1e36"
+  },
+  "result": {
+    "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_01.json",
+    "sha256": null
+  },
+  "passed": false,
+  "training_or_inference_performed": false,
+  "live_calls_made": false,
+  "old_outputs_written": false
+}

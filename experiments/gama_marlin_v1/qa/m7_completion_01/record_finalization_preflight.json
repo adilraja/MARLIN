@@ -1,0 +1,51 @@
+{
+  "kind": "m7_finalization_recorder_seal_checker_offline_schema_preflight",
+  "passed": true,
+  "fixed_command_contracts_match": {
+    "acceptance-retry": true,
+    "snapshots": true,
+    "finalize": true
+  },
+  "source_syntax_and_pins": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/record_finalization_command.py",
+      "bytes": 6351,
+      "sha256": "ce075dc10a7e381e2132cc74b1cd341913cc6579b9386f21c9ced4fe63c3eff7"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/check_finalization_seal.py",
+      "bytes": 23767,
+      "sha256": "ef7df7e38ca9571711a3f8a7746b529b4128b01cae4d3a040268b65eced11300"
+    }
+  ],
+  "actual_live_raw_adapter_tool_report_binding": {
+    "original_actual_execution": {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_execution.json",
+      "bytes": 2435,
+      "sha256": "ccf6406aee63ca4938c5cd35fc0355233639e3a718e0ef9247f2eea8eb2eff71"
+    },
+    "schema_binding": {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_execution_binding.json",
+      "bytes": 2273,
+      "sha256": "fdae87395edc407892b53815893178165bf965c8de8413e04ce1b2763baed43b"
+    },
+    "actual_tool_report": {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo/results.json",
+      "bytes": 220973,
+      "sha256": "359b07d00ac9bb7fa88265dcb9208dbb802a2f47c4275254628d0e694bcc3f00"
+    },
+    "actual_stdout_stderr": {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_command.log",
+      "bytes": 1025,
+      "sha256": "f3bee9df5ec0c87ae2923c998c11083611344ae9e852f6e7ee001cf4423b5a3a"
+    },
+    "schema_binding_only": true,
+    "new_command_executed": false,
+    "original_sha_only_evidence_preserved_without_invented_measurements": true
+  },
+  "seal_inventory_simulated_only_for_schema_compatibility": true,
+  "full_seal_check_executed": false,
+  "recorder_main_executed": false,
+  "live_calls_made": false,
+  "new_renders_requested": 0
+}

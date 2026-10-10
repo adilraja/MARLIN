@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_gama_counterfactual.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:26:06.739067+00:00",
+  "ended_at_utc": "2026-10-09T17:26:06.876513+00:00",
+  "elapsed_seconds": 0.13746220601024106,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.stderr.log",
+    "bytes": 530,
+    "sha256": "8b986162f2860203d0b93ce8c85db16f2fad06558c5a8d0e01b44484289e523c"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "gama_counterfactual",
+  "category": "capture",
+  "scope": "Explicit synthetic pixel attribution/noise threshold tests; no new render or scientific inference.",
+  "tests": 4,
+  "skipped": 0,
+  "expected_tests": 4,
+  "passed": true
+}

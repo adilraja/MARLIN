@@ -1,0 +1,2421 @@
+{
+  "kind": "m8_read_only_pilot_audit",
+  "passed": true,
+  "recorded_at_utc": "2026-10-09T17:25:30.480585+00:00",
+  "scope": "Retained code/data and installed transform reproduction; no inference, retraining, live calls or old-output writes",
+  "runtime": {
+    "executable": "/home/madil/kit-app-template/artifacts/gsd_pilot_v1_m6/venv/bin/python",
+    "python_version": "3.12.13 (main, Aug  9 2026, 11:11:19) [GCC 15.2.0]",
+    "torch": "2.9.1+cu126",
+    "torchvision": "0.24.1+cu126",
+    "numpy": "2.5.2",
+    "pillow": "12.3.0",
+    "CUDA_VISIBLE_DEVICES": ""
+  },
+  "source_pins": [
+    {
+      "path": "experiments/gsd_pilot_v1/ml/dataset.py",
+      "bytes": 2203,
+      "sha256": "d4b0301d1c261484fd54ca0fb89d60893583505faa018b53df97e30ed9d5788a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/metrics.py",
+      "bytes": 4048,
+      "sha256": "8ddb9e602001f699eda4bfb897ce8ec6dff11dede0b7f239a47efa8a9a7dc2c9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/train_evaluate.py",
+      "bytes": 12636,
+      "sha256": "deff60170b452cf6f422402c86ccc6b49a43b251de7528a0fea61cd75f8d5df8"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/lock_detector.py",
+      "bytes": 3865,
+      "sha256": "250159d2bc51011ed8f9fef7fb9e26ed9bcc2a56124cca33065f87f613a1e62d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/detector_lock.json",
+      "bytes": 1578,
+      "sha256": "d9a3945da830e44bc8549dfa8e2532082dfd9430f8f4f9ded803c16c032d0b5a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/requirements-cu126.lock",
+      "bytes": 699,
+      "sha256": "428f85a88b33931d128cae7e8b8cc309f2a66fe3099a238307289a06c9c3828e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/m6_freeze.py",
+      "bytes": 11182,
+      "sha256": "39bfe28ecd635500b8fe2e90ac7c570cebba54aad35aa3774392b1b40bf29e55"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/verify_loader.py",
+      "bytes": 2547,
+      "sha256": "56f38bf2a0f6e2d6a4508fd44a123a47db4eb09abda97c17adac52be34157c1e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/M8_FINAL_REPORT.md",
+      "bytes": 8685,
+      "sha256": "851f9741cc4091fcfdf1257ff20c1790f6fe5e859bcda482633d8226dd496d2f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_test_predictions.json",
+      "bytes": 143777,
+      "sha256": "77719a09d838b9d2aa26c15a614e2a3dbc28d05aca0140248ed4b5a0ed953e9c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_test_metrics.json",
+      "bytes": 7641,
+      "sha256": "983a032c83be3c5ea65dbbef4106164e84221446fa723c6a6d63781fa8843479"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_validation_selection.json",
+      "bytes": 7153,
+      "sha256": "bb458b6908326e71f6cfaceb4ae416dc3cc217a185096c7feeff34214a9ddf45"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_training_history.json",
+      "bytes": 3602,
+      "sha256": "d0f62ee652508ea519f96824ebd71565b6078817ce34751a601fe1dae9237bb5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m8_analyse.py",
+      "bytes": 9931,
+      "sha256": "e5e27bfed0b70f6a4b60f5f30fe4211a4371704b64c07089f7b13bc9ce9daad7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m8_gsd_analysis.json",
+      "bytes": 10672,
+      "sha256": "bd6c009af4a343072e6d34591c2cf0b9d914f650e46059a84345e18582232867"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/image_assignments.json",
+      "bytes": 339081,
+      "sha256": "ae371fc20edef0d8299cd1c8827b89204898cfb98fa6a0070d71920ec99633ac"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/scene_groups.json",
+      "bytes": 27046,
+      "sha256": "11f3fc329fa9ad78c8f30293ebaaac4bb949804e0a1a5c3a879f683f3c072ef1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/train.json",
+      "bytes": 2566,
+      "sha256": "30659c523010710a9d75c7e85bbb2e1a7e990dd721fee1744f70383088573fcf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/validation.json",
+      "bytes": 915,
+      "sha256": "6b65b0e97909589b37c493cd267f21aaeb74d79c3be681be733ea293360c2827"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/test.json",
+      "bytes": 885,
+      "sha256": "aef7099b0a287f3d6a9bd269a3a4089ce36e294607027e209694d4ca8cbadb68"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/specification.json",
+      "bytes": 19709,
+      "sha256": "6a0035aabf42cb1ce1caa64668c2dee0e0506215def673bd35e771bc00f12471"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/annotations/milestone_5_coco.json",
+      "bytes": 238658,
+      "sha256": "b648118ed23daf0d398cbe4d80517a07712958574364a5314d95432ab7c25a66"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/annotations/milestone_5_geometry.json",
+      "bytes": 974515,
+      "sha256": "c11ff4f67122d5bada60ec7b5e6ef865918fe80fd39c778d6e899c5cb7520a87"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/annotations/milestone_5_frames.json",
+      "bytes": 831374,
+      "sha256": "e2cecf0e06f7a301c4395586b89af9098b7fd1ca6ce4291f7c934b84f4358e63"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m6_input_validation.json",
+      "bytes": 1115,
+      "sha256": "547b8661fe43ee77f1190df6f12f537ab4ca46fbe5f59ca51c25c28029874f2f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m6_loader_validation.json",
+      "bytes": 310,
+      "sha256": "96c2eb777b79b8846e4952cdb26bd91ada05c073a9734d745a3192abd1dc1d05"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m7_result_validation.json",
+      "bytes": 441,
+      "sha256": "06792274837584f578e18499056d4672c297dbf28a9d96f3c90f506b868dd61e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m5_dataset_validation.json",
+      "bytes": 116004,
+      "sha256": "2e2a06cab7ae9a7b6e140af5e0e4843f71e6a5cfee6d8df2b85da338d0a05057"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m4_geometry.py",
+      "bytes": 5386,
+      "sha256": "912aeb92bb4052dd90afd2db96be45ad032740ef7369319896485c8f2dcb1c31"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m5_geometry.py",
+      "bytes": 1723,
+      "sha256": "7cfcb4c4591890e2186ebf32c38464430a380cc0ab9ca7fdc7bf1d78d1d2886e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m5_validate_dataset.py",
+      "bytes": 10701,
+      "sha256": "533408e90ac3b2fe6dc9919de02ca7cb6fa5193d22c24435773f6b218d7ba731"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/scenes/build_scenes.py",
+      "bytes": 14110,
+      "sha256": "cbfb05439e7cba0e55c110fefb254a2224ae5b10c28b70018f9c40739bba354e"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/transform.py",
+      "bytes": 12170,
+      "sha256": "8f53149cd93c3bc291cf081535686282137ae29b2362938e7329f2361325061f"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/generalized_rcnn.py",
+      "bytes": 4929,
+      "sha256": "a6928bb128839cb9995e8f5f8e64db47caccecccbe5761cddc94e6004926a874"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/faster_rcnn.py",
+      "bytes": 36966,
+      "sha256": "4ba7930ab1e4588083a462208c00232dcc206ac12e6fc59852fa48c668f2b26b"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/roi_heads.py",
+      "bytes": 33821,
+      "sha256": "5a1d39d4a363bbbd4f798ede765f39b5b1d73e59af83d9e8c50e381a9ab974ec"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/rpn.py",
+      "bytes": 15818,
+      "sha256": "17eb939224b28c435839b7958c6ab25765f041c151be1cf137507dd0e4d5ddd5"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/ops/boxes.py",
+      "bytes": 20215,
+      "sha256": "5d32c67e84f0adedfc44a396e554d4147b1a648c4f0749deeb736dd300fb00cd"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torch/nn/functional.py",
+      "bytes": 244561,
+      "sha256": "5e96bb0880a4c6f4c0ae34c00a894e152412e68f6ffd073d2b442907eedeb5fa"
+    },
+    {
+      "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/PIL/ImageOps.py",
+      "bytes": 25697,
+      "sha256": "938f56b053a035ed06278d90d7cfb275807ab8ccf5e27db52c23595ccda97fff"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_check.py",
+      "bytes": 16106,
+      "sha256": "fec1f0f5769c7f040948f33645bd195a78c90ea94a98fea4e008a40f93495084"
+    }
+  ],
+  "historical_pilot_source_pins_matched": [
+    {
+      "path": "experiments/gsd_pilot_v1/ml/dataset.py",
+      "bytes": 2203,
+      "sha256": "d4b0301d1c261484fd54ca0fb89d60893583505faa018b53df97e30ed9d5788a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/metrics.py",
+      "bytes": 4048,
+      "sha256": "8ddb9e602001f699eda4bfb897ce8ec6dff11dede0b7f239a47efa8a9a7dc2c9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/train_evaluate.py",
+      "bytes": 12636,
+      "sha256": "deff60170b452cf6f422402c86ccc6b49a43b251de7528a0fea61cd75f8d5df8"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/lock_detector.py",
+      "bytes": 3865,
+      "sha256": "250159d2bc51011ed8f9fef7fb9e26ed9bcc2a56124cca33065f87f613a1e62d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/detector_lock.json",
+      "bytes": 1578,
+      "sha256": "d9a3945da830e44bc8549dfa8e2532082dfd9430f8f4f9ded803c16c032d0b5a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/requirements-cu126.lock",
+      "bytes": 699,
+      "sha256": "428f85a88b33931d128cae7e8b8cc309f2a66fe3099a238307289a06c9c3828e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/m6_freeze.py",
+      "bytes": 11182,
+      "sha256": "39bfe28ecd635500b8fe2e90ac7c570cebba54aad35aa3774392b1b40bf29e55"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/ml/verify_loader.py",
+      "bytes": 2547,
+      "sha256": "56f38bf2a0f6e2d6a4508fd44a123a47db4eb09abda97c17adac52be34157c1e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/M8_FINAL_REPORT.md",
+      "bytes": 8685,
+      "sha256": "851f9741cc4091fcfdf1257ff20c1790f6fe5e859bcda482633d8226dd496d2f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_test_predictions.json",
+      "bytes": 143777,
+      "sha256": "77719a09d838b9d2aa26c15a614e2a3dbc28d05aca0140248ed4b5a0ed953e9c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_test_metrics.json",
+      "bytes": 7641,
+      "sha256": "983a032c83be3c5ea65dbbef4106164e84221446fa723c6a6d63781fa8843479"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_validation_selection.json",
+      "bytes": 7153,
+      "sha256": "bb458b6908326e71f6cfaceb4ae416dc3cc217a185096c7feeff34214a9ddf45"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m7_training_history.json",
+      "bytes": 3602,
+      "sha256": "d0f62ee652508ea519f96824ebd71565b6078817ce34751a601fe1dae9237bb5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m8_analyse.py",
+      "bytes": 9931,
+      "sha256": "e5e27bfed0b70f6a4b60f5f30fe4211a4371704b64c07089f7b13bc9ce9daad7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/results/m8_gsd_analysis.json",
+      "bytes": 10672,
+      "sha256": "bd6c009af4a343072e6d34591c2cf0b9d914f650e46059a84345e18582232867"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/image_assignments.json",
+      "bytes": 339081,
+      "sha256": "ae371fc20edef0d8299cd1c8827b89204898cfb98fa6a0070d71920ec99633ac"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/scene_groups.json",
+      "bytes": 27046,
+      "sha256": "11f3fc329fa9ad78c8f30293ebaaac4bb949804e0a1a5c3a879f683f3c072ef1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/train.json",
+      "bytes": 2566,
+      "sha256": "30659c523010710a9d75c7e85bbb2e1a7e990dd721fee1744f70383088573fcf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/validation.json",
+      "bytes": 915,
+      "sha256": "6b65b0e97909589b37c493cd267f21aaeb74d79c3be681be733ea293360c2827"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/splits/test.json",
+      "bytes": 885,
+      "sha256": "aef7099b0a287f3d6a9bd269a3a4089ce36e294607027e209694d4ca8cbadb68"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/specification.json",
+      "bytes": 19709,
+      "sha256": "6a0035aabf42cb1ce1caa64668c2dee0e0506215def673bd35e771bc00f12471"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/annotations/milestone_5_coco.json",
+      "bytes": 238658,
+      "sha256": "b648118ed23daf0d398cbe4d80517a07712958574364a5314d95432ab7c25a66"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/annotations/milestone_5_geometry.json",
+      "bytes": 974515,
+      "sha256": "c11ff4f67122d5bada60ec7b5e6ef865918fe80fd39c778d6e899c5cb7520a87"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/annotations/milestone_5_frames.json",
+      "bytes": 831374,
+      "sha256": "e2cecf0e06f7a301c4395586b89af9098b7fd1ca6ce4291f7c934b84f4358e63"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m6_input_validation.json",
+      "bytes": 1115,
+      "sha256": "547b8661fe43ee77f1190df6f12f537ab4ca46fbe5f59ca51c25c28029874f2f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m6_loader_validation.json",
+      "bytes": 310,
+      "sha256": "96c2eb777b79b8846e4952cdb26bd91ada05c073a9734d745a3192abd1dc1d05"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m7_result_validation.json",
+      "bytes": 441,
+      "sha256": "06792274837584f578e18499056d4672c297dbf28a9d96f3c90f506b868dd61e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m5_dataset_validation.json",
+      "bytes": 116004,
+      "sha256": "2e2a06cab7ae9a7b6e140af5e0e4843f71e6a5cfee6d8df2b85da338d0a05057"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m4_geometry.py",
+      "bytes": 5386,
+      "sha256": "912aeb92bb4052dd90afd2db96be45ad032740ef7369319896485c8f2dcb1c31"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m5_geometry.py",
+      "bytes": 1723,
+      "sha256": "7cfcb4c4591890e2186ebf32c38464430a380cc0ab9ca7fdc7bf1d78d1d2886e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/qa/m5_validate_dataset.py",
+      "bytes": 10701,
+      "sha256": "533408e90ac3b2fe6dc9919de02ca7cb6fa5193d22c24435773f6b218d7ba731"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/scenes/build_scenes.py",
+      "bytes": 14110,
+      "sha256": "cbfb05439e7cba0e55c110fefb254a2224ae5b10c28b70018f9c40739bba354e"
+    }
+  ],
+  "installed_source_wheel_record_checks": [
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/transform.py",
+        "bytes": 12170,
+        "sha256": "8f53149cd93c3bc291cf081535686282137ae29b2362938e7329f2361325061f"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision-0.24.1+cu126.dist-info/RECORD",
+        "bytes": 30893,
+        "sha256": "43f2cb876ec2a3951b7594e5abd4cc03397dd8d04d09ca394ec9fcfcc15687a9"
+      },
+      "record_entry_hash": "sha256=j1MUnNk8O8KRzwgVNWhighN64psjYpOOcynyNhMlBh8",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/generalized_rcnn.py",
+        "bytes": 4929,
+        "sha256": "a6928bb128839cb9995e8f5f8e64db47caccecccbe5761cddc94e6004926a874"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision-0.24.1+cu126.dist-info/RECORD",
+        "bytes": 30893,
+        "sha256": "43f2cb876ec2a3951b7594e5abd4cc03397dd8d04d09ca394ec9fcfcc15687a9"
+      },
+      "record_entry_hash": "sha256=ppKLsSiDnLmZXo9fjmTbR8rM7My-V2HN3JTmAEkmqHQ",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/faster_rcnn.py",
+        "bytes": 36966,
+        "sha256": "4ba7930ab1e4588083a462208c00232dcc206ac12e6fc59852fa48c668f2b26b"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision-0.24.1+cu126.dist-info/RECORD",
+        "bytes": 30893,
+        "sha256": "43f2cb876ec2a3951b7594e5abd4cc03397dd8d04d09ca394ec9fcfcc15687a9"
+      },
+      "record_entry_hash": "sha256=S6eTCrHkWICDpGIgjAAjLcwgasEub8WYUvpIxmjysms",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/roi_heads.py",
+        "bytes": 33821,
+        "sha256": "5a1d39d4a363bbbd4f798ede765f39b5b1d73e59af83d9e8c50e381a9ab974ec"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision-0.24.1+cu126.dist-info/RECORD",
+        "bytes": 30893,
+        "sha256": "43f2cb876ec2a3951b7594e5abd4cc03397dd8d04d09ca394ec9fcfcc15687a9"
+      },
+      "record_entry_hash": "sha256=Wh051KNju71PeY7edl85tbHXPlmvg9noxQ44Gpq5dOw",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/models/detection/rpn.py",
+        "bytes": 15818,
+        "sha256": "17eb939224b28c435839b7958c6ab25765f041c151be1cf137507dd0e4d5ddd5"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision-0.24.1+cu126.dist-info/RECORD",
+        "bytes": 30893,
+        "sha256": "43f2cb876ec2a3951b7594e5abd4cc03397dd8d04d09ca394ec9fcfcc15687a9"
+      },
+      "record_entry_hash": "sha256=F-uTkiSyjENYObeVjGqyV2XwQcFRvhzxN1B90OTV3dU",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision/ops/boxes.py",
+        "bytes": 20215,
+        "sha256": "5d32c67e84f0adedfc44a396e554d4147b1a648c4f0749deeb736dd300fb00cd"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torchvision-0.24.1+cu126.dist-info/RECORD",
+        "bytes": 30893,
+        "sha256": "43f2cb876ec2a3951b7594e5abd4cc03397dd8d04d09ca394ec9fcfcc15687a9"
+      },
+      "record_entry_hash": "sha256=XTLGfoTwre38RKOW5VTUFHsaZIxPB0ne63Nt0wD7AM0",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torch/nn/functional.py",
+        "bytes": 244561,
+        "sha256": "5e96bb0880a4c6f4c0ae34c00a894e152412e68f6ffd073d2b442907eedeb5fa"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/torch-2.9.1+cu126.dist-info/RECORD",
+        "bytes": 1378631,
+        "sha256": "b5d0e24789c41e0d196945c43ab013a64cd75def3a09aef0129fd7d838d3bc70"
+      },
+      "record_entry_hash": "sha256=Xpa7CICkxvTArjTAColOFSQS5o9v_Qc9K0QpB-7etfo",
+      "passed": true
+    },
+    {
+      "source": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/PIL/ImageOps.py",
+        "bytes": 25697,
+        "sha256": "938f56b053a035ed06278d90d7cfb275807ab8ccf5e27db52c23595ccda97fff"
+      },
+      "distribution_record": {
+        "path": "artifacts/gsd_pilot_v1_m6/venv/lib/python3.12/site-packages/pillow-12.3.0.dist-info/RECORD",
+        "bytes": 16236,
+        "sha256": "3b3fd94822d6677fc40ee7c5925a81e71796ca822b0e0b53e3fadc3a051b3c06"
+      },
+      "record_entry_hash": "sha256=k49WsFOgNe0GJ42Q18-ydYB6uMz14n21LCNZXM2pf_8",
+      "passed": true
+    }
+  ],
+  "source_and_images_unchanged_after": true,
+  "input_images_decoded_hashed_and_pixel_padding_checked": 300,
+  "image_pins": [
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_present/rgb.png",
+      "bytes": 984901,
+      "sha256": "4097fe5a03c85e1e6cc84ff5b39811fd9b8ee9e4f0bc4c30f0ea9cb49b8e77d7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_0p5/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_present/rgb.png",
+      "bytes": 977406,
+      "sha256": "5c40b92620434610839da230d062e32316edd59cbb174fd3865dd77df3786eff"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_present/rgb.png",
+      "bytes": 977243,
+      "sha256": "8f55b429a9207c3c4c794e2b0f2ce5edc12889115bdfd8dac3c98b12ddc9d667"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_2p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_present/rgb.png",
+      "bytes": 977966,
+      "sha256": "5dbaf237b998a6885a29dc63e8c74d25aca9d64dc94dd72c57e446b1452f3dbe"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_present/rgb.png",
+      "bytes": 977233,
+      "sha256": "488e9054b96cfafad3428ba40d4ed73a653729306984d39bd8e13c64c459cfba"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/european_storm_petrel_0000/gsd_4p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0001/gsd_0p5/target_present/rgb.png",
+      "bytes": 978250,
+      "sha256": "a5e105be092358dfc25b7315bca7060caf4beb8163276fa713a1975d64b1550f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0001/gsd_1p0/target_present/rgb.png",
+      "bytes": 977358,
+      "sha256": "bf60cca70454bcf2ad31d98ddfcbec555c662bef883c9b5089e8d4759dda07c3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0001/gsd_2p0/target_present/rgb.png",
+      "bytes": 977731,
+      "sha256": "0191d2622b084665c725d3d46e907e35bc9d8a9ecff0db546c573e0f8f7691eb"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0001/gsd_3p0/target_present/rgb.png",
+      "bytes": 983467,
+      "sha256": "abd0d4fdc2d59dd17793a8dcb4de0d46e97dd43de7ee0f81fcea364ce42be93b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0001/gsd_4p0/target_present/rgb.png",
+      "bytes": 977410,
+      "sha256": "68b048ba396e7b61faf39216aa520e5acfc9d52da5f793c7d61469410deb7705"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0002/gsd_0p5/target_present/rgb.png",
+      "bytes": 984730,
+      "sha256": "a94e6d899812e567a59ce89af333a41154ed7b512935a748a08f7654ed303daf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0002/gsd_1p0/target_present/rgb.png",
+      "bytes": 983638,
+      "sha256": "f51f16426a2360ae578c7e06f70b0996c508b8b2d836d68702d927e040e1f41d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0002/gsd_2p0/target_present/rgb.png",
+      "bytes": 978010,
+      "sha256": "8482bb070a4a1ffdfb6fc23277acd3f911dd42f5ec2925ded10ce93fa5b7186f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0002/gsd_3p0/target_present/rgb.png",
+      "bytes": 977221,
+      "sha256": "58c04c70a8cfe187d55d203718e2575f53c08bb48c127df12502e618d857a762"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0002/gsd_4p0/target_present/rgb.png",
+      "bytes": 983175,
+      "sha256": "3d600c4f1863a458a576801723aaeee0503e802552c889d29b317591b2299691"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0003/gsd_0p5/target_present/rgb.png",
+      "bytes": 979550,
+      "sha256": "41e77f6e90445cd8d1d3ea5643ec56ef1169712d3703e7adb235bd3e5fce10ad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0003/gsd_1p0/target_present/rgb.png",
+      "bytes": 977953,
+      "sha256": "12c96f9d96f07f8e07f3bad886e8974d5eb0e23fc19fb212ce717cb960a03a19"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0003/gsd_2p0/target_present/rgb.png",
+      "bytes": 977658,
+      "sha256": "b4ec40c2d207d212d21c9f359d2bddf7e4ebae6a4b82e9aeeea7dbaf2c461478"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0003/gsd_3p0/target_present/rgb.png",
+      "bytes": 977417,
+      "sha256": "9ad191f94a69b270b324aa00b418265cd2f30e4ee857c8a445135f4bd55a6a1e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0003/gsd_4p0/target_present/rgb.png",
+      "bytes": 983331,
+      "sha256": "213b2610b052363c3525e2c91f476a8f7dbf40e3f628c755ec6998f2cd070174"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0004/gsd_0p5/target_present/rgb.png",
+      "bytes": 985945,
+      "sha256": "4b34673a6640795e9be3e3da5794b5d6f8d4c9ed4e863871327bdc69b9f8505f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0004/gsd_1p0/target_present/rgb.png",
+      "bytes": 978832,
+      "sha256": "5fed39dc9966e4cab8400ac06f7c7b488e561a67dee305c454c55806661c632f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0004/gsd_2p0/target_present/rgb.png",
+      "bytes": 977310,
+      "sha256": "0b2679a5280974157a2db77a987c93fc0e6045ce2b83b2ea165f9af04e9d00bd"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0004/gsd_3p0/target_present/rgb.png",
+      "bytes": 977295,
+      "sha256": "578d5c64122de2fde8b143d950077164ff170ef55131c8077f847bfbdbce0053"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0004/gsd_4p0/target_present/rgb.png",
+      "bytes": 977767,
+      "sha256": "d1e5913227eacffe3678afa81d0ae9bf14d8324c147d746176c42ff200cff2b2"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0005/gsd_0p5/target_present/rgb.png",
+      "bytes": 985693,
+      "sha256": "6f86c489d83860c1267ea1c08b95636bb77a3478adbffb928b14e3ade73c5925"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0005/gsd_1p0/target_present/rgb.png",
+      "bytes": 984289,
+      "sha256": "9f260c52500a677400a9f66911253f22ec76706e2b711a2e3f023892713c8738"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0005/gsd_2p0/target_present/rgb.png",
+      "bytes": 977618,
+      "sha256": "b3d94e6bd38349dfe04630995080057eb30496ae1684b3c85341b6022e398f6a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0005/gsd_3p0/target_present/rgb.png",
+      "bytes": 977346,
+      "sha256": "22930028ae417342afb82dc81c78caf28c687baba621561c9ce9699b38f5195c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0005/gsd_4p0/target_present/rgb.png",
+      "bytes": 977668,
+      "sha256": "154873673168a133c869a31742f86fe37095424fefa4bc9ba8845746233e85a5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_0p5/target_present/rgb.png",
+      "bytes": 984483,
+      "sha256": "c44f00d281c06169f443ad4a62f5f15da63a96e48e69b0061fe1841f519d3d6d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_0p5/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_1p0/target_present/rgb.png",
+      "bytes": 984425,
+      "sha256": "74f695a5e034f040326ed94a8dc789566c8d5ad7edc787f8bcbc6420f75ff795"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_1p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_2p0/target_present/rgb.png",
+      "bytes": 983181,
+      "sha256": "bec11a6d59444d88f6def5c155e115e87b5e84e1743d61c8c898a732d7c34f47"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_2p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_3p0/target_present/rgb.png",
+      "bytes": 983609,
+      "sha256": "59c963139ffa6e48b12c0aeccbeb7ca32880d9cdddd865b5a96f145f7d39c92d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_4p0/target_present/rgb.png",
+      "bytes": 983168,
+      "sha256": "fe0a43985158e195006fdf77959c09a5f3ce88e3dfab5b776a60e30a31c40a7b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0006/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0007/gsd_0p5/target_present/rgb.png",
+      "bytes": 984195,
+      "sha256": "62487d38e16e6047cdb321fd2fd3a6c70a9091fe73f071b110e5bfcb5d4b5e7e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0007/gsd_1p0/target_present/rgb.png",
+      "bytes": 978018,
+      "sha256": "482cdc17748d79a744bf5690cb4f0103ae31498a2775552d49fba48a22600d66"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0007/gsd_2p0/target_present/rgb.png",
+      "bytes": 983460,
+      "sha256": "866108c517f3fdc414b182ec70f2450e9a8204dd75524b8a68d14e392e2096ed"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0007/gsd_3p0/target_present/rgb.png",
+      "bytes": 977471,
+      "sha256": "244238cc9c5a8700e86dd10efce28b67331b0e9fa8d2aa0b6343f33a1bb7d52b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0007/gsd_4p0/target_present/rgb.png",
+      "bytes": 983521,
+      "sha256": "b25a3d5b77bf452ca9b0c75299ef267d0a7b1770be0f4b8ae72a3718d245e67e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0008/gsd_0p5/target_present/rgb.png",
+      "bytes": 1000476,
+      "sha256": "d7de90628b62d7d6319ec01cb0f992e213e913ca1bc5d2e6dd32faeb0e31024a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0008/gsd_1p0/target_present/rgb.png",
+      "bytes": 978180,
+      "sha256": "597da5f04d4c6b897a9a6b33f19faa80f2ac532954414bb15765da057bc76133"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0008/gsd_2p0/target_present/rgb.png",
+      "bytes": 977481,
+      "sha256": "1dd390dd8e4300a8d142084f101dc5c4e34191c3f8076e995ef8793f8d78ca7b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0008/gsd_3p0/target_present/rgb.png",
+      "bytes": 977524,
+      "sha256": "6bc6081648f96d979f560c220234f18a3a74ff175efaacb0eb7de7e1f08d87a0"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0008/gsd_4p0/target_present/rgb.png",
+      "bytes": 983093,
+      "sha256": "736eca0289dea4058de075f9116740b3d745d733f249dd1f2ebbec5c8fa4635a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0009/gsd_0p5/target_present/rgb.png",
+      "bytes": 978667,
+      "sha256": "b16831585f60458f2eb198287b457cac99f56fab2b800ad1db9249d6b35e0316"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0009/gsd_1p0/target_present/rgb.png",
+      "bytes": 983623,
+      "sha256": "92adc5386b0f6d18237c0c880f8ed2e19e050fc1f1f1810877be21df7cbae20e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0009/gsd_2p0/target_present/rgb.png",
+      "bytes": 983612,
+      "sha256": "fc78c67bae40cb0f3d1fda33fe62a9f8eab2474a1b32c3b5f459dcd027b4f604"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0009/gsd_3p0/target_present/rgb.png",
+      "bytes": 999553,
+      "sha256": "60a8c219cfc62bae0b00819f13920fa5f6c55e14b7b902c47536f341943980a5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0009/gsd_4p0/target_present/rgb.png",
+      "bytes": 999272,
+      "sha256": "a7584863aa920af55341d50795ce9ebd09c140063033525fcd1e16939fa432aa"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0010/gsd_0p5/target_present/rgb.png",
+      "bytes": 984904,
+      "sha256": "79c2466e5b59ef5f6191abaa86bc8a66c828ccf74f52132ef30ef39a1973a1b4"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0010/gsd_1p0/target_present/rgb.png",
+      "bytes": 977911,
+      "sha256": "77e8459a862aebc64ff64c574c09b88368227c8a2b00fd07e6e1f82811ddc0cf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0010/gsd_2p0/target_present/rgb.png",
+      "bytes": 976601,
+      "sha256": "f5adab6457a29bd4f77035864671608cb7f5ffe38c8d7bfc96a0cb8c72289186"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0010/gsd_3p0/target_present/rgb.png",
+      "bytes": 982958,
+      "sha256": "27b090672d722526243cc172fbfcab6cdb4763a0ad38ad8024896de6b5a4566c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0010/gsd_4p0/target_present/rgb.png",
+      "bytes": 983445,
+      "sha256": "538eb41e05b762811ae8b9f5ea447a62ba7137ca2e0426d7687c56cab53f3334"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0011/gsd_0p5/target_present/rgb.png",
+      "bytes": 985453,
+      "sha256": "a5ae9bec069d75f742a9a0a57bc597ce2ce914a1ae831f9d217e098c280f375e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0011/gsd_1p0/target_present/rgb.png",
+      "bytes": 984124,
+      "sha256": "8ca16f995446b60cfe0e22eaf18b60555ff903012a04a1d11a9a1965799bd82b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0011/gsd_2p0/target_present/rgb.png",
+      "bytes": 998898,
+      "sha256": "be050d24c62129bf72b0177a21fc5fd346417bf4ec4bec9413564613d44e11fe"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0011/gsd_3p0/target_present/rgb.png",
+      "bytes": 983514,
+      "sha256": "e94614475b6e0cd184b24ebb44ad1e2f6d7d3e087fafbedbd937cdb0958a8d0c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0011/gsd_4p0/target_present/rgb.png",
+      "bytes": 999378,
+      "sha256": "f0ed53dea02b20ac64c58959b9e5966d96e9c15ee671c4c1b79153cd3332a47b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_0p5/target_present/rgb.png",
+      "bytes": 978505,
+      "sha256": "c5ca68ea39f8008e23515fa4698845754693e26a6578a85c85388dea511a744d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_0p5/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_1p0/target_present/rgb.png",
+      "bytes": 983517,
+      "sha256": "6b3934200180eabf80d3ed02d13d7cd88dec176f1097e9755e8fe3e98c62fcac"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_1p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_2p0/target_present/rgb.png",
+      "bytes": 977744,
+      "sha256": "c3ae6efe93d5bf9849ca7aaa6b9afe48b4aa9043eeae9f57d0fbfaa257693da9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_2p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_3p0/target_present/rgb.png",
+      "bytes": 998996,
+      "sha256": "07e2509311e38475e15f79e2a942b2b0c6ece50bda8ad4169e25647db5fd03a9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_3p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_4p0/target_present/rgb.png",
+      "bytes": 983370,
+      "sha256": "c01313e4a34e1cad81f54963d5783732b5dc892c44ef5e15f896519fa5af047e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0012/gsd_4p0/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0013/gsd_0p5/target_present/rgb.png",
+      "bytes": 1000567,
+      "sha256": "566f174c5f4154f90573da29fa8885b333be9f744503fed8dca5ee645b22a338"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0013/gsd_1p0/target_present/rgb.png",
+      "bytes": 999347,
+      "sha256": "b0e9d0cdfa6af47f329e2df6f7ef1f738669938740bb69c8d2cb23b398fe902d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0013/gsd_2p0/target_present/rgb.png",
+      "bytes": 983137,
+      "sha256": "3c3f356fd210d793e29c3bdeb4c69f6bfae783a52fdb894e95325de74a63d04b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0013/gsd_3p0/target_present/rgb.png",
+      "bytes": 983133,
+      "sha256": "4c5b1578e7502d0b2d9f9465a220f9686676cce57ae09107247b274ffbab1479"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0013/gsd_4p0/target_present/rgb.png",
+      "bytes": 977487,
+      "sha256": "10e484c5f86c609c2f9d8654dd5e0e04d3141cec3a7a4bd456097189c578ed10"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0014/gsd_0p5/target_present/rgb.png",
+      "bytes": 985901,
+      "sha256": "db95350d4bcfa562d066be3aee81beae1bb2f4946293fcafde3f62b9311e175e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0014/gsd_1p0/target_present/rgb.png",
+      "bytes": 999284,
+      "sha256": "a21aaaf713dab812110742a19be1c8ff5e882daf19a4abe1362943087ed00a16"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0014/gsd_2p0/target_present/rgb.png",
+      "bytes": 983561,
+      "sha256": "0572cb0ef0fb9c47fe53d68ca6e6ba66ea535874f44e2f5b43af8bced5ba9ddf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0014/gsd_3p0/target_present/rgb.png",
+      "bytes": 983625,
+      "sha256": "d9b3a63d26bf733b91f7ff921cbb04ea9fe18de6111a9301c91a642612be709d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0014/gsd_4p0/target_present/rgb.png",
+      "bytes": 982901,
+      "sha256": "5571e2c8b73226e3be3e11a1879a88bcb45ccae273a9155f23cbdf87c5fcc774"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0015/gsd_0p5/target_present/rgb.png",
+      "bytes": 985433,
+      "sha256": "3034ccd9fb218a9d676045e551e462796e9f8d4af32ae3ab05ece44136fd20da"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0015/gsd_1p0/target_present/rgb.png",
+      "bytes": 984120,
+      "sha256": "09a2276ac328c188d89ea754d6dca402aee95076618ce72f7fdfbb1497b095e8"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0015/gsd_2p0/target_present/rgb.png",
+      "bytes": 977676,
+      "sha256": "b2ab795bf1f8e9cefa22d06e202f226fb3e8807697df453db835474ab07123dc"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0015/gsd_3p0/target_present/rgb.png",
+      "bytes": 977217,
+      "sha256": "b7943c3d86df2d6ff4f2786524ece2640a528cb48d1bdcf4e2c54741c354b8a2"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0015/gsd_4p0/target_present/rgb.png",
+      "bytes": 977672,
+      "sha256": "f59be6efaaddfaace2a3b2e07f0cfdaa6e104a9843088a131543bae655fdfc9a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0016/gsd_0p5/target_present/rgb.png",
+      "bytes": 1000366,
+      "sha256": "c5391a209cbe1e35c2ca8c3e21983f1b88e57decd8b7fba15ac928d2e855e481"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0016/gsd_1p0/target_present/rgb.png",
+      "bytes": 978049,
+      "sha256": "d3512eefb29228b3b3832592265d1bc71cbe8a89214fda0b3b3272e72a5025ba"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0016/gsd_2p0/target_present/rgb.png",
+      "bytes": 983217,
+      "sha256": "5899da471ad27b3f42ecfdb8009ca086c42d5f9fc7bd17e4eda8ad5db1839cb9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0016/gsd_3p0/target_present/rgb.png",
+      "bytes": 998665,
+      "sha256": "9dc16ac37372556a7881e2897edc5098a457386237e05f5a6f8a2e1d4be7b6a4"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0016/gsd_4p0/target_present/rgb.png",
+      "bytes": 983837,
+      "sha256": "3600b4df7fb5b4a748c3c305ef14e9e29cc90706afb3ded953921dfd27bf9e79"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0017/gsd_0p5/target_present/rgb.png",
+      "bytes": 978628,
+      "sha256": "fe047897b2b8862781346d7afb211af87bbd5c630c24fec1f72aa3c4eb0d8ea2"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0017/gsd_1p0/target_present/rgb.png",
+      "bytes": 983510,
+      "sha256": "bb6e61f39e5a9f764d2bb782c30ec19ced9fffa009ad27307d54b43002504582"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0017/gsd_2p0/target_present/rgb.png",
+      "bytes": 977281,
+      "sha256": "959935fa166a6c5cfeb48c3446d56f6ccce3c24915774688a33b60cb9691f060"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0017/gsd_3p0/target_present/rgb.png",
+      "bytes": 983191,
+      "sha256": "a6dbf66bfda7a58082020b3b72501152c8284b43b761da1080973a117f3117b4"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0017/gsd_4p0/target_present/rgb.png",
+      "bytes": 982813,
+      "sha256": "6956478afb0823e8326cc6e15d12189520c898c578d21f5a5acd7542d523cb79"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_0p5/target_present/rgb.png",
+      "bytes": 1000141,
+      "sha256": "de2d6f2bffb30b3ad345013f949830e2763d8a6b9b312803fcad2e53483e0b91"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_0p5/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_1p0/target_present/rgb.png",
+      "bytes": 983219,
+      "sha256": "7be97c5661714515bed691572799d943c33876edfd53d59e783b1ff2af0787c5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_1p0/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_2p0/target_present/rgb.png",
+      "bytes": 999793,
+      "sha256": "b3277bf17890b24d97c47bdd8cb66a594eb8140aa2a373d510ee27880d0745c7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_2p0/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_3p0/target_present/rgb.png",
+      "bytes": 983396,
+      "sha256": "cbdd85f4f9cf50415fb29098e0f585ce4e1562804d9361d212e5d29e46ea09c8"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_4p0/target_present/rgb.png",
+      "bytes": 982842,
+      "sha256": "68672a31dbc20d21c65622fe26a13bc346d68214f60de6f1a486cdc035565429"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0018/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0019/gsd_0p5/target_present/rgb.png",
+      "bytes": 985868,
+      "sha256": "69d33420aeccfc5228572cec766db7bb9e5399309f5c4f8962b1910aa96a6b67"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0019/gsd_1p0/target_present/rgb.png",
+      "bytes": 978602,
+      "sha256": "3523d417007091703432c43ef25e27abfc7580ddfffcaebae8a74bbc72eb3ead"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0019/gsd_2p0/target_present/rgb.png",
+      "bytes": 983010,
+      "sha256": "36e79ed1b0f14711081b9512d55777d0900f9d4c9ff7b53097c87e32da09f670"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0019/gsd_3p0/target_present/rgb.png",
+      "bytes": 983494,
+      "sha256": "27a40014df22df6fc6982ec4cbe4cacbbefd798e6c206688c7ac1b168d3fc95d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0019/gsd_4p0/target_present/rgb.png",
+      "bytes": 983381,
+      "sha256": "1c6000c1d5ad1c3ee67f797c25353a0f71bdb8d06091fe197ee99d325d63dd0e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0020/gsd_0p5/target_present/rgb.png",
+      "bytes": 1000514,
+      "sha256": "1c81ad2c084983d4537458df80360e45704ee70fec0a4d77c7e88ae80078aead"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0020/gsd_1p0/target_present/rgb.png",
+      "bytes": 978031,
+      "sha256": "c562f7b73ed499d6dc496a44b20c7926be59b1699717725a55035432afa4689a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0020/gsd_2p0/target_present/rgb.png",
+      "bytes": 983093,
+      "sha256": "63708bebcef2c1c085e7da921aba822531a3de80094d055ddf59dab2d8c24b50"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0020/gsd_3p0/target_present/rgb.png",
+      "bytes": 977446,
+      "sha256": "b530d28300d37d3ac732de84d5c374d02a10ad68ff0a22bc442a34ff4fa30448"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0020/gsd_4p0/target_present/rgb.png",
+      "bytes": 983150,
+      "sha256": "37c9f71046b38c15a916bc236943484cdbf6c5cff6cead4f71a98842dae84061"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0021/gsd_0p5/target_present/rgb.png",
+      "bytes": 978963,
+      "sha256": "5c1ad696e1bd13cee2715a7dba292fcd79b0cafa399789e3cb8e39e3fa27ee5b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0021/gsd_1p0/target_present/rgb.png",
+      "bytes": 983145,
+      "sha256": "7f479cd1ab1bc818bb020dfe90bdfaa00cb0a850d6cb86a83b1a04d66e005ccd"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0021/gsd_2p0/target_present/rgb.png",
+      "bytes": 983963,
+      "sha256": "c228f5c6230d48cf3b10ceb89be4e60a0f19fa60653555fc077802ab6ee6169c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0021/gsd_3p0/target_present/rgb.png",
+      "bytes": 977520,
+      "sha256": "e0e9c134ef39a0c2703e5b4b3ab0a554eda9b90695a6031be5066fd31745d4c2"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0021/gsd_4p0/target_present/rgb.png",
+      "bytes": 983653,
+      "sha256": "f927318a96c8366d451f1eb0a3ef9d825f285eed336b611fbb0c83a1a3cc7d9c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0022/gsd_0p5/target_present/rgb.png",
+      "bytes": 978833,
+      "sha256": "c1ad38ae1adcb05be4aa437027e1a2548a695dbd80a46c932069378df8942f5c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0022/gsd_1p0/target_present/rgb.png",
+      "bytes": 983473,
+      "sha256": "ceaacca2b80bd0aadd4f7b698ebd26c8bb711b35a009c26b49ca7487714966de"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0022/gsd_2p0/target_present/rgb.png",
+      "bytes": 976627,
+      "sha256": "7b1cba3f09567930902a47f9aef1130dbaaf3b76e7d590a2df02bb140e77d40e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0022/gsd_3p0/target_present/rgb.png",
+      "bytes": 977335,
+      "sha256": "45f1260a7b6f3156006643785e037a3ca15858a7a29f1599a6c6dd6a74daf75b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0022/gsd_4p0/target_present/rgb.png",
+      "bytes": 978148,
+      "sha256": "fc9f289b11b5a8354c7866cc3b3e8a8fb8253260186276e2a416f3663d14cb5a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0023/gsd_0p5/target_present/rgb.png",
+      "bytes": 985491,
+      "sha256": "7bc17d3117b5318bf834f5bd1f9f6b39cbfb9593ab8db1ee110c929f68e32941"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0023/gsd_1p0/target_present/rgb.png",
+      "bytes": 983562,
+      "sha256": "ff8884b24136b31f718ef3185e3a505987973f89dc3887db5b5fb2111c36f5bc"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0023/gsd_2p0/target_present/rgb.png",
+      "bytes": 978241,
+      "sha256": "b6e1ea178762f09ce7af241a73779b27c6b064628aff3aa569bc3d78e85ba6ec"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0023/gsd_3p0/target_present/rgb.png",
+      "bytes": 977215,
+      "sha256": "d0b8405f90e6ad100ad5dcd71051134a87e571c14af558b1aab6160a318d23ab"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0023/gsd_4p0/target_present/rgb.png",
+      "bytes": 983717,
+      "sha256": "64ce9f1e70f0e3c014f41dab71c1a146faca2f1ee36d3583d71ce3a0b41ad79c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_0p5/target_present/rgb.png",
+      "bytes": 978864,
+      "sha256": "1ac2130a95e4d61fdac1ffa151a9ef20f362a0295c83a5bf46aca08d0a43064d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_0p5/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_1p0/target_present/rgb.png",
+      "bytes": 978133,
+      "sha256": "99eadbcb8472001c1b9e703ecbb8eaa02181ef4a9d98a7d29b04bbcd3d454174"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_2p0/target_present/rgb.png",
+      "bytes": 977857,
+      "sha256": "20fff8622706010111e753581a53b076dcc7aa6c2943e9655c253b324da708b0"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_2p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_3p0/target_present/rgb.png",
+      "bytes": 977174,
+      "sha256": "37c72b9456695568d63953fdf89ab275019826b39d3ce6faab37de2bdef6ee55"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_3p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_4p0/target_present/rgb.png",
+      "bytes": 977490,
+      "sha256": "073f3eb46e3c49db882b3a9e0d508b7bb07cdd9af6ed4b7dc991bbdde8787ebc"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/european_storm_petrel_0024/gsd_4p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_present/rgb.png",
+      "bytes": 1002704,
+      "sha256": "1ac5aa58f19a241206ae33174cf3222288990b6ffc6b5a0c14f253bd5d05420c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_0p5/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_present/rgb.png",
+      "bytes": 1005741,
+      "sha256": "b92e0c712444ce0d7f66fa3a0d514717786a7e0b7d897acb279dc1704ee64314"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_present/rgb.png",
+      "bytes": 979370,
+      "sha256": "8b8991bd784de36c9c5db4cdf3dd4e6e56d22e0c21cfdbf96f2c1da704d2f7f9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_2p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_present/rgb.png",
+      "bytes": 977827,
+      "sha256": "67fe0a77fba5b851a426119ebdefdf6b0acd82f3ee9e74bf413405049ad55569"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_present/rgb.png",
+      "bytes": 983590,
+      "sha256": "e6cfa85209fb9bbe90c2d49098bc09b2f68db3fedb6d86d682810d799e4699d6"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_4/harbour_porpoise_0000/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0001/gsd_0p5/target_present/rgb.png",
+      "bytes": 1012894,
+      "sha256": "d3b36604101eaa5e392526c74e346a42ae28452a55b34e48d09cff31f90f4cd5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0001/gsd_1p0/target_present/rgb.png",
+      "bytes": 993766,
+      "sha256": "793436da8ee4f6f340e171374cc8224c4e0c2e0b09d0deca886e0dd09166cf16"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0001/gsd_2p0/target_present/rgb.png",
+      "bytes": 986271,
+      "sha256": "bb614930f46796e4b974b29cc0d7bee1c639aa2ddc1f67452be2eb0e950793d4"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0001/gsd_3p0/target_present/rgb.png",
+      "bytes": 978815,
+      "sha256": "374012120507a6e119d9d441efe3d6ee152d4f340bef80f01b79554a454e3394"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0001/gsd_4p0/target_present/rgb.png",
+      "bytes": 984514,
+      "sha256": "018a1c05a61a0c84318a46b103d93f075125a230adf045295ad88be186760999"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0002/gsd_0p5/target_present/rgb.png",
+      "bytes": 1028331,
+      "sha256": "734288e6abe2cba4f689380ed48fbb9cbc91e40c9b362542ffdd45e552823930"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0002/gsd_1p0/target_present/rgb.png",
+      "bytes": 1007974,
+      "sha256": "7a696b463a6c419804719a7d358ad1c7adf9085b69bbac9ec804d9263ab58c34"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0002/gsd_2p0/target_present/rgb.png",
+      "bytes": 979597,
+      "sha256": "31f0d93dd40e431f84510b7d020e13e6441f7cc1bfd1913cfb4cfdeb025b0903"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0002/gsd_3p0/target_present/rgb.png",
+      "bytes": 984976,
+      "sha256": "9874c68be829ef175e2ab05eb564296b6d3d6e52b89a8fc49fbb70e737d5f27c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0002/gsd_4p0/target_present/rgb.png",
+      "bytes": 977856,
+      "sha256": "08a4ce43a4f6073acb47753c1cef86ff30338570c00bc2cd8feb04bdaa7c43c4"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0003/gsd_0p5/target_present/rgb.png",
+      "bytes": 1011779,
+      "sha256": "9798b8bdaef3e5fc7299913a02a069ccd9032b3d514f1d903faee804a979240e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0003/gsd_1p0/target_present/rgb.png",
+      "bytes": 985830,
+      "sha256": "c4655ac71dab6e7d9d2e2d50ea64c51c9023495566fc1ac49c64dad19e5f754f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0003/gsd_2p0/target_present/rgb.png",
+      "bytes": 982837,
+      "sha256": "5942eb7893f3481a85cd8348c2603b3eefb83b0a4c3c23a31f851314878c2f9a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0003/gsd_3p0/target_present/rgb.png",
+      "bytes": 976652,
+      "sha256": "89c2bff8ac6422c9741e5bc73379d411d02f321f8d9a67eb1e641302fd588c2a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0003/gsd_4p0/target_present/rgb.png",
+      "bytes": 976903,
+      "sha256": "3badb5943aa9471f10c1c293a775a191c8102429d9c26f2e5a0ea88c92e64625"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0004/gsd_0p5/target_present/rgb.png",
+      "bytes": 1025387,
+      "sha256": "94d990c68e186146af174549600c47bf1387e960c5b65f4062d28fefeb34bbb1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0004/gsd_1p0/target_present/rgb.png",
+      "bytes": 992059,
+      "sha256": "13c4319987226d711ed3e918ff16709ecbd465a7a20c2ec28ba554a5bb50bfc3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0004/gsd_2p0/target_present/rgb.png",
+      "bytes": 980003,
+      "sha256": "2eb20aea0488ccfb0ad70228b18493c443d07e773850c58cbb8bf5f20dc1f667"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0004/gsd_3p0/target_present/rgb.png",
+      "bytes": 984682,
+      "sha256": "aa380949395a0d3b769ca4e3206d4a642efa09aedfd0fb2195980badd43ef693"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0004/gsd_4p0/target_present/rgb.png",
+      "bytes": 977647,
+      "sha256": "388217a2162d0ec523286eca393a4a33b01761bc6651e7edb03129a26d6993fa"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0005/gsd_0p5/target_present/rgb.png",
+      "bytes": 1005225,
+      "sha256": "ec249d2b4e432cc3b292bd9e431739e99fcae68005bf92a079a1049202444563"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0005/gsd_1p0/target_present/rgb.png",
+      "bytes": 990576,
+      "sha256": "c48fd4e4a9a53186930c2950f0cb972a0476476930d45f9a39e7c7e8ccc40739"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0005/gsd_2p0/target_present/rgb.png",
+      "bytes": 985875,
+      "sha256": "bf73085210fd06f8145690d67349e2d64c7413806d82e6df18f974454463bd24"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0005/gsd_3p0/target_present/rgb.png",
+      "bytes": 977849,
+      "sha256": "00aa3520d0d25b67aef946f5fd52f95f9e9df62d8a532592cb432d675f128eca"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0005/gsd_4p0/target_present/rgb.png",
+      "bytes": 983932,
+      "sha256": "c70935b9bfcdca839039926c0552759b1fedb5ea88901d742101bc48000094bb"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_0p5/target_present/rgb.png",
+      "bytes": 1014879,
+      "sha256": "3599496bef75cf4048dbcbccabd453b7c8966992e8418dd833dfcac4e94574e9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_0p5/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_1p0/target_present/rgb.png",
+      "bytes": 988404,
+      "sha256": "14d9690df1f23df915099607a6eeba28fcc49f0bbbf8c5843a2616da4103df08"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_2p0/target_present/rgb.png",
+      "bytes": 999309,
+      "sha256": "a4d093277ca431baa3d0a012da80886305a1144820751accc0376c33c1b4361a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_2p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_3p0/target_present/rgb.png",
+      "bytes": 983526,
+      "sha256": "8eae4e245f26b7cedf99ddc50f34fb2cc67d50f9cd87d8d5b7404cce70b4f7f3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_3p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_4p0/target_present/rgb.png",
+      "bytes": 976731,
+      "sha256": "4ef49c66481c90e24de8495e34a6665b3957319ff65c7c4a5cf4dd5d878ee2f9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0006/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0007/gsd_0p5/target_present/rgb.png",
+      "bytes": 1004459,
+      "sha256": "b36fc27c795a41303a796281707d501a1dbed0e24749524a186f6677544a1145"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0007/gsd_1p0/target_present/rgb.png",
+      "bytes": 990952,
+      "sha256": "80a625ef8b780562423681ef1d0670a7d614fce57a2655e703d7f0ddf4827785"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0007/gsd_2p0/target_present/rgb.png",
+      "bytes": 979207,
+      "sha256": "54d58cb0e25d33f4b595a6ee07f297f0fcf8dc38da91856bd4c9f49a40c8d962"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0007/gsd_3p0/target_present/rgb.png",
+      "bytes": 1000107,
+      "sha256": "fc5f14a38569ee9879e3b2838fb80c7bb0778c4bf3c4f23122d3b2b44d34be6a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0007/gsd_4p0/target_present/rgb.png",
+      "bytes": 983646,
+      "sha256": "815cbdb5b50dab832774f0db4c85665da82351748b12696b90f578c675435b64"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0008/gsd_0p5/target_present/rgb.png",
+      "bytes": 1010778,
+      "sha256": "3ca4cad1e5741103633e5814ec25c3b9d2ebd096b85677a851ec1153f82d455f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0008/gsd_1p0/target_present/rgb.png",
+      "bytes": 1008362,
+      "sha256": "1cae53e72c481ff913a303826dcefdce9fd4c0da61638e8fd960283de4192194"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0008/gsd_2p0/target_present/rgb.png",
+      "bytes": 1001562,
+      "sha256": "bb448272cca82e25b89689af032db14e403f6954a7a5efcf1c97a71dc92996ed"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0008/gsd_3p0/target_present/rgb.png",
+      "bytes": 978580,
+      "sha256": "a1ab36bb28f1dbe5e14801a7633dd5da7817e1b1da46143d1fe1758d8479af66"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0008/gsd_4p0/target_present/rgb.png",
+      "bytes": 984052,
+      "sha256": "1c1414280e9d4fe447b0ea59b7685acd3a48b9d6c50f222100bbf171fb6c8a2f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0009/gsd_0p5/target_present/rgb.png",
+      "bytes": 1006384,
+      "sha256": "45154075f89d4801ea1b22a2dabc0ceb548f08c0d0e58847d142ed19d58016a3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0009/gsd_1p0/target_present/rgb.png",
+      "bytes": 1006708,
+      "sha256": "d5475992cb0de6c180464c82817787bc48c255ca00e8e8fc4c79863947e75108"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0009/gsd_2p0/target_present/rgb.png",
+      "bytes": 985550,
+      "sha256": "88e75612ed7d24903d543ea0ae7185e0194518061fd40e727c2e6aa1f1f3fe36"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0009/gsd_3p0/target_present/rgb.png",
+      "bytes": 984069,
+      "sha256": "291f80deeda49878ff952b8724596acee62078e808fb3b1d785538da5c0be9ea"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0009/gsd_4p0/target_present/rgb.png",
+      "bytes": 983834,
+      "sha256": "86922159f477e16b0130abd6ad8ee2a76fc13d0bbe1ff27f6b7d55e4f6f2add0"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0010/gsd_0p5/target_present/rgb.png",
+      "bytes": 1011379,
+      "sha256": "8a9c72d3c3f8c6a8d531a13ee0985fd562d471b9b20bd019dc14ee964e0bb78f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0010/gsd_1p0/target_present/rgb.png",
+      "bytes": 991638,
+      "sha256": "87ad795f0e4ebd63c936699ae6747c9e024f72f543c969482a32eb5ca96b6789"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0010/gsd_2p0/target_present/rgb.png",
+      "bytes": 985803,
+      "sha256": "222f1f54d36021bb8cfa8e65db0db996e566571b3cc664811fb252591b7c6235"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0010/gsd_3p0/target_present/rgb.png",
+      "bytes": 984474,
+      "sha256": "fbda5950fcd050d3957b03393930fc938722202d4ce493696099779e72f91c70"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0010/gsd_4p0/target_present/rgb.png",
+      "bytes": 984228,
+      "sha256": "96e90e9973734ee37b0ba58ea3961554d3fd8dc3bf9ca594debad393d5b1820e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0011/gsd_0p5/target_present/rgb.png",
+      "bytes": 1058795,
+      "sha256": "1f0d73359da63a8678e5d7d99bcb8a432f9f60317302d81d7f1499fc29250f3f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0011/gsd_1p0/target_present/rgb.png",
+      "bytes": 991039,
+      "sha256": "c8dc70a09a0dbd3581506ab35483f93305596018f744d380e66e118bd00234ae"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0011/gsd_2p0/target_present/rgb.png",
+      "bytes": 985303,
+      "sha256": "edbb275e56a1196e2fb5dcf4693df93656e77e408cf36d46728f2fd7f1f4461e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0011/gsd_3p0/target_present/rgb.png",
+      "bytes": 978435,
+      "sha256": "cbdcec6d97d15424babc5cbcda601f934517730a430810af3b761e9935f35daa"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0011/gsd_4p0/target_present/rgb.png",
+      "bytes": 984159,
+      "sha256": "60de5170084c58ad6556f8e58ad1222fcadb5625f5b18f2a918ffe67eee2f37c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_0p5/target_present/rgb.png",
+      "bytes": 1021174,
+      "sha256": "d3ada71534e9269f658d27a49c63093a5b2018d0c22a25812d5a9a849339132b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_0p5/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_1p0/target_present/rgb.png",
+      "bytes": 1007418,
+      "sha256": "232d58232012cf42603ccd1e3ea7253525e3b8f474dbbcd6dcb00ae0781588eb"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_1p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_2p0/target_present/rgb.png",
+      "bytes": 979220,
+      "sha256": "49adc0ab1c89ce333d26546be6c3bdc779bf2a268fe1957a23f365ded64b8659"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_2p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_3p0/target_present/rgb.png",
+      "bytes": 984747,
+      "sha256": "f12ceeadd94d832903cc7528a318b0d29265cd004ef87d46db16a068132e2066"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_3p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_4p0/target_present/rgb.png",
+      "bytes": 983731,
+      "sha256": "ddd1381d1ff2b367432710e661f8973636017c81b3facf62aed51ac7f6cf9dd6"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0012/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0013/gsd_0p5/target_present/rgb.png",
+      "bytes": 1025854,
+      "sha256": "97e07a9093dc7522fb355093befc3877512b77cc8631e0361fbe34dd8fec0b5e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0013/gsd_1p0/target_present/rgb.png",
+      "bytes": 992056,
+      "sha256": "ded00fc6b95038cdfe079676065ded6530008067dedcc6c577bb0c871f27dbef"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0013/gsd_2p0/target_present/rgb.png",
+      "bytes": 986202,
+      "sha256": "811c951250f3c3110dfa88f05dbc7a272d0172b1bc98e2e197b7fd9cf670b789"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0013/gsd_3p0/target_present/rgb.png",
+      "bytes": 984735,
+      "sha256": "6d94b0d6cf118a10b8ee13ac2f546a85af277c8290d8096e520d67e671382dbe"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0013/gsd_4p0/target_present/rgb.png",
+      "bytes": 978232,
+      "sha256": "88bdac8d1288099905ae50197f023a242ebf8406eb0e71562991edc0ca69d77b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0014/gsd_0p5/target_present/rgb.png",
+      "bytes": 992412,
+      "sha256": "d2b235806b9eeff1c5398a161c340c506591ecb1060296c1b4be22051d771636"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0014/gsd_1p0/target_present/rgb.png",
+      "bytes": 987284,
+      "sha256": "d1fa595c992c57410a4dea2741c1b33e17ea0b6ee8c9e5cec80808bd5547d9bb"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0014/gsd_2p0/target_present/rgb.png",
+      "bytes": 998750,
+      "sha256": "42059beda16852fe37cfa7f7c90c4853d33665f901ce49afbae30b9d9bde2851"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0014/gsd_3p0/target_present/rgb.png",
+      "bytes": 982837,
+      "sha256": "9025e8e71a6af04e3ff6e87620a211dd5ff817a6f4d864f4bd40543cf30b8719"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0014/gsd_4p0/target_present/rgb.png",
+      "bytes": 976996,
+      "sha256": "66ba3b268f55ede44d11c76bdbbea4eed1f3241204aa90de0cbd03e3ce36c707"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0015/gsd_0p5/target_present/rgb.png",
+      "bytes": 1026442,
+      "sha256": "d070531d7435acd43371e150c75f5f1ba5ada5d3b4b7e01007abecaf873e3373"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0015/gsd_1p0/target_present/rgb.png",
+      "bytes": 985252,
+      "sha256": "22ab6e2b07850d6275e18a19655dc8445b950eed3dedf8fd9ebb6ec42d8b1ab5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0015/gsd_2p0/target_present/rgb.png",
+      "bytes": 985446,
+      "sha256": "b326e19ae9841c3c3dc8a384b4fc665ff990da156264e4ef7c2e1aa0cb57ce72"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0015/gsd_3p0/target_present/rgb.png",
+      "bytes": 984251,
+      "sha256": "a5e588144e8a317a03e14257435104e2b1864bbe805fef51b86affd12acf01df"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0015/gsd_4p0/target_present/rgb.png",
+      "bytes": 984055,
+      "sha256": "20fdb4719f8d09a5e4a2591c0648e169cb439fa3ea3b9c038eacde6cba69a67a"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0016/gsd_0p5/target_present/rgb.png",
+      "bytes": 1013999,
+      "sha256": "0365550a1d9a4d395e22561621c5779ee2bd202ba333e98df230a10b120361d7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0016/gsd_1p0/target_present/rgb.png",
+      "bytes": 987464,
+      "sha256": "acab449beaa7f05af5d6d1a0b347fc40c4774c7bc607b38040d54c7de0e39ae1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0016/gsd_2p0/target_present/rgb.png",
+      "bytes": 977812,
+      "sha256": "cceccca296d81c1820609046b4fc8aa2907ef34b749f77cdb64eeb4dc76f0782"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0016/gsd_3p0/target_present/rgb.png",
+      "bytes": 983365,
+      "sha256": "ed0910d8a0c0ab65ede34ffd328b6ddacfcd80901edbe41824c821c739e5a617"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0016/gsd_4p0/target_present/rgb.png",
+      "bytes": 982362,
+      "sha256": "8c350b1ab2f542f8787fd02755111561b9c61f8d3789b74d60bcd60c84e28deb"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0017/gsd_0p5/target_present/rgb.png",
+      "bytes": 1013583,
+      "sha256": "dd3a3cf73dd8ef0cc1bd842d8b88ed7cf883e1a896f16b36dffae00a2a64229d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0017/gsd_1p0/target_present/rgb.png",
+      "bytes": 986252,
+      "sha256": "36f549de2e4b8b92cec91bd55227465b90a63db7feb3f704c68a058ab0911760"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0017/gsd_2p0/target_present/rgb.png",
+      "bytes": 982933,
+      "sha256": "639544718cea0252c86f69b89729b1fffbfe9261b694f28dc189be9009c6fe75"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0017/gsd_3p0/target_present/rgb.png",
+      "bytes": 997790,
+      "sha256": "796aeb59ee56cd15478e228c58f775bb9c51341aa127c92166680d81ab3c73f1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0017/gsd_4p0/target_present/rgb.png",
+      "bytes": 998502,
+      "sha256": "1e11bbeae1aee47b2613ec2747c4fde0a836fa98b18f4eb0ad8e8a5c051b2c66"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_0p5/target_present/rgb.png",
+      "bytes": 1028745,
+      "sha256": "5f411f06c2876ef1be671ba0a3e3e1098026036552e202ab1aa1417411b47cb0"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_0p5/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_1p0/target_present/rgb.png",
+      "bytes": 993055,
+      "sha256": "380b549e09fb0e27dffe244bad99041950633e7e905be9a953efbe7c925f101d"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_1p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_2p0/target_present/rgb.png",
+      "bytes": 1001375,
+      "sha256": "66497cc2f7822ef96560e6381ee0a6cf3f14991da6d530090ef38d034381adf4"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_2p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_3p0/target_present/rgb.png",
+      "bytes": 984646,
+      "sha256": "dc1d3bb2c3e8d3540b3f9def656f15e72a42d74f046d7ff1e0e800d2a08c21e1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_3p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_4p0/target_present/rgb.png",
+      "bytes": 978156,
+      "sha256": "d7f6a896da2a6e8c60c6a18759b31e9bf6730d1acab493c212a49f4ca4630d0b"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0018/gsd_4p0/target_absent/rgb.png",
+      "bytes": 976974,
+      "sha256": "da7b04c4fb2d07d53d7a18fa2a6a5b195e4646f4a4fc17f1617677511c5a0494"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0019/gsd_0p5/target_present/rgb.png",
+      "bytes": 1028281,
+      "sha256": "b41aeaa02f21cf14edcee456a014665223fec69cae52a9a3487075b875e5a78e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0019/gsd_1p0/target_present/rgb.png",
+      "bytes": 1008591,
+      "sha256": "7da8b53d438f72da308dc8a320493f644d020d560508f0365b4a9323c7ec5063"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0019/gsd_2p0/target_present/rgb.png",
+      "bytes": 980300,
+      "sha256": "a6f6d217dfbf7755416f1ac0aa8d827c38040c28fbd981c5585b4623a05773aa"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0019/gsd_3p0/target_present/rgb.png",
+      "bytes": 984844,
+      "sha256": "263ca312e1f3521f71ddb5d904f467880246fefb984d9c5126a98adef9b8ab29"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0019/gsd_4p0/target_present/rgb.png",
+      "bytes": 984179,
+      "sha256": "1ee2feb41455373dc179a60244f20ab4663aac00a870f72f79f595aeae54d1c5"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0020/gsd_0p5/target_present/rgb.png",
+      "bytes": 1025851,
+      "sha256": "278b6cc0ee875d7bb42b2d25a1096c867878055d092586b366b5784333e2526e"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0020/gsd_1p0/target_present/rgb.png",
+      "bytes": 1008013,
+      "sha256": "49a6ccfb5fe3ec7e4ecee1bdb31d5103c5fda0367ccec162bad8cdfd91ccced3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0020/gsd_2p0/target_present/rgb.png",
+      "bytes": 1002133,
+      "sha256": "906d9f9eedbb0e3ec3c293d1bd88c3fbb330bcf75bffcd23325633105f52a6e7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0020/gsd_3p0/target_present/rgb.png",
+      "bytes": 1000490,
+      "sha256": "78c580c51972fe437b7e2f1bf72815c5ad383d929cff0fbade56042a3b9a044f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0020/gsd_4p0/target_present/rgb.png",
+      "bytes": 999766,
+      "sha256": "e9d1f6007325909bb7a751ea2445a23cbf861951256a34715bebe12fc364de59"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0021/gsd_0p5/target_present/rgb.png",
+      "bytes": 1025875,
+      "sha256": "c0b81a744a9e0c5b3fa0577c4d1f1b04510804a8b50662b1a2eef205c54f94cf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0021/gsd_1p0/target_present/rgb.png",
+      "bytes": 992565,
+      "sha256": "37838b445bceb3dfc3b5ef4dfda7781ada841e8066cafa7c90422e1cfd50d7d3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0021/gsd_2p0/target_present/rgb.png",
+      "bytes": 1001776,
+      "sha256": "95f27574ff3ea5eeb5c5040ac8a1552b0173c8728beedb8d1a912994d48210a3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0021/gsd_3p0/target_present/rgb.png",
+      "bytes": 984408,
+      "sha256": "ea340dd79ee989f895cb669262a523d2f7eb4bcf53b9b9fc5462fa13c56ed9f9"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0021/gsd_4p0/target_present/rgb.png",
+      "bytes": 984309,
+      "sha256": "6cf7569ae64ff42cd675b4da68886bc352eafedecbd4f53677ec6a0af65fe147"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0022/gsd_0p5/target_present/rgb.png",
+      "bytes": 1020640,
+      "sha256": "622805899dafab72bc29bf385d4231e7e00f1878c4e64543185fcbab2bda1b3c"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0022/gsd_1p0/target_present/rgb.png",
+      "bytes": 991015,
+      "sha256": "6bf733f1be18c794a44f22b7b7d631c82ef4a0d6e457c970f1c7beb4e95c30c3"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0022/gsd_2p0/target_present/rgb.png",
+      "bytes": 985671,
+      "sha256": "bdd7d79b68b172977dff8f5c4c23dabb5b7cfc2cb1b01ab43e86664b793f0b36"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0022/gsd_3p0/target_present/rgb.png",
+      "bytes": 984420,
+      "sha256": "397f506d1b2465da62190b17969a674339c35f11eff3fbe03d1825fae0550504"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0022/gsd_4p0/target_present/rgb.png",
+      "bytes": 999258,
+      "sha256": "7105e69a2bb6ef4027b788aa1dfe77b30b4661c483c9d8ec08826213b762fed8"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0023/gsd_0p5/target_present/rgb.png",
+      "bytes": 1026893,
+      "sha256": "2669b571efb8b694be6717ce39d217660cbcdd81a9fe31d73e2ca5137a96d0d7"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0023/gsd_1p0/target_present/rgb.png",
+      "bytes": 992115,
+      "sha256": "411c6ca960784ee3216c5148acc0c48a04cc7957e5713f17c0d3bb24a3ffe377"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0023/gsd_2p0/target_present/rgb.png",
+      "bytes": 980157,
+      "sha256": "aa1626dddccf3d9707e356d72d3a4fa2d7d192d85fc27810ebcbe1f673357bcc"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0023/gsd_3p0/target_present/rgb.png",
+      "bytes": 978487,
+      "sha256": "d57092bc6325bc1935b7fddd7a6ae650dd7dc5e304b9b9cadbbaf2ce672e1325"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0023/gsd_4p0/target_present/rgb.png",
+      "bytes": 984023,
+      "sha256": "0784f27e7b802fe5574f164beab071714d233ccac1b5b5170cd080f5a74ebc1f"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_0p5/target_present/rgb.png",
+      "bytes": 1016453,
+      "sha256": "4f4f410b1bade2750020c52171fbb0bc01f0998aa72a7685006c6ec0d85363ca"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_0p5/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_1p0/target_present/rgb.png",
+      "bytes": 1003820,
+      "sha256": "ee6c3c13ce0c8791f701c6ef9af99a9b62593dbfd4a352bf2c8c1e386a468ee1"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_1p0/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_2p0/target_present/rgb.png",
+      "bytes": 999733,
+      "sha256": "176c446da2f2071f7b1f62e92aa5a2410ef64abbfb1ce0ae8b34a0420de20848"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_2p0/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_3p0/target_present/rgb.png",
+      "bytes": 983308,
+      "sha256": "4a30bdf73a03d7866de4f6bd49182101b08b1e3ce17c4f6d9686ce8b158c60fc"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_3p0/target_absent/rgb.png",
+      "bytes": 998903,
+      "sha256": "d6db1ecf83d6e944c65ed770bb2043dc20d5e4968d312c62a5b0d205a2566dad"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_4p0/target_present/rgb.png",
+      "bytes": 983064,
+      "sha256": "d26c75a12e77bd7d650560513e6e2462212d1269a95b10d80e9ff0fb427b3946"
+    },
+    {
+      "path": "experiments/gsd_pilot_v1/renders/milestone_5/harbour_porpoise_0024/gsd_4p0/target_absent/rgb.png",
+      "bytes": 983383,
+      "sha256": "04ab2de8dbab37e34ba77fae3d16a6354ce88445ff4e5807eaad9ead6a1674bf"
+    }
+  ],
+  "split_presence_counts": {
+    "train": {
+      "target_present": 150,
+      "target_absent": 30
+    },
+    "validation": {
+      "target_present": 50,
+      "target_absent": 10
+    },
+    "test": {
+      "target_present": 50,
+      "target_absent": 10
+    }
+  },
+  "cpu_transform_checks": [
+    {
+      "image_id": 16,
+      "split": "train",
+      "intervention": "target_present",
+      "training_mode": true,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 16,
+      "split": "train",
+      "intervention": "target_present",
+      "training_mode": false,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 37,
+      "split": "train",
+      "intervention": "target_absent",
+      "training_mode": true,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 37,
+      "split": "train",
+      "intervention": "target_absent",
+      "training_mode": false,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 11,
+      "split": "validation",
+      "intervention": "target_present",
+      "training_mode": true,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 11,
+      "split": "validation",
+      "intervention": "target_present",
+      "training_mode": false,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 107,
+      "split": "validation",
+      "intervention": "target_absent",
+      "training_mode": true,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 107,
+      "split": "validation",
+      "intervention": "target_absent",
+      "training_mode": false,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 1,
+      "split": "test",
+      "intervention": "target_present",
+      "training_mode": true,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 1,
+      "split": "test",
+      "intervention": "target_present",
+      "training_mode": false,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 2,
+      "split": "test",
+      "intervention": "target_absent",
+      "training_mode": true,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    },
+    {
+      "image_id": 2,
+      "split": "test",
+      "intervention": "target_absent",
+      "training_mode": false,
+      "batch_shape_nchw": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "normalized_tensor_equal_at_unit_scale": true,
+      "boxes_unchanged": true
+    }
+  ],
+  "observed_interpolation_calls": [
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    },
+    {
+      "input_shape": [
+        1,
+        3,
+        1024,
+        1024
+      ],
+      "arguments": {
+        "size": null,
+        "scale_factor": 1.0,
+        "mode": "bilinear",
+        "recompute_scale_factor": true,
+        "align_corners": false
+      },
+      "antialias_default": false
+    }
+  ],
+  "internal_padding_stride": 32,
+  "internal_added_padding_px": [
+    0,
+    0
+  ],
+  "normalization_padding_value_rgb": [
+    -0.16568204760551453,
+    -0.03991595283150673,
+    0.1824837327003479
+  ],
+  "retained_test_metric_summaries_exact": 18,
+  "retained_test_frames_and_float32_gt_verified": 60,
+  "retained_prediction_count": 611,
+  "retained_lowest_prediction_score": 0.0010005044750869274,
+  "test_overall": {
+    "images": 60,
+    "positive_images": 50,
+    "negative_images": 10,
+    "TP": 32,
+    "FP": 2,
+    "FN": 18,
+    "precision": 0.9411764705882353,
+    "recall": 0.64,
+    "F1": 0.7619047619047619,
+    "AP50": 0.7716031777998319,
+    "false_positives_per_negative_frame": 0.0,
+    "negative_frame_false_positives": 0
+  },
+  "selected_confidence_threshold": 0.9477691650390625,
+  "annotation_boxes_linked_geometry_coco_assignment": 250,
+  "unknown_visible_and_silhouette_areas": 250,
+  "limitations": [
+    "No checkpoint was loaded or detector inference rerun; historical training internals were not newly observed.",
+    "Installed package source hashes and wheel RECORD entries are current-version evidence, not historical wheel-byte pins.",
+    "Source matches describe the retained padded input; native detector feature-map/ROI sampling is not survey pixel sampling.",
+    "Direct amodal boxes do not resolve underwater refraction, occlusion, visible masks or silhouette area.",
+    "AP50 is a one-class, one-IoU custom metric; it is not full COCO AP over IoUs, classes and area ranges."
+  ],
+  "biological_approval": false,
+  "training_or_inference_performed": false,
+  "live_calls_made": false
+}

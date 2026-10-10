@@ -1,0 +1,52 @@
+{
+  "kind": "m7_failed_new_completion_finalizer_source_preservation",
+  "recorded_at_utc": "2026-10-09T19:40:28.881167+00:00",
+  "source_before": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py",
+    "bytes": 32189,
+    "sha256": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "archived_source": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance_failed_v1.py",
+    "bytes": 32189,
+    "sha256": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "source_after": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py",
+    "bytes": 32189,
+    "sha256": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "bytes_preserved_exactly": true,
+  "failed_execution": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_execution.json",
+    "bytes": 2315,
+    "sha256": "d23a91cb7a34ccb4cc80aa1827afa0e4dae2c5fae76ae8e30620234c96d0fe00"
+  },
+  "failed_stdout_stderr": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_command.log",
+    "bytes": 1186,
+    "sha256": "1a3cc90b5f88282d1386a7276ad9de1b306c4da6f5aa1b06b287b5e4644ce235"
+  },
+  "actual_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py",
+    "--acceptance",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02.json",
+    "--final-live-check",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo/results.json",
+    "--runtime-log-snapshots",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots",
+    "--execution-record",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02_execution.json",
+    "--execution-record",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/final_live_execution_binding.json",
+    "--active-log",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_command.log"
+  ],
+  "return_code": 1,
+  "passed": false,
+  "completion_report_written": false,
+  "milestone_seal_written": false,
+  "original_failed_receipts_edited": false
+}

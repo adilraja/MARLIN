@@ -1,0 +1,62 @@
+{
+  "kind": "m7_actual_final_read_only_live_command_execution",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/verify_gama_m8_demo.py",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "command_dispatch_clock_observation_utc": "2026-10-09 19:23:06 UTC",
+  "completion_observed_at_utc": "2026-10-09 19:27:49 UTC",
+  "tool_report_started_at_utc": "2026-10-09T19:25:28.981199+00:00",
+  "tool_report_finished_at_utc": "2026-10-09T19:25:31.983368+00:00",
+  "return_code": 0,
+  "log": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/final_live_command.log",
+  "log_sha256": "f3bee9df5ec0c87ae2923c998c11083611344ae9e852f6e7ee001cf4423b5a3a",
+  "source_pins_before": [
+    {
+      "path": "tools/verify_gama_m8_demo.py",
+      "sha256": "fe9b491e575ad1280052275623ead3f318a1e03b80c5438cb2dd2451c6821e57"
+    },
+    {
+      "path": "tools/verify_gama_paired_live.py",
+      "sha256": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741"
+    },
+    {
+      "path": "tools/gama_porpoise.py",
+      "sha256": "6585d102d7a91b5f8d43166f92e634d2b0e3e529b3ee114670e7697954bedc96"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/marine_check.py",
+      "sha256": "37222aa2f56188256c143ed187c42e62f4021f98a78349ee3ce508ba3953789e"
+    }
+  ],
+  "passed": true,
+  "live_calls_made": true,
+  "new_renders_requested": 0,
+  "scene_mutation_attempted": false,
+  "kit_restart_requested": false,
+  "stdout_stderr_retained_exactly": true,
+  "outer_source_before_after_independently_measured": false,
+  "source_pin_evidence_origin": "Unchanged tool report records the four original source pins before/after its actual execution.",
+  "source_pins_after": [
+    {
+      "path": "tools/verify_gama_m8_demo.py",
+      "sha256": "fe9b491e575ad1280052275623ead3f318a1e03b80c5438cb2dd2451c6821e57"
+    },
+    {
+      "path": "tools/verify_gama_paired_live.py",
+      "sha256": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741"
+    },
+    {
+      "path": "tools/gama_porpoise.py",
+      "sha256": "6585d102d7a91b5f8d43166f92e634d2b0e3e529b3ee114670e7697954bedc96"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/marine_check.py",
+      "sha256": "37222aa2f56188256c143ed187c42e62f4021f98a78349ee3ce508ba3953789e"
+    }
+  ]
+}

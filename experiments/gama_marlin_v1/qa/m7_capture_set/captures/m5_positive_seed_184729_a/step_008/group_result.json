@@ -1,0 +1,3021 @@
+{
+  "run_id": "m5_positive_seed_184729_a",
+  "step_index": 8,
+  "source_state": {
+    "schema_version": "2.0",
+    "run_id": "m5_positive_seed_184729_a",
+    "step_index": 8,
+    "simulation_time_s": 4.0,
+    "simulation_step_s": 0.5,
+    "seed": 184729,
+    "agents": [
+      {
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "behavioural_state": "shallow_swim",
+        "horizontal_position_m": [
+          -5.229630306507289,
+          6.054004200300862
+        ],
+        "heading_deg": 49.17856275642697,
+        "speed_mps": 0.5,
+        "vertical_reference": "mean_sea_level",
+        "depth_m": 0.5
+      }
+    ]
+  },
+  "split": "train",
+  "encounter_group_id": "gama_engineering_porpoise_seed_184729",
+  "passed": true,
+  "actor_before": {
+    "ok": true,
+    "owned": true,
+    "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+    "world_pose": {
+      "position_scene_units": [
+        -522.9630306507289,
+        -50.0,
+        605.4004200300861
+      ],
+      "forward_y_up": [
+        0.7567505182819388,
+        0.0,
+        0.6537037961340113
+      ]
+    },
+    "calibration": {
+      "profile": "harbour_porpoise_gsd_pilot_v1",
+      "axial_length_m": 1.6014894247055054,
+      "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+      "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+      "biological_calibration_verified": false,
+      "pose_mapping": "static_pose_proxy_v1",
+      "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+    },
+    "accepted_steps": 9,
+    "latest": {
+      "schema_version": "2.0",
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 8,
+      "simulation_time_s": 4.0,
+      "simulation_step_s": 0.5,
+      "seed": 184729,
+      "agents": [
+        {
+          "agent_id": "Porpoise_001",
+          "species": "harbour_porpoise",
+          "behavioural_state": "shallow_swim",
+          "horizontal_position_m": [
+            -5.229630306507289,
+            6.054004200300862
+          ],
+          "heading_deg": 49.17856275642697,
+          "speed_mps": 0.5,
+          "vertical_reference": "mean_sea_level",
+          "depth_m": 0.5
+        }
+      ]
+    },
+    "motion_policy": "freeze_and_report",
+    "agent_id": "Porpoise_001",
+    "species": "harbour_porpoise",
+    "actor_count": 1,
+    "root_present_on_active_stage": true,
+    "root_diagnostics": {
+      "children": [
+        "/MarlinGamaPorpoise/Porpoise_001"
+      ],
+      "opinions": [
+        {
+          "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+          "specifier": "Sdf.SpecifierDef",
+          "type_name": "Xform",
+          "custom_data": {
+            "marlin": {
+              "axial_length_m": 1.6014894247055054,
+              "behavioural_state": "shallow_swim",
+              "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+              "owner": "gama_v2",
+              "pose_mapping": "static_pose_proxy_v1",
+              "run_id": "m5_positive_seed_184729_a",
+              "seed": "184729",
+              "simulation_time_s": "4.0",
+              "step_index": "8"
+            }
+          },
+          "fields": [
+            "specifier",
+            "typeName",
+            "customData"
+          ],
+          "properties": [],
+          "children": [
+            "Porpoise_001"
+          ],
+          "diagnostic_camera": null
+        }
+      ]
+    },
+    "transport_state": "holding_last_state",
+    "seconds_since_update": 0.3557606539980043,
+    "missing_update_after_s": 2.0,
+    "guard_error": null,
+    "autonomous_controller": false,
+    "pose_mapping": "static_pose_proxy_v1"
+  },
+  "pose_before": {
+    "passed": true,
+    "composed_position_m": [
+      -5.229630306507289,
+      -0.5,
+      6.054004200300861
+    ],
+    "expected_position_m": [
+      -5.229630306507289,
+      -0.5,
+      6.054004200300862
+    ],
+    "composed_heading_deg": 49.17856216430664,
+    "expected_heading_deg": 49.17856275642697,
+    "position_error_m": 8.881784197001252e-16,
+    "heading_error_deg": 5.921203296566091e-07
+  },
+  "capture_attempts": [
+    {
+      "attempt_index": 1,
+      "started_at_utc": "2026-10-09T13:50:54.158987+00:00",
+      "held_state_before": true,
+      "runtime_code_unchanged": true,
+      "same_source_step_index": 8,
+      "same_source_run_id": "m5_positive_seed_184729_a",
+      "runtime_code_pins_sha256": "c71e28c6bfc2728be6de363248b968cc8d0ec35c9ea13f52fa9e169deb8bac9a",
+      "status_before": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            -522.9630306507289,
+            -50.0,
+            605.4004200300861
+          ],
+          "forward_y_up": [
+            0.7567505182819388,
+            0.0,
+            0.6537037961340113
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 9,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "shallow_swim",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_184729_a",
+                  "seed": "184729",
+                  "simulation_time_s": "4.0",
+                  "step_index": "8"
+                }
+              },
+              "fields": [
+                "specifier",
+                "typeName",
+                "customData"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "holding_last_state",
+        "seconds_since_update": 0.5606884830049239,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "response": {
+        "ok": false,
+        "error": "Insufficient GPU headroom before capture: 619 MiB free; require at least 768 MiB. No render attempted."
+      },
+      "http_status_code": 200,
+      "response_received_at_utc": "2026-10-09T13:50:54.718838+00:00",
+      "retryable_no_render_headroom": true,
+      "observed_free_gpu_mib": 619,
+      "required_free_gpu_mib": 768,
+      "render_attempted": false,
+      "held_state_after_rejection": true,
+      "status_after_headroom_rejection": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            -522.9630306507289,
+            -50.0,
+            605.4004200300861
+          ],
+          "forward_y_up": [
+            0.7567505182819388,
+            0.0,
+            0.6537037961340113
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 9,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "shallow_swim",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_184729_a",
+                  "seed": "184729",
+                  "simulation_time_s": "4.0",
+                  "step_index": "8"
+                }
+              },
+              "fields": [
+                "specifier",
+                "typeName",
+                "customData"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "holding_last_state",
+        "seconds_since_update": 1.124578439979814,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "wait_before_next_attempt_s": 20,
+      "wait_completed_at_utc": "2026-10-09T13:51:14.927960+00:00",
+      "status_after_wait": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            -522.9630306507289,
+            -50.0,
+            605.4004200300861
+          ],
+          "forward_y_up": [
+            0.7567505182819388,
+            0.0,
+            0.6537037961340113
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 9,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "shallow_swim",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_184729_a",
+                  "seed": "184729",
+                  "simulation_time_s": "4.0",
+                  "step_index": "8"
+                }
+              },
+              "fields": [
+                "specifier",
+                "typeName",
+                "customData"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 21.43078077500104,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "held_state_after_wait": true,
+      "runtime_code_unchanged_after_wait": true
+    },
+    {
+      "attempt_index": 2,
+      "started_at_utc": "2026-10-09T13:51:15.236210+00:00",
+      "held_state_before": true,
+      "runtime_code_unchanged": true,
+      "same_source_step_index": 8,
+      "same_source_run_id": "m5_positive_seed_184729_a",
+      "runtime_code_pins_sha256": "c71e28c6bfc2728be6de363248b968cc8d0ec35c9ea13f52fa9e169deb8bac9a",
+      "status_before": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            -522.9630306507289,
+            -50.0,
+            605.4004200300861
+          ],
+          "forward_y_up": [
+            0.7567505182819388,
+            0.0,
+            0.6537037961340113
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 9,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "shallow_swim",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_184729_a",
+                  "seed": "184729",
+                  "simulation_time_s": "4.0",
+                  "step_index": "8"
+                }
+              },
+              "fields": [
+                "specifier",
+                "typeName",
+                "customData"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 21.641069008997874,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "response": {
+        "ok": true,
+        "directory": "/home/madil/kit-app-template/artifacts/gama_pairs/dataset_d1exlaag",
+        "manifest": "/home/madil/kit-app-template/artifacts/gama_pairs/dataset_d1exlaag/manifest.json",
+        "capture_count": 10,
+        "resolved_scene_state_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "error": null,
+        "recovery_required": false,
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6"
+      },
+      "http_status_code": 200,
+      "response_received_at_utc": "2026-10-09T13:56:13.407950+00:00",
+      "retryable_no_render_headroom": false,
+      "held_state_after_response": true,
+      "status_after_response": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            -522.9630306507289,
+            -50.0,
+            605.4004200300861
+          ],
+          "forward_y_up": [
+            0.7567505182819388,
+            0.0,
+            0.6537037961340113
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 9,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "shallow_swim",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_184729_a",
+                  "seed": "184729",
+                  "simulation_time_s": "4.0",
+                  "step_index": "8"
+                }
+              },
+              "fields": [
+                "specifier",
+                "typeName",
+                "customData"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 319.6076033359859,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "status_after_capture": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            -522.9630306507289,
+            -50.0,
+            605.4004200300861
+          ],
+          "forward_y_up": [
+            0.7567505182819388,
+            0.0,
+            0.6537037961340113
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 9,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_184729_a",
+          "step_index": 8,
+          "simulation_time_s": 4.0,
+          "simulation_step_s": 0.5,
+          "seed": 184729,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "shallow_swim",
+              "horizontal_position_m": [
+                -5.229630306507289,
+                6.054004200300862
+              ],
+              "heading_deg": 49.17856275642697,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 0.5
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "shallow_swim",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_184729_a",
+                  "seed": "184729",
+                  "simulation_time_s": "4.0",
+                  "step_index": "8"
+                }
+              },
+              "fields": [
+                "specifier",
+                "typeName",
+                "customData"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 320.3684489489824,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "held_state_after_capture": true
+    }
+  ],
+  "capture_response": {
+    "ok": true,
+    "directory": "/home/madil/kit-app-template/artifacts/gama_pairs/dataset_d1exlaag",
+    "manifest": "/home/madil/kit-app-template/artifacts/gama_pairs/dataset_d1exlaag/manifest.json",
+    "capture_count": 10,
+    "resolved_scene_state_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+    "error": null,
+    "recovery_required": false,
+    "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+    "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6"
+  },
+  "retained_group": {
+    "source_directory": "/home/madil/kit-app-template/artifacts/gama_pairs/dataset_d1exlaag",
+    "retained_directory": "group",
+    "files": [
+      {
+        "path": "group/absent_resolved_state.json",
+        "bytes": 21186,
+        "sha256": "968e730546b0d32e9c4d8ddcc50f24bc8b8451e1be2020663a85b8cee6ae413a"
+      },
+      {
+        "path": "group/absent_scene.usdc",
+        "bytes": 24112026,
+        "sha256": "b727eef69e6d43f525d1b8dd8336dd3fdd19ba68b9ef6ed8765e5bca422a74cd"
+      },
+      {
+        "path": "group/manifest.json",
+        "bytes": 258743,
+        "sha256": "fa34c6096ae405ea09203df1772e961db93ac5d63343a7c541ce6243e893cead"
+      },
+      {
+        "path": "group/present_scene.usdc",
+        "bytes": 28357451,
+        "sha256": "11b319bec692d3ab3b8c9d7803e8bf30a318be12054e5d7b00597e06a84537ca"
+      },
+      {
+        "path": "group/resolved_state.json",
+        "bytes": 21850,
+        "sha256": "efbc29804a10d6ac4e21e89a75afe69c992468f90e0b35278c1ac05582704810"
+      },
+      {
+        "path": "group/present_order_0_condition_1/annotation.json",
+        "bytes": 2134,
+        "sha256": "0a96db998a87f574c8af250b31e3a8ec0e25cf7d5ead6d63cc45b940c6ffc99f"
+      },
+      {
+        "path": "group/present_order_0_condition_1/capture.json",
+        "bytes": 12579,
+        "sha256": "8bbd8ce25f16471640bc512405eef954637c825eb56539bd42020c84f00c3259"
+      },
+      {
+        "path": "group/present_order_0_condition_1/labels.txt",
+        "bytes": 62,
+        "sha256": "fb1b0131a59174b83a29c295fb501015b9e982f07d3677100b9d748c7dac6474"
+      },
+      {
+        "path": "group/present_order_0_condition_1/probe_01.png",
+        "bytes": 114312,
+        "sha256": "99e6eb2de3c032e5d830021e37c0a4ed30b2b39e91a89d643d90222d370d6952"
+      },
+      {
+        "path": "group/present_order_0_condition_1/probe_02.png",
+        "bytes": 180950,
+        "sha256": "f103fdfcddb669c575e019241d402ebc050ac1a71d38808fcceacbc73c2ded35"
+      },
+      {
+        "path": "group/present_order_0_condition_1/probe_03.png",
+        "bytes": 219058,
+        "sha256": "7920a9774cee25a7c6b28f58feee6ab1c9970beb93cde2b271530fe16802e9f9"
+      },
+      {
+        "path": "group/present_order_0_condition_1/rgb.png",
+        "bytes": 219058,
+        "sha256": "7920a9774cee25a7c6b28f58feee6ab1c9970beb93cde2b271530fe16802e9f9"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/annotation.json",
+        "bytes": 1304,
+        "sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/capture.json",
+        "bytes": 11688,
+        "sha256": "0d1f32d3cbd9fe4ea9725bd6968ce259617f9e2e7659ccf7d17ebc03ba1fd6f9"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/labels.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/probe_01.png",
+        "bytes": 134936,
+        "sha256": "2b655b7c7227f772a4cdb9b47987fd0d7df0a7b8cd0c3e18a7537443a753d01f"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/probe_02.png",
+        "bytes": 198052,
+        "sha256": "4895b1513269e95e10fd1c0e9b3d14d04dfba1c288994f9e27f5b377079a7e73"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/probe_03.png",
+        "bytes": 78756,
+        "sha256": "2bc3674564b658ef6385a1025def2d966b32e5bdbafa45a2f3a73eea82728236"
+      },
+      {
+        "path": "group/absent_order_0_condition_3/rgb.png",
+        "bytes": 78756,
+        "sha256": "2bc3674564b658ef6385a1025def2d966b32e5bdbafa45a2f3a73eea82728236"
+      },
+      {
+        "path": "group/present_order_0_condition_4/annotation.json",
+        "bytes": 2126,
+        "sha256": "f958cba1a329fc2ddba017a07d8064eb98becb201e886594a62c534fc3f5f771"
+      },
+      {
+        "path": "group/present_order_0_condition_4/capture.json",
+        "bytes": 12575,
+        "sha256": "b0751740d0f9d5ab85198bcfd383add3a54486cfb6ee3af0984529d0199016fd"
+      },
+      {
+        "path": "group/present_order_0_condition_4/labels.txt",
+        "bytes": 62,
+        "sha256": "0cb8a999ba426af96f2b9206f41770c0a2b3d9f9ea247bdbc1ea0f75458db969"
+      },
+      {
+        "path": "group/present_order_0_condition_4/probe_01.png",
+        "bytes": 118388,
+        "sha256": "86206574110c6b36a3e192735a9999cb97acb04d7169370279bc9bbe3007d10d"
+      },
+      {
+        "path": "group/present_order_0_condition_4/probe_02.png",
+        "bytes": 85530,
+        "sha256": "ed8914472c9973d9f8cf12b2839df61f6559e098f8d0b9282aaa1b793d593763"
+      },
+      {
+        "path": "group/present_order_0_condition_4/probe_03.png",
+        "bytes": 79192,
+        "sha256": "0c31cdd6a8510167fa2fb78392c0f53962b4e881b2a8ea9e8c2bc61011b4c5e4"
+      },
+      {
+        "path": "group/present_order_0_condition_4/rgb.png",
+        "bytes": 79192,
+        "sha256": "0c31cdd6a8510167fa2fb78392c0f53962b4e881b2a8ea9e8c2bc61011b4c5e4"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/annotation.json",
+        "bytes": 1304,
+        "sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/capture.json",
+        "bytes": 11681,
+        "sha256": "9ab2a0d9035b9c28636192af65b17a737daba18c759d30de1e4debec1ce98104"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/labels.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/probe_01.png",
+        "bytes": 86820,
+        "sha256": "dfafdecc996a8492d839e1a3792ff896ce524ec11a7f56faf0737f2742fe884c"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/probe_02.png",
+        "bytes": 298319,
+        "sha256": "1128388f25ae2ab9079c28af02dcf97556a9da067846bafcac81871b9f4623a9"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/probe_03.png",
+        "bytes": 203269,
+        "sha256": "5fab158acf1c25f45b8ff76c64612d7e703f14d09831004e4e60d160d60c7b26"
+      },
+      {
+        "path": "group/absent_order_0_condition_1/rgb.png",
+        "bytes": 203269,
+        "sha256": "5fab158acf1c25f45b8ff76c64612d7e703f14d09831004e4e60d160d60c7b26"
+      },
+      {
+        "path": "group/present_order_0_condition_0/annotation.json",
+        "bytes": 2134,
+        "sha256": "de297fce8013a2e1e58153c65ce75c7585ad8489b5166c953906aa51244d9cba"
+      },
+      {
+        "path": "group/present_order_0_condition_0/capture.json",
+        "bytes": 12580,
+        "sha256": "defbd655639fcca897338d239704e89d367e35d2aadf1008df2d9522849a244b"
+      },
+      {
+        "path": "group/present_order_0_condition_0/labels.txt",
+        "bytes": 62,
+        "sha256": "f5410d05e8ad1606d32e0d532cdb94dc4b317eae1df13fc64976655a976a7ffc"
+      },
+      {
+        "path": "group/present_order_0_condition_0/probe_01.png",
+        "bytes": 77314,
+        "sha256": "ea6eeb51a1d6700ae77ef63d553bde0ecd704e7e1cae711db12627d795ffc249"
+      },
+      {
+        "path": "group/present_order_0_condition_0/probe_02.png",
+        "bytes": 98491,
+        "sha256": "08fdd27de49f39b76f981e8b5d9640a7df5e6a91488d5d65896a029e9157215e"
+      },
+      {
+        "path": "group/present_order_0_condition_0/probe_03.png",
+        "bytes": 121949,
+        "sha256": "d1421432f480356d0ea554233e009edcd396f0d4d51142f71aecb3dfcbcc05e1"
+      },
+      {
+        "path": "group/present_order_0_condition_0/rgb.png",
+        "bytes": 121949,
+        "sha256": "d1421432f480356d0ea554233e009edcd396f0d4d51142f71aecb3dfcbcc05e1"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/annotation.json",
+        "bytes": 1304,
+        "sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/capture.json",
+        "bytes": 11690,
+        "sha256": "9582003e0ba43efc11ef2819697b01f7dabf3e1bf6ec33ff1298885b7162eda4"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/labels.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/probe_01.png",
+        "bytes": 114093,
+        "sha256": "913bd4c616b0b89b48458d474be8ec3a9187b82e216b86bfe7d52c90a9eac803"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/probe_02.png",
+        "bytes": 152253,
+        "sha256": "8f4dc98674e4a695d5a77ac866dc525ee44da787a85fce3eebd6a48ba1babe16"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/probe_03.png",
+        "bytes": 199035,
+        "sha256": "166e7d12a3283e9578c2354bc2287c40f808e428968125885a3db22bd2be699e"
+      },
+      {
+        "path": "group/absent_order_0_condition_2/rgb.png",
+        "bytes": 199035,
+        "sha256": "166e7d12a3283e9578c2354bc2287c40f808e428968125885a3db22bd2be699e"
+      },
+      {
+        "path": "group/present_order_0_condition_3/annotation.json",
+        "bytes": 2135,
+        "sha256": "a0c254c8d22a5296691ff32d8accd05b4e5ffc18516066341d3ee4f194602cf0"
+      },
+      {
+        "path": "group/present_order_0_condition_3/capture.json",
+        "bytes": 12587,
+        "sha256": "281fc36f8064c9f0b46aafe28eac7e0679c21f63f9c0476ef1b909d75534b519"
+      },
+      {
+        "path": "group/present_order_0_condition_3/labels.txt",
+        "bytes": 62,
+        "sha256": "adeed7595d975c6ba660cd03489c453cc366157848eb3ddb812520667882f1a5"
+      },
+      {
+        "path": "group/present_order_0_condition_3/probe_01.png",
+        "bytes": 131964,
+        "sha256": "86b38c89c4b7d7988dc2e0bc404ef5cabfbb61232f6001050e13bc552ade9803"
+      },
+      {
+        "path": "group/present_order_0_condition_3/probe_02.png",
+        "bytes": 84055,
+        "sha256": "415697e7862a5423f688cf285a6866026ced836b9d320b76cfcb893c7edee93d"
+      },
+      {
+        "path": "group/present_order_0_condition_3/probe_03.png",
+        "bytes": 91444,
+        "sha256": "ef43a4bb79f4f0686262795f78d6327fc21fa3d9eb61befb6497705798d82495"
+      },
+      {
+        "path": "group/present_order_0_condition_3/rgb.png",
+        "bytes": 91444,
+        "sha256": "ef43a4bb79f4f0686262795f78d6327fc21fa3d9eb61befb6497705798d82495"
+      },
+      {
+        "path": "group/present_order_0_condition_2/annotation.json",
+        "bytes": 2131,
+        "sha256": "b753abb32cf73238dba864e47c2dffb11dc4b72f85c59f27a8e52e5c3d5ce3e3"
+      },
+      {
+        "path": "group/present_order_0_condition_2/capture.json",
+        "bytes": 12583,
+        "sha256": "d7bc93a4e91fdd19e322912e1556c88482e065c6ef8e431de5e5f2ffb7c58cac"
+      },
+      {
+        "path": "group/present_order_0_condition_2/labels.txt",
+        "bytes": 62,
+        "sha256": "bb4fa1a092e1bcb51424a014e1f00c8317b638627a58cdfffcb34260bd438a33"
+      },
+      {
+        "path": "group/present_order_0_condition_2/probe_01.png",
+        "bytes": 197597,
+        "sha256": "aa99f4593ef66d4202bd7944713fbba5fe42992f781e36d0c1342c8c9d6139db"
+      },
+      {
+        "path": "group/present_order_0_condition_2/probe_02.png",
+        "bytes": 135356,
+        "sha256": "c631696043523f8e21199a5d95effc5d46e1e6cc472eea91333f1f9b91325c70"
+      },
+      {
+        "path": "group/present_order_0_condition_2/probe_03.png",
+        "bytes": 108726,
+        "sha256": "0eba081d906d1baef7ce7561d83fbd8278e1a5778afe53bc47c2de5d00526018"
+      },
+      {
+        "path": "group/present_order_0_condition_2/rgb.png",
+        "bytes": 108726,
+        "sha256": "0eba081d906d1baef7ce7561d83fbd8278e1a5778afe53bc47c2de5d00526018"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/annotation.json",
+        "bytes": 1304,
+        "sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/capture.json",
+        "bytes": 11683,
+        "sha256": "7a4553a99ca9ab6b1da40076073f2b48167fa39a9c6e68f49cee5d66000f41bc"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/labels.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/probe_01.png",
+        "bytes": 233102,
+        "sha256": "95f716dafca01607c9884b1707089ba32900210d670296d954c66dae61336bdd"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/probe_02.png",
+        "bytes": 108170,
+        "sha256": "af63e54393c1211712885a071c47b4b92f03b06a01b42caaf720ce645d8d0ed3"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/probe_03.png",
+        "bytes": 187635,
+        "sha256": "2413c22cf09b0799cc0f5c294fb1f9cb09762647f81a28fc3523d96770d5c2a1"
+      },
+      {
+        "path": "group/absent_order_0_condition_4/rgb.png",
+        "bytes": 187635,
+        "sha256": "2413c22cf09b0799cc0f5c294fb1f9cb09762647f81a28fc3523d96770d5c2a1"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/annotation.json",
+        "bytes": 1304,
+        "sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/capture.json",
+        "bytes": 11682,
+        "sha256": "949498b1242dac53237955dab2b5ea228e002f2c82ae1705782c569aa23eb244"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/labels.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/probe_01.png",
+        "bytes": 66103,
+        "sha256": "3bd41b81f4c4d1bd155a77ba7e84d12244da46cf7c88e2e701ca1cc124997947"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/probe_02.png",
+        "bytes": 90820,
+        "sha256": "1e1ff608dd94c9901b7fbe16248c2b78071840d71b1d3fd80d0807d321244fff"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/probe_03.png",
+        "bytes": 123455,
+        "sha256": "e25624c253f6af7548535a9562473b84e4002c4fe861e5b01e6160f8e9e8d20a"
+      },
+      {
+        "path": "group/absent_order_0_condition_0/rgb.png",
+        "bytes": 123455,
+        "sha256": "e25624c253f6af7548535a9562473b84e4002c4fe861e5b01e6160f8e9e8d20a"
+      }
+    ]
+  },
+  "group_checks": {
+    "passed": true,
+    "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+    "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+    "state_checks": 112,
+    "capture_count": 10,
+    "images": [
+      {
+        "variant": "present",
+        "target_present": true,
+        "gsd_cm_px": 0.5,
+        "rgb_file": "present_order_0_condition_0/rgb.png",
+        "rgb_sha256": "d1421432f480356d0ea554233e009edcd396f0d4d51142f71aecb3dfcbcc05e1",
+        "annotation_file": "present_order_0_condition_0/annotation.json",
+        "annotation_sha256": "de297fce8013a2e1e58153c65ce75c7585ad8489b5166c953906aa51244d9cba",
+        "yolo_file": "present_order_0_condition_0/labels.txt",
+        "yolo_sha256": "f5410d05e8ad1606d32e0d532cdb94dc4b317eae1df13fc64976655a976a7ffc",
+        "variant_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "63e281f22a0bcb01ff8081c6c76a67e74f006a0e7fd6857089b1b57cf80a6f27",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "63e281f22a0bcb01ff8081c6c76a67e74f006a0e7fd6857089b1b57cf80a6f27",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.018355899386935763,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "physically_present_direct_amodal_box",
+          "target_present": true,
+          "intersects_image": true,
+          "bbox_xyxy_px": [
+            366.69295754335025,
+            252.30246586310588,
+            630.4423666781692,
+            487.128451243635
+          ],
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "present",
+        "target_present": true,
+        "gsd_cm_px": 1.0,
+        "rgb_file": "present_order_0_condition_1/rgb.png",
+        "rgb_sha256": "7920a9774cee25a7c6b28f58feee6ab1c9970beb93cde2b271530fe16802e9f9",
+        "annotation_file": "present_order_0_condition_1/annotation.json",
+        "annotation_sha256": "0a96db998a87f574c8af250b31e3a8ec0e25cf7d5ead6d63cc45b940c6ffc99f",
+        "yolo_file": "present_order_0_condition_1/labels.txt",
+        "yolo_sha256": "fb1b0131a59174b83a29c295fb501015b9e982f07d3677100b9d748c7dac6474",
+        "variant_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "eb3087785125084ea8c3e9f8d36589d7daebae7abe7397b1063b50747b1852e9",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "eb3087785125084ea8c3e9f8d36589d7daebae7abe7397b1063b50747b1852e9",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.03165266248914931,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "physically_present_direct_amodal_box",
+          "target_present": true,
+          "intersects_image": true,
+          "bbox_xyxy_px": [
+            439.29093863973424,
+            318.1008947028577,
+            571.3076094258944,
+            435.6396345681719
+          ],
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "present",
+        "target_present": true,
+        "gsd_cm_px": 2.0,
+        "rgb_file": "present_order_0_condition_2/rgb.png",
+        "rgb_sha256": "0eba081d906d1baef7ce7561d83fbd8278e1a5778afe53bc47c2de5d00526018",
+        "annotation_file": "present_order_0_condition_2/annotation.json",
+        "annotation_sha256": "b753abb32cf73238dba864e47c2dffb11dc4b72f85c59f27a8e52e5c3d5ce3e3",
+        "yolo_file": "present_order_0_condition_2/labels.txt",
+        "yolo_sha256": "bb4fa1a092e1bcb51424a014e1f00c8317b638627a58cdfffcb34260bd438a33",
+        "variant_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "3f6c8b22899349f57225886eedd5d6d184dcfcd0d17ab402acd997de55d4503d",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "3f6c8b22899349f57225886eedd5d6d184dcfcd0d17ab402acd997de55d4503d",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.1071544223361545,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "physically_present_direct_amodal_box",
+          "target_present": true,
+          "intersects_image": true,
+          "bbox_xyxy_px": [
+            475.6315683591314,
+            351.0378483582995,
+            541.6754585673085,
+            409.83871090598166
+          ],
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "present",
+        "target_present": true,
+        "gsd_cm_px": 3.0,
+        "rgb_file": "present_order_0_condition_3/rgb.png",
+        "rgb_sha256": "ef43a4bb79f4f0686262795f78d6327fc21fa3d9eb61befb6497705798d82495",
+        "annotation_file": "present_order_0_condition_3/annotation.json",
+        "annotation_sha256": "a0c254c8d22a5296691ff32d8accd05b4e5ffc18516066341d3ee4f194602cf0",
+        "yolo_file": "present_order_0_condition_3/labels.txt",
+        "yolo_sha256": "adeed7595d975c6ba660cd03489c453cc366157848eb3ddb812520667882f1a5",
+        "variant_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "d153958c74b091781f930b5a7ef82fcb6cb16eecca355f30b206d38327b3309d",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "d153958c74b091781f930b5a7ef82fcb6cb16eecca355f30b206d38327b3309d",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.031932830810546875,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "physically_present_direct_amodal_box",
+          "target_present": true,
+          "intersects_image": true,
+          "bbox_xyxy_px": [
+            487.7512882285854,
+            362.02243103502417,
+            531.7884556987203,
+            401.23000995070765
+          ],
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "present",
+        "target_present": true,
+        "gsd_cm_px": 4.0,
+        "rgb_file": "present_order_0_condition_4/rgb.png",
+        "rgb_sha256": "0c31cdd6a8510167fa2fb78392c0f53962b4e881b2a8ea9e8c2bc61011b4c5e4",
+        "annotation_file": "present_order_0_condition_4/annotation.json",
+        "annotation_sha256": "f958cba1a329fc2ddba017a07d8064eb98becb201e886594a62c534fc3f5f771",
+        "yolo_file": "present_order_0_condition_4/labels.txt",
+        "yolo_sha256": "0cb8a999ba426af96f2b9206f41770c0a2b3d9f9ea247bdbc1ea0f75458db969",
+        "variant_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "e6d022a4290ef00d46e6de3f93a441e1d66f6b62875940579f9b1c6af1a73c59",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "e6d022a4290ef00d46e6de3f93a441e1d66f6b62875940579f9b1c6af1a73c59",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.029002719455295135,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "physically_present_direct_amodal_box",
+          "target_present": true,
+          "intersects_image": true,
+          "bbox_xyxy_px": [
+            493.8123069457479,
+            367.5157726239569,
+            526.843148678954,
+            396.9240840448814
+          ],
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "absent",
+        "target_present": false,
+        "gsd_cm_px": 0.5,
+        "rgb_file": "absent_order_0_condition_0/rgb.png",
+        "rgb_sha256": "e25624c253f6af7548535a9562473b84e4002c4fe861e5b01e6160f8e9e8d20a",
+        "annotation_file": "absent_order_0_condition_0/annotation.json",
+        "annotation_sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447",
+        "yolo_file": "absent_order_0_condition_0/labels.txt",
+        "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "variant_scene_hash": "080edaa08a41a9c14c931b115960284fea2a7ef30b65159e2270dc02965816ff",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "63e281f22a0bcb01ff8081c6c76a67e74f006a0e7fd6857089b1b57cf80a6f27",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "63e281f22a0bcb01ff8081c6c76a67e74f006a0e7fd6857089b1b57cf80a6f27",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.015179528130425349,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "target_physically_removed",
+          "target_present": false,
+          "intersects_image": false,
+          "bbox_xyxy_px": null,
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "absent",
+        "target_present": false,
+        "gsd_cm_px": 1.0,
+        "rgb_file": "absent_order_0_condition_1/rgb.png",
+        "rgb_sha256": "5fab158acf1c25f45b8ff76c64612d7e703f14d09831004e4e60d160d60c7b26",
+        "annotation_file": "absent_order_0_condition_1/annotation.json",
+        "annotation_sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447",
+        "yolo_file": "absent_order_0_condition_1/labels.txt",
+        "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "variant_scene_hash": "080edaa08a41a9c14c931b115960284fea2a7ef30b65159e2270dc02965816ff",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "eb3087785125084ea8c3e9f8d36589d7daebae7abe7397b1063b50747b1852e9",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "eb3087785125084ea8c3e9f8d36589d7daebae7abe7397b1063b50747b1852e9",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.08058420817057292,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "target_physically_removed",
+          "target_present": false,
+          "intersects_image": false,
+          "bbox_xyxy_px": null,
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "absent",
+        "target_present": false,
+        "gsd_cm_px": 2.0,
+        "rgb_file": "absent_order_0_condition_2/rgb.png",
+        "rgb_sha256": "166e7d12a3283e9578c2354bc2287c40f808e428968125885a3db22bd2be699e",
+        "annotation_file": "absent_order_0_condition_2/annotation.json",
+        "annotation_sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447",
+        "yolo_file": "absent_order_0_condition_2/labels.txt",
+        "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "variant_scene_hash": "080edaa08a41a9c14c931b115960284fea2a7ef30b65159e2270dc02965816ff",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "3f6c8b22899349f57225886eedd5d6d184dcfcd0d17ab402acd997de55d4503d",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "3f6c8b22899349f57225886eedd5d6d184dcfcd0d17ab402acd997de55d4503d",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.03901333279079861,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "target_physically_removed",
+          "target_present": false,
+          "intersects_image": false,
+          "bbox_xyxy_px": null,
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "absent",
+        "target_present": false,
+        "gsd_cm_px": 3.0,
+        "rgb_file": "absent_order_0_condition_3/rgb.png",
+        "rgb_sha256": "2bc3674564b658ef6385a1025def2d966b32e5bdbafa45a2f3a73eea82728236",
+        "annotation_file": "absent_order_0_condition_3/annotation.json",
+        "annotation_sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447",
+        "yolo_file": "absent_order_0_condition_3/labels.txt",
+        "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "variant_scene_hash": "080edaa08a41a9c14c931b115960284fea2a7ef30b65159e2270dc02965816ff",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "d153958c74b091781f930b5a7ef82fcb6cb16eecca355f30b206d38327b3309d",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "d153958c74b091781f930b5a7ef82fcb6cb16eecca355f30b206d38327b3309d",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.054552714029947914,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "target_physically_removed",
+          "target_present": false,
+          "intersects_image": false,
+          "bbox_xyxy_px": null,
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      },
+      {
+        "variant": "absent",
+        "target_present": false,
+        "gsd_cm_px": 4.0,
+        "rgb_file": "absent_order_0_condition_4/rgb.png",
+        "rgb_sha256": "2413c22cf09b0799cc0f5c294fb1f9cb09762647f81a28fc3523d96770d5c2a1",
+        "annotation_file": "absent_order_0_condition_4/annotation.json",
+        "annotation_sha256": "e087a777f27efdcfbbdd4f03ddb86a564bb5532211434215e79e43955f8b3447",
+        "yolo_file": "absent_order_0_condition_4/labels.txt",
+        "yolo_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "variant_scene_hash": "080edaa08a41a9c14c931b115960284fea2a7ef30b65159e2270dc02965816ff",
+        "parent_scene_hash": "938c79187c0742f4a8123a02d992d93fd6659bf3f5fe32bc8b0da1ca1da94dab",
+        "background_scene_hash": "26711cb7e3a68bb09e0aa83e24cf2bbf4bbfeec606e09764dfab2274228fc0e6",
+        "camera_condition_hash": "e6d022a4290ef00d46e6de3f93a441e1d66f6b62875940579f9b1c6af1a73c59",
+        "camera_and_pixel_checks": {
+          "passed": true,
+          "camera_condition_hash": "e6d022a4290ef00d46e6de3f93a441e1d66f6b62875940579f9b1c6af1a73c59",
+          "settling_probes": 3,
+          "final_mean_absolute_rgb_difference_0_to_255": 0.05897691514756945,
+          "underwater_optical_calibration_claimed": false,
+          "pixel_identical_pairing_claimed": false
+        },
+        "annotation_checks": {
+          "passed": true,
+          "annotation_status": "target_physically_removed",
+          "target_present": false,
+          "intersects_image": false,
+          "bbox_xyxy_px": null,
+          "rendered_visibility": "unknown",
+          "independent_usd_vertex_projection_verified": false,
+          "limitation": "Client verifies source semantics, arithmetic, labels and hashes; separate retained-USD verification must rebuild evaluated mesh projections"
+        }
+      }
+    ],
+    "local_dependencies_verified": [
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+        "sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+        "sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+        "sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+        "sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+        "sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+        "sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+        "sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+        "sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+        "sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+        "sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+        "sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+        "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+        "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+        "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+        "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+        "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+        "sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+        "sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+        "sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+        "sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+        "sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+        "sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+        "sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+        "sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+        "sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+        "sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a"
+      }
+    ],
+    "runtime_dependencies_not_inspected": [
+      "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl"
+    ],
+    "independent_retained_usd_verification_required": true,
+    "annotation_scope": "Owned harbour porpoise only; other demonstration animals are unlabelled background",
+    "source_counterfactual_pairing_verified_from_metadata_and_hashes": true
+  },
+  "actor_after": {
+    "ok": true,
+    "owned": true,
+    "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+    "world_pose": {
+      "position_scene_units": [
+        -522.9630306507289,
+        -50.0,
+        605.4004200300861
+      ],
+      "forward_y_up": [
+        0.7567505182819388,
+        0.0,
+        0.6537037961340113
+      ]
+    },
+    "calibration": {
+      "profile": "harbour_porpoise_gsd_pilot_v1",
+      "axial_length_m": 1.6014894247055054,
+      "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+      "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+      "biological_calibration_verified": false,
+      "pose_mapping": "static_pose_proxy_v1",
+      "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+    },
+    "accepted_steps": 9,
+    "latest": {
+      "schema_version": "2.0",
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 8,
+      "simulation_time_s": 4.0,
+      "simulation_step_s": 0.5,
+      "seed": 184729,
+      "agents": [
+        {
+          "agent_id": "Porpoise_001",
+          "species": "harbour_porpoise",
+          "behavioural_state": "shallow_swim",
+          "horizontal_position_m": [
+            -5.229630306507289,
+            6.054004200300862
+          ],
+          "heading_deg": 49.17856275642697,
+          "speed_mps": 0.5,
+          "vertical_reference": "mean_sea_level",
+          "depth_m": 0.5
+        }
+      ]
+    },
+    "motion_policy": "freeze_and_report",
+    "agent_id": "Porpoise_001",
+    "species": "harbour_porpoise",
+    "actor_count": 1,
+    "root_present_on_active_stage": true,
+    "root_diagnostics": {
+      "children": [
+        "/MarlinGamaPorpoise/Porpoise_001"
+      ],
+      "opinions": [
+        {
+          "layer": "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+          "specifier": "Sdf.SpecifierDef",
+          "type_name": "Xform",
+          "custom_data": {
+            "marlin": {
+              "axial_length_m": 1.6014894247055054,
+              "behavioural_state": "shallow_swim",
+              "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+              "owner": "gama_v2",
+              "pose_mapping": "static_pose_proxy_v1",
+              "run_id": "m5_positive_seed_184729_a",
+              "seed": "184729",
+              "simulation_time_s": "4.0",
+              "step_index": "8"
+            }
+          },
+          "fields": [
+            "specifier",
+            "typeName",
+            "customData"
+          ],
+          "properties": [],
+          "children": [
+            "Porpoise_001"
+          ],
+          "diagnostic_camera": null
+        }
+      ]
+    },
+    "transport_state": "frozen_updates_missing",
+    "seconds_since_update": 320.3684489489824,
+    "missing_update_after_s": 2.0,
+    "guard_error": null,
+    "autonomous_controller": false,
+    "pose_mapping": "static_pose_proxy_v1"
+  },
+  "pose_after": {
+    "passed": true,
+    "composed_position_m": [
+      -5.229630306507289,
+      -0.5,
+      6.054004200300861
+    ],
+    "expected_position_m": [
+      -5.229630306507289,
+      -0.5,
+      6.054004200300862
+    ],
+    "composed_heading_deg": 49.17856216430664,
+    "expected_heading_deg": 49.17856275642697,
+    "position_error_m": 8.881784197001252e-16,
+    "heading_error_deg": 5.921203296566091e-07
+  },
+  "held_state": true,
+  "during": {
+    "ok": true,
+    "inspection": {
+      "ok": true,
+      "root_layer": "anon:0x743770000eb0:World0.usd",
+      "edit_layer": "anon:0x743770000eb0:World0.usd",
+      "layers": [
+        "anon:0x743770004080:World0-session.usda",
+        "anon:0x59a927f6efb0:marlin_gama_fixture.usda",
+        "anon:0x743770000eb0:World0.usd"
+      ],
+      "camera": "/World/Cameras/CetaceanGalleryCamera",
+      "prims": [
+        {
+          "path": "/World",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -8000.50927734375,
+            -504.76697557346597,
+            -8000.2919921875
+          ],
+          "bounds_max": [
+            8000.5361328125,
+            211.71118540682372,
+            8000.24853515625
+          ],
+          "xform_ops": []
+        },
+        {
+          "path": "/World/Ocean",
+          "type": "Mesh",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -8000.50927734375,
+            -4.921785354614258,
+            -8000.2919921875
+          ],
+          "bounds_max": [
+            8000.5361328125,
+            4.9238715171813965,
+            8000.24853515625
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Environment",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "xform_ops": []
+        },
+        {
+          "path": "/Environment",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(1, 1, 1)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Bottlenose_Carimam",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -1806.790930596195,
+            -154.74632411539156,
+            -1892.2988649645022
+          ],
+          "bounds_max": [
+            -1793.210967215649,
+            -141.3502577768668,
+            -1852.2479974362109
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(-1800, -150, -1874.3290599998802)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 180, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Cuvier_Whale",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -694.5682385287822,
+            -185.7597196033038,
+            3966.2113105410017
+          ],
+          "bounds_max": [
+            -505.43176147121676,
+            -24.677749546706863,
+            4583.330555885545
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(-600, -150, 4274.329059999841)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 180, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Frasers_Dolphin",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            580.3985086826362,
+            -175.82843306761905,
+            -1958.4421303029999
+          ],
+          "bounds_max": [
+            619.6014913173628,
+            -122.27709902465271,
+            -1809.7713492106116
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(600, -150, -1874.3290599998802)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 180, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Humpback_Whale",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            1458.0552594400908,
+            -483.1708950554131,
+            3412.7791066625537
+          ],
+          "bounds_max": [
+            2141.9447405599103,
+            27.909360632809154,
+            4742.705341640066
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(1800, -150, 4274.329059999841)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Manatee",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -1874.2363364963342,
+            -229.74867689524405,
+            -3275.943967749002
+          ],
+          "bounds_max": [
+            -1725.7636635036667,
+            -70.25132310475603,
+            -2872.7141522507095
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(-1800, -150, -3074.329059999856)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Bottlenose_DigitalLife",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -640.8129364252088,
+            -183.01130128176098,
+            2890.291128071722
+          ],
+          "bounds_max": [
+            -558.1435471773145,
+            -99.29860813584733,
+            3148.9371832088827
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(-600, -150, 3074.329059999856)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Spotted_Dolphin",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            573.8604516029266,
+            -174.6343043426005,
+            -3178.891631897126
+          ],
+          "bounds_max": [
+            626.1395462907035,
+            -106.46560343404244,
+            -2951.550443623121
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(600, -150, -3074.329059999856)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Pilot_Whale",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            1719.8756990522645,
+            -230.42232319795858,
+            2942.9602831946413
+          ],
+          "bounds_max": [
+            1880.0941843119847,
+            -57.73885738967133,
+            3455.243999806392
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(1800, -150, 3074.329059999856)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -1245.7320688103669,
+            -199.16677058771035,
+            -4435.429697943696
+          ],
+          "bounds_max": [
+            -1154.2679345010013,
+            -101.97915878386887,
+            -4087.568722320894
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(-1200, -150, -4274.329059999841)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 180, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Sperm_Whale",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            -235.30685638895142,
+            -504.76697557346597,
+            907.9506653144582
+          ],
+          "bounds_max": [
+            235.30685638895142,
+            211.71118540682372,
+            2850.019589106635
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(0, -150, 1874.3290599998802)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 0, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/World/Cetaceans/Steno_Dolphin",
+          "type": "Xform",
+          "prim_stack": [
+            "anon:0x743770000eb0:World0.usd"
+          ],
+          "visibility": "inherited",
+          "bounds_min": [
+            1143.7866683279033,
+            -189.37921229756165,
+            -4414.035510193549
+          ],
+          "bounds_max": [
+            1256.2133316720963,
+            -87.60558687277042,
+            -4096.191107059361
+          ],
+          "xform_ops": [
+            {
+              "name": "xformOp:translate",
+              "value": "(1200, -150, -4274.329059999841)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:rotateXYZ",
+              "value": "(0, 180, 0)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            },
+            {
+              "name": "xformOp:scale",
+              "value": "(100, 100, 100)",
+              "layers": [
+                "anon:0x743770000eb0:World0.usd"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "swimming": {
+      "running": true,
+      "mode": "species_specific_gallery_animation",
+      "animal_count": 11,
+      "animals": [
+        {
+          "name": "Bottlenose_Carimam",
+          "species": "bottlenose_dolphin",
+          "prim_path": "/World/Cetaceans/Bottlenose_Carimam",
+          "x": -1800.0,
+          "z": -1874.3290599998802,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": -1.0,
+          "heading": 180.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 180.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "delphinid",
+            "backend": "procedural_mesh",
+            "cadence_hz": 1.15,
+            "tail_amplitude_ratio": 0.075,
+            "wave_cycles": 0.85,
+            "flex_start": 0.34
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 11242,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Cuvier_Whale",
+          "species": "cuvier_whale",
+          "prim_path": "/World/Cetaceans/Cuvier_Whale",
+          "x": -600.0,
+          "z": 4274.329059999841,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": 1.0,
+          "heading": 0.0,
+          "model_forward_heading": 180.0,
+          "model_yaw": 180.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "beaked_whale",
+            "backend": "procedural_mesh",
+            "cadence_hz": 0.7,
+            "tail_amplitude_ratio": 0.07,
+            "wave_cycles": 0.78,
+            "flex_start": 0.38
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 10220,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Frasers_Dolphin",
+          "species": "frasers_dolphin",
+          "prim_path": "/World/Cetaceans/Frasers_Dolphin",
+          "x": 600.0,
+          "z": -1874.3290599998802,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": -1.0,
+          "heading": 180.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 180.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "delphinid",
+            "backend": "procedural_mesh",
+            "cadence_hz": 1.3,
+            "tail_amplitude_ratio": 0.08,
+            "wave_cycles": 0.9,
+            "flex_start": 0.32
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 31022,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Humpback_Whale",
+          "species": "humpback_whale",
+          "prim_path": "/World/Cetaceans/Humpback_Whale",
+          "x": 1800.0,
+          "z": 4274.329059999841,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": 1.0,
+          "heading": 0.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 0.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "baleen_whale",
+            "backend": "procedural_mesh",
+            "cadence_hz": 0.42,
+            "tail_amplitude_ratio": 0.09,
+            "wave_cycles": 0.68,
+            "flex_start": 0.4
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 21186,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Manatee",
+          "species": "manatee",
+          "prim_path": "/World/Cetaceans/Manatee",
+          "x": -1800.0,
+          "z": -3074.329059999856,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": -1.0,
+          "heading": 180.0,
+          "model_forward_heading": 180.0,
+          "model_yaw": 0.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "sirenian",
+            "backend": "procedural_mesh",
+            "cadence_hz": 0.55,
+            "tail_amplitude_ratio": 0.115,
+            "wave_cycles": 1.05,
+            "flex_start": 0.28
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 6017,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Bottlenose_DigitalLife",
+          "species": "model_61a_-_bottlenose_dolphin",
+          "prim_path": "/World/Cetaceans/Bottlenose_DigitalLife",
+          "x": -600.0,
+          "z": 3074.329059999856,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": 1.0,
+          "heading": 0.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 0.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "skeletal",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "delphinid",
+            "backend": "skeletal",
+            "cadence_hz": 0.8,
+            "tail_amplitude_ratio": null,
+            "wave_cycles": null,
+            "flex_start": null
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 0,
+          "deformed_vertex_count": 0,
+          "deformation_error": null,
+          "skeletal_animation": {
+            "ok": true,
+            "name": "Swim Cycle",
+            "skeleton_path": "/World/Cetaceans/Bottlenose_DigitalLife/Model/Sketchfab_model/root/GLTF_SceneRootNode/Armature_20/GLTF_created_0/Armature",
+            "animation_path": "/World/Cetaceans/Bottlenose_DigitalLife/Animations/SwimCycle",
+            "joint_count": 20,
+            "sample_count": 31,
+            "fps": 24.0,
+            "start_time_seconds": 0.0,
+            "end_time_seconds": 1.25,
+            "duration_seconds": 1.25
+          }
+        },
+        {
+          "name": "Spotted_Dolphin",
+          "species": "pantropical_spotted_dolphin",
+          "prim_path": "/World/Cetaceans/Spotted_Dolphin",
+          "x": 600.0,
+          "z": -3074.329059999856,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": -1.0,
+          "heading": 180.0,
+          "model_forward_heading": 180.0,
+          "model_yaw": 0.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "delphinid",
+            "backend": "procedural_mesh",
+            "cadence_hz": 1.4,
+            "tail_amplitude_ratio": 0.078,
+            "wave_cycles": 0.92,
+            "flex_start": 0.32
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 28255,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Pilot_Whale",
+          "species": "pilot_whale",
+          "prim_path": "/World/Cetaceans/Pilot_Whale",
+          "x": 1800.0,
+          "z": 3074.329059999856,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": 1.0,
+          "heading": 0.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 0.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "delphinid",
+            "backend": "procedural_mesh",
+            "cadence_hz": 0.62,
+            "tail_amplitude_ratio": 0.072,
+            "wave_cycles": 0.76,
+            "flex_start": 0.38
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 12518,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Pygmy_Sperm_Whale",
+          "species": "pygmy_sperm_whale",
+          "prim_path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+          "x": -1200.0,
+          "z": -4274.329059999841,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": -1.0,
+          "heading": 180.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 180.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "sperm_whale",
+            "backend": "procedural_mesh",
+            "cadence_hz": 0.82,
+            "tail_amplitude_ratio": 0.07,
+            "wave_cycles": 0.8,
+            "flex_start": 0.37
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 11131,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Sperm_Whale",
+          "species": "sperm_whale",
+          "prim_path": "/World/Cetaceans/Sperm_Whale",
+          "x": 0.0,
+          "z": 1874.3290599998802,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": 1.0,
+          "heading": 0.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 0.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "sperm_whale",
+            "backend": "procedural_mesh",
+            "cadence_hz": 0.34,
+            "tail_amplitude_ratio": 0.082,
+            "wave_cycles": 0.66,
+            "flex_start": 0.43
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 18818,
+          "deformation_error": null,
+          "skeletal_animation": null
+        },
+        {
+          "name": "Steno_Dolphin",
+          "species": "steno_dolphin",
+          "prim_path": "/World/Cetaceans/Steno_Dolphin",
+          "x": 1200.0,
+          "z": -4274.329059999841,
+          "depth": -150.0,
+          "speed": 30.0,
+          "direction": -1.0,
+          "heading": 180.0,
+          "model_forward_heading": 0.0,
+          "model_yaw": 180.0,
+          "travel_half_extent": 6500.0,
+          "body_animation": true,
+          "animation_backend": "procedural_mesh",
+          "motion_profile_basis": "research_informed_visual_preview",
+          "motion_profile": {
+            "family": "delphinid",
+            "backend": "procedural_mesh",
+            "cadence_hz": 1.22,
+            "tail_amplitude_ratio": 0.078,
+            "wave_cycles": 0.88,
+            "flex_start": 0.33
+          },
+          "deformation_fps": 15.0,
+          "deformable_mesh_count": 1,
+          "deformed_vertex_count": 10587,
+          "deformation_error": null,
+          "skeletal_animation": null
+        }
+      ]
+    },
+    "ocean": {
+      "running": true,
+      "ocean_path": "/World/Ocean",
+      "size": 16000.0,
+      "resolution": 128,
+      "speed": 0.4,
+      "choppiness": 0.15,
+      "target_fps": 15.0,
+      "elapsed": 75069.5322010007
+    },
+    "renderer_settings": {
+      "/exts/cris.madil.render_service/underwaterCue/enabled": true,
+      "/rtx/fog/enabled": true,
+      "/rtx/fog/fogColor": [
+        0.03,
+        0.16,
+        0.2
+      ],
+      "/rtx/fog/fogColorIntensity": 0.5,
+      "/rtx/fog/fogDistanceDensity": 0.04,
+      "/rtx/fog/fogEndDist": 1800.0,
+      "/rtx/fog/fogHeightDensity": 0.08,
+      "/rtx/fog/fogHeightFalloff": 0.025,
+      "/rtx/fog/fogStartDist": 0.0,
+      "/rtx/fog/fogStartHeight": 0.0,
+      "/rtx/fog/fogZup/enabled": false,
+      "/rtx/pathtracing/aa/filterRadius": 1.0,
+      "/rtx/pathtracing/aa/op": 1,
+      "/rtx/pathtracing/adaptiveSampling/enabled": false,
+      "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+      "/rtx/pathtracing/cached/enabled": true,
+      "/rtx/pathtracing/fireflyFilter/enabled": true,
+      "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+      "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+      "/rtx/pathtracing/fractionalCutoutOpacity": true,
+      "/rtx/pathtracing/lightcache/cached/enabled": true,
+      "/rtx/pathtracing/maxBounces": 16,
+      "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+      "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+      "/rtx/pathtracing/optixDenoiser/enabled": true,
+      "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+      "/rtx/pathtracing/spp": 1,
+      "/rtx/pathtracing/totalSpp": 512,
+      "/rtx/post/aa/op": 3,
+      "/rtx/post/chromaticAberration/enabled": false,
+      "/rtx/post/colorcorr/contrast": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/enabled": false,
+      "/rtx/post/colorcorr/gain": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/gamma": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorcorr/saturation": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/blackpoint": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/contrast": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/enabled": false,
+      "/rtx/post/colorgrad/gain": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/gamma": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/lift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/multiply": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/whitepoint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/dlss/execMode": 3,
+      "/rtx/post/dof/enabled": false,
+      "/rtx/post/histogram/enabled": false,
+      "/rtx/post/lensFlares/enabled": false,
+      "/rtx/post/motionblur/enabled": false,
+      "/rtx/post/tonemap/cameraShutter": 50.0,
+      "/rtx/post/tonemap/cm2Factor": 1.0,
+      "/rtx/post/tonemap/colorMode": 0,
+      "/rtx/post/tonemap/dither": 0.0,
+      "/rtx/post/tonemap/enableSrgbToGamma": true,
+      "/rtx/post/tonemap/exposureBias": null,
+      "/rtx/post/tonemap/fNumber": 5.0,
+      "/rtx/post/tonemap/filmIso": 100.0,
+      "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+      "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+      "/rtx/post/tonemap/op": 6,
+      "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+      "/rtx/post/tonemap/whitepoint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/tonemap/wrapValue": 0.0,
+      "/rtx/post/tvNoise/enabled": false,
+      "/rtx/raytracing/fractionalCutoutOpacity": false,
+      "/rtx/reflections/enabled": true,
+      "/rtx/rendermode": "RealTimePathTracing",
+      "/rtx/resetPtAccumOnAnimTimeChange": false,
+      "/rtx/rtpt/maxBounces": 8,
+      "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+      "/rtx/translucency/enabled": true,
+      "/rtx/translucency/maxRefractionBounces": 8
+    },
+    "stable_scene_attributes": {
+      "/World/Cameras": {
+        "/World/Cameras": {
+          "purpose": "default",
+          "visibility": "inherited",
+          "xformOpOrder": "None"
+        },
+        "/World/Cameras/CetaceanGalleryCamera": {
+          "clippingPlanes": "[]",
+          "clippingRange": "(1, 100000)",
+          "exposure": "0.0",
+          "exposure:fStop": "5.0",
+          "exposure:iso": "100.0",
+          "exposure:responsivity": "1.1026709079742432",
+          "exposure:time": "0.019999999552965164",
+          "focalLength": "35.0",
+          "focusDistance": "0.0",
+          "fStop": "0.0",
+          "horizontalAperture": "20.954999923706055",
+          "horizontalApertureOffset": "0.0",
+          "omni:rtx:autoExposure:adaptationSpeed": "3.5",
+          "omni:rtx:autoExposure:enabled": "False",
+          "omni:rtx:autoExposure:histogramClamping:enabled": "True",
+          "omni:rtx:autoExposure:histogramClamping:maxLuminance": "100000.0",
+          "omni:rtx:autoExposure:histogramClamping:minLuminance": "50.0",
+          "omni:rtx:autoExposure:histogramFilter": "median",
+          "omni:rtx:autoExposure:whitePointScale": "10.0",
+          "projection": "perspective",
+          "purpose": "default",
+          "shutter:close": "0.0",
+          "shutter:open": "0.0",
+          "stereoRole": "mono",
+          "verticalAperture": "15.290800094604492",
+          "verticalApertureOffset": "0.0",
+          "visibility": "inherited",
+          "xformOp:transform": "( (-0.7999999999999998, 0, -0.6, 0), (-0.17240873133980728, 0.9578262852211512, 0.2298783084530763, -0), (0.5746957711326909, 0.28734788556634544, -0.766261028176921, 0), (5400, 2550.0000000000005, -7200.000000000001, 1) )",
+          "xformOpOrder": "[xformOp:transform]"
+        }
+      },
+      "/World/Looks": {
+        "/World/Looks": {
+          "purpose": "default",
+          "visibility": "inherited"
+        },
+        "/World/Looks/OceanWater": {
+          "outputs:displacement": "None",
+          "outputs:mdl:surface": "None",
+          "outputs:surface": "None",
+          "outputs:volume": "None"
+        },
+        "/World/Looks/OceanWater/Shader": {
+          "info:id": "None",
+          "info:implementationSource": "sourceAsset",
+          "info:mdl:sourceAsset": "@OmniSurface.mdl@",
+          "info:mdl:sourceAsset:subIdentifier": "OmniSurface",
+          "inputs:diffuse_reflection_color": "(0.02, 0.1, 0.13)",
+          "inputs:diffuse_reflection_weight": "0.019999999552965164",
+          "inputs:enable_specular_transmission": "True",
+          "inputs:metalness": "0.0",
+          "inputs:specular_reflection_color": "(1, 1, 1)",
+          "inputs:specular_reflection_ior": "1.3329999446868896",
+          "inputs:specular_reflection_roughness": "0.04500000178813934",
+          "inputs:specular_reflection_weight": "1.0",
+          "inputs:specular_transmission_color": "(0.78, 0.92, 0.95)",
+          "inputs:specular_transmission_scatter_anisotropy": "0.0",
+          "inputs:specular_transmission_scattering_color": "(0.005, 0.02, 0.03)",
+          "inputs:specular_transmission_scattering_depth": "100.0",
+          "inputs:specular_transmission_weight": "1.0",
+          "inputs:thin_walled": "True",
+          "outputs:out": "None"
+        }
+      },
+      "/World/Environment": {
+        "/World/Environment": {
+          "purpose": "default",
+          "visibility": "inherited",
+          "xformOpOrder": "None"
+        },
+        "/World/Environment/Sky": {
+          "collection:lightLink": "None",
+          "collection:lightLink:expansionRule": "expandPrims",
+          "collection:lightLink:includeRoot": "True",
+          "collection:lightLink:membershipExpression": "None",
+          "collection:shadowLink": "None",
+          "collection:shadowLink:expansionRule": "expandPrims",
+          "collection:shadowLink:includeRoot": "True",
+          "collection:shadowLink:membershipExpression": "None",
+          "guideRadius": "100000.0",
+          "inputs:color": "(0.45, 0.65, 1)",
+          "inputs:colorTemperature": "6500.0",
+          "inputs:diffuse": "1.0",
+          "inputs:enableColorTemperature": "False",
+          "inputs:exposure": "1.0",
+          "inputs:intensity": "500.0",
+          "inputs:normalize": "False",
+          "inputs:specular": "1.0",
+          "inputs:texture:file": "None",
+          "inputs:texture:format": "automatic",
+          "light:materialSyncMode": "noMaterialResponse",
+          "light:shaderId": "DomeLight",
+          "omni:rtx:domeLight:groundTextureScale": "0.0",
+          "omni:rtx:domeLight:mode": "infinite",
+          "omni:rtx:domeLight:radius": "100.0",
+          "omni:rtx:domeLight:size": "(200, 200, 200)",
+          "purpose": "default",
+          "visibility": "inherited",
+          "xformOpOrder": "None"
+        },
+        "/World/Environment/Sun": {
+          "collection:lightLink": "None",
+          "collection:lightLink:expansionRule": "expandPrims",
+          "collection:lightLink:includeRoot": "True",
+          "collection:lightLink:membershipExpression": "None",
+          "collection:shadowLink": "None",
+          "collection:shadowLink:expansionRule": "expandPrims",
+          "collection:shadowLink:includeRoot": "True",
+          "collection:shadowLink:membershipExpression": "None",
+          "inputs:angle": "0.5299999713897705",
+          "inputs:color": "(1, 0.92, 0.78)",
+          "inputs:colorTemperature": "6500.0",
+          "inputs:diffuse": "1.0",
+          "inputs:enableColorTemperature": "False",
+          "inputs:exposure": "0.0",
+          "inputs:intensity": "5000.0",
+          "inputs:normalize": "False",
+          "inputs:specular": "1.0",
+          "light:materialSyncMode": "noMaterialResponse",
+          "light:shaderId": "DistantLight",
+          "purpose": "default",
+          "visibility": "inherited",
+          "xformOp:rotateXYZ": "(-35, 25, 0)",
+          "xformOpOrder": "[xformOp:rotateXYZ]"
+        }
+      },
+      "/Environment": {
+        "/Environment": {
+          "purpose": "default",
+          "visibility": "inherited",
+          "xformOp:rotateXYZ": "(0, 0, 0)",
+          "xformOp:scale": "(1, 1, 1)",
+          "xformOp:translate": "(0, 0, 0)",
+          "xformOpOrder": "[xformOp:translate, xformOp:rotateXYZ, xformOp:scale]"
+        },
+        "/Environment/defaultLight": {
+          "collection:lightLink": "None",
+          "collection:lightLink:expansionRule": "expandPrims",
+          "collection:lightLink:includeRoot": "True",
+          "collection:lightLink:membershipExpression": "None",
+          "collection:shadowLink": "None",
+          "collection:shadowLink:expansionRule": "expandPrims",
+          "collection:shadowLink:includeRoot": "True",
+          "collection:shadowLink:membershipExpression": "None",
+          "inputs:angle": "1.0",
+          "inputs:color": "(1, 1, 1)",
+          "inputs:colorTemperature": "6500.0",
+          "inputs:diffuse": "1.0",
+          "inputs:enableColorTemperature": "False",
+          "inputs:exposure": "1.5",
+          "inputs:intensity": "3000.0",
+          "inputs:normalize": "True",
+          "inputs:shaping:cone:angle": "180.0",
+          "inputs:shaping:cone:softness": "0.0",
+          "inputs:shaping:focus": "0.0",
+          "inputs:shaping:focusTint": "(0, 0, 0)",
+          "inputs:shaping:ies:angleScale": "0.0",
+          "inputs:shaping:ies:file": "None",
+          "inputs:shaping:ies:normalize": "False",
+          "inputs:specular": "1.0",
+          "light:materialSyncMode": "noMaterialResponse",
+          "light:shaderId": "DistantLight",
+          "omni:rtx:usdluxVersion": "2505",
+          "purpose": "default",
+          "visibility": "inherited",
+          "xformOp:rotateXYZ": "(315, 0, 0)",
+          "xformOp:scale": "(1, 1, 1)",
+          "xformOp:translate": "(0, 0, 0)",
+          "xformOpOrder": "[xformOp:translate, xformOp:rotateXYZ, xformOp:scale]"
+        }
+      }
+    }
+  },
+  "coexistence_checks": {
+    "eleven_original_swimmers_running": true,
+    "all_original_swimmers_advanced": true,
+    "controller_configuration_preserved": true,
+    "no_deformation_errors": true,
+    "ocean_advanced": true,
+    "ocean_configuration_preserved": true,
+    "renderer_settings_preserved": true,
+    "stable_scene_attributes_preserved": true,
+    "original_camera_preserved": true
+  }
+}

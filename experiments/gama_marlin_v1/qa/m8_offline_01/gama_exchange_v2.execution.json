@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_gama_exchange_v2.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:25:21.831605+00:00",
+  "ended_at_utc": "2026-10-09T17:25:21.880174+00:00",
+  "elapsed_seconds": 0.04857523099053651,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.stderr.log",
+    "bytes": 3299,
+    "sha256": "ade599f9e33234e48821a54adc980417906a62b1b8761ef75653b4c6c103c70b"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "gama_exchange_v2",
+  "category": "bridge",
+  "scope": "V2 pure schema, strict scalar/state identity, coordinate and replay validation.",
+  "tests": 23,
+  "skipped": 0,
+  "expected_tests": 23,
+  "passed": true
+}

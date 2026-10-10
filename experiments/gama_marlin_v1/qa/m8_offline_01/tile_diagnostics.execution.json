@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_tile_diagnostics.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:25:20.933892+00:00",
+  "ended_at_utc": "2026-10-09T17:25:21.079557+00:00",
+  "elapsed_seconds": 0.1456721739959903,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.stderr.log",
+    "bytes": 642,
+    "sha256": "ee1e0b1fb7846bc95223397b04296fd6c0ed7fba901fc83b7f5b79336256f839"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "tile_diagnostics",
+  "category": "existing_camera",
+  "scope": "Synthetic NumPy/Pillow pixels and evidence-rejection fixtures; no retained render is produced.",
+  "tests": 4,
+  "skipped": 0,
+  "expected_tests": 4,
+  "passed": true
+}

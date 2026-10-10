@@ -1,0 +1,2095 @@
+{
+  "schema_version": 1,
+  "kind": "measured_checkpoint_controller_restart_plan",
+  "usable": true,
+  "passed": true,
+  "generated_at_utc": "2026-10-09T18:43:01.996305+00:00",
+  "inspection_command": [
+    "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection.py"
+  ],
+  "kit_imported": false,
+  "kit_stage_attached": false,
+  "renderer_created": false,
+  "live_scene_mutated": false,
+  "controller_phase_recovery_claimed": false,
+  "checkpoint_id": "checkpoint_4bncc2ao",
+  "copied_checkpoint_scene": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_snapshot/scene.usdc",
+  "copied_checkpoint_scene_sha256": "7be085a679d06f3cab94e81dd9299a139a0aa2f2e518b5d23ac250359afdc6c0",
+  "copied_checkpoint_metadata_sha256": "9011da6f64451fe047dc9ec1161a2ca1c2474bd416f1dc392a7bc7e99ec6520c",
+  "checkpoint_record_sha256": "254315aee534780abca75e4ed5e8832b65849d77ed4260c242db985c602c0538",
+  "restore": {
+    "method": "POST",
+    "endpoint": "/debug/scene/checkpoint/checkpoint_4bncc2ao/restore",
+    "payload": {}
+  },
+  "animals": [
+    {
+      "name": "Bottlenose_Carimam",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/bottlenose_dolphin.usd",
+      "position": [
+        -1800.0,
+        -150.0,
+        2904.707290000086
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Cuvier_Whale",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/cuvier_whale.usd",
+      "position": [
+        -600.0,
+        -150.0,
+        -504.70729000014796
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Frasers_Dolphin",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/frasers_dolphin.usd",
+      "position": [
+        600.0,
+        -150.0,
+        2904.707290000086
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Humpback_Whale",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/humpback_whale.usd",
+      "position": [
+        1800.0,
+        -150.0,
+        -504.70729000014796
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Manatee",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/manatee.usd",
+      "position": [
+        -1800.0,
+        -150.0,
+        1704.7072900001451
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Bottlenose_DigitalLife",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+      "position": [
+        -600.0,
+        -150.0,
+        -1704.7072900001451
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Spotted_Dolphin",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/pantropical_spotted_dolphin.usd",
+      "position": [
+        600.0,
+        -150.0,
+        1704.7072900001451
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Pilot_Whale",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/pilot_whale.usd",
+      "position": [
+        1800.0,
+        -150.0,
+        -1704.7072900001451
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Pygmy_Sperm_Whale",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/pygmy_sperm_whale.usd",
+      "position": [
+        -1200.0,
+        -150.0,
+        504.70729000014796
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Sperm_Whale",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/sperm_whale.usd",
+      "position": [
+        0.0,
+        -150.0,
+        -2904.707290000086
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    {
+      "name": "Steno_Dolphin",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/steno_dolphin.usd",
+      "position": [
+        1200.0,
+        -150.0,
+        504.70729000014796
+      ],
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    }
+  ],
+  "ocean": {
+    "name": "Ocean",
+    "size": 16000,
+    "resolution": 128,
+    "wave_height": 5,
+    "wave_length": 650,
+    "choppiness": 0.15,
+    "speed": 0.4,
+    "target_fps": 15,
+    "position": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "gallery": {
+    "depth": -150.0,
+    "speed": 30.0,
+    "travel_half_extent": 6500.0,
+    "deformation_fps": 15.0,
+    "activate_viewport_camera": false
+  },
+  "respawn_animals": [
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Bottlenose_Carimam",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/bottlenose_dolphin.usd",
+        "position": [
+          -1800.0,
+          -150.0,
+          2904.707290000086
+        ],
+        "rotation": [
+          0.0,
+          180.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "bottlenose_dolphin",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Bottlenose_Carimam",
+        "composed_root_matrix": [
+          [
+            -100.0,
+            0.0,
+            -1.2246467991473532e-14,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.2246467991473532e-14,
+            0.0,
+            -100.0,
+            0.0
+          ],
+          [
+            -1800.0,
+            -150.0,
+            2904.707290000086,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          -1800.0,
+          -150.0,
+          2904.707290000086
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Cuvier_Whale",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/cuvier_whale.usd",
+        "position": [
+          -600.0,
+          -150.0,
+          -504.70729000014796
+        ],
+        "rotation": [
+          0.0,
+          180.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "cuvier_whale",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Cuvier_Whale",
+        "composed_root_matrix": [
+          [
+            -100.0,
+            0.0,
+            -1.2246467991473532e-14,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.2246467991473532e-14,
+            0.0,
+            -100.0,
+            0.0
+          ],
+          [
+            -600.0,
+            -150.0,
+            -504.70729000014796,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          -600.0,
+          -150.0,
+          -504.70729000014796
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Frasers_Dolphin",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/frasers_dolphin.usd",
+        "position": [
+          600.0,
+          -150.0,
+          2904.707290000086
+        ],
+        "rotation": [
+          0.0,
+          180.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "frasers_dolphin",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Frasers_Dolphin",
+        "composed_root_matrix": [
+          [
+            -100.0,
+            0.0,
+            -1.2246467991473532e-14,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.2246467991473532e-14,
+            0.0,
+            -100.0,
+            0.0
+          ],
+          [
+            600.0,
+            -150.0,
+            2904.707290000086,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          600.0,
+          -150.0,
+          2904.707290000086
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Humpback_Whale",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/humpback_whale.usd",
+        "position": [
+          1800.0,
+          -150.0,
+          -504.70729000014796
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "humpback_whale",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Humpback_Whale",
+        "composed_root_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            1800.0,
+            -150.0,
+            -504.70729000014796,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          1800.0,
+          -150.0,
+          -504.70729000014796
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Manatee",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/manatee.usd",
+        "position": [
+          -1800.0,
+          -150.0,
+          1704.7072900001451
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "manatee",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Manatee",
+        "composed_root_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            -1800.0,
+            -150.0,
+            1704.7072900001451,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          -1800.0,
+          -150.0,
+          1704.7072900001451
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Bottlenose_DigitalLife",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+        "position": [
+          -600.0,
+          -150.0,
+          -1704.7072900001451
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "model_61a_-_bottlenose_dolphin",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Bottlenose_DigitalLife",
+        "composed_root_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            -600.0,
+            -150.0,
+            -1704.7072900001451,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          -600.0,
+          -150.0,
+          -1704.7072900001451
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Spotted_Dolphin",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/pantropical_spotted_dolphin.usd",
+        "position": [
+          600.0,
+          -150.0,
+          1704.7072900001451
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "pantropical_spotted_dolphin",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Spotted_Dolphin",
+        "composed_root_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            600.0,
+            -150.0,
+            1704.7072900001451,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          600.0,
+          -150.0,
+          1704.7072900001451
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Pilot_Whale",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/pilot_whale.usd",
+        "position": [
+          1800.0,
+          -150.0,
+          -1704.7072900001451
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "pilot_whale",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Pilot_Whale",
+        "composed_root_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            1800.0,
+            -150.0,
+            -1704.7072900001451,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          1800.0,
+          -150.0,
+          -1704.7072900001451
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Pygmy_Sperm_Whale",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/pygmy_sperm_whale.usd",
+        "position": [
+          -1200.0,
+          -150.0,
+          504.70729000014796
+        ],
+        "rotation": [
+          0.0,
+          180.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "pygmy_sperm_whale",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+        "composed_root_matrix": [
+          [
+            -100.0,
+            0.0,
+            -1.2246467991473532e-14,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.2246467991473532e-14,
+            0.0,
+            -100.0,
+            0.0
+          ],
+          [
+            -1200.0,
+            -150.0,
+            504.70729000014796,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          -1200.0,
+          -150.0,
+          504.70729000014796
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Sperm_Whale",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/sperm_whale.usd",
+        "position": [
+          0.0,
+          -150.0,
+          -2904.707290000086
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "sperm_whale",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Sperm_Whale",
+        "composed_root_matrix": [
+          [
+            100.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          [
+            0.0,
+            -150.0,
+            -2904.707290000086,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          0.0,
+          -150.0,
+          -2904.707290000086
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    },
+    {
+      "method": "POST",
+      "endpoint": "/scene/cetacean/spawn",
+      "payload": {
+        "name": "Steno_Dolphin",
+        "asset_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/steno_dolphin.usd",
+        "position": [
+          1200.0,
+          -150.0,
+          504.70729000014796
+        ],
+        "rotation": [
+          0.0,
+          180.0,
+          0.0
+        ],
+        "model_rotation": [
+          -90.0,
+          0.0,
+          0.0
+        ],
+        "scale": 100.0
+      },
+      "species": "steno_dolphin",
+      "canonical_asset_exists": true,
+      "measurement": {
+        "root_path": "/World/Cetaceans/Steno_Dolphin",
+        "composed_root_matrix": [
+          [
+            -100.0,
+            0.0,
+            -1.2246467991473532e-14,
+            0.0
+          ],
+          [
+            0.0,
+            100.0,
+            0.0,
+            0.0
+          ],
+          [
+            1.2246467991473532e-14,
+            0.0,
+            -100.0,
+            0.0
+          ],
+          [
+            1200.0,
+            -150.0,
+            504.70729000014796,
+            1.0
+          ]
+        ],
+        "composed_root_position": [
+          1200.0,
+          -150.0,
+          504.70729000014796
+        ],
+        "root_scale_xyz": [
+          100.0,
+          100.0,
+          100.0
+        ],
+        "position_source": "Measured from privately reopened copied checkpoint USD, not the earlier moving live audit"
+      }
+    }
+  ],
+  "ocean_restart": {
+    "method": "POST",
+    "endpoint": "/scene/ocean/animation/start",
+    "payload": {
+      "name": "Ocean",
+      "size": 16000,
+      "resolution": 128,
+      "wave_height": 5,
+      "wave_length": 650,
+      "choppiness": 0.15,
+      "speed": 0.4,
+      "target_fps": 15,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "gallery_restart": {
+    "method": "POST",
+    "endpoint": "/scene/cetaceans/gallery/swim/start",
+    "payload": {
+      "depth": -150.0,
+      "speed": 30.0,
+      "travel_half_extent": 6500.0,
+      "deformation_fps": 15.0,
+      "activate_viewport_camera": false
+    }
+  },
+  "expected_camera": "/World/Cameras/CetaceanGalleryCamera",
+  "expected_resolution": [
+    1280,
+    720
+  ],
+  "expected_fill_frame": false,
+  "expected_renderer_settings": {
+    "/exts/cris.madil.render_service/underwaterCue/enabled": true,
+    "/rtx/fog/enabled": true,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/aa/filterRadius": 1.0,
+    "/rtx/pathtracing/aa/op": 1,
+    "/rtx/pathtracing/adaptiveSampling/enabled": false,
+    "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+    "/rtx/pathtracing/cached/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+    "/rtx/pathtracing/fractionalCutoutOpacity": true,
+    "/rtx/pathtracing/lightcache/cached/enabled": true,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/pathtracing/optixDenoiser/enabled": true,
+    "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+    "/rtx/pathtracing/spp": 1,
+    "/rtx/pathtracing/totalSpp": 512,
+    "/rtx/post/aa/op": 3,
+    "/rtx/post/chromaticAberration/enabled": false,
+    "/rtx/post/colorcorr/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/enabled": false,
+    "/rtx/post/colorcorr/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorcorr/saturation": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/blackpoint": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/enabled": false,
+    "/rtx/post/colorgrad/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/lift": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/multiply": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/dlss/execMode": 3,
+    "/rtx/post/dof/enabled": false,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/lensFlares/enabled": false,
+    "/rtx/post/motionblur/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/cm2Factor": 1.0,
+    "/rtx/post/tonemap/colorMode": 0,
+    "/rtx/post/tonemap/dither": 0.0,
+    "/rtx/post/tonemap/enableSrgbToGamma": true,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+    "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+    "/rtx/post/tonemap/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/tonemap/wrapValue": 0.0,
+    "/rtx/post/tvNoise/enabled": false,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "RealTimePathTracing",
+    "/rtx/resetPtAccumOnAnimTimeChange": false,
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "expected_stable_scene_attributes": {
+    "/World/Cameras": {
+      "/World/Cameras": {
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOpOrder": "None"
+      },
+      "/World/Cameras/CetaceanGalleryCamera": {
+        "clippingPlanes": "[]",
+        "clippingRange": "(1, 100000)",
+        "exposure": "0.0",
+        "exposure:fStop": "5.0",
+        "exposure:iso": "100.0",
+        "exposure:responsivity": "1.1026709079742432",
+        "exposure:time": "0.019999999552965164",
+        "focalLength": "35.0",
+        "focusDistance": "0.0",
+        "fStop": "0.0",
+        "horizontalAperture": "20.954999923706055",
+        "horizontalApertureOffset": "0.0",
+        "omni:rtx:autoExposure:adaptationSpeed": "3.5",
+        "omni:rtx:autoExposure:enabled": "False",
+        "omni:rtx:autoExposure:histogramClamping:enabled": "True",
+        "omni:rtx:autoExposure:histogramClamping:maxLuminance": "100000.0",
+        "omni:rtx:autoExposure:histogramClamping:minLuminance": "50.0",
+        "omni:rtx:autoExposure:histogramFilter": "median",
+        "omni:rtx:autoExposure:whitePointScale": "10.0",
+        "projection": "perspective",
+        "purpose": "default",
+        "shutter:close": "0.0",
+        "shutter:open": "0.0",
+        "stereoRole": "mono",
+        "verticalAperture": "15.290800094604492",
+        "verticalApertureOffset": "0.0",
+        "visibility": "inherited",
+        "xformOp:transform": "( (-0.7999999999999998, 0, -0.6, 0), (-0.17240873133980728, 0.9578262852211512, 0.2298783084530763, -0), (0.5746957711326909, 0.28734788556634544, -0.766261028176921, 0), (5400, 2550.0000000000005, -7200.000000000001, 1) )",
+        "xformOpOrder": "[xformOp:transform]"
+      }
+    },
+    "/World/Looks": {
+      "/World/Looks": {
+        "purpose": "default",
+        "visibility": "inherited"
+      },
+      "/World/Looks/OceanWater": {
+        "outputs:displacement": "None",
+        "outputs:mdl:surface": "None",
+        "outputs:surface": "None",
+        "outputs:volume": "None"
+      },
+      "/World/Looks/OceanWater/Shader": {
+        "info:id": "None",
+        "info:implementationSource": "sourceAsset",
+        "info:mdl:sourceAsset": "@OmniSurface.mdl@",
+        "info:mdl:sourceAsset:subIdentifier": "OmniSurface",
+        "inputs:diffuse_reflection_color": "(0.02, 0.1, 0.13)",
+        "inputs:diffuse_reflection_weight": "0.019999999552965164",
+        "inputs:enable_specular_transmission": "True",
+        "inputs:metalness": "0.0",
+        "inputs:specular_reflection_color": "(1, 1, 1)",
+        "inputs:specular_reflection_ior": "1.3329999446868896",
+        "inputs:specular_reflection_roughness": "0.04500000178813934",
+        "inputs:specular_reflection_weight": "1.0",
+        "inputs:specular_transmission_color": "(0.78, 0.92, 0.95)",
+        "inputs:specular_transmission_scatter_anisotropy": "0.0",
+        "inputs:specular_transmission_scattering_color": "(0.005, 0.02, 0.03)",
+        "inputs:specular_transmission_scattering_depth": "100.0",
+        "inputs:specular_transmission_weight": "1.0",
+        "inputs:thin_walled": "True",
+        "outputs:out": "None"
+      }
+    },
+    "/World/Environment": {
+      "/World/Environment": {
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOpOrder": "None"
+      },
+      "/World/Environment/Sky": {
+        "collection:lightLink": "None",
+        "collection:lightLink:expansionRule": "expandPrims",
+        "collection:lightLink:includeRoot": "True",
+        "collection:lightLink:membershipExpression": "None",
+        "collection:shadowLink": "None",
+        "collection:shadowLink:expansionRule": "expandPrims",
+        "collection:shadowLink:includeRoot": "True",
+        "collection:shadowLink:membershipExpression": "None",
+        "guideRadius": "100000.0",
+        "inputs:color": "(0.45, 0.65, 1)",
+        "inputs:colorTemperature": "6500.0",
+        "inputs:diffuse": "1.0",
+        "inputs:enableColorTemperature": "False",
+        "inputs:exposure": "1.0",
+        "inputs:intensity": "500.0",
+        "inputs:normalize": "False",
+        "inputs:specular": "1.0",
+        "inputs:texture:file": "None",
+        "inputs:texture:format": "automatic",
+        "light:materialSyncMode": "noMaterialResponse",
+        "light:shaderId": "DomeLight",
+        "omni:rtx:domeLight:groundTextureScale": "0.0",
+        "omni:rtx:domeLight:mode": "infinite",
+        "omni:rtx:domeLight:radius": "100.0",
+        "omni:rtx:domeLight:size": "(200, 200, 200)",
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOpOrder": "None"
+      },
+      "/World/Environment/Sun": {
+        "collection:lightLink": "None",
+        "collection:lightLink:expansionRule": "expandPrims",
+        "collection:lightLink:includeRoot": "True",
+        "collection:lightLink:membershipExpression": "None",
+        "collection:shadowLink": "None",
+        "collection:shadowLink:expansionRule": "expandPrims",
+        "collection:shadowLink:includeRoot": "True",
+        "collection:shadowLink:membershipExpression": "None",
+        "inputs:angle": "0.5299999713897705",
+        "inputs:color": "(1, 0.92, 0.78)",
+        "inputs:colorTemperature": "6500.0",
+        "inputs:diffuse": "1.0",
+        "inputs:enableColorTemperature": "False",
+        "inputs:exposure": "0.0",
+        "inputs:intensity": "5000.0",
+        "inputs:normalize": "False",
+        "inputs:specular": "1.0",
+        "light:materialSyncMode": "noMaterialResponse",
+        "light:shaderId": "DistantLight",
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOp:rotateXYZ": "(-35, 25, 0)",
+        "xformOpOrder": "[xformOp:rotateXYZ]"
+      }
+    },
+    "/Environment": {
+      "/Environment": {
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOp:rotateXYZ": "(0, 0, 0)",
+        "xformOp:scale": "(1, 1, 1)",
+        "xformOp:translate": "(0, 0, 0)",
+        "xformOpOrder": "[xformOp:translate, xformOp:rotateXYZ, xformOp:scale]"
+      },
+      "/Environment/defaultLight": {
+        "collection:lightLink": "None",
+        "collection:lightLink:expansionRule": "expandPrims",
+        "collection:lightLink:includeRoot": "True",
+        "collection:lightLink:membershipExpression": "None",
+        "collection:shadowLink": "None",
+        "collection:shadowLink:expansionRule": "expandPrims",
+        "collection:shadowLink:includeRoot": "True",
+        "collection:shadowLink:membershipExpression": "None",
+        "inputs:angle": "1.0",
+        "inputs:color": "(1, 1, 1)",
+        "inputs:colorTemperature": "6500.0",
+        "inputs:diffuse": "1.0",
+        "inputs:enableColorTemperature": "False",
+        "inputs:exposure": "1.5",
+        "inputs:intensity": "3000.0",
+        "inputs:normalize": "True",
+        "inputs:shaping:cone:angle": "180.0",
+        "inputs:shaping:cone:softness": "0.0",
+        "inputs:shaping:focus": "0.0",
+        "inputs:shaping:focusTint": "(0, 0, 0)",
+        "inputs:shaping:ies:angleScale": "0.0",
+        "inputs:shaping:ies:file": "None",
+        "inputs:shaping:ies:normalize": "False",
+        "inputs:specular": "1.0",
+        "light:materialSyncMode": "noMaterialResponse",
+        "light:shaderId": "DistantLight",
+        "omni:rtx:usdluxVersion": "2505",
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOp:rotateXYZ": "(315, 0, 0)",
+        "xformOp:scale": "(1, 1, 1)",
+        "xformOp:translate": "(0, 0, 0)",
+        "xformOpOrder": "[xformOp:translate, xformOp:rotateXYZ, xformOp:scale]"
+      }
+    }
+  },
+  "expected_controller_configuration": {
+    "Bottlenose_Carimam": {
+      "name": "Bottlenose_Carimam",
+      "species": "bottlenose_dolphin",
+      "prim_path": "/World/Cetaceans/Bottlenose_Carimam",
+      "x": -1800.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "delphinid",
+        "backend": "procedural_mesh",
+        "cadence_hz": 1.15,
+        "tail_amplitude_ratio": 0.075,
+        "wave_cycles": 0.85,
+        "flex_start": 0.34
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 11242,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Cuvier_Whale": {
+      "name": "Cuvier_Whale",
+      "species": "cuvier_whale",
+      "prim_path": "/World/Cetaceans/Cuvier_Whale",
+      "x": -600.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 180.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "beaked_whale",
+        "backend": "procedural_mesh",
+        "cadence_hz": 0.7,
+        "tail_amplitude_ratio": 0.07,
+        "wave_cycles": 0.78,
+        "flex_start": 0.38
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 10220,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Frasers_Dolphin": {
+      "name": "Frasers_Dolphin",
+      "species": "frasers_dolphin",
+      "prim_path": "/World/Cetaceans/Frasers_Dolphin",
+      "x": 600.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "delphinid",
+        "backend": "procedural_mesh",
+        "cadence_hz": 1.3,
+        "tail_amplitude_ratio": 0.08,
+        "wave_cycles": 0.9,
+        "flex_start": 0.32
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 31022,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Humpback_Whale": {
+      "name": "Humpback_Whale",
+      "species": "humpback_whale",
+      "prim_path": "/World/Cetaceans/Humpback_Whale",
+      "x": 1800.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "baleen_whale",
+        "backend": "procedural_mesh",
+        "cadence_hz": 0.42,
+        "tail_amplitude_ratio": 0.09,
+        "wave_cycles": 0.68,
+        "flex_start": 0.4
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 21186,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Manatee": {
+      "name": "Manatee",
+      "species": "manatee",
+      "prim_path": "/World/Cetaceans/Manatee",
+      "x": -1800.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 180.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "sirenian",
+        "backend": "procedural_mesh",
+        "cadence_hz": 0.55,
+        "tail_amplitude_ratio": 0.115,
+        "wave_cycles": 1.05,
+        "flex_start": 0.28
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 6017,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Bottlenose_DigitalLife": {
+      "name": "Bottlenose_DigitalLife",
+      "species": "model_61a_-_bottlenose_dolphin",
+      "prim_path": "/World/Cetaceans/Bottlenose_DigitalLife",
+      "x": -600.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "skeletal",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "delphinid",
+        "backend": "skeletal",
+        "cadence_hz": 0.8,
+        "tail_amplitude_ratio": null,
+        "wave_cycles": null,
+        "flex_start": null
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 0,
+      "deformed_vertex_count": 0,
+      "deformation_error": null,
+      "skeletal_animation": {
+        "ok": true,
+        "name": "Swim Cycle",
+        "skeleton_path": "/World/Cetaceans/Bottlenose_DigitalLife/Model/Sketchfab_model/root/GLTF_SceneRootNode/Armature_20/GLTF_created_0/Armature",
+        "animation_path": "/World/Cetaceans/Bottlenose_DigitalLife/Animations/SwimCycle",
+        "joint_count": 20,
+        "sample_count": 31,
+        "fps": 24.0,
+        "start_time_seconds": 0.0,
+        "end_time_seconds": 1.25,
+        "duration_seconds": 1.25
+      }
+    },
+    "Spotted_Dolphin": {
+      "name": "Spotted_Dolphin",
+      "species": "pantropical_spotted_dolphin",
+      "prim_path": "/World/Cetaceans/Spotted_Dolphin",
+      "x": 600.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 180.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "delphinid",
+        "backend": "procedural_mesh",
+        "cadence_hz": 1.4,
+        "tail_amplitude_ratio": 0.078,
+        "wave_cycles": 0.92,
+        "flex_start": 0.32
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 28255,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Pilot_Whale": {
+      "name": "Pilot_Whale",
+      "species": "pilot_whale",
+      "prim_path": "/World/Cetaceans/Pilot_Whale",
+      "x": 1800.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "delphinid",
+        "backend": "procedural_mesh",
+        "cadence_hz": 0.62,
+        "tail_amplitude_ratio": 0.072,
+        "wave_cycles": 0.76,
+        "flex_start": 0.38
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 12518,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Pygmy_Sperm_Whale": {
+      "name": "Pygmy_Sperm_Whale",
+      "species": "pygmy_sperm_whale",
+      "prim_path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+      "x": -1200.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "sperm_whale",
+        "backend": "procedural_mesh",
+        "cadence_hz": 0.82,
+        "tail_amplitude_ratio": 0.07,
+        "wave_cycles": 0.8,
+        "flex_start": 0.37
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 11131,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Sperm_Whale": {
+      "name": "Sperm_Whale",
+      "species": "sperm_whale",
+      "prim_path": "/World/Cetaceans/Sperm_Whale",
+      "x": 0.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "sperm_whale",
+        "backend": "procedural_mesh",
+        "cadence_hz": 0.34,
+        "tail_amplitude_ratio": 0.082,
+        "wave_cycles": 0.66,
+        "flex_start": 0.43
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 18818,
+      "deformation_error": null,
+      "skeletal_animation": null
+    },
+    "Steno_Dolphin": {
+      "name": "Steno_Dolphin",
+      "species": "steno_dolphin",
+      "prim_path": "/World/Cetaceans/Steno_Dolphin",
+      "x": 1200.0,
+      "depth": -150.0,
+      "speed": 30.0,
+      "model_forward_heading": 0.0,
+      "travel_half_extent": 6500.0,
+      "body_animation": true,
+      "animation_backend": "procedural_mesh",
+      "motion_profile_basis": "research_informed_visual_preview",
+      "motion_profile": {
+        "family": "delphinid",
+        "backend": "procedural_mesh",
+        "cadence_hz": 1.22,
+        "tail_amplitude_ratio": 0.078,
+        "wave_cycles": 0.88,
+        "flex_start": 0.33
+      },
+      "deformation_fps": 15.0,
+      "deformable_mesh_count": 1,
+      "deformed_vertex_count": 10587,
+      "deformation_error": null,
+      "skeletal_animation": null
+    }
+  },
+  "expected_ocean_configuration": {
+    "running": true,
+    "ocean_path": "/World/Ocean",
+    "size": 16000.0,
+    "resolution": 128,
+    "speed": 0.4,
+    "choppiness": 0.15,
+    "target_fps": 15.0
+  },
+  "recorded_original_controller_states": {
+    "running": true,
+    "mode": "species_specific_gallery_animation",
+    "animal_count": 11,
+    "animals": [
+      {
+        "name": "Bottlenose_Carimam",
+        "species": "bottlenose_dolphin",
+        "prim_path": "/World/Cetaceans/Bottlenose_Carimam",
+        "x": -1800.0,
+        "z": 2920.690450000086,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": -1.0,
+        "heading": 180.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 180.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "delphinid",
+          "backend": "procedural_mesh",
+          "cadence_hz": 1.15,
+          "tail_amplitude_ratio": 0.075,
+          "wave_cycles": 0.85,
+          "flex_start": 0.34
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 11242,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Cuvier_Whale",
+        "species": "cuvier_whale",
+        "prim_path": "/World/Cetaceans/Cuvier_Whale",
+        "x": -600.0,
+        "z": -520.690450000148,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": 1.0,
+        "heading": 0.0,
+        "model_forward_heading": 180.0,
+        "model_yaw": 180.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "beaked_whale",
+          "backend": "procedural_mesh",
+          "cadence_hz": 0.7,
+          "tail_amplitude_ratio": 0.07,
+          "wave_cycles": 0.78,
+          "flex_start": 0.38
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 10220,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Frasers_Dolphin",
+        "species": "frasers_dolphin",
+        "prim_path": "/World/Cetaceans/Frasers_Dolphin",
+        "x": 600.0,
+        "z": 2920.690450000086,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": -1.0,
+        "heading": 180.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 180.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "delphinid",
+          "backend": "procedural_mesh",
+          "cadence_hz": 1.3,
+          "tail_amplitude_ratio": 0.08,
+          "wave_cycles": 0.9,
+          "flex_start": 0.32
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 31022,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Humpback_Whale",
+        "species": "humpback_whale",
+        "prim_path": "/World/Cetaceans/Humpback_Whale",
+        "x": 1800.0,
+        "z": -520.690450000148,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": 1.0,
+        "heading": 0.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 0.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "baleen_whale",
+          "backend": "procedural_mesh",
+          "cadence_hz": 0.42,
+          "tail_amplitude_ratio": 0.09,
+          "wave_cycles": 0.68,
+          "flex_start": 0.4
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 21186,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Manatee",
+        "species": "manatee",
+        "prim_path": "/World/Cetaceans/Manatee",
+        "x": -1800.0,
+        "z": 1720.6904500001451,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": -1.0,
+        "heading": 180.0,
+        "model_forward_heading": 180.0,
+        "model_yaw": 0.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "sirenian",
+          "backend": "procedural_mesh",
+          "cadence_hz": 0.55,
+          "tail_amplitude_ratio": 0.115,
+          "wave_cycles": 1.05,
+          "flex_start": 0.28
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 6017,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Bottlenose_DigitalLife",
+        "species": "model_61a_-_bottlenose_dolphin",
+        "prim_path": "/World/Cetaceans/Bottlenose_DigitalLife",
+        "x": -600.0,
+        "z": -1720.6904500001451,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": 1.0,
+        "heading": 0.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 0.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "skeletal",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "delphinid",
+          "backend": "skeletal",
+          "cadence_hz": 0.8,
+          "tail_amplitude_ratio": null,
+          "wave_cycles": null,
+          "flex_start": null
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 0,
+        "deformed_vertex_count": 0,
+        "deformation_error": null,
+        "skeletal_animation": {
+          "ok": true,
+          "name": "Swim Cycle",
+          "skeleton_path": "/World/Cetaceans/Bottlenose_DigitalLife/Model/Sketchfab_model/root/GLTF_SceneRootNode/Armature_20/GLTF_created_0/Armature",
+          "animation_path": "/World/Cetaceans/Bottlenose_DigitalLife/Animations/SwimCycle",
+          "joint_count": 20,
+          "sample_count": 31,
+          "fps": 24.0,
+          "start_time_seconds": 0.0,
+          "end_time_seconds": 1.25,
+          "duration_seconds": 1.25
+        }
+      },
+      {
+        "name": "Spotted_Dolphin",
+        "species": "pantropical_spotted_dolphin",
+        "prim_path": "/World/Cetaceans/Spotted_Dolphin",
+        "x": 600.0,
+        "z": 1720.6904500001451,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": -1.0,
+        "heading": 180.0,
+        "model_forward_heading": 180.0,
+        "model_yaw": 0.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "delphinid",
+          "backend": "procedural_mesh",
+          "cadence_hz": 1.4,
+          "tail_amplitude_ratio": 0.078,
+          "wave_cycles": 0.92,
+          "flex_start": 0.32
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 28255,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Pilot_Whale",
+        "species": "pilot_whale",
+        "prim_path": "/World/Cetaceans/Pilot_Whale",
+        "x": 1800.0,
+        "z": -1720.6904500001451,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": 1.0,
+        "heading": 0.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 0.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "delphinid",
+          "backend": "procedural_mesh",
+          "cadence_hz": 0.62,
+          "tail_amplitude_ratio": 0.072,
+          "wave_cycles": 0.76,
+          "flex_start": 0.38
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 12518,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Pygmy_Sperm_Whale",
+        "species": "pygmy_sperm_whale",
+        "prim_path": "/World/Cetaceans/Pygmy_Sperm_Whale",
+        "x": -1200.0,
+        "z": 520.690450000148,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": -1.0,
+        "heading": 180.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 180.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "sperm_whale",
+          "backend": "procedural_mesh",
+          "cadence_hz": 0.82,
+          "tail_amplitude_ratio": 0.07,
+          "wave_cycles": 0.8,
+          "flex_start": 0.37
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 11131,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Sperm_Whale",
+        "species": "sperm_whale",
+        "prim_path": "/World/Cetaceans/Sperm_Whale",
+        "x": 0.0,
+        "z": -2920.690450000086,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": 1.0,
+        "heading": 0.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 0.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "sperm_whale",
+          "backend": "procedural_mesh",
+          "cadence_hz": 0.34,
+          "tail_amplitude_ratio": 0.082,
+          "wave_cycles": 0.66,
+          "flex_start": 0.43
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 18818,
+        "deformation_error": null,
+        "skeletal_animation": null
+      },
+      {
+        "name": "Steno_Dolphin",
+        "species": "steno_dolphin",
+        "prim_path": "/World/Cetaceans/Steno_Dolphin",
+        "x": 1200.0,
+        "z": 520.690450000148,
+        "depth": -150.0,
+        "speed": 30.0,
+        "direction": -1.0,
+        "heading": 180.0,
+        "model_forward_heading": 0.0,
+        "model_yaw": 180.0,
+        "travel_half_extent": 6500.0,
+        "body_animation": true,
+        "animation_backend": "procedural_mesh",
+        "motion_profile_basis": "research_informed_visual_preview",
+        "motion_profile": {
+          "family": "delphinid",
+          "backend": "procedural_mesh",
+          "cadence_hz": 1.22,
+          "tail_amplitude_ratio": 0.078,
+          "wave_cycles": 0.88,
+          "flex_start": 0.33
+        },
+        "deformation_fps": 15.0,
+        "deformable_mesh_count": 1,
+        "deformed_vertex_count": 10587,
+        "deformation_error": null,
+        "skeletal_animation": null
+      }
+    ]
+  },
+  "recorded_original_ocean_state": {
+    "running": true,
+    "ocean_path": "/World/Ocean",
+    "size": 16000.0,
+    "resolution": 128,
+    "speed": 0.4,
+    "choppiness": 0.15,
+    "target_fps": 15.0,
+    "elapsed": 88776.3648839989
+  },
+  "wave_parameter_provenance": {
+    "actual_original_demo_result": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m4_live_01/results.json",
+    "actual_original_demo_result_sha256": "44705704d9d8cb700878943777698301bb6b819df23344b7331ec91ffd1ebbc9",
+    "actual_original_setup_ocean_response": {
+      "ok": true,
+      "ocean_path": "/World/Ocean",
+      "size": 16000.0,
+      "resolution": 128,
+      "vertices": 16641,
+      "speed": 0.4,
+      "target_fps": 15.0
+    },
+    "fixed_endpoint_source": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/survey_environment.py",
+    "fixed_endpoint_source_sha256": "64c5e083ecf5ff0841a7ad15f1174f3d840d8f166d02b8b3162e9015900ffee5",
+    "fixed_OceanAnimationDataModel_call_line": 22,
+    "fixed_configuration": {
+      "size": 16000,
+      "resolution": 128,
+      "wave_height": 5,
+      "wave_length": 650,
+      "choppiness": 0.15,
+      "speed": 0.4,
+      "target_fps": 15
+    },
+    "actual_call_source": "/home/madil/kit-app-template/tools/verify_gama_porpoise_live.py",
+    "actual_call_source_sha256": "cf865ab59457a0f76388bff4c62a418c1145d0add6ba32d32839e1d57d850493",
+    "animated_ocean_source": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py",
+    "animated_ocean_source_sha256": "e06d64892c5b583e2a01b2b22a4a0ab7b3d7fa5f4ee256bd1b8baf715886d59b",
+    "amplitude_calculation_line": 1134,
+    "wavelength_calculation_line": 1139,
+    "effective_wave_components_at_restart": [
+      {
+        "dx": 0.9889363528682975,
+        "dz": 0.14834045293024462,
+        "amplitude": 2.6,
+        "wavelength": 650.0,
+        "k": 0.00966643893412244,
+        "phase": 0.0,
+        "phase_rate": 0.7
+      },
+      {
+        "dx": 0.33035042472810605,
+        "dz": 0.9438583563660174,
+        "amplitude": 1.25,
+        "wavelength": 377.0,
+        "k": 0.016666274024349035,
+        "phase": 1.3,
+        "phase_rate": 1.0
+      },
+      {
+        "dx": -0.7863183388224226,
+        "dz": 0.6178215519319036,
+        "amplitude": 0.75,
+        "wavelength": 221.00000000000003,
+        "k": 0.028430702747418938,
+        "phase": 2.1,
+        "phase_rate": 1.35
+      },
+      {
+        "dx": 0.8,
+        "dz": -0.6,
+        "amplitude": 0.4,
+        "wavelength": 123.5,
+        "k": 0.050875994390118105,
+        "phase": 3.4,
+        "phase_rate": 1.8
+      }
+    ],
+    "source_effective_use_verified": true,
+    "note": "wave_height=5 and wave_length=650 are fixed by the endpoint actually used for original M4 setup; status does not echo these two fields. AST inspection verifies both feed the live animated wave amplitudes/wavenumbers and the evaluator uses them. This proves configuration provenance/effective use, not recovery of the prior wave phase."
+  },
+  "limitations": [
+    "The checkpoint preserves a frozen visual scene; controller/animation phase is not serialized.",
+    "Canonical respawn avoids adding new procedural deformation on top of the frozen deformed mesh.",
+    "Ocean restart preserves material binding but replaces points and resets elapsed/accumulator to zero.",
+    "Gallery restart preserves checkpoint root positions and engineering display scale but reinitializes directions/yaw/phases and rebuilds skeletal animation.",
+    "The restore endpoint restores scene/camera/renderer settings; its saved timeline_seconds field is not used to restore live timeline time.",
+    "The original animation phase, swimming direction and ocean phase are not claimed to continue exactly."
+  ]
+}

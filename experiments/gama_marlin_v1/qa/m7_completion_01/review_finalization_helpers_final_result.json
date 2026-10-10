@@ -1,0 +1,77 @@
+{
+  "kind": "m7_finalization_helpers_independent_offline_review",
+  "passed": true,
+  "cases": [
+    {
+      "name": "exact_nonempty_initial_prefix_copy",
+      "passed": true
+    },
+    {
+      "name": "later_append_does_not_invalidate_fixed_prefix",
+      "passed": true
+    },
+    {
+      "name": "existing_copy_is_never_overwritten",
+      "passed": true,
+      "rejection": "[Errno 17] File exists: '/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalization_fixture_02/copy.log'"
+    },
+    {
+      "name": "truncated_fixed_prefix_is_rejected",
+      "passed": true,
+      "rejection": "Source log truncated before its fixed prefix was read"
+    },
+    {
+      "name": "generated_path_is_rejected_before_io",
+      "passed": true,
+      "rejection": "Generated or symlink input prohibited"
+    },
+    {
+      "name": "outside_qa_path_is_rejected_before_io",
+      "passed": true,
+      "rejection": "Log evidence must resolve into scoped QA"
+    },
+    {
+      "name": "changed_source_prefix_during_copy_is_rejected",
+      "passed": true,
+      "rejection": "Initial source log prefix changed during its snapshot"
+    },
+    {
+      "name": "live_check_predating_last_capture_is_rejected",
+      "passed": true,
+      "rejection": "Final live check predates the final accepted capture"
+    },
+    {
+      "name": "historical_live_proof_bytes_preserved",
+      "passed": true
+    },
+    {
+      "name": "acceptance_command_output_substitution_is_rejected",
+      "passed": true,
+      "rejection": "Acceptance execution points to another result"
+    },
+    {
+      "name": "timezone_free_timestamp_is_rejected",
+      "passed": true,
+      "rejection": "Evidence timestamp lacks a timezone"
+    }
+  ],
+  "cases_passed": 11,
+  "source_pins_before": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalization_helpers.py": "9389b4d4cb8342879fda204cd71f7377179c7dd50a8de5b5ee606d95339d921b",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/snapshot_runtime_logs.py": "08630dacfbd754539f5010f3e8f8dd06da78ee1801863288822bdd5cb85ea563",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "source_pins_after": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalization_helpers.py": "9389b4d4cb8342879fda204cd71f7377179c7dd50a8de5b5ee606d95339d921b",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/snapshot_runtime_logs.py": "08630dacfbd754539f5010f3e8f8dd06da78ee1801863288822bdd5cb85ea563",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "sources_unchanged": true,
+  "fixture_scope": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalization_fixture_02",
+  "synthetic_fixture_logs_only": true,
+  "actual_kit_log_snapshot_main_executed": false,
+  "final_report_or_seal_writer_executed": false,
+  "live_calls_made": false,
+  "captures_created": 0,
+  "biological_approval": false
+}

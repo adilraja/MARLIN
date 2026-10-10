@@ -1,0 +1,72 @@
+{
+  "kind": "gpu_memory_reclaim_attempt",
+  "user_authorization": "Okay, clear the memory then and try to see if there is any more headroom.",
+  "actions": [
+    {
+      "application": "Resources system monitor",
+      "pid": 27517,
+      "method": "org.gtk.Actions.Activate",
+      "action": "quit",
+      "stdout": "()",
+      "exit_code": 0,
+      "observed_absent_from_later_gpu_process_list": true
+    },
+    {
+      "application": "GNOME Shell",
+      "method": "org.gnome.Shell.Eval",
+      "request": "typeof imports === \"object\" && typeof imports.system.gc === \"function\" ? (imports.system.gc(), \"gc_requested\") : \"gc_unavailable\"",
+      "stdout": "(false, '')",
+      "exit_code": 0,
+      "garbage_collection_reported_success": false,
+      "security_settings_changed": false
+    }
+  ],
+  "gpu_samples_mib": [
+    {
+      "context": "Immediately before graceful Resources quit",
+      "used": 5513,
+      "free": 285
+    },
+    {
+      "context": "After quit and desktop GC request",
+      "used": 5466,
+      "free": 332
+    },
+    {
+      "context": "Subsequent live demonstration check",
+      "used": 5475,
+      "free": 323
+    },
+    {
+      "context": "Final query after checkpoint",
+      "used": 5454,
+      "free": 344
+    }
+  ],
+  "required_capture_headroom_mib": 768,
+  "final_below_capture_minimum": true,
+  "approximate_observed_headroom_increase_mib": 59,
+  "cause_of_all_headroom_variation_established": false,
+  "kit_restarted": false,
+  "desktop_restarted": false,
+  "editors_closed": false,
+  "render_requested": false,
+  "live_demonstration_after_cleanup_passed": true,
+  "checkpoint_command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gama_marlin_v1/qa/memory_reclaim_01/save_checkpoint.py"
+  ],
+  "checkpoint_command_started_observation": {
+    "current_time": "2026-10-09 18:08:18 UTC"
+  },
+  "checkpoint_command_finished_observation": {
+    "current_time": "2026-10-09 18:12:03 UTC"
+  },
+  "checkpoint_command_exit_code": 0,
+  "checkpoint_actual_stdout_stderr": "{\"passed\": true, \"result\": \"/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_result.json\", \"checkpoint_id\": \"checkpoint_4bncc2ao\", \"limitations\": \"Frozen visual state with external asset dependencies; controller/animation phase is not serialized.\", \"error\": null}\n",
+  "checkpoint_result": "experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_result.json",
+  "checkpoint_limits": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized. Controller configuration records are retained separately.",
+  "milestone_7_complete": false,
+  "prior_seals_overwritten": false
+}

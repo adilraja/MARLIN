@@ -1,0 +1,37 @@
+{
+  "kind": "m7_actual_completion_command_execution",
+  "operation": "export",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/madil/kit-app-template/tools/export_gama_dataset_v2.py",
+    "--campaign",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set",
+    "--scene-verifications",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set",
+    "--visual-review",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_review/visual_inspection.json",
+    "--output",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/datasets/m7_engineering_v1"
+  ],
+  "runner_command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/run_completion_command.py",
+    "export"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "started_at_utc": "2026-10-09T19:30:30.679576+00:00",
+  "finished_at_utc": "2026-10-09T19:30:31.297149+00:00",
+  "elapsed_seconds": 0.6175658359716181,
+  "return_code": 0,
+  "log": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/export_command.log",
+  "log_sha256": "f4e14f51f9ee5d6b20036c92744561f3ed0472c8e7a5443fc60e4aab73faee1c",
+  "source_sha256_before": "4ae35d54a0efd8c242a91319404d9949460dc6cafd45cebd3316277aa9c75a88",
+  "source_sha256_after": "4ae35d54a0efd8c242a91319404d9949460dc6cafd45cebd3316277aa9c75a88",
+  "runner_sha256_before": "1c8dec553133ca88d5a68f2d3608f238075083affe1e801155468d16afd9de32",
+  "runner_sha256_after": "1c8dec553133ca88d5a68f2d3608f238075083affe1e801155468d16afd9de32",
+  "live_calls_made": false,
+  "new_renders_requested": 0,
+  "passed": true
+}

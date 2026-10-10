@@ -1,0 +1,454 @@
+{
+  "schema_version": "gama_marlin_target_absent_v1",
+  "resolved_scene_state_hash": "4e8162480fc8b2aa034f67bc7ca8e78eb98e824a6f8b055efcbd931cc70174f5",
+  "identity": {
+    "version": "gama_marlin_target_absent_v1",
+    "parent_positive_scene_state_hash": "974d2d5cce45fd57bf602ffdfb5275e9ecd1bd3c4b13c49569618e0f3d5f059a",
+    "gama_source_state": {
+      "schema_version": "2.0",
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 8,
+      "simulation_time_s": 4.0,
+      "simulation_step_s": 0.5,
+      "seed": 2147483647,
+      "agents": [
+        {
+          "agent_id": "Porpoise_001",
+          "species": "harbour_porpoise",
+          "behavioural_state": "shallow_swim",
+          "horizontal_position_m": [
+            6.984912380600789,
+            -3.900128079349423
+          ],
+          "heading_deg": 209.1774464578279,
+          "speed_mps": 0.5,
+          "vertical_reference": "mean_sea_level",
+          "depth_m": 0.5
+        }
+      ]
+    },
+    "removal_operation": {
+      "operation": "RemovePrim",
+      "prim_path": "/MarlinGamaPorpoise",
+      "scope": "private_frozen_variant"
+    },
+    "frozen_usd_sha256": "e417949fc1c72187a572221cc829e6d911fd0ff16bc1e4be5f0d30cf99df0685",
+    "stage_coordinates": {
+      "meters_per_scene_unit": 0.01,
+      "up_axis": "Y",
+      "mean_sea_level_world_y_m": 0.0,
+      "vertical_datum_source": "v2_contract_fixed_plane_not_measured_ocean_surface"
+    },
+    "renderer_settings": {
+      "/exts/cris.madil.render_service/underwaterCue/enabled": true,
+      "/rtx/fog/enabled": true,
+      "/rtx/fog/fogColor": [
+        0.03,
+        0.16,
+        0.2
+      ],
+      "/rtx/fog/fogColorIntensity": 0.5,
+      "/rtx/fog/fogDistanceDensity": 0.04,
+      "/rtx/fog/fogEndDist": 1800.0,
+      "/rtx/fog/fogHeightDensity": 0.08,
+      "/rtx/fog/fogHeightFalloff": 0.025,
+      "/rtx/fog/fogStartDist": 0.0,
+      "/rtx/fog/fogStartHeight": 0.0,
+      "/rtx/fog/fogZup/enabled": false,
+      "/rtx/pathtracing/aa/filterRadius": 1.0,
+      "/rtx/pathtracing/aa/op": 1,
+      "/rtx/pathtracing/adaptiveSampling/enabled": false,
+      "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+      "/rtx/pathtracing/cached/enabled": true,
+      "/rtx/pathtracing/fireflyFilter/enabled": true,
+      "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+      "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+      "/rtx/pathtracing/fractionalCutoutOpacity": true,
+      "/rtx/pathtracing/lightcache/cached/enabled": true,
+      "/rtx/pathtracing/maxBounces": 16,
+      "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+      "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+      "/rtx/pathtracing/optixDenoiser/enabled": true,
+      "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+      "/rtx/pathtracing/spp": 1,
+      "/rtx/pathtracing/totalSpp": 512,
+      "/rtx/post/aa/op": 3,
+      "/rtx/post/chromaticAberration/enabled": false,
+      "/rtx/post/colorcorr/contrast": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/enabled": false,
+      "/rtx/post/colorcorr/gain": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/gamma": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorcorr/saturation": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/blackpoint": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/contrast": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/enabled": false,
+      "/rtx/post/colorgrad/gain": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/gamma": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/lift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/multiply": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/whitepoint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/dlss/execMode": 3,
+      "/rtx/post/dof/enabled": false,
+      "/rtx/post/histogram/enabled": false,
+      "/rtx/post/lensFlares/enabled": false,
+      "/rtx/post/motionblur/enabled": false,
+      "/rtx/post/tonemap/cameraShutter": 50.0,
+      "/rtx/post/tonemap/cm2Factor": 1.0,
+      "/rtx/post/tonemap/colorMode": 0,
+      "/rtx/post/tonemap/dither": 0.0,
+      "/rtx/post/tonemap/enableSrgbToGamma": true,
+      "/rtx/post/tonemap/exposureBias": null,
+      "/rtx/post/tonemap/fNumber": 5.0,
+      "/rtx/post/tonemap/filmIso": 100.0,
+      "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+      "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+      "/rtx/post/tonemap/op": 6,
+      "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+      "/rtx/post/tonemap/whitepoint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/tonemap/wrapValue": 0.0,
+      "/rtx/post/tvNoise/enabled": false,
+      "/rtx/raytracing/fractionalCutoutOpacity": false,
+      "/rtx/reflections/enabled": true,
+      "/rtx/rendermode": "RealTimePathTracing",
+      "/rtx/resetPtAccumOnAnimTimeChange": false,
+      "/rtx/rtpt/maxBounces": 8,
+      "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+      "/rtx/translucency/enabled": true,
+      "/rtx/translucency/maxRefractionBounces": 8
+    },
+    "dependencies": [
+      {
+        "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+        "authored_path": "OmniSurface.mdl",
+        "sha256": null,
+        "status": "runtime_or_unresolved"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_baseColor.png",
+        "sha256": "e0e367632d639d111221b667d813cb8d83686cd95877b2d63b207d4d90cbb438",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_metallicRoughness.png",
+        "sha256": "a63044a1dfd8489938c3479d46945c038b7768cde0168f517c8112e62b0ef988",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/bottlenose_dolphin/usd/textures/lambert5_normal.png",
+        "sha256": "c18aa37130d77ac4091bf2479565b9d45ec2d11bdbf6a60e9d4f6580d383fbd3",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_baseColor.png",
+        "sha256": "c04b6ef5fd52013f1cf7144573f70fb8a3fd30e17eb2c7f09153a5a6f8c3c1dd",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/cuvier_whale/usd/textures/lambert2_normal.png",
+        "sha256": "d229943c95bdb8a1202d23def6c2022a5963a0015ed5ce97e6c329ec5a859a78",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_baseColor.png",
+        "sha256": "90224463f83e9dd42313f0597f4ef7a8c7934f21a1ecbae434522c44ad1c65c9",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/frasers_dolphin/usd/textures/lambert2_normal.png",
+        "sha256": "6427f000fb85ab3db964e65d92f0201f89a26bc828a1ef83243a1b1fdb7a4fd7",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_baseColor.png",
+        "sha256": "7311f94ce38a9887076e2dd98f37249e87d9e3c5196516109877756c32c5c4dc",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/humpback_whale/usd/textures/lambert1_normal.png",
+        "sha256": "6b1963cf1198c858019e93406536c6f63a8b14f83ce37beb1609f06007ac7ede",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_baseColor.png",
+        "sha256": "29e3ea6ab7c44e149cc5188368792219522c66a75c54060e08e78ace3fb41bfd",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/manatee/usd/textures/lambert1_normal.png",
+        "sha256": "741d2481e79ed608c3a73068dff7e9a935bd9f015574b3a58bf4900b76ff860c",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+        "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+        "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_baseColor.png",
+        "sha256": "4568c303a99237a59a7e68c30d65f39aac533e262d7c40d93731f9f8d52669c7",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_metallicRoughness.png",
+        "sha256": "cbf7ce4e70eb6da0a7ff3e419939d1f1b96656e3a1e092cc95ab80a1f98b7aeb",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_75a_-_harbor_porpoise/working/calibration_v1/usd/textures/porpoise_skin_normal.png",
+        "sha256": "3d984c90fc021b43bf6c6f32f260b83c1e09d56d9768c827f175c65c679cf162",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_baseColor.png",
+        "sha256": "9524e26ae8c4febd4178dc88756ed613a6fe1cbe6d5326b92e79c7b29f552cd4",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pantropical_spotted_dolphin/usd/textures/lambert1_normal.png",
+        "sha256": "b4501c6777a97efb85e480706a4825580e7be0aa45cb88c7cc937426af4c5e77",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_baseColor.png",
+        "sha256": "37bd410e3e45f2c9ffc5e530db43cf2630d4af69fb90c4db3577195b206c85eb",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pilot_whale/usd/textures/lambert1_normal.png",
+        "sha256": "ba63c760a08c49cd5dae2bfa22a39ec175f4feef78ad03ee4cde253232f465e5",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_baseColor.png",
+        "sha256": "0e600ca828fd89a632b6e6f2f1b79b446408d40b1d39bb7d30ef3f0ea88017d1",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/pygmy_sperm_whale/usd/textures/lambert1_normal.png",
+        "sha256": "f37c646c5f380897583c69e0dd04ca8358ceeb92829453f55bab4f681f20c00a",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_baseColor.png",
+        "sha256": "e78fd397d1ae31f27049f1179938bc04276153729a531f398256b12ac97caaa3",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/sperm_whale/usd/textures/cachalot_lowinitialShadingGroup1_metallicRoughness.png",
+        "sha256": "9c4174e8179311de194a312ba02338c61a61116511fa571086c9cc2941dc24a5",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_baseColor.png",
+        "sha256": "fbb941a233b9a3b1a6180451bbe228fb01a9fc190782b752262408a4827d81a5",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_metallicRoughness.png",
+        "sha256": "4a1777835760a3acc2aa3d29c89b213668f10285b0b5012e31e587015c9eea0d",
+        "status": "local_hashed"
+      },
+      {
+        "path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+        "authored_path": "/home/madil/kit-app-template/assets/cetaceans/steno_dolphin/usd/textures/lambert1_normal.png",
+        "sha256": "9026f530f95354f5fddd95af42ca35eb5cd2918093dda3b648926b1d76ddbd7a",
+        "status": "local_hashed"
+      }
+    ],
+    "environment_clock": {
+      "source_timeline_seconds": 0.5450298181818001,
+      "source_time_code": 32.70178909090801,
+      "ocean": {
+        "running": true,
+        "ocean_path": "/World/Ocean",
+        "size": 16000.0,
+        "resolution": 128,
+        "speed": 0.4,
+        "choppiness": 0.15,
+        "target_fps": 15.0,
+        "elapsed": 375.1857900000001,
+        "accumulator": 0.0,
+        "waves": [
+          {
+            "dx": 0.9889363528682975,
+            "dz": 0.14834045293024462,
+            "amplitude": 2.6,
+            "k": 0.00966643893412244,
+            "phase": 0.0,
+            "phase_rate": 0.7
+          },
+          {
+            "dx": 0.33035042472810605,
+            "dz": 0.9438583563660174,
+            "amplitude": 1.25,
+            "k": 0.016666274024349035,
+            "phase": 1.3,
+            "phase_rate": 1.0
+          },
+          {
+            "dx": -0.7863183388224226,
+            "dz": 0.6178215519319036,
+            "amplitude": 0.75,
+            "k": 0.028430702747418938,
+            "phase": 2.1,
+            "phase_rate": 1.35
+          },
+          {
+            "dx": 0.8,
+            "dz": -0.6,
+            "amplitude": 0.4,
+            "k": 0.050875994390118105,
+            "phase": 3.4,
+            "phase_rate": 1.8
+          }
+        ],
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "clocks_synchronized_to_gama": false
+    },
+    "target_present": false,
+    "target_mesh_count": 0,
+    "biological_approval": false,
+    "pose_mapping": "target_removed_counterpart_of_static_pose_proxy_v1"
+  },
+  "background_hash": "63779de4e85cfbf1bc6e520ca5f7d9a8db4fecd556c0d804ff5f7336600c38bb",
+  "target_present": false,
+  "remaining_time_samples": 0,
+  "pixel_identical_rgb_verified": false,
+  "negative_semantics": "Target physically removed; a submerged or invisible present target is not a negative"
+}

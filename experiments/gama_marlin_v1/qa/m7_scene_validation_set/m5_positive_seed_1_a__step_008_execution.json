@@ -1,0 +1,43 @@
+{
+  "kind": "m7_independent_group_verifier_execution",
+  "run_id": "m5_positive_seed_1_a",
+  "step_index": 8,
+  "command": [
+    "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+    "--group",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_1_a/step_008/group",
+    "--output",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_008.json"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T19:23:06.983895+00:00",
+  "finished_at_utc": "2026-10-09T19:23:33.769488+00:00",
+  "duration_seconds": 26.78560256800847,
+  "source_sha256": {
+    "experiments/gama_marlin_v1/qa/verify_m7_group.py": "c4bb56bb6fd7e75f45868af4a1775d7444bad33b17a9dbecf2bede309b3d2671",
+    "experiments/gama_marlin_v1/qa/verify_m7_campaign_groups.py": "1d694c8f3d2920d6509c4c58ba333859953f56cc328579469e3845a4716e9f94",
+    "experiments/gama_marlin_v1/qa/verify_m6_scene.py": "8a7fcf67565e2a2b6cdf18e32fa1a2b09505e37a5549e9d3cf211723c0a7a957",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+    "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py": "56908d2d2bbe3efa5c80f82723e8ee62d9cf0bb27761bc80f2e6fc9da98a147c",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/capture_projection.py": "1ac66e44d62a31da3747691702f90bf82f10adf3af3772c11656f83f149a5021"
+  },
+  "actual_combined_stdout_stderr": "experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_008.log",
+  "log_sha256": "5ea326c7b5a95796483f80ca76461f55a8270d074f184a72d8c379b15e1ae497",
+  "result_sha256": "9d56885764e8c56badbfc08e8b25a37b9d14d3e0a16a01239450e47d461d8654",
+  "capture_result_sha256": "d6473ce25717e32c85d0791ca0214d468b46b6223334ef02618ba9784fd4ad25",
+  "capture_manifest_sha256": "078fb9136069e2d50379f68f2ef05f3bb528232e07ac8aa6d24c5966ef185c82",
+  "source_and_retained_group_markers_unchanged": true,
+  "runtime": {
+    "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+    "usd_version": [
+      0,
+      25,
+      8
+    ]
+  },
+  "passed": true
+}

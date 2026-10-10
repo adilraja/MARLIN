@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/capture_one_pending_snapshot.py",
+    "--step",
+    "32"
+  ],
+  "return_code": 0,
+  "started_observation": {
+    "current_time": "2026-10-09 19:12:41 UTC"
+  },
+  "finished_observation": {
+    "current_time": "2026-10-09 19:21:54 UTC"
+  },
+  "result": {
+    "chunk_id": "84db27",
+    "wall_time_seconds": 0.000008807,
+    "exit_code": 0,
+    "original_token_count": 135,
+    "output": "{\"event\": \"capture_finished\", \"run_id\": \"m5_positive_seed_2147483647_a\", \"step_index\": 32, \"passed\": true, \"evidence\": \"/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_step_032/captures/m5_positive_seed_2147483647_a/step_032\"}\n{\"event\": \"single_pending_snapshot_finished\", \"passed\": true, \"preflight_only\": false, \"results\": \"/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_step_032/results.json\", \"capture_counts\": {\"target_present\": 5, \"target_absent\": 5, \"groups\": 1}, \"error\": null}\n"
+  }
+}

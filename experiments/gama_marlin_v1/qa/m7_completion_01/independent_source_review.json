@@ -1,0 +1,43 @@
+{
+  "kind": "m7_completion_helpers_independent_source_review",
+  "created_at_utc": "2026-10-09T19:08:40.267934+00:00",
+  "passed": true,
+  "scope": "Source review and offline selection failure checks before completion execution; no capture or milestone acceptance is implied",
+  "reviewed_source_sha256": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/capture_one_pending_snapshot.py": "b634b127dc7f607deb63a749d3cc64727d6b88efcf120f25e83941e968415fd3",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_capture_set.py": "25bb2f7d7a141a72344d9464d67b3c3425d50bb1ee8cce29ac1ba17b34042a27",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/verify_aggregate_groups.py": "1d5dc2280b3462162afd4a55c36f30743411c81ad6b5f941c8bdc0686e4c0556",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_review.py": "4f35fac42a20c98b10c6f12fceabdecbed36975699f9234c46c6f335f224c659",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion.py": "35ccb30eaa71912e42040d2d5d7d78878c5764c1abf5e2ea71734c53dc6ab0d3"
+  },
+  "selection_tests": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests_final_02_result.json",
+    "sha256": "6e1733f7406faea435039ae600da0ba84ff779088eaf05f5883e23246a7e3cc3",
+    "passed": true,
+    "cases_passed": 11
+  },
+  "fixed_before_execution": [
+    "New finalizer generation execution lacked the actual retained log path required by the new validator; explicit log path was added.",
+    "New validator misassigned the unchanged review builder campaign return tuple; it now separately loads aggregate results and receives declaration, images, groups correctly."
+  ],
+  "reviewed_invariants": [
+    "Only remaining declared seed2147483647 steps16/32 are captured and prior accepted13/14 groups are never recaptured.",
+    "All31 shared frozen code pins plus the new capture helper pin are bound before and after each continuation; exact pending plans precede acquisition/rendering.",
+    "One-state continuation releases ownership and requires all12 cleanup checks; exact prior trees/statuses and no-render failures remain retained.",
+    "Offline aggregate requires four attempts with original statuses false,false,true,true and exact15declared snapshot bindings; byte-copy provenance and all source trees are checked.",
+    "Unchanged USD verifier reopens all15copied groups with actual command, result, log and helper source binding; runtime/unresolved dependencies are never opened.",
+    "Source-bound contact-sheet notes transfer only through exact byte-copy hashes, preserve unknown rendered visibility and no biological approval, and cover all150images.",
+    "Strict export retains75present/75removed,75pairedconditions,90train/30validation/30test and whole related trajectory families.",
+    "OldM7incomplete1355outputseal and historicalM8review119outputseal remain immutable; completion requires new evidence."
+  ],
+  "remaining_requirements": [
+    "Actual accepted one-state16/32 capture results",
+    "Fresh all15copied-group USD verification",
+    "Source-bound visual inspection of new30images",
+    "Strict150image export and final completion validator execution"
+  ],
+  "live_calls_made": false,
+  "captures_created": 0,
+  "milestone_7_complete": false,
+  "biological_approval": false
+}

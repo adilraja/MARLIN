@@ -1,0 +1,93 @@
+{
+  "kind": "m7_new_unsealed_completion_validator_v2_repair_provenance",
+  "recorded_at_utc": "2026-10-09T19:37:23.402095+00:00",
+  "old_failed_validator_archived_exactly": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion_failed_v1.py",
+    "bytes": 42519,
+    "sha256": "35ccb30eaa71912e42040d2d5d7d78878c5764c1abf5e2ea71734c53dc6ab0d3"
+  },
+  "old_failed_version_provenance": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion_failed_v1_provenance.json",
+    "bytes": 3114,
+    "sha256": "428452bf27b8d1c8d9c7a6010cd3ae44741f0772c34283c2075740f43504650d"
+  },
+  "old_failed_receipts": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance.json",
+      "bytes": 646863,
+      "sha256": "d6683ce816adff25ef703063a07773da5d5a953e2c2cd5c30e8122e6d6d9fe88"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_execution.json",
+      "bytes": 2341,
+      "sha256": "fbd8d86961019409c1456eb3a29361a65eb4fc12dde84d0eb8d55b5d7cf12ed4"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_command.log",
+      "bytes": 218,
+      "sha256": "636c6a9a84f54e1be24c5608c84a0931fa46ff6892f05b01bb50c8de19382ecc"
+    }
+  ],
+  "repaired_validator": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion.py",
+    "bytes": 42593,
+    "sha256": "c033ec1599ab69a6d170c8ef63614ff93a49878c935f2863d05484a3dc0a766e"
+  },
+  "schema_corrections": [
+    "Required independent_scene_verifications_passed to be exactly integer15, matching the frozen generator count.",
+    "Required all_pinned_review_inputs_unchanged, the frozen generator actual preservation field."
+  ],
+  "frozen_generator": {
+    "path": "experiments/gama_marlin_v1/qa/build_m7_review.py",
+    "bytes": 26609,
+    "sha256": "6b84b4f469d95d63165004fff961dbc2716ea50b6b7b8afe57fa4209fb2587b8"
+  },
+  "actual_final_index": {
+    "path": "experiments/gama_marlin_v1/qa/m7_review/visual_index.json",
+    "bytes": 1246912,
+    "sha256": "14362f9f27c78673f3f8a01ea4681697f22b7e294dccb79467befb588a58958b"
+  },
+  "actual_direct_review_check": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/review_schema_check_result.json",
+      "bytes": 1270948,
+      "sha256": "d94b3da7a7b101226e94307e15ff78b8f620461968ab78ab6af55301d63832e9"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/review_schema_check_execution.json",
+      "bytes": 1732,
+      "sha256": "4db20b95149f97f3b7526e180775b0163bc8afe91c40f360b8b6f5653e4f337c"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/review_schema_check.log",
+      "bytes": 582,
+      "sha256": "9fa32a0b48ae11927e907241960616128c85926a376f4f6dbe9bd1c9ba295f3c"
+    }
+  ],
+  "actual_index_copy_rejection_checks": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/repair_review_schema_result.json",
+      "bytes": 8169,
+      "sha256": "26f3864e6f289a39190c9243130db564a2309fa895afcca2d7faa7ca7b782863"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/repair_review_schema_execution.json",
+      "bytes": 1630,
+      "sha256": "f4d4e82a09ae5f0700b2ba2ca8afdd542c3d17de9b1d054ae2c24c47f17c751d"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/repair_review_schema_command.log",
+      "bytes": 6428,
+      "sha256": "478e85b3616e96b39768d0362954e9adebfd4dcceae35ca1beb25eae3a83b53c"
+    }
+  ],
+  "ast_passed": true,
+  "actual_review_function_passed": true,
+  "negative_schema_cases_passed": 7,
+  "all_other_review_assumptions_audited_against_actual_retained_schemas": true,
+  "capture_protocol_or_old_sealed_source_changed": false,
+  "accepted_review_or_export_artifacts_changed": false,
+  "full_acceptance_main_executed_by_repair_agent": false,
+  "live_calls_made": false,
+  "acceptance_retry_result_not_inferred": true
+}

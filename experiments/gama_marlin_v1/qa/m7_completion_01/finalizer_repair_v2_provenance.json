@@ -1,0 +1,74 @@
+{
+  "kind": "m7_new_unsealed_finalizer_v2_restart_schema_repair_provenance",
+  "recorded_at_utc": "2026-10-09T19:43:22.624232+00:00",
+  "failed_v1_archive": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance_failed_v1.py",
+    "bytes": 32189,
+    "sha256": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "failed_v1_provenance": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance_failed_v1_provenance.json",
+    "bytes": 2376,
+    "sha256": "a2f636d6dec65ba37bed1ba9baaad49627a52234e71cf0cda6f810e1262c53ab"
+  },
+  "failed_original_execution": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_execution.json",
+    "bytes": 2315,
+    "sha256": "d23a91cb7a34ccb4cc80aa1827afa0e4dae2c5fae76ae8e30620234c96d0fe00"
+  },
+  "failed_original_stdout_stderr": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_command.log",
+    "bytes": 1186,
+    "sha256": "1a3cc90b5f88282d1386a7276ad9de1b306c4da6f5aa1b06b287b5e4644ce235"
+  },
+  "repaired_finalizer": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py",
+    "bytes": 35602,
+    "sha256": "43f0c92d2b06e8f2dfc77a39839fd697ffdad12fc2eed38b4a5dd8c92a67fbeb"
+  },
+  "repair_scope": "Actual nested tool exit codes and exact known-format final-yielded-output/combined-log binding only; source restart/capture/data/accepted records stayed unchanged.",
+  "actual_schema_checks": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/repair_restart_schema_result.json",
+      "bytes": 33915,
+      "sha256": "7e65e5a3bb83eda73d3b5ebaccb7dc07b4db8cb39044863a215d4a97055fc689"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/repair_restart_schema_execution.json",
+      "bytes": 1642,
+      "sha256": "034d1146d89fb51e085531f259f9d92ea577ab646d216f22e7241cc25128dbea"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/repair_restart_schema_command.log",
+      "bytes": 27466,
+      "sha256": "f34ab25727ac3b7dcc7b400ea589e81c9d44ebec98d0a654c6c7f01111d54ce9"
+    }
+  ],
+  "actual_restart_phases_verified": 6,
+  "actual_nested_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "original_input_files_unchanged": 36,
+  "negative_cases_rejected": 14,
+  "base_helper_print_contract": {
+    "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restart_kit.py",
+    "bytes": 10950,
+    "sha256": "4ae76f3f1cab28f06808f2d7a51e01a365ed9875f8ca68f35991b8576944e224"
+  },
+  "prefix_source_location": "experiments/gama_marlin_v1/qa/kit_restart_01/restart_kit.py:117",
+  "earlier_stdout_prefix": "Sending SIGINT to the confirmed MARLIN Kit process.\n",
+  "execution_nested_output_scope": "Final yielded stdout chunk only. Stop/launch logs retain the exact earlier helper line plus that chunk; restore log equals the chunk.",
+  "earlier_prefix_new_independent_tool_observation": false,
+  "earlier_prefix_contract_check_not_new_execution": true,
+  "source_restart_records_or_command_logs_edited": false,
+  "full_finalizer_main_executed_by_repair_agent": false,
+  "report_or_seal_written_by_repair_agent": false,
+  "live_calls_made": false,
+  "render_calls_made": 0,
+  "ast_passed": true
+}

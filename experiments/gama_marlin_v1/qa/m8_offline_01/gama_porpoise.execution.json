@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_gama_porpoise.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:25:21.939816+00:00",
+  "ended_at_utc": "2026-10-09T17:25:22.102581+00:00",
+  "elapsed_seconds": 0.16276993099018,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.stderr.log",
+    "bytes": 1715,
+    "sha256": "53921d5e62b5f377e02edeb58fffcf88854e4cd81657511bad6b581393cd7e83"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "gama_porpoise",
+  "category": "bridge",
+  "scope": "Retained actual raw GAMA export parsing and explicit invalid XML/state fixtures; no new GAMA process.",
+  "tests": 11,
+  "skipped": 0,
+  "expected_tests": 11,
+  "passed": true
+}

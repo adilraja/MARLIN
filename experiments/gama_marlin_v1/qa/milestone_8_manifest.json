@@ -1,0 +1,654 @@
+{
+  "acceptance_scope": "Completed regression review, read-only pilot audit, reproduction and expansion decision",
+  "all_executed_commands_passed": false,
+  "biological_approval": false,
+  "completed_at_utc": "2026-10-09T17:37:11.465784+00:00",
+  "expansion_decision": {
+    "accepted_scope": "Explicitly labelled engineering proxy for deterministic GAMA-to-MARLIN state transfer and capture-pipeline development",
+    "biological_approval": false,
+    "blocked_milestone": 7,
+    "human_review_source": {
+      "bytes": 4746,
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m5_human_review.json",
+      "sha256": "68000076ee01c40d60f6b7cc822608bb2867230ac4a8f1e1e8023349c223714f"
+    },
+    "last_capture_headroom_observation": {
+      "below_capture_minimum": true,
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=memory.used,memory.free",
+        "--format=csv,noheader,nounits"
+      ],
+      "free_mib": 332,
+      "gpu_headroom_is_not_a_read_only_demo_check": true,
+      "minimum_free_mib_before_render": 768,
+      "recorded_at_utc": "2026-10-09T17:28:55.599791+00:00",
+      "return_code": 0,
+      "stderr": "",
+      "stdout": "5466, 332\n",
+      "used_mib": 5466
+    },
+    "milestone": 8,
+    "missing_images": 30,
+    "missing_snapshot_groups": 3,
+    "ready_for_further_bounded_engineering_tests": true,
+    "ready_for_larger_biological_expansion": false,
+    "ready_for_limited_behaviour_conditioned_study": false,
+    "remaining_limits": [
+      "Static upright pose and engineering behavioral assumptions",
+      "Uncalibrated refraction and wave/anatomical clearance",
+      "Direct amodal labels and unknown rendered visibility",
+      "Unlabelled background wildlife",
+      "Paired-background shading differences of unestablished cause"
+    ],
+    "report": {
+      "bytes": 14405,
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_REPORT.md",
+      "sha256": "5d4838690745eda67920086974f4c78bbb89f3d7fa23ea04aa55cdec4c35cb9c"
+    },
+    "review_completed": true,
+    "sprint_acceptance_complete": false
+  },
+  "milestone": 8,
+  "milestone_7_complete": false,
+  "outputs": [
+    {
+      "bytes": 14405,
+      "path": "experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_REPORT.md",
+      "sha256": "5d4838690745eda67920086974f4c78bbb89f3d7fa23ea04aa55cdec4c35cb9c"
+    },
+    {
+      "bytes": 23175,
+      "path": "experiments/gama_marlin_v1/M8_READ_ONLY_PILOT_AUDIT.md",
+      "sha256": "91551accc11a10df141a63951375fcfd6b1d5d8187d04f96eb3c9557e167fddc"
+    },
+    {
+      "bytes": 8551,
+      "path": "experiments/gama_marlin_v1/M8_REPRODUCTION.md",
+      "sha256": "83f17ea2cfb6e47ff1f6efce96e6dc03c57ba3967c604544114e00516f6a0ac9"
+    },
+    {
+      "bytes": 5031,
+      "path": "experiments/gama_marlin_v1/qa/check_m8_m7_progress_preservation.py",
+      "sha256": "949e54ad98112edb3cb05d5cf83f9c232bc342bb334a3a6df7500581071faa5a"
+    },
+    {
+      "bytes": 12650,
+      "path": "experiments/gama_marlin_v1/qa/finalize_m8_review.py",
+      "sha256": "def416aaa83ed79c412bc4ccdb784e751894fb7c1bb828026280d3b6dd36a889"
+    },
+    {
+      "bytes": 1752,
+      "path": "experiments/gama_marlin_v1/qa/m8_expansion_decision.json",
+      "sha256": "4e433f2f9eb625a9641d5e84ad2348bc7ebb9f9562d8ca9fa42d1ab27667b0d6"
+    },
+    {
+      "bytes": 541103,
+      "path": "experiments/gama_marlin_v1/qa/m8_final_review_validation.json",
+      "sha256": "cb7e44a9d53ec08c78d671b46495fc3daedb8046c6c3afd2f4effbf1b0ba27e6"
+    },
+    {
+      "bytes": 9713,
+      "path": "experiments/gama_marlin_v1/qa/m8_historical_package_disposition_recipe.py",
+      "sha256": "6d6960b94044256a8ef1f1cb50282d6a534c22c2b868dad468a848707b188021"
+    },
+    {
+      "bytes": 1008,
+      "path": "experiments/gama_marlin_v1/qa/m8_live_demo_01/command.log",
+      "sha256": "317f2169ad7daa47f83a10979cc570646e73483c5d8589266d9715c143f9393b"
+    },
+    {
+      "bytes": 1691,
+      "path": "experiments/gama_marlin_v1/qa/m8_live_demo_01/command_execution.json",
+      "sha256": "368fe025d1deeecdc4e1c834c01766bc946d7ea53ada8ac2c66d139fd4523f89"
+    },
+    {
+      "bytes": 222155,
+      "path": "experiments/gama_marlin_v1/qa/m8_live_demo_01/results.json",
+      "sha256": "6c194c16cafc296472d9fe77c5d94cf8a96439868bdb4eeb7ac6ffce8488d2e0"
+    },
+    {
+      "bytes": 4630,
+      "path": "experiments/gama_marlin_v1/qa/m8_m7_progress_preservation.json",
+      "sha256": "df1ae1d599975a1f08966d007cf6c9f355b6dc37eb7aa27fc6b1108caaab9a14"
+    },
+    {
+      "bytes": 188,
+      "path": "experiments/gama_marlin_v1/qa/m8_m7_progress_preservation.log",
+      "sha256": "3105157ccf2e960473d3f1972af8a9cfc05e220d44718c9d24c1e68efc58e622"
+    },
+    {
+      "bytes": 1616,
+      "path": "experiments/gama_marlin_v1/qa/m8_m7_progress_preservation_execution.json",
+      "sha256": "31b77bc66a0b9e8f1226c22d22eb9cfc205f587f1631a72cb50b06de6ed5792f"
+    },
+    {
+      "bytes": 1296,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/capture_projection.execution.json",
+      "sha256": "997dcc2fc0bdde23d89fb20a03de568b5a7ba697e5cfcbad565dea6371599e7d"
+    },
+    {
+      "bytes": 104,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/capture_projection.stderr.log",
+      "sha256": "8750d4b5acdce1e4d680a3a27eb5d68370ed8b7d37b619aa32e9e0049f881dae"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/capture_projection.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1213,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor.execution.json",
+      "sha256": "3562ff71b2151b420a6444e2e90827b151d575440d99b848edaa505c60a717e2"
+    },
+    {
+      "bytes": 970,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor.stderr.log",
+      "sha256": "2b315eeed980dc7ab071c28286a72d55192e77599dfb37a7cc4ba8fe63ce9848"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1266,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor_v2.execution.json",
+      "sha256": "fc802d4741cb0576ccc148958af0ba055962971ae5be44902f2426008795bd31"
+    },
+    {
+      "bytes": 3835,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor_v2.stderr.log",
+      "sha256": "31692fadfeac4094915e89a5b1f1ade5987c4534399d4832a81b5034cd3c8f0b"
+    },
+    {
+      "bytes": 208,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor_v2.stdout.log",
+      "sha256": "8d392c8ceb899346aba5decc051f5c530ce6ee57d11984cb6df7fb84c8378666"
+    },
+    {
+      "bytes": 1221,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_capture_preflight.execution.json",
+      "sha256": "87e19fe7eafdcd58944dfb9dd82acd27a128ffc626e607b6be1268f0406d31a8"
+    },
+    {
+      "bytes": 408,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_capture_preflight.stderr.log",
+      "sha256": "87ca281329e76562533a735d3112260e52cc6394f2804abc53db592c30c80722"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_capture_preflight.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1222,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.execution.json",
+      "sha256": "49aaf0c5cf11b51ae48c6b32fa166ee0264b30b440d826fd1e0f6eadcf614fdb"
+    },
+    {
+      "bytes": 530,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.stderr.log",
+      "sha256": "8b986162f2860203d0b93ce8c85db16f2fad06558c5a8d0e01b44484289e523c"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1255,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_client.execution.json",
+      "sha256": "e8768c37747385d3c555cb0959cc0378b8ba150f4ac65cfac00a9cf29cb9e393"
+    },
+    {
+      "bytes": 7126,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_client.stderr.log",
+      "sha256": "e7ab9dad588f1a68736690eed86ec897e5540dbd911948b59f1dabf61ed29751"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_client.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1231,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_pending.execution.json",
+      "sha256": "4ad5afe8c9283d5a21a657b49419bdb8045903ea380c17009482b59ec029fc85"
+    },
+    {
+      "bytes": 5256,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_pending.stderr.log",
+      "sha256": "da7f01e0fbb4bc73ee4d873eba54d29e4e62555e10bc28d566f071f67dcd0245"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_pending.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1261,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_routes.execution.json",
+      "sha256": "71bcfa6fd71f105495ac553bd6a8731ab89e7b2edcf547559015ff38815bff13"
+    },
+    {
+      "bytes": 700,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_routes.stderr.log",
+      "sha256": "391a30805781e1814dad3f09dba3c34cebf0e3b7621cb7a38648edd7e65987cc"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_routes.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1279,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_state.execution.json",
+      "sha256": "0ab4f20de5daf84f4f33f28298b6c7ca4704347133ec24d8aac839a3d7cf413b"
+    },
+    {
+      "bytes": 3095,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_state.stderr.log",
+      "sha256": "26a8af5e445f45c653724062a1cbc29ce74324e5360aea4798ea1ed0e209245b"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_state.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1296,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_transaction.execution.json",
+      "sha256": "37bd75eae2061b13d9cd1c77597a89bd1a4c8743dd45d82e2e21e30a7bf7800f"
+    },
+    {
+      "bytes": 2100,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_transaction.stderr.log",
+      "sha256": "ea57661d3418edb7bfe64b671fc25b473af633b199953c627a758f4fee6bbb06"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_transaction.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1150,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange.execution.json",
+      "sha256": "92f663bcb21b1be1b8e8f707a8491d0f019f8555ee538c37514c226be7a22799"
+    },
+    {
+      "bytes": 1180,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange.stderr.log",
+      "sha256": "854c6b27d032d4c102b2f1e7ef0397154da27ccbd96a3977cd8df9ef19720334"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1193,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.execution.json",
+      "sha256": "1897b0bfd2d3dd1010eed2e53ea9ac6fdffbf2ea0b9058041c873777ec3cb194"
+    },
+    {
+      "bytes": 3299,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.stderr.log",
+      "sha256": "ade599f9e33234e48821a54adc980417906a62b1b8761ef75653b4c6c103c70b"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1169,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.execution.json",
+      "sha256": "79782bddeee79532170e87359ce9d606eb727d1c51528900bf08895b16621b36"
+    },
+    {
+      "bytes": 392,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.stderr.log",
+      "sha256": "571565c686f8e1b96d7369027bbc92847c8d5978e858dd3b50b5c00047ef7f5b"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1257,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_state.execution.json",
+      "sha256": "46d964d61b245938d5d285536bd2bb61a65173fa63f1062eb4060d259fd9931f"
+    },
+    {
+      "bytes": 3335,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_state.stderr.log",
+      "sha256": "e59a13ba9f00e76f066ecb5b9efdbd9db97fca84fd95af602d67f3147b1b5374"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_state.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1308,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_transaction.execution.json",
+      "sha256": "fe399e0c6cac747a7929ab1512bdde45f2d8e1425d01a6ccd0656e426b5272e5"
+    },
+    {
+      "bytes": 2333,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_transaction.stderr.log",
+      "sha256": "ded5a3fe0ed1e92fb428752e49b6fde2a1412cebc19bee7d34d969d4d3f24ef3"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_transaction.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1200,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.execution.json",
+      "sha256": "24e452a4c591c19935b656a5e645d36fbfb685ea20076634ac2df5ffee8e3708"
+    },
+    {
+      "bytes": 1715,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.stderr.log",
+      "sha256": "53921d5e62b5f377e02edeb58fffcf88854e4cd81657511bad6b581393cd7e83"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1259,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.execution.json",
+      "sha256": "28a9c1ee8f9b1cc4545aed0d012420f54938b4d37d781976b766c1f34a793a14"
+    },
+    {
+      "bytes": 2503,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.stderr.log",
+      "sha256": "8c6140d5a2d44e1a8d355ce55841d09687bbb53ce305486dda15cb9776298828"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1227,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_v2_stage.execution.json",
+      "sha256": "49839585840e57f89b2265afc8c56d1daf1b9ddc9a68531b15bae0b67c5eeeda"
+    },
+    {
+      "bytes": 1276,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_v2_stage.stderr.log",
+      "sha256": "e0f8383d612321de7dac8c7378f009ac54606eaeee175b3f0a20328f2891820c"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/gama_v2_stage.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/git_diff_check.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/git_diff_check.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1247,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/hidef_marine.execution.json",
+      "sha256": "8a0d5204904f4bb3c8bda1c7b9840918ae12274b3f271ba5eb39241f62cf0e89"
+    },
+    {
+      "bytes": 106,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/hidef_marine.stderr.log",
+      "sha256": "8121bfeb2866a60eaec585db686a17b57edb1d6257584b2ccc40a032dee8bbc0"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/hidef_marine.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9978,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json",
+      "sha256": "406f30a1ada2d35cf5d153d08eeab1b363e8bf1650edc8ee568ca59f74113f9b"
+    },
+    {
+      "bytes": 9210,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/job_inventory.json",
+      "sha256": "92f3e656e2dd6f39f3c6b679fe91d7a04507c53e1b58e7383a87fb85d4457132"
+    },
+    {
+      "bytes": 1461,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.execution.json",
+      "sha256": "57dcfe9e807d62c72da75b4b93c2c1ef9b894deb67cc0b04ff49236083785ecd"
+    },
+    {
+      "bytes": 10536,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.stderr.log",
+      "sha256": "fa939f5d38b9f9d1727c8c359ccd606d508250cd6157523d399339b446e302fd"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1267,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/native_tiles.execution.json",
+      "sha256": "eb1073339a979f374894a212fe3778dbab7626ea06902bf6aab7281bd08c09de"
+    },
+    {
+      "bytes": 104,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/native_tiles.stderr.log",
+      "sha256": "869a9c102d66165e7a031e8a235972433171a416be80960c17c6e68371358d74"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/native_tiles.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1262,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.execution.json",
+      "sha256": "8a3f6728d69e6d4bfad27d4a5a4ce5350f711da637fff32be2a781980974bd49"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 26,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stdout.log",
+      "sha256": "501f5553a50c6c5495d60c9ce266f8bf7cbdc8bb66179255673bb843ecf90978"
+    },
+    {
+      "bytes": 1302,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_reconstruction_contract.execution.json",
+      "sha256": "05f96ed4b829385f3e9685b1f05c77d675663ce54cef93098ff92872df24f8ca"
+    },
+    {
+      "bytes": 1312,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_reconstruction_contract.stderr.log",
+      "sha256": "75bd9a391631b624cbdfca2717c7eb0e2b6d5b94566991c25fd29f9caa3cb72b"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_reconstruction_contract.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1294,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.execution.json",
+      "sha256": "26910cf1e0bf571420089be1890ea3e9829cad37b30fe0ccbf8cf87c84e74e9c"
+    },
+    {
+      "bytes": 362,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stderr.log",
+      "sha256": "04007cdaf968f4732bfb923684e4f7426f205d0caff38be21e3632f6fe2d222b"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 73785,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+      "sha256": "75d06b3a84a767ff995b3ede9f21173bb9721a6b6fa03bb2209a20ebff0c2566"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/runtime_blender_usd.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 312,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/runtime_blender_usd.stdout.log",
+      "sha256": "3ea53a4679401031028ee0898e211594c1951f22b7293bd689aa82ca66d64aa8"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/runtime_system.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 231,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/runtime_system.stdout.log",
+      "sha256": "7291c08eb3266725d07866715c7e612eb7e2a89f3e131476dc5fce3ac0120eaa"
+    },
+    {
+      "bytes": 1243,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/sony_camera.execution.json",
+      "sha256": "7e477a09793063137091b9caf321b317747b53d2c74a790ef4fb236a82db3390"
+    },
+    {
+      "bytes": 104,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/sony_camera.stderr.log",
+      "sha256": "9dcd28667e1283c487c705512175a0d7eae82f1b684d2c36c2fa50a9e9d9288b"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/sony_camera.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 62890,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/source_pins_after.json",
+      "sha256": "041bd30f5c8829d04f717b6239e0fc8633e61ee8b42001904f14603465dfcb11"
+    },
+    {
+      "bytes": 62890,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/source_pins_before.json",
+      "sha256": "041bd30f5c8829d04f717b6239e0fc8633e61ee8b42001904f14603465dfcb11"
+    },
+    {
+      "bytes": 2448,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/summary.md",
+      "sha256": "e6edae110e04537f124a268e2d337afb43ad6d180a7f12c2952da460ddb5d6ec"
+    },
+    {
+      "bytes": 1213,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.execution.json",
+      "sha256": "d934b3b25e60e9a22ade72e0f0623749fa83536cb595f4f3193adcdbfa3beb7a"
+    },
+    {
+      "bytes": 642,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.stderr.log",
+      "sha256": "ee1e0b1fb7846bc95223397b04296fd6c0ed7fba901fc83b7f5b79336256f839"
+    },
+    {
+      "bytes": 0,
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 551,
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_01.log",
+      "sha256": "a7d88c190e285f4e94099fe2d94a1ee4102419efb58dd911bd3009112eee1e36"
+    },
+    {
+      "bytes": 1118,
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_01_execution.json",
+      "sha256": "499710864e6b5397a822f121695c943bc1d97d6dc735cfca6effb6b305d88a24"
+    },
+    {
+      "bytes": 99890,
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_02.json",
+      "sha256": "7b69471538856f6f625b5adda8f930bb1863a8aa0199673911a5998653a111e8"
+    },
+    {
+      "bytes": 536,
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_02.log",
+      "sha256": "63740bede6e9115bc913764ac07b627dc2767b95a477572b5be2d6c0205b44b6"
+    },
+    {
+      "bytes": 1285,
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json",
+      "sha256": "9e274cb58ea8a729594c293838371b041af1c555d5776576d6cc9e42bec4999b"
+    },
+    {
+      "bytes": 16106,
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_check.py",
+      "sha256": "fec1f0f5769c7f040948f33645bd195a78c90ea94a98fea4e008a40f93495084"
+    },
+    {
+      "bytes": 12064,
+      "path": "experiments/gama_marlin_v1/qa/m8_preservation_final_01.json",
+      "sha256": "c09886265cc4ad77e5e386e8db1f5c2fc745029be67545fc93bc9f8341d011f4"
+    },
+    {
+      "bytes": 425,
+      "path": "experiments/gama_marlin_v1/qa/m8_preservation_final_01.log",
+      "sha256": "43d064273482972eb0cd44369e96b74c3fc61fa8ee4607c429533ffb44799b95"
+    },
+    {
+      "bytes": 2552,
+      "path": "experiments/gama_marlin_v1/qa/m8_preservation_final_01_execution.json",
+      "sha256": "e22e496a919851800c641134ce6cb1faeabf884ce7663103747eaffc59612d34"
+    },
+    {
+      "bytes": 12064,
+      "path": "experiments/gama_marlin_v1/qa/m8_preservation_initial_01.json",
+      "sha256": "d7586fa74b62f43ffde8587407ea212417bbe9b5396d9afe913a54f858670fe9"
+    },
+    {
+      "bytes": 427,
+      "path": "experiments/gama_marlin_v1/qa/m8_preservation_initial_01.log",
+      "sha256": "378c0b9af92e4bf8610b5f7e65506702f64f0f318962983ef65809d0021fdc21"
+    },
+    {
+      "bytes": 2560,
+      "path": "experiments/gama_marlin_v1/qa/m8_preservation_initial_01_execution.json",
+      "sha256": "12f6dfb86c9ef5a6d91d85ef95c196cd44032b8a05bdfe5fe201e1c28f27a326"
+    },
+    {
+      "bytes": 15800,
+      "path": "experiments/gama_marlin_v1/qa/run_m8_offline_checks.py",
+      "sha256": "f5d66c3428ff04d5925396672a279f93cfd37c63f65746bfc91e0fe5df45f281"
+    },
+    {
+      "bytes": 3831,
+      "path": "experiments/gama_marlin_v1/qa/run_m8_preservation.py",
+      "sha256": "9c302358175df86faa9887a53f11f0ddb8dcaa92cabc5ff106f002d7bfde4395"
+    },
+    {
+      "bytes": 5311,
+      "path": "tools/verify_gama_m8_demo.py",
+      "sha256": "fe9b491e575ad1280052275623ead3f318a1e03b80c5438cb2dd2451c6821e57"
+    }
+  ],
+  "passed": true,
+  "sprint_acceptance_complete": false,
+  "status": "complete_review_with_blocked_milestone_7"
+}

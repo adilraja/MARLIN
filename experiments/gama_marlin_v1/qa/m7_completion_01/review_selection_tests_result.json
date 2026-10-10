@@ -1,0 +1,82 @@
+{
+  "kind": "m7_new_source_selection_independent_fail_injection_review",
+  "created_at_utc": "2026-10-09T19:04:19.577727+00:00",
+  "passed": true,
+  "cases": [
+    {
+      "name": "exact_four_attempt_selection",
+      "passed": true
+    },
+    {
+      "name": "accepted_original_snapshot_cannot_be_recaptured",
+      "passed": true,
+      "rejection": "An accepted original group was duplicated or substituted"
+    },
+    {
+      "name": "failed_attempt_status_cannot_be_rewritten",
+      "passed": true,
+      "rejection": "Source attempt status/scope changed"
+    },
+    {
+      "name": "missing_declared_snapshot_is_rejected",
+      "passed": true,
+      "rejection": "Source attempt selected missing/extra/substituted accepted groups"
+    },
+    {
+      "name": "source_state_depth_substitution_is_rejected",
+      "passed": true,
+      "rejection": "Source state/split/family substitution"
+    },
+    {
+      "name": "cleanup_failure_is_rejected",
+      "passed": true,
+      "rejection": "Source run cleanup failed"
+    },
+    {
+      "name": "extra_duplicate_image_is_rejected",
+      "passed": true,
+      "rejection": "Source image selection is missing/duplicate/extra"
+    },
+    {
+      "name": "image_split_substitution_is_rejected",
+      "passed": true,
+      "rejection": "Source image identity/presence/depth changed"
+    },
+    {
+      "name": "changed_runtime_code_flag_is_rejected",
+      "passed": true,
+      "rejection": "Source runtime or declaration changed"
+    },
+    {
+      "name": "changed_declaration_flag_is_rejected",
+      "passed": true,
+      "rejection": "Source runtime or declaration changed"
+    },
+    {
+      "name": "failed_group_cannot_be_promoted_into_source_set",
+      "passed": true,
+      "rejection": "Accepted source group did not pass state/coexistence checks"
+    }
+  ],
+  "cases_passed": 11,
+  "source_pins_before": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests.py": "1649437e319b4b8966fc9a7d052abf1d217e13a15c13a19165b80872617b6229",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_capture_set.py": "1ca64f085a90b67151b2c389d1f9c494026489df9228c80f2f592583b8b7d4c4",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/m7_capture_declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/results.json": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01/results.json": "a08f4cd9d7be17c6b78a76f55f4e4616d8c2d39e465ecceb193d61c5510ddf7f"
+  },
+  "source_pins_after": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests.py": "1649437e319b4b8966fc9a7d052abf1d217e13a15c13a19165b80872617b6229",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_capture_set.py": "1ca64f085a90b67151b2c389d1f9c494026489df9228c80f2f592583b8b7d4c4",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/m7_capture_declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/results.json": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01/results.json": "a08f4cd9d7be17c6b78a76f55f4e4616d8c2d39e465ecceb193d61c5510ddf7f"
+  },
+  "sources_unchanged": true,
+  "live_calls_made": false,
+  "synthetic_fixture_metadata_used_only_in_memory": true,
+  "captures_created": 0,
+  "capture_acceptance_claimed": false,
+  "biological_approval": false
+}

@@ -1,0 +1,46 @@
+{
+  "accepted_scope": "Explicitly labelled engineering proxy for deterministic GAMA-to-MARLIN state transfer and capture-pipeline development",
+  "biological_approval": false,
+  "blocked_milestone": 7,
+  "human_review_source": {
+    "bytes": 4746,
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m5_human_review.json",
+    "sha256": "68000076ee01c40d60f6b7cc822608bb2867230ac4a8f1e1e8023349c223714f"
+  },
+  "last_capture_headroom_observation": {
+    "below_capture_minimum": true,
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=memory.used,memory.free",
+      "--format=csv,noheader,nounits"
+    ],
+    "free_mib": 332,
+    "gpu_headroom_is_not_a_read_only_demo_check": true,
+    "minimum_free_mib_before_render": 768,
+    "recorded_at_utc": "2026-10-09T17:28:55.599791+00:00",
+    "return_code": 0,
+    "stderr": "",
+    "stdout": "5466, 332\n",
+    "used_mib": 5466
+  },
+  "milestone": 8,
+  "missing_images": 30,
+  "missing_snapshot_groups": 3,
+  "ready_for_further_bounded_engineering_tests": true,
+  "ready_for_larger_biological_expansion": false,
+  "ready_for_limited_behaviour_conditioned_study": false,
+  "remaining_limits": [
+    "Static upright pose and engineering behavioral assumptions",
+    "Uncalibrated refraction and wave/anatomical clearance",
+    "Direct amodal labels and unknown rendered visibility",
+    "Unlabelled background wildlife",
+    "Paired-background shading differences of unestablished cause"
+  ],
+  "report": {
+    "bytes": 14405,
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_REPORT.md",
+    "sha256": "5d4838690745eda67920086974f4c78bbb89f3d7fa23ea04aa55cdec4c35cb9c"
+  },
+  "review_completed": true,
+  "sprint_acceptance_complete": false
+}

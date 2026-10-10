@@ -1,0 +1,41 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests.py"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "actual_combined_stdout_stderr": "experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests_command.log",
+  "passed": true,
+  "prior_fixture_setup_failures": [
+    {
+      "return_code": 1,
+      "error": "ValueError: Source attempt kind changed",
+      "cause": "In-memory selection fixture initially used a marker kind; actual source kind was subsequently used. No capture evidence was written."
+    },
+    {
+      "return_code": 1,
+      "error": "ValueError: One-state continuation selected another snapshot",
+      "cause": "In-memory fixture used the pre-freeze selected_step field; frozen helper uses selected_step_index. No capture evidence was written."
+    }
+  ],
+  "synthetic_metadata_only": true,
+  "live_calls_made": false,
+  "log_sha256": "1f18e27a67e9cddafd306ad88f97fc4876425870b293d35511c42f778439794a",
+  "source_pins_before": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests.py": "1649437e319b4b8966fc9a7d052abf1d217e13a15c13a19165b80872617b6229",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_capture_set.py": "1ca64f085a90b67151b2c389d1f9c494026489df9228c80f2f592583b8b7d4c4",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/m7_capture_declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/results.json": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01/results.json": "a08f4cd9d7be17c6b78a76f55f4e4616d8c2d39e465ecceb193d61c5510ddf7f"
+  },
+  "source_pins_after": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_selection_tests.py": "1649437e319b4b8966fc9a7d052abf1d217e13a15c13a19165b80872617b6229",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_capture_set.py": "1ca64f085a90b67151b2c389d1f9c494026489df9228c80f2f592583b8b7d4c4",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/m7_capture_declaration.json": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02/results.json": "47ad9fa57c9ab8a59d693d4e3ad41cfec3b27e10c780dbec88d0b3c34a1f7611",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01/results.json": "a08f4cd9d7be17c6b78a76f55f4e4616d8c2d39e465ecceb193d61c5510ddf7f"
+  },
+  "source_inputs_unchanged": true
+}

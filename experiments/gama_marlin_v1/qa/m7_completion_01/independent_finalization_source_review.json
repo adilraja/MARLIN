@@ -1,0 +1,37 @@
+{
+  "kind": "m7_finalization_helpers_independent_source_review",
+  "passed": true,
+  "scope": "Offline source and explicit synthetic-fixture failure review; actual finalization and runtime-log snapshot mains were not executed",
+  "source_pins": {
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalization_helpers.py": "9389b4d4cb8342879fda204cd71f7377179c7dd50a8de5b5ee606d95339d921b",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/snapshot_runtime_logs.py": "08630dacfbd754539f5010f3e8f8dd06da78ee1801863288822bdd5cb85ea563",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff"
+  },
+  "fixture_checks": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalization_helpers_final_result.json",
+    "sha256": "996fed810a387cd7ed1fd7a4063010365c221792e717dd9c0149665b0ac786e3",
+    "cases_passed": 11
+  },
+  "actual_command_pin_checks": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/review_finalizer_execution_pins_result.json",
+    "sha256": "f8297bd785205ae9f0e0f4cadb7bb78f9a456998180a8c2a5b3e2cd053f540a3",
+    "cases_passed": 3
+  },
+  "reviewed_invariants": [
+    "Only exclusive new report/seal written after current actual150image acceptance revalidation and final live14checks/fourroutes afterlastcapture.",
+    "Four actual source attempts remain false,false,true,true; excluded priorfailed20images remain excluded.",
+    "MutableKitlogs excluded from immutable inventories; exact observed fixed-prefix bytes copied and rechecked, with later appends unsealed.",
+    "Own currently active finalizer stdout deferred; selfhash cycle prevented; later independent sealcheck must bind completed finalizer receipts and manifest ownSHA.",
+    "Frozen original capturecode and existing command runner cannot change; exact actualprogram/runner beforeafter hashes checked.",
+    "HistoricalM7/M8records remain immutable; engineering completion does not imply biology, optical visibility or human approval."
+  ],
+  "required_execution_choice": "Use a NEW finalization command recorder or direct recorded command; do not edit existing run_completion_command.py whose historical SHA is checked.",
+  "remaining_requirements": [
+    "Actual passed acceptance/live records and authorized fixed-prefix snapshots",
+    "Finalizer actual success and later independent fullseal/receipt check"
+  ],
+  "actual_finalizer_main_executed": false,
+  "actual_runtime_log_snapshot_main_executed": false,
+  "live_calls_made": false,
+  "biological_approval": false
+}

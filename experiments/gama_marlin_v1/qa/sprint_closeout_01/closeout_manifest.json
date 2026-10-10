@@ -1,0 +1,546 @@
+{
+  "kind": "gama_marlin_engineering_sprint_closeout_manifest",
+  "status": "complete_engineering_scope",
+  "passed": true,
+  "completed_at_utc": "2026-10-10T08:54:32.199181+00:00",
+  "sprint_acceptance_complete": true,
+  "acceptance_scope": "Bounded engineering GAMA-to-MARLIN demonstration, declared 150-image capture and annotation set, regression review, Pilot audit and explicit expansion decision",
+  "milestones": [
+    {
+      "number": 1,
+      "name": "Preserve Pilot v1 and audit the existing GAMA work",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Baseline preservation and integration audit",
+      "biological_suitability": "not_approved",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m1_test_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/M1_BASELINE_AND_GAMA_AUDIT.md",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/preserved_output_manifest.json"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Define the state contract and ownership rules",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Versioned state contract, units, ownership and invalid-state rejection",
+      "biological_suitability": "not_approved",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m2_offline_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m2_live_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_2_manifest.json"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Generate trajectories from an actual GAMA model",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Actual GAMA execution, trajectory generation and repeatability",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m3_validation.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m3_seed_184729_a/execution.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m3_seed_184729_b/execution.json"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Verify state transfer, control ownership and recovery",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Composed-transform accuracy, failure handling, ownership and recovery",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m4_final2_offline_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m4_live_03/results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_4_manifest.json"
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Validate reproducibility and review the behavioural model",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Engineering reproducibility and completed named human review with provisional biology",
+      "biological_suitability": "provisional_engineering_use_only",
+      "human_reviewer": "MAR",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m5_analysis.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m5_human_review.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_5_manifest.json"
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Freeze one GAMA state across all five GSD captures",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Frozen scene pairing, capture order and delay checks, and restoration",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m6_live_03/results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m6_scene_validation_03.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/M6_FROZEN_STATE_PAIRED_CAPTURES.md"
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Produce a small GAMA-driven capture and annotation test set",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Full bounded 150-image engineering capture, traceability, amodal labels, grouped split, scene verification, manual presentation review and export",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02_execution.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/seal_check_retry_02.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_7_manifest.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/M7_COMPLETION_REPORT.md"
+      ]
+    },
+    {
+      "number": 8,
+      "name": "Complete the regression review and expansion decision",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Retained regression and Pilot audit, documented unsupported biological claims, reproduction guidance and current engineering closeout",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_pilot_audit_02.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_final_review_validation.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_8_manifest.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_CLOSEOUT.md",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md"
+      ]
+    }
+  ],
+  "capture_counts": {
+    "images": 150,
+    "target_present": 75,
+    "target_absent": 75,
+    "camera_condition_pairs": 75,
+    "groups": 15
+  },
+  "split_image_counts": {
+    "train": 90,
+    "validation": 30,
+    "test": 30
+  },
+  "original_milestone_seal_sha256": {
+    "milestone_7": "d2e4f7179b6c6cb1e4de8124f796fa96d56466b919a1f30abe6b39af7dbd0715",
+    "milestone_8": "16a51dbd84bbe4ca31f0ad26dcbce318722072dd0cb12f6adc2fc872d244adfa"
+  },
+  "retained_regression_unittest_cases": 360,
+  "historical_failed_packaging_check_preserved": true,
+  "existing_evidence_validation": {
+    "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_validation.json",
+    "bytes": 2385656,
+    "sha256": "c4ed2944533aa7218ac57372a6cc20afc0b74e7df73829a4f6b22e20644edbcc"
+  },
+  "actual_existing_evidence_execution": {
+    "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_execution.json",
+    "bytes": 2126,
+    "sha256": "7a596dbb4808bb6fd352f96dd6a0bde89982e9ddab686c4a13b4d356c7ff4e76"
+  },
+  "first_proof_input_count": 4859,
+  "all_first_proof_inputs_current_and_unchanged": true,
+  "current_status": {
+    "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/current_status.json",
+    "bytes": 11483,
+    "sha256": "61d4f93edee7e7767b7134350f015c1cc586a228c4b551abdcaf1651169462b0"
+  },
+  "document_link_checks": [
+    {
+      "document": {
+        "path": "experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_CLOSEOUT.md",
+        "bytes": 11167,
+        "sha256": "5eb4b8e04b352b808f9a76891577b77d25f3e8f11676d438e2a196bb2cb7eed0"
+      },
+      "linked_evidence": [
+        "Codex-Instructions/Current-Sprint/GAMA_MARLIN_SPRINT_SPECIFICATION.md",
+        "experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_REPORT.md",
+        "experiments/gama_marlin_v1/M8_REPRODUCTION.md",
+        "experiments/gama_marlin_v1/qa/sprint_closeout_01/current_status.json",
+        "experiments/gama_marlin_v1/qa/m1_test_results.json",
+        "experiments/gama_marlin_v1/qa/preserved_output_manifest.json",
+        "experiments/gama_marlin_v1/qa/m2_offline_results.json",
+        "experiments/gama_marlin_v1/qa/m2_live_results.json",
+        "experiments/gama_marlin_v1/qa/m3_validation.json",
+        "experiments/gama_marlin_v1/trajectories/m3_seed_184729_a/execution.json",
+        "experiments/gama_marlin_v1/trajectories/m3_seed_184729_b/execution.json",
+        "experiments/gama_marlin_v1/qa/m4_final2_offline_results.json",
+        "experiments/gama_marlin_v1/qa/m4_live_03/results.json",
+        "experiments/gama_marlin_v1/qa/m5_analysis.json",
+        "experiments/gama_marlin_v1/qa/m5_human_review.json",
+        "experiments/gama_marlin_v1/qa/m6_live_03/results.json",
+        "experiments/gama_marlin_v1/qa/m6_scene_validation_03.json",
+        "experiments/gama_marlin_v1/M6_FROZEN_STATE_PAIRED_CAPTURES.md",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/seal_check_retry_02.json",
+        "experiments/gama_marlin_v1/M7_COMPLETION_REPORT.md",
+        "experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+        "experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json",
+        "experiments/gama_marlin_v1/qa/m8_final_review_validation.json",
+        "experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md",
+        "experiments/gama_marlin_v1/datasets/m7_engineering_v1/manifest.json",
+        "experiments/gama_marlin_v1/qa/m7_review/index.md",
+        "experiments/gama_marlin_v1/qa/milestone_7_manifest.json",
+        "experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json",
+        "experiments/gama_marlin_v1/M8_READ_ONLY_PILOT_AUDIT.md",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo/results.json",
+        "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_validation.json",
+        "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_execution.json",
+        "experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md"
+      ],
+      "reviewed_claims_match_bounded_status": true
+    },
+    {
+      "document": {
+        "path": "experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md",
+        "bytes": 7443,
+        "sha256": "50f1963a4cf77216ff3bcceb9fef1f1cbe2eaf894891c11f631781d5637a8f50"
+      },
+      "linked_evidence": [
+        "experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_CLOSEOUT.md",
+        "experiments/gama_marlin_v1/qa/sprint_closeout_01/current_status.json",
+        "experiments/gama_marlin_v1/M8_REPRODUCTION.md",
+        "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_validation.json",
+        "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_execution.json",
+        "integrations/gama/PORPOISE_RECORD_FIRST.md",
+        "integrations/gama/STATE_CONTRACT_V2.md",
+        "integrations/gama/PORPOISE_REPLAY_V2.md",
+        "integrations/gama/PAIRED_CAPTURE_V2.md",
+        "experiments/gama_marlin_v1/M7_COMPLETION_REPORT.md",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/campaign_verifier_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/review_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/export_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_retry_02_execution.json",
+        "experiments/gama_marlin_v1/qa/m7_review/index.md",
+        "experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+        "experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json",
+        "experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json",
+        "experiments/gama_marlin_v1/M8_READ_ONLY_PILOT_AUDIT.md",
+        "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo/results.json"
+      ],
+      "reviewed_claims_match_bounded_status": true
+    }
+  ],
+  "all_closeout_inputs_unchanged": true,
+  "outputs": [
+    {
+      "path": "Codex-Instructions/Current-Sprint/GAMA_MARLIN_SPRINT_SPECIFICATION.md",
+      "bytes": 15002,
+      "sha256": "a99cd76c3662fa25c79f81a4d842e9d4de5cb5056e7719d794a30685c094a900"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_CLOSEOUT.md",
+      "bytes": 11167,
+      "sha256": "5eb4b8e04b352b808f9a76891577b77d25f3e8f11676d438e2a196bb2cb7eed0"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_REPORT.md",
+      "bytes": 14405,
+      "sha256": "5d4838690745eda67920086974f4c78bbb89f3d7fa23ea04aa55cdec4c35cb9c"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/M1_BASELINE_AND_GAMA_AUDIT.md",
+      "bytes": 11999,
+      "sha256": "21ee4c0ca82f091a7f0553ed920a1d0a8e6865f4f9dd5c0ab697abb61cfa6b4a"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/M6_FROZEN_STATE_PAIRED_CAPTURES.md",
+      "bytes": 11776,
+      "sha256": "eae496c56cb23958be50c6d3693d24b8577ada25fbacc360b9d76d52ec475002"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/M7_COMPLETION_REPORT.md",
+      "bytes": 8596,
+      "sha256": "16d38c8c508b4d94a1b9d62a29dda6a3b1ea83ed648d72002ca17a5a4357f70e"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/M8_READ_ONLY_PILOT_AUDIT.md",
+      "bytes": 23175,
+      "sha256": "91551accc11a10df141a63951375fcfd6b1d5d8187d04f96eb3c9557e167fddc"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/M8_REPRODUCTION.md",
+      "bytes": 8551,
+      "sha256": "83f17ea2cfb6e47ff1f6efce96e6dc03c57ba3967c604544114e00516f6a0ac9"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md",
+      "bytes": 7443,
+      "sha256": "50f1963a4cf77216ff3bcceb9fef1f1cbe2eaf894891c11f631781d5637a8f50"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/datasets/m7_engineering_v1/manifest.json",
+      "bytes": 1722558,
+      "sha256": "b0537348d2891658c759a2b281c9fd874e02e0bbd98c976a990c1820914f38f8"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m1_test_results.json",
+      "bytes": 1018,
+      "sha256": "b239ed4e9f825da4665646b57a1d4b604d1a0f3d8690f4a0be86511e43223cee"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m2_live_results.json",
+      "bytes": 18086,
+      "sha256": "bb96d9734c505e281c347ea8a9b0efe8208127fe8a677234ef588e3b5309db48"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m2_offline_results.json",
+      "bytes": 2405,
+      "sha256": "291b970b38d924355aaa7fed50ca4b74f4b45505b2640504ec0cc504beb89b61"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m3_validation.json",
+      "bytes": 3427,
+      "sha256": "1047f2291c0cef6aa57a31535c22d2f022e62b26341bd00b150a20e0537f4f0d"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m4_final2_offline_results.json",
+      "bytes": 7666,
+      "sha256": "77cd01b49aad73e65995e1e108e1f6f84daac9687d35a2410ffec38c810900b3"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m4_live_03/results.json",
+      "bytes": 210985,
+      "sha256": "c412302d3547a74c853b600faf0c946d5e6b6858f17f9c43c329d6aaf772e130"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_analysis.json",
+      "bytes": 261042,
+      "sha256": "1db3945ef2beeab2012ce8127cde4aba6164ec278f715e694abd8cc97c79c345"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m5_human_review.json",
+      "bytes": 4746,
+      "sha256": "68000076ee01c40d60f6b7cc822608bb2867230ac4a8f1e1e8023349c223714f"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m6_live_03/results.json",
+      "bytes": 151696,
+      "sha256": "23fb8e39719af3636236a3ec1437e56066c16bc0bf5fd1463ee5a9c8d6fcb4cc"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m6_scene_validation_03.json",
+      "bytes": 29142,
+      "sha256": "36e4dca9e15cca2ece44ccad8b35cd488d80c2f2cb5599c255f67616f9eb3087"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02.json",
+      "bytes": 2316750,
+      "sha256": "fa02274f4cfbc177ed5eaa629e1297e8159c29c411e1acd9a1a6791dd89c89a9"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02_execution.json",
+      "bytes": 2619,
+      "sha256": "d94921cf3ef761f31adf016f5db96e682d94a0c7b49df573afd7d8ea27400ee1"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_execution.json",
+      "bytes": 1357,
+      "sha256": "a6265dce0d0f0a45093be2ffe4dd439253729532748bd532d9857b77d9ebfef3"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/campaign_verifier_execution.json",
+      "bytes": 895,
+      "sha256": "aab816b62a1f21de62db8d9c396d9847b9cc38af4c841b1221087b65fdb1d1e3"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/check_finalization_seal_retry_02.py",
+      "bytes": 25874,
+      "sha256": "074a551cb6ed76e5be23380c1597ca6b92ad3d1655e2b03f6e311744040d63ed"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/export_execution.json",
+      "bytes": 1657,
+      "sha256": "5b4e2cb6dad9d411af342c8f8a4662423397f0fdb063aa055951ab0da74c3666"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo/results.json",
+      "bytes": 220973,
+      "sha256": "359b07d00ac9bb7fa88265dcb9208dbb802a2f47c4275254628d0e694bcc3f00"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/final_live_execution.json",
+      "bytes": 2435,
+      "sha256": "ccf6406aee63ca4938c5cd35fc0355233639e3a718e0ef9247f2eea8eb2eff71"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_retry_02_execution.json",
+      "bytes": 2655,
+      "sha256": "690a02c403c5c82210fb4413989a24d64e6f662f48ed7b671dae010c21bc5f00"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/review_execution.json",
+      "bytes": 1245,
+      "sha256": "a11f5fcf3a2051d1b0b745b8b208e4f453ca5f5d26076f14fb583aaad011233c"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/seal_check_retry_02.json",
+      "bytes": 2370200,
+      "sha256": "6323205b461d9b0eecabcf7ddb1ed2f1716f055a9ea0c314ad1b106394de32da"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_review/index.md",
+      "bytes": 8492,
+      "sha256": "46952070c01529b7014ce2b21779ced2c10bea51da7127b67bca08f57679fe98"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m8_final_review_validation.json",
+      "bytes": 541103,
+      "sha256": "cb7e44a9d53ec08c78d671b46495fc3daedb8046c6c3afd2f4effbf1b0ba27e6"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json",
+      "bytes": 9978,
+      "sha256": "406f30a1ada2d35cf5d153d08eeab1b363e8bf1650edc8ee568ca59f74113f9b"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+      "bytes": 73785,
+      "sha256": "75d06b3a84a767ff995b3ede9f21173bb9721a6b6fa03bb2209a20ebff0c2566"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_02.json",
+      "bytes": 99890,
+      "sha256": "7b69471538856f6f625b5adda8f930bb1863a8aa0199673911a5998653a111e8"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json",
+      "bytes": 1285,
+      "sha256": "9e274cb58ea8a729594c293838371b041af1c555d5776576d6cc9e42bec4999b"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_2_manifest.json",
+      "bytes": 3687,
+      "sha256": "61b23528ce699cefa0a87b32276b41fa590fd90bf0640918a1719746918279c8"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_4_manifest.json",
+      "bytes": 11445,
+      "sha256": "c2f9e04eab76b3148107b90bb7d9400ce141278e53d1701345471f6eda1a0c52"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_5_manifest.json",
+      "bytes": 40757,
+      "sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_7_manifest.json",
+      "bytes": 1207355,
+      "sha256": "d2e4f7179b6c6cb1e4de8124f796fa96d56466b919a1f30abe6b39af7dbd0715"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_8_manifest.json",
+      "bytes": 26483,
+      "sha256": "16a51dbd84bbe4ca31f0ad26dcbce318722072dd0cb12f6adc2fc872d244adfa"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/preserved_output_manifest.json",
+      "bytes": 204345,
+      "sha256": "9100230adf3a392101e2697978fe9221f3ec6d26fea8ce1c8ce8e1dead795098"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/current_status.json",
+      "bytes": 11483,
+      "sha256": "61d4f93edee7e7767b7134350f015c1cc586a228c4b551abdcaf1651169462b0"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_command.log",
+      "bytes": 269,
+      "sha256": "c4faac55e22534ccbf1e72b90d229fd9d4225db4b256fe3e7327eea7ca398e3c"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_execution.json",
+      "bytes": 2126,
+      "sha256": "7a596dbb4808bb6fd352f96dd6a0bde89982e9ddab686c4a13b4d356c7ff4e76"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_validation.json",
+      "bytes": 2385656,
+      "sha256": "c4ed2944533aa7218ac57372a6cc20afc0b74e7df73829a4f6b22e20644edbcc"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/finalize_closeout.py",
+      "bytes": 20596,
+      "sha256": "162f5c982ac7c311e2574d95b235ad34e2bf6e298db375c22ca5b19e9a5a735c"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/record_closeout.py",
+      "bytes": 2705,
+      "sha256": "49a8418f728c067dae1d1648084f81c23775ad0ef8fa12c8a7308c272f279066"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/record_existing_evidence.py",
+      "bytes": 2787,
+      "sha256": "104b5ccc23bfcf09ab92bc49196ec4d6628c648a87d44524e58c2f54208955be"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/sprint_closeout_01/verify_existing_evidence.py",
+      "bytes": 16128,
+      "sha256": "0eee7eeaa7a47e39833ece3facc6310bfa57add6f9219611d82542e60404e596"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/trajectories/m3_seed_184729_a/execution.json",
+      "bytes": 2072,
+      "sha256": "89fbddee68147bb5af0fc9ae1cc598a693eebad815a1ad71e88929199ab7f5ef"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/trajectories/m3_seed_184729_b/execution.json",
+      "bytes": 2072,
+      "sha256": "2d19124462f0694eef26cdca04570395441ca35c46e767e733b8e1faf751c5b0"
+    },
+    {
+      "path": "integrations/gama/PAIRED_CAPTURE_V2.md",
+      "bytes": 5367,
+      "sha256": "882b298bbca00d25609247ebfa9cc5df6204acad2f61587c137994b0f7d12b36"
+    },
+    {
+      "path": "integrations/gama/PORPOISE_RECORD_FIRST.md",
+      "bytes": 7628,
+      "sha256": "1ca23dcd13e1692da202a0b5b5b1753c58c84cbb741bb2f81f406591793f37f7"
+    },
+    {
+      "path": "integrations/gama/PORPOISE_REPLAY_V2.md",
+      "bytes": 4863,
+      "sha256": "49f8be74323f3af992ddf6ef85b61cb24f0deebff8a59af3e355dc1da086081d"
+    },
+    {
+      "path": "integrations/gama/STATE_CONTRACT_V2.md",
+      "bytes": 13527,
+      "sha256": "b9c8f95ec3797bd4e33d298ba68cfdb495ae10055f4b837793c5046ae1c30d9b"
+    }
+  ],
+  "unique_output_paths": 57,
+  "manifest_self_hash_deferred": true,
+  "completed_finalizer_receipt_requires_later_independent_binding": true,
+  "deferred_finalizer_log": "experiments/gama_marlin_v1/qa/sprint_closeout_01/closeout_command.log",
+  "deferred_finalizer_execution": "experiments/gama_marlin_v1/qa/sprint_closeout_01/closeout_execution.json",
+  "biological_approval": false,
+  "human_approval_inferred": false,
+  "all_executed_commands_passed": false,
+  "new_tests_executed": false,
+  "live_calls_made": false,
+  "captures_requested": 0,
+  "new_gama_executions": 0,
+  "ml_training_or_inference_performed": false,
+  "historical_records_rewritten": false
+}

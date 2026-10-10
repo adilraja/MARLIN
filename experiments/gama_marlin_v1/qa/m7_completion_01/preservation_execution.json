@@ -1,0 +1,31 @@
+{
+  "kind": "m7_actual_completion_command_execution",
+  "operation": "preservation",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+    "--output",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/original_preservation.json"
+  ],
+  "runner_command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/run_completion_command.py",
+    "preservation"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "started_at_utc": "2026-10-09T19:23:00.353812+00:00",
+  "finished_at_utc": "2026-10-09T19:23:01.519260+00:00",
+  "elapsed_seconds": 1.1654383589921053,
+  "return_code": 0,
+  "log": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/preservation_command.log",
+  "log_sha256": "c4484cadd750f59a86ead7ccadd21095da5d23d992e5b5126b6f4eb530ffe711",
+  "source_sha256_before": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6",
+  "source_sha256_after": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6",
+  "runner_sha256_before": "1c8dec553133ca88d5a68f2d3608f238075083affe1e801155468d16afd9de32",
+  "runner_sha256_after": "1c8dec553133ca88d5a68f2d3608f238075083affe1e801155468d16afd9de32",
+  "live_calls_made": false,
+  "new_renders_requested": 0,
+  "passed": true
+}

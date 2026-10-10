@@ -1,0 +1,1734 @@
+{
+  "kind": "m8_offline_regression_execution",
+  "milestone": 8,
+  "recorded_at_utc": "2026-10-09T17:26:48.130622+00:00",
+  "runner_command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gama_marlin_v1/qa/run_m8_offline_checks.py",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m8_offline_01"
+  ],
+  "runtimes": {
+    "system": {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-c",
+        "import json,platform,sys; from importlib import metadata; result={'python':sys.version,'executable':sys.executable,'platform':platform.platform(),'packages':{}}\nfor name in ('numpy','pillow'):\n try: result['packages'][name]=metadata.version(name)\n except metadata.PackageNotFoundError: result['packages'][name]=None\ntry:\n from pxr import Usd\n result['usd_version']=list(Usd.GetVersion())\nexcept ImportError: result['usd_version']=None\nprint(json.dumps(result))"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:19.302531+00:00",
+      "ended_at_utc": "2026-10-09T17:25:19.352546+00:00",
+      "elapsed_seconds": 0.050005850003799424,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/runtime_system.stdout.log",
+        "bytes": 231,
+        "sha256": "7291c08eb3266725d07866715c7e612eb7e2a89f3e131476dc5fce3ac0120eaa"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/runtime_system.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "executable_pin": {
+        "path": "/usr/bin/python3.14",
+        "bytes": 7477160,
+        "sha256": "52e0a13e60a981d8c4b6478be2ba5176f69da07948a056bf49cf6f077e30cb41"
+      },
+      "reported_runtime": {
+        "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+        "executable": "/usr/bin/python3",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "packages": {
+          "numpy": "2.3.5",
+          "pillow": "12.1.1"
+        },
+        "usd_version": null
+      }
+    },
+    "blender_usd": {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "-c",
+        "import json,platform,sys; from importlib import metadata; result={'python':sys.version,'executable':sys.executable,'platform':platform.platform(),'packages':{}}\nfor name in ('numpy','pillow'):\n try: result['packages'][name]=metadata.version(name)\n except metadata.PackageNotFoundError: result['packages'][name]=None\ntry:\n from pxr import Usd\n result['usd_version']=list(Usd.GetVersion())\nexcept ImportError: result['usd_version']=None\nprint(json.dumps(result))"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:19.357904+00:00",
+      "ended_at_utc": "2026-10-09T17:25:19.564819+00:00",
+      "elapsed_seconds": 0.2069209899927955,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/runtime_blender_usd.stdout.log",
+        "bytes": 312,
+        "sha256": "3ea53a4679401031028ee0898e211594c1951f22b7293bd689aa82ca66d64aa8"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/runtime_blender_usd.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "executable_pin": {
+        "path": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "bytes": 28650248,
+        "sha256": "579982b96f8b9745c4744b61e74cf7073929af0fa85ab6006191318976c47c17"
+      },
+      "reported_runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "executable": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+        "packages": {
+          "numpy": "1.26.4",
+          "pillow": null
+        },
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:19.604932+00:00",
+      "ended_at_utc": "2026-10-09T17:25:20.005844+00:00",
+      "elapsed_seconds": 0.4009180080029182,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.stderr.log",
+        "bytes": 10536,
+        "sha256": "fa939f5d38b9f9d1727c8c359ccd606d508250cd6157523d399339b446e302fd"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "marlin_service",
+      "category": "existing_marlin_service",
+      "scope": "Canonical16-module service suite: actual USD calibration/petrel stages plus pure movement, camera math, settings/AST and retained asset/config checks; no live Kit.",
+      "tests": 77,
+      "skipped": 0,
+      "expected_tests": 77,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_hidef_marine.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:19.605059+00:00",
+      "ended_at_utc": "2026-10-09T17:25:21.510260+00:00",
+      "elapsed_seconds": 1.9052088400057983,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/hidef_marine.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/hidef_marine.stderr.log",
+        "bytes": 106,
+        "sha256": "8121bfeb2866a60eaec585db686a17b57edb1d6257584b2ccc40a032dee8bbc0"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "hidef_marine",
+      "category": "existing_camera",
+      "scope": "Actual USD frozen snapshots and translated camera rays; NumPy maps and fake settings/AST gates.",
+      "tests": 8,
+      "skipped": 0,
+      "expected_tests": 8,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_sony_camera.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:20.006372+00:00",
+      "ended_at_utc": "2026-10-09T17:25:20.287711+00:00",
+      "elapsed_seconds": 0.2813477150048129,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/sony_camera.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/sony_camera.stderr.log",
+        "bytes": 104,
+        "sha256": "9dcd28667e1283c487c705512175a0d7eae82f1b684d2c36c2fa50a9e9d9288b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "sony_camera",
+      "category": "existing_camera",
+      "scope": "Independent pinhole/map calculations plus actual USD camera ray projection; no rendered pixels.",
+      "tests": 6,
+      "skipped": 0,
+      "expected_tests": 6,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_capture_projection.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:20.288148+00:00",
+      "ended_at_utc": "2026-10-09T17:25:20.566649+00:00",
+      "elapsed_seconds": 0.27850739800487645,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/capture_projection.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/capture_projection.stderr.log",
+        "bytes": 104,
+        "sha256": "8750d4b5acdce1e4d680a3a27eb5d68370ed8b7d37b619aa32e9e0049f881dae"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "capture_projection",
+      "category": "existing_camera",
+      "scope": "Actual USD camera/render-product contracts; fake viewport/UI matrices test resolution, pixel aspect and crop rejection.",
+      "tests": 6,
+      "skipped": 0,
+      "expected_tests": 6,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_native_tiles.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:20.567029+00:00",
+      "ended_at_utc": "2026-10-09T17:25:20.933469+00:00",
+      "elapsed_seconds": 0.36645733800833113,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/native_tiles.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/native_tiles.stderr.log",
+        "bytes": 104,
+        "sha256": "869a9c102d66165e7a031e8a235972433171a416be80960c17c6e68371358d74"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "native_tiles",
+      "category": "existing_camera",
+      "scope": "Actual USD tile-camera/product projection and exact NumPy pixel coverage; fake viewport settling/reset boundaries.",
+      "tests": 6,
+      "skipped": 0,
+      "expected_tests": 6,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_tile_diagnostics.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:20.933892+00:00",
+      "ended_at_utc": "2026-10-09T17:25:21.079557+00:00",
+      "elapsed_seconds": 0.1456721739959903,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/tile_diagnostics.stderr.log",
+        "bytes": 642,
+        "sha256": "ee1e0b1fb7846bc95223397b04296fd6c0ed7fba901fc83b7f5b79336256f839"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "tile_diagnostics",
+      "category": "existing_camera",
+      "scope": "Synthetic NumPy/Pillow pixels and evidence-rejection fixtures; no retained render is produced.",
+      "tests": 4,
+      "skipped": 0,
+      "expected_tests": 4,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:21.079934+00:00",
+      "ended_at_utc": "2026-10-09T17:25:21.760864+00:00",
+      "elapsed_seconds": 0.6809389289992396,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor.stderr.log",
+        "bytes": 970,
+        "sha256": "2b315eeed980dc7ab071c28286a72d55192e77599dfb37a7cc4ba8fe63ce9848"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_actor",
+      "category": "bridge",
+      "scope": "Original actor lifecycle with actual USD layers/transforms; fake capture gate.",
+      "tests": 8,
+      "skipped": 0,
+      "expected_tests": 8,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor_v2.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:21.510655+00:00",
+      "ended_at_utc": "2026-10-09T17:25:22.118474+00:00",
+      "elapsed_seconds": 0.6078253829909954,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor_v2.stdout.log",
+        "bytes": 208,
+        "sha256": "8d392c8ceb899346aba5decc051f5c530ce6ee57d11984cb6df7fb84c8378666"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_actor_v2.stderr.log",
+        "bytes": 3835,
+        "sha256": "31692fadfeac4094915e89a5b1f1ade5987c4534399d4832a81b5034cd3c8f0b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_actor_v2",
+      "category": "bridge",
+      "scope": "Actual calibrated asset/USD composed poses, ownership/layers, duplicate/reset/guard semantics and bounded cleanup.",
+      "tests": 24,
+      "skipped": 0,
+      "expected_tests": 24,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_exchange.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:21.761311+00:00",
+      "ended_at_utc": "2026-10-09T17:25:21.831103+00:00",
+      "elapsed_seconds": 0.06979832099750638,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange.stderr.log",
+        "bytes": 1180,
+        "sha256": "854c6b27d032d4c102b2f1e7ef0397154da27ccbd96a3977cd8df9ef19720334"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_exchange",
+      "category": "bridge",
+      "scope": "Original pure schema/coordinate/replay validation.",
+      "tests": 9,
+      "skipped": 0,
+      "expected_tests": 9,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_exchange_v2.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:21.831605+00:00",
+      "ended_at_utc": "2026-10-09T17:25:21.880174+00:00",
+      "elapsed_seconds": 0.04857523099053651,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_exchange_v2.stderr.log",
+        "bytes": 3299,
+        "sha256": "ade599f9e33234e48821a54adc980417906a62b1b8761ef75653b4c6c103c70b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_exchange_v2",
+      "category": "bridge",
+      "scope": "V2 pure schema, strict scalar/state identity, coordinate and replay validation.",
+      "tests": 23,
+      "skipped": 0,
+      "expected_tests": 23,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_live.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:21.880561+00:00",
+      "ended_at_utc": "2026-10-09T17:25:21.939286+00:00",
+      "elapsed_seconds": 0.05872848798753694,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.stderr.log",
+        "bytes": 392,
+        "sha256": "571565c686f8e1b96d7369027bbc92847c8d5978e858dd3b50b5c00047ef7f5b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_live",
+      "category": "bridge",
+      "scope": "Fake transport replay/protocol boundaries; the filename does not imply a live Kit run.",
+      "tests": 3,
+      "skipped": 0,
+      "expected_tests": 3,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_porpoise.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:21.939816+00:00",
+      "ended_at_utc": "2026-10-09T17:25:22.102581+00:00",
+      "elapsed_seconds": 0.16276993099018,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise.stderr.log",
+        "bytes": 1715,
+        "sha256": "53921d5e62b5f377e02edeb58fffcf88854e4cd81657511bad6b581393cd7e83"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_porpoise",
+      "category": "bridge",
+      "scope": "Retained actual raw GAMA export parsing and explicit invalid XML/state fixtures; no new GAMA process.",
+      "tests": 11,
+      "skipped": 0,
+      "expected_tests": 11,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_porpoise_analysis.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:22.102945+00:00",
+      "ended_at_utc": "2026-10-09T17:25:22.185964+00:00",
+      "elapsed_seconds": 0.08302717501646839,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.stderr.log",
+        "bytes": 2503,
+        "sha256": "8c6140d5a2d44e1a8d355ce55841d09687bbb53ce305486dda15cb9776298828"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_porpoise_analysis",
+      "category": "bridge",
+      "scope": "Measured retained M3 constraints plus explicitly synthetic rotation/mutation analysis fixtures; no biological acceptance.",
+      "tests": 14,
+      "skipped": 0,
+      "expected_tests": 14,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_v2_stage.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:22.118873+00:00",
+      "ended_at_utc": "2026-10-09T17:25:22.413656+00:00",
+      "elapsed_seconds": 0.29479008898488246,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_v2_stage.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_v2_stage.stderr.log",
+        "bytes": 1276,
+        "sha256": "e0f8383d612321de7dac8c7378f009ac54606eaeee175b3f0a20328f2891820c"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_v2_stage",
+      "category": "bridge",
+      "scope": "Actual USD coordinates/layers with fake Kit Services route/context boundaries.",
+      "tests": 8,
+      "skipped": 0,
+      "expected_tests": 8,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_paired_state.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:22.186355+00:00",
+      "ended_at_utc": "2026-10-09T17:25:22.455236+00:00",
+      "elapsed_seconds": 0.26888197899097577,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_state.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_state.stderr.log",
+        "bytes": 3335,
+        "sha256": "e59a13ba9f00e76f066ecb5b9efdbd9db97fca84fd95af602d67f3147b1b5374"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_paired_state",
+      "category": "capture",
+      "scope": "Actual USD freezing, dependency/state/camera hashes and direct geometric GSD/projections.",
+      "tests": 20,
+      "skipped": 0,
+      "expected_tests": 20,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_paired_transaction.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:22.414118+00:00",
+      "ended_at_utc": "2026-10-09T17:25:58.230966+00:00",
+      "elapsed_seconds": 35.81685559201287,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_transaction.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_paired_transaction.stderr.log",
+        "bytes": 2333,
+        "sha256": "ded5a3fe0ed1e92fb428752e49b6fde2a1412cebc19bee7d34d969d4d3f24ef3"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_paired_transaction",
+      "category": "capture",
+      "scope": "Actual USD/PorpoiseActor with fake timeline/viewport/PNG/capture; cleanup, cancellation and unique output-path guards.",
+      "tests": 13,
+      "skipped": 0,
+      "expected_tests": 13,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_dataset_state.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:22.455552+00:00",
+      "ended_at_utc": "2026-10-09T17:25:22.753704+00:00",
+      "elapsed_seconds": 0.2981607989931945,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_state.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_state.stderr.log",
+        "bytes": 3095,
+        "sha256": "26a8af5e445f45c653724062a1cbc29ce74324e5360aea4798ea1ed0e209245b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_dataset_state",
+      "category": "capture",
+      "scope": "Actual USD positive/RemovePrim negative variant, background identity, mesh projection and annotation checks.",
+      "tests": 18,
+      "skipped": 0,
+      "expected_tests": 18,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_dataset_transaction.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:22.754091+00:00",
+      "ended_at_utc": "2026-10-09T17:26:48.053717+00:00",
+      "elapsed_seconds": 85.29963315199711,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_transaction.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_transaction.stderr.log",
+        "bytes": 2100,
+        "sha256": "ea57661d3418edb7bfe64b671fc25b473af633b199953c627a758f4fee6bbb06"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_dataset_transaction",
+      "category": "capture",
+      "scope": "Actual USD/actor with fake Kit capture/timeline; exact10-view variants and failure/restoration guards.",
+      "tests": 11,
+      "skipped": 0,
+      "expected_tests": 11,
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_dataset_routes.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:58.231395+00:00",
+      "ended_at_utc": "2026-10-09T17:25:58.534823+00:00",
+      "elapsed_seconds": 0.30343503202311695,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_routes.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_routes.stderr.log",
+        "bytes": 700,
+        "sha256": "391a30805781e1814dad3f09dba3c34cebf0e3b7621cb7a38648edd7e65987cc"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_dataset_routes",
+      "category": "capture",
+      "scope": "Actual route handlers with fake Kit request/context boundaries; no HTTP service started.",
+      "tests": 4,
+      "skipped": 0,
+      "expected_tests": 4,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_dataset_client.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:58.535209+00:00",
+      "ended_at_utc": "2026-10-09T17:25:59.221312+00:00",
+      "elapsed_seconds": 0.6861091379832942,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_client.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_client.stderr.log",
+        "bytes": 7126,
+        "sha256": "e7ab9dad588f1a68736690eed86ec897e5540dbd911948b59f1dabf61ed29751"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_dataset_client",
+      "category": "capture",
+      "scope": "Actual sealed-source plan plus explicit unit annotation/pixel/transport fixtures and injected bounded no-render headroom retries.",
+      "tests": 42,
+      "skipped": 0,
+      "expected_tests": 42,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_capture_preflight.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:59.221781+00:00",
+      "ended_at_utc": "2026-10-09T17:25:59.283846+00:00",
+      "elapsed_seconds": 0.06206720799673349,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_capture_preflight.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_capture_preflight.stderr.log",
+        "bytes": 408,
+        "sha256": "87ca281329e76562533a735d3112260e52cc6394f2804abc53db592c30c80722"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_capture_preflight",
+      "category": "capture",
+      "scope": "Fake GPU preflight/garbage collection boundaries; no GPU queried or renderer started.",
+      "tests": 2,
+      "skipped": 0,
+      "expected_tests": 2,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_dataset_pending.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:25:59.284180+00:00",
+      "ended_at_utc": "2026-10-09T17:26:06.738641+00:00",
+      "elapsed_seconds": 7.454471098986687,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_pending.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_dataset_pending.stderr.log",
+        "bytes": 5256,
+        "sha256": "da7f01e0fbb4bc73ee4d873eba54d29e4e62555e10bc28d566f071f67dcd0245"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_dataset_pending",
+      "category": "capture",
+      "scope": "Actual12-group source revalidation and exact3 missing states; test-only report/copy mutation fixtures.",
+      "tests": 31,
+      "skipped": 0,
+      "expected_tests": 31,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_counterfactual.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:26:06.739067+00:00",
+      "ended_at_utc": "2026-10-09T17:26:06.876513+00:00",
+      "elapsed_seconds": 0.13746220601024106,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_counterfactual.stderr.log",
+        "bytes": 530,
+        "sha256": "8b986162f2860203d0b93ce8c85db16f2fad06558c5a8d0e01b44484289e523c"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "gama_counterfactual",
+      "category": "capture",
+      "scope": "Explicit synthetic pixel attribution/noise threshold tests; no new render or scientific inference.",
+      "tests": 4,
+      "skipped": 0,
+      "expected_tests": 4,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/qa/test_reconstruction_contract.py",
+        "-v"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:26:06.876946+00:00",
+      "ended_at_utc": "2026-10-09T17:26:06.920980+00:00",
+      "elapsed_seconds": 0.04403986199758947,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_reconstruction_contract.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_reconstruction_contract.stderr.log",
+        "bytes": 1312,
+        "sha256": "75bd9a391631b624cbdfca2717c7eb0e2b6d5b94566991c25fd29f9caa3cb72b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "pilot_reconstruction_contract",
+      "category": "existing_pilot",
+      "scope": "Actual pure verifier functions compiled from AST, with explicit reconstruction/preview evidence mutation fixtures.",
+      "tests": 8,
+      "skipped": 0,
+      "expected_tests": 8,
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/ml/metrics.py"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 0,
+      "started_at_utc": "2026-10-09T17:26:06.921348+00:00",
+      "ended_at_utc": "2026-10-09T17:26:06.932796+00:00",
+      "elapsed_seconds": 0.011452970007667318,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stdout.log",
+        "bytes": 26,
+        "sha256": "501f5553a50c6c5495d60c9ce266f8bf7cbdc8bb66179255673bb843ecf90978"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "pilot_metric_contract",
+      "category": "existing_pilot",
+      "scope": "Existing pure IoU/one-to-one/101-point AP self-test; no model loading, evaluation rerun or training.",
+      "tests": null,
+      "skipped": 0,
+      "expected_stdout": "M7 metric contract passed",
+      "passed": true
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "experiments/gsd_pilot_v1/qa/m7_package.py"
+      ],
+      "cwd": "/home/madil/kit-app-template",
+      "return_code": 1,
+      "started_at_utc": "2026-10-09T17:26:06.933142+00:00",
+      "ended_at_utc": "2026-10-09T17:26:07.358820+00:00",
+      "elapsed_seconds": 0.4256840989983175,
+      "stdout": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stderr.log",
+        "bytes": 362,
+        "sha256": "04007cdaf968f4732bfb923684e4f7426f205d0caff38be21e3632f6fe2d222b"
+      },
+      "explicit_environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+      },
+      "name": "pilot_sealed_package",
+      "category": "existing_pilot",
+      "scope": "Existing completed-seal branch only: retained historical package/source/result/checkpoint hashes; no seal or training-output rewrite.",
+      "tests": null,
+      "skipped": 0,
+      "expected_stdout": "sealed_manifest_verified",
+      "passed": false
+    }
+  ],
+  "total_unittest_cases": 360,
+  "additional_passed_contract_checks": 1,
+  "source_pins_unchanged": true,
+  "source_pin_count": 283,
+  "python_syntax_checked": [
+    {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/run_m8_offline_checks.py",
+      "bytes": 15800,
+      "sha256": "f5d66c3428ff04d5925396672a279f93cfd37c63f65746bfc91e0fe5df45f281"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/ml/metrics.py",
+      "bytes": 4048,
+      "sha256": "8ddb9e602001f699eda4bfb897ce8ec6dff11dede0b7f239a47efa8a9a7dc2c9"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/m7_package.py",
+      "bytes": 5107,
+      "sha256": "289d381bb7d414e6157e438cef3c5e4467da4864e79f957b1241fd98861fbb03"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/test_reconstruction_contract.py",
+      "bytes": 6979,
+      "sha256": "c034593c46bf632830cd56f4efc672456a01b61c90c74d14f2bece5a567e7af6"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/qa/verify_m3_reconstruction.py",
+      "bytes": 13457,
+      "sha256": "23bb4571a8132911e663c9ef490cb6706174b7ba1cf3fe5b562972e7d91ed14d"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/__init__.py",
+      "bytes": 120,
+      "sha256": "7142da410307ab9ee89c01a3205470d5ef6a3e37ac269efde1f9915b5374c774"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "bytes": 7945,
+      "sha256": "4bdce48bae4ed348224371485a74d13a2b7f6f92a3e51aec0450b64862e9aee0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v2.py",
+      "bytes": 11027,
+      "sha256": "769f900b4b095ec25d6baf2ae4e3e689bec24b44167fa6853285f11e3ce63263"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/calibration.py",
+      "bytes": 2687,
+      "sha256": "d86ba20e1147c2c49efe27f38f5769d61705b4935ac5b4c572d406fc412aa637"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/counterfactual.py",
+      "bytes": 4864,
+      "sha256": "fdfefc7358cd07de7e884b174d1c27463d4e376f89c2f95e712a5506559b8297"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py",
+      "bytes": 14951,
+      "sha256": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_v2.py",
+      "bytes": 285,
+      "sha256": "7799aa2a8fa473cbc872da1c331d1e93344d04e8f23153fe98ff7178127b0791"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange.py",
+      "bytes": 6578,
+      "sha256": "ddc5a20b8e83f3e14fa9356b3d485115e8f4ae22ccf03f200c573d8f9981ced1"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v2.py",
+      "bytes": 6161,
+      "sha256": "0d577fa94345bf7d252ff624d49a53f75b7d72c400b4789def69df20a2815e3c"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "bytes": 12143,
+      "sha256": "6a441ec4c4b970e6bd3ea458442fd6fcba80b56b300e00ca7178ee58072e745d"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/marine_check.py",
+      "bytes": 3633,
+      "sha256": "37222aa2f56188256c143ed187c42e62f4021f98a78349ee3ce508ba3953789e"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py",
+      "bytes": 12512,
+      "sha256": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_transaction_v2.py",
+      "bytes": 21905,
+      "sha256": "4496594603e11a9ff26ae4b564f9b48a04f4bce3fb92b2343b664d080452984b"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py",
+      "bytes": 9222,
+      "sha256": "c753bca236e9045da9ef3a5b0682bc884f2f71dd0cfbde310ab53d7416f4b913"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/stage_coordinates.py",
+      "bytes": 2281,
+      "sha256": "f1d9e00ee369b8026aa5e727a3e52f51bf2b90b508a5e35574b9a5d71873250d"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/visual_v2.py",
+      "bytes": 9563,
+      "sha256": "0930661f0a1edd804848dddbd69afd8fc9ae8505c98a6ecf9eaec11eca646ee1"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/__init__.py",
+      "bytes": 574,
+      "sha256": "5542e446be96bec5a2ecd635a9ab08954846a4070d816eff40315d7dd995b76f"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/api.py",
+      "bytes": 168,
+      "sha256": "7a418e9d884ca7a2d047fe4547a9a93742f54cf30116804ae6e09b77dbb5df8d"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/bartlett_geometry.py",
+      "bytes": 5091,
+      "sha256": "741cad9548608693f91380db9543d6de8d4bf47b96cf05bb6c26c133dec0c262"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_capture.py",
+      "bytes": 4887,
+      "sha256": "ed33a98cfae58a24fac0396d7d43ffa2cffcafcfeff92e148167b1dae863b99d"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py",
+      "bytes": 9978,
+      "sha256": "56908d2d2bbe3efa5c80f82723e8ee62d9cf0bb27761bc80f2e6fc9da98a147c"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/camera.py",
+      "bytes": 15100,
+      "sha256": "df09b25ff91475a8b053655b60813b5e037dbadbc852240afdc8376b4b6913dc"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/camera_math.py",
+      "bytes": 5261,
+      "sha256": "daa47feded36e3aeb9d2205fb9841b7c4efac0d1a286801895f0c133ba88b4df"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/capture_projection.py",
+      "bytes": 4884,
+      "sha256": "1ac66e44d62a31da3747691702f90bf82f10adf3af3772c11656f83f149a5021"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/capture_state.py",
+      "bytes": 98,
+      "sha256": "3f2353e95ff673b4c87844a51058e1dd43c46935cb2c054cb8f622c2432e9dab"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/cetacean.py",
+      "bytes": 33242,
+      "sha256": "96c0be5afd568542616bb43d7abc698754cf9313832328105b24ab9fd8fe394e"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/cetacean_gallery.py",
+      "bytes": 20777,
+      "sha256": "49744e0f8b18d1e62ec42a8fb961135b85478c451fd555a7954bfb56b713a687"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/cetacean_motion.py",
+      "bytes": 4265,
+      "sha256": "73b60898bfaa4f446dcbd4d250741899a11a5838202ae9d66e9da73edeed5011"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/config.py",
+      "bytes": 472,
+      "sha256": "fb093faf523d56a8b0b06b1d5a556decf6332e27caea60d9924acb80f59e66a6"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/environment.py",
+      "bytes": 8732,
+      "sha256": "c9885d27786c48a99bb853c24867665017aa0bd4902ca1db39aa924aef537c3c"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/extension.py",
+      "bytes": 2464,
+      "sha256": "47032b731eee2c6a01bd3b59087d63ecd7af1fb9156f073b7d3720dcf4227731"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/gentle_environment.py",
+      "bytes": 6329,
+      "sha256": "3e215e9aa7163e88e3afaeff6d7dcc25c2cfce5ddbc85f71d03de0db45731132"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_api.py",
+      "bytes": 1390,
+      "sha256": "0fbe24dd16dc05e922cd8def16a8216d5fa957bfa785bd568b9aa65989694e22"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_camera.py",
+      "bytes": 4463,
+      "sha256": "2f00c98e11d195226e12dfce66a7c2140431efa31bebf78b812faba94f9fc3c5"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_maps.py",
+      "bytes": 3601,
+      "sha256": "c27e832a92a66c33e67561a26031e4079f02c594fa61f04f51718a18262774d7"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_marine.py",
+      "bytes": 27435,
+      "sha256": "ad861016111964fb2dc4056099cc5b3cc484135973544bfb2ce69e218d16dc40"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/movement.py",
+      "bytes": 1741,
+      "sha256": "cbb251d2b15e574b3f0cea1ff7d782e23a32d94b48b0badb8f3542ec348105d0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/native_tiles.py",
+      "bytes": 9606,
+      "sha256": "1ed26c4733c18fb8b23f5405753f8d8bbc5495691ac1899af4e50d6645127de7"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py",
+      "bytes": 33442,
+      "sha256": "e06d64892c5b583e2a01b2b22a4a0ab7b3d7fa5f4ee256bd1b8baf715886d59b"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/petrel_api.py",
+      "bytes": 3296,
+      "sha256": "6e082094fdc9deb591b880acbd7071a0b29d099e224531ebd17d1ddf603f3f53"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/petrel_playback.py",
+      "bytes": 7262,
+      "sha256": "003e74c7e171b2e5c18568b564fd4e4b37bea20ad1540014566190a2ec29e5a4"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/scene_diagnostics.py",
+      "bytes": 7226,
+      "sha256": "8966b60c15310b549bb7376cec38492efab9a13d6955b9661f84d2520b336bac"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py",
+      "bytes": 10071,
+      "sha256": "cf30e54cf9e09a727e62db71aa649ede5a8dc36a71bfcd960a4cc7feadce6a32"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/sdk_tile_capture.py",
+      "bytes": 7842,
+      "sha256": "48409fbe48a98e3f5df227c9e9362857eb05c6ef7faea77a1fc5b5b3ca17c26e"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/service.py",
+      "bytes": 6537,
+      "sha256": "468039f13d9713abc6bc28470ba898b2a56c8e92a5da8a1017273e9d09b862de"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py",
+      "bytes": 5241,
+      "sha256": "499f8a0167293cd38457c79bcd772daa7b8e78d559a037042114de57e088f504"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/sony_api.py",
+      "bytes": 955,
+      "sha256": "5148fb88f03510791e6918ed5f7c84f32bb928841e9d6939a91c466f9142261a"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/sony_camera.py",
+      "bytes": 4576,
+      "sha256": "aa07e8eb489b7f85be1f92b3911c4ee83c9a7f8238f5d5534ef050a0a1f0b59c"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/survey_environment.py",
+      "bytes": 3529,
+      "sha256": "64c5e083ecf5ff0841a7ad15f1174f3d840d8f166d02b8b3162e9015900ffee5"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/survey_gallery.py",
+      "bytes": 8334,
+      "sha256": "005fb920247f85d039debae8ca35f54ac7d06316d3a1ae42fff9aa0e3cd8e718"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/survey_spec.py",
+      "bytes": 9096,
+      "sha256": "15ad60a00579811092e0b0078897ac56f4f812ac4c3193e1e948a046ee1b3a1b"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_baked_animation.py",
+      "bytes": 1204,
+      "sha256": "4224de05e8e3a5b1941a6724e1326e3403bce1d0aff3d335009bc8df59a82024"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_bartlett_geometry.py",
+      "bytes": 3043,
+      "sha256": "966fb2d693db70c9985085f52e4cc6cb09bd4211422899a4717f94e33c5e01f6"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_calibration_geometry.py",
+      "bytes": 4323,
+      "sha256": "8225a8bb98254229357aaebd05caa73d9d5a10802f79ddbcb1653c251cb2fd48"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_camera_evidence.py",
+      "bytes": 3108,
+      "sha256": "3709cb2e245cfb9261abef09c45e0a64870c707c9925dfa0351c5eaf72abb708"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_camera_math.py",
+      "bytes": 3783,
+      "sha256": "ed4e23cf94f2b4b981065ba61bbef2e5dc4b20e15db45cfb3a855da08c8fb678"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_cetacean_gallery.py",
+      "bytes": 1411,
+      "sha256": "ad3100dde8775fdfdf66dbd4ee4d1d3b0d6d864d24efc42375b0367bb3982dac"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_cetacean_motion.py",
+      "bytes": 2528,
+      "sha256": "4dc647bee3845389bd9a1458c5232b103d30aa622f092d254460fea77bb2d4bf"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_gentle_environment.py",
+      "bytes": 1698,
+      "sha256": "092697e5a344bc0e44dc2143543b629c3d114f4bf586fdf108a54b022c77bc0e"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_hidef_camera.py",
+      "bytes": 2350,
+      "sha256": "6dd1c1d3b90fbd254c5c7d8e6719fff58aa2b424edbdc3e46e345deb61a5eed2"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_movement.py",
+      "bytes": 1496,
+      "sha256": "55e0c370dc679fbd0698ce531f1c14a9ffedb00e01b1d2350374afe9879a1e2e"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_petrel_playback.py",
+      "bytes": 4701,
+      "sha256": "07741dcd77e9acfe836188afb4c6aa7e422687426abed378295bfa6576b0217f"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_renderer_snapshot.py",
+      "bytes": 7912,
+      "sha256": "0dadbe31fe117bd3906ea8e58051c3b06c0721a359999a4e5e9e3c1187cff0cf"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_survey_gallery.py",
+      "bytes": 1174,
+      "sha256": "5599a952efb352e3bb2ead1d473d16950e8591f788a589758bf710757de72efa"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_survey_spec.py",
+      "bytes": 3905,
+      "sha256": "fe191f2d136e69ec7fa41a82d84572125fcea049cfd6bb17ee59a93b8ac23ed9"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_underwater_cue.py",
+      "bytes": 2100,
+      "sha256": "af3cd361cb4c339af7e5933ae98e0c15c943c6b6720f01d3363e69c6f1a22cd9"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_water_material.py",
+      "bytes": 2134,
+      "sha256": "4ec996bff095eafd3c09f30a7b3d0110ea84eae16e46420ecd605b24277a81ff"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/underwater_api.py",
+      "bytes": 3537,
+      "sha256": "a7c9e578a26311e18ae6484a7b20ab04eacefdef05029b2a64b8de635eee3ea1"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/underwater_cue.py",
+      "bytes": 2147,
+      "sha256": "e527950f77db3de5e57af2334b45790b2333f21e5d2a7b49c075be6e22acf43b"
+    },
+    {
+      "path": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/water_material.py",
+      "bytes": 2158,
+      "sha256": "989a62289312d79727a6aed876d21dbb6f34ad402bdc51de0b9af08a07f22a39"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/aggregate_gama_dataset_v2.py",
+      "bytes": 17498,
+      "sha256": "8effbf8b9dd03c337e6c1e1ae47ba08733b6d43d3c63f646689f411c5de82ff0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/analyse_gama_counterfactual.py",
+      "bytes": 6252,
+      "sha256": "2fff8d6c9c0f7927dd56c9b826c4893be68c2ac10e963caa727de62dab6459a9"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/analyse_tile_diagnostics.py",
+      "bytes": 4711,
+      "sha256": "0687259e621c1dbe7b8f8d5e09cb52dd9d8eea91f77bd7c3c062fbe5c1a318ad"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/analyze_gama_porpoise.py",
+      "bytes": 15523,
+      "sha256": "d4d9d4ce74f2d11af3384b8ec4cfeae23a275416be99f762df0bfef0ce8ed1c2"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/audit_hidef_camera.py",
+      "bytes": 8298,
+      "sha256": "b22e19b8b3985d5d881b6e2ab55b698ac9a541ee48439262b8e258ce6e8884dd"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/bake_dolphin_animation.py",
+      "bytes": 3946,
+      "sha256": "40d843552845301197fcffc0d4549441251022bbf5e411bc31a33a75fef56729"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/build_gama_porpoise_demo.py",
+      "bytes": 18305,
+      "sha256": "74f8c00c9abcdec74d70b97cef1fdc2f5bb55daee5d945d033a8f9c801a25463"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/calibrate_porpoise.py",
+      "bytes": 7135,
+      "sha256": "9ee51b2197407d5499cd96bf26efbcb95dfc788a3f23d771fc232323e04d12a3"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/capture_calibration_target.py",
+      "bytes": 6923,
+      "sha256": "af1b735c00b253029940bc18721d2c1bb06a9e271419652f4e12ab1f72c725ce"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/capture_gama_dataset_pending_v2.py",
+      "bytes": 25257,
+      "sha256": "aa8e816606e910e616169a2075877ee18d43c5070a51f134900612ec050f53ca"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/capture_gama_dataset_v2.py",
+      "bytes": 60165,
+      "sha256": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/capture_hidef_marine.py",
+      "bytes": 2321,
+      "sha256": "4cb2416c29e4d4b1cb2dd3e09286e101725df59e52f2d4b1b35a62a29c672cb0"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/capture_sony_marine.py",
+      "bytes": 182,
+      "sha256": "cbd5212257c180f45f76a59af49cf90fbd0823a15036002f619c3cc57264af53"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/clean_bird_working_copies.py",
+      "bytes": 6582,
+      "sha256": "dfa88e294b1750262bc57561aaa374a773dbbc911c226273f856496322e5f6c8"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/control_petrel_playback.py",
+      "bytes": 952,
+      "sha256": "f3c9a8f481db365e0c9789312f3b39d59acd6c22920d6e347a0d4061be119326"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/export_gama_dataset_v2.py",
+      "bytes": 13485,
+      "sha256": "4ae35d54a0efd8c242a91319404d9949460dc6cafd45cebd3316277aa9c75a88"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/fix_guillemot_preview_material.py",
+      "bytes": 1927,
+      "sha256": "e2e1dcab6b2f3562f440fdcb1acfaae5a9dba4a098783701da6397836d5ab333"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/gama_live.py",
+      "bytes": 9735,
+      "sha256": "debe8a1b98ec1c5be457347d2e37fccc69f0e18c5fedf372a1acfcb5ddb0d974"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/gama_porpoise.py",
+      "bytes": 15984,
+      "sha256": "6585d102d7a91b5f8d43166f92e634d2b0e3e529b3ee114670e7697954bedc96"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/gama_trajectory.py",
+      "bytes": 5660,
+      "sha256": "924e5c75acc919bafb66cab19e9ddbe1edd3d627fed5276d2ce4d17d789a3730"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/gltf_to_usd.py",
+      "bytes": 3644,
+      "sha256": "2742296d9c4aa41dbf8fbb7eb5d6b9a9baee297522770a8100653d70a16c6821"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/inspect_gama_bottlenose.py",
+      "bytes": 1715,
+      "sha256": "02266f0da01dbcabc13b08e4da3634caccdd949de1783cffa43f8cd433543488"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/inspect_petrel.py",
+      "bytes": 4918,
+      "sha256": "5244041170e6a901d7d9cfb7582a55de5c1e479578aea89a47da3a26fcc960ea"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/inspect_porpoise.py",
+      "bytes": 3738,
+      "sha256": "75417b58857d22e8ba56ada6b4e2f55a5a2d6427062fca2bff06f7b04462041b"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/plot_gama_bottlenose.py",
+      "bytes": 2317,
+      "sha256": "3889ddbd288b5286a0ecd80e73cbadf4ae60cfc71b939c0beef21a27b279449b"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/plot_gama_porpoise_m5.py",
+      "bytes": 17654,
+      "sha256": "9dcf1c5be546d4a9b9dec9e51fa61323a3917275e82707a43444b3f3c8663d39"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/preview_petrel_rig.py",
+      "bytes": 2621,
+      "sha256": "812e90b268c47cb4a99868c482cc6b34298b0472b33012c1c20c7d05ad188ada"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/preview_porpoise_in_kit.py",
+      "bytes": 4580,
+      "sha256": "f33b8f585bf907a4d26bfe2ac56c6241651f752a76367b013ccf462f937b5887"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/review_hidef_marine.py",
+      "bytes": 4977,
+      "sha256": "5675f6a22b85623fb91f7fd4cb90618fe840a88990a7ba381fe9ae36c32e0704"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/review_porpoise_top.py",
+      "bytes": 1422,
+      "sha256": "24a3fde430951ed396929eb7f23b07b21d6dd61f82d4e7f93c19216a363f6942"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/rig_petrel.py",
+      "bytes": 10920,
+      "sha256": "408f3cb7335d97a14cf66394f4bd1d2410b68bc4ff7c1540f5d057d3b9d3a8b7"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/run_gama_porpoise_m5.py",
+      "bytes": 7849,
+      "sha256": "8cf8ff09b23a4157526633734355f6872b01d44b85c02291547d673d3830c7de"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_capture_projection.py",
+      "bytes": 4289,
+      "sha256": "b7ce8159afe3ff534040905cee15954f7494e51fe319ad38ef88b45f3819f7cd"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_actor.py",
+      "bytes": 6318,
+      "sha256": "875da8f880cae8833b2648a85ccbe1797f7cced3bafb7b7c6c14b64c2668f97e"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_actor_v2.py",
+      "bytes": 25626,
+      "sha256": "1eb92d5936546f1de7a8d75657ba006d58ca9cefa418817e859bf2d88537b14f"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_capture_preflight.py",
+      "bytes": 1769,
+      "sha256": "b8928f62f9b8da6be634ee69bc4c1335940b4402ab8688d00ca6447e0ccd41d4"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_counterfactual.py",
+      "bytes": 1023,
+      "sha256": "61b25f7e2dc9b97b449422dd98b78b1a218ff0ed125c8b9ce36e61c87bd3b728"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_dataset_client.py",
+      "bytes": 36187,
+      "sha256": "3824210fbc376dc55b7bcd2ff6b00a29c88b766a01b8c5f8eb50f9045ab53586"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_dataset_pending.py",
+      "bytes": 20923,
+      "sha256": "6ea9907ded505876b316263bdf6edba9d117ac530de459fb1ec51b769080960c"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_dataset_routes.py",
+      "bytes": 2989,
+      "sha256": "009ae50eec727a0470e07ecf5c56b2b33bb435e4a311672d27da471575edfe1a"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_dataset_state.py",
+      "bytes": 14106,
+      "sha256": "50b19da8b753963f298988afaed258fe2e0006a14385e75552cf7f1ad53b3968"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_dataset_transaction.py",
+      "bytes": 13669,
+      "sha256": "5f4327f83177360adaf83466326fab609710f106abc1301e03f383aa13f537f1"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_exchange.py",
+      "bytes": 7569,
+      "sha256": "e9d8fae8ef310d2f7f12c4802f5677f11cfec12d7096f7ec5d89f754856774b9"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_exchange_v2.py",
+      "bytes": 20276,
+      "sha256": "fd262f086636b1f3352c7836135b519d1211756478ba27e07ac845c0f578c214"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_live.py",
+      "bytes": 2173,
+      "sha256": "fa0f3e47cade2025c979b65419b34055807f019c3179894ce52002ad48e72177"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_paired_state.py",
+      "bytes": 16830,
+      "sha256": "688c4e0660dfa5f1ede4a9255d9f4542a1e0e51e18080be5f41ca3400e299565"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_paired_transaction.py",
+      "bytes": 23361,
+      "sha256": "49f6fc9271aff515531a1124d32358ecc4f351b24503cd66d0ff60e671d32e51"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_porpoise.py",
+      "bytes": 7409,
+      "sha256": "be1dd9d9dcf6db33d7eb98aa125e4a1a2b752ac2ff5639ef465b3b3d0da596dc"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_porpoise_analysis.py",
+      "bytes": 9709,
+      "sha256": "a67c903a01ecc9f4c1eb1a1e21d1ad739bb3646673a12d7a1e3cb9ab73294c99"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_gama_v2_stage.py",
+      "bytes": 8352,
+      "sha256": "046502a88097f637ad2f7c91c11adee4b3cb8bdb7b962eb43f7c527f451138b6"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_hidef_marine.py",
+      "bytes": 8812,
+      "sha256": "102b20e67fe88249be2115b1d67856c8684e7570b52fb2fe5d5025164436af16"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_native_tiles.py",
+      "bytes": 4444,
+      "sha256": "6b7d74ca1e50f17ca9770c38f6e3448f811772c7231c37c3999408f04462537c"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_sony_camera.py",
+      "bytes": 3719,
+      "sha256": "9156df214039a6689e3e5e1ea183e36c9d1f3e2df26a3fe203114c9a96b9f79a"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/test_tile_diagnostics.py",
+      "bytes": 2847,
+      "sha256": "b46f35022322d765c52cd0e7751de0145f73abc82ac93affd99bd0747552c155"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/validate_bartlett_camera.py",
+      "bytes": 6696,
+      "sha256": "91a9c8f13666c655b900895b3b335c8814da6719564cc379dd215cde99346f02"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/validate_hidef_reconstruction.py",
+      "bytes": 2550,
+      "sha256": "7e211b54c27ec6fda1fec1b18ef00a080010a393520bae460cb95269d45603f6"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/validate_petrel_usd.py",
+      "bytes": 3947,
+      "sha256": "45588f905b3d58831e0036670d4b75df574c3ff1b766b5f98ec2067ed972dbac"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_capture_projection.py",
+      "bytes": 4960,
+      "sha256": "ae0cdc16a7fa2e3ec1082aad75dc16e303d6f4441792887347a69538052839d4"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_gama_capture.py",
+      "bytes": 8771,
+      "sha256": "8459d55f6632b97b3ee07c66ee8bf20e77197f335139856f5af3647b57fbceae"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_gama_m8_demo.py",
+      "bytes": 5311,
+      "sha256": "fe9b491e575ad1280052275623ead3f318a1e03b80c5438cb2dd2451c6821e57"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_gama_marine.py",
+      "bytes": 4214,
+      "sha256": "dbcb75cc260974c3ca2ed225c16c726b82c5d506b0744f62c6a3784db6f9b0d8"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_gama_paired_live.py",
+      "bytes": 32316,
+      "sha256": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_gama_porpoise_live.py",
+      "bytes": 12380,
+      "sha256": "cf865ab59457a0f76388bff4c62a418c1145d0add6ba32d32839e1d57d850493"
+    },
+    {
+      "path": "/home/madil/kit-app-template/tools/verify_tile_diagnostic.py",
+      "bytes": 2680,
+      "sha256": "d18c2f2cbf1ebfac90d2d032e889fae9b6b64034620bda3a85c4d16e50c63084"
+    }
+  ],
+  "git_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/madil/kit-app-template",
+    "return_code": 0,
+    "started_at_utc": "2026-10-09T17:26:48.119507+00:00",
+    "ended_at_utc": "2026-10-09T17:26:48.130360+00:00",
+    "elapsed_seconds": 0.010850282007595524,
+    "stdout": {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/git_diff_check.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stderr": {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/git_diff_check.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "explicit_environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+    }
+  },
+  "live_kit_calls_made": false,
+  "new_gpu_renders": 0,
+  "new_gama_executions": 0,
+  "ml_training_started": false,
+  "biological_approval": false,
+  "live_marine_demonstration_certified_by_this_command": false,
+  "live_mutating_runner_left_to_root": {
+    "path": "tools/verify_gama_marine.py",
+    "requirements": "Already running11gallery swimmers and ocean; actor acquire, actual trajectory step replay, GPU capture, release and after-cleanup audits. Not executed by this offline command."
+  },
+  "historical_runner_not_executed": {
+    "path": "experiments/gsd_pilot_v1/qa/m8_regressions.py",
+    "reason": "Its logs/report target sealed Pilot filenames; equivalent checks ran into this new directory."
+  },
+  "passed": false
+}

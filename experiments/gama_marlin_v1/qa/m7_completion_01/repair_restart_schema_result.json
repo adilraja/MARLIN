@@ -1,0 +1,791 @@
+{
+  "actual_nested_exit_codes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "actual_restart_groups": 3,
+  "actual_restart_phases": 6,
+  "actual_restart_records": [
+    {
+      "animation_phase_preserved": false,
+      "directory": "experiments/gama_marlin_v1/qa/kit_restart_01",
+      "phases": [
+        {
+          "actual_command": [
+            "/usr/bin/python3",
+            "-B",
+            "experiments/gama_marlin_v1/qa/kit_restart_01/restart_kit.py",
+            "stop-launch"
+          ],
+          "actual_tool_output_binding": {
+            "actual_final_chunk_bytes": 222,
+            "actual_final_chunk_sha256": "d209f0c1c457478c2f7313d7d06d51d27d92da05c5ae8704a2825f09e6d115ef",
+            "actual_nested_exit_code": 0,
+            "earlier_prefix_bytes": 52,
+            "earlier_prefix_is_new_independent_tool_observation": false,
+            "earlier_prefix_matches_frozen_helper_print_contract": true,
+            "execution_output_scope": "final_yielded_stdout_chunk_only",
+            "retained_combined_stdout_bytes": 274,
+            "retained_combined_stdout_sha256": "9b669fbeea97a6b76652c790df6d2a2a76399df7684dfe8b21f3bcde6466ab75",
+            "retained_log_equals_final_chunk": false,
+            "top_level_return_code_present": false
+          },
+          "execution": {
+            "bytes": 684,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_execution.json",
+            "sha256": "e3e2570e1b38c08ff93f11a42d3796421b5a3a22bbd9a1389fb868ba0edeaf3e"
+          },
+          "result": {
+            "bytes": 42860,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_result.json",
+            "sha256": "452fb13d91c4dd49a2894284271059f2949cfae7a01a4e9b46a3e99a2125fae9"
+          },
+          "retained_command_log": {
+            "bytes": 274,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_command.log",
+            "sha256": "9b669fbeea97a6b76652c790df6d2a2a76399df7684dfe8b21f3bcde6466ab75"
+          },
+          "source_status": true
+        },
+        {
+          "actual_command": [
+            "/usr/bin/python3",
+            "-B",
+            "experiments/gama_marlin_v1/qa/kit_restart_01/restart_kit.py",
+            "restore"
+          ],
+          "actual_tool_output_binding": {
+            "actual_final_chunk_bytes": 210,
+            "actual_final_chunk_sha256": "d5279b1b6e4c86f0e426b8ec23c6b69cea8da1160e01525b2d11cb22f84f8ef9",
+            "actual_nested_exit_code": 0,
+            "earlier_prefix_bytes": 0,
+            "earlier_prefix_is_new_independent_tool_observation": false,
+            "earlier_prefix_matches_frozen_helper_print_contract": false,
+            "execution_output_scope": "final_yielded_stdout_chunk_only",
+            "retained_combined_stdout_bytes": 210,
+            "retained_combined_stdout_sha256": "d5279b1b6e4c86f0e426b8ec23c6b69cea8da1160e01525b2d11cb22f84f8ef9",
+            "retained_log_equals_final_chunk": true,
+            "top_level_return_code_present": false
+          },
+          "execution": {
+            "bytes": 667,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_execution.json",
+            "sha256": "3c5ec47cd928ab2a74aa3e1d73264184ea7bbce124475dd883e510bb70a7c8ea"
+          },
+          "result": {
+            "bytes": 125900,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_result.json",
+            "sha256": "9a2f1bf39b0d233c3b3a468046267184ce8344330948ee9e76c1730d1e83d729"
+          },
+          "retained_command_log": {
+            "bytes": 210,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_command.log",
+            "sha256": "d5279b1b6e4c86f0e426b8ec23c6b69cea8da1160e01525b2d11cb22f84f8ef9"
+          },
+          "source_status": true
+        }
+      ]
+    },
+    {
+      "animation_phase_preserved": false,
+      "directory": "experiments/gama_marlin_v1/qa/kit_restart_02",
+      "phases": [
+        {
+          "actual_command": [
+            "/usr/bin/python3",
+            "-B",
+            "experiments/gama_marlin_v1/qa/m7_completion_01/repeat_kit_restart.py",
+            "stop-launch",
+            "--old-pid",
+            "2816844",
+            "--output",
+            "experiments/gama_marlin_v1/qa/kit_restart_02"
+          ],
+          "actual_tool_output_binding": {
+            "actual_final_chunk_bytes": 222,
+            "actual_final_chunk_sha256": "b392633be9a340348ce35818b63435bcd74cd45a5c4d9fafd3398004542630c5",
+            "actual_nested_exit_code": 0,
+            "earlier_prefix_bytes": 52,
+            "earlier_prefix_is_new_independent_tool_observation": false,
+            "earlier_prefix_matches_frozen_helper_print_contract": true,
+            "execution_output_scope": "final_yielded_stdout_chunk_only",
+            "retained_combined_stdout_bytes": 274,
+            "retained_combined_stdout_sha256": "f5a6745ca6089a0ff421677d12838f54a84e279e64448d346fb989f618d977d5",
+            "retained_log_equals_final_chunk": false,
+            "top_level_return_code_present": true
+          },
+          "execution": {
+            "bytes": 813,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_execution.json",
+            "sha256": "b2fadb1f61b72b57905e6e15dee1bdb2a5c1dc0881945a3381dcf67ad7dee33c"
+          },
+          "result": {
+            "bytes": 43090,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_result.json",
+            "sha256": "c6e9bc363156869cae8942baf3a196bc6c3675351a884baed11a4cd52cad3d29"
+          },
+          "retained_command_log": {
+            "bytes": 274,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_command.log",
+            "sha256": "f5a6745ca6089a0ff421677d12838f54a84e279e64448d346fb989f618d977d5"
+          },
+          "source_status": true
+        },
+        {
+          "actual_command": [
+            "/usr/bin/python3",
+            "-B",
+            "experiments/gama_marlin_v1/qa/m7_completion_01/repeat_kit_restart.py",
+            "restore",
+            "--output",
+            "experiments/gama_marlin_v1/qa/kit_restart_02"
+          ],
+          "actual_tool_output_binding": {
+            "actual_final_chunk_bytes": 210,
+            "actual_final_chunk_sha256": "4d478a76d0e08d1ec5e0f415061c941c8da13cecdd8bf99f4326c5de412816e4",
+            "actual_nested_exit_code": 0,
+            "earlier_prefix_bytes": 0,
+            "earlier_prefix_is_new_independent_tool_observation": false,
+            "earlier_prefix_matches_frozen_helper_print_contract": false,
+            "execution_output_scope": "final_yielded_stdout_chunk_only",
+            "retained_combined_stdout_bytes": 210,
+            "retained_combined_stdout_sha256": "4d478a76d0e08d1ec5e0f415061c941c8da13cecdd8bf99f4326c5de412816e4",
+            "retained_log_equals_final_chunk": true,
+            "top_level_return_code_present": true
+          },
+          "execution": {
+            "bytes": 764,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_execution.json",
+            "sha256": "da5bcf1b45d81972cb48bfd58c2f6894ada8afd64b3c7c7b88cfdb9f984fdea9"
+          },
+          "result": {
+            "bytes": 126660,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_result.json",
+            "sha256": "b72bb7bf07273f3024cc51d5191ca492d4dedaf232556deff2cc67de200395de"
+          },
+          "retained_command_log": {
+            "bytes": 210,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_command.log",
+            "sha256": "4d478a76d0e08d1ec5e0f415061c941c8da13cecdd8bf99f4326c5de412816e4"
+          },
+          "source_status": true
+        }
+      ]
+    },
+    {
+      "animation_phase_preserved": false,
+      "directory": "experiments/gama_marlin_v1/qa/kit_restart_03",
+      "phases": [
+        {
+          "actual_command": [
+            "/usr/bin/python3",
+            "-B",
+            "experiments/gama_marlin_v1/qa/m7_completion_01/repeat_kit_restart.py",
+            "stop-launch",
+            "--old-pid",
+            "2914120",
+            "--output",
+            "experiments/gama_marlin_v1/qa/kit_restart_03"
+          ],
+          "actual_tool_output_binding": {
+            "actual_final_chunk_bytes": 222,
+            "actual_final_chunk_sha256": "ada9dff06e64ebc515a7ffbe390bf0f656b0e385752c8da62b93552f9ae19099",
+            "actual_nested_exit_code": 0,
+            "earlier_prefix_bytes": 52,
+            "earlier_prefix_is_new_independent_tool_observation": false,
+            "earlier_prefix_matches_frozen_helper_print_contract": true,
+            "execution_output_scope": "final_yielded_stdout_chunk_only",
+            "retained_combined_stdout_bytes": 274,
+            "retained_combined_stdout_sha256": "2a1ec44535b24c428cdef70a5734cf0ac64f6ba4ef562a0b267d8d6fd615a315",
+            "retained_log_equals_final_chunk": false,
+            "top_level_return_code_present": true
+          },
+          "execution": {
+            "bytes": 813,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_execution.json",
+            "sha256": "3284e5b87cbf52e8ffab596ad976aca5511b45e466d71e4d5918fc5be9de7f2c"
+          },
+          "result": {
+            "bytes": 43064,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_result.json",
+            "sha256": "857dccb811ada92b57cd0cdc15ed900a193cd233604bba35a3ea90597e613264"
+          },
+          "retained_command_log": {
+            "bytes": 274,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_command.log",
+            "sha256": "2a1ec44535b24c428cdef70a5734cf0ac64f6ba4ef562a0b267d8d6fd615a315"
+          },
+          "source_status": true
+        },
+        {
+          "actual_command": [
+            "/usr/bin/python3",
+            "-B",
+            "experiments/gama_marlin_v1/qa/m7_completion_01/repeat_kit_restart.py",
+            "restore",
+            "--output",
+            "experiments/gama_marlin_v1/qa/kit_restart_03"
+          ],
+          "actual_tool_output_binding": {
+            "actual_final_chunk_bytes": 210,
+            "actual_final_chunk_sha256": "dd82a45d62607c7b0317ed7a1e312228ed0d614a629ed769e0b6c5d6321bd6ac",
+            "actual_nested_exit_code": 0,
+            "earlier_prefix_bytes": 0,
+            "earlier_prefix_is_new_independent_tool_observation": false,
+            "earlier_prefix_matches_frozen_helper_print_contract": false,
+            "execution_output_scope": "final_yielded_stdout_chunk_only",
+            "retained_combined_stdout_bytes": 210,
+            "retained_combined_stdout_sha256": "dd82a45d62607c7b0317ed7a1e312228ed0d614a629ed769e0b6c5d6321bd6ac",
+            "retained_log_equals_final_chunk": true,
+            "top_level_return_code_present": true
+          },
+          "execution": {
+            "bytes": 764,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_execution.json",
+            "sha256": "61e599bed7ee924bbe56d8f0668c9c6fa2b23e3c5bdb0056f5f96aa90a186b7b"
+          },
+          "result": {
+            "bytes": 126665,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_result.json",
+            "sha256": "82dc2d9dd71bfc3bb33fea101f2aee9e9cb90934b5fe3ee18e4795fecf18a3c1"
+          },
+          "retained_command_log": {
+            "bytes": 210,
+            "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_command.log",
+            "sha256": "dd82a45d62607c7b0317ed7a1e312228ed0d614a629ed769e0b6c5d6321bd6ac"
+          },
+          "source_status": true
+        }
+      ]
+    }
+  ],
+  "all_inputs_unchanged": true,
+  "ast_passed": true,
+  "checks_passed": 14,
+  "finalizer_sha256": "43f0c92d2b06e8f2dfc77a39839fd697ffdad12fc2eed38b4a5dd8c92a67fbeb",
+  "full_finalizer_main_executed": false,
+  "input_pins_after": [
+    {
+      "bytes": 363,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/launch_record.json",
+      "sha256": "363b4faf627cb0ae4d7c653d46cb31c7e3e9a81ff0cdde7e80070a5efae1ebae"
+    },
+    {
+      "bytes": 220968,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/live_demo/results.json",
+      "sha256": "6fc603d0aab7def308ef217aa06c867b0d487b079884b307f3c03fc7f7f51829"
+    },
+    {
+      "bytes": 1018,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/live_demo_command.log",
+      "sha256": "4038fc1ac11bcd07bc53ee299daeb20dae57781b434d2208eaafa3870adf15c0"
+    },
+    {
+      "bytes": 1572,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/live_demo_execution.json",
+      "sha256": "1d0143edb0f0d5ecb17c6d174f112bec383cbe7b30350b461a2bdbe07a4c43a2"
+    },
+    {
+      "bytes": 599,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection.log",
+      "sha256": "9ad0e0ffc0794ff1e41261767fb2d4a48c115ac7df229bb48435b564cf1e0149"
+    },
+    {
+      "bytes": 12787,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection.py",
+      "sha256": "4d02ce01e66609ffa1c646a09e8b0ac306166c16b54ec91bec134d125985073f"
+    },
+    {
+      "bytes": 165,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection_command.txt",
+      "sha256": "fbd12bb02d57897c2477579c9797613040144891653e2613c6d6a56b15e49f41"
+    },
+    {
+      "bytes": 655,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/preservation.json",
+      "sha256": "81631841cb5875d2d5ab56cb8beade16b12a15ee61aac8bfcd6ccb92ff9d6c9d"
+    },
+    {
+      "bytes": 59651,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/recovery_payloads.json",
+      "sha256": "53d03eafa3c10428825af9abf9d260a77d2d4d935efbc484aee62ab4cf307a37"
+    },
+    {
+      "bytes": 10950,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restart_kit.py",
+      "sha256": "4ae76f3f1cab28f06808f2d7a51e01a365ed9875f8ca68f35991b8576944e224"
+    },
+    {
+      "bytes": 210,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_command.log",
+      "sha256": "d5279b1b6e4c86f0e426b8ec23c6b69cea8da1160e01525b2d11cb22f84f8ef9"
+    },
+    {
+      "bytes": 667,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_execution.json",
+      "sha256": "3c5ec47cd928ab2a74aa3e1d73264184ea7bbce124475dd883e510bb70a7c8ea"
+    },
+    {
+      "bytes": 125900,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_result.json",
+      "sha256": "9a2f1bf39b0d233c3b3a468046267184ce8344330948ee9e76c1730d1e83d729"
+    },
+    {
+      "bytes": 274,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_command.log",
+      "sha256": "9b669fbeea97a6b76652c790df6d2a2a76399df7684dfe8b21f3bcde6466ab75"
+    },
+    {
+      "bytes": 684,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_execution.json",
+      "sha256": "e3e2570e1b38c08ff93f11a42d3796421b5a3a22bbd9a1389fb868ba0edeaf3e"
+    },
+    {
+      "bytes": 42860,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_result.json",
+      "sha256": "452fb13d91c4dd49a2894284271059f2949cfae7a01a4e9b46a3e99a2125fae9"
+    },
+    {
+      "bytes": 363,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/launch_record.json",
+      "sha256": "0a7c8ad2b74dbb01b9aa7e915ccc9d7386a856c505c57ff6d9ffcc29bd700df1"
+    },
+    {
+      "bytes": 59651,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/recovery_payloads.json",
+      "sha256": "53d03eafa3c10428825af9abf9d260a77d2d4d935efbc484aee62ab4cf307a37"
+    },
+    {
+      "bytes": 210,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_command.log",
+      "sha256": "4d478a76d0e08d1ec5e0f415061c941c8da13cecdd8bf99f4326c5de412816e4"
+    },
+    {
+      "bytes": 764,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_execution.json",
+      "sha256": "da5bcf1b45d81972cb48bfd58c2f6894ada8afd64b3c7c7b88cfdb9f984fdea9"
+    },
+    {
+      "bytes": 126660,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_result.json",
+      "sha256": "b72bb7bf07273f3024cc51d5191ca492d4dedaf232556deff2cc67de200395de"
+    },
+    {
+      "bytes": 274,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_command.log",
+      "sha256": "f5a6745ca6089a0ff421677d12838f54a84e279e64448d346fb989f618d977d5"
+    },
+    {
+      "bytes": 813,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_execution.json",
+      "sha256": "b2fadb1f61b72b57905e6e15dee1bdb2a5c1dc0881945a3381dcf67ad7dee33c"
+    },
+    {
+      "bytes": 43090,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_result.json",
+      "sha256": "c6e9bc363156869cae8942baf3a196bc6c3675351a884baed11a4cd52cad3d29"
+    },
+    {
+      "bytes": 363,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/launch_record.json",
+      "sha256": "3aecbac11f1912ed0c91d17ff193feec99faf149af0c7a4634eae0a16d1b15f8"
+    },
+    {
+      "bytes": 59651,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/recovery_payloads.json",
+      "sha256": "53d03eafa3c10428825af9abf9d260a77d2d4d935efbc484aee62ab4cf307a37"
+    },
+    {
+      "bytes": 210,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_command.log",
+      "sha256": "dd82a45d62607c7b0317ed7a1e312228ed0d614a629ed769e0b6c5d6321bd6ac"
+    },
+    {
+      "bytes": 764,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_execution.json",
+      "sha256": "61e599bed7ee924bbe56d8f0668c9c6fa2b23e3c5bdb0056f5f96aa90a186b7b"
+    },
+    {
+      "bytes": 126665,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_result.json",
+      "sha256": "82dc2d9dd71bfc3bb33fea101f2aee9e9cb90934b5fe3ee18e4795fecf18a3c1"
+    },
+    {
+      "bytes": 274,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_command.log",
+      "sha256": "2a1ec44535b24c428cdef70a5734cf0ac64f6ba4ef562a0b267d8d6fd615a315"
+    },
+    {
+      "bytes": 813,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_execution.json",
+      "sha256": "3284e5b87cbf52e8ffab596ad976aca5511b45e466d71e4d5918fc5be9de7f2c"
+    },
+    {
+      "bytes": 43064,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_result.json",
+      "sha256": "857dccb811ada92b57cd0cdc15ed900a193cd233604bba35a3ea90597e613264"
+    },
+    {
+      "bytes": 25892,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_01_prefix.log",
+      "sha256": "1bc3546488bc0c4ae69f73e66541d8924644f0cec999f2fac8bf7e391f62edfb"
+    },
+    {
+      "bytes": 25892,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_02_prefix.log",
+      "sha256": "99f170a0122a83cab102de5fe4fe933aeec3cb1f3c0c8486447571e70c956300"
+    },
+    {
+      "bytes": 25891,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_03_prefix.log",
+      "sha256": "2f1e4c39e9b140d1805fc3ee50518c91f00995025d9aae513cd8a2dab5295c40"
+    },
+    {
+      "bytes": 3948,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/manifest.json",
+      "sha256": "0da99e3fdfa96c11019de5d302113a4b0cec8aa56a40532d3de41e6e22961c96"
+    }
+  ],
+  "input_pins_before": [
+    {
+      "bytes": 363,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/launch_record.json",
+      "sha256": "363b4faf627cb0ae4d7c653d46cb31c7e3e9a81ff0cdde7e80070a5efae1ebae"
+    },
+    {
+      "bytes": 220968,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/live_demo/results.json",
+      "sha256": "6fc603d0aab7def308ef217aa06c867b0d487b079884b307f3c03fc7f7f51829"
+    },
+    {
+      "bytes": 1018,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/live_demo_command.log",
+      "sha256": "4038fc1ac11bcd07bc53ee299daeb20dae57781b434d2208eaafa3870adf15c0"
+    },
+    {
+      "bytes": 1572,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/live_demo_execution.json",
+      "sha256": "1d0143edb0f0d5ecb17c6d174f112bec383cbe7b30350b461a2bdbe07a4c43a2"
+    },
+    {
+      "bytes": 599,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection.log",
+      "sha256": "9ad0e0ffc0794ff1e41261767fb2d4a48c115ac7df229bb48435b564cf1e0149"
+    },
+    {
+      "bytes": 12787,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection.py",
+      "sha256": "4d02ce01e66609ffa1c646a09e8b0ac306166c16b54ec91bec134d125985073f"
+    },
+    {
+      "bytes": 165,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/payload_inspection_command.txt",
+      "sha256": "fbd12bb02d57897c2477579c9797613040144891653e2613c6d6a56b15e49f41"
+    },
+    {
+      "bytes": 655,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/preservation.json",
+      "sha256": "81631841cb5875d2d5ab56cb8beade16b12a15ee61aac8bfcd6ccb92ff9d6c9d"
+    },
+    {
+      "bytes": 59651,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/recovery_payloads.json",
+      "sha256": "53d03eafa3c10428825af9abf9d260a77d2d4d935efbc484aee62ab4cf307a37"
+    },
+    {
+      "bytes": 10950,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restart_kit.py",
+      "sha256": "4ae76f3f1cab28f06808f2d7a51e01a365ed9875f8ca68f35991b8576944e224"
+    },
+    {
+      "bytes": 210,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_command.log",
+      "sha256": "d5279b1b6e4c86f0e426b8ec23c6b69cea8da1160e01525b2d11cb22f84f8ef9"
+    },
+    {
+      "bytes": 667,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_execution.json",
+      "sha256": "3c5ec47cd928ab2a74aa3e1d73264184ea7bbce124475dd883e510bb70a7c8ea"
+    },
+    {
+      "bytes": 125900,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/restore_result.json",
+      "sha256": "9a2f1bf39b0d233c3b3a468046267184ce8344330948ee9e76c1730d1e83d729"
+    },
+    {
+      "bytes": 274,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_command.log",
+      "sha256": "9b669fbeea97a6b76652c790df6d2a2a76399df7684dfe8b21f3bcde6466ab75"
+    },
+    {
+      "bytes": 684,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_execution.json",
+      "sha256": "e3e2570e1b38c08ff93f11a42d3796421b5a3a22bbd9a1389fb868ba0edeaf3e"
+    },
+    {
+      "bytes": 42860,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/stop_launch_result.json",
+      "sha256": "452fb13d91c4dd49a2894284271059f2949cfae7a01a4e9b46a3e99a2125fae9"
+    },
+    {
+      "bytes": 363,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/launch_record.json",
+      "sha256": "0a7c8ad2b74dbb01b9aa7e915ccc9d7386a856c505c57ff6d9ffcc29bd700df1"
+    },
+    {
+      "bytes": 59651,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/recovery_payloads.json",
+      "sha256": "53d03eafa3c10428825af9abf9d260a77d2d4d935efbc484aee62ab4cf307a37"
+    },
+    {
+      "bytes": 210,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_command.log",
+      "sha256": "4d478a76d0e08d1ec5e0f415061c941c8da13cecdd8bf99f4326c5de412816e4"
+    },
+    {
+      "bytes": 764,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_execution.json",
+      "sha256": "da5bcf1b45d81972cb48bfd58c2f6894ada8afd64b3c7c7b88cfdb9f984fdea9"
+    },
+    {
+      "bytes": 126660,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/restore_result.json",
+      "sha256": "b72bb7bf07273f3024cc51d5191ca492d4dedaf232556deff2cc67de200395de"
+    },
+    {
+      "bytes": 274,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_command.log",
+      "sha256": "f5a6745ca6089a0ff421677d12838f54a84e279e64448d346fb989f618d977d5"
+    },
+    {
+      "bytes": 813,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_execution.json",
+      "sha256": "b2fadb1f61b72b57905e6e15dee1bdb2a5c1dc0881945a3381dcf67ad7dee33c"
+    },
+    {
+      "bytes": 43090,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/stop_launch_result.json",
+      "sha256": "c6e9bc363156869cae8942baf3a196bc6c3675351a884baed11a4cd52cad3d29"
+    },
+    {
+      "bytes": 363,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/launch_record.json",
+      "sha256": "3aecbac11f1912ed0c91d17ff193feec99faf149af0c7a4634eae0a16d1b15f8"
+    },
+    {
+      "bytes": 59651,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/recovery_payloads.json",
+      "sha256": "53d03eafa3c10428825af9abf9d260a77d2d4d935efbc484aee62ab4cf307a37"
+    },
+    {
+      "bytes": 210,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_command.log",
+      "sha256": "dd82a45d62607c7b0317ed7a1e312228ed0d614a629ed769e0b6c5d6321bd6ac"
+    },
+    {
+      "bytes": 764,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_execution.json",
+      "sha256": "61e599bed7ee924bbe56d8f0668c9c6fa2b23e3c5bdb0056f5f96aa90a186b7b"
+    },
+    {
+      "bytes": 126665,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/restore_result.json",
+      "sha256": "82dc2d9dd71bfc3bb33fea101f2aee9e9cb90934b5fe3ee18e4795fecf18a3c1"
+    },
+    {
+      "bytes": 274,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_command.log",
+      "sha256": "2a1ec44535b24c428cdef70a5734cf0ac64f6ba4ef562a0b267d8d6fd615a315"
+    },
+    {
+      "bytes": 813,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_execution.json",
+      "sha256": "3284e5b87cbf52e8ffab596ad976aca5511b45e466d71e4d5918fc5be9de7f2c"
+    },
+    {
+      "bytes": 43064,
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/stop_launch_result.json",
+      "sha256": "857dccb811ada92b57cd0cdc15ed900a193cd233604bba35a3ea90597e613264"
+    },
+    {
+      "bytes": 25892,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_01_prefix.log",
+      "sha256": "1bc3546488bc0c4ae69f73e66541d8924644f0cec999f2fac8bf7e391f62edfb"
+    },
+    {
+      "bytes": 25892,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_02_prefix.log",
+      "sha256": "99f170a0122a83cab102de5fe4fe933aeec3cb1f3c0c8486447571e70c956300"
+    },
+    {
+      "bytes": 25891,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_03_prefix.log",
+      "sha256": "2f1e4c39e9b140d1805fc3ee50518c91f00995025d9aae513cd8a2dab5295c40"
+    },
+    {
+      "bytes": 3948,
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/manifest.json",
+      "sha256": "0da99e3fdfa96c11019de5d302113a4b0cec8aa56a40532d3de41e6e22961c96"
+    }
+  ],
+  "kind": "m7_repaired_finalizer_actual_restart_schema_check",
+  "live_calls_made": false,
+  "matching_optional_top_level_zero_accepted": true,
+  "missing_top_level_code_accepted_only_with_actual_nested_code_zero": true,
+  "mutable_original_stream_exclusions": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_01/kit_process.log",
+      "reason": "Original runtime stream may append; only the fixed initial prefix is sealed.",
+      "snapshot": {
+        "copy": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_01_prefix.log",
+        "copy_bytes": 25892,
+        "copy_exact_initial_prefix": true,
+        "copy_sha256": "1bc3546488bc0c4ae69f73e66541d8924644f0cec999f2fac8bf7e391f62edfb",
+        "initial_bytes_read": 25892,
+        "initial_source_size_bytes": 25892,
+        "original_source_log_sealed_as_immutable": false,
+        "post_prefix_source_bytes_included": false,
+        "source_initial_prefix_sha256": "1bc3546488bc0c4ae69f73e66541d8924644f0cec999f2fac8bf7e391f62edfb",
+        "source_inode_unchanged": true,
+        "source_log": "experiments/gama_marlin_v1/qa/kit_restart_01/kit_process.log",
+        "source_prefix_bytes_rechecked": 25892,
+        "source_rechecked_prefix_sha256": "1bc3546488bc0c4ae69f73e66541d8924644f0cec999f2fac8bf7e391f62edfb",
+        "source_size_after_copy_bytes": 25892,
+        "source_size_unchanged_during_copy": true,
+        "source_stream_may_append": true
+      }
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_02/kit_process.log",
+      "reason": "Original runtime stream may append; only the fixed initial prefix is sealed.",
+      "snapshot": {
+        "copy": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_02_prefix.log",
+        "copy_bytes": 25892,
+        "copy_exact_initial_prefix": true,
+        "copy_sha256": "99f170a0122a83cab102de5fe4fe933aeec3cb1f3c0c8486447571e70c956300",
+        "initial_bytes_read": 25892,
+        "initial_source_size_bytes": 25892,
+        "original_source_log_sealed_as_immutable": false,
+        "post_prefix_source_bytes_included": false,
+        "source_initial_prefix_sha256": "99f170a0122a83cab102de5fe4fe933aeec3cb1f3c0c8486447571e70c956300",
+        "source_inode_unchanged": true,
+        "source_log": "experiments/gama_marlin_v1/qa/kit_restart_02/kit_process.log",
+        "source_prefix_bytes_rechecked": 25892,
+        "source_rechecked_prefix_sha256": "99f170a0122a83cab102de5fe4fe933aeec3cb1f3c0c8486447571e70c956300",
+        "source_size_after_copy_bytes": 25892,
+        "source_size_unchanged_during_copy": true,
+        "source_stream_may_append": true
+      }
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/kit_restart_03/kit_process.log",
+      "reason": "Original runtime stream may append; only the fixed initial prefix is sealed.",
+      "snapshot": {
+        "copy": "experiments/gama_marlin_v1/qa/m7_completion_01/runtime_log_snapshots/kit_restart_03_prefix.log",
+        "copy_bytes": 25891,
+        "copy_exact_initial_prefix": true,
+        "copy_sha256": "2f1e4c39e9b140d1805fc3ee50518c91f00995025d9aae513cd8a2dab5295c40",
+        "initial_bytes_read": 25891,
+        "initial_source_size_bytes": 25891,
+        "original_source_log_sealed_as_immutable": false,
+        "post_prefix_source_bytes_included": false,
+        "source_initial_prefix_sha256": "2f1e4c39e9b140d1805fc3ee50518c91f00995025d9aae513cd8a2dab5295c40",
+        "source_inode_unchanged": true,
+        "source_log": "experiments/gama_marlin_v1/qa/kit_restart_03/kit_process.log",
+        "source_prefix_bytes_rechecked": 25891,
+        "source_rechecked_prefix_sha256": "2f1e4c39e9b140d1805fc3ee50518c91f00995025d9aae513cd8a2dab5295c40",
+        "source_size_after_copy_bytes": 25891,
+        "source_size_unchanged_during_copy": true,
+        "source_stream_may_append": true
+      }
+    }
+  ],
+  "passed": true,
+  "rejection_checks": [
+    {
+      "name": "missing_actual_exit_code",
+      "passed": true,
+      "rejection": "Actual nested restart tool result did not exit successfully"
+    },
+    {
+      "name": "actual_failed_exit",
+      "passed": true,
+      "rejection": "Actual nested restart tool result did not exit successfully"
+    },
+    {
+      "name": "boolean_actual_exit_is_not_code_zero",
+      "passed": true,
+      "rejection": "Actual nested restart tool result did not exit successfully"
+    },
+    {
+      "name": "string_actual_exit_rejected",
+      "passed": true,
+      "rejection": "Actual nested restart tool result did not exit successfully"
+    },
+    {
+      "name": "missing_actual_result",
+      "passed": true,
+      "rejection": "Actual nested restart tool result did not exit successfully"
+    },
+    {
+      "name": "contradictory_top_code",
+      "passed": true,
+      "rejection": "Restart top-level return code differs from its actual tool result"
+    },
+    {
+      "name": "boolean_top_code_rejected",
+      "passed": true,
+      "rejection": "Restart top-level return code differs from its actual tool result"
+    },
+    {
+      "name": "empty_actual_final_chunk",
+      "passed": true,
+      "rejection": "Actual nested restart final stdout chunk is empty or missing"
+    },
+    {
+      "name": "altered_actual_final_chunk",
+      "passed": true,
+      "rejection": "Restart combined log differs from the exact known prefix plus actual final chunk"
+    },
+    {
+      "name": "missing_python_bytecode_guard",
+      "passed": true,
+      "rejection": "Actual restart command did not retain its Python command vector"
+    },
+    {
+      "name": "missing_stop_launch_prefix",
+      "passed": true,
+      "rejection": "Restart combined log differs from the exact known prefix plus actual final chunk"
+    },
+    {
+      "name": "changed_stop_launch_prefix",
+      "passed": true,
+      "rejection": "Restart combined log differs from the exact known prefix plus actual final chunk"
+    },
+    {
+      "name": "extra_earlier_stdout",
+      "passed": true,
+      "rejection": "Restart combined log differs from the exact known prefix plus actual final chunk"
+    },
+    {
+      "name": "restore_whole_log_must_match",
+      "passed": true,
+      "rejection": "Restore command log differs from the actual nested tool output"
+    }
+  ],
+  "render_calls_made": 0,
+  "scope": "Actual nested output is the final yielded chunk. Stop/launch combines the exact frozen helper print prefix with that chunk; this checks the original combined log format and is not a new independent observation of its earlier yield.",
+  "source_or_evidence_mutation_attempted": false,
+  "source_before": {
+    "experiments/gama_marlin_v1/qa/m7_completion_01/check_repaired_restart_schema.py": "a5cfc487864f2180e3cf31025329c1a6fc72fbfcc127ee45d21632cfd5980cb1",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py": "43f0c92d2b06e8f2dfc77a39839fd697ffdad12fc2eed38b4a5dd8c92a67fbeb"
+  },
+  "source_after": {
+    "experiments/gama_marlin_v1/qa/m7_completion_01/check_repaired_restart_schema.py": "a5cfc487864f2180e3cf31025329c1a6fc72fbfcc127ee45d21632cfd5980cb1",
+    "experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py": "43f0c92d2b06e8f2dfc77a39839fd697ffdad12fc2eed38b4a5dd8c92a67fbeb"
+  }
+}

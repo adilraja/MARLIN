@@ -1,0 +1,65 @@
+{
+  "kind": "m7_failed_new_completion_validator_source_preservation",
+  "recorded_at_utc": "2026-10-09T19:33:02.702475+00:00",
+  "original_source_before": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion.py",
+    "bytes": 42519,
+    "sha256": "35ccb30eaa71912e42040d2d5d7d78878c5764c1abf5e2ea71734c53dc6ab0d3"
+  },
+  "original_source_after_copy": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion.py",
+    "bytes": 42519,
+    "sha256": "35ccb30eaa71912e42040d2d5d7d78878c5764c1abf5e2ea71734c53dc6ab0d3"
+  },
+  "retained_exact_failed_source": {
+    "path": "experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion_failed_v1.py",
+    "bytes": 42519,
+    "sha256": "35ccb30eaa71912e42040d2d5d7d78878c5764c1abf5e2ea71734c53dc6ab0d3"
+  },
+  "bytes_preserved_exactly": true,
+  "failed_acceptance_receipts": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance.json",
+      "bytes": 646863,
+      "sha256": "d6683ce816adff25ef703063a07773da5d5a953e2c2cd5c30e8122e6d6d9fe88"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_execution.json",
+      "bytes": 2341,
+      "sha256": "fbd8d86961019409c1456eb3a29361a65eb4fc12dde84d0eb8d55b5d7cf12ed4"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_command.log",
+      "bytes": 218,
+      "sha256": "636c6a9a84f54e1be24c5608c84a0931fa46ff6892f05b01bb50c8de19382ecc"
+    }
+  ],
+  "failed_acceptance_status": false,
+  "failed_error": "ValueError: Final generated review scope changed",
+  "failed_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion.py",
+    "--campaign",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set",
+    "--scene-verifications",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set",
+    "--review",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_review",
+    "--dataset",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/datasets/m7_engineering_v1",
+    "--execution-record",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/aggregate_execution.json",
+    "--execution-record",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/export_execution.json",
+    "--preservation",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/original_preservation.json",
+    "--history-preservation",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/historical_progress_preservation.json",
+    "--output",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance.json"
+  ],
+  "failed_return_code": 1,
+  "later_repair_scope": "Only new unsealed completion validator actual frozen review-generator contract; original protocol/captures/review/export/historical seals remain unchanged",
+  "source_was_not_executed_by_this_archive_command": true
+}

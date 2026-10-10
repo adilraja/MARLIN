@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/capture_gama_dataset_pending_v2.py",
+    "--output",
+    "experiments/gama_marlin_v1/qa/m7_supplement_01"
+  ],
+  "started_observation": {
+    "current_time": "2026-10-09 18:49:18 UTC"
+  },
+  "finished_observation": {
+    "current_time": "2026-10-09 19:00:25 UTC"
+  },
+  "return_code": 1,
+  "result": {
+    "chunk_id": "d24526",
+    "wall_time_seconds": 0.000009207,
+    "exit_code": 1,
+    "original_token_count": 152,
+    "output": "{\"event\": \"capture_finished\", \"run_id\": \"m5_positive_seed_2147483647_a\", \"step_index\": 16, \"passed\": false, \"evidence\": \"/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01/captures/m5_positive_seed_2147483647_a/step_016\"}\n{\"event\": \"pending_supplement_finished\", \"passed\": false, \"preflight_only\": false, \"results\": \"/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01/results.json\", \"capture_counts\": {\"target_present\": 5, \"target_absent\": 5, \"groups\": 1}, \"error\": \"ValueError: Pending-only supplement did not complete; no source or image was substituted\"}\n"
+  }
+}

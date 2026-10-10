@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py", line 478, in <module>
+    main()
+    ~~~~^^
+  File "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py", line 473, in main
+    result = finalize(args)
+  File "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py", line 405, in finalize
+    restart, stream_exclusions = restart_proofs(pins, snapshots)
+                                 ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/finalize_acceptance.py", line 208, in restart_proofs
+    require(execution.get("return_code") == 0 and "-B" in execution["command"], "Actual restart command did not pass")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/validate_completion.py", line 41, in require
+    raise ValueError(message)
+ValueError: Actual restart command did not pass

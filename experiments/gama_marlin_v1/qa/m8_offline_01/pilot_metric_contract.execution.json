@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gsd_pilot_v1/ml/metrics.py"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:26:06.921348+00:00",
+  "ended_at_utc": "2026-10-09T17:26:06.932796+00:00",
+  "elapsed_seconds": 0.011452970007667318,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stdout.log",
+    "bytes": 26,
+    "sha256": "501f5553a50c6c5495d60c9ce266f8bf7cbdc8bb66179255673bb843ecf90978"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_metric_contract.stderr.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "pilot_metric_contract",
+  "category": "existing_pilot",
+  "scope": "Existing pure IoU/one-to-one/101-point AP self-test; no model loading, evaluation rerun or training.",
+  "tests": null,
+  "skipped": 0,
+  "expected_stdout": "M7 metric contract passed",
+  "passed": true
+}

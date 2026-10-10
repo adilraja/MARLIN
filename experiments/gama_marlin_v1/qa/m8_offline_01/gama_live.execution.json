@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_gama_live.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:25:21.880561+00:00",
+  "ended_at_utc": "2026-10-09T17:25:21.939286+00:00",
+  "elapsed_seconds": 0.05872848798753694,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_live.stderr.log",
+    "bytes": 392,
+    "sha256": "571565c686f8e1b96d7369027bbc92847c8d5978e858dd3b50b5c00047ef7f5b"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "gama_live",
+  "category": "bridge",
+  "scope": "Fake transport replay/protocol boundaries; the filename does not imply a live Kit run.",
+  "tests": 3,
+  "skipped": 0,
+  "expected_tests": 3,
+  "passed": true
+}

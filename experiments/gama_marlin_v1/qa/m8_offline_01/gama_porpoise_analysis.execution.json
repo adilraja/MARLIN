@@ -1,0 +1,34 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_gama_porpoise_analysis.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:25:22.102945+00:00",
+  "ended_at_utc": "2026-10-09T17:25:22.185964+00:00",
+  "elapsed_seconds": 0.08302717501646839,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/gama_porpoise_analysis.stderr.log",
+    "bytes": 2503,
+    "sha256": "8c6140d5a2d44e1a8d355ce55841d09687bbb53ce305486dda15cb9776298828"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "gama_porpoise_analysis",
+  "category": "bridge",
+  "scope": "Measured retained M3 constraints plus explicitly synthetic rotation/mutation analysis fixtures; no biological acceptance.",
+  "tests": 14,
+  "skipped": 0,
+  "expected_tests": 14,
+  "passed": true
+}

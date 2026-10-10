@@ -1,0 +1,675 @@
+{
+  "kind": "m7_completed_independent_usd_verification_summary",
+  "passed": true,
+  "recorded_at_utc": "2026-10-09T19:30:39.469807+00:00",
+  "capture_counts": {
+    "target_present": 75,
+    "target_absent": 75,
+    "groups": 15
+  },
+  "unique_image_ids": 150,
+  "group_verifier_checks_all_passed": true,
+  "checks_per_group": [
+    "present_identity_exact",
+    "present_background_exact",
+    "present_zero_time_samples",
+    "absent_identity_exact",
+    "absent_background_exact",
+    "absent_zero_time_samples",
+    "positive_source_scene_file_hash",
+    "only_owned_target_root_removed",
+    "removal_record_exact",
+    "positive_actual_gama_pose",
+    "five_exact_camera_condition_pairs",
+    "only_camera_y_varied",
+    "all_ten_actual_annotations_and_images",
+    "retained_private_sources_unchanged",
+    "all_local_dependency_hashes_before_after"
+  ],
+  "maximum_projection_matrix_error": 0,
+  "maximum_source_position_error_m": 8.95090418262362e-16,
+  "maximum_source_heading_error_deg": 4.359241245310841e-06,
+  "actual_motion_root_depths_m": [
+    0.5,
+    1.6,
+    1.9000000000000001
+  ],
+  "frozen_state_check_total": 1680,
+  "frozen_state_checks_per_group_min_max": [
+    112,
+    112
+  ],
+  "all_variant_state_checks_match": true,
+  "settling_probe_summary": {
+    "capture_count": 150,
+    "probe_counts_min_max": [
+      3,
+      3
+    ],
+    "maximum_final_mean_absolute_rgb_difference_0_to_255": 0.2863761054144965,
+    "threshold": 1,
+    "all_passed": true,
+    "evidence_basis": "Retained frozen client camera_and_pixel_checks revalidated by offline aggregate before copy; this summary did not rerun renderer/probe acquisition."
+  },
+  "transaction_restoration": {
+    "groups": 15,
+    "all_restoration_checks_passed": true,
+    "checks_per_group_min_max": [
+      12,
+      12
+    ],
+    "all_original_non_camera_source_hashes_restored": true,
+    "recovery_required_groups": 0,
+    "restoration_errors": []
+  },
+  "coexistence": {
+    "groups": 15,
+    "all_group_checks_passed": true,
+    "checks_per_group_min_max": [
+      9,
+      9
+    ],
+    "original_11_swimmers_ocean_camera_renderer_environment_preserved": true,
+    "source_runs_with_all12cleanup_checks": 8
+  },
+  "original_source_attempts": [
+    {
+      "directory": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_live_02",
+      "passed_status_preserved": false,
+      "source_file_count": 922,
+      "all_files_unchanged": true,
+      "all_recorded_capture_code_pins_still_match": true,
+      "cleanup_run_count": 5
+    },
+    {
+      "directory": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_01",
+      "passed_status_preserved": false,
+      "source_file_count": 81,
+      "all_files_unchanged": true,
+      "all_recorded_capture_code_pins_still_match": true,
+      "cleanup_run_count": 1
+    },
+    {
+      "directory": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_step_016",
+      "passed_status_preserved": true,
+      "source_file_count": 80,
+      "all_files_unchanged": true,
+      "all_recorded_capture_code_pins_still_match": true,
+      "cleanup_run_count": 1
+    },
+    {
+      "directory": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_supplement_step_032",
+      "passed_status_preserved": true,
+      "source_file_count": 80,
+      "all_files_unchanged": true,
+      "all_recorded_capture_code_pins_still_match": true,
+      "cleanup_run_count": 1
+    }
+  ],
+  "retained_provenance_pin_count": 2283,
+  "all_original_and_copied_provenance_pins_unchanged": true,
+  "all_four_original_source_trees_and_statuses_preserved": true,
+  "verifier_sources_before_after_identical": true,
+  "runtime_or_unresolved_dependencies_not_opened": [
+    "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl"
+  ],
+  "runtime_mdl_bytes_read": false,
+  "programs": [
+    {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/verify_aggregate_groups.py",
+      "bytes": 10756,
+      "sha256": "1d5dc2280b3462162afd4a55c36f30743411c81ad6b5f941c8bdc0686e4c0556"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_campaign_groups.py",
+      "bytes": 9342,
+      "sha256": "1d694c8f3d2920d6509c4c58ba333859953f56cc328579469e3845a4716e9f94"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+      "bytes": 18707,
+      "sha256": "c4bb56bb6fd7e75f45868af4a1775d7444bad33b17a9dbecf2bede309b3d2671"
+    },
+    {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m6_scene.py",
+      "bytes": 14767,
+      "sha256": "8a7fcf67565e2a2b6cdf18e32fa1a2b09505e37a5549e9d3cf211723c0a7a957"
+    }
+  ],
+  "orchestration_execution": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/campaign_verifier_execution.json",
+    "bytes": 895,
+    "sha256": "aab816b62a1f21de62db8d9c396d9847b9cc38af4c841b1221087b65fdb1d1e3"
+  },
+  "orchestration_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_campaign_groups.py",
+    "--campaign",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set",
+    "--output",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set",
+    "--timeout-seconds",
+    "3600"
+  ],
+  "orchestration_duration_seconds": 406.84668927200255,
+  "orchestration_log": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/campaign_verifier.log",
+    "bytes": 4437,
+    "sha256": "5b9602c1e3a32bc362ce294cfa0ed01d216cdf871ec0ed3a35eb98bea1f2d559"
+  },
+  "campaign_result": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/results.json",
+    "bytes": 7691,
+    "sha256": "0b8e99c70c00ca0359d7af70ccc9d32512e350130af53b0824fde5dad5f93c89"
+  },
+  "orchestrator_result": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/verification_orchestrator_result.json",
+    "bytes": 1295043,
+    "sha256": "f5765ba9a9c41e5b6f399ee7aba89c18b343e76b9caafb7d98e1ea2a40e29f22"
+  },
+  "group_executions": [
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "step_index": 8,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_008_execution.json",
+        "bytes": 2589,
+        "sha256": "7f265508d87657f19c2285cc2610ca09455d5f2a4f819b5ed1f634f122a83c98"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_008.json",
+        "bytes": 34160,
+        "sha256": "9d56885764e8c56badbfc08e8b25a37b9d14d3e0a16a01239450e47d461d8654"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_1_a/step_008/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_008.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "5ea326c7b5a95796483f80ca76461f55a8270d074f184a72d8c379b15e1ae497",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "step_index": 16,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_016_execution.json",
+        "bytes": 2591,
+        "sha256": "8171797c963ac1e1ad1d43fb172e0430975d8406e5f899dee6ddbf814363e042"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_016.json",
+        "bytes": 34192,
+        "sha256": "0b5d9dee52cb312b914546ee5091e19646f8a64d75a5d9af943c5ef007042a7a"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_1_a/step_016/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_016.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "26aa271bc8a1202481ec57c75706498c447aad086884f0881c353069f8ed60b2",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_1_a",
+      "step_index": 32,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_032_execution.json",
+        "bytes": 2590,
+        "sha256": "cb43eb39985ae01c527d9909a55c5bfb9f32a70d3eebeadf6eaa2771a1631c53"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_032.json",
+        "bytes": 34147,
+        "sha256": "707b7c2fe0c6b8a3d7c1a85cb9ee8c7b3c176f5dc42628e3535519ce7ea7d032"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_1_a/step_032/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_1_a__step_032.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "ac8818a2f21382c0650a7440763d4b1f4ee76d5f06efd4b4c1191c46d8bf4a52",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "step_index": 8,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_008_execution.json",
+        "bytes": 2592,
+        "sha256": "8dedeecd0e797e62423254796deb48c901bb7575f51aa5ce69e3d67d23652d86"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_008.json",
+        "bytes": 34145,
+        "sha256": "0e1f7ab4fbe9c580f6a01b0bb73c9d229e3a845d5f7ddfd07ad7caee0402ca7f"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_42_a/step_008/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_008.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "1d396decc72c07e7107c1e7c0573b546c67caed975ff449f80946efc7623ddbb",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "step_index": 16,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_016_execution.json",
+        "bytes": 2594,
+        "sha256": "ade147a4ecb5dd2895d970f2a28d508a6a84c283505049eb4bddb0aabb08caf1"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_016.json",
+        "bytes": 34177,
+        "sha256": "9d8aa02af568f84a93ac910130d4bffac496731f976ef3198c92b9070cc5d419"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_42_a/step_016/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_016.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "db5bdd3d8ff541e25f4905f5c47671170668e806e3bac395dba015b3239b77cc",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_42_a",
+      "step_index": 32,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_032_execution.json",
+        "bytes": 2595,
+        "sha256": "2d881f395d1ef790290e2af503bdf092a639f022cb2e7a693ed25280c757c4a8"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_032.json",
+        "bytes": 34166,
+        "sha256": "0e8454a8f411ee57a41b9016663cfb2e36f8c34a45c16f62076c3feb97227a0f"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_42_a/step_032/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_42_a__step_032.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "e4a5531b034c832a63e0cb44e1a3bc75a7c87e2aab82960956e76f91bb2ed2bc",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 8,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_008_execution.json",
+        "bytes": 2610,
+        "sha256": "44df2eaa18d4fb85f80e29d5e18d47e329b9201354002883eed3903577b0d185"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_008.json",
+        "bytes": 34166,
+        "sha256": "db754a37c0f9263f80dd0b97157303894fd06499de7ae7fa05a88b94bfe48b88"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_184729_a/step_008/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_008.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "8e1ff87138eecb449976974c1e9268f85b10223d5262e49556e7bc114d5c53d6",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 16,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_016_execution.json",
+        "bytes": 2611,
+        "sha256": "6cecf7b018403c22b24cbbca454c5023268019909d40400640184669600c8a91"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_016.json",
+        "bytes": 34180,
+        "sha256": "12d51a963757bf14b3bab6c9c7eb13af58217749de5be162cb9cb267a5155617"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_184729_a/step_016/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_016.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "4b7009daffb73ffa9d6cbb7e77811eaa39832967f3ee424d9e0e4f366116a172",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_184729_a",
+      "step_index": 32,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_032_execution.json",
+        "bytes": 2611,
+        "sha256": "73f4d63d01f9cf97e9cf30550cad4938b2f5eee7374cf87d8ff35e5d8b5b958e"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_032.json",
+        "bytes": 34171,
+        "sha256": "cda9058987c0eac93a48d283a3ce0e0c9d0b2eda467b0b23bdbcfc47b6f0e7c5"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_184729_a/step_032/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_184729_a__step_032.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "5bbbb88cba099502a1887a570bf4128199c67af79fb98619678626024144baa8",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 8,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_008_execution.json",
+        "bytes": 2617,
+        "sha256": "7b456b8e2b65b61ede6597fb80c0169ddd03cc3a822fbbeb7f3404750143cd15"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_008.json",
+        "bytes": 34148,
+        "sha256": "45e2aa5c40db49d2e9daba40607ea315d368c0d26200a53a589597c61ae757ae"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_20261008_a/step_008/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_008.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "ed7c9dab614041e51dd49da0696122acb80c4670ecc74d1ada3c827f67492fa6",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 16,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_016_execution.json",
+        "bytes": 2618,
+        "sha256": "b140be2fcfeb395de5f3a14fc6236869a94217c63e09861fedd6edbf107d1347"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_016.json",
+        "bytes": 34180,
+        "sha256": "1cc424d31ff7ecad8a4b254bd634be112b1dfbf40d3aeaf4a22eb5fdc0f4bf6d"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_20261008_a/step_016/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_016.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "345a733a9118962874ed5f13f4de80d608dae28c5e175c7c3a9cfc6fa5b1320e",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_20261008_a",
+      "step_index": 32,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_032_execution.json",
+        "bytes": 2619,
+        "sha256": "f3c8ebd4205cdfff82632dcf0ae68cbe8fbf5dd5d5f01eef0c4cb4970eb2f117"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_032.json",
+        "bytes": 34173,
+        "sha256": "c88931945730f93e11c5bec244e1fc43e7a291e3fe4b47ea1f36cd1db8a9da86"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_20261008_a/step_032/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_20261008_a__step_032.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "11f25bea500bdeb60072ce400ba2d835cc3c8585109fe7ac27ee2dd2b5fabd7f",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 8,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_008_execution.json",
+        "bytes": 2625,
+        "sha256": "e5d761c0380094ca554182e6dfe656b490139968d43d62c3df8dff1ea1bf6aa9"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_008.json",
+        "bytes": 34169,
+        "sha256": "2713586842124cc6a95d3a744f79283f3cfbd25662944e6a78656ecd26826e43"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_2147483647_a/step_008/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_008.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "43e64b02cf16fd5dd2eace1ce76e8e1792e12f4e38ffc643c1c231953bdb9acd",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 16,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_016_execution.json",
+        "bytes": 2627,
+        "sha256": "9c69e83574e216653d0c051a34acd029583818f09e9423b0d5668b4e9b214a96"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_016.json",
+        "bytes": 34201,
+        "sha256": "b545cc888206ada9dce3eed91027ba07be0af1cae8f55e0159b6c48ec1a7a1e2"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_2147483647_a/step_016/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_016.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "6664328608d4bd1643feb1ac69e1df84053aed147c42177469185da8f4e40499",
+      "sources_and_group_markers_unchanged": true
+    },
+    {
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 32,
+      "execution": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_032_execution.json",
+        "bytes": 2626,
+        "sha256": "8ac5c8722f477fe01cb56974bb959d84aea06bb4a5a7e3e7093474c138a8ee93"
+      },
+      "result": {
+        "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_032.json",
+        "bytes": 34157,
+        "sha256": "00957e4dfa2a87743025d6168af6d70218416773c0a53a413cce9f80216d30f6"
+      },
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/verify_m7_group.py",
+        "--group",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_capture_set/captures/m5_positive_seed_2147483647_a/step_032/group",
+        "--output",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_scene_validation_set/m5_positive_seed_2147483647_a__step_032.json"
+      ],
+      "runtime": {
+        "python": "3.11.13 (main, Apr 25 2025, 12:39:20) [GCC 11.2.1 20220127 (Red Hat 11.2.1-9)]",
+        "usd_version": [
+          0,
+          25,
+          8
+        ]
+      },
+      "log_sha256": "102d1fac1b017b8c5f782e27f7e8841ea054469e65cb7f8145cbb82d9d6041ce",
+      "sources_and_group_markers_unchanged": true
+    }
+  ],
+  "renders_requested": 0,
+  "http_requests": 0,
+  "kit_imported": false,
+  "annotation_semantics": "amodal_direct_evaluated_mesh_projection",
+  "rendered_visibility": "unknown",
+  "biological_approval": false,
+  "bitwise_or_photometric_background_equivalence_claimed": false
+}

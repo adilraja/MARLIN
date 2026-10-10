@@ -1,0 +1,70 @@
+Command:
+/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11 -B /home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_verification.py
+
+Exit code: 0
+
+Captured stdout/stderr:
+{
+  "kind": "independent_private_usd_checkpoint_verification",
+  "passed": true,
+  "started_at_utc": "2026-10-09T18:11:38.555699+00:00",
+  "command": [
+    "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_verification.py"
+  ],
+  "kit_imported": false,
+  "kit_stage_attached": false,
+  "renderer_created": false,
+  "live_scene_mutated": false,
+  "controller_phase_recovery_verified": false,
+  "limitations": "Frozen visual checkpoint and recorded controller configuration only; controller/animation phase is not serialized or verified as recoverable.",
+  "checkpoint_id": "checkpoint_4bncc2ao",
+  "scene": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_snapshot/scene.usdc",
+  "metadata": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_snapshot/metadata.json",
+  "source_result": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/memory_reclaim_01/checkpoint_result.json",
+  "source_result_sha256": "254315aee534780abca75e4ed5e8832b65849d77ed4260c242db985c602c0538",
+  "copied_file_sha256": {
+    "scene.usdc": "7be085a679d06f3cab94e81dd9299a139a0aa2f2e518b5d23ac250359afdc6c0",
+    "metadata.json": "9011da6f64451fe047dc9ec1161a2ca1c2474bd416f1dc392a7bc7e99ec6520c"
+  },
+  "camera": "/World/Cameras/CetaceanGalleryCamera",
+  "gallery_animals": [
+    "Bottlenose_Carimam",
+    "Bottlenose_DigitalLife",
+    "Cuvier_Whale",
+    "Frasers_Dolphin",
+    "Humpback_Whale",
+    "Manatee",
+    "Pilot_Whale",
+    "Pygmy_Sperm_Whale",
+    "Sperm_Whale",
+    "Spotted_Dolphin",
+    "Steno_Dolphin"
+  ],
+  "remaining_time_sampled_attributes": [],
+  "checks": {
+    "source_checkpoint_preparation_passed": true,
+    "scene_sha_matches_api_metadata_and_copy_record": true,
+    "metadata_sha_matches_copy_record": true,
+    "metadata_fields_match_api_response": true,
+    "copied_scene_size_matches_record": true,
+    "copied_metadata_size_matches_record": true,
+    "checkpoint_declares_phase_limitation": true,
+    "private_layer_is_anonymous": true,
+    "flattened_snapshot_has_no_sublayers": true,
+    "copied_usd_stage_opened": true,
+    "saved_camera_exists_and_is_camera": true,
+    "ocean_exists_and_is_mesh": true,
+    "exact_eleven_expected_gallery_animals_retained": true,
+    "gallery_animals_match_pre_checkpoint_live_audit": true,
+    "private_porpoise_root_absent": true,
+    "transient_render_tree_absent": true,
+    "frozen_snapshot_has_no_remaining_time_samples": true,
+    "stage_is_y_up_centimetres": true,
+    "no_kit_module_imported": true,
+    "copied_bytes_unchanged_after_private_inspection": true
+  },
+  "finished_at_utc": "2026-10-09T18:11:38.594430+00:00"
+}
+

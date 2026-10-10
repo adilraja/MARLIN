@@ -1,0 +1,257 @@
+{
+  "kind": "gama_marlin_current_engineering_sprint_closeout",
+  "sprint": "GAMA–MARLIN Behavioural Integration and Validation",
+  "closeout_date_local": "2026-10-10",
+  "timezone": "Europe/Dublin",
+  "status": "complete_engineering_scope",
+  "sprint_acceptance_complete": true,
+  "acceptance_scope": "Bounded engineering GAMA-to-MARLIN demonstration, declared 150-image capture and annotation set, regression review, Pilot audit and explicit expansion decision",
+  "milestone_7_complete": true,
+  "milestone_8_complete": true,
+  "milestones": [
+    {
+      "number": 1,
+      "name": "Preserve Pilot v1 and audit the existing GAMA work",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Baseline preservation and integration audit",
+      "biological_suitability": "not_approved",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m1_test_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/M1_BASELINE_AND_GAMA_AUDIT.md",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/preserved_output_manifest.json"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "Define the state contract and ownership rules",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Versioned state contract, units, ownership and invalid-state rejection",
+      "biological_suitability": "not_approved",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m2_offline_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m2_live_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_2_manifest.json"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Generate trajectories from an actual GAMA model",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Actual GAMA execution, trajectory generation and repeatability",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m3_validation.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m3_seed_184729_a/execution.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/trajectories/m3_seed_184729_b/execution.json"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "Verify state transfer, control ownership and recovery",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Composed-transform accuracy, failure handling, ownership and recovery",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m4_final2_offline_results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m4_live_03/results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_4_manifest.json"
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Validate reproducibility and review the behavioural model",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Engineering reproducibility and completed named human review with provisional biology",
+      "biological_suitability": "provisional_engineering_use_only",
+      "human_reviewer": "MAR",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m5_analysis.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m5_human_review.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_5_manifest.json"
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Freeze one GAMA state across all five GSD captures",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Frozen scene pairing, capture order and delay checks, and restoration",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m6_live_03/results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m6_scene_validation_03.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/M6_FROZEN_STATE_PAIRED_CAPTURES.md"
+      ]
+    },
+    {
+      "number": 7,
+      "name": "Produce a small GAMA-driven capture and annotation test set",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Full bounded 150-image engineering capture, traceability, amodal labels, grouped split, scene verification, manual presentation review and export",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/acceptance_retry_02_execution.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/seal_check_retry_02.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_7_manifest.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/M7_COMPLETION_REPORT.md"
+      ]
+    },
+    {
+      "number": 8,
+      "name": "Complete the regression review and expansion decision",
+      "implemented": true,
+      "executed": true,
+      "passed": true,
+      "acceptance_scope": "Retained regression and Pilot audit, documented unsupported biological claims, reproduction guidance and current engineering closeout",
+      "biological_suitability": "provisional",
+      "evidence": [
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/results.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_pilot_audit_02.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_final_review_validation.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_8_manifest.json",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_CLOSEOUT.md",
+        "/home/madil/kit-app-template/experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md"
+      ]
+    }
+  ],
+  "all_executed_commands_passed": false,
+  "failed_attempts_and_checks_preserved": true,
+  "historical_records_rewritten": false,
+  "biological_approval": false,
+  "human_approval_inferred": false,
+  "ready_for_further_bounded_engineering_tests": true,
+  "ready_for_limited_behaviour_conditioned_study": false,
+  "ready_for_larger_biological_expansion": false,
+  "detector_training_or_inference_run_for_closeout": false,
+  "new_capture_or_gama_execution_for_closeout": false,
+  "regression_tests_reexecuted_for_closeout": false,
+  "live_demo_reexecuted_for_closeout": false,
+  "capture_counts": {
+    "images": 150,
+    "target_present": 75,
+    "target_absent": 75,
+    "camera_condition_pairs": 75,
+    "groups": 15
+  },
+  "split_image_counts": {
+    "train": 90,
+    "validation": 30,
+    "test": 30
+  },
+  "actual_gama_trajectories": 5,
+  "seeds": [
+    1,
+    42,
+    184729,
+    20261008,
+    2147483647
+  ],
+  "snapshot_steps": [
+    8,
+    16,
+    32
+  ],
+  "gsd_conditions_cm_px": [
+    0.5,
+    1,
+    2,
+    3,
+    4
+  ],
+  "resolution_px": [
+    1024,
+    768
+  ],
+  "source_attempt_statuses": [
+    false,
+    false,
+    true,
+    true
+  ],
+  "accepted_groups_recaptured_or_substituted": false,
+  "annotation_semantics": "amodal_direct_evaluated_mesh_projection",
+  "rendered_visibility": "unknown",
+  "pose_mapping": "static_pose_proxy_v1",
+  "background_rgb_equivalence_claimed": false,
+  "regression_unittest_cases_passed": 360,
+  "regression_unittest_cases_skipped": 0,
+  "historical_packaging_check": {
+    "passed": false,
+    "obsolete_expected_schema": "1.6.0",
+    "preserved_final_schema": "1.7.0",
+    "disposition": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/historical_package_disposition.json"
+  },
+  "pilot_audit": {
+    "passed": true,
+    "report": "/home/madil/kit-app-template/experiments/gama_marlin_v1/M8_READ_ONLY_PILOT_AUDIT.md",
+    "result": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_pilot_audit_02.json",
+    "execution": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_pilot_audit_02_execution.json"
+  },
+  "latest_retained_marine_demo": {
+    "checks_passed": 14,
+    "routes_verified": 4,
+    "result": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/final_live_demo/results.json",
+    "actual_execution": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/final_live_execution.json",
+    "observation_date_utc": "2026-10-09"
+  },
+  "memory": {
+    "permanent_fix_established": false,
+    "capture_guard_minimum_free_mib": 768,
+    "last_recorded_free_mib": 546,
+    "last_recorded_at_utc": "2026-10-09T19:25:31.983107+00:00",
+    "measurement_is_current": false,
+    "kit_only_restarts_enabled_completion": true,
+    "controller_animation_phase_preserved": false
+  },
+  "historical_anchors": {
+    "milestone_7": {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_7_manifest.json",
+      "sha256": "d2e4f7179b6c6cb1e4de8124f796fa96d56466b919a1f30abe6b39af7dbd0715",
+      "recorded_sprint_acceptance_complete": false
+    },
+    "milestone_8": {
+      "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/milestone_8_manifest.json",
+      "sha256": "16a51dbd84bbe4ca31f0ad26dcbce318722072dd0cb12f6adc2fc872d244adfa",
+      "recorded_status": "complete_review_with_blocked_milestone_7",
+      "recorded_sprint_acceptance_complete": false
+    }
+  },
+  "supersedes": {
+    "earlier_m7_capture_blocker_resolved": true,
+    "missing_images": 0,
+    "missing_snapshot_groups": 0,
+    "historical_m8_report_is_dated_snapshot": true,
+    "historical_reports_and_seals_unchanged": true
+  },
+  "current_documents": {
+    "report": "/home/madil/kit-app-template/experiments/gama_marlin_v1/GAMA_MARLIN_SPRINT_CLOSEOUT.md",
+    "reproduction": "/home/madil/kit-app-template/experiments/gama_marlin_v1/SPRINT_CLOSEOUT_REPRODUCTION.md"
+  },
+  "specification": "/home/madil/kit-app-template/Codex-Instructions/Current-Sprint/GAMA_MARLIN_SPRINT_SPECIFICATION.md",
+  "evidence_validation": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_validation.json",
+  "evidence_validation_execution": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/sprint_closeout_01/existing_evidence_execution.json",
+  "limitations": [
+    "Static upright pose and provisional behavioural assumptions; MAR review remains engineering use only.",
+    "Uncalibrated underwater refraction and wave/anatomical water clearance.",
+    "Direct amodal mesh boxes with unknown rendered visibility.",
+    "Unlabelled demonstration wildlife in target-removed backgrounds.",
+    "Observed paired-background shading/detail differences of unestablished cause.",
+    "GPU memory pressure was mitigated by bounded Kit restarts; a permanent fix was not established."
+  ]
+}

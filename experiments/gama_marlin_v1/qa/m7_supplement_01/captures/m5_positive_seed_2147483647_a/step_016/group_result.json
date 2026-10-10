@@ -1,0 +1,1299 @@
+{
+  "run_id": "m5_positive_seed_2147483647_a",
+  "step_index": 16,
+  "source_state": {
+    "schema_version": "2.0",
+    "run_id": "m5_positive_seed_2147483647_a",
+    "step_index": 16,
+    "simulation_time_s": 8.0,
+    "simulation_step_s": 0.5,
+    "seed": 2147483647,
+    "agents": [
+      {
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "behavioural_state": "descent",
+        "horizontal_position_m": [
+          5.802861241693788,
+          -5.506977520350708
+        ],
+        "heading_deg": 223.5013913360985,
+        "speed_mps": 0.5,
+        "vertical_reference": "mean_sea_level",
+        "depth_m": 1.9000000000000001
+      }
+    ]
+  },
+  "split": "test",
+  "encounter_group_id": "gama_engineering_porpoise_seed_2147483647",
+  "passed": false,
+  "actor_before": {
+    "ok": true,
+    "owned": true,
+    "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+    "world_pose": {
+      "position_scene_units": [
+        580.2861241693788,
+        -190.0,
+        -550.6977520350708
+      ],
+      "forward_y_up": [
+        -0.6883721547696943,
+        0.0,
+        -0.7253576886872628
+      ]
+    },
+    "calibration": {
+      "profile": "harbour_porpoise_gsd_pilot_v1",
+      "axial_length_m": 1.6014894247055054,
+      "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+      "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+      "biological_calibration_verified": false,
+      "pose_mapping": "static_pose_proxy_v1",
+      "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+    },
+    "accepted_steps": 17,
+    "latest": {
+      "schema_version": "2.0",
+      "run_id": "m5_positive_seed_2147483647_a",
+      "step_index": 16,
+      "simulation_time_s": 8.0,
+      "simulation_step_s": 0.5,
+      "seed": 2147483647,
+      "agents": [
+        {
+          "agent_id": "Porpoise_001",
+          "species": "harbour_porpoise",
+          "behavioural_state": "descent",
+          "horizontal_position_m": [
+            5.802861241693788,
+            -5.506977520350708
+          ],
+          "heading_deg": 223.5013913360985,
+          "speed_mps": 0.5,
+          "vertical_reference": "mean_sea_level",
+          "depth_m": 1.9000000000000001
+        }
+      ]
+    },
+    "motion_policy": "freeze_and_report",
+    "agent_id": "Porpoise_001",
+    "species": "harbour_porpoise",
+    "actor_count": 1,
+    "root_present_on_active_stage": true,
+    "root_diagnostics": {
+      "children": [
+        "/MarlinGamaPorpoise/Porpoise_001"
+      ],
+      "opinions": [
+        {
+          "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+          "specifier": "Sdf.SpecifierDef",
+          "type_name": "Xform",
+          "custom_data": {
+            "marlin": {
+              "axial_length_m": 1.6014894247055054,
+              "behavioural_state": "descent",
+              "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+              "owner": "gama_v2",
+              "pose_mapping": "static_pose_proxy_v1",
+              "run_id": "m5_positive_seed_2147483647_a",
+              "seed": "2147483647",
+              "simulation_time_s": "8.0",
+              "step_index": "16"
+            }
+          },
+          "fields": [
+            "typeName",
+            "customData",
+            "specifier"
+          ],
+          "properties": [],
+          "children": [
+            "Porpoise_001"
+          ],
+          "diagnostic_camera": null
+        }
+      ]
+    },
+    "transport_state": "holding_last_state",
+    "seconds_since_update": 0.21344922101707198,
+    "missing_update_after_s": 2.0,
+    "guard_error": null,
+    "autonomous_controller": false,
+    "pose_mapping": "static_pose_proxy_v1"
+  },
+  "pose_before": {
+    "passed": true,
+    "composed_position_m": [
+      5.802861241693789,
+      -1.9000000000000001,
+      -5.506977520350708
+    ],
+    "expected_position_m": [
+      5.802861241693788,
+      -1.9000000000000001,
+      -5.506977520350708
+    ],
+    "composed_heading_deg": 223.5013885498047,
+    "expected_heading_deg": 223.5013913360985,
+    "position_error_m": 8.881784197001252e-16,
+    "heading_error_deg": 2.7862938054568076e-06
+  },
+  "capture_attempts": [
+    {
+      "attempt_index": 1,
+      "started_at_utc": "2026-10-09T18:54:49.522864+00:00",
+      "held_state_before": true,
+      "runtime_code_unchanged": true,
+      "same_source_step_index": 16,
+      "same_source_run_id": "m5_positive_seed_2147483647_a",
+      "runtime_code_pins_sha256": "cfca0619dfb94a1a09adfc624fba5aca94c0271ae519ac1908c534cf17e0d6ee",
+      "status_before": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "holding_last_state",
+        "seconds_since_update": 0.5138736480148509,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "response": {
+        "ok": false,
+        "error": "Insufficient GPU headroom before capture: 380 MiB free; require at least 768 MiB. No render attempted."
+      },
+      "http_status_code": 200,
+      "response_received_at_utc": "2026-10-09T18:54:50.150629+00:00",
+      "retryable_no_render_headroom": true,
+      "observed_free_gpu_mib": 380,
+      "required_free_gpu_mib": 768,
+      "render_attempted": false,
+      "held_state_after_rejection": true,
+      "status_after_headroom_rejection": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "holding_last_state",
+        "seconds_since_update": 1.0511051110224798,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "wait_before_next_attempt_s": 20,
+      "wait_completed_at_utc": "2026-10-09T18:55:10.360577+00:00",
+      "status_after_wait": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 21.225120295013767,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "held_state_after_wait": true,
+      "runtime_code_unchanged_after_wait": true
+    },
+    {
+      "attempt_index": 2,
+      "started_at_utc": "2026-10-09T18:55:10.536971+00:00",
+      "held_state_before": true,
+      "runtime_code_unchanged": true,
+      "same_source_step_index": 16,
+      "same_source_run_id": "m5_positive_seed_2147483647_a",
+      "runtime_code_pins_sha256": "cfca0619dfb94a1a09adfc624fba5aca94c0271ae519ac1908c534cf17e0d6ee",
+      "status_before": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 21.5241374670004,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "response": {
+        "ok": false,
+        "error": "Insufficient GPU headroom before capture: 563 MiB free; require at least 768 MiB. No render attempted."
+      },
+      "http_status_code": 200,
+      "response_received_at_utc": "2026-10-09T18:55:11.162279+00:00",
+      "retryable_no_render_headroom": true,
+      "observed_free_gpu_mib": 563,
+      "required_free_gpu_mib": 768,
+      "render_attempted": false,
+      "held_state_after_rejection": true,
+      "status_after_headroom_rejection": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 22.056242043006932,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "wait_before_next_attempt_s": 20,
+      "wait_completed_at_utc": "2026-10-09T18:55:31.365813+00:00",
+      "status_after_wait": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 42.131007374002365,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "held_state_after_wait": true,
+      "runtime_code_unchanged_after_wait": true
+    },
+    {
+      "attempt_index": 3,
+      "started_at_utc": "2026-10-09T18:55:31.442417+00:00",
+      "held_state_before": true,
+      "runtime_code_unchanged": true,
+      "same_source_step_index": 16,
+      "same_source_run_id": "m5_positive_seed_2147483647_a",
+      "runtime_code_pins_sha256": "cfca0619dfb94a1a09adfc624fba5aca94c0271ae519ac1908c534cf17e0d6ee",
+      "status_before": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 42.42829213300138,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "response": {
+        "ok": false,
+        "error": "Insufficient GPU headroom before capture: 560 MiB free; require at least 768 MiB. No render attempted."
+      },
+      "http_status_code": 200,
+      "response_received_at_utc": "2026-10-09T18:55:32.070462+00:00",
+      "retryable_no_render_headroom": true,
+      "observed_free_gpu_mib": 560,
+      "required_free_gpu_mib": 768,
+      "render_attempted": false,
+      "held_state_after_rejection": true,
+      "status_after_headroom_rejection": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 42.965642479015514,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "wait_before_next_attempt_s": 20,
+      "wait_completed_at_utc": "2026-10-09T18:55:52.275107+00:00",
+      "status_after_wait": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 63.122018152003875,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "held_state_after_wait": true,
+      "runtime_code_unchanged_after_wait": true
+    },
+    {
+      "attempt_index": 4,
+      "started_at_utc": "2026-10-09T18:55:52.433407+00:00",
+      "held_state_before": true,
+      "runtime_code_unchanged": true,
+      "same_source_step_index": 16,
+      "same_source_run_id": "m5_positive_seed_2147483647_a",
+      "runtime_code_pins_sha256": "cfca0619dfb94a1a09adfc624fba5aca94c0271ae519ac1908c534cf17e0d6ee",
+      "status_before": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 63.41558264702326,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "response": {
+        "ok": false,
+        "error": "Insufficient GPU headroom before capture: 563 MiB free; require at least 768 MiB. No render attempted."
+      },
+      "http_status_code": 200,
+      "response_received_at_utc": "2026-10-09T18:55:53.051449+00:00",
+      "retryable_no_render_headroom": true,
+      "observed_free_gpu_mib": 563,
+      "required_free_gpu_mib": 768,
+      "render_attempted": false,
+      "held_state_after_rejection": true,
+      "status_after_headroom_rejection": {
+        "ok": true,
+        "owned": true,
+        "actor_path": "/MarlinGamaPorpoise/Porpoise_001",
+        "world_pose": {
+          "position_scene_units": [
+            580.2861241693788,
+            -190.0,
+            -550.6977520350708
+          ],
+          "forward_y_up": [
+            -0.6883721547696943,
+            0.0,
+            -0.7253576886872628
+          ]
+        },
+        "calibration": {
+          "profile": "harbour_porpoise_gsd_pilot_v1",
+          "axial_length_m": 1.6014894247055054,
+          "record": "/home/madil/kit-app-template/experiments/gsd_pilot_v1/wildlife/harbour_porpoise.json",
+          "asset_sha256": "1d5e96c29b976e07a434381db5e58aae95198cec91a1738c2176a0d4ff7346ef",
+          "biological_calibration_verified": false,
+          "pose_mapping": "static_pose_proxy_v1",
+          "pose_note": "All five labels use the existing static upright mesh; no dive pitch, rig animation or breathing pose is claimed"
+        },
+        "accepted_steps": 17,
+        "latest": {
+          "schema_version": "2.0",
+          "run_id": "m5_positive_seed_2147483647_a",
+          "step_index": 16,
+          "simulation_time_s": 8.0,
+          "simulation_step_s": 0.5,
+          "seed": 2147483647,
+          "agents": [
+            {
+              "agent_id": "Porpoise_001",
+              "species": "harbour_porpoise",
+              "behavioural_state": "descent",
+              "horizontal_position_m": [
+                5.802861241693788,
+                -5.506977520350708
+              ],
+              "heading_deg": 223.5013913360985,
+              "speed_mps": 0.5,
+              "vertical_reference": "mean_sea_level",
+              "depth_m": 1.9000000000000001
+            }
+          ]
+        },
+        "motion_policy": "freeze_and_report",
+        "agent_id": "Porpoise_001",
+        "species": "harbour_porpoise",
+        "actor_count": 1,
+        "root_present_on_active_stage": true,
+        "root_diagnostics": {
+          "children": [
+            "/MarlinGamaPorpoise/Porpoise_001"
+          ],
+          "opinions": [
+            {
+              "layer": "anon:0x6300a5861970:marlin_gama_fixture.usda",
+              "specifier": "Sdf.SpecifierDef",
+              "type_name": "Xform",
+              "custom_data": {
+                "marlin": {
+                  "axial_length_m": 1.6014894247055054,
+                  "behavioural_state": "descent",
+                  "calibration_profile": "harbour_porpoise_gsd_pilot_v1",
+                  "owner": "gama_v2",
+                  "pose_mapping": "static_pose_proxy_v1",
+                  "run_id": "m5_positive_seed_2147483647_a",
+                  "seed": "2147483647",
+                  "simulation_time_s": "8.0",
+                  "step_index": "16"
+                }
+              },
+              "fields": [
+                "typeName",
+                "customData",
+                "specifier"
+              ],
+              "properties": [],
+              "children": [
+                "Porpoise_001"
+              ],
+              "diagnostic_camera": null
+            }
+          ]
+        },
+        "transport_state": "frozen_updates_missing",
+        "seconds_since_update": 63.94498132701847,
+        "missing_update_after_s": 2.0,
+        "guard_error": null,
+        "autonomous_controller": false,
+        "pose_mapping": "static_pose_proxy_v1"
+      },
+      "retry_exhausted": true
+    }
+  ],
+  "capture_response": {
+    "ok": false,
+    "error": "Insufficient GPU headroom before capture: 563 MiB free; require at least 768 MiB. No render attempted."
+  },
+  "error": "ValueError: Pending capture failed; all returned responses and any group were retained"
+}

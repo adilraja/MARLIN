@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:25:19.604932+00:00",
+  "ended_at_utc": "2026-10-09T17:25:20.005844+00:00",
+  "elapsed_seconds": 0.4009180080029182,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/marlin_service.stderr.log",
+    "bytes": 10536,
+    "sha256": "fa939f5d38b9f9d1727c8c359ccd606d508250cd6157523d399339b446e302fd"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "marlin_service",
+  "category": "existing_marlin_service",
+  "scope": "Canonical16-module service suite: actual USD calibration/petrel stages plus pure movement, camera math, settings/AST and retained asset/config checks; no live Kit.",
+  "tests": 77,
+  "skipped": 0,
+  "expected_tests": 77,
+  "passed": true
+}

@@ -1,0 +1,297 @@
+{
+  "milestone": 7,
+  "scope": "Read-only protected-output and historical-source preservation; no M8 work",
+  "recorded_at_utc": "2026-10-09T17:20:24.566548+00:00",
+  "passed": true,
+  "tests_rerun": false,
+  "live_calls_made": false,
+  "biological_approval": false,
+  "checker_sha256": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6",
+  "helper_sha256": "2d4daa55a5f531fc386a9019760ddf0aa13ae8d2ee4cb16fdce82b813bbaa5a8",
+  "preservation": {
+    "milestone_5": {
+      "protected_files_checked": 175,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "milestone_6": {
+      "protected_files_checked": 98,
+      "protected_changes": [],
+      "intentional_source_deltas": [
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+          "changed": true,
+          "previous_sha256": "1d99c7ff2a0a7c6e4b86219633a4d5fa0ecc9686541e2764f55360b1b1c399a7",
+          "current_sha256": "6a441ec4c4b970e6bd3ea458442fd6fcba80b56b300e00ca7178ee58072e745d"
+        },
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py",
+          "changed": true,
+          "previous_sha256": "3b59145df4910be95ef7b70b19630402f8f38e97f5efa23e2ecd2073968e95c8",
+          "current_sha256": "c753bca236e9045da9ef3a5b0682bc884f2f71dd0cfbde310ab53d7416f4b913"
+        }
+      ],
+      "passed": true
+    },
+    "milestone_2": {
+      "protected_files_checked": 17,
+      "protected_changes": [],
+      "intentional_source_deltas": [
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+          "changed": true,
+          "previous_sha256": "3cb6881fb2519a2ffd0ac6e7cc423dfcc050825b420446a244cad51865851527",
+          "current_sha256": "6a441ec4c4b970e6bd3ea458442fd6fcba80b56b300e00ca7178ee58072e745d"
+        }
+      ],
+      "passed": true
+    },
+    "milestone_3": {
+      "protected_files_checked": 27,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "milestone_4": {
+      "protected_files_checked": 55,
+      "protected_changes": [],
+      "intentional_source_deltas": [
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+          "changed": true,
+          "previous_sha256": "2af227967f23886522956c7a9f257403b6466871ffd83bd9de24d398f5f9b179",
+          "current_sha256": "6a441ec4c4b970e6bd3ea458442fd6fcba80b56b300e00ca7178ee58072e745d"
+        }
+      ],
+      "passed": true
+    },
+    "pilot_baseline": {
+      "protected_files_checked": 914,
+      "protected_changes": [],
+      "intentional_source_deltas": [
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+          "changed": true,
+          "previous_sha256": "be5afa77b6d0f81fffe55ae4bb3f8917db4e60b8a1f48f03ed7ba65be435d26e",
+          "current_sha256": "4bdce48bae4ed348224371485a74d13a2b7f6f92a3e51aec0450b64862e9aee0"
+        },
+        {
+          "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+          "changed": true,
+          "previous_sha256": "1290245e3ce8e06aecfa7a78a9c8c06b14ff06c649ba6e9cdc2d7cb32cb1f387",
+          "current_sha256": "6a441ec4c4b970e6bd3ea458442fd6fcba80b56b300e00ca7178ee58072e745d"
+        }
+      ],
+      "passed": true
+    },
+    "baseline_archive": {
+      "protected_files_checked": 1,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    },
+    "trained_checkpoint_original_and_backup": {
+      "protected_files_checked": 2,
+      "protected_changes": [],
+      "intentional_source_deltas": [],
+      "passed": true
+    }
+  },
+  "historical_manifest_checks": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_5_manifest.json",
+      "expected_sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3",
+      "actual_sha256": "fdc934b556f006118e8c720a3cbba4302a8a154ae6005da5c4477b0286fc10c3",
+      "bytes": 40757,
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_6_manifest.json",
+      "expected_sha256": "97cee0f2401d13b0f5e58473ca0d6278c4c9d17ae9298997aae9622ea17845fd",
+      "actual_sha256": "97cee0f2401d13b0f5e58473ca0d6278c4c9d17ae9298997aae9622ea17845fd",
+      "bytes": 28913,
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/m6_final_preservation.json",
+      "expected_sha256": "c0ec680c8320a6683a66374429423fd6532490fa161ca0465d68777ca28b5951",
+      "actual_sha256": "c0ec680c8320a6683a66374429423fd6532490fa161ca0465d68777ca28b5951",
+      "bytes": 8693,
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_2_manifest.json",
+      "expected_sha256": "61b23528ce699cefa0a87b32276b41fa590fd90bf0640918a1719746918279c8",
+      "actual_sha256": "61b23528ce699cefa0a87b32276b41fa590fd90bf0640918a1719746918279c8",
+      "bytes": 3687,
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_3_manifest.json",
+      "expected_sha256": "498683096153fa52de772a31faf7caa66c94640d0acad084edd3aaae72a27f9e",
+      "actual_sha256": "498683096153fa52de772a31faf7caa66c94640d0acad084edd3aaae72a27f9e",
+      "bytes": 5864,
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/milestone_4_manifest.json",
+      "expected_sha256": "c2f9e04eab76b3148107b90bb7d9400ce141278e53d1701345471f6eda1a0c52",
+      "actual_sha256": "c2f9e04eab76b3148107b90bb7d9400ce141278e53d1701345471f6eda1a0c52",
+      "bytes": 11445,
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/preserved_output_manifest.json",
+      "expected_sha256": "9100230adf3a392101e2697978fe9221f3ec6d26fea8ce1c8ce8e1dead795098",
+      "actual_sha256": "9100230adf3a392101e2697978fe9221f3ec6d26fea8ce1c8ce8e1dead795098",
+      "bytes": 204345,
+      "passed": true
+    }
+  ],
+  "historical_m6_source_checks": [
+    {
+      "canonical_source": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "retained_source": "experiments/gama_marlin_v1/qa/m7_pre_refactor_source/extension.py",
+      "original_m6_sha256": "1d99c7ff2a0a7c6e4b86219633a4d5fa0ecc9686541e2764f55360b1b1c399a7",
+      "passed": true,
+      "protected_changes": []
+    },
+    {
+      "canonical_source": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py",
+      "retained_source": "experiments/gama_marlin_v1/qa/m7_pre_refactor_source/paired_v2.py",
+      "original_m6_sha256": "3b59145df4910be95ef7b70b19630402f8f38e97f5efa23e2ecd2073968e95c8",
+      "passed": true,
+      "protected_changes": []
+    }
+  ],
+  "declaration": {
+    "path": "experiments/gama_marlin_v1/m7_capture_declaration.json",
+    "sha256": "4955284fe067ce9e69b5d47d8381e6a5f82f3e00e3453d2459858189e431e557",
+    "declared_at_utc": "2026-10-09T11:56:19.444912+00:00"
+  },
+  "historical_m6_source_manifest": {
+    "path": "experiments/gama_marlin_v1/qa/m7_pre_refactor_source/manifest.json",
+    "sha256": "cce59d9d06eecdc33a3ad0c73fcf74b35180a8e2453d69f6a5ccc6fcdb55ba2f",
+    "git_commit": "01dcff2ced04dc68e5be977087591f4fca94924b"
+  },
+  "python_syntax_checked": [
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/__init__.py",
+      "sha256": "7142da410307ab9ee89c01a3205470d5ef6a3e37ac269efde1f9915b5374c774",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "sha256": "4bdce48bae4ed348224371485a74d13a2b7f6f92a3e51aec0450b64862e9aee0",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v2.py",
+      "sha256": "769f900b4b095ec25d6baf2ae4e3e689bec24b44167fa6853285f11e3ce63263",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/calibration.py",
+      "sha256": "d86ba20e1147c2c49efe27f38f5769d61705b4935ac5b4c572d406fc412aa637",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/counterfactual.py",
+      "sha256": "fdfefc7358cd07de7e884b174d1c27463d4e376f89c2f95e712a5506559b8297",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py",
+      "sha256": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_v2.py",
+      "sha256": "7799aa2a8fa473cbc872da1c331d1e93344d04e8f23153fe98ff7178127b0791",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange.py",
+      "sha256": "ddc5a20b8e83f3e14fa9356b3d485115e8f4ae22ccf03f200c573d8f9981ced1",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v2.py",
+      "sha256": "0d577fa94345bf7d252ff624d49a53f75b7d72c400b4789def69df20a2815e3c",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "sha256": "6a441ec4c4b970e6bd3ea458442fd6fcba80b56b300e00ca7178ee58072e745d",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/marine_check.py",
+      "sha256": "37222aa2f56188256c143ed187c42e62f4021f98a78349ee3ce508ba3953789e",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py",
+      "sha256": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_transaction_v2.py",
+      "sha256": "4496594603e11a9ff26ae4b564f9b48a04f4bce3fb92b2343b664d080452984b",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py",
+      "sha256": "c753bca236e9045da9ef3a5b0682bc884f2f71dd0cfbde310ab53d7416f4b913",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/stage_coordinates.py",
+      "sha256": "f1d9e00ee369b8026aa5e727a3e52f51bf2b90b508a5e35574b9a5d71873250d",
+      "passed": true
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/visual_v2.py",
+      "sha256": "0930661f0a1edd804848dddbd69afd8fc9ae8505c98a6ecf9eaec11eca646ee1",
+      "passed": true
+    },
+    {
+      "path": "tools/capture_gama_dataset_v2.py",
+      "sha256": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725",
+      "passed": true
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+      "sha256": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6",
+      "passed": true
+    }
+  ],
+  "git_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "return_code": 0,
+    "output": "",
+    "passed": true
+  },
+  "intentional_source_deltas": {
+    "pilot_baseline": [
+      "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py"
+    ],
+    "milestone_2": [
+      "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py"
+    ],
+    "milestone_4": [
+      "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py"
+    ],
+    "milestone_6": [
+      "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py"
+    ],
+    "basis": "Earlier cumulative bridge deltas retained; only extension.py and paired_v2.py differed from M6 for the declared M7 work"
+  }
+}

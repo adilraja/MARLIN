@@ -1,0 +1,70 @@
+{
+  "kind": "m8_historical_preservation_execution",
+  "milestone": 8,
+  "phase": "initial",
+  "final_m8_acceptance_claimed": false,
+  "scope": "Historical protected inventories and exact historical source anchors; no new final-report seal",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+    "--output",
+    "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_preservation_initial_01.json"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 0,
+  "started_at_utc": "2026-10-09T17:20:24.530640+00:00",
+  "finished_at_utc": "2026-10-09T17:20:25.691424+00:00",
+  "duration_seconds": 1.160783616011031,
+  "checker_report_milestone": 7,
+  "checker_report_scope": "Read-only protected-output and historical-source preservation; no M8 work",
+  "source_pins_before": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+      "bytes": 9575,
+      "sha256": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m4_checks.py",
+      "bytes": 7649,
+      "sha256": "2d4daa55a5f531fc386a9019760ddf0aa13ae8d2ee4cb16fdce82b813bbaa5a8"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m8_preservation.py",
+      "bytes": 3831,
+      "sha256": "9c302358175df86faa9887a53f11f0ddb8dcaa92cabc5ff106f002d7bfde4395"
+    }
+  ],
+  "source_pins_after": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+      "bytes": 9575,
+      "sha256": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m4_checks.py",
+      "bytes": 7649,
+      "sha256": "2d4daa55a5f531fc386a9019760ddf0aa13ae8d2ee4cb16fdce82b813bbaa5a8"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m8_preservation.py",
+      "bytes": 3831,
+      "sha256": "9c302358175df86faa9887a53f11f0ddb8dcaa92cabc5ff106f002d7bfde4395"
+    }
+  ],
+  "sources_unchanged": true,
+  "result": {
+    "path": "experiments/gama_marlin_v1/qa/m8_preservation_initial_01.json",
+    "bytes": 12064,
+    "sha256": "d7586fa74b62f43ffde8587407ea212417bbe9b5396d9afe913a54f858670fe9"
+  },
+  "actual_stdout_stderr": {
+    "path": "experiments/gama_marlin_v1/qa/m8_preservation_initial_01.log",
+    "bytes": 427,
+    "sha256": "378c0b9af92e4bf8610b5f7e65506702f64f0f318962983ef65809d0021fdc21"
+  },
+  "live_calls_made": false,
+  "tests_rerun": false,
+  "biological_approval": false,
+  "passed": true
+}

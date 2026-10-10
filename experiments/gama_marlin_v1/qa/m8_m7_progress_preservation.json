@@ -1,0 +1,134 @@
+{
+  "kind": "m8_partial_m7_output_preservation",
+  "milestone": 8,
+  "scope": "All output bytes in the pinned incomplete M7 progress inventory, with pending helpers",
+  "recorded_at_utc": "2026-10-09T17:31:49.710517+00:00",
+  "passed": true,
+  "milestone_7_acceptance_claimed": false,
+  "whole_sprint_completion_claimed": false,
+  "live_calls_made": false,
+  "tests_rerun": false,
+  "biological_approval": false,
+  "source_pins_before": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m8_m7_progress_preservation.py",
+      "bytes": 5031,
+      "sha256": "949e54ad98112edb3cb05d5cf83f9c232bc342bb334a3a6df7500581071faa5a"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m8_preservation.py",
+      "bytes": 3831,
+      "sha256": "9c302358175df86faa9887a53f11f0ddb8dcaa92cabc5ff106f002d7bfde4395"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+      "bytes": 9575,
+      "sha256": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m4_checks.py",
+      "bytes": 7649,
+      "sha256": "2d4daa55a5f531fc386a9019760ddf0aa13ae8d2ee4cb16fdce82b813bbaa5a8"
+    },
+    {
+      "path": "tools/capture_gama_dataset_v2.py",
+      "bytes": 60165,
+      "sha256": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725"
+    },
+    {
+      "path": "tools/capture_gama_dataset_pending_v2.py",
+      "bytes": 25257,
+      "sha256": "aa8e816606e910e616169a2075877ee18d43c5070a51f134900612ec050f53ca"
+    },
+    {
+      "path": "tools/aggregate_gama_dataset_v2.py",
+      "bytes": 17498,
+      "sha256": "8effbf8b9dd03c337e6c1e1ae47ba08733b6d43d3c63f646689f411c5de82ff0"
+    },
+    {
+      "path": "tools/test_gama_dataset_pending.py",
+      "bytes": 20923,
+      "sha256": "6ea9907ded505876b316263bdf6edba9d117ac530de459fb1ec51b769080960c"
+    },
+    {
+      "path": "tools/verify_gama_paired_live.py",
+      "bytes": 32316,
+      "sha256": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741"
+    }
+  ],
+  "outputs_checked": 1355,
+  "changes": [],
+  "manifest_before": {
+    "path": "experiments/gama_marlin_v1/qa/m7_progress_manifest.json",
+    "bytes": 344121,
+    "sha256": "a480bd2ac0624ab6cc8ff2d6873bb68c355f6a73f9adcb3ad66ec53e242635d9"
+  },
+  "retained_m7_status": {
+    "status": "incomplete",
+    "passed": false,
+    "milestone_complete": false,
+    "resource_blocked": true,
+    "validated_images": 120,
+    "expected_images": 150,
+    "remaining_images": 30,
+    "source_campaign_passed": false,
+    "final_dataset_exported": false,
+    "biological_approval": false,
+    "last_retained_free_gpu_mib": 374,
+    "resource_observation_utc": "2026-10-09 16:54:05 UTC"
+  },
+  "manifest_after": {
+    "path": "experiments/gama_marlin_v1/qa/m7_progress_manifest.json",
+    "bytes": 344121,
+    "sha256": "a480bd2ac0624ab6cc8ff2d6873bb68c355f6a73f9adcb3ad66ec53e242635d9"
+  },
+  "source_pins_after": [
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m8_m7_progress_preservation.py",
+      "bytes": 5031,
+      "sha256": "949e54ad98112edb3cb05d5cf83f9c232bc342bb334a3a6df7500581071faa5a"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m8_preservation.py",
+      "bytes": 3831,
+      "sha256": "9c302358175df86faa9887a53f11f0ddb8dcaa92cabc5ff106f002d7bfde4395"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/check_m7_preservation.py",
+      "bytes": 9575,
+      "sha256": "21b767823420edf8fa62fbe40e0d9ae9268631cecf92d89426f77bf5567cf9f6"
+    },
+    {
+      "path": "experiments/gama_marlin_v1/qa/run_m4_checks.py",
+      "bytes": 7649,
+      "sha256": "2d4daa55a5f531fc386a9019760ddf0aa13ae8d2ee4cb16fdce82b813bbaa5a8"
+    },
+    {
+      "path": "tools/capture_gama_dataset_v2.py",
+      "bytes": 60165,
+      "sha256": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725"
+    },
+    {
+      "path": "tools/capture_gama_dataset_pending_v2.py",
+      "bytes": 25257,
+      "sha256": "aa8e816606e910e616169a2075877ee18d43c5070a51f134900612ec050f53ca"
+    },
+    {
+      "path": "tools/aggregate_gama_dataset_v2.py",
+      "bytes": 17498,
+      "sha256": "8effbf8b9dd03c337e6c1e1ae47ba08733b6d43d3c63f646689f411c5de82ff0"
+    },
+    {
+      "path": "tools/test_gama_dataset_pending.py",
+      "bytes": 20923,
+      "sha256": "6ea9907ded505876b316263bdf6edba9d117ac530de459fb1ec51b769080960c"
+    },
+    {
+      "path": "tools/verify_gama_paired_live.py",
+      "bytes": 32316,
+      "sha256": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741"
+    }
+  ],
+  "manifest_unchanged": true,
+  "sources_unchanged": true
+}

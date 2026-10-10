@@ -1,0 +1,25 @@
+{
+  "kind": "m7_finalizer_actual_command_pin_independent_review",
+  "passed": true,
+  "cases": [
+    {
+      "name": "current_actual_aggregate_command_and_runner_pins_accepted",
+      "passed": true
+    },
+    {
+      "name": "source_sha256_after_mismatch_rejected",
+      "passed": true,
+      "rejection": "Actual command program SHA changed before/after execution"
+    },
+    {
+      "name": "runner_sha256_after_mismatch_rejected",
+      "passed": true,
+      "rejection": "Actual command recorder SHA changed before/after execution"
+    }
+  ],
+  "source_sha256_before": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff",
+  "source_sha256_after": "a1ca0304fda838b6e3d2f3e607d1384ac333f6300793bfc2c5d68449ed4f68ff",
+  "actual_finalizer_main_executed": false,
+  "live_calls_made": false,
+  "source_capture_evidence_modified": false
+}

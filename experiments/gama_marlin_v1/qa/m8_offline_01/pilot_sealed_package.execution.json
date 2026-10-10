@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "experiments/gsd_pilot_v1/qa/m7_package.py"
+  ],
+  "cwd": "/home/madil/kit-app-template",
+  "return_code": 1,
+  "started_at_utc": "2026-10-09T17:26:06.933142+00:00",
+  "ended_at_utc": "2026-10-09T17:26:07.358820+00:00",
+  "elapsed_seconds": 0.4256840989983175,
+  "stdout": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stdout.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m8_offline_01/pilot_sealed_package.stderr.log",
+    "bytes": 362,
+    "sha256": "04007cdaf968f4732bfb923684e4f7426f205d0caff38be21e3632f6fe2d222b"
+  },
+  "explicit_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service"
+  },
+  "name": "pilot_sealed_package",
+  "category": "existing_pilot",
+  "scope": "Existing completed-seal branch only: retained historical package/source/result/checkpoint hashes; no seal or training-output rewrite.",
+  "tests": null,
+  "skipped": 0,
+  "expected_stdout": "sealed_manifest_verified",
+  "passed": false
+}

@@ -1,0 +1,292 @@
+[
+  {
+    "name": "marlin_service",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "expected_tests": 77,
+    "category": "existing_marlin_service",
+    "scope": "Canonical16-module service suite: actual USD calibration/petrel stages plus pure movement, camera math, settings/AST and retained asset/config checks; no live Kit."
+  },
+  {
+    "name": "hidef_marine",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_hidef_marine.py",
+      "-v"
+    ],
+    "expected_tests": 8,
+    "category": "existing_camera",
+    "scope": "Actual USD frozen snapshots and translated camera rays; NumPy maps and fake settings/AST gates."
+  },
+  {
+    "name": "sony_camera",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_sony_camera.py",
+      "-v"
+    ],
+    "expected_tests": 6,
+    "category": "existing_camera",
+    "scope": "Independent pinhole/map calculations plus actual USD camera ray projection; no rendered pixels."
+  },
+  {
+    "name": "capture_projection",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_capture_projection.py",
+      "-v"
+    ],
+    "expected_tests": 6,
+    "category": "existing_camera",
+    "scope": "Actual USD camera/render-product contracts; fake viewport/UI matrices test resolution, pixel aspect and crop rejection."
+  },
+  {
+    "name": "native_tiles",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_native_tiles.py",
+      "-v"
+    ],
+    "expected_tests": 6,
+    "category": "existing_camera",
+    "scope": "Actual USD tile-camera/product projection and exact NumPy pixel coverage; fake viewport settling/reset boundaries."
+  },
+  {
+    "name": "tile_diagnostics",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_tile_diagnostics.py",
+      "-v"
+    ],
+    "expected_tests": 4,
+    "category": "existing_camera",
+    "scope": "Synthetic NumPy/Pillow pixels and evidence-rejection fixtures; no retained render is produced."
+  },
+  {
+    "name": "gama_actor",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_actor.py",
+      "-v"
+    ],
+    "expected_tests": 8,
+    "category": "bridge",
+    "scope": "Original actor lifecycle with actual USD layers/transforms; fake capture gate."
+  },
+  {
+    "name": "gama_actor_v2",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_actor_v2.py",
+      "-v"
+    ],
+    "expected_tests": 24,
+    "category": "bridge",
+    "scope": "Actual calibrated asset/USD composed poses, ownership/layers, duplicate/reset/guard semantics and bounded cleanup."
+  },
+  {
+    "name": "gama_exchange",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_exchange.py",
+      "-v"
+    ],
+    "expected_tests": 9,
+    "category": "bridge",
+    "scope": "Original pure schema/coordinate/replay validation."
+  },
+  {
+    "name": "gama_exchange_v2",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_exchange_v2.py",
+      "-v"
+    ],
+    "expected_tests": 23,
+    "category": "bridge",
+    "scope": "V2 pure schema, strict scalar/state identity, coordinate and replay validation."
+  },
+  {
+    "name": "gama_live",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_live.py",
+      "-v"
+    ],
+    "expected_tests": 3,
+    "category": "bridge",
+    "scope": "Fake transport replay/protocol boundaries; the filename does not imply a live Kit run."
+  },
+  {
+    "name": "gama_porpoise",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_porpoise.py",
+      "-v"
+    ],
+    "expected_tests": 11,
+    "category": "bridge",
+    "scope": "Retained actual raw GAMA export parsing and explicit invalid XML/state fixtures; no new GAMA process."
+  },
+  {
+    "name": "gama_porpoise_analysis",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_porpoise_analysis.py",
+      "-v"
+    ],
+    "expected_tests": 14,
+    "category": "bridge",
+    "scope": "Measured retained M3 constraints plus explicitly synthetic rotation/mutation analysis fixtures; no biological acceptance."
+  },
+  {
+    "name": "gama_v2_stage",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_v2_stage.py",
+      "-v"
+    ],
+    "expected_tests": 8,
+    "category": "bridge",
+    "scope": "Actual USD coordinates/layers with fake Kit Services route/context boundaries."
+  },
+  {
+    "name": "gama_paired_state",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_paired_state.py",
+      "-v"
+    ],
+    "expected_tests": 20,
+    "category": "capture",
+    "scope": "Actual USD freezing, dependency/state/camera hashes and direct geometric GSD/projections."
+  },
+  {
+    "name": "gama_paired_transaction",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_paired_transaction.py",
+      "-v"
+    ],
+    "expected_tests": 13,
+    "category": "capture",
+    "scope": "Actual USD/PorpoiseActor with fake timeline/viewport/PNG/capture; cleanup, cancellation and unique output-path guards."
+  },
+  {
+    "name": "gama_dataset_state",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_dataset_state.py",
+      "-v"
+    ],
+    "expected_tests": 18,
+    "category": "capture",
+    "scope": "Actual USD positive/RemovePrim negative variant, background identity, mesh projection and annotation checks."
+  },
+  {
+    "name": "gama_dataset_transaction",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_dataset_transaction.py",
+      "-v"
+    ],
+    "expected_tests": 11,
+    "category": "capture",
+    "scope": "Actual USD/actor with fake Kit capture/timeline; exact10-view variants and failure/restoration guards."
+  },
+  {
+    "name": "gama_dataset_routes",
+    "python": "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "args": [
+      "tools/test_gama_dataset_routes.py",
+      "-v"
+    ],
+    "expected_tests": 4,
+    "category": "capture",
+    "scope": "Actual route handlers with fake Kit request/context boundaries; no HTTP service started."
+  },
+  {
+    "name": "gama_dataset_client",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_dataset_client.py",
+      "-v"
+    ],
+    "expected_tests": 42,
+    "category": "capture",
+    "scope": "Actual sealed-source plan plus explicit unit annotation/pixel/transport fixtures and injected bounded no-render headroom retries."
+  },
+  {
+    "name": "gama_capture_preflight",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_capture_preflight.py",
+      "-v"
+    ],
+    "expected_tests": 2,
+    "category": "capture",
+    "scope": "Fake GPU preflight/garbage collection boundaries; no GPU queried or renderer started."
+  },
+  {
+    "name": "gama_dataset_pending",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_dataset_pending.py",
+      "-v"
+    ],
+    "expected_tests": 31,
+    "category": "capture",
+    "scope": "Actual12-group source revalidation and exact3 missing states; test-only report/copy mutation fixtures."
+  },
+  {
+    "name": "gama_counterfactual",
+    "python": "/usr/bin/python3",
+    "args": [
+      "tools/test_gama_counterfactual.py",
+      "-v"
+    ],
+    "expected_tests": 4,
+    "category": "capture",
+    "scope": "Explicit synthetic pixel attribution/noise threshold tests; no new render or scientific inference."
+  },
+  {
+    "name": "pilot_reconstruction_contract",
+    "python": "/usr/bin/python3",
+    "args": [
+      "experiments/gsd_pilot_v1/qa/test_reconstruction_contract.py",
+      "-v"
+    ],
+    "expected_tests": 8,
+    "category": "existing_pilot",
+    "scope": "Actual pure verifier functions compiled from AST, with explicit reconstruction/preview evidence mutation fixtures."
+  },
+  {
+    "name": "pilot_metric_contract",
+    "python": "/usr/bin/python3",
+    "args": [
+      "experiments/gsd_pilot_v1/ml/metrics.py"
+    ],
+    "expected_stdout": "M7 metric contract passed",
+    "category": "existing_pilot",
+    "scope": "Existing pure IoU/one-to-one/101-point AP self-test; no model loading, evaluation rerun or training."
+  },
+  {
+    "name": "pilot_sealed_package",
+    "python": "/usr/bin/python3",
+    "args": [
+      "experiments/gsd_pilot_v1/qa/m7_package.py"
+    ],
+    "expected_stdout": "sealed_manifest_verified",
+    "category": "existing_pilot",
+    "scope": "Existing completed-seal branch only: retained historical package/source/result/checkpoint hashes; no seal or training-output rewrite."
+  }
+]

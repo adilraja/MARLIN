@@ -1,0 +1,31 @@
+{
+  "kind": "m7_single_pending_snapshot_helper_preuse_validation",
+  "passed": true,
+  "recorded_at_utc": "2026-10-09T19:03:30.071543+00:00",
+  "helper": {
+    "path": "/home/madil/kit-app-template/experiments/gama_marlin_v1/qa/m7_completion_01/capture_one_pending_snapshot.py",
+    "bytes": 25514,
+    "sha256": "b634b127dc7f607deb63a749d3cc64727d6b88efcf120f25e83941e968415fd3"
+  },
+  "syntax_passed": true,
+  "offline_build_plan_16_passed": true,
+  "accepted_source_groups": 13,
+  "accepted_source_images": 130,
+  "pending_keys": [
+    [
+      "m5_positive_seed_2147483647_a",
+      16
+    ]
+  ],
+  "frozen_protocol_pin_count": 31,
+  "protocol_plus_helper_pin_count": 32,
+  "original_source_tree_file_count": 922,
+  "failed_supplement_source_tree_file_count": 81,
+  "preserved_source_attempt_statuses": [
+    false,
+    false
+  ],
+  "live_calls_made": false,
+  "source_frozen_for_step16_and_step32": true,
+  "evidence_basis": "Actual /usr/bin/python3 -B AST parse and imported build_plan(16) completed successfully before live use; stdout retained in this task tool output. Independent reviewer /root/m7_continuation_review checked live safety, and suggested exact saved-plan provenance hardening was applied and rechecked."
+}
