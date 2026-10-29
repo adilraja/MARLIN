@@ -26,6 +26,7 @@ from . import calibration_capture as _calibration_capture
 from . import hidef_api as _hidef_api
 from . import hidef_marine as _hidef_marine
 from . import sony_api as _sony_api
+from . import water_diagnostics as _water_diagnostics
 from .cetacean import shutdown_cetacean_swimming
 from .ocean import shutdown_ocean_animation
 from .water_material import RTX_WATER_SETTINGS

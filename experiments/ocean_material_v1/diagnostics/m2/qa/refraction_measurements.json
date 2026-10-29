@@ -1,0 +1,441 @@
+{
+  "planar_interface": "y=0, air=1, water=1.333; engineering assumptions",
+  "runs": [
+    {
+      "source_log": "capture_execution.json",
+      "measurement_protocol": "Unchanged fixed ROI/neutral threshold/4-connected largest component",
+      "measurements": [
+        {
+          "view": "nadir",
+          "condition": "dry",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_6qevd77u",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 1494,
+            "centroid_px": [
+              256.0,
+              191.96184738955824
+            ]
+          }
+        },
+        {
+          "view": "nadir",
+          "condition": "matched",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_c_8ywbpm",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": false,
+            "reason": "No qualifying neutral component of at least 50 pixels"
+          }
+        },
+        {
+          "view": "nadir",
+          "condition": "water",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_7ig78237",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": false,
+            "reason": "No qualifying neutral component of at least 50 pixels"
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "dry",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique__p7sj5ie",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 750,
+            "centroid_px": [
+              255.876,
+              192.144
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "matched",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_3_0rapc6",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": false,
+            "reason": "No qualifying neutral component of at least 50 pixels"
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "water",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_h47z1ouk",
+          "expected_centroid_px": [
+            256.0,
+            151.12673006977852
+          ],
+          "measurement": {
+            "observable": false,
+            "reason": "No qualifying neutral component of at least 50 pixels"
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "view": "nadir",
+          "condition": "matched",
+          "passed": false,
+          "reason": "Required target was not observable with the predeclared procedure"
+        },
+        {
+          "view": "nadir",
+          "condition": "water",
+          "passed": false,
+          "reason": "Required target was not observable with the predeclared procedure"
+        },
+        {
+          "view": "oblique",
+          "condition": "matched",
+          "passed": false,
+          "reason": "Required target was not observable with the predeclared procedure"
+        },
+        {
+          "view": "oblique",
+          "condition": "water",
+          "passed": false,
+          "reason": "Required target was not observable with the predeclared procedure"
+        }
+      ],
+      "geometric_checks_passed": false
+    },
+    {
+      "source_log": "acceptance_execution.json",
+      "measurement_protocol": "Unchanged fixed ROI/neutral threshold/4-connected largest component",
+      "measurements": [
+        {
+          "view": "nadir",
+          "condition": "dry",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_jqmubq5t",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 1600,
+            "centroid_px": [
+              256.0,
+              192.0
+            ]
+          }
+        },
+        {
+          "view": "nadir",
+          "condition": "matched",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_0yy7977k",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": false,
+            "reason": "No qualifying neutral component of at least 50 pixels"
+          }
+        },
+        {
+          "view": "nadir",
+          "condition": "water",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_j5o7z3de",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 1767,
+            "centroid_px": [
+              255.9634974533107,
+              191.9974533106961
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "dry",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_dcwnc5lk",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 750,
+            "centroid_px": [
+              255.876,
+              192.144
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "matched",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_vxpioaqn",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 723,
+            "centroid_px": [
+              256.0643153526971,
+              192.03941908713693
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "water",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_rzl54rlx",
+          "expected_centroid_px": [
+            256.0,
+            151.12673006977852
+          ],
+          "measurement": {
+            "observable": false,
+            "reason": "No qualifying neutral component of at least 50 pixels"
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "view": "nadir",
+          "condition": "matched",
+          "passed": false,
+          "reason": "Required target was not observable with the predeclared procedure"
+        },
+        {
+          "view": "nadir",
+          "condition": "water",
+          "passed": true,
+          "expected_displacement_px": [
+            0.0,
+            0.0
+          ],
+          "measured_displacement_px": [
+            -0.03650254668929165,
+            -0.0025466893038981198
+          ],
+          "error_px": 0.03659127684591651,
+          "tolerance_px": 2.0
+        },
+        {
+          "view": "oblique",
+          "condition": "matched",
+          "passed": true,
+          "expected_displacement_px": [
+            0.0,
+            0.0
+          ],
+          "measured_displacement_px": [
+            0.18831535269711708,
+            -0.10458091286307081
+          ],
+          "error_px": 0.215406219494036,
+          "tolerance_px": 2.0
+        },
+        {
+          "view": "oblique",
+          "condition": "water",
+          "passed": false,
+          "reason": "Required target was not observable with the predeclared procedure"
+        }
+      ],
+      "geometric_checks_passed": false
+    },
+    {
+      "source_log": "settled_execution.json",
+      "measurement_protocol": "Unchanged fixed ROI/neutral threshold/4-connected largest component",
+      "measurements": [
+        {
+          "view": "nadir",
+          "condition": "dry",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 1600,
+            "centroid_px": [
+              256.0,
+              192.0
+            ]
+          }
+        },
+        {
+          "view": "nadir",
+          "condition": "matched",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 1600,
+            "centroid_px": [
+              256.0,
+              192.0
+            ]
+          }
+        },
+        {
+          "view": "nadir",
+          "condition": "water",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 1765,
+            "centroid_px": [
+              255.9883852691218,
+              192.01218130311614
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "dry",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 754,
+            "centroid_px": [
+              255.83554376657824,
+              192.1366047745358
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "matched",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s",
+          "expected_centroid_px": [
+            256.0,
+            192.0
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 738,
+            "centroid_px": [
+              256.08401084010836,
+              192.15311653116532
+            ]
+          }
+        },
+        {
+          "view": "oblique",
+          "condition": "water",
+          "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo",
+          "expected_centroid_px": [
+            256.0,
+            151.12673006977852
+          ],
+          "measurement": {
+            "observable": true,
+            "area_px": 800,
+            "centroid_px": [
+              256.0,
+              151.5
+            ]
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "view": "nadir",
+          "condition": "matched",
+          "passed": true,
+          "expected_displacement_px": [
+            0.0,
+            0.0
+          ],
+          "measured_displacement_px": [
+            0.0,
+            0.0
+          ],
+          "error_px": 0.0,
+          "tolerance_px": 2.0
+        },
+        {
+          "view": "nadir",
+          "condition": "water",
+          "passed": true,
+          "expected_displacement_px": [
+            0.0,
+            0.0
+          ],
+          "measured_displacement_px": [
+            -0.011614730878193313,
+            0.012181303116136633
+          ],
+          "error_px": 0.016831105696895176,
+          "tolerance_px": 2.0
+        },
+        {
+          "view": "oblique",
+          "condition": "matched",
+          "passed": true,
+          "expected_displacement_px": [
+            0.0,
+            0.0
+          ],
+          "measured_displacement_px": [
+            0.2484670735301222,
+            0.01651175662951232
+          ],
+          "error_px": 0.24901510945244948,
+          "tolerance_px": 2.0
+        },
+        {
+          "view": "oblique",
+          "condition": "water",
+          "passed": true,
+          "expected_displacement_px": [
+            0.0,
+            -40.87326993022148
+          ],
+          "measured_displacement_px": [
+            0.16445623342175963,
+            -40.63660477453581
+          ],
+          "error_px": 0.2881948102013552,
+          "tolerance_px": 2.0
+        }
+      ],
+      "geometric_checks_passed": true
+    }
+  ],
+  "any_complete_geometric_pass": true
+}

@@ -1,0 +1,458 @@
+{
+  "schema_version": "1.1.0",
+  "test_kind": "ocean_material_transmission_refraction_engineering",
+  "scientific_camera_calibrated": false,
+  "config": {
+    "meters_per_scene_unit": 0.01,
+    "image_width_px": 512,
+    "image_height_px": 384,
+    "focal_length_mm": 35,
+    "pixel_pitch_um": 40,
+    "height_above_target_m": 4,
+    "target_width_m": 0.18,
+    "target_height_m": 0.18,
+    "target_plane_y_m": -1,
+    "pitch_deg": 40,
+    "roll_deg": 0
+  },
+  "gsd_cm_px": 0.4571428571428572,
+  "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+  "expected_bbox_xywh_px": [
+    240.74953883670054,
+    180.57349598570104,
+    30.500922326598925,
+    23.109035043446198
+  ],
+  "targets": [
+    {
+      "id": "Target_00",
+      "center_world_m": [
+        0.0,
+        -0.9999999999999996,
+        0.0
+      ],
+      "sample_image_px": [
+        256.0,
+        192.0
+      ],
+      "corners_world_m": [
+        [
+          -0.09,
+          -0.9999999999999996,
+          -0.09
+        ],
+        [
+          -0.09,
+          -0.9999999999999996,
+          0.09
+        ],
+        [
+          0.09,
+          -0.9999999999999996,
+          0.09
+        ],
+        [
+          0.09,
+          -0.9999999999999996,
+          -0.09
+        ]
+      ],
+      "expected_polygon_px": [
+        [
+          241.0837583681497,
+          180.57349598570104
+        ],
+        [
+          240.74953883670054,
+          203.68253102914724
+        ],
+        [
+          271.25046116329946,
+          203.68253102914724
+        ],
+        [
+          270.9162416318503,
+          180.57349598570104
+        ]
+      ],
+      "expected_bbox_xywh_px": [
+        240.74953883670054,
+        180.57349598570104,
+        30.500922326598925,
+        23.109035043446198
+      ],
+      "local_gsd_xy_cm_px": [
+        0.5967576179804703,
+        0.779011923576034
+      ]
+    }
+  ],
+  "intrinsics_px": {
+    "fx": 875.0,
+    "fy": 875.0,
+    "cx": 256.0,
+    "cy": 192.0
+  },
+  "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+  "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+  "camera_position_m": [
+    0,
+    3,
+    3.3563985247091197
+  ],
+  "world_up": "Y",
+  "camera_basis_right_up_forward": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.6427876096865393,
+      -0.766044443118978
+    ],
+    [
+      0,
+      -0.766044443118978,
+      -0.6427876096865393
+    ]
+  ],
+  "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+  "seed": 0,
+  "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+  "capture_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.6427876096865393,
+      0.7660444431189781,
+      0.0
+    ],
+    [
+      0.0,
+      -0.7660444431189781,
+      0.6427876096865393,
+      0.0
+    ],
+    [
+      0.0,
+      64.27876096865398,
+      -445.5584714210136,
+      1.0
+    ]
+  ],
+  "capture_projection_matrix": [
+    [
+      3.4179688263975567,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.557291768530075,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0040080160320641,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -8.016032064128256,
+      0.0
+    ]
+  ],
+  "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+  "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+  "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+  "actual_viewport_resolution": [
+    512,
+    384
+  ],
+  "ui_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.6427876096865394,
+      0.7660444431189782,
+      0.0
+    ],
+    [
+      0.0,
+      -0.7660444431189782,
+      0.6427876096865394,
+      0.0
+    ],
+    [
+      0.0,
+      64.27876096865394,
+      -445.5584714210137,
+      1.0
+    ]
+  ],
+  "ui_projection_matrix": [
+    [
+      3.2304853042744837,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.557291768530075,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0040080160320641,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -8.016032064128256,
+      0.0
+    ]
+  ],
+  "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+  "render_product": {
+    "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_7",
+    "camera": "/WaterDiagnostic/Camera",
+    "resolution": [
+      512,
+      384
+    ],
+    "pixel_aspect_ratio": 1.0,
+    "data_window_ndc": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ]
+  },
+  "projection_metadata_version": 2,
+  "actual_view_matrix": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.6427876096865393,
+      0.7660444431189781,
+      0.0
+    ],
+    [
+      0.0,
+      -0.7660444431189781,
+      0.6427876096865393,
+      0.0
+    ],
+    [
+      0.0,
+      64.27876096865398,
+      -445.5584714210136,
+      1.0
+    ]
+  ],
+  "actual_projection_matrix": [
+    [
+      3.4179688263975567,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      4.557291768530075,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0040080160320641,
+      -1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -8.016032064128256,
+      0.0
+    ]
+  ],
+  "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices",
+  "usd_context": "marlin_calibration_b69faaae7adf4cb597b6a881f51bdeed",
+  "default_stage_retained": true,
+  "scene_sha256": "48f1500f981ba81c18a6829793f4a91fe790dcd49716e7180969f07b8fa5629c",
+  "rendered_image": "rgb.png",
+  "scene_file": "scene.usda",
+  "validation_status": "rendered_not_yet_measured",
+  "view": "oblique",
+  "condition": "water",
+  "probe": "positive_depth",
+  "renderer_settings": {
+    "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+    "/rtx/fog/enabled": false,
+    "/rtx/fog/fogColor": [
+      0.03,
+      0.16,
+      0.2
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.04,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.08,
+    "/rtx/fog/fogHeightFalloff": 0.025,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/aa/filterRadius": 1.0,
+    "/rtx/pathtracing/aa/op": 1,
+    "/rtx/pathtracing/adaptiveSampling/enabled": false,
+    "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+    "/rtx/pathtracing/cached/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+    "/rtx/pathtracing/fractionalCutoutOpacity": true,
+    "/rtx/pathtracing/lightcache/cached/enabled": true,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/pathtracing/optixDenoiser/enabled": true,
+    "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+    "/rtx/pathtracing/spp": 1,
+    "/rtx/pathtracing/totalSpp": 512,
+    "/rtx/post/aa/op": 3,
+    "/rtx/post/chromaticAberration/enabled": false,
+    "/rtx/post/colorcorr/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/enabled": false,
+    "/rtx/post/colorcorr/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorcorr/saturation": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/blackpoint": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/enabled": false,
+    "/rtx/post/colorgrad/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/lift": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/multiply": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/dlss/execMode": 3,
+    "/rtx/post/dof/enabled": false,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/lensFlares/enabled": false,
+    "/rtx/post/motionblur/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/cm2Factor": 1.0,
+    "/rtx/post/tonemap/colorMode": 0,
+    "/rtx/post/tonemap/dither": 0.0,
+    "/rtx/post/tonemap/enableSrgbToGamma": true,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+    "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+    "/rtx/post/tonemap/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/tonemap/wrapValue": 0.0,
+    "/rtx/post/tvNoise/enabled": false,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "RealTimePathTracing",
+    "/rtx/resetPtAccumOnAnimTimeChange": false,
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "diagnostic_display_options": 0,
+  "gpu_before": {
+    "device_index": 0,
+    "total_mib": 6138,
+    "free_mib": 1586,
+    "driver": "595.91.07"
+  },
+  "scientific_water_calibrated": false,
+  "geometric_projection_note": "Direct pinhole projection; observed refracted target measured separately."
+}

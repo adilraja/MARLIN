@@ -1,0 +1,749 @@
+{
+  "kind": "ocean_material_m2_transmission_refraction",
+  "status": "passed_declared_isolated_engineering_scope",
+  "recorded_at_utc": "2026-10-29T12:21:42.937134+00:00",
+  "base_commit": "f995a7b6b60f79a855aa9df4b8f818b308e8f35f",
+  "tracked_changes": "qa/source_changes.patch",
+  "source_pins": [
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py",
+      "bytes": 6591,
+      "sha256": "4dc8939593dbe473ad42eb65f19d64699a25f1c626db058e3595226e390ec741"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_capture.py",
+      "bytes": 5299,
+      "sha256": "a73a92deff4c49d4c2e07afc62b3112ba9372ba73cb6cb117afd26960da2e7ea"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_diagnostics.py",
+      "bytes": 10748,
+      "sha256": "33ffc4d47ba9a9b35a99dfd842ae6d570589a082a0eebb9c7d1e820964a51e7c"
+    }
+  ],
+  "files": [
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/.gitattributes",
+      "bytes": 101,
+      "sha256": "6ee7ac347f1a43914602803d4a86151ed21ecf9bbcb081079ad739f26961b4ee"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/ACCEPTANCE_RUN.md",
+      "bytes": 1616,
+      "sha256": "307413c8558770f89f3c7336ac75f530a8ed5cdaf0b627fdd19473784e4963e4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/PLAN.md",
+      "bytes": 3560,
+      "sha256": "b3813f3a081c2bccce50244297c74cb608a15702ba4a9e564626e41403661026"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/PROBE_PLAN.md",
+      "bytes": 1743,
+      "sha256": "4a6a853068bf2711960857084d1f5569cb18c501267bc3cb3fca6d26f9e1e47b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/README.md",
+      "bytes": 2576,
+      "sha256": "4e581dbd18637be0bc8590240a91d4a177d0ddf72572babb47012118c25e354f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/SETTLING_CHECK.md",
+      "bytes": 1162,
+      "sha256": "52566e03a2c904beecb15bb47a7ee8eb626a706d03addc84dec5414f26a0b0db"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_0yy7977k/fixture.json",
+      "bytes": 1554,
+      "sha256": "45e497b81b080fdb2c8d7c660eda443f743e922d33388a880a66ba8b50db47ca"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_0yy7977k/metadata.json",
+      "bytes": 9958,
+      "sha256": "32452072f58b23efa2359a283f2fb08cd9c4bfb35db6ff8510e35bff0a2ddafb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_0yy7977k/rgb.png",
+      "bytes": 8364,
+      "sha256": "d90ebb9ef4a28f79aaaa434da39a45ce9c038b56b419049b9506d20b2dc14969"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_0yy7977k/scene.usda",
+      "bytes": 7012,
+      "sha256": "551be9df9bebf7a0e741a0ef61a8064226de1bf77a61a5bbf8bcb41173a44de9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_0yy7977k/warmup.png",
+      "bytes": 9224,
+      "sha256": "d444c5fbcc28c95c08a9c64bf755f874600059c34aeaed570e07b70b5de06876"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39/fixture.json",
+      "bytes": 1554,
+      "sha256": "45e497b81b080fdb2c8d7c660eda443f743e922d33388a880a66ba8b50db47ca"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39/metadata.json",
+      "bytes": 9997,
+      "sha256": "3259702275a96ad50cbe4a3cf65a4fea035bb73c89ae2cabe2c249f667b765b0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39/rgb.png",
+      "bytes": 8414,
+      "sha256": "7e77f5cf1a11857096c79116f9d3fc7c8cd476e46fb80f8493aeb90c65e2776c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39/scene.usda",
+      "bytes": 7012,
+      "sha256": "551be9df9bebf7a0e741a0ef61a8064226de1bf77a61a5bbf8bcb41173a44de9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39/warmup.png",
+      "bytes": 8355,
+      "sha256": "4a3a4ec6107459f54e4461f6fc6dd3c7f92c63ae935800c3710fc9c5ae5e5b32"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_6qevd77u/fixture.json",
+      "bytes": 1015,
+      "sha256": "55c8e7432dfb4bf94f1bde290fa87bb3395bee8763f49e7be201081b0a6507fa"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_6qevd77u/metadata.json",
+      "bytes": 9786,
+      "sha256": "6529c601132a0a0c9e74c822e915b8e4ac3c2e5146f13334060f89585f5ab061"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_6qevd77u/rgb.png",
+      "bytes": 9719,
+      "sha256": "bd2cda559767bea4cee4f2b2bc4ff0a065c2e1e7b8c0479c8248e932f07ddc89"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_6qevd77u/scene.usda",
+      "bytes": 5012,
+      "sha256": "3b0c4d615391a3b8a39a6f4352cbd3c9f2a83e09e04bfc2dc7ef12571d3d12ee"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_6qevd77u/warmup.png",
+      "bytes": 9764,
+      "sha256": "f74646f7bb1c71b5443ba45b9143ecd4e9c7d29b2baad98fc5af0fdbf8d24949"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_7ig78237/fixture.json",
+      "bytes": 1444,
+      "sha256": "cfa7069cfd675fa0bc6b8bfbd412734bde05ce6fa32dfb5fbc6b65505062d131"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_7ig78237/metadata.json",
+      "bytes": 9788,
+      "sha256": "4bbafbe5a874bafe6eb46754cf45a63e1464809200423ee6bb3b706ee1b8e011"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_7ig78237/rgb.png",
+      "bytes": 10057,
+      "sha256": "de9d64e97a8d73a8c2d0060a44743fcbb4c8d3eff799d2ca2e5789fe24cb330f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_7ig78237/scene.usda",
+      "bytes": 7014,
+      "sha256": "a56c34838449dcdb73dc5069e325a5b33a3b48bdc92a57748be9e7a6bcc88876"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_7ig78237/warmup.png",
+      "bytes": 9657,
+      "sha256": "6469023fe7877b57dac017c948b9059f7e41b9616d906af47583db5736aeed37"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k/fixture.json",
+      "bytes": 1554,
+      "sha256": "bd1e740d2962c5034382404aa31e32c2a37271734d9b75b640894df181cc6627"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k/metadata.json",
+      "bytes": 9995,
+      "sha256": "519e17415ddde8b2ea5add89153bc9f9c374d6dfbd1fcd23606f85492fc87c69"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k/rgb.png",
+      "bytes": 8801,
+      "sha256": "922dc7395035fb196dbb20687cbd580b3c9b56862f499b7bd80d28a0df9405e6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k/scene.usda",
+      "bytes": 7016,
+      "sha256": "3c1fa23b18dda0d758bd679c021f38f0e83d92e033baadc599d306bd11628891"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k/warmup.png",
+      "bytes": 8810,
+      "sha256": "a7d94e2b88cd61c2ca2af2bf15e5a65c537d182dac41eb05baee50b01af58770"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_c_8ywbpm/fixture.json",
+      "bytes": 1444,
+      "sha256": "eff34b80cfbe6b558205008fa455e9341706b4ebb8410c489366f96a0c0a9b53"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_c_8ywbpm/metadata.json",
+      "bytes": 9790,
+      "sha256": "165e29777c7561d10935c92e92003775be72b5e9448b63b414016e10abaaea8b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_c_8ywbpm/rgb.png",
+      "bytes": 10042,
+      "sha256": "ece4313b66cc391e7a9da24f246b172f04a1ba7ed2a3f064429f0a94192c0e42"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_c_8ywbpm/scene.usda",
+      "bytes": 7010,
+      "sha256": "df370a5913352556a9e149e9911c93d9e84486b45c42fb7d0756b01384f848f5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_c_8ywbpm/warmup.png",
+      "bytes": 9658,
+      "sha256": "2f2ce95041562580dfb4fdcefcca442df6dfafe2af18a08b246a4c8efdf34afa"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob/fixture.json",
+      "bytes": 1125,
+      "sha256": "b6e4a13695b741eb2584a7d11d56da42371b15df013904ab71dfd838dc02879e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob/metadata.json",
+      "bytes": 9993,
+      "sha256": "ad65849104cca58cbb7ebed17ace3a5959d88636bd136a23ecf28469a9c6cfb2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob/rgb.png",
+      "bytes": 9016,
+      "sha256": "d07636fa01f351b34611506bfa7f1badfdc8c0cebe20412cdc248f1faef9f5e5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob/scene.usda",
+      "bytes": 5012,
+      "sha256": "3b0c4d615391a3b8a39a6f4352cbd3c9f2a83e09e04bfc2dc7ef12571d3d12ee"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob/warmup.png",
+      "bytes": 9012,
+      "sha256": "ad1f3233a2cad39492ba3cae8e2464de4e7c30ca1963f57167b90cb877319476"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_j5o7z3de/fixture.json",
+      "bytes": 1554,
+      "sha256": "bd1e740d2962c5034382404aa31e32c2a37271734d9b75b640894df181cc6627"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_j5o7z3de/metadata.json",
+      "bytes": 9956,
+      "sha256": "06f1d5388bd2ecaa43f91363f7cdf7f26288b5b4088cc172749482e696e96e86"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_j5o7z3de/rgb.png",
+      "bytes": 8908,
+      "sha256": "4aff55dd32c656a1e6ecc7259ea6cb3dbea632e282add5518098d17a296c74f4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_j5o7z3de/scene.usda",
+      "bytes": 7016,
+      "sha256": "3c1fa23b18dda0d758bd679c021f38f0e83d92e033baadc599d306bd11628891"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_j5o7z3de/warmup.png",
+      "bytes": 9219,
+      "sha256": "dd78ba82bb667d08ac398f855838ac79b00aea4c77d55121c0266e914f86119a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_jqmubq5t/fixture.json",
+      "bytes": 1125,
+      "sha256": "b6e4a13695b741eb2584a7d11d56da42371b15df013904ab71dfd838dc02879e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_jqmubq5t/metadata.json",
+      "bytes": 9953,
+      "sha256": "3ecff0ff3a49fb7c342ab01effaba32e05aa08fe135049bbe04922d45378c052"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_jqmubq5t/rgb.png",
+      "bytes": 9152,
+      "sha256": "6cbf0ac27115fdc28555f7ca1366f45ff6b2229012bcf50182b5c15204d0a7a8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_jqmubq5t/scene.usda",
+      "bytes": 5012,
+      "sha256": "3b0c4d615391a3b8a39a6f4352cbd3c9f2a83e09e04bfc2dc7ef12571d3d12ee"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_jqmubq5t/warmup.png",
+      "bytes": 9187,
+      "sha256": "af9ed910a0e74a62446b862aa2ebd53e35fe3d8d352dc0bc2697f74da0384f74"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s/fixture.json",
+      "bytes": 1554,
+      "sha256": "45e497b81b080fdb2c8d7c660eda443f743e922d33388a880a66ba8b50db47ca"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s/metadata.json",
+      "bytes": 10459,
+      "sha256": "cc873f1496a986639cefda19ff2db6fc263b78f0eef3bbe8049ac393d6d27c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s/rgb.png",
+      "bytes": 9539,
+      "sha256": "f055fd075371da88f76727337132f84ecd9384c72b792499c17e405b61d5b4f8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s/scene.usda",
+      "bytes": 7093,
+      "sha256": "9da391f3767eeb02e09119cc7787099b0af482959be61babe42f3df8a28edd6d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s/warmup.png",
+      "bytes": 9547,
+      "sha256": "e921e484b82f49546e5d5fc0eb29fab363f77023c155efac1feb504e0be687bf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_3_0rapc6/fixture.json",
+      "bytes": 1444,
+      "sha256": "eff34b80cfbe6b558205008fa455e9341706b4ebb8410c489366f96a0c0a9b53"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_3_0rapc6/metadata.json",
+      "bytes": 10252,
+      "sha256": "faeac579e150efb010a8f7ea7895e0afbf75cf744c4d414347a56e70f85516b9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_3_0rapc6/rgb.png",
+      "bytes": 115302,
+      "sha256": "7a9f46c58d7ff0bcc88214a9d293d2d313d19091012ab6a782c37fd0f22e075e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_3_0rapc6/scene.usda",
+      "bytes": 7091,
+      "sha256": "79eb6bd17b3d7062ae3500ee649fa96e607e5437dbbe26c7e76ebc26ee26b4b7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_3_0rapc6/warmup.png",
+      "bytes": 105343,
+      "sha256": "ae2f1e999cd14befa233369d6d2216ca70cfa744f6f78069e5ddf31118dfac7b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique__p7sj5ie/fixture.json",
+      "bytes": 1015,
+      "sha256": "55c8e7432dfb4bf94f1bde290fa87bb3395bee8763f49e7be201081b0a6507fa"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique__p7sj5ie/metadata.json",
+      "bytes": 10248,
+      "sha256": "f2ea9e5adfddf95dcb923355f326e69d9395c99df167c3d47b46598adc3736bf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique__p7sj5ie/rgb.png",
+      "bytes": 12992,
+      "sha256": "cfd99d31f509e0d9dfe46d0f2177d9e3bfb1de1d88196fb2cb7d2ec7afb26ca2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique__p7sj5ie/scene.usda",
+      "bytes": 5093,
+      "sha256": "c7a1c39807662a9d885f94a62f2b2754adaf924eba9256d7cb2f893c9e7d45ef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique__p7sj5ie/warmup.png",
+      "bytes": 12818,
+      "sha256": "a70de3bed0927189811add8a12e0263f1d47c0d3944fa1c80b90678babe8617d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_dcwnc5lk/fixture.json",
+      "bytes": 1125,
+      "sha256": "b6e4a13695b741eb2584a7d11d56da42371b15df013904ab71dfd838dc02879e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_dcwnc5lk/metadata.json",
+      "bytes": 10416,
+      "sha256": "f7d622d355627c9f4b1bc81d6094c15f4ef1b1f3e09e3dbed52019e3660197e8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_dcwnc5lk/rgb.png",
+      "bytes": 9171,
+      "sha256": "85d7cac96b09ec78abf932e6c329b8d83acb28e765efbec8a20e5af46f09dc5d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_dcwnc5lk/scene.usda",
+      "bytes": 5093,
+      "sha256": "c7a1c39807662a9d885f94a62f2b2754adaf924eba9256d7cb2f893c9e7d45ef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_dcwnc5lk/warmup.png",
+      "bytes": 9250,
+      "sha256": "a293e3b23a84d586d20df76bd04df16bb6ce5cfd69d7e5775ef7472cb27d8844"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_ey9g89b7/fixture.json",
+      "bytes": 1473,
+      "sha256": "3e2067e61aea883405db7e304ed5a67570aa52fefdfb983dd3b867470b5759f6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_ey9g89b7/metadata.json",
+      "bytes": 10314,
+      "sha256": "6478ef57d83993282bdf8aa14cf08f42426567f20b262009d83d6f4c4ed232b5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_ey9g89b7/rgb.png",
+      "bytes": 115460,
+      "sha256": "316ea249309af1598e9f89179e6946526a7b7eefb355c5a99456e365ba6ba661"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_ey9g89b7/scene.usda",
+      "bytes": 7095,
+      "sha256": "0c1b098a1e1e0822a03cd249b1a075c39de52c428f3e2e012b59eda04f254d33"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_ey9g89b7/warmup.png",
+      "bytes": 105573,
+      "sha256": "207fcc79428f00768f3b5484f269d9efb1e35c38a6cfda25bdbbd2399e78a23d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_h47z1ouk/fixture.json",
+      "bytes": 1444,
+      "sha256": "cfa7069cfd675fa0bc6b8bfbd412734bde05ce6fa32dfb5fbc6b65505062d131"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_h47z1ouk/metadata.json",
+      "bytes": 10250,
+      "sha256": "9e54cf3063fcf3bbdaabb69ea3758041c257249dbc5f5a97cf41bd0d6504d099"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_h47z1ouk/rgb.png",
+      "bytes": 115364,
+      "sha256": "c073ff6455359d223d62e71bf3e9bfe971a0e30d900a30e1cd1781c7f7cf8d77"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_h47z1ouk/scene.usda",
+      "bytes": 7095,
+      "sha256": "03af25bed8b81fbe312009b511bf04e47a5f2f57b40aa004b285d603afb92e06"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_h47z1ouk/warmup.png",
+      "bytes": 105198,
+      "sha256": "dba24091ab27f48ff3c18356cfabbfb3380c48f4b7fe695afafcc7013e556d46"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm/fixture.json",
+      "bytes": 1125,
+      "sha256": "b6e4a13695b741eb2584a7d11d56da42371b15df013904ab71dfd838dc02879e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm/metadata.json",
+      "bytes": 10455,
+      "sha256": "79fcbb2d57259f93f541762f52aa67bda5fb8b7de6813f51fda319bac39e285a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm/rgb.png",
+      "bytes": 9092,
+      "sha256": "866cee52da2e6785151128c63b599667df63a9907bdafd57f1d4dfa74e3fc6df"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm/scene.usda",
+      "bytes": 5093,
+      "sha256": "c7a1c39807662a9d885f94a62f2b2754adaf924eba9256d7cb2f893c9e7d45ef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm/warmup.png",
+      "bytes": 9125,
+      "sha256": "05483ada8867ca8956422fa881115b21e30968055a8dc965b9fdcdd3e7230322"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo/fixture.json",
+      "bytes": 1554,
+      "sha256": "bd1e740d2962c5034382404aa31e32c2a37271734d9b75b640894df181cc6627"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo/metadata.json",
+      "bytes": 10457,
+      "sha256": "3bd4bf4ba56f70c9ccc9cb4fb8492aaba70d87c090c068ad94748afc6e4b7d4c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo/rgb.png",
+      "bytes": 15178,
+      "sha256": "baba8e6fb62e473479ac8e223841d1b43d4d54154a21c8b55307cc8a10965315"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo/scene.usda",
+      "bytes": 7097,
+      "sha256": "48f1500f981ba81c18a6829793f4a91fe790dcd49716e7180969f07b8fa5629c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo/warmup.png",
+      "bytes": 15116,
+      "sha256": "cee038505856db69c98078f3b3903986f3321cb46bacd67b546df0728711a8d4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_p7v5dbbr/fixture.json",
+      "bytes": 1475,
+      "sha256": "7bda017fb38e018beb9f0faa53a6349f71552c13355eedc6b8bad9669870e466"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_p7v5dbbr/metadata.json",
+      "bytes": 10314,
+      "sha256": "247c3f93d69fb2c7fd46197b6ec7a3056476acf0b3137cdd114ed1767babd923"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_p7v5dbbr/rgb.png",
+      "bytes": 29236,
+      "sha256": "c0e9a8277ff9ea4bf329377c3a7abca15ee136d4fdaf3c6d30c92f663d8af0ff"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_p7v5dbbr/scene.usda",
+      "bytes": 7097,
+      "sha256": "48f1500f981ba81c18a6829793f4a91fe790dcd49716e7180969f07b8fa5629c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_p7v5dbbr/warmup.png",
+      "bytes": 105218,
+      "sha256": "c2755b213e288f8ea8b32714c89e8b4855536afe5fd4402d32a86a2ae660659b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_rzl54rlx/fixture.json",
+      "bytes": 1554,
+      "sha256": "bd1e740d2962c5034382404aa31e32c2a37271734d9b75b640894df181cc6627"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_rzl54rlx/metadata.json",
+      "bytes": 10418,
+      "sha256": "1968fde8f17792d61e256956aa1b9c1f6e14ee4bb41154ae044383c579b8f0c6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_rzl54rlx/rgb.png",
+      "bytes": 111396,
+      "sha256": "b3772b5bb2d6339b0fd3f1178920f989397d77f88188ea8000d6b3ed873419bb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_rzl54rlx/scene.usda",
+      "bytes": 7097,
+      "sha256": "48f1500f981ba81c18a6829793f4a91fe790dcd49716e7180969f07b8fa5629c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_rzl54rlx/warmup.png",
+      "bytes": 105519,
+      "sha256": "454a0e46b20006fb95636b29896ece52cc6307147c3d746d909f6aafdd3e5cca"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_t3ef46mz/fixture.json",
+      "bytes": 1554,
+      "sha256": "bd1e740d2962c5034382404aa31e32c2a37271734d9b75b640894df181cc6627"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_t3ef46mz/metadata.json",
+      "bytes": 10457,
+      "sha256": "44adf4b4f0ffc15f375f2b1093b96bf1348044b293d222f7141335d8c0f59252"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_t3ef46mz/rgb.png",
+      "bytes": 15156,
+      "sha256": "0600d9a4166d18c2996167876339e3bb0cabefead29eca003d2bd639784020df"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_t3ef46mz/scene.usda",
+      "bytes": 7097,
+      "sha256": "48f1500f981ba81c18a6829793f4a91fe790dcd49716e7180969f07b8fa5629c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_t3ef46mz/warmup.png",
+      "bytes": 14913,
+      "sha256": "89ff099a5724b59a0cf3376ba6c0c5e7c567c54a1ddf998b8c8d536b7507a05c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_vxpioaqn/fixture.json",
+      "bytes": 1554,
+      "sha256": "45e497b81b080fdb2c8d7c660eda443f743e922d33388a880a66ba8b50db47ca"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_vxpioaqn/metadata.json",
+      "bytes": 10420,
+      "sha256": "b6ab48f71847aa0425865eda757f1a7a2c1998956724923a390067c1bf8dbcf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_vxpioaqn/rgb.png",
+      "bytes": 9687,
+      "sha256": "afeee4946349f0ef6d49f101f0590640a8dcfa728cc210215ad89777fd6e114b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_vxpioaqn/scene.usda",
+      "bytes": 7093,
+      "sha256": "9da391f3767eeb02e09119cc7787099b0af482959be61babe42f3df8a28edd6d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_vxpioaqn/warmup.png",
+      "bytes": 9697,
+      "sha256": "67d5f7f68038d72320c6195f37a4aa1d03e5f118f4ec6ecc18830a30c822db7f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/acceptance_execution.json",
+      "bytes": 79499,
+      "sha256": "593c0df3f9ba171fa968685f4cacc7b7ce786d19665781b703124d71dd98896c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/after_checkpoint.json",
+      "bytes": 3578,
+      "sha256": "d82541f8c8f5fb27d1417a61bbc73bb03cf7753d03dba586f8198fc77b05c561"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/analyse_refraction.py",
+      "bytes": 5461,
+      "sha256": "5a36444adcbe025e6f369986220db432cd00b4e2d59663bd62a9a89ee5e334c7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/before_checkpoint.json",
+      "bytes": 3578,
+      "sha256": "59d06b0127eb0260f06adb265fe1413cffc847bd67294a67501e6b5cc9bc6564"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/capture_execution.json",
+      "bytes": 78383,
+      "sha256": "6089737d0dc18e50f0a1917e30a1cf6d356a05eda1cde9e19a9fba13cce5e9de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/default_reconstruction.json",
+      "bytes": 7711,
+      "sha256": "42958b2e2adf98feb3bbc0c80d41057b330256c74ac2172a44fb996d60e6b55d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/default_reconstruction_measurement.json",
+      "bytes": 564,
+      "sha256": "bea92c96691df5e2ca194b3acde9c93e2415c8afe7e5fb825b3f5c1b6a043a29"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/fixture_validation.json",
+      "bytes": 1149,
+      "sha256": "fa69db71dca3fee04bd5205bc4871609c9dabe60a5a017fcce9fc61e4c93bdb4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/invalid_request.json",
+      "bytes": 164,
+      "sha256": "b21c461d99f5d989ce2f5b97ba67e36a84e21da12a9437725eeb1e8230f8d4e2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/openapi_after_source.json",
+      "bytes": 56239,
+      "sha256": "b0562221c71fa50165265eb31e0273e9e7f2156a98947d8d51b235cfdac4d873"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/pre_m2_scene.usdc",
+      "bytes": 4453395,
+      "sha256": "706ba12611551d07329b46342cbef47ec61d72499007fb8feb86f0e385410ecb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/probe_execution.json",
+      "bytes": 26559,
+      "sha256": "bb20340861e980ad6b2d0103588fe193bc589658286d6ab8e3254fa643f5e335"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/refraction_measurements.json",
+      "bytes": 12926,
+      "sha256": "40a84d379a1c276a434757c68fd76b6540dd76b5b5ab49ab8fb9c417a9f436bf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/restoration_validation.json",
+      "bytes": 364,
+      "sha256": "6f7d40dd9194e1490e02dc295323002d616ce35a6d63155adbaddd9fc74d111e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/restore_checkpoint.json",
+      "bytes": 122,
+      "sha256": "c72831d985fc1045b1e2a7f44e811a1a0926c7e45746d7fcf2ace0b1f7431fb2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/restore_live.json",
+      "bytes": 2396,
+      "sha256": "b36dfedcc18ec4b0326918ba7d19a3910dfff7e70e5bafa0d46239a1521c4d08"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/restore_url.txt",
+      "bytes": 72,
+      "sha256": "57d957d6500c6be930c6ab540af76b17079e518fa6134445e7dc00375c3b0ad5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/run_acceptance.py",
+      "bytes": 1871,
+      "sha256": "0e8fe1ac0927189e12e03594dc3f8f33626e9d422b71ef11baee42d290b48aa1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/run_captures.py",
+      "bytes": 1858,
+      "sha256": "109d5761cb916d57faec45bb0d15fcbfb9c1a457fd108a15f8b7d48c2fd3d148"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/run_settled.py",
+      "bytes": 1867,
+      "sha256": "fdc537006a8fd858bed4482aea5ce5607b504e1dd37552b94d2bdc895bf88bcf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/runtime_log_tail.log",
+      "bytes": 99691,
+      "sha256": "b13e2f289a7d9a13c38d90c69d3dad7d0fb5d87ee7c14e6c8865e8e1b521295d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/settled_execution.json",
+      "bytes": 79769,
+      "sha256": "d9445919d656f0e07559ca42df2c976f113ec5d092d3d9fb253dd7e183c9237f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/source_changes.patch",
+      "bytes": 14481,
+      "sha256": "48edefcca3479bc9f625caf333cf47c9ec0be66f3ecb34010389780b88d31e7e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/test_refraction_analysis.py",
+      "bytes": 919,
+      "sha256": "4aec54f64482fb0dd2230f0bc33f3ed5ad1f1ab084bebb63ef3c57664afd67d6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/validation_tests.json",
+      "bytes": 500,
+      "sha256": "d71b30fbb8e3c6d379bab6fff201732fe8b43b1a84ae534101ab02ab50e61379"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/qa/viewport_capabilities.json",
+      "bytes": 1269,
+      "sha256": "9b48636dfca2f151004c32f67f541e2701f8dcd6546838bb2b1ddece7ca1e39f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m2/selected_preset.json",
+      "bytes": 6172,
+      "sha256": "df0f7686034fecb41b2685ebe688c4d7978aec9ab88f28a6bec328a20b5b3f40"
+    },
+    {
+      "path": "experiments/ocean_material_v1/reports/M2_TRANSMISSION_REFRACTION.md",
+      "bytes": 10991,
+      "sha256": "c0ecb13d5be28b07c0a47a95a1a6adabf5ecc423afd9ce771b2f1dfe0f7593e2"
+    }
+  ],
+  "accepted_six_condition_directories": [
+    "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_faq1wkob",
+    "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_4sgjmh39",
+    "experiments/ocean_material_v1/diagnostics/m2/captures/nadir_9tai1y_k",
+    "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_k7diovqm",
+    "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_2b1jua4s",
+    "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_nurn8ljo"
+  ],
+  "default_reconstruction_directory": "experiments/ocean_material_v1/diagnostics/m2/captures/oblique_t3ef46mz",
+  "original_failed_and_unstable_sets_retained": true,
+  "rendered_requests": 21,
+  "selected_preset": "selected_preset.json",
+  "measured_oblique_vertical_shift_px": -40.63660477453581,
+  "predicted_oblique_vertical_shift_px": -40.87326993022148,
+  "vector_error_px": 0.2881948102013552,
+  "predeclared_tolerance_px": 2.0,
+  "reflection_demonstrated": true,
+  "restoration_verified": true,
+  "renderer_setting_count": 73,
+  "m1_evidence_unchanged": true,
+  "tests_passed": 16,
+  "tests_skipped": 2,
+  "actual_water_depth_units_calibrated": false,
+  "animated_ocean_material_replaced": false,
+  "later_milestones_started": false,
+  "human_approval_inferred": false,
+  "documentation": "../../reports/M2_TRANSMISSION_REFRACTION.md",
+  "external_dependencies": "Existing MARLIN Kit/MDL runtime; no vendor binaries bundled. Refer to M1 installed material definition/version records."
+}

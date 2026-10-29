@@ -1,0 +1,189 @@
+#usda 1.0
+(
+    defaultPrim = "WaterDiagnostic"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "WaterDiagnostic"
+{
+    def Mesh "Target_00" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/Fiducial>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-9, -100, -9), (-9, -100, 9), (9, -100, 9), (9, -100, -9)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def "Looks"
+    {
+        def Material "Fiducial"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/Fiducial/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (10, 10, 10)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Black"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/Black/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "RedMarker"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/RedMarker/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (10, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "GreenMarker"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/GreenMarker/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 10, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "ClearWater"
+        {
+            token outputs:mdl:surface.connect = </WaterDiagnostic/Looks/ClearWater/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurface.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface"
+                color3f inputs:diffuse_reflection_color = (0.02, 0.1, 0.13)
+                float inputs:diffuse_reflection_weight = 0
+                bool inputs:enable_specular_transmission = 1
+                float inputs:metalness = 0
+                color3f inputs:specular_reflection_color = (1, 1, 1)
+                float inputs:specular_reflection_ior = 1.333
+                float inputs:specular_reflection_roughness = 0.001
+                float inputs:specular_reflection_weight = 0
+                color3f inputs:specular_transmission_color = (1, 1, 1)
+                float inputs:specular_transmission_scatter_anisotropy = 0
+                color3f inputs:specular_transmission_scattering_color = (0, 0, 0)
+                float inputs:specular_transmission_scattering_depth = 0
+                float inputs:specular_transmission_weight = 1
+                bool inputs:thin_walled = 0
+                token outputs:out
+            }
+        }
+    }
+
+    def Mesh "Background" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/Black>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-480, -102, -480), (-480, -102, 480), (480, -102, 480), (480, -102, -480)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "RedMarker" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/RedMarker>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-300, 400, -400), (0, 400, -400), (0, 600, -400), (-300, 600, -400)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "GreenMarker" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/GreenMarker>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(0, 400, -400), (300, 400, -400), (300, 600, -400), (0, 600, -400)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def DomeLight "Dome"
+    {
+        color3f inputs:color = (0.03, 0.03, 0.03)
+        float inputs:intensity = 10
+    }
+
+    def Mesh "Water" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 2, 3, 4, 7, 6, 5, 0, 4, 5, 1, 1, 5, 6, 2, 2, 6, 7, 3, 3, 7, 4, 0]
+        rel material:binding = </WaterDiagnostic/Looks/ClearWater>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-500, -200, -500), (500, -200, -500), (500, -200, 500), (-500, -200, 500), (-500, 0, -500), (500, 0, -500), (500, 0, 500), (-500, 0, 500)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Camera "Camera"
+    {
+        float2 clippingRange = (4, 2000)
+        float focalLength = 35
+        float fStop = 0
+        float horizontalAperture = 20.48
+        float horizontalApertureOffset = 0
+        token projection = "perspective"
+        float verticalAperture = 15.36
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0.6427876096865393, -0.766044443118978, 0), (0, 0.766044443118978, 0.6427876096865393, 0), (0, 300, 335.639852470912, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+

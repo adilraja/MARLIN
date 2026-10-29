@@ -1,0 +1,600 @@
+2026-10-29T11:32:21Z [270,232ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x5924776ea870 to Sdf.SpecifierOver
+2026-10-29T11:32:21Z [270,233ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x5924776ea870 to Sdf.SpecifierOver
+2026-10-29T11:32:21Z [270,233ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x5924776ea870 to Sdf.SpecifierOver
+[CRIS Render Service] Ocean animation stopped
+2026-10-29T11:33:23Z [332,441ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Persp in anon:0x59247661fc50 to Sdf.SpecifierOver
+2026-10-29T11:33:23Z [332,442ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x59247661fc50 to Sdf.SpecifierOver
+2026-10-29T11:33:23Z [332,442ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x59247661fc50 to Sdf.SpecifierOver
+2026-10-29T11:33:23Z [332,443ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x59247661fc50 to Sdf.SpecifierOver
+2026-10-29T11:33:25Z [333,842ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Persp in anon:0x74bde5066520 to Sdf.SpecifierOver
+2026-10-29T11:33:25Z [333,843ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x74bde5066520 to Sdf.SpecifierOver
+2026-10-29T11:33:25Z [333,844ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x74bde5066520 to Sdf.SpecifierOver
+2026-10-29T11:33:25Z [333,844ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x74bde5066520 to Sdf.SpecifierOver
+[CRIS Render Service] Ocean animation stopped
+[CRIS Render Service] Ocean animation started: /World/Ocean
+[CRIS Render Service] OmniSurface seawater bound: /World/Looks/OceanWater -> /World/Ocean
+[CRIS Render Service] Environment created: /World/Environment/Sky, /World/Environment/Sun
+[CRIS Render Service] Spawned cetacean Dolphin_001 from /home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd
+[CRIS Marine Setup] Complete MARLIN marine scene created.
+[1635.075s] [ext: cris.madil.render_service-0.1.0] shutdown
+[1635.276s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+2026-10-29T11:57:24Z [1,772,830ms] [Warning] [omni.rtx] Multiple Hydra Engines detected. Video Textures are temporarily disabled with multiple Hydra Engines.
+2026-10-29T11:57:27Z [1,775,702ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T11:57:27Z [1,776,028ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:27Z [1,776,029ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T11:57:27Z [1,776,029ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T11:57:27Z [1,776,029ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,029ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T11:57:27Z [1,776,030ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T11:57:27Z [1,776,030ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,030ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,032ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T11:57:27Z [1,776,033ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T11:57:27Z [1,776,033ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,033ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T11:57:27Z [1,776,033ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T11:57:27Z [1,776,033ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:27Z [1,776,033ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:30Z [1,778,723ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,027ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:30Z [1,779,029ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:30Z [1,779,029ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T11:57:30Z [1,779,029ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T11:57:30Z [1,779,029ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,029ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:30Z [1,779,030ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:33Z [1,781,807ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T11:57:33Z [1,782,036ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:33Z [1,782,036ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T11:57:33Z [1,782,037ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T11:57:33Z [1,782,037ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,037ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T11:57:33Z [1,782,037ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T11:57:33Z [1,782,037ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,037ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T11:57:33Z [1,782,039ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T11:57:33Z [1,782,040ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,040ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T11:57:33Z [1,782,040ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T11:57:33Z [1,782,040ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:33Z [1,782,040ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:36Z [1,784,774ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T11:57:36Z [1,785,038ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:36Z [1,785,038ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T11:57:36Z [1,785,039ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T11:57:36Z [1,785,039ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,039ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T11:57:36Z [1,785,039ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T11:57:36Z [1,785,039ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,039ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T11:57:36Z [1,785,041ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T11:57:36Z [1,785,042ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,042ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T11:57:36Z [1,785,042ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T11:57:36Z [1,785,042ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:36Z [1,785,042ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:39Z [1,787,701ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,930ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:39Z [1,787,932ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T11:57:39Z [1,787,932ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T11:57:39Z [1,787,933ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T11:57:39Z [1,787,952ms] [Warning] [carb] Client omni.hydratexture.plugin has acquired [carb::settings::ISettings v1.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-10-29T11:57:40Z [1,788,584ms] [Warning] [carb] Client omni.kit.viewport.legacy_gizmos has acquired [carb::settings::ISettings v1.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-10-29T11:57:40Z [1,788,584ms] [Warning] [carb] Client omni.kit.viewport.legacy_gizmos has acquired [carb::dictionary::IDictionary v1.2] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-10-29T11:57:42Z [1,790,662ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+[1987.497s] [ext: cris.madil.render_service-0.1.0] shutdown
+[1987.699s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+2026-10-29T12:01:02Z [1,990,709ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:01:02Z [1,990,709ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:01:02Z [1,990,709ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:01:02Z [1,990,709ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,709ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:01:02Z [1,990,710ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:01:02Z [1,990,710ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,710ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:01:02Z [1,990,711ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:01:02Z [1,990,711ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:02Z [1,990,712ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:01:02Z [1,990,731ms] [Warning] [carb] Client omni.hydratexture.plugin has acquired [carb::dictionary::IDictionary v1.2] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-10-29T12:01:04Z [1,993,379ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,712ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:01:05Z [1,993,714ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:01:05Z [1,993,715ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:01:07Z [1,996,353ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+[2186.027s] [ext: cris.madil.render_service-0.1.0] shutdown
+[2186.224s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+[2257.117s] [ext: cris.madil.render_service-0.1.0] shutdown
+[2257.319s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,458ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:30Z [2,259,460ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:30Z [2,259,460ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:05:30Z [2,259,460ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:05:30Z [2,259,460ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,460ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:30Z [2,259,461ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:33Z [2,262,086ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,475ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:05:33Z [2,262,477ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:33Z [2,262,478ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:36Z [2,264,896ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,187ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:36Z [2,265,189ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:36Z [2,265,189ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:05:36Z [2,265,189ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:36Z [2,265,190ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:39Z [2,267,928ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:05:39Z [2,268,194ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:39Z [2,268,194ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:05:39Z [2,268,194ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:05:39Z [2,268,194ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,195ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:05:39Z [2,268,195ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:05:39Z [2,268,195ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,195ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,197ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:05:39Z [2,268,198ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:05:39Z [2,268,198ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:39Z [2,268,198ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:41Z [2,270,451ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:05:42Z [2,270,713ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:42Z [2,270,713ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:05:42Z [2,270,713ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:05:42Z [2,270,714ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,714ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:05:42Z [2,270,714ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:05:42Z [2,270,714ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,714ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:05:42Z [2,270,716ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:05:42Z [2,270,717ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,717ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:05:42Z [2,270,717ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:05:42Z [2,270,717ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:42Z [2,270,717ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:45Z [2,273,632ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:05:45Z [2,273,855ms] [Warning] [carb] Client omni.usd has acquired [carb::settings::ISettings v1.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-10-29T12:05:45Z [2,273,855ms] [Warning] [carb] Client omni.usd has acquired [carb::dictionary::IDictionary v1.2] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:05:45Z [2,273,932ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,933ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:45Z [2,273,934ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:05:45Z [2,273,935ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:05:48Z [2,276,645ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+[2415.005s] [ext: cris.madil.render_service-0.1.0] shutdown
+[2415.209s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+2026-10-29T12:08:09Z [2,417,908ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:09Z [2,417,908ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:08:09Z [2,417,908ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:08:09Z [2,417,908ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,908ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:08:09Z [2,417,908ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:08:09Z [2,417,909ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,909ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,911ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:08:09Z [2,417,912ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:08:09Z [2,417,912ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:09Z [2,417,912ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:18Z [2,427,461ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,825ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:08:19Z [2,427,828ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:08:19Z [2,427,829ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:19Z [2,427,829ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:28Z [2,437,505ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,803ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:08:29Z [2,437,806ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:08:29Z [2,437,807ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,807ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:08:29Z [2,437,807ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:08:29Z [2,437,807ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:29Z [2,437,807ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:39Z [2,447,847ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:08:39Z [2,448,158ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:39Z [2,448,158ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:08:39Z [2,448,158ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:08:39Z [2,448,158ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,159ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:08:39Z [2,448,159ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:08:39Z [2,448,159ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,159ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:08:39Z [2,448,161ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:39Z [2,448,162ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:49Z [2,457,650ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,202ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:49Z [2,458,204ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:08:49Z [2,458,204ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:08:49Z [2,458,205ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:08:59Z [2,467,996ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,932ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,935ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:09:00Z [2,468,936ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:09:00Z [2,468,936ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:09:00Z [2,468,936ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:09:10Z [2,478,998ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+[2644.754s] [ext: cris.madil.render_service-0.1.0] shutdown
+[2644.951s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+2026-10-29T12:11:58Z [2,647,468ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:11:58Z [2,647,468ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:11:58Z [2,647,468ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:11:58Z [2,647,468ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,469ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:11:58Z [2,647,469ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:11:58Z [2,647,469ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,469ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,471ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:11:58Z [2,647,472ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:12:09Z [2,657,573ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:14:16Z [2,785,338ms] [Warning] [carb] Plugin interface for a client: omni.hydratexture.plugin was already released.
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,416ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:14:16Z [2,785,418ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:14:16Z [2,785,418ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:14:16Z [2,785,418ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:14:16Z [2,785,418ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,418ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:14:16Z [2,785,418ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:14:16Z [2,785,419ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:14:16Z [2,785,427ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Persp in anon:0x74ad1b102ac0 to Sdf.SpecifierOver
+2026-10-29T12:14:16Z [2,785,428ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x74ad1b102ac0 to Sdf.SpecifierOver
+2026-10-29T12:14:16Z [2,785,428ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x74ad1b102ac0 to Sdf.SpecifierOver
+2026-10-29T12:14:16Z [2,785,429ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x74ad1b102ac0 to Sdf.SpecifierOver
+[CRIS Render Service] Ocean animation stopped
+[CRIS Render Service] Ocean animation started: /World/Ocean
+[CRIS Render Service] OmniSurface seawater bound: /World/Looks/OceanWater -> /World/Ocean
+[CRIS Render Service] Environment created: /World/Environment/Sky, /World/Environment/Sun
+[CRIS Render Service] Spawned cetacean Dolphin_001 from /home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd
+[CRIS Marine Setup] Complete MARLIN marine scene created.

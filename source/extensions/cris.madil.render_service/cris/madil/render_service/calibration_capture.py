@@ -32,15 +32,16 @@ class CalibrationRequest(BaseModel):
     roll_deg: float = Field(default=0, ge=-45, le=45)
 
 
-async def _capture(config, stage_builder=build_stage):
+async def _capture(config, stage_builder=build_stage, output_root=None, viewport_setup=None, rendered_frames=0):
     from omni.kit.viewport.utility import create_viewport_window, capture_viewport_to_file
     from pxr import Usd
     context_name = 'marlin_calibration_' + uuid.uuid4().hex
     context = None
     window = None
     main_stage = omni.usd.get_context().get_stage()
-    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
-    directory = Path(tempfile.mkdtemp(prefix='oblique_' if config.pitch_deg or config.roll_deg else 'nadir_', dir=str(OUTPUT_ROOT)))
+    root = OUTPUT_ROOT if output_root is None else Path(output_root)
+    root.mkdir(parents=True, exist_ok=True)
+    directory = Path(tempfile.mkdtemp(prefix='oblique_' if config.pitch_deg or config.roll_deg else 'nadir_', dir=str(root)))
     try:
         omni.usd.create_context(context_name)
         context = omni.usd.get_context(context_name)
@@ -68,6 +69,12 @@ async def _capture(config, stage_builder=build_stage):
             await omni.kit.app.get_app().next_update_async()
         if tuple(viewport.resolution) != (config.image_width_px, config.image_height_px):
             raise RuntimeError('Viewport did not retain the explicit capture resolution')
+        if viewport_setup is not None:
+            viewport_setup(viewport)
+            for _ in range(5):
+                await omni.kit.app.get_app().next_update_async()
+        if rendered_frames:
+            await asyncio.wait_for(viewport.wait_for_rendered_frames(rendered_frames), timeout=30)
         # Warm-up capture avoids delivering the preceding frame or uncompiled material.
         for filename in ('warmup.png', 'rgb.png'):
             capture = capture_viewport_to_file(viewport, file_path=str(directory / filename))
