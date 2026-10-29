@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "name": "MARLIN engineering medium v1",
+  "status": "M3 isolated engineering candidate; opt-in, not integrated with animated ocean",
+  "scientific_water_calibrated": false,
+  "named_water_type": null,
+  "shader": {
+    "source_asset": "OmniSurface.mdl",
+    "subidentifier": "OmniSurface",
+    "binding_mechanism": "existing _author_omnisurface_inputs"
+  },
+  "meters_per_scene_unit": 0.01,
+  "physical_transmission_reference_distance_m": 1.0,
+  "material_parameters": {
+    "ocean_name": "Ocean",
+    "material_name": "OceanWater",
+    "ior": 1.333,
+    "roughness": 0.001,
+    "transmission": 1.0,
+    "base_weight": 0,
+    "base_color": [
+      0.02,
+      0.1,
+      0.13
+    ],
+    "transmission_color": [
+      0.6,
+      0.8,
+      0.9
+    ],
+    "transmission_depth": 100,
+    "scattering_color": [
+      0.02,
+      0.02,
+      0.02
+    ],
+    "scattering_anisotropy": 0,
+    "thin_walled": false
+  },
+  "native_distance_conversion": "native_distance = physical_reference_distance_m / meters_per_scene_unit; checked using equal physical geometry at stage units .01 and 1",
+  "renderer": {
+    "mode": "PathTracing",
+    "settled_rendered_frames": 64,
+    "image_size_px": [
+      512,
+      384
+    ],
+    "firefly_filter_enabled": false,
+    "fog_enabled": false,
+    "camera_auto_exposure_enabled": false,
+    "effective_settings_reference": "captures_controlled/nadir_4lurc9jj/effective_settings.json"
+  },
+  "model_coefficients_per_m_not_measured_water": {
+    "extinction_rgb": [
+      0.5306282510621704,
+      0.24294617861038947,
+      0.12516314295400605
+    ],
+    "absorption_rgb": [
+      0.4704937859162953,
+      0.20701102519850656,
+      0.10455455506372946
+    ],
+    "scattering_rgb": [
+      0.06013446514587506,
+      0.035935153411882914,
+      0.020608587890276586
+    ],
+    "provenance": "Derived from the inspected installed OmniShared MDL function and declared 1 m reference distance; not fitted to rendered pixels or field water"
+  },
+  "measurement_reference": "qa/measurements_final.json",
+  "limitations": [
+    "Requires a consistently oriented closed medium boundary; do not apply blindly to the current thin-walled open ocean",
+    "Scattering control changes extinction and its absorption/scattering split together",
+    "Validated at .25, .75, 1.25 m and 512x384 in the installed PathTracing renderer; larger scenes/resolutions and animated integration await M4/M5",
+    "Native LDR PNG clips bright fiducial; measurements use retained unclamped HdrColor, previews use a declared fixed transform"
+  ]
+}

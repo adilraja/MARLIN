@@ -25,13 +25,30 @@ ROOT = Path(__file__).resolve().parents[6] / 'experiments/ocean_material_v1/diag
 
 @router.get('/scene/ocean/material/diagnostic/capabilities', summary='Inspect fixed diagnostic viewport support')
 async def diagnostic_capabilities():
+    import inspect
+    import omni.kit.viewport.utility as utility
     import omni.kit.viewport.legacy_gizmos as gizmos
     import omni.kit.viewport.menubar.display as display
     import omni.kit.viewport.actions as actions
     manager = omni.kit.app.get_app().get_extension_manager()
+    schema_stage = Usd.Stage.CreateInMemory()
+    schema_controls = {}
+    for name, kind in [('OmniRtxCameraAutoExposureAPI_1', 'Camera'),
+                       ('OmniRtxCameraExposureAPI_1', 'Camera'),
+                       ('OmniRtxSettingsCommonAdvancedAPI_1', 'RenderProduct'),
+                       ('OmniRtxPostTonemapIrayReinhardAPI_1', 'RenderProduct')]:
+        prim = schema_stage.DefinePrim('/' + name, kind)
+        applied = prim.ApplyAPI(name)
+        schema_controls[name] = {'applied': applied, 'attributes': [
+            {'name': a.GetName(), 'type': str(a.GetTypeName()), 'default': str(a.Get()),
+             'allowed': str(a.GetMetadata('allowedTokens'))}
+            for a in prim.GetAttributes() if any(s in a.GetName().lower() for s in ('exposure', 'fog', 'tonemap', 'ocio'))]}
     return {'ok':True,
+        'schema_controls': schema_controls,
         'modules': {name:{'file':module.__file__, 'public_names':[n for n in dir(module) if not n.startswith('_')]}
-                    for name,module in [('gizmos',gizmos),('display',display),('actions',actions)]},
+                    for name,module in [('gizmos',gizmos),('display',display),('actions',actions),('utility',utility)]},
+        'capture_signatures': {'file':str(inspect.signature(utility.capture_viewport_to_file)),
+                               'buffer':str(inspect.signature(utility.capture_viewport_to_buffer))},
         'extension_paths': {name:manager.get_extension_path(manager.get_enabled_extension_id(name))
                            for name in ['omni.kit.viewport.legacy_gizmos','omni.kit.viewport.menubar.display','omni.kit.viewport.actions']}}
 
@@ -87,7 +104,8 @@ def emissive(stage, obj, name, color):
     UsdShade.MaterialBindingAPI.Apply(obj.GetPrim()).Bind(mat)
 
 
-def build_fixture(stage, c, condition, probe='none'):
+def build_fixture(stage, c, condition, probe='none', *, target_y=-1, background_y=-1.02,
+                  medium_parameters=None):
     UsdGeom.SetStageUpAxis(stage, UsdGeom.Tokens.y)
     UsdGeom.SetStageMetersPerUnit(stage, c.meters_per_scene_unit)
     root = UsdGeom.Xform.Define(stage, '/WaterDiagnostic')
@@ -95,10 +113,10 @@ def build_fixture(stage, c, condition, probe='none'):
     unit = c.meters_per_scene_unit
     # Identical target and lighting geometry in every condition.
     target = mesh(stage, '/WaterDiagnostic/Target_00',
-        [(-.09, -1, -.09), (-.09, -1, .09), (.09, -1, .09), (.09, -1, -.09)], [[0, 1, 2, 3]], unit)
+        [(-.09, target_y, -.09), (-.09, target_y, .09), (.09, target_y, .09), (.09, target_y, -.09)], [[0, 1, 2, 3]], unit)
     emissive(stage, target, 'Fiducial', (10, 10, 10))
     background = mesh(stage, '/WaterDiagnostic/Background',
-        [(-4.8, -1.02, -4.8), (-4.8, -1.02, 4.8), (4.8, -1.02, 4.8), (4.8, -1.02, -4.8)], [[0, 1, 2, 3]], unit)
+        [(-4.8, background_y, -4.8), (-4.8, background_y, 4.8), (4.8, background_y, 4.8), (4.8, background_y, -4.8)], [[0, 1, 2, 3]], unit)
     emissive(stage, background, 'Black', (0, 0, 0))
     for name, x0, x1, color in [('RedMarker', -3, 0, (10, 0, 0)), ('GreenMarker', 0, 3, (0, 10, 0))]:
         marker = mesh(stage, '/WaterDiagnostic/' + name,
@@ -111,8 +129,11 @@ def build_fixture(stage, c, condition, probe='none'):
         roughness=0.001, base_weight=0, transmission_color=(1, 1, 1),
         transmission_depth=100 if probe == 'positive_depth' else 0,
         scattering_color=(0, 0, 0), thin_walled=False)
+    if medium_parameters is not None:
+        parameters = medium_parameters
     geometry = {'water_bounds_m': [[-5, -2, -5], [5, 0, 5]],
-                'target_center_m': [0, -1, 0], 'target_size_m': [.18, .18],
+                'target_center_m': [0, target_y, 0], 'target_size_m': [.18, .18],
+                'background_y_m': background_y,
                 'target_inside_declared_bounds': True, 'closed': False,
                 'water_omitted_for_no_water_control': condition == 'dry'}
     bounds = UsdGeom.BBoxCache(Usd.TimeCode.Default(),

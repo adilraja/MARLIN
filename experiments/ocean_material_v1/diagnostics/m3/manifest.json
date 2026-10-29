@@ -1,0 +1,4075 @@
+{
+  "kind": "ocean_material_m3_absorption_and_underwater_clarity",
+  "status": "passed_declared_isolated_unclamped_pathtracing_engineering_scope",
+  "recorded_at_utc": "2026-10-29T13:07:20.760240+00:00",
+  "base_commit": "b570d0e9ddeaa0e1c0f2222a7a6986fe6f6ae0b6",
+  "final_accepted_captures": 26,
+  "all_capture_requests": 75,
+  "initial_hdr_failures_retained": 2,
+  "native_hdr_format": "RGBA16_SFLOAT, retained as EXR and float32 NPZ sample representation",
+  "engineering_preset": "engineering_medium_v1.json",
+  "report": "experiments/ocean_material_v1/reports/M3_UNDERWATER_APPEARANCE.md",
+  "tracked_source_changes": "qa/source_changes.patch",
+  "source_pins": [
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py",
+      "sha256": "5a825e6ada1d23c9c87a231715d3dba0ab39f651290769b05dfbd3a5e117af56"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_diagnostics.py",
+      "sha256": "37749e494407177fc587e661623210f218abcedb8dd68f7e3fb061954135f47f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_capture.py",
+      "sha256": "4b4e6faec88f8d7562fd88f8a9e0859d567af8e84ac2de6f0938b27eb8f92461"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py",
+      "sha256": "0ffb8a6871a59dfa522d9d7cd7d11bf4dfce921d7f0afa9bc6d6a8342c92fae5"
+    }
+  ],
+  "files": [
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/.gitattributes",
+      "bytes": 132,
+      "sha256": "ae90540b48d2dd202e7253d9f7260baa9de68640781992f53f57a7af3b9fb2cc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/CONTROLLED_RUN.md",
+      "bytes": 1683,
+      "sha256": "16901f2ce5e2795723f53dfe200dd551e7d6e36d31d542d9ba79c4b4a5b6401b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/FINAL_RUN.md",
+      "bytes": 1681,
+      "sha256": "c089f991107f3c30767e9aaa1307d78cab84d00eb61ddfdf0c8a8854ec0a114d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/PATH_TRACING_CHECK.md",
+      "bytes": 1731,
+      "sha256": "a185f055341809efe8e696b25ee866dd5aedfe662ad8013fb8f3bbbb7444286b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/PLAN.md",
+      "bytes": 3875,
+      "sha256": "223aa975e0a603cf0e45b8f6e0cd190eb09dfc27bef03fec2566cd2f3040af21"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/README.md",
+      "bytes": 4049,
+      "sha256": "7935a5524a9e6931eab00753c0dead21455479c9e3ef46278ca8c58b898dbdc7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/UNCLAMPED_CHECK.md",
+      "bytes": 1167,
+      "sha256": "5c9ee3986c8172c759fa90ffbd61cd90bb79f070910c14874ca1f0fb176f0db3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/fixture.json",
+      "bytes": 1589,
+      "sha256": "16b430eab150131c31593881e0b8e78746154d777b0fa7e6230839195de3c988"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/hdr.exr",
+      "bytes": 88434,
+      "sha256": "076120ee5103febe309fb8676476dcc7c556b88bd412d4dc601309e3db217ae8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/hdr.npz",
+      "bytes": 120059,
+      "sha256": "74f6a23a2200ef10de770d399c9aff67a4d8ece1ebef16b3583bc367d78bab0f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "005d8915c7e1642f69a161653e1102988636701c2b05910648514ecb82fb5ad7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/metadata.json",
+      "bytes": 10978,
+      "sha256": "e5ffd1734f497b2d4414e8343701638f11129b2ae663f0aa1b379406e6b5a9ba"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/rgb.png",
+      "bytes": 8496,
+      "sha256": "ecd3eadc9b52269de6071f9937cd7c6ee212125ed455fef2dd72719ef2b22d95"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/scene.usda",
+      "bytes": 11677,
+      "sha256": "637b59a9972c03465df8240aa93d3d7ea9528f16142551e9f04904b1ead558a5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_0b8zjv_2/warmup.png",
+      "bytes": 8496,
+      "sha256": "a08d715a91f12a11f44d17c3dfcfb6659afe957401112b8d564615b6512d6f92"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/hdr.exr",
+      "bytes": 105654,
+      "sha256": "34fe7fab20e8eb687a4a6d6f0c1df9b9ccb5abebfefa17eebfc6839e6b868d91"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/hdr.npz",
+      "bytes": 145344,
+      "sha256": "1497f46d466598210c5f066d652db64cbb4ea633a81d2c06418fc5dc6e9f40fc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/hdr_buffer.json",
+      "bytes": 241,
+      "sha256": "65441a88c7738718d8563e1ce3acdf851e8125e4e3c2ab47dc59df406bc08e7f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/metadata.json",
+      "bytes": 10762,
+      "sha256": "58eb0aee87ba7674e20bff3c4b0f7d6eed6420268a004d422af7459660482b09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/rgb.png",
+      "bytes": 8774,
+      "sha256": "8f121d25e63ebbe25adeb61ec27670706c6cb6cd3a59b6b63c25727a4730d089"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/scene.usda",
+      "bytes": 11671,
+      "sha256": "0d0cc7331fd98ebead7b2afb22d45854a7e11c760e26ca7d493bf1ba985430bc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_3r0eb4vx/warmup.png",
+      "bytes": 8748,
+      "sha256": "f219517eec93e439e04530aae4b5b6335c64d6cec008c6150d77452f9054ef92"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/hdr.exr",
+      "bytes": 106330,
+      "sha256": "9b8e711a44036b8ebcc5e71d6e550a9075104fe392c0680f17928e056d42f1be"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/hdr.npz",
+      "bytes": 143554,
+      "sha256": "caca4e3378df57cf750512843067786a45feb969132b75601ab309cf8150677c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/hdr_buffer.json",
+      "bytes": 241,
+      "sha256": "65441a88c7738718d8563e1ce3acdf851e8125e4e3c2ab47dc59df406bc08e7f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/metadata.json",
+      "bytes": 10761,
+      "sha256": "2601797aa0ddf21cded5b1a9f71e84712532a1d1b45003c1311a2d10aed9db07"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/rgb.png",
+      "bytes": 8762,
+      "sha256": "89be4f4440334fee9b684aca679761240fbb8a304131348e97f2b8047c7052a8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/scene.usda",
+      "bytes": 11671,
+      "sha256": "7973c036d07e3e7961aaa5899ca532cd4149ce20ea75ad8a04febf0786f3b2d2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_4p6oerop/warmup.png",
+      "bytes": 8757,
+      "sha256": "36c1d8c466765af904722ca207b31057ee5a9e72932811294a3a3998698858d6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/fixture.json",
+      "bytes": 1589,
+      "sha256": "97c294ef76874572b1a778d131cbfa6cfb07f59637e16d70fdba525f2917b3de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/hdr.exr",
+      "bytes": 86868,
+      "sha256": "548369f63c550d0e6339f0a2de8c5cf7bbebfd884307fc093674f83b58f09bef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/hdr.npz",
+      "bytes": 107892,
+      "sha256": "203bac3f708ce9ebd63c4cb7079331d4b73eba77d63f54f1e8e8884b970774e3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "c337e60a9a8138d22ebce1919db2fb0fc963ab83e9444d1e51079e39746f3beb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/metadata.json",
+      "bytes": 10771,
+      "sha256": "58a12e10bc5e79d958ac5c5ad937dd3c45287acc946eb4c1b3a2aa48f0f1e2af"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/rgb.png",
+      "bytes": 8790,
+      "sha256": "c1ffa10c9275ac320e09681eea38f03d8a17468f031a49ae0078e578aa766f00"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/scene.usda",
+      "bytes": 11677,
+      "sha256": "43a9434c6b039dd2243370974c6b5487bb3682ccc87285bfca6ec8e5368e01a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_523i9mkc/warmup.png",
+      "bytes": 8801,
+      "sha256": "832e63516f1dfdd08b5aeab489370296e004b4a58afd3496b0d2bc71a2cb3821"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/fixture.json",
+      "bytes": 1583,
+      "sha256": "84da8b54cfea5050dbb18e68f547d5dd67cf4565c2a5eb85b464baf14c4847b9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/hdr.exr",
+      "bytes": 101732,
+      "sha256": "a2532cd5806517c7473915014ecb2ca05736fc4f44e53ec4d16793a72290a989"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/hdr.npz",
+      "bytes": 135600,
+      "sha256": "a1ea5b5ecdeac8acaf45c89809255e484a564097b8f0c3026f502cdbe48eae84"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "8ec760a42df00704bbb0427b9ef95a9b75e1bf4109019b315972d8e9b9acbefd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/metadata.json",
+      "bytes": 10969,
+      "sha256": "292e107a9d52a073dbbe0c433396a6d120f9f3137d9509871bf56a734c84f8cf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/rgb.png",
+      "bytes": 8492,
+      "sha256": "e6d7017d79484624586713714411a581f9955fb67438f6740401623e8663c4df"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/scene.usda",
+      "bytes": 11671,
+      "sha256": "64709bd75c30fcac022bd90cbc47f7596da62a3531d84ade02a02d74273de6b5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_8yruengd/warmup.png",
+      "bytes": 8472,
+      "sha256": "e04f455f19558ae45fdf714c82d793d3ce2d3f6a9eab047315e09a5d06763686"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/fixture.json",
+      "bytes": 1589,
+      "sha256": "31c4ff4f62606f7ee7b6a6a56e01d33edab017cbdd9b1fbad88a653b56ba7694"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/hdr.exr",
+      "bytes": 88919,
+      "sha256": "42413470601fe0d16a7972e41c04c8f33450cc2a78414b178b78754d4cce16ae"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/hdr.npz",
+      "bytes": 114012,
+      "sha256": "732ee9012b6823936189bde3110ad4b536f828fd1dab89597b48f732172c5029"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/hdr_buffer.json",
+      "bytes": 241,
+      "sha256": "35c799cfc542c12a3cd105699ba678373b1c27dc827fab1d6bdfccc757367e83"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/metadata.json",
+      "bytes": 10985,
+      "sha256": "817731944fdc777783dc1c5875fd835f9099e9f2976715c8619285942797b69d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/rgb.png",
+      "bytes": 8713,
+      "sha256": "c1276070f0d9c863dc5b9bfa36dd3c6838c240c3a756212d3005b07f97ab0619"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/scene.usda",
+      "bytes": 11681,
+      "sha256": "ff85d34efab102bd3c94bed1dc203588b8025349591c8c14c46fa825dfdcf43d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_9nr_8q10/warmup.png",
+      "bytes": 8703,
+      "sha256": "b175c7c472f67a346f8b6213e0c4b69029c5fb3b0d3155d45cdf0a1747d2363f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/fixture.json",
+      "bytes": 1589,
+      "sha256": "58fb579b22bf85bdbafcaab8b1f511cf143f49aec302abca9746129b34fcc24c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/hdr.exr",
+      "bytes": 93862,
+      "sha256": "9af5d78cd7a367eb545c6bc194f1ecbfaff60b2590303c7894d5e0492e908ce0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/hdr.npz",
+      "bytes": 124748,
+      "sha256": "404b7517a44a2ede961bb3b7fa231751e364938edf776e799431923c37c1d7be"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/hdr_buffer.json",
+      "bytes": 241,
+      "sha256": "be05f26bf7f5523930ee3882138a1a81ff07cfdc81f7a9148b6dfefaa788921d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/metadata.json",
+      "bytes": 10773,
+      "sha256": "01912b87efaa467c1d4ba92f0d87a83d6095640f7e6f3a42001b19d9ef53a9cf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/rgb.png",
+      "bytes": 8778,
+      "sha256": "0d2a418bbc84ecd710464de233d104b865de5ef1d3c0c282b1f47a989396f085"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/scene.usda",
+      "bytes": 11677,
+      "sha256": "4dcc65c5b7ae852cdbc7a9f3b9d4ddda66a4604410b67aa270fe56964cc930db"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_dhqksbrq/warmup.png",
+      "bytes": 8737,
+      "sha256": "bbd1ca612b5a05add9fab1bf378f5ecef224f5ca699ed6868632766549db2265"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/hdr.exr",
+      "bytes": 106269,
+      "sha256": "7d14fc26b413eb6bbcaddfc591db99ba5d159548149998375bc47c3de6991d09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/hdr.npz",
+      "bytes": 144907,
+      "sha256": "1aba039fdcf3ae14b5937491fd8d6a7e978fd9ea874de54bb3a0ba3943d63207"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "3510df7796a42ea8890b7a5f45250268841bbcbf9dc3918bf02b9edde6a39a2b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/metadata.json",
+      "bytes": 10760,
+      "sha256": "5f62206afe759964939871d85e99c7fccb6a06f8dc69be7631d5f0d6f67a52bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/rgb.png",
+      "bytes": 8766,
+      "sha256": "f6d2b3d9dac47e9cf1eb87645558b6c1829d23655454e93ad79dc269f2094543"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/scene.usda",
+      "bytes": 11671,
+      "sha256": "8c34bb6c8463620105347f7c3f8ebb35cd6f65f26bc65dab7436c7a2dfcf463e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_duavzoh7/warmup.png",
+      "bytes": 8773,
+      "sha256": "739d894ed7250f3f38a604226577c32bc5afbeb5a8073db04c6f6bfa1524196e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/fixture.json",
+      "bytes": 1589,
+      "sha256": "f3495c9ec5d150306f33b64dcfd934096f6b9a3a3675da6be47df7d39a9d8d8d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/hdr.exr",
+      "bytes": 93618,
+      "sha256": "9532e6e7a183d41f9250c28e578824dbf60f8e6ae973712cc2b0ebcd3f690989"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/hdr.npz",
+      "bytes": 127258,
+      "sha256": "d3f178d99be34f79f9973a872c4c27cedfb6afca59497368d932d9dac5299663"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "f1efe199c97c6ffa2fec62a21ca1547d231acabe33c882f5b469bff7bbba343d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/metadata.json",
+      "bytes": 10980,
+      "sha256": "dcf77b85cf2a52af556bb3915db7ea6dc6074027994e27fe2a4effa8ed43883b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/rgb.png",
+      "bytes": 8497,
+      "sha256": "933711dc2dcb2e60ac2f7b214e5def0009309b3dd7559310d965368d6455beb4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/scene.usda",
+      "bytes": 11677,
+      "sha256": "90d0e3a79eda57363924203e1c974e948f7287f3554149f15c2b6bbbcf1ab5ba"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_gvuv5nry/warmup.png",
+      "bytes": 8485,
+      "sha256": "dc71d45a7fb84373266e7fcbf92d1fac989813c636841beff7d528ce954cd29c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/fixture.json",
+      "bytes": 1588,
+      "sha256": "44caf46ae26ab53a6469b475f4e1b7cae2639e2b3a1741b0c4aa5939879d1b52"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/hdr.exr",
+      "bytes": 99309,
+      "sha256": "8b914716c216e6c9a0b4e1aa4d897f74fd912ccd420ee45f464bd07518ecb56e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/hdr.npz",
+      "bytes": 137964,
+      "sha256": "17e6fa91b79804ff53d56345d37a89dfa01645ecc24e9110ed098f038f3977f6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/hdr_buffer.json",
+      "bytes": 241,
+      "sha256": "f29ee9e2a59273af55a0c9f85c98be64bf8159a37c2cb0dc7e8a6a7144a1ea4d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/metadata.json",
+      "bytes": 10983,
+      "sha256": "21dc06a8c0ebdf3d9e8224f475f3efdce9d0b05eee50d19be377259caa01fbc6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/rgb.png",
+      "bytes": 9483,
+      "sha256": "1028063d0843b4eecdfb75b572a783be25dc5cbe3662f45b8d912bad7f1d6c31"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/scene.usda",
+      "bytes": 11680,
+      "sha256": "078951648d7ffca728510b01360a5d9119e68495aa736eb123a1a3f45e2fe18a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ig6b4kg1/warmup.png",
+      "bytes": 9522,
+      "sha256": "0bde3a4e9c375f5ca9dcb32a4592b2effd2429912bced4ae31a87637c12f20d2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/fixture.json",
+      "bytes": 1588,
+      "sha256": "8a022b12a872cddcf4c50b9f3406a6e97c24330ecf48d31958b32301bfec9a71"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/hdr.exr",
+      "bytes": 98830,
+      "sha256": "82bb6af2ba78606b49634dd0fe7375dbd6fb1b322f05e077ac0e76e57c87699c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/hdr.npz",
+      "bytes": 140120,
+      "sha256": "ba354d01e73703a4213a14bf83a7d39890e8ee7ecbf34174fb95ca2afc4dea50"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/hdr_buffer.json",
+      "bytes": 242,
+      "sha256": "f83a0b4d5dc314e59b68b760af0ba06b95f29b3b7486df67b4c3fa9d34e4f5bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/metadata.json",
+      "bytes": 10981,
+      "sha256": "c455171a14c3e01e0490d4ffb78959441b7e9ecf1a9f71b54d7760d8a17c6cbc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/rgb.png",
+      "bytes": 8452,
+      "sha256": "523b541b85f2e90fa986bc8e4f9dca3d520ee48625823fa900941bc173474a05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/scene.usda",
+      "bytes": 11676,
+      "sha256": "5c154091315b9153ec48e0acbd6284844a6204b4caf1ee363257519ab3311726"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_lqyy7e9y/warmup.png",
+      "bytes": 8468,
+      "sha256": "907a892c2d9987c6d5b520a4e97eca101c997d3daba93d60114f4d9a22a2a5bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_m6jcz4_r/aov_inventory.json",
+      "bytes": 100,
+      "sha256": "744490012bf754c634208f1472c6e55c91c924323beb8da19ec61b98db7c883e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_m6jcz4_r/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_m6jcz4_r/rgb.png",
+      "bytes": 8753,
+      "sha256": "d06ac2fc35ef7e320b83e0c888e7e9669c5cd12b3c86043b0fd4062d74ab2c0e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_m6jcz4_r/scene.usda",
+      "bytes": 7015,
+      "sha256": "e369e4bb73c5e8eb7ca5e497e75efc4f73609487e7a01e42ead0fe3bb5e710e8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_m6jcz4_r/warmup.png",
+      "bytes": 8749,
+      "sha256": "fee889ab0d35d0af7ebe76f0e26883cf056bb62c3a52ffd2f8e3ffa4947051c1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/fixture.json",
+      "bytes": 1583,
+      "sha256": "c71ee4cdab460f71e41aabcee9db9dd0aae050358094738145e97eeef44259e9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/hdr.exr",
+      "bytes": 108455,
+      "sha256": "0f52dda4525eef8d21819abd8234079e40e42c2a547e6a72dcd08223601c38a7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/hdr.npz",
+      "bytes": 153681,
+      "sha256": "4a74184e14e9da045e7ee6282112e3f71adfc00861f8323ae9fef115595dd34c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "5038c317d637a314fed5c7e02b77d3d10945331b5131558b4fd0339898bd9f5c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/metadata.json",
+      "bytes": 10971,
+      "sha256": "559238ba14679467fe4e31b2c937a1f56291055243757e2f1e7b824559d71dc7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/rgb.png",
+      "bytes": 8662,
+      "sha256": "d1a2c89ae9bc1fb38f0aeb6f7de98c288c453172a5c7b609d45ae50c67cb0044"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/scene.usda",
+      "bytes": 11675,
+      "sha256": "ba9bac43513ff7943f1d49c5df26aa855dc2f59bd4fbf9ea0edf8a30d77ed65a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_ru5a51k5/warmup.png",
+      "bytes": 8654,
+      "sha256": "00578991e698cc979432d5c0d68d9c20226bb115e565418e1574b1950db8b859"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/fixture.json",
+      "bytes": 1588,
+      "sha256": "4017cff6b283c262b695e29ef7eb6fbdfce39c4f5182f604dfeac3b7a67c1b6b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/hdr.exr",
+      "bytes": 97630,
+      "sha256": "2f672868f2637026dc8d76a097f1a95cbbb4b8919741ab0ce76d117d9428836b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/hdr.npz",
+      "bytes": 134995,
+      "sha256": "072d2688c35474b63145a41a4edff6b21d391c33a9556d9d35b8a992f6a3586e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "8a03811b30aefbe51c203ae1a629b2635e319042a729245cb21b806d7ce4aa87"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/metadata.json",
+      "bytes": 10769,
+      "sha256": "0b76e5191264361a44d42de028667b00713fec71288f3abd65eea90f39662bf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/rgb.png",
+      "bytes": 8995,
+      "sha256": "b86083f2b13f102a983038842c89a7143c81fb30353e608c417e1c083ce4374e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/scene.usda",
+      "bytes": 11676,
+      "sha256": "e0a8148a0e45a81b9bad696f537cf817dbd5e22ddfa335ba82aa9bc3092a243b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_sny5cak9/warmup.png",
+      "bytes": 9036,
+      "sha256": "cee65a1fdbd8c9213396dbc50f6d3eddb6e20f7ac74fa9601a481adb3373a573"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_t_t326i_/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_t_t326i_/rgb.png",
+      "bytes": 8743,
+      "sha256": "07f824c0b5913fb9eac54b76764360c2d71c3b92e12d7ce637869a59d20fbd20"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_t_t326i_/scene.usda",
+      "bytes": 7015,
+      "sha256": "e369e4bb73c5e8eb7ca5e497e75efc4f73609487e7a01e42ead0fe3bb5e710e8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_t_t326i_/warmup.png",
+      "bytes": 8757,
+      "sha256": "361f257706d630602efaa2fc4d4515b0e09fdba669b962ded7be4a52a06131b5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/fixture.json",
+      "bytes": 1589,
+      "sha256": "92b1e60c79718f10d9a7517ae09c661d76a5fc0e864e58451e718cdca92a0ac5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/hdr.exr",
+      "bytes": 89115,
+      "sha256": "68c83b06e5ddd77dd8948fe6e89f6e71be747481a02c52fb17e3e8eabb3a116b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/hdr.npz",
+      "bytes": 124754,
+      "sha256": "38b02f35574daaca8e3ef135c3db3eae5610e0674a9d0dc2310d63a6e6faafa9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/hdr_buffer.json",
+      "bytes": 240,
+      "sha256": "ee9b4ef68f1c579970653a24011c1391ecb81b6abcc38e46dbad3bb112df9ab2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/metadata.json",
+      "bytes": 10984,
+      "sha256": "c84c9bb85ec9d9815260dc8ed379602c69d24e161923029edf363d2413924d8e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/rgb.png",
+      "bytes": 8720,
+      "sha256": "d172d61963fd0b42d53ff37f0e99327f7883ec318528902402087adc3e4c9e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/scene.usda",
+      "bytes": 11681,
+      "sha256": "9460fc256e2ad5d3d763acf02f179726d38ddfa3ba3fb6fde2223846b014329b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_uxe016wd/warmup.png",
+      "bytes": 8693,
+      "sha256": "85e8db5e2585d20c1dd99c378be99932e849646a112a1a8bbcc0b55ac31a1778"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/hdr.exr",
+      "bytes": 104933,
+      "sha256": "50bfd71b412d736c98c7ed9c8d7ea7e949e30d785961a847c5e8e3d0b5415b1f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/hdr.npz",
+      "bytes": 142489,
+      "sha256": "2eb3eaf9b693c2da07166dec72b04793ec982f18d8fda3ed3eff706d02137daf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/hdr_buffer.json",
+      "bytes": 241,
+      "sha256": "58d10b2660427ec7a72f734dd4513e7ef365117c0476972680254a0bfcb893ff"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/metadata.json",
+      "bytes": 10762,
+      "sha256": "cbebb7b403e82e48a216fbf874cd82cce2dd34f62e1ebe88e533d5626d1f1b95"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/rgb.png",
+      "bytes": 8772,
+      "sha256": "6fe9e2a5820d88dce129197839712ea908c6dca84483c4d22d585a04e9649c97"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/scene.usda",
+      "bytes": 11671,
+      "sha256": "9dd62286f82037f30cc048222fb0fc4997c94b6c1218e2433fef9cded2130fd1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures/nadir_v1clvtke/warmup.png",
+      "bytes": 8770,
+      "sha256": "370a67f10bfc7f629315f8c89f01e011cee5ab7e4b1dbd1762e479db135edbef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/fixture.json",
+      "bytes": 1598,
+      "sha256": "19805a9844daffa18fe556cfd70fce438435945166b282b9f290784435facbc7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/hdr.exr",
+      "bytes": 633251,
+      "sha256": "e2280cf29ae44451ba10b87bbe801aa1d785cb443bf6eaa62c27799f83a41821"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/hdr.npz",
+      "bytes": 1294102,
+      "sha256": "74b7761356fccd47e8a417d5def88ede65d68c479d39215f973fcee76624c23e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/hdr_buffer.json",
+      "bytes": 230,
+      "sha256": "818112c17f1b18935d6a0b2fd7df048fdbec1bff7de9648ddb52603e91d2b4c0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/metadata.json",
+      "bytes": 11262,
+      "sha256": "993c2e52d98756c9d19e4b3164c6c3f24beb5a84e4eec282f578f5d7e7a3ec36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/rgb.png",
+      "bytes": 87883,
+      "sha256": "0db5a97edc2d0d090b35d7b0b53569b707c90fc851d3384719947b039c7dec25"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/scene.usda",
+      "bytes": 11970,
+      "sha256": "59ac9e43c0efae1ae97d2c810d4f30b38fad27ba4a30b122604480b16f775d8e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0cqk3pi_/warmup.png",
+      "bytes": 88483,
+      "sha256": "21166ded834f79ba15d883ea8ceaff4c859cd80de984e0b66d6f7243d67628f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "d3207f7d4507066b6746b256a088b4ce2a86da738c282de4ca44fa0a197ffcd3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/hdr.exr",
+      "bytes": 214679,
+      "sha256": "e5836dce5bf5a31d0e89b1faae6abbc3c283d96a17bc2a0a3b3c868b43fe72db"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/hdr.npz",
+      "bytes": 414902,
+      "sha256": "9628de7d93293bc43149edd40713b1230faba737a5b511fe01c6c0dcd18a9396"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "b83f77d9ce86c05156700c3912fd1b8b2442145dd26dbcbf1393efc228242dad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/metadata.json",
+      "bytes": 11031,
+      "sha256": "2fc543f277acb8b66bf50c9a5acfcdfea7a5bd3320faac2bc270a152d36e1376"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/rgb.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/scene.usda",
+      "bytes": 11951,
+      "sha256": "c6882685441713b748338e461cae6a490719cf8919c18c91889f1c583a6dd048"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/warmup.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "86872a28a8456ce6df1177743636e1a0946415ab5b64c8feb2e1e8535d4bd81d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/hdr.exr",
+      "bytes": 38803,
+      "sha256": "2885f0deb89634d947f5e30eccc5818d6ad1ab08896b572b7b7ac3f746e1fb0f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/hdr.npz",
+      "bytes": 46158,
+      "sha256": "da611cd8f44203cda657c0e540f68e964292086ede211e539b0b10ee907ef1d8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/hdr_buffer.json",
+      "bytes": 234,
+      "sha256": "ca56cddb6a4efcc63b19d59e61ca140c7866b1d6304a2004aeb1f211dceb2c52"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/metadata.json",
+      "bytes": 10837,
+      "sha256": "28f014aec26dff546ac6e244a1e2eb8f18ddb31e12b9d530cb8761a506527dda"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/rgb.png",
+      "bytes": 8804,
+      "sha256": "a6b16feaec4653ed23a1e6e7e8152aee5343eac2d16175cbd3e4311c2088ccf5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/scene.usda",
+      "bytes": 11842,
+      "sha256": "a4deddfe2421db62b50c39ddc8b97b41ce041353010604b9873076b815dfdbb5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1c76412c/warmup.png",
+      "bytes": 8775,
+      "sha256": "e6dad1998cb432d8b62be3bf5d36f53f0b441987deefe6c9b0cce609b4a34e7f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/fixture.json",
+      "bytes": 1583,
+      "sha256": "84da8b54cfea5050dbb18e68f547d5dd67cf4565c2a5eb85b464baf14c4847b9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/hdr.exr",
+      "bytes": 210978,
+      "sha256": "0cfee0b951f8dc767655a7e0628476e5c2605f65b7b9d6083fee475698d7e1d6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/hdr.npz",
+      "bytes": 431317,
+      "sha256": "1f69e74e8acb4557ca3cb29f89ead707228f0ecb5071e598b0f288eab860ca31"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "efb830b27c1c501dfc81351824dba61fd174b9c86ee1fc68d5403a673fa640e5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/metadata.json",
+      "bytes": 11241,
+      "sha256": "3536aef42473c4c18a7d98ef41b0c78471ea377cd9d0d9d55bc314f8b99cb72b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/rgb.png",
+      "bytes": 8174,
+      "sha256": "90a7613e1f892c71662e27bfa93bcbe0eca671a20351b90b605618967311a68e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/scene.usda",
+      "bytes": 11951,
+      "sha256": "c3694c408afeccd076df50a4aef3862e830d67e7c4542be2135be44b10339774"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_1hrortrj/warmup.png",
+      "bytes": 8174,
+      "sha256": "70fae49885cc6b65803a55e9e85faa6ee902be16e04fd82eb19cfd6373d3a418"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "f12d2eb21ce3d2678c2126eace913568e5c1ef49fa6821fe0d4a0488e2673c3c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/fixture.json",
+      "bytes": 1598,
+      "sha256": "adb37ec9fe2eb19bc00ca47abe67b7246c46627bc1fd41b60f60e5c936332de3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/hdr.exr",
+      "bytes": 38114,
+      "sha256": "ca2c18900de2519944fd4aa553ec22c5d7427c1d7d54f3bffdb16d8e566f1a01"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/hdr.npz",
+      "bytes": 45619,
+      "sha256": "a7c53b58fd048ff1328f3e8132c670e0f3dbac4710c47b82bed5a90375240cc5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "24fee72b012b1c7b88609200aca86f30ef7d2d56a9b02b8c312ac40a3ebb993b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/metadata.json",
+      "bytes": 11077,
+      "sha256": "b63ddba201bf643a71578e0bfb774a23c76f79cc577241801e95bfc89919be9b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/rgb.png",
+      "bytes": 8573,
+      "sha256": "82214308e3867f6ff1ae98a55e1001ecb5edebe202bbd47e759529a9f2f6d613"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/scene.usda",
+      "bytes": 11857,
+      "sha256": "591e6c4fddccb216b65e9a5dbad646fc3ca967b26086310d96958100de39874f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_2o3jqtyv/warmup.png",
+      "bytes": 8524,
+      "sha256": "0c03d2ab925b438465470d6363ff10821797589fb232069c878325f75d5130c1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/effective_settings.json",
+      "bytes": 51335,
+      "sha256": "60211e8ab188f909bbc311e6d0c36f3f6d9c309f4dc66e08d6e13eb0cff27409"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/hdr.exr",
+      "bytes": 39109,
+      "sha256": "83845873a95592cf9c4326023ee400e30d5bd5a034aef5fbc6b39ba79864e5f6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/hdr.npz",
+      "bytes": 46308,
+      "sha256": "2f32b6866588e79e1c9b84be923288421e5d9bbe243f59d2b36cd697ac562a35"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/hdr_buffer.json",
+      "bytes": 234,
+      "sha256": "ca56cddb6a4efcc63b19d59e61ca140c7866b1d6304a2004aeb1f211dceb2c52"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/metadata.json",
+      "bytes": 10837,
+      "sha256": "0328c0c66203fa45b9867ec0492548b344fd5a3e162baa625665c4af58614d75"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/rgb.png",
+      "bytes": 8610,
+      "sha256": "2ae19c3f4d8d2defbe7f161bf1fb713abec91f5efc8e43f8b4a0d704c7481c1e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/scene.usda",
+      "bytes": 11828,
+      "sha256": "9742f9a1b81943a6c95ec21e5b3f975edbc1abe47fac06f910016412c434e8ad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3n8l1_m2/warmup.png",
+      "bytes": 8610,
+      "sha256": "73172587d6a677dfb2b744dd0003cdbb2e74683b437fa41c4242cd931b070a19"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/fixture.json",
+      "bytes": 1598,
+      "sha256": "83c70676cb657b884c3ebc2c39507ae173c67f63dbdd80747b7d72149c69386f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/hdr.exr",
+      "bytes": 686520,
+      "sha256": "7ac4c417332c097df984bc670bd342e04dca66829f52af510afdc579e1be459b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/hdr.npz",
+      "bytes": 1292823,
+      "sha256": "42bba19dce115441ebc22f188da48d7b0fc9a79fd968068a2f34596dd2b65368"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/hdr_buffer.json",
+      "bytes": 235,
+      "sha256": "ec641056ad695b4d34c970bca4bdfdb07559b325596cead2b45f7d664b5f9da4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/metadata.json",
+      "bytes": 11263,
+      "sha256": "814abafcede747da2a9ba25661ed138c615b11f65e55653dee9fee0c78b43191"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/rgb.png",
+      "bytes": 146955,
+      "sha256": "95d338eeca5317f9ae77cedd385dedea13ce03b87012be0244640d5100673331"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/scene.usda",
+      "bytes": 11966,
+      "sha256": "30a1f34b6d6dad82112267bc199f3d248bd8f3e06a75b9ad92598eeef07b14de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_3q1akv5n/warmup.png",
+      "bytes": 147643,
+      "sha256": "4e13e46158fa8189c30f5680563979e219a260a8f4b1cf6abb575a2b72ed4243"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/fixture.json",
+      "bytes": 1588,
+      "sha256": "44caf46ae26ab53a6469b475f4e1b7cae2639e2b3a1741b0c4aa5939879d1b52"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/hdr.exr",
+      "bytes": 213969,
+      "sha256": "2d7daf2dbd53a0b998ff9782c5023d6e9107b141f7f0cbcf03863d9a0dc24afc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/hdr.npz",
+      "bytes": 424067,
+      "sha256": "5e7a47c4537eac1c71d72ab9703b856480d007dc1a463079173a6c6ca3293d10"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "e037dd3cf60660e5db925fa0d3e9a8b20f10b4b5d54a1dc11a0494e4c01eecd2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/metadata.json",
+      "bytes": 11252,
+      "sha256": "269060d07ba8cf6734e1ba384dea9e206f04346ff120496dc23109d0bad1abe4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/rgb.png",
+      "bytes": 8163,
+      "sha256": "e305ecf1ff4cdd023948df4210385eedc1eafd2f0931d1aef09027f2d225905f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/scene.usda",
+      "bytes": 11960,
+      "sha256": "7bf086a160ab897dd355f8be90fed89a197142509f0f284618154fadd1b1b223"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_45e_iws0/warmup.png",
+      "bytes": 8164,
+      "sha256": "0ffd052a514576690f79f685111cfe3fb5109aa5c551f8eacc96c8ad7f9a7312"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/fixture.json",
+      "bytes": 1598,
+      "sha256": "8fd33ebd4148b3262d447cc752939030c923b2458557d37324660499bc60755d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/hdr.exr",
+      "bytes": 676752,
+      "sha256": "fc3bd3ae944ba2d728796826c15d66e0b703e379f3753fedf59cd88eef4f43e0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/hdr.npz",
+      "bytes": 1309623,
+      "sha256": "8dbc94fd245b7dc27fb1853510ed32ad01c7845a1457bc2676cef443e13ed03b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/hdr_buffer.json",
+      "bytes": 232,
+      "sha256": "927ad9f8994befa230ad8c4b0e4f95e3e74bb8c4155489e5fba525c707a9ea47"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/metadata.json",
+      "bytes": 11051,
+      "sha256": "10fca6aef9ce9dbf2065384c155b55809d2aec6a808280d6626fe6d49803f421"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/rgb.png",
+      "bytes": 135403,
+      "sha256": "241ae9afa1a8609843fe8f9c4cee8ad0c85152833311ef140a56b0709eed94c9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/scene.usda",
+      "bytes": 11966,
+      "sha256": "53ceba9afc13c823cf623522dd1d771b75142a986d8341708f11161f3ca7829a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4lurc9jj/warmup.png",
+      "bytes": 135727,
+      "sha256": "789998886b7d8058d3b156d3b848221860c13d388cc119a08753b23df37dfeb9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "f12d2eb21ce3d2678c2126eace913568e5c1ef49fa6821fe0d4a0488e2673c3c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/fixture.json",
+      "bytes": 1583,
+      "sha256": "84da8b54cfea5050dbb18e68f547d5dd67cf4565c2a5eb85b464baf14c4847b9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/hdr.exr",
+      "bytes": 39004,
+      "sha256": "46d113c35a9c39dd0cedfa5df8da8507eecb4d4a5fe9380452c52eb6512556ea"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/hdr.npz",
+      "bytes": 43050,
+      "sha256": "d0d1dbec4a8b47ddbf9bf962813c1106ddeba3fba17f28c3a51a979e732472ac"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "adf374413816abb3e2736151885827554cd8227a1253a5e01d065beed1ab7530"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/metadata.json",
+      "bytes": 11050,
+      "sha256": "c38ca1ca7d557347140ed74dfcc7a1543cdc537d96ebbca3ac3456f0dc858fb2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/rgb.png",
+      "bytes": 8400,
+      "sha256": "650afba81c78e3e3bb9ee8949dddd4ff4ab0a980280b30c02f5b2cd24590fc8c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/scene.usda",
+      "bytes": 11842,
+      "sha256": "9bf63755e56014f4c6d710c6997021408f0aaf5db78880bedf2944115ef4a684"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_4vzw0gqe/warmup.png",
+      "bytes": 8396,
+      "sha256": "bee609e423a208c4e4e29edc781ab16d7567d48b81b14431dcd75364ded9d211"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/effective_settings.json",
+      "bytes": 51355,
+      "sha256": "fec5d380a2a3d4ce6767c3405b7f95439799f2e4fad984e94a2548d2ebec1862"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/fixture.json",
+      "bytes": 1612,
+      "sha256": "6bdc4b4cb4210382241b1678e0ca90f9906594a2544ed579f8a088ffcd0fab9a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/hdr.exr",
+      "bytes": 221892,
+      "sha256": "c30d5966d5d528518b4d6b59e437f1dbdcb9ebcb7f38dedeca65a24c066f9021"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/hdr.npz",
+      "bytes": 426762,
+      "sha256": "fed762e28ce421117613c81616ae8ee02c9efa14f91fc8c162d0dae515aafb18"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "6393a9576edc9836c7b32a020ed3dbb37bf06001a273d93fbf85a92e9872204b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/metadata.json",
+      "bytes": 11031,
+      "sha256": "14f45786549811f39d876bdf79f58015879e81e19f4974c04dd2344b9f2b24ad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/rgb.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/scene.usda",
+      "bytes": 11903,
+      "sha256": "33e08323a0ed11ea283c03724f6adb275bfd807b7d0392978fd7e4c3f08deea5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_6ztf97v7/warmup.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "f12d2eb21ce3d2678c2126eace913568e5c1ef49fa6821fe0d4a0488e2673c3c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/fixture.json",
+      "bytes": 1589,
+      "sha256": "16b430eab150131c31593881e0b8e78746154d777b0fa7e6230839195de3c988"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/hdr.exr",
+      "bytes": 39584,
+      "sha256": "4fe34c7792609258872443d3bdc64d52b9aaa2d35ac259045833954e50f65db9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/hdr.npz",
+      "bytes": 46860,
+      "sha256": "cc20bfe549e4a4ea69e3b1837b7c440c4e06eb03412e3e3d6677f9f712c3e095"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "3b9749f466ca8da559b458a5586e497015b4d1fe25424d43162607c4a9fa53de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/metadata.json",
+      "bytes": 11061,
+      "sha256": "695dc7cc8f2d03b62ac5b2cf3aded401ab871c575fe6ff6812d94f8fe1d821ae"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/rgb.png",
+      "bytes": 8547,
+      "sha256": "66fbc1e70b46fa0e879f756304762e050d0a8e891e9f027505deafda40aa769f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/scene.usda",
+      "bytes": 11848,
+      "sha256": "d928ee9addeb2d56d440a1c65cf685d87b2bd996a6d3d6f10393b85b73140503"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_71g3w7o_/warmup.png",
+      "bytes": 8575,
+      "sha256": "79b18f6f5d1e9776b7735f07192916bd024363302b112f1b58d3014c5f062edf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/fixture.json",
+      "bytes": 1598,
+      "sha256": "a86ffc4cb4eec21e8da80acef4b03f33f7fe33751a0fbb548beaa700ad8b3682"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/hdr.exr",
+      "bytes": 39769,
+      "sha256": "4147321bd003f49a4b6f5636b667cb0e339e0990f4dec6deec4017709aabf88c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/hdr.npz",
+      "bytes": 48623,
+      "sha256": "f975c78e485f05490403bfc817caa5159702e488cf78e54acfe00d2973004285"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "c30f72ee993e8fdfa3992e954ed8ca66269e3fecbbc909c5c0042964949c712b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/metadata.json",
+      "bytes": 10867,
+      "sha256": "f9a2c8e48a63d9b0217838ea3147d6914560ad3103c17801ebc34a611417968f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/rgb.png",
+      "bytes": 9007,
+      "sha256": "0e9c004689da176a37b79a8fc65e3b531799edd213f4a2fab45101e0dd3fafea"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/scene.usda",
+      "bytes": 11857,
+      "sha256": "55cb6b10f4389291f127f766c5a5ede32f5bff5c960a5bc0845c53851c0c2e92"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8nt9_gwm/warmup.png",
+      "bytes": 8942,
+      "sha256": "2bcb9174ee7dfb23f3b04c3eef79b96a73f660a937640f0902b2ae2a3407bc51"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/fixture.json",
+      "bytes": 1589,
+      "sha256": "58fb579b22bf85bdbafcaab8b1f511cf143f49aec302abca9746129b34fcc24c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/hdr.exr",
+      "bytes": 202790,
+      "sha256": "7a464f5cb5751dbf9539b9228ece3fa919abe0ae8ef13a59e129328d72e2563d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/hdr.npz",
+      "bytes": 431258,
+      "sha256": "d846b061128df33d40170526b068eabe395ff8298733b18e3817617eb03fd3d6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "87a45fb17315b155050d72dbf391c1569e45cb739e9b267f940e57f61058a025"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/metadata.json",
+      "bytes": 11043,
+      "sha256": "246929f5be61b56fff05dd387fc3cf4d467b22443ca8cff3276150665b5f8d0b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/rgb.png",
+      "bytes": 8128,
+      "sha256": "33afdb2e1e7d0400f65d4b1c82880841967f8823557ffee182a9c08319d283a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/scene.usda",
+      "bytes": 11957,
+      "sha256": "3c4be9964d038f5a0e33239bda611c2fb8a01b8069ce8ad558d125971faf8b8e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_8rp0we6_/warmup.png",
+      "bytes": 8128,
+      "sha256": "33afdb2e1e7d0400f65d4b1c82880841967f8823557ffee182a9c08319d283a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/fixture.json",
+      "bytes": 1598,
+      "sha256": "a86ffc4cb4eec21e8da80acef4b03f33f7fe33751a0fbb548beaa700ad8b3682"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/hdr.exr",
+      "bytes": 640618,
+      "sha256": "212e22877e201541faaebc3aab232fa3445ca448dd9ff20287179450b3804182"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/hdr.npz",
+      "bytes": 1305317,
+      "sha256": "18e04f732c730e845389dd2f18d8e67e4ea13cb55463b97c6450b167e84e3689"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/hdr_buffer.json",
+      "bytes": 232,
+      "sha256": "98a3b403acc34d934dde9d6a90e2e4c87cc39315669da2d86c92a01c781ec33c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/metadata.json",
+      "bytes": 11052,
+      "sha256": "3ce60e399d1fcbe14008863cfd2d4632f2a0b727530b853a43297df482be901c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/rgb.png",
+      "bytes": 92204,
+      "sha256": "631664fdca4439efe381a8266a1a6e9a6faf2b2e6ecec3faaa2b6f931a05bedd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/scene.usda",
+      "bytes": 11966,
+      "sha256": "8f61c27ab3fb5592c42b80d182f1f1782c938b0589f9f992c9d8e3db7aab6502"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_90yjhjgr/warmup.png",
+      "bytes": 92182,
+      "sha256": "b6a172be2e429208e658aa705072306fb90db163b0ffbea668086220be8f3c6d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/fixture.json",
+      "bytes": 1588,
+      "sha256": "8a022b12a872cddcf4c50b9f3406a6e97c24330ecf48d31958b32301bfec9a71"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/hdr.exr",
+      "bytes": 214771,
+      "sha256": "a75a5a1dba586ba4bdafea9eab5db7a407363d3b834924ed7bbcb74874c32dd2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/hdr.npz",
+      "bytes": 430974,
+      "sha256": "82cf2281786dce1082de500f0fbc0a5fc23978ac5e4d3e2f2750c367cc718a13"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "4d63cdac8cc9b19695077e20584b02783a3cc164fa0216aaf225b1034c6e0bb6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/metadata.json",
+      "bytes": 11250,
+      "sha256": "39c2e3e300f7c240127704f34aa7f16a8747b98a6b34ec8cfcab92756e808b1c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/rgb.png",
+      "bytes": 8168,
+      "sha256": "0fc4223c9e38ff79e0a81e67145c3aa4114646733a5267821c004c10ee212d96"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/scene.usda",
+      "bytes": 11956,
+      "sha256": "3f8715a2850625eb8781c74e3d090bc73aa23391f461cbc6ddeca2cb34800954"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir__v39cb6b/warmup.png",
+      "bytes": 8168,
+      "sha256": "af475bc5d29e6da9a9864280c0e50e14c8d9e91a2184f52a3df4f7abc46ebecb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/effective_settings.json",
+      "bytes": 51338,
+      "sha256": "183f5df4a2f04bebfaece70fdb15125f11f63b9a0d6bb2a728b35994f721f9e3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/hdr.exr",
+      "bytes": 190101,
+      "sha256": "7180dae350228312a1e781995fa2525aa53d289446ce8234dfa8e7a94eabd2fc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/hdr.npz",
+      "bytes": 395530,
+      "sha256": "03b6b63f4a042742cd40b07f6cf99c9e9e0976ad974cb7d0bf26e8357c076f5b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/hdr_buffer.json",
+      "bytes": 240,
+      "sha256": "5395be2f2bd3f5194f5321814eab93787f3114aca94bee448908f039a40221fc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/metadata.json",
+      "bytes": 10875,
+      "sha256": "4fa07e704379991b18317245641721445daf3f51c49b17b35ecfd98cf2ec1153"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/rgb.png",
+      "bytes": 8289,
+      "sha256": "0c1c890af54edf7d661afac960b12e84beca77b61cf8bb50bee880a54901d006"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/scene.usda",
+      "bytes": 11831,
+      "sha256": "4289b9a2c3d8625c7c8f93193288363edce6b8ace5342371648595bf6eafe285"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_a90bihb7/warmup.png",
+      "bytes": 8282,
+      "sha256": "e69e58862f0d9efac02d5b8b77cbec4a73953fb630207c039d09450197048a7b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/hdr.exr",
+      "bytes": 217654,
+      "sha256": "a3c74bb3628bf10ad61e122ddbddd4a5d34c552d358874a82ac86dc8905f760a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/hdr.npz",
+      "bytes": 414902,
+      "sha256": "9628de7d93293bc43149edd40713b1230faba737a5b511fe01c6c0dcd18a9396"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "b83f77d9ce86c05156700c3912fd1b8b2442145dd26dbcbf1393efc228242dad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/metadata.json",
+      "bytes": 11032,
+      "sha256": "e30d4d7312c4e0ff440ee14508f0be8e2260abdfc8dcefb22c1cf8b8b7eb879f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/rgb.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/scene.usda",
+      "bytes": 11951,
+      "sha256": "5563f505b2eacda09da138fd2ac44110435674c870c0c2070c217f800cb5ad72"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_au3rnwfl/warmup.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/fixture.json",
+      "bytes": 1588,
+      "sha256": "4017cff6b283c262b695e29ef7eb6fbdfce39c4f5182f604dfeac3b7a67c1b6b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/hdr.exr",
+      "bytes": 219414,
+      "sha256": "38d52743df3339c9c4faa40c0d4a5c9a7ceb3c2cf906577bb500c4a78708a349"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/hdr.npz",
+      "bytes": 411395,
+      "sha256": "9ec0843901f7d4de9a032285916574fb6ff82f328b0dac4b02e974f04e6279f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "34dc5d7cd3f044e35ca2137d31acb58f508b6dbb642365ebb21bc31bace70138"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/metadata.json",
+      "bytes": 11040,
+      "sha256": "936a4d322ea9705c7ff624cd2e263fe677aa1f8a2b4f4a0fd10c222f6a9e7e8c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/rgb.png",
+      "bytes": 8175,
+      "sha256": "5c031f74b5736c9d7e2ce34c66d425e5f56ae8c1d1c3889316dd7ee3d09beb94"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/scene.usda",
+      "bytes": 11956,
+      "sha256": "cd54b4b2036e9dfbbf38d7faae3fb605c7a87e93e043fb79a214e59ee1e81ac5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_aw2rqm59/warmup.png",
+      "bytes": 8174,
+      "sha256": "fa55859ef9192cc17df10b8e39c91323dfea77dfa7704ad992e977b60d48a9c9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/fixture.json",
+      "bytes": 1588,
+      "sha256": "4017cff6b283c262b695e29ef7eb6fbdfce39c4f5182f604dfeac3b7a67c1b6b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/hdr.exr",
+      "bytes": 40273,
+      "sha256": "eff3f91a3aa1d759fbb877a0f495b323d67c71aaae3d0554342890c9fffe25e5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/hdr.npz",
+      "bytes": 49386,
+      "sha256": "5c596eb4d904c16fde63da0eb77dbe4b63534e32c44cedccb8df20f52fa864af"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/hdr_buffer.json",
+      "bytes": 233,
+      "sha256": "942d25caab066c85608c35e7e0ce581686019c8c5a4c2e9c5797922109d0a206"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/metadata.json",
+      "bytes": 10846,
+      "sha256": "859e933b5d6d31d079a66061163907b8a88a8769235b29798b0d3fdf7477ba7e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/rgb.png",
+      "bytes": 8996,
+      "sha256": "04d9cd3ea8fe6587902935a408086e356e3f1739ff07a2b49564950128ecb4cb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/scene.usda",
+      "bytes": 11847,
+      "sha256": "69e437d52bbe6fad57ef65af6833db0a5fa9383f2d37a946c49db49185f24e63"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_csio1qwu/warmup.png",
+      "bytes": 8971,
+      "sha256": "cbfe913e41db40a96863cd99dfd61e48498b4c5ee22ac4eba5b739541ea377d3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/fixture.json",
+      "bytes": 1589,
+      "sha256": "97c294ef76874572b1a778d131cbfa6cfb07f59637e16d70fdba525f2917b3de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/hdr.exr",
+      "bytes": 40003,
+      "sha256": "52be8244ea677545a3379a48b11b430242ec29e2e88a4d6e9d43b9f3e6518ce6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/hdr.npz",
+      "bytes": 47120,
+      "sha256": "0c6cb48a336945c347b55293ff2e43debc73503a4588ce1a7e1739230ff895b8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/hdr_buffer.json",
+      "bytes": 231,
+      "sha256": "fceea706c09e86a8f34156825d68103378b94b570830e9a1bd97b1750f431e8c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/metadata.json",
+      "bytes": 10846,
+      "sha256": "f73e960b512994dcb9b9d94784fdfe2290d2c6fbd3b95038793c613b0a12497c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/rgb.png",
+      "bytes": 8979,
+      "sha256": "990576967b1151ea0fea74eecf7fdf9771824aa9de1cd5e28be146fa906996d3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/scene.usda",
+      "bytes": 11848,
+      "sha256": "09210e0b4b462d22a9abe24b727ba183a936af5641f4a66e14112bb3ad011320"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd6gk30o/warmup.png",
+      "bytes": 8983,
+      "sha256": "151b2c2603084c6f8ea6e757a896dfc0acf157eed1d87afa69d0ae4bda172d7c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/fixture.json",
+      "bytes": 1589,
+      "sha256": "31c4ff4f62606f7ee7b6a6a56e01d33edab017cbdd9b1fbad88a653b56ba7694"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/hdr.exr",
+      "bytes": 215228,
+      "sha256": "41adfdbb353fe90782cacb0d76abf7aed7aee1198e24eea5250b2c57c0499eff"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/hdr.npz",
+      "bytes": 434429,
+      "sha256": "9447417c00d7cd3851b48097d4172b4cd92b7600b95f9f1ec80070fceffdaf2f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/hdr_buffer.json",
+      "bytes": 235,
+      "sha256": "0ad3caa80cc2c09443c0d57f5df5edd378e9c948af24f623e2d6465192de80fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/metadata.json",
+      "bytes": 11253,
+      "sha256": "a7f0625e2517c1e7b6d5801d3158d53d9582e0e4c828d94d68adbffa4ddc11ed"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/rgb.png",
+      "bytes": 8174,
+      "sha256": "765cbdd3e8b42efc432fda29d6130626e472ebc11a2b3c9af6679f4d1a5cc4c5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/scene.usda",
+      "bytes": 11961,
+      "sha256": "8adb072bb8e08dd0f5b1821f0d10e3c456d860c516d5368e1fe05e71a173b9b0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_dd92mc3r/warmup.png",
+      "bytes": 8170,
+      "sha256": "673211810839f515dd8912374a18306ba20c77df7f0e4de87fcc76b9f7a576a8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "d9bae78757290ea9e7e493e7c2dae3764dea6d78edc5ba1ae42cf50308c663dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/fixture.json",
+      "bytes": 1589,
+      "sha256": "92b1e60c79718f10d9a7517ae09c661d76a5fc0e864e58451e718cdca92a0ac5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/hdr.exr",
+      "bytes": 39767,
+      "sha256": "b34dffdf5b833ab06cd5d1df73a5c8902e9e51e909e367f32494eb3659595ed4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/hdr.npz",
+      "bytes": 50069,
+      "sha256": "9ad9337e3b0b822ebe77e32022fbc757ad0a9abff4a71a47756985640de338d0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/hdr_buffer.json",
+      "bytes": 234,
+      "sha256": "81941307df72695b8408361b3f5ed912782eda25a9d9c441325234c1839e5288"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/metadata.json",
+      "bytes": 11061,
+      "sha256": "f1b772818e95831e5051dfe0a2a648fc4711ac92078a0cf66c25f04d65657530"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/rgb.png",
+      "bytes": 8733,
+      "sha256": "7406eeab24edc36f56e77e295f2df5600bad0ebb7b76be37c3c8e41d90bd9dd6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/scene.usda",
+      "bytes": 11852,
+      "sha256": "98594a6b37e18abf9bca3d7de06955a141d5c6436746bd8b1dc5cb7c70e5b9c2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_elei6t15/warmup.png",
+      "bytes": 8730,
+      "sha256": "8badaa0fa0a641a20eb248cf8c63df9d167baa871d25f32751ea46e834604f71"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/fixture.json",
+      "bytes": 1589,
+      "sha256": "16b430eab150131c31593881e0b8e78746154d777b0fa7e6230839195de3c988"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/hdr.exr",
+      "bytes": 213303,
+      "sha256": "2ce9f9b90e2f40f79c4b06b14a7b365bf6a38a0c68dd9a61d5f51bc9c0d5e20e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/hdr.npz",
+      "bytes": 417570,
+      "sha256": "8ca685614334184cfeb06d22e2944ca84bc897bc53470d0fa3226cefeb095be4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "8e66b401d672b2dd25ac5223a0aabb76f9359e06d1eaadcb4e9824e4f0905842"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/metadata.json",
+      "bytes": 11252,
+      "sha256": "1fafe7951e06b044b68176738a6a452c0a9076409a1ff5b8cd53095af9a1764a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/rgb.png",
+      "bytes": 8168,
+      "sha256": "0fc4223c9e38ff79e0a81e67145c3aa4114646733a5267821c004c10ee212d96"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/scene.usda",
+      "bytes": 11957,
+      "sha256": "695e57dcd122f4a4f3401bedb3cf6d234c05a221a1faa65503730947ea51e226"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ev73cqyn/warmup.png",
+      "bytes": 8168,
+      "sha256": "616337f89c038975aa150e71221ee748cc62b7639f6d298105700a3cebb7d90f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/fixture.json",
+      "bytes": 1589,
+      "sha256": "97c294ef76874572b1a778d131cbfa6cfb07f59637e16d70fdba525f2917b3de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/hdr.exr",
+      "bytes": 220692,
+      "sha256": "84ea92e57bea0c944b886ae59473b0ce0258d4fd6bb56a73b75f0f344190041b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/hdr.npz",
+      "bytes": 434648,
+      "sha256": "0d1162ca3734fa8ba0c94d007d29f1307e8151c2b579da528b92ad73b3632837"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/hdr_buffer.json",
+      "bytes": 235,
+      "sha256": "0240e8ad9f489f4bf42e9c4646100f796f2f3b37b8595bccead704ff6a63adc5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/metadata.json",
+      "bytes": 11041,
+      "sha256": "008e281b3a5a9942162bc4b7431157d58c9c9148fb2f0010a5c5d70f45287de5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/rgb.png",
+      "bytes": 8174,
+      "sha256": "24e38d868180b64427369d85f43dc5607eb64ff008c67f3a2089eaeb7d747094"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/scene.usda",
+      "bytes": 11957,
+      "sha256": "9fecec83c1a9fb8013f87d71ad7c8609c8bdac689e59bf6f4a74346e58b6078e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_f8s7sc11/warmup.png",
+      "bytes": 8175,
+      "sha256": "6be7e8dd30cc063aa01d247c0cae82eb10a1bbcb13954784b387c53cb58e1517"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/fixture.json",
+      "bytes": 1583,
+      "sha256": "c71ee4cdab460f71e41aabcee9db9dd0aae050358094738145e97eeef44259e9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/hdr.exr",
+      "bytes": 223687,
+      "sha256": "532de43491392c0338eec31b5f405b7f0a0947b0df7d315c92e4447106dc04fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/hdr.npz",
+      "bytes": 410155,
+      "sha256": "3d127e24823ea160947f8ca658d8347d5a3f66ca2c6638b2d2ba9c7e90511107"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "52323dc3f1514712eda95c2dc5aa74c8aba206f732fdf4f36f515fc64f260b2a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/metadata.json",
+      "bytes": 11244,
+      "sha256": "fbb3e55dc94e571e2dfd2af48958685646b03c78e5b9b540caa6bdad75390f7b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/rgb.png",
+      "bytes": 8139,
+      "sha256": "cb274d07118d83efccd0d277d0f5a86173fb989fc3b9de34a5b17f0b98048d5a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/scene.usda",
+      "bytes": 11955,
+      "sha256": "3bc4046e323ab36448a887de4a8432666c90d1bdfe4f1cb8380bfadde35b7fc9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_gtwyu7df/warmup.png",
+      "bytes": 8139,
+      "sha256": "cb274d07118d83efccd0d277d0f5a86173fb989fc3b9de34a5b17f0b98048d5a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/fixture.json",
+      "bytes": 1598,
+      "sha256": "a86ffc4cb4eec21e8da80acef4b03f33f7fe33751a0fbb548beaa700ad8b3682"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/hdr.exr",
+      "bytes": 39769,
+      "sha256": "f061b77a2c5831ca6a4c03f0458d604c8159279cc5965edbaee6d019480fe5f7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/hdr.npz",
+      "bytes": 48623,
+      "sha256": "f975c78e485f05490403bfc817caa5159702e488cf78e54acfe00d2973004285"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "c30f72ee993e8fdfa3992e954ed8ca66269e3fecbbc909c5c0042964949c712b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/metadata.json",
+      "bytes": 10867,
+      "sha256": "7d49244fbe52b97fe66de0ae5650613a3efd0def4d3006df33b3892c3a97cfbf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/rgb.png",
+      "bytes": 9007,
+      "sha256": "0e9c004689da176a37b79a8fc65e3b531799edd213f4a2fab45101e0dd3fafea"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/scene.usda",
+      "bytes": 11857,
+      "sha256": "0725f8904b7b98ee32b5adf8d2adff1732eb9caba61e6008888be79c4815b041"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_h1q4e0gq/warmup.png",
+      "bytes": 8942,
+      "sha256": "2bcb9174ee7dfb23f3b04c3eef79b96a73f660a937640f0902b2ae2a3407bc51"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "d9bae78757290ea9e7e493e7c2dae3764dea6d78edc5ba1ae42cf50308c663dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/fixture.json",
+      "bytes": 1589,
+      "sha256": "31c4ff4f62606f7ee7b6a6a56e01d33edab017cbdd9b1fbad88a653b56ba7694"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/hdr.exr",
+      "bytes": 40812,
+      "sha256": "c5f3ffe355db8503496505a7163b243613a16f6fbeeab14ed2c5b62173b97393"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/hdr.npz",
+      "bytes": 48056,
+      "sha256": "5df11d6081ab450d8730803303989b48be7820b31022d9bd32a9160e78493ce0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "a5cd9136c7f9bf219ebdc23c0df76f9d2cf865ba1503a485074830f778186d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/metadata.json",
+      "bytes": 11063,
+      "sha256": "398a194582c54bfce752c45e27051b6268a9e8b7203ca269956bd548051c87d5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/rgb.png",
+      "bytes": 8778,
+      "sha256": "02c0d9addeac40c290fd2687d405208a248d2cf209b27e40870b7b6d6d714a8a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/scene.usda",
+      "bytes": 11852,
+      "sha256": "f2751a5a0b3a1b24f03a059288af7249e3d0ffff0a944b3534c531e6ccc1c7a8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_jh3f7b9y/warmup.png",
+      "bytes": 8764,
+      "sha256": "9e39303590347410968aa92da6772aff2dd3cc63741eb1fe4d4a3896937550e8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/effective_settings.json",
+      "bytes": 51355,
+      "sha256": "fec5d380a2a3d4ce6767c3405b7f95439799f2e4fad984e94a2548d2ebec1862"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/fixture.json",
+      "bytes": 1616,
+      "sha256": "a65fb208e44d0ae22fb8c9d6427b8002ea0f41e5b2f64adf0f40ea1d74039b5d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/hdr.exr",
+      "bytes": 216803,
+      "sha256": "fd7c10104face05382959fd0de35052fa60806d3d1e0ba041d07deba84f2e7f1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/hdr.npz",
+      "bytes": 426478,
+      "sha256": "0ec627a5cb431166e3a5e9b7aeab8c74bd66a285a9c86b4c4907971ee98aec31"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "3dc93b468c5074679059a3e297803008de27ab551cd425565a68de690323b0c8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/metadata.json",
+      "bytes": 11038,
+      "sha256": "709e00315705ae4f762d9fd8242a1f2951fad4b3bf5605cd92b3f3e6b2f2de1c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/rgb.png",
+      "bytes": 8174,
+      "sha256": "19f456bcd5289a2b1451cdab95da74f3bae19ed608120f7ef17f15b35d9ba1f1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/scene.usda",
+      "bytes": 11907,
+      "sha256": "01e20cb4f165896e24dcfe82962b2e53d4afd3024ab297c4f9e18cad45eac975"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/warmup.png",
+      "bytes": 8171,
+      "sha256": "77d20482896b9c9c58523c8429ee60a8411c5e6be58959c798fca2793ad3718e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/effective_settings.json",
+      "bytes": 51355,
+      "sha256": "fec5d380a2a3d4ce6767c3405b7f95439799f2e4fad984e94a2548d2ebec1862"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/fixture.json",
+      "bytes": 1618,
+      "sha256": "c559542ebeca17736c7710f5dcbe42771e5f4f95b0ffb657d9eea80ff6d61e29"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/hdr.exr",
+      "bytes": 228638,
+      "sha256": "9acebb88a0f1d68de92225975bc37d1727c4fa5c94c042a1e45b1bd3dd64d895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/hdr.npz",
+      "bytes": 425320,
+      "sha256": "eae75f97c90d49cbf407e39f8114ee2faba0f1f27aaf2df0820009888c9f7a7f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "3d3f0920e497726bd1f4f14622e85c211a41ae5fa62ba7633b92d84c30562fcc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/metadata.json",
+      "bytes": 11042,
+      "sha256": "58957918d3e92cfddc04ba8665e05a8e455870fba0efc909d87d34121ccc3b29"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/rgb.png",
+      "bytes": 8128,
+      "sha256": "33afdb2e1e7d0400f65d4b1c82880841967f8823557ffee182a9c08319d283a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/scene.usda",
+      "bytes": 11909,
+      "sha256": "ad52b6b0762e3213733b0aea0a91b4ad99b74e3ff5e26bd131d06bcc27b6c088"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/warmup.png",
+      "bytes": 8128,
+      "sha256": "33afdb2e1e7d0400f65d4b1c82880841967f8823557ffee182a9c08319d283a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/effective_settings.json",
+      "bytes": 51366,
+      "sha256": "0a019b073c644ad3dccad8957cb3c10aa9d22e1695f093bb3840541f953fb8bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/fixture.json",
+      "bytes": 1618,
+      "sha256": "c559542ebeca17736c7710f5dcbe42771e5f4f95b0ffb657d9eea80ff6d61e29"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/hdr.exr",
+      "bytes": 39713,
+      "sha256": "14a3fd54278d2eeb72fbd4c5abb304e0dc6f8e4213eba7007852468c864432ad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/hdr.npz",
+      "bytes": 45352,
+      "sha256": "49f9227b0633302f9bba16629a01cf84cff00d493042ffc540734c6d6f17bc99"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/hdr_buffer.json",
+      "bytes": 234,
+      "sha256": "37f03a9f2871be4a7419cf8380b5054dfb346e0315e036adfaf0ce171690125a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/metadata.json",
+      "bytes": 10845,
+      "sha256": "ea1f1c635accbdb0a9f956cb4c347cc513c8fd2ab3f57e9798f95ce4637ebeb0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/rgb.png",
+      "bytes": 8858,
+      "sha256": "373d438bae11dbbb4f8d4f9c4f79ec7c2313e4a29899e797395500e153a4ac54"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/scene.usda",
+      "bytes": 11802,
+      "sha256": "ef7ae5e1537c5d6f6e855c0c7d3861faed25e0cefa7e118d5f186aae9df255a3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_keobk0uf/warmup.png",
+      "bytes": 8822,
+      "sha256": "febe351ea98de4b9ab6a059cd184c3fcb3417fb7b9587642d0a8c51e06cdb737"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "d9bae78757290ea9e7e493e7c2dae3764dea6d78edc5ba1ae42cf50308c663dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/fixture.json",
+      "bytes": 1583,
+      "sha256": "c71ee4cdab460f71e41aabcee9db9dd0aae050358094738145e97eeef44259e9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/hdr.exr",
+      "bytes": 40552,
+      "sha256": "d5d0c81f66066ea9546f9493c46460d8fb1aef57f7a9a8f2ad3fd88f870e6c67"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/hdr.npz",
+      "bytes": 49010,
+      "sha256": "f6a5385d96bba87ae134d112981356eb09b63486743a4ccafa553af6006d145b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "4264413968785b0784fa0053266fbf6065af949842b6e546f5cd59c5f7f7d326"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/metadata.json",
+      "bytes": 11054,
+      "sha256": "ff354188fe9908df3cb4156001d98d5407e66a8b7414df98de51e4c832bf5ad8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/rgb.png",
+      "bytes": 8681,
+      "sha256": "ec47fe2ef0ca4367419d0e19bdfda520c79fb5ff36f4cef3951ba75866f496cf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/scene.usda",
+      "bytes": 11846,
+      "sha256": "206dc5c73bf52e566cfe32420aa55ba47c1283d97898582b157a472965181f56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kixcnko4/warmup.png",
+      "bytes": 8691,
+      "sha256": "ab402e68bc623b17aa574572c429293af576ff8b4668f0992fd876a0f11d947e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/effective_settings.json",
+      "bytes": 51338,
+      "sha256": "183f5df4a2f04bebfaece70fdb15125f11f63b9a0d6bb2a728b35994f721f9e3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/fixture.json",
+      "bytes": 1589,
+      "sha256": "97c294ef76874572b1a778d131cbfa6cfb07f59637e16d70fdba525f2917b3de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/hdr.exr",
+      "bytes": 200828,
+      "sha256": "bb2d4f9aa2768daa0c84fcbd63c7a3bb1c63f424da595baf02e101f987d0574a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/hdr.npz",
+      "bytes": 401124,
+      "sha256": "262a15d1401f05a9a941644fd4b949276fa4fef97a958eaea95cec0f81312857"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "cacdff8d93bd2d9cbe12175a32da9404275fff707eeec136ce9853a68ff0695a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/metadata.json",
+      "bytes": 10883,
+      "sha256": "771e4f425013701b665843ee08e86dbf8734ec86566ed1ec7a173639d1b586ef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/rgb.png",
+      "bytes": 8401,
+      "sha256": "e95b88f56960b0e022ab0084994feebfbee8290dacf76beb8dd78720b361e902"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/scene.usda",
+      "bytes": 11837,
+      "sha256": "171962977e01ac2baefb4558975ed9805995be7953ad4af6a147207fd324cb29"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l1fw4hz1/warmup.png",
+      "bytes": 8405,
+      "sha256": "19560b628021435c5a39e7b132b486ae02df3ab095d196c534c4fcdf91127953"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/effective_settings.json",
+      "bytes": 51338,
+      "sha256": "183f5df4a2f04bebfaece70fdb15125f11f63b9a0d6bb2a728b35994f721f9e3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/fixture.json",
+      "bytes": 1598,
+      "sha256": "a86ffc4cb4eec21e8da80acef4b03f33f7fe33751a0fbb548beaa700ad8b3682"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/hdr.exr",
+      "bytes": 512666,
+      "sha256": "d9d8e965d7b2901f5b24be2000455cfc8d815734c5d151f5913da908512df349"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/hdr.npz",
+      "bytes": 1024273,
+      "sha256": "1448c46646ffeac7e5d2be36973c899bf393b4b21cdb6d9389c814f5e89dacc5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "e246e6b4dce8c8daf434cfb6f022794645ff1f06cfb7ac4caab8760b914a4de8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/metadata.json",
+      "bytes": 10898,
+      "sha256": "22d458669b9ef02dfc894d898f6ac6248cb265331a3cc5fff707df299af1a28f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/rgb.png",
+      "bytes": 8551,
+      "sha256": "c2330d11d39d57647f502b14ba1b6a3cc4d67f3e86282255490be2f5d0df9ce7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/scene.usda",
+      "bytes": 11846,
+      "sha256": "6e3d9f106d5cf2e57fd011d018ec30e23d8d1704277da89eccfb721fc50078b5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_l5nmpbhc/warmup.png",
+      "bytes": 8543,
+      "sha256": "207a8432bf0139db35bbcedb2605c51db9b9ec963926f7d2c235135cdef48d24"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/hdr.exr",
+      "bytes": 213023,
+      "sha256": "6b1ff1da6fc863e1afff980e53c0f48be7550b077d8d5a062959b0faff16a3d0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/hdr.npz",
+      "bytes": 410096,
+      "sha256": "b28e59ac161888ef0d51835ba2ebab6ecfdb2dbf28306628fea5d4805a7c8b12"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "4ead8e04db3c880e63b83b859cb6f15f4de036826a57ea759a871f78eec56a48"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/metadata.json",
+      "bytes": 11032,
+      "sha256": "0c12e349bba91c6f026bb8d95065a5f71db66bd8a2edcd11a94062d181dba23d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/rgb.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/scene.usda",
+      "bytes": 11951,
+      "sha256": "40d3940cc6497abe9d353e1fde9a7366d08f62cf620fd06461f231e0f11f3247"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m52va2wo/warmup.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "f12d2eb21ce3d2678c2126eace913568e5c1ef49fa6821fe0d4a0488e2673c3c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/fixture.json",
+      "bytes": 1598,
+      "sha256": "83c70676cb657b884c3ebc2c39507ae173c67f63dbdd80747b7d72149c69386f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/hdr.exr",
+      "bytes": 39934,
+      "sha256": "6eef1ff42e9f3a8db6c8ce7da0c718c416794391c2d0d7fe381cc9ed5c8ec93a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/hdr.npz",
+      "bytes": 48092,
+      "sha256": "75bcd80b9ed44c50540bb836fb01e5607a7a52888953fe1f4597b88137945724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "1b27ce1d3b87788e7443813ad8bfc7f834cfbbfe50c3fa81d3cfc3b60657a92f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/metadata.json",
+      "bytes": 11075,
+      "sha256": "63610ee7576f2a448152da82fd4c6b3cb72d549eaf31369c82e2eb1d5e03d5e2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/rgb.png",
+      "bytes": 8558,
+      "sha256": "2ccc24d9f7aa70540d149ad01a99ef42169292194a2783b752fc643cf4fda882"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/scene.usda",
+      "bytes": 11857,
+      "sha256": "0f1cd692bafdc959d654e02cd6dbf30b5bef1c0f054fcf040cef64905e5d61e1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_m__ddrg_/warmup.png",
+      "bytes": 8570,
+      "sha256": "6484f6fc050cee73f586d1f15e7142328d57d6afbe3390e8fe1770b52f16b3bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "f12d2eb21ce3d2678c2126eace913568e5c1ef49fa6821fe0d4a0488e2673c3c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/fixture.json",
+      "bytes": 1588,
+      "sha256": "8a022b12a872cddcf4c50b9f3406a6e97c24330ecf48d31958b32301bfec9a71"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/hdr.exr",
+      "bytes": 40034,
+      "sha256": "e50e8e0b4fdf4c65130be6d3b3b788ab3ab97bcc9e423844af16d7fbe9464151"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/hdr.npz",
+      "bytes": 48702,
+      "sha256": "dc3d81b268d2eb990c7cb17202e6fe2f8342440ea4125fb797b9906564a82cd6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/hdr_buffer.json",
+      "bytes": 239,
+      "sha256": "bd37b1dbe5d89eb7e3814041afd558b76f0ca9c909478c7a3cb3842d57fa70e1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/metadata.json",
+      "bytes": 11061,
+      "sha256": "28e46ce3be445e760e333926af3cdb7e3f8b34b901f4d7a035b789937a66fff1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/rgb.png",
+      "bytes": 8540,
+      "sha256": "2c51bb5b76280245ec9cbc98ad8afe00aaef81321861f991c822024c16162717"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/scene.usda",
+      "bytes": 11847,
+      "sha256": "44630a130efb376875c48da6576bcc1a407e2891dbee25d42ad5531ab7f75ff5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_mbb3wypz/warmup.png",
+      "bytes": 8549,
+      "sha256": "6c9daccf14d4cc39288f7b38c159b98cfd82cdc3cfa38aca6ceb77522df0bc9c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/effective_settings.json",
+      "bytes": 51366,
+      "sha256": "0a019b073c644ad3dccad8957cb3c10aa9d22e1695f093bb3840541f953fb8bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/fixture.json",
+      "bytes": 1612,
+      "sha256": "6bdc4b4cb4210382241b1678e0ca90f9906594a2544ed579f8a088ffcd0fab9a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/hdr.exr",
+      "bytes": 38788,
+      "sha256": "66580d9269668aeac3417a3c4b2fc63654bc866e55f311b1af23189bf2cf9e33"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/hdr.npz",
+      "bytes": 46534,
+      "sha256": "78d289bd2ad7de4992db2d85b5adac777a5f1c9d776d96806a1612a0b235c3f4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "b7d512a84778d559b2c3d9d0a320159e29d550ae29f06ba2d7f53f68e7242bae"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/metadata.json",
+      "bytes": 10838,
+      "sha256": "3860dca808f3977068f634d335ac69e91f8b9e5f72fe0947d1912af1df87c748"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/rgb.png",
+      "bytes": 8855,
+      "sha256": "e2c78da1ddcbc3a57415b5bba56623fe0913b62a28125a0d952d540192642074"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/scene.usda",
+      "bytes": 11796,
+      "sha256": "bc6a581404e44aed1db3c44e361d07da99e901d543de19496233002ae39271b9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_nzcqxmrh/warmup.png",
+      "bytes": 8819,
+      "sha256": "b87449d4cd20079ecb044c45998c80c5e9a1dbd3915d086468f06d758128a896"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/effective_settings.json",
+      "bytes": 51366,
+      "sha256": "0a019b073c644ad3dccad8957cb3c10aa9d22e1695f093bb3840541f953fb8bd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/fixture.json",
+      "bytes": 1616,
+      "sha256": "a65fb208e44d0ae22fb8c9d6427b8002ea0f41e5b2f64adf0f40ea1d74039b5d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/hdr.exr",
+      "bytes": 39466,
+      "sha256": "d572b2a4110d272d7bb6ddc68803c3dd938ca9ec9aeb09767a434a3e6dfac6a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/hdr.npz",
+      "bytes": 45299,
+      "sha256": "3bce2e29b955a9c2391f4faacf7cbe11f430918221db1ce87954c4c76fe92915"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/hdr_buffer.json",
+      "bytes": 234,
+      "sha256": "40377860c9fb9492a9d8b76f5ba434b4bccec72537ec7339cb7e4266c3fbe0b5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/metadata.json",
+      "bytes": 10841,
+      "sha256": "634a8bd1755a71986e20537bc9ba57c67dc8316bed7e30bc435977e8d06deba6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/rgb.png",
+      "bytes": 8942,
+      "sha256": "91972209c23d1593d463d64593e681045e8a2d021789c78ea1fbbc58caf8178c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/scene.usda",
+      "bytes": 11800,
+      "sha256": "bc96d72e68b2233fab9f290e10238b0b6e987e48166ee7af13e124e9d93bf77f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pg7oa_7_/warmup.png",
+      "bytes": 8948,
+      "sha256": "e9f76768f1f7195cf05d9c1329e9c0b3a1484e26f3c4ff3451d50769ef75e926"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/fixture.json",
+      "bytes": 1598,
+      "sha256": "adb37ec9fe2eb19bc00ca47abe67b7246c46627bc1fd41b60f60e5c936332de3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/hdr.exr",
+      "bytes": 666862,
+      "sha256": "0e4e2296b4d8772629b36354cceea3ada0ccfe2faf6fd7eb29fb9a31433d34c7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/hdr.npz",
+      "bytes": 1297726,
+      "sha256": "22a0e1e3d599b8b37fdb6bd8d147d2fdcbc36e315645be9a192097fb89ad3ae3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/hdr_buffer.json",
+      "bytes": 232,
+      "sha256": "f9d434887d4aefe57904adab845cf30ca7bbd0fa940036998930732309124a23"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/metadata.json",
+      "bytes": 11261,
+      "sha256": "769733ee6e3d1a324190a7c2ef18aecdb952eeeb5f1922ce26441cafd9dabace"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/rgb.png",
+      "bytes": 124051,
+      "sha256": "061bd737735a051eb8f1643104a1fe95ac630cdc36a0b42a6e6ea54b5a2b801f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/scene.usda",
+      "bytes": 11966,
+      "sha256": "59b5694d94a23c8bd563c1872f4347225b0f3d233c2abbeed7a8acc209ccb0af"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxck3hx8/warmup.png",
+      "bytes": 122451,
+      "sha256": "50b65b3bef078a4554a0df84c7682c6e8e5cbaa12c6dad02b55ab7a53c92119b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/hdr.exr",
+      "bytes": 223318,
+      "sha256": "56210dab8869a673f8bb919d159a52a2bd921dd6e5505bf8da6876a211ded10b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/hdr.npz",
+      "bytes": 428277,
+      "sha256": "db8247bad2e74f51c68f5a557073dfcf4c70684774bceedcc58cff26c1e01667"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "fa015c8da97d786119ee21ec4bc6313357bf1192b141253fcaa4bc641830fab2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/metadata.json",
+      "bytes": 11032,
+      "sha256": "e8ca1f74986ede27fd67f35fd3ca0edcb95ef43e0f1bdd20f8864ee641bd6f02"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/rgb.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/scene.usda",
+      "bytes": 11951,
+      "sha256": "d1a21a96256b3b9dd3531eda2404bdd130d2ba41537d3b982ba82bec7b3a1009"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_pxkl_xvn/warmup.png",
+      "bytes": 8138,
+      "sha256": "5c0e224b5556ba155cb4605d282e576150b1cae5dd859635c10434ff620745fd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "f12d2eb21ce3d2678c2126eace913568e5c1ef49fa6821fe0d4a0488e2673c3c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/fixture.json",
+      "bytes": 1589,
+      "sha256": "f3495c9ec5d150306f33b64dcfd934096f6b9a3a3675da6be47df7d39a9d8d8d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/hdr.exr",
+      "bytes": 39451,
+      "sha256": "a6d852ed7e3161b18f988a57450afaf03a79b770c883983adb40cb2a024c44ad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/hdr.npz",
+      "bytes": 44888,
+      "sha256": "8400e0ae52f05e47633ffd00bc8761b3a2a5d7da3c2942b26d732109188210de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "9a2d68c6d67b4db01cbc53300795ffba5f4312402239b363826d8215c03bb223"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/metadata.json",
+      "bytes": 11062,
+      "sha256": "fd4fc942169069bf322d0edd8bceb0886a3604fefd4bfabe69a4cbe361b4780f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/rgb.png",
+      "bytes": 8528,
+      "sha256": "40872a448ce4903fc1ca52171f687867b8800c09d06e77180ca287b8e0b39cd5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/scene.usda",
+      "bytes": 11848,
+      "sha256": "917bd0be71db40dbe2cf773ccf02c53c5cbd421a10b84613f9a64b20b3b31232"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_q6xanys7/warmup.png",
+      "bytes": 8572,
+      "sha256": "ae223c8048c8fed4eb22c7393b6f99c078b9d5e5e89c4389b8accf51d2315c64"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/fixture.json",
+      "bytes": 1598,
+      "sha256": "42c262203402f604f556b3d3e78605a37db08928645e67d1bc5a5b8d6528e2b3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/hdr.exr",
+      "bytes": 668589,
+      "sha256": "f27d7ea6959e3adbc76fbce0227750badeeea263ac980bd96ec9e2ce7c87fa6a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/hdr.npz",
+      "bytes": 1296783,
+      "sha256": "c916a7e619ad47cddebfe2b40be734fe76fca963aa3198ab326bdd91132ae223"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/hdr_buffer.json",
+      "bytes": 233,
+      "sha256": "c8df58579197b60319bf48f90fc88ad2771a23c02876055589155ada1f58343f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/metadata.json",
+      "bytes": 11264,
+      "sha256": "1c88244e5e7994d72f67995a512fa710f452da60df0011c3ec65e00eed7667a6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/rgb.png",
+      "bytes": 135523,
+      "sha256": "4628ab24003d7ef8bd6fb72e3bef25c96d8fea487b1d7441f5eb3a8beaa9638d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/scene.usda",
+      "bytes": 11970,
+      "sha256": "63eec2ddb0a367e8069ffd1962f13f5830b5306f8be0b5f0345f477c67009846"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_qn7098l3/warmup.png",
+      "bytes": 135175,
+      "sha256": "ea9aeda2af2505dc0727becc66a20a775578265e5e3d0471be69343bba0430a6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/hdr.exr",
+      "bytes": 38090,
+      "sha256": "7831a06d29a42eec5e13ca6c8f816a8201553ba19564f8ae5e8b227e8107e2bc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/hdr.npz",
+      "bytes": 46822,
+      "sha256": "1da0f5de266a6d248eedf2de45083325e99f126d294f63ea6083f9dc91bc48b3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "351e9f37694e6ae960890513ba6d1ee0c1aa4fa338da5e33548b2123c4e6688b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/metadata.json",
+      "bytes": 10840,
+      "sha256": "c663c809e4f3891ddfa038cbd938b24304891e23951edd47395edcf00a12afdd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/rgb.png",
+      "bytes": 8808,
+      "sha256": "4b506e63138dd401349882544eec3db562ca910cc4bcb3161db80e0e57326cdc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/scene.usda",
+      "bytes": 11842,
+      "sha256": "63b0d7985d85e23cc7065c99bec491462b97b2ad9c21657f2a9fc9995c966a1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_re441vqx/warmup.png",
+      "bytes": 8761,
+      "sha256": "8175fa802177ee55b24a857c69fbeadf591d4e4652c1573949c9031fb84c79c2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "d9bae78757290ea9e7e493e7c2dae3764dea6d78edc5ba1ae42cf50308c663dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/fixture.json",
+      "bytes": 1598,
+      "sha256": "19805a9844daffa18fe556cfd70fce438435945166b282b9f290784435facbc7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/hdr.exr",
+      "bytes": 41244,
+      "sha256": "7ba1e26a66f91fef04adc790b25b3ac1c9f428e9be32e28fb6a685ee9b002d10"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/hdr.npz",
+      "bytes": 47245,
+      "sha256": "1d0525a3c0a3a6e021ce6a97170b4de1fc6121848b05090fa79efb13b5331f54"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/hdr_buffer.json",
+      "bytes": 235,
+      "sha256": "af61f39720919f9513b212e5f70c8007146db0c786e4ab5758d0b6f68a975805"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/metadata.json",
+      "bytes": 11076,
+      "sha256": "18575715f530f50d83a2359624c957369f01e68d2a320d32892be50253ea72e3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/rgb.png",
+      "bytes": 8774,
+      "sha256": "2835e1fd560b09e366b91a5b29af1f1e067035b089cec7ce64d2f2bd4c55543c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/scene.usda",
+      "bytes": 11861,
+      "sha256": "e9825ab1433203032c029820716c74fdef5925b51cc822cf0ea1849a6128d5ed"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_rg3o2kko/warmup.png",
+      "bytes": 8745,
+      "sha256": "f9cfad0c535e72807fa0df3c3bdf22ba79af082a6e8d3f69d61b7500322d48c7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/fixture.json",
+      "bytes": 1589,
+      "sha256": "97c294ef76874572b1a778d131cbfa6cfb07f59637e16d70fdba525f2917b3de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/hdr.exr",
+      "bytes": 228899,
+      "sha256": "5cae0ffa331437429af9f24f5438bdd9bd8ad8c4179754d8abea9566a762b979"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/hdr.npz",
+      "bytes": 426415,
+      "sha256": "4bb8b43bcbc5575dd1a67cf46256f1ea4e28deba53eb0bd7fbe1e70f7a4570b2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "54c39e504c7025de82757eacc458678b3397e31c86bde9fc659d7460a3548958"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/metadata.json",
+      "bytes": 11043,
+      "sha256": "acc3c064950321d5083c9e1e5ac6bcccb387c4cfc6c89ed3ac54511b8e46e70a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/rgb.png",
+      "bytes": 8171,
+      "sha256": "b38737e3c6f7db935fead11bb8abae6f83f008dd4f59ebb9e5ab20f99ebba987"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/scene.usda",
+      "bytes": 11957,
+      "sha256": "89b2abc5cec79f0ec5aee7feb523c0e349a89bebaaa39a73f9310a81b59087be"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_riuoxxjo/warmup.png",
+      "bytes": 8175,
+      "sha256": "6be7e8dd30cc063aa01d247c0cae82eb10a1bbcb13954784b387c53cb58e1517"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/fixture.json",
+      "bytes": 1598,
+      "sha256": "a86ffc4cb4eec21e8da80acef4b03f33f7fe33751a0fbb548beaa700ad8b3682"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/hdr.exr",
+      "bytes": 640618,
+      "sha256": "2df3f81c28c3139c5cbec5e2f1b1eaf7fbae08c343f24d97c8e351713bbbc9f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/hdr.npz",
+      "bytes": 1305317,
+      "sha256": "18e04f732c730e845389dd2f18d8e67e4ea13cb55463b97c6450b167e84e3689"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/hdr_buffer.json",
+      "bytes": 232,
+      "sha256": "98a3b403acc34d934dde9d6a90e2e4c87cc39315669da2d86c92a01c781ec33c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/metadata.json",
+      "bytes": 11052,
+      "sha256": "be6afedec35d46e4bcc70c5f983b24323450b403db8d23341348b39c3cd7b58e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/rgb.png",
+      "bytes": 92204,
+      "sha256": "631664fdca4439efe381a8266a1a6e9a6faf2b2e6ecec3faaa2b6f931a05bedd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/scene.usda",
+      "bytes": 11966,
+      "sha256": "85824eee10c3cb193a33fc12d13ac64a62ca227170d5e6579a0957fd41f556c1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_s7m6f61u/warmup.png",
+      "bytes": 92182,
+      "sha256": "b6a172be2e429208e658aa705072306fb90db163b0ffbea668086220be8f3c6d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "d9bae78757290ea9e7e493e7c2dae3764dea6d78edc5ba1ae42cf50308c663dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/fixture.json",
+      "bytes": 1598,
+      "sha256": "42c262203402f604f556b3d3e78605a37db08928645e67d1bc5a5b8d6528e2b3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/hdr.exr",
+      "bytes": 41565,
+      "sha256": "5b78fbb93ab8cd860fd4100e86f251ff519a8d38f0f0d06c38594088fcf97d73"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/hdr.npz",
+      "bytes": 48142,
+      "sha256": "eba67af9d9b61a5374cd50d17cd463b4592594da079d3b7c0725083c0acbc70f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "3939e0e6e5a38dca47a4619097d824037f6891a3584d4575c5287263cd95f3f5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/metadata.json",
+      "bytes": 11076,
+      "sha256": "767855683ee495486ef3d69532a73cb7052f2712c84be51ab561f1c7f7d60abc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/rgb.png",
+      "bytes": 8792,
+      "sha256": "b394e1a0fb9db2e1dceabab278de01079ccb96168af4963e5e8ca0afe789ae51"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/scene.usda",
+      "bytes": 11861,
+      "sha256": "fda956bab4b984faa5707f71e96234ab02ea5da0cfbda8079208dc9521851739"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ubhi26d8/warmup.png",
+      "bytes": 8780,
+      "sha256": "a7986c0e7a5bc01ff2123abd4c1792f621a858f7934410692210f2ffc46ca868"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/fixture.json",
+      "bytes": 1589,
+      "sha256": "92b1e60c79718f10d9a7517ae09c661d76a5fc0e864e58451e718cdca92a0ac5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/hdr.exr",
+      "bytes": 222770,
+      "sha256": "81e468f037643cb2fc75f7b2ed0d399ebf4a3da49a445da5f7c45d4cc24c8bc7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/hdr.npz",
+      "bytes": 431122,
+      "sha256": "8e9d56f79875882fe86ba219dd80800063d22a8c22ea282f029c53cb12d8e068"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "3f0b0be69a7b6dc71c886bf386cfa31b09225302670adef2c7f1f5dad51512eb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/metadata.json",
+      "bytes": 11255,
+      "sha256": "416b537eaf812f7bccbad1ea801ddae86db420e32e1a0540854de6ec1b3bcc4a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/rgb.png",
+      "bytes": 8237,
+      "sha256": "843d444c7ce6f305931175a834fa6a7ae22b34142feb743d6abd63dc0383bc94"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/scene.usda",
+      "bytes": 11961,
+      "sha256": "1f46bc4cf31b180eba32481989d10c331f79b6f2eb62484148cf6060ec474e57"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_vnbxm6ak/warmup.png",
+      "bytes": 8239,
+      "sha256": "81dc2898f58aea8d123df30c1e17a6f07261b3c934923c36012ae2afa3184bd1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/fixture.json",
+      "bytes": 1598,
+      "sha256": "8fd33ebd4148b3262d447cc752939030c923b2458557d37324660499bc60755d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/hdr.exr",
+      "bytes": 39485,
+      "sha256": "103e080d9146ed72ad869686ffb675fb745566d40f709895e067d308924eca9e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/hdr.npz",
+      "bytes": 47738,
+      "sha256": "1c24b5d1915d7533856ba703510a297b92962a4f16018e987c777652e5f9a981"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "66ff0f5ac658f907951d9cc69fb64117fe1d7fcbf3f89514fc0d1cf093b78366"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/metadata.json",
+      "bytes": 10864,
+      "sha256": "ccaedb5ddc5267ab0040ed0e29c6637855276f4ef0a46db17c66ad58361e00be"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/rgb.png",
+      "bytes": 8975,
+      "sha256": "293695f7333cc62fcabc5daac580a13f11b34e2940c72a088e298bfa45181f7e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/scene.usda",
+      "bytes": 11857,
+      "sha256": "17750e77e5f5288fb170ba284d739df757ab49f57517cdd2563b4c93244042da"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wkj3e8dg/warmup.png",
+      "bytes": 8903,
+      "sha256": "e41916bd021658166e6d1ccfd4a5084cd6f66319692ab50d85f469713ac16891"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/effective_settings.json",
+      "bytes": 51326,
+      "sha256": "c3a11e70f89885d976fef35238667c63a23ece40c53e1c21ce37798131861ad5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/hdr.exr",
+      "bytes": 224364,
+      "sha256": "1af92d4539789aae5ca8f9517dc430b305b720c2142fbb9b31eccb911b098757"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/hdr.npz",
+      "bytes": 422773,
+      "sha256": "fb7e89ba0b3f76809f48dd5ed7da5a599dd3c8cbdb01f40a07b97137ec0b86f7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/hdr_buffer.json",
+      "bytes": 237,
+      "sha256": "be20c70e069f9e92b7dd2d6cf74846e4cd87ff4af5f6715568c6ff232fba707f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/metadata.json",
+      "bytes": 11031,
+      "sha256": "5b47c613bd27065b2700f63eee22752e97add75e518bf9236883786bb6102ef1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/rgb.png",
+      "bytes": 8108,
+      "sha256": "43479b5deca15c68ee4c533c60be018a01e90bd7f5c53a5bee8b7f09f7d01c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/scene.usda",
+      "bytes": 11937,
+      "sha256": "788b7510558529e8154de69d2399dcb75e781804aaad70aa8794f1495404a6b5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_wwtaedbd/warmup.png",
+      "bytes": 8108,
+      "sha256": "43479b5deca15c68ee4c533c60be018a01e90bd7f5c53a5bee8b7f09f7d01c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/fixture.json",
+      "bytes": 1598,
+      "sha256": "8fd33ebd4148b3262d447cc752939030c923b2458557d37324660499bc60755d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/hdr.exr",
+      "bytes": 676752,
+      "sha256": "b0438a406dc075c7b7a8ee4ea8a38e84a757c51a1dda6dbadaa69e9d486dc684"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/hdr.npz",
+      "bytes": 1309623,
+      "sha256": "8dbc94fd245b7dc27fb1853510ed32ad01c7845a1457bc2676cef443e13ed03b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/hdr_buffer.json",
+      "bytes": 232,
+      "sha256": "927ad9f8994befa230ad8c4b0e4f95e3e74bb8c4155489e5fba525c707a9ea47"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/metadata.json",
+      "bytes": 11051,
+      "sha256": "d2cea684993eeae5e933906363ed57c1133e0308a6efc03ae5ec61058aa52285"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/rgb.png",
+      "bytes": 135403,
+      "sha256": "241ae9afa1a8609843fe8f9c4cee8ad0c85152833311ef140a56b0709eed94c9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/scene.usda",
+      "bytes": 11966,
+      "sha256": "54eb7b0591def398ab065509157a47d708ca00f76f140afdce9f2fedf8cefec0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xf83mv19/warmup.png",
+      "bytes": 135637,
+      "sha256": "cd33bbbb0e0f788841e978ed06e3069f1479e103841100e6a99111746bcbc63a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/fixture.json",
+      "bytes": 1583,
+      "sha256": "0e33cfa45b62002c0f74bb171f241910045ccf1927ecef5df34a8fdef9a34f05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/hdr.exr",
+      "bytes": 38711,
+      "sha256": "f6ba17812cc00802666b1796411853ad3b92cb24f95c61037e7f40b39bf714a6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/hdr.npz",
+      "bytes": 44749,
+      "sha256": "d32b0297727198f1b4776d31f68e558168625d5e49d9cbe701b248c704f3584a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/hdr_buffer.json",
+      "bytes": 233,
+      "sha256": "bedfa2052ae909eb82f24f4c51a3756cbde44fb84f2644bf272588d1f51831e5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/metadata.json",
+      "bytes": 10837,
+      "sha256": "72d42599d4d216325cf6761a5317bfb596dfda8ab7d8df364dd6b662af030226"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/rgb.png",
+      "bytes": 8793,
+      "sha256": "0e9e58d6c6f3acd0d6ad820c3c3b063f426a0b09de58e3bf4b7f568c030c81ca"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/scene.usda",
+      "bytes": 11842,
+      "sha256": "8971576d2175f018d1b7c7722e9a60980809e7c88dccd220a498fe77d2266c86"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_xhsnav26/warmup.png",
+      "bytes": 8767,
+      "sha256": "23dc687a6540f9e3f5aeb05051c3b5cb4801a8917b161d1fe34f1eabea594cb4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/fixture.json",
+      "bytes": 1598,
+      "sha256": "a86ffc4cb4eec21e8da80acef4b03f33f7fe33751a0fbb548beaa700ad8b3682"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/hdr.exr",
+      "bytes": 640618,
+      "sha256": "1f182612e49455fb9fb746cfd28039feb5248b5a0a4ad88015318320a9840cb8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/hdr.npz",
+      "bytes": 1305317,
+      "sha256": "18e04f732c730e845389dd2f18d8e67e4ea13cb55463b97c6450b167e84e3689"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/hdr_buffer.json",
+      "bytes": 232,
+      "sha256": "98a3b403acc34d934dde9d6a90e2e4c87cc39315669da2d86c92a01c781ec33c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/metadata.json",
+      "bytes": 11052,
+      "sha256": "5e9acbdf698bc66c20fd80fde87645cd5d6c1d1eb6748c23cb93c4638595a355"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/rgb.png",
+      "bytes": 92204,
+      "sha256": "631664fdca4439efe381a8266a1a6e9a6faf2b2e6ecec3faaa2b6f931a05bedd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/scene.usda",
+      "bytes": 11966,
+      "sha256": "88cbdefc1251f49f2568ebad9b6c839406b7304169b7ec58f3728b4002899aab"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_y1nbde3x/warmup.png",
+      "bytes": 92182,
+      "sha256": "b6a172be2e429208e658aa705072306fb90db163b0ffbea668086220be8f3c6d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/fixture.json",
+      "bytes": 1589,
+      "sha256": "58fb579b22bf85bdbafcaab8b1f511cf143f49aec302abca9746129b34fcc24c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/hdr.exr",
+      "bytes": 39544,
+      "sha256": "5c40c5d3b26d33589b40f6f13d36e54decdc67057ca03b110caed55f64778a0c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/hdr.npz",
+      "bytes": 48345,
+      "sha256": "b45469d6fb4956dac98c10348990ac686071bbadc38f55a215f7154b7cc400f4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "aa9f60db5beb7553264311ae62021fb0ec32207ba0f5759b3ee37147957d268a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/metadata.json",
+      "bytes": 10853,
+      "sha256": "c845525e733f5b6d4a09cd3deff97e625dfcdf0b41883b4dca7aecace0d70f57"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/rgb.png",
+      "bytes": 8882,
+      "sha256": "c5bd005b86db7d8c3a5dba15371ff6e6202f437d0ec535b29a48031eb166213d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/scene.usda",
+      "bytes": 11848,
+      "sha256": "70d83ac2d6fd6534fe5715af1ad4bbec18bf7071834d50c4c4a3091d51fc5fa4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_ybbs3bzi/warmup.png",
+      "bytes": 8863,
+      "sha256": "f09ba656936463aab4ad5985e7a2d5bc1a8cf071448e2b93ad25dd3d79c80ac6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/effective_settings.json",
+      "bytes": 51340,
+      "sha256": "9da8c73afe9b03ddbedf9c67482695c8571e9d5a98c8051cc480cf2d058d8b56"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/fixture.json",
+      "bytes": 1589,
+      "sha256": "f3495c9ec5d150306f33b64dcfd934096f6b9a3a3675da6be47df7d39a9d8d8d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/hdr.exr",
+      "bytes": 213042,
+      "sha256": "0dd565eb6fc55469f837e8766ec8a9b3e69aef00d4d35f910b93bf5d0d124c6c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/hdr.npz",
+      "bytes": 412569,
+      "sha256": "1782f75a7c52b439b4dc98c54bbd152bbf8b25a653365f506902811e07e66340"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/hdr_buffer.json",
+      "bytes": 238,
+      "sha256": "d33d37c9bec4f8b2b7547138bd8a61b97ea6a5008bdff0d656393b863e7695c4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/metadata.json",
+      "bytes": 11253,
+      "sha256": "efdc1b4a2661e18afc1b63138ca12d730c47560cb7d93c696bb545e2261d17d1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/rgb.png",
+      "bytes": 8168,
+      "sha256": "aca4d439d3da24abe56252d163f801080dcd021dea9f169ea90eb7ff5f7307cc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/scene.usda",
+      "bytes": 11957,
+      "sha256": "ccacae2c5c84bd7af955da9a8424aecdf236898c0f79fb40af6b0d4dda9a9bfe"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_z9_i65s7/warmup.png",
+      "bytes": 8168,
+      "sha256": "119a0ec82774dd74dc69820b78bbd4e89ef1973816bbdc615aca79e33fcd24c7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "d9bae78757290ea9e7e493e7c2dae3764dea6d78edc5ba1ae42cf50308c663dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/fixture.json",
+      "bytes": 1588,
+      "sha256": "44caf46ae26ab53a6469b475f4e1b7cae2639e2b3a1741b0c4aa5939879d1b52"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/hdr.exr",
+      "bytes": 41935,
+      "sha256": "a27a5561523fcec55eef7f1ffc49cf00c123fe611f663e97d4de79940be1c7fb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/hdr.npz",
+      "bytes": 49858,
+      "sha256": "6688d54d37bb0dff2a83b393258a3d795dac9e6b1fa2802143a35605b7dff495"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/hdr_buffer.json",
+      "bytes": 235,
+      "sha256": "783598587e36dca604f9ec0076a9d385e6c296096d59e04782a26be0d98493bb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/metadata.json",
+      "bytes": 11060,
+      "sha256": "f3e778b4253466a2755cc1b499a2b5452e5c67e2d0e23554c4f6ee45c971b04a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/rgb.png",
+      "bytes": 8819,
+      "sha256": "e169bc9965b700b9fc23b07c24dc36cd86af21e7c036c35c03e31ef5582fe667"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/scene.usda",
+      "bytes": 11851,
+      "sha256": "52f9a2071fb4fe34a540bde0e121f205421350faa7d2adee1fba3169982bb881"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zbtmhl9_/warmup.png",
+      "bytes": 8826,
+      "sha256": "188ceb64a5a0d33532a533c03ab1165941387c8099f268515c3ab37510676b61"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "026bc1b22761d46ee63069271c1fda57797fb2d82e40f28dcbd1d7fbc95d1724"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/effective_settings.json",
+      "bytes": 51349,
+      "sha256": "4f441fc4aa74689998ea7774fec4775ced0b7e82b5ef55d507bbb9b6ba931cf2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/fixture.json",
+      "bytes": 1598,
+      "sha256": "8fd33ebd4148b3262d447cc752939030c923b2458557d37324660499bc60755d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/hdr.exr",
+      "bytes": 39681,
+      "sha256": "9a7927278393916b0c90d1d16060984f696feb532b81ad257d3b2061a0896da1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/hdr.npz",
+      "bytes": 47905,
+      "sha256": "3e15530b7fc3348680e623afd377a9de9c0acd1c0cd35b99f16be96e3c3b62e1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/hdr_buffer.json",
+      "bytes": 236,
+      "sha256": "66ff0f5ac658f907951d9cc69fb64117fe1d7fcbf3f89514fc0d1cf093b78366"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/metadata.json",
+      "bytes": 10864,
+      "sha256": "85f53d1b433f9a1e2470c3ae05fa0d07f839576b843c5ad1d963b75281d86f9e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/rgb.png",
+      "bytes": 8910,
+      "sha256": "1a8c10c886cafbb9cbf17d199af69bcccbd3c243d989f6eb91ebb9a81a6db62f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/scene.usda",
+      "bytes": 11857,
+      "sha256": "c9b7a68b4103d3a092a5ceee6edf8a405f73dadc6bcd02a0ae4b47a42d6d1948"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_zx4swuhf/warmup.png",
+      "bytes": 8858,
+      "sha256": "54c80b615225e3072ec47f99262fe5c914beaca8ec4956e5a25aabf3de668af3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/comparisons/absorption_depth_grid.png",
+      "bytes": 40175,
+      "sha256": "aa9e8e33c1f9df19c44cc70ed9d7ad1de79378a47f9911fe565ad85573d9cd97"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/comparisons/absorption_signal.png",
+      "bytes": 201582,
+      "sha256": "81982eafa000e176251e178ccaa8f896a20b624bde2a63f2305fec9b84a77dde"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/comparisons/fixed_roi_check.png",
+      "bytes": 2236,
+      "sha256": "b5de5eac66ae75d22928b2e21e44c6b609410e83514badcfbb2a2c2525c66467"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/comparisons/scattering_depth_grid.png",
+      "bytes": 97302,
+      "sha256": "baa2b6f9d196ad1f281e01b5dda261e57cfef016b8f8c0bfbcd6cfd58ab78a7a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/comparisons/scattering_signal_contrast.png",
+      "bytes": 141611,
+      "sha256": "a42c11e591d759c8881721ab2c77e3b2aa78e399aa460f3f35de1357edc36b59"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/engineering_medium_v1.json",
+      "bytes": 2574,
+      "sha256": "663692d4a7aabad806f332a8060065fb6d51c3822539574a77f28def4e81bbe3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/absorption_execution.json",
+      "bytes": 128755,
+      "sha256": "e9d0d129820e1eba59f29335a3ca692afdbd18f563833c101b7b4daa0eb587cb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/absorption_gpu.json",
+      "bytes": 13753,
+      "sha256": "33fe1095cbab8a3bebeda0149729165431a97501f3bfac32ef54bd7447922abf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/after_diagnostics_checkpoint.json",
+      "bytes": 3578,
+      "sha256": "44fedbfc2539f9e4ad66c837720e0c002a2172dcb4908b66772c9a1ff8cee9f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/after_diagnostics_comparison.json",
+      "bytes": 340,
+      "sha256": "c4a25ccbd13e5e6ea30973f6768ca507324884f7250c6829a667494b724d1b90"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/analyse_medium.py",
+      "bytes": 3847,
+      "sha256": "7a96e52448b7893df8567bf7198d88dc7ad6e1e43a8b2ffe201fa9c3f067d414"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/before_checkpoint.json",
+      "bytes": 3578,
+      "sha256": "a9a906f0aa3bb311c8ce2dd6a7d9d693ea9a8abb44483fb53b5ed4368f34f9aa"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/capture_capabilities.json",
+      "bytes": 2431,
+      "sha256": "781ff1dc7d2a1e1cb6afb3332e7f337d4c17925218def69fdeee9d7dcb8b1347"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/absorption_execution.json",
+      "bytes": 129666,
+      "sha256": "afc8d624623b339a428d25f3649406321d26bc4c1e23f462d1090d61ed35466e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/absorption_gpu.json",
+      "bytes": 12226,
+      "sha256": "776c13a2b309c4134fff61e3062c6634d501f55ae5783e012f791c34dda2be76"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/controls_execution.json",
+      "bytes": 71564,
+      "sha256": "1439b570dc72881c4f11f2a4c6e25ef7e137aeef53ba97ade401942fc5beb4ab"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/controls_gpu.json",
+      "bytes": 6947,
+      "sha256": "1e220798d782976472a06343bfaa41fb9ccac30d9f09b659f4746cd98e2f7225"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/exposure_execution.json",
+      "bytes": 14252,
+      "sha256": "2c28ffadf0f3fcd119e3849a6dd1a925f6ef98ba6d94bf42d47a0f11118524ad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/exposure_gpu.json",
+      "bytes": 1392,
+      "sha256": "7b55699519f5684321880685c2d1ae3feddcaea03d5837d4dd8b9276ae524dba"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/scattering_execution.json",
+      "bytes": 114904,
+      "sha256": "379a388a6d557d6497e2a652f8e16c16d8242db32d0f4d3f64f0a7a01fe3a768"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/scattering_gpu.json",
+      "bytes": 10838,
+      "sha256": "67c1f33c17782e3e11e5f7137ac7ef1a99ec74f8c7004930477a9b73a4dac322"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/units_execution.json",
+      "bytes": 42882,
+      "sha256": "ca2681a22cc7a8235e342806e286b2f2307be4ee74ad7d787f118cb35458c216"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled/units_gpu.json",
+      "bytes": 4308,
+      "sha256": "2416078f35cb0831efe499e7de14ca900103274232715312d1e67ed2e986aa85"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controlled_realtime_source.py",
+      "bytes": 10692,
+      "sha256": "263039995044dffe4d6772a1875be765346cbcbe7d091d28d65915884d0906db"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controls_execution.json",
+      "bytes": 71055,
+      "sha256": "a575ee5c827a361d7512b2ae3fd6d075f0d0706bf5c3a01619d00a1e03d7347e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/controls_gpu.json",
+      "bytes": 7501,
+      "sha256": "20196d765c63ec44f64a32f88c2e27f740826de0e75c59e4695eb0ca3f61f444"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/absorption_execution.json",
+      "bytes": 131808,
+      "sha256": "d29dbe302bd857efce760fcabfe7e0095931ed10bcf303a73c9eab390d468bb4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/absorption_gpu.json",
+      "bytes": 12644,
+      "sha256": "4fba7ec9ab2c634e737b2964906d17eb39e8dd79fd75cdc8ac4a3f4653370929"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/controls_execution.json",
+      "bytes": 72750,
+      "sha256": "1ccae2033b623c1dc1d5b5d571e9a523122d6dac97958c0fc5efbd9095a60504"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/controls_gpu.json",
+      "bytes": 7089,
+      "sha256": "fc2597c459b3c2da5e36fbf46d71aaf992ac9a3b46f344edcaccfaea31c16b05"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/exposure_execution.json",
+      "bytes": 14491,
+      "sha256": "e4d311a7cd1f774a5c5d9354034287670a48a3493197792934f1a09b79dc6ab6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/exposure_gpu.json",
+      "bytes": 1392,
+      "sha256": "1f25a3c5bc00ac2aa69abe383bc28e81e97e39a745cf58b9af81eddeb2f8eb3a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/scattering_execution.json",
+      "bytes": 116757,
+      "sha256": "e5e8313e20579777f936d02883548f273f1c1eac1f8cb234c2f2b7c3ad6d687d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/scattering_gpu.json",
+      "bytes": 12923,
+      "sha256": "444cdf7a1c80552462fbebf476b7bc92f93c407155744d2791fe4567926abef3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/units_execution.json",
+      "bytes": 43602,
+      "sha256": "52853b43f165c71cf7b10f1a62ef90dac7f49983590d390fac55c8ffca87926d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final/units_gpu.json",
+      "bytes": 4173,
+      "sha256": "e29788fa0a5f7f20fab068ad62032c163d30ce58d2164ce209b5b8cb885ea8d8"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final_source_record.json",
+      "bytes": 986,
+      "sha256": "62afe0c815f9c7bf898b50b01841a731c723871e80413ceb0d7a2156c167610d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/final_validation.json",
+      "bytes": 10057,
+      "sha256": "1cd957c21d8cf9a942373587ee61c61d3a72e6356e11849bd401a3bf54364ee5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/hdr_probe_attempt01.json",
+      "bytes": 325,
+      "sha256": "bac151fede25f268cb45031aa42e82799bf7f7b2909c19420c13c6a68de5fd61"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/hdr_probe_attempt01_response.json",
+      "bytes": 35,
+      "sha256": "0fc662e3494584eca4faa0c79067227c1cd9e1ae9c806d4ec77a86f4b3a641f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/hdr_probe_attempt02.json",
+      "bytes": 329,
+      "sha256": "12cf24344b9c42859c2ffe7a75af7f531a62ea5a24835e14660d06bf054080e6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/hdr_probe_attempt02_response.json",
+      "bytes": 89,
+      "sha256": "38790e4bb43e70e814009b7b21c0238b1eb77b6edab814b8bc2ca70d66bd6dd9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/hdr_probe_attempt03_response.json",
+      "bytes": 7759,
+      "sha256": "57e0b8b78683911305cb89f5f9a7df2888bf5fc726c68a5eb0eee1d0e7f0bd4b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/initial_material.json",
+      "bytes": 531,
+      "sha256": "36008f82f8afb950e46d1b1a4169d90ad9a3a98591679a27b30a7c8e99e44a28"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/installed_medium_definition.json",
+      "bytes": 1156,
+      "sha256": "18e0d55b9a2c299d2ba1b468758114e7451010d8b331ec82904909b12a19ed63"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/invalid_request.json",
+      "bytes": 277,
+      "sha256": "ebf8e26476bf3c354d211bc2b5a79f02b144d8758f2c35ab03f237ec304c5d48"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/material_status_wrong_route.json",
+      "bytes": 31,
+      "sha256": "83c09ba9a8daedb136f90b17a294caa90ad471a016e430df6e229acb5a81e100"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/measurements.json",
+      "bytes": 47751,
+      "sha256": "5d5925927568f57c711a9bb1a07c0754cad2ab2e960e7547af07424ae185b906"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/measurements_final.json",
+      "bytes": 48263,
+      "sha256": "08f358bfdc88a1561b801df117ceb66b73fb1216ea6f388576bf572f5d43bc36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/offline_tests.json",
+      "bytes": 3475,
+      "sha256": "28f37a1cd60f9895e7a834de958b08e37f71f8224eaeab37b5437280eb2bb325"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/pathprobe_medium_source.py",
+      "bytes": 11357,
+      "sha256": "a9adb80440290fae242da12257b86a161c5b583b78f5186257834e088f782755"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/pathtraced/pathprobe_execution.json",
+      "bytes": 42939,
+      "sha256": "8ca36ff7759678372194703f0623d53296e3a807385e84983a4b7db10375b245"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/pathtraced/pathprobe_gpu.json",
+      "bytes": 4586,
+      "sha256": "8f7844434c4692db06db1ba3d4cc4764dc5b05bf1ff87835e0efaf8a924af280"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/plot_medium.py",
+      "bytes": 4853,
+      "sha256": "e18e195d1a409b6c91b68dc8091ee31736ff643db6ef322e2dd123abe43a6a1f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/preflight.json",
+      "bytes": 781,
+      "sha256": "d5a12974160a41202f6c3b0fe92d189be1786b92424994b5ca12ca4661ebd07a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/previous_evidence_integrity.json",
+      "bytes": 140,
+      "sha256": "9c93ba0f6d766df1e1ddff9c05e6967e6110f375ea584e6fb99154c135ba11e1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/request_inventory.json",
+      "bytes": 27320,
+      "sha256": "341e644fd8f1ba6eaf7ae45fb9096cd613f1e0cc9f5eebff2fccf96a011da8fe"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/resource_summary.json",
+      "bytes": 619,
+      "sha256": "9e3d3e9270fad7c286f9151296fd1a071d8a6cb7754e6fc134a60986800fc3c9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/restoration_validation.json",
+      "bytes": 414,
+      "sha256": "4e5fe1550bcdf61f2ba872943f5ee7f4f8fabc4e2c1780a8e91ac879b375e703"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/restore_checkpoint.json",
+      "bytes": 122,
+      "sha256": "99c0356a7526bfe51a85a508d338e6d0b34c6c38c9551a4bd89924c513d8a23d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/restore_live.json",
+      "bytes": 2396,
+      "sha256": "b36dfedcc18ec4b0326918ba7d19a3910dfff7e70e5bafa0d46239a1521c4d08"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/restored_checkpoint.json",
+      "bytes": 3578,
+      "sha256": "024a687fc4e7363e65c2e8aba36c1642041ec5a2cba1c3916849230ad9e6b965"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/restored_material.json",
+      "bytes": 445,
+      "sha256": "9404602a026558c6747d444b26cba34781766aa778fc6e282a0312ccb7aef5e9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/run_medium.py",
+      "bytes": 4716,
+      "sha256": "9070088cc8e0ed39e9c42a7d7068bb010ec376ad4c21d3b32b1551a93c7588ac"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/runtime_error_scan.json",
+      "bytes": 332,
+      "sha256": "6471592e912316fda064559811b0bfb80e7809d1c66c7c4a013b76ff92c2c008"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/runtime_log_tail.log",
+      "bytes": 68091,
+      "sha256": "0afec32ffec33a61b205db4d023349d7613e45d5edbf156aa6d10bd4254fd55d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/schema_capabilities.json",
+      "bytes": 5045,
+      "sha256": "8882018a4d7f2f45f9b1e23ba7e516adcaff2b6232984c7b3426155b067a4464"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/source_changes.patch",
+      "bytes": 19997,
+      "sha256": "bdbf47fa45f018a4a3c7b88cbf23a243103342dd1dc1837b2f9edcd13d552e94"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/test_measurement.py",
+      "bytes": 1221,
+      "sha256": "effb6a64681cd583d7072c78a238a5115b8a4cad9075630e7769c9d391deca0c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/unclamped/pathprobe_execution.json",
+      "bytes": 43427,
+      "sha256": "5efe67a1f202938113b6a8b84df470b55a4eba92276832fab9acb2b6c681c885"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/unclamped/pathprobe_gpu.json",
+      "bytes": 4586,
+      "sha256": "62df690d96b34e09d66fe3b515a5b72bc69ab7d5050041294a398bacc65ca4a2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/uncontrolled_measurements.json",
+      "bytes": 20577,
+      "sha256": "baa0bf26df73ea19a6d89d2293c8c91ecbb3e977e1bd86c98ee71bdbfb195233"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/uncontrolled_medium_source.py",
+      "bytes": 8772,
+      "sha256": "ed6489624e79816d0fcf633e570ef8413eae019408362c27b1c6cea29f4742a7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m3/qa/validate_final.py",
+      "bytes": 8199,
+      "sha256": "6dd86f1a20e37320964152a52d261fa10350010e70482a13c67d0b1dedf4a61c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/reports/M3_UNDERWATER_APPEARANCE.md",
+      "bytes": 15065,
+      "sha256": "55a0fdd765b2f85277b440a58d18c00ca92ebdd81739e132b41c7effc219be10"
+    }
+  ],
+  "scientific_water_calibrated": false,
+  "production_ocean_preset_changed": false,
+  "animated_ocean_integration_completed": false,
+  "live_scene_restored": true,
+  "human_review_inferred": false,
+  "external_dependencies": "Installed Kit/RTX/MDL modules identified by retained paths/hashes, original app runtime and pre-work checkpoint path; vendor runtime and checkpoint assets not bundled or altered",
+  "limitations": [
+    "Only isolated flat-medium PathTracing capture configuration qualified here",
+    "Native display PNG saturation; all attenuation measurements used unclamped HdrColor",
+    "Camera exposure +1-stop output mapping remained unresolved; no absolute exposure/radiometric calibration claimed",
+    "M4 animated integration and M5 production repeat/save-reload qualification remain separate work"
+  ]
+}

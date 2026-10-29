@@ -1,0 +1,15 @@
+{
+  "scope": "Targeted read-only traversal of the live-resolved OmniSurface wrapper imports; no recursive cache search or vendor changes.",
+  "definitions": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/mdl/OmniSurface/OmniSurfaceBase.mdl",
+      "sha256": "290866532e153774d01bd51a8cdc6c4cb1f42b7992a994d498cfe572cc6f3f11"
+    },
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/mdl/OmniSurface/OmniShared.mdl",
+      "sha256": "7ad1ead48b7546c71be538e20fae54ae4c2861d50b4486a9b622cc1793739bde"
+    }
+  ],
+  "coupling": "OmniSurfaceBase line 613 supplies state::meters_per_scene_unit()*native_depth. OmniShared lines123-140 compute sigma_t=-log(T/(1+max(S)))/depth; a=compute_albedo(T*S); sigma_a=sigma_t*a^4; sigma_s=sigma_t-sigma_a. Scatter changes both extinction and the absorption/scattering split, rather than being a direct independent sigma_s slider.",
+  "coefficient_units": "MDL length interpretation must also be checked against known physical-distance captures; no field turbidity units assigned."
+}

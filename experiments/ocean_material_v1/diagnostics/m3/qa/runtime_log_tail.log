@@ -1,0 +1,500 @@
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,100ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,106ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:59:03Z [5,472,107ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:59:03Z [5,472,107ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:03Z [5,472,107ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:59:03Z [5,472,116ms] [Info] [carb.audio.output] {speakers = 0x00000003, map = 0x7ffcb5984810}
+2026-10-29T12:59:03Z [5,472,116ms] [Info] [omni.usd.audio] initial audio volumes: (1.00, 1.00, 1.00)
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] UsdManager::createHydraEngineWithDefaultConfigImpl - engine: 'rtx'
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] HydraEngineManager::addEngine - added new engine:  uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] UsdManager::createNewHydraEngineInstance - created new hydra engine instance name: 'rtx', uid: 1117, index: 1
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] UsdManager::addHydraEngineWithConfiguration - engine: ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1'
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] UsdManager::getHydraEngineDeviceMask - engine: 'rtx', mask: 1
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.rtx] Setting mgpu copy backend to 'copyQueue'
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.hydratexture.plugin] HydraTexture with name 'omni_kit_widget_viewport_ViewportTexture_93' has settings-path of '/exts/omni.kit.hydra_texture/omni_kit_widget_viewport_ViewportTexture_93/'
+2026-10-29T12:59:03Z [5,472,145ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:03Z [5,472,147ms] [Info] [omni.hydra.rtx] [MBVH]: Creating SceneRenderer 1 with raytracing motion 'OFF' (device mask: 0x1)
+2026-10-29T12:59:03Z [5,472,154ms] [Info] [carb.scenerenderer-rtx.plugin] [MBVH]: RtxRenderContext 1 has motion instance 'DISABLED' (device mask: 0x1)
+2026-10-29T12:59:03Z [5,472,155ms] [Info] [omni.rtx] The list of unsupported driver ranges being verified with known bugs (RTX):
+[575.00, 575.57.08)
+[575.58, 575.64)
+[570.00, 570.158.01)
+[570.159, 570.169)
+[0.00, 550.90.07)
+The recommended drivers:
+- 580.95.05 (GameReady, Studio, RTX/Quadro, Grid/vGPU)
+
+The latest driver version may also work but is not fully tested.
+2026-10-29T12:59:03Z [5,472,206ms] [Info] [omni.rtx] DLSS Frame Generation support unavailable (reason code 0x01000010)
+2026-10-29T12:59:03Z [5,472,209ms] [Info] [omni.rtx] Creating Optix 7.5 adaptor for device 0
+2026-10-29T12:59:03Z [5,472,211ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:03Z [5,472,220ms] [Info] [omni.kit.imgui_renderer.plugin] omni::ui::windowmanager::IWindowCallbackManager::getWindowSetCallbackCount changed from 14 to 15 during iteration
+2026-10-29T12:59:03Z [5,472,230ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:03Z [5,472,274ms] [Info] [omni.usd] UsdManager::initializeHydraEngineInstance - engine initialized ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:03Z [5,472,274ms] [Info] [omni.usd] UsdContext::addHydraEngineImp - engine uid: 1117
+2026-10-29T12:59:03Z [5,472,274ms] [Info] [omni.usd] [UsdContext] Set default Hydra Engine uid: 1117 type: rtx
+2026-10-29T12:59:03Z [5,472,300ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:03Z [5,472,301ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - engine to add ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:03Z [5,472,301ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - succesfully created engine uid: 1117
+2026-10-29T12:59:03Z [5,472,389ms] [Info] [rtx.scenedb] [MBVH]: Creating scene acceleration structures for context 1, device mask: 0x1
+2026-10-29T12:59:03Z [5,472,392ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - set default RTX engine: 1117
+2026-10-29T12:59:03Z [5,472,427ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:03Z [5,472,429ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:03Z [5,472,429ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:03Z [5,472,429ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:03Z [5,472,429ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:03Z [5,472,429ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:03Z [5,472,429ms] [Info] [omni.usd] UsdContext::createViewport - handle: 0, engine: 1117
+2026-10-29T12:59:03Z [5,472,460ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) assigned to device 0
+2026-10-29T12:59:03Z [5,472,460ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) switching to 1x1 layout
+2026-10-29T12:59:04Z [5,473,057ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 0
+2026-10-29T12:59:04Z [5,473,098ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T12:59:04Z [5,473,098ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:04Z [5,473,100ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:04Z [5,473,100ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:04Z [5,473,100ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:04Z [5,473,100ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:04Z [5,473,100ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:04Z [5,473,100ms] [Info] [omni.usd] UsdContext::createViewport - handle: 1, engine: 1117
+2026-10-29T12:59:04Z [5,473,108ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) assigned to device 0
+2026-10-29T12:59:04Z [5,473,108ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) switching to 1x1 layout
+2026-10-29T12:59:04Z [5,473,367ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) assigned to device 0
+2026-10-29T12:59:04Z [5,473,367ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) switching to 1x1 layout
+2026-10-29T12:59:12Z [5,480,903ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 1
+2026-10-29T12:59:12Z [5,480,954ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) assigned to device 0
+2026-10-29T12:59:12Z [5,480,954ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_93) switching to 1x1 layout
+2026-10-29T12:59:12Z [5,481,182ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T12:59:12Z [5,481,186ms] [Info] [omni.rtx.materials] Destroying MdlShadeNode for prim: /WaterDiagnostic/Looks/ClearWater/Shader (rtx)
+2026-10-29T12:59:12Z [5,481,210ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context: 0x5924d5b61370
+2026-10-29T12:59:12Z [5,481,210ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context ptr: 0x5924d5b61370
+2026-10-29T12:59:12Z [5,481,210ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl
+2026-10-29T12:59:12Z [5,481,336ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl - 
+2026-10-29T12:59:12Z [5,481,336ms] [Info] [omni.usd] UsdManager::destroyAndRemoveHydraEngine - engine uid: 1117
+2026-10-29T12:59:12Z [5,481,336ms] [Info] [omni.usd] UsdManager::destroyHydraEngineImpl - engine uid: 1117
+2026-10-29T12:59:12Z [5,481,336ms] [Info] [omni.usd] UsdContext::removeHydraEngineImpl - engine: 1117
+2026-10-29T12:59:12Z [5,481,336ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:59:12Z [5,481,336ms] [Info] [omni.usd] UsdManager::resetHydraEngineInstanceData - engine: ' uid: 1117 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:12Z [5,481,337ms] [Info] [omni.usd] HydraEngineManager::releaseUnusedEngine - removed engine: 1117
+2026-10-29T12:59:12Z [5,481,516ms] [Info] [omni.usd] HydraEngineManager::removeEngine - called with uid: 1117
+2026-10-29T12:59:12Z [5,481,516ms] [Info] [omni.usd] HydraEngineManager::removeEngine - engine : 1117 completed
+2026-10-29T12:59:13Z [5,481,778ms] [Info] [omni.usd] Transferring /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/scene.usda
+
+2026-10-29T12:59:13Z [5,481,778ms] [Info] [omni.usd] /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_k_hnbqm6/scene.usda transferred successfully in 0.00 seconds
+
+2026-10-29T12:59:13Z [5,481,784ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:59:13Z [5,481,784ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:59:13Z [5,481,785ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:59:13Z [5,481,785ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,785ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:59:13Z [5,481,785ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:59:13Z [5,481,785ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,785ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:59:13Z [5,481,790ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,791ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:59:13Z [5,481,791ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:59:13Z [5,481,791ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:13Z [5,481,791ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:59:13Z [5,481,800ms] [Info] [carb.audio.output] {speakers = 0x00000003, map = 0x7ffcb5984810}
+2026-10-29T12:59:13Z [5,481,800ms] [Info] [omni.usd.audio] initial audio volumes: (1.00, 1.00, 1.00)
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] UsdManager::createHydraEngineWithDefaultConfigImpl - engine: 'rtx'
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] HydraEngineManager::addEngine - added new engine:  uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] UsdManager::createNewHydraEngineInstance - created new hydra engine instance name: 'rtx', uid: 1118, index: 1
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] UsdManager::addHydraEngineWithConfiguration - engine: ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1'
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.usd] UsdManager::getHydraEngineDeviceMask - engine: 'rtx', mask: 1
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.rtx] Setting mgpu copy backend to 'copyQueue'
+2026-10-29T12:59:13Z [5,481,829ms] [Info] [omni.hydratexture.plugin] HydraTexture with name 'omni_kit_widget_viewport_ViewportTexture_94' has settings-path of '/exts/omni.kit.hydra_texture/omni_kit_widget_viewport_ViewportTexture_94/'
+2026-10-29T12:59:13Z [5,481,830ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:13Z [5,481,832ms] [Info] [omni.hydra.rtx] [MBVH]: Creating SceneRenderer 1 with raytracing motion 'OFF' (device mask: 0x1)
+2026-10-29T12:59:13Z [5,481,838ms] [Info] [carb.scenerenderer-rtx.plugin] [MBVH]: RtxRenderContext 1 has motion instance 'DISABLED' (device mask: 0x1)
+2026-10-29T12:59:13Z [5,481,839ms] [Info] [omni.rtx] The list of unsupported driver ranges being verified with known bugs (RTX):
+[575.00, 575.57.08)
+[575.58, 575.64)
+[570.00, 570.158.01)
+[570.159, 570.169)
+[0.00, 550.90.07)
+The recommended drivers:
+- 580.95.05 (GameReady, Studio, RTX/Quadro, Grid/vGPU)
+
+The latest driver version may also work but is not fully tested.
+2026-10-29T12:59:13Z [5,481,888ms] [Info] [omni.rtx] DLSS Frame Generation support unavailable (reason code 0x01000010)
+2026-10-29T12:59:13Z [5,481,892ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:13Z [5,481,893ms] [Info] [omni.rtx] Creating Optix 7.5 adaptor for device 0
+2026-10-29T12:59:13Z [5,481,904ms] [Info] [omni.kit.imgui_renderer.plugin] omni::ui::windowmanager::IWindowCallbackManager::getWindowSetCallbackCount changed from 14 to 15 during iteration
+2026-10-29T12:59:13Z [5,481,915ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:13Z [5,481,948ms] [Info] [omni.usd] UsdManager::initializeHydraEngineInstance - engine initialized ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:13Z [5,481,949ms] [Info] [omni.usd] UsdContext::addHydraEngineImp - engine uid: 1118
+2026-10-29T12:59:13Z [5,481,949ms] [Info] [omni.usd] [UsdContext] Set default Hydra Engine uid: 1118 type: rtx
+2026-10-29T12:59:13Z [5,482,001ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:13Z [5,482,001ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - engine to add ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:13Z [5,482,001ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - succesfully created engine uid: 1118
+2026-10-29T12:59:13Z [5,482,077ms] [Info] [rtx.scenedb] [MBVH]: Creating scene acceleration structures for context 1, device mask: 0x1
+2026-10-29T12:59:13Z [5,482,081ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - set default RTX engine: 1118
+2026-10-29T12:59:13Z [5,482,116ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:13Z [5,482,192ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:13Z [5,482,192ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:13Z [5,482,192ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:13Z [5,482,192ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:13Z [5,482,192ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:13Z [5,482,192ms] [Info] [omni.usd] UsdContext::createViewport - handle: 0, engine: 1118
+2026-10-29T12:59:13Z [5,482,223ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) assigned to device 0
+2026-10-29T12:59:13Z [5,482,223ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) switching to 1x1 layout
+2026-10-29T12:59:14Z [5,482,885ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 0
+2026-10-29T12:59:14Z [5,482,937ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) assigned to device 0
+2026-10-29T12:59:14Z [5,482,937ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) switching to 1x1 layout
+2026-10-29T12:59:14Z [5,483,162ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T12:59:14Z [5,483,162ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:14Z [5,483,164ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:14Z [5,483,164ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:14Z [5,483,164ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:14Z [5,483,164ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:14Z [5,483,164ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:14Z [5,483,164ms] [Info] [omni.usd] UsdContext::createViewport - handle: 1, engine: 1118
+2026-10-29T12:59:14Z [5,483,170ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) assigned to device 0
+2026-10-29T12:59:14Z [5,483,170ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) switching to 1x1 layout
+2026-10-29T12:59:14Z [5,483,427ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) assigned to device 0
+2026-10-29T12:59:14Z [5,483,427ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) switching to 1x1 layout
+2026-10-29T12:59:22Z [5,491,306ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 1
+2026-10-29T12:59:22Z [5,491,534ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) assigned to device 0
+2026-10-29T12:59:22Z [5,491,534ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_94) switching to 1x1 layout
+2026-10-29T12:59:23Z [5,491,610ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T12:59:23Z [5,491,614ms] [Info] [omni.rtx.materials] Destroying MdlShadeNode for prim: /WaterDiagnostic/Looks/ClearWater/Shader (rtx)
+2026-10-29T12:59:23Z [5,491,636ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context: 0x5924d593f730
+2026-10-29T12:59:23Z [5,491,636ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context ptr: 0x5924d593f730
+2026-10-29T12:59:23Z [5,491,636ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl
+2026-10-29T12:59:23Z [5,491,762ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl - 
+2026-10-29T12:59:23Z [5,491,762ms] [Info] [omni.usd] UsdManager::destroyAndRemoveHydraEngine - engine uid: 1118
+2026-10-29T12:59:23Z [5,491,762ms] [Info] [omni.usd] UsdManager::destroyHydraEngineImpl - engine uid: 1118
+2026-10-29T12:59:23Z [5,491,762ms] [Info] [omni.usd] UsdContext::removeHydraEngineImpl - engine: 1118
+2026-10-29T12:59:23Z [5,491,762ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:59:23Z [5,491,762ms] [Info] [omni.usd] UsdManager::resetHydraEngineInstanceData - engine: ' uid: 1118 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:23Z [5,491,763ms] [Info] [omni.usd] HydraEngineManager::releaseUnusedEngine - removed engine: 1118
+2026-10-29T12:59:23Z [5,492,134ms] [Info] [omni.usd] HydraEngineManager::removeEngine - called with uid: 1118
+2026-10-29T12:59:23Z [5,492,134ms] [Info] [omni.usd] HydraEngineManager::removeEngine - engine : 1118 completed
+2026-10-29T12:59:23Z [5,492,385ms] [Info] [omni.usd] Transferring /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/scene.usda
+
+2026-10-29T12:59:23Z [5,492,385ms] [Info] [omni.usd] /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_kdgb5tjr/scene.usda transferred successfully in 0.00 seconds
+
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T12:59:23Z [5,492,390ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,391ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,395ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T12:59:23Z [5,492,396ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T12:59:23Z [5,492,405ms] [Info] [carb.audio.output] {speakers = 0x00000003, map = 0x7ffcb5984810}
+2026-10-29T12:59:23Z [5,492,405ms] [Info] [omni.usd.audio] initial audio volumes: (1.00, 1.00, 1.00)
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] UsdManager::createHydraEngineWithDefaultConfigImpl - engine: 'rtx'
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] HydraEngineManager::addEngine - added new engine:  uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] UsdManager::createNewHydraEngineInstance - created new hydra engine instance name: 'rtx', uid: 1119, index: 1
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] UsdManager::addHydraEngineWithConfiguration - engine: ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1'
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] UsdManager::getHydraEngineDeviceMask - engine: 'rtx', mask: 1
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.rtx] Setting mgpu copy backend to 'copyQueue'
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.hydratexture.plugin] HydraTexture with name 'omni_kit_widget_viewport_ViewportTexture_95' has settings-path of '/exts/omni.kit.hydra_texture/omni_kit_widget_viewport_ViewportTexture_95/'
+2026-10-29T12:59:23Z [5,492,432ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:23Z [5,492,434ms] [Info] [omni.hydra.rtx] [MBVH]: Creating SceneRenderer 1 with raytracing motion 'OFF' (device mask: 0x1)
+2026-10-29T12:59:23Z [5,492,440ms] [Info] [carb.scenerenderer-rtx.plugin] [MBVH]: RtxRenderContext 1 has motion instance 'DISABLED' (device mask: 0x1)
+2026-10-29T12:59:23Z [5,492,441ms] [Info] [omni.rtx] The list of unsupported driver ranges being verified with known bugs (RTX):
+[575.00, 575.57.08)
+[575.58, 575.64)
+[570.00, 570.158.01)
+[570.159, 570.169)
+[0.00, 550.90.07)
+The recommended drivers:
+- 580.95.05 (GameReady, Studio, RTX/Quadro, Grid/vGPU)
+
+The latest driver version may also work but is not fully tested.
+2026-10-29T12:59:23Z [5,492,484ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:23Z [5,492,488ms] [Info] [omni.rtx] DLSS Frame Generation support unavailable (reason code 0x01000010)
+2026-10-29T12:59:23Z [5,492,492ms] [Info] [omni.rtx] Creating Optix 7.5 adaptor for device 0
+2026-10-29T12:59:23Z [5,492,493ms] [Info] [omni.kit.imgui_renderer.plugin] omni::ui::windowmanager::IWindowCallbackManager::getWindowSetCallbackCount changed from 14 to 15 during iteration
+2026-10-29T12:59:23Z [5,492,503ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:24Z [5,492,547ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:24Z [5,492,569ms] [Info] [omni.usd] UsdManager::initializeHydraEngineInstance - engine initialized ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:24Z [5,492,569ms] [Info] [omni.usd] UsdContext::addHydraEngineImp - engine uid: 1119
+2026-10-29T12:59:24Z [5,492,569ms] [Info] [omni.usd] [UsdContext] Set default Hydra Engine uid: 1119 type: rtx
+2026-10-29T12:59:24Z [5,492,599ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:24Z [5,492,599ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - engine to add ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:24Z [5,492,599ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - succesfully created engine uid: 1119
+2026-10-29T12:59:24Z [5,492,744ms] [Info] [rtx.scenedb] [MBVH]: Creating scene acceleration structures for context 1, device mask: 0x1
+2026-10-29T12:59:24Z [5,492,748ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - set default RTX engine: 1119
+2026-10-29T12:59:24Z [5,492,779ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:24Z [5,492,855ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,492,855ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,492,855ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:24Z [5,492,855ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,492,855ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,492,856ms] [Info] [omni.usd] UsdContext::createViewport - handle: 0, engine: 1119
+2026-10-29T12:59:24Z [5,492,885ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) assigned to device 0
+2026-10-29T12:59:24Z [5,492,885ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) switching to 1x1 layout
+2026-10-29T12:59:24Z [5,493,337ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 0
+2026-10-29T12:59:24Z [5,493,527ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T12:59:24Z [5,493,527ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T12:59:24Z [5,493,529ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,493,529ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,493,529ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:24Z [5,493,529ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,493,529ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T12:59:24Z [5,493,529ms] [Info] [omni.usd] UsdContext::createViewport - handle: 1, engine: 1119
+2026-10-29T12:59:24Z [5,493,537ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) assigned to device 0
+2026-10-29T12:59:24Z [5,493,537ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) switching to 1x1 layout
+2026-10-29T12:59:25Z [5,493,791ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) assigned to device 0
+2026-10-29T12:59:25Z [5,493,791ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) switching to 1x1 layout
+2026-10-29T12:59:32Z [5,501,533ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 1
+2026-10-29T12:59:33Z [5,501,641ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) assigned to device 0
+2026-10-29T12:59:33Z [5,501,641ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_95) switching to 1x1 layout
+2026-10-29T12:59:33Z [5,501,793ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T12:59:33Z [5,501,797ms] [Info] [omni.rtx.materials] Destroying MdlShadeNode for prim: /WaterDiagnostic/Looks/ClearWater/Shader (rtx)
+2026-10-29T12:59:33Z [5,501,821ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context: 0x5924c8621f40
+2026-10-29T12:59:33Z [5,501,821ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context ptr: 0x5924c8621f40
+2026-10-29T12:59:33Z [5,501,821ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl
+2026-10-29T12:59:33Z [5,501,882ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl - 
+2026-10-29T12:59:33Z [5,501,882ms] [Info] [omni.usd] UsdManager::destroyAndRemoveHydraEngine - engine uid: 1119
+2026-10-29T12:59:33Z [5,501,882ms] [Info] [omni.usd] UsdManager::destroyHydraEngineImpl - engine uid: 1119
+2026-10-29T12:59:33Z [5,501,882ms] [Info] [omni.usd] UsdContext::removeHydraEngineImpl - engine: 1119
+2026-10-29T12:59:33Z [5,501,882ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T12:59:33Z [5,501,882ms] [Info] [omni.usd] UsdManager::resetHydraEngineInstanceData - engine: ' uid: 1119 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T12:59:33Z [5,501,883ms] [Info] [omni.usd] HydraEngineManager::releaseUnusedEngine - removed engine: 1119
+2026-10-29T12:59:33Z [5,502,045ms] [Info] [omni.usd] HydraEngineManager::removeEngine - called with uid: 1119
+2026-10-29T12:59:33Z [5,502,045ms] [Info] [omni.usd] HydraEngineManager::removeEngine - engine : 1119 completed
+2026-10-29T13:00:15Z [5,543,638ms] [Info] [omni.usd] Transferring /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/scene.usda
+
+2026-10-29T13:00:15Z [5,543,638ms] [Info] [omni.usd] /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m3/captures_controlled/nadir_0pah9zc4/scene.usda transferred successfully in 0.00 seconds
+
+2026-10-29T13:00:15Z [5,543,644ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T13:00:15Z [5,543,644ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T13:00:15Z [5,543,645ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T13:00:15Z [5,543,645ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,645ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T13:00:15Z [5,543,645ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T13:00:15Z [5,543,645ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,645ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T13:00:15Z [5,543,650ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T13:00:15Z [5,543,651ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:00:15Z [5,543,651ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T13:00:15Z [5,543,660ms] [Info] [carb.audio.output] {speakers = 0x00000003, map = 0x7ffcb5984810}
+2026-10-29T13:00:15Z [5,543,660ms] [Info] [omni.usd.audio] initial audio volumes: (1.00, 1.00, 1.00)
+2026-10-29T13:00:15Z [5,543,660ms] [Info] [omni.usd.audio] updated world unit scale {1.00 => 0.01}
+2026-10-29T13:00:15Z [5,543,689ms] [Info] [omni.usd] UsdManager::createHydraEngineWithDefaultConfigImpl - engine: 'rtx'
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] HydraEngineManager::addEngine - added new engine:  uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] UsdManager::createNewHydraEngineInstance - created new hydra engine instance name: 'rtx', uid: 1120, index: 1
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] UsdManager::addHydraEngineWithConfiguration - engine: ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 0 creationIndex: 1'
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] UsdManager::getHydraEngineDeviceMask - engine: 'rtx', mask: 1
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.rtx] Setting mgpu copy backend to 'copyQueue'
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.hydratexture.plugin] HydraTexture with name 'omni_kit_widget_viewport_ViewportTexture_96' has settings-path of '/exts/omni.kit.hydra_texture/omni_kit_widget_viewport_ViewportTexture_96/'
+2026-10-29T13:00:15Z [5,543,690ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T13:00:15Z [5,543,693ms] [Info] [omni.hydra.rtx] [MBVH]: Creating SceneRenderer 1 with raytracing motion 'OFF' (device mask: 0x1)
+2026-10-29T13:00:15Z [5,543,698ms] [Info] [carb.scenerenderer-rtx.plugin] [MBVH]: RtxRenderContext 1 has motion instance 'DISABLED' (device mask: 0x1)
+2026-10-29T13:00:15Z [5,543,698ms] [Info] [omni.rtx] The list of unsupported driver ranges being verified with known bugs (RTX):
+[575.00, 575.57.08)
+[575.58, 575.64)
+[570.00, 570.158.01)
+[570.159, 570.169)
+[0.00, 550.90.07)
+The recommended drivers:
+- 580.95.05 (GameReady, Studio, RTX/Quadro, Grid/vGPU)
+
+The latest driver version may also work but is not fully tested.
+2026-10-29T13:00:15Z [5,543,748ms] [Info] [omni.rtx] DLSS Frame Generation support unavailable (reason code 0x01000010)
+2026-10-29T13:00:15Z [5,543,752ms] [Info] [omni.rtx] Creating Optix 7.5 adaptor for device 0
+2026-10-29T13:00:15Z [5,543,755ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T13:00:15Z [5,543,765ms] [Info] [omni.kit.imgui_renderer.plugin] omni::ui::windowmanager::IWindowCallbackManager::getWindowSetCallbackCount changed from 14 to 15 during iteration
+2026-10-29T13:00:15Z [5,543,775ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T13:00:15Z [5,543,833ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T13:00:15Z [5,543,834ms] [Info] [omni.usd] UsdManager::initializeHydraEngineInstance - engine initialized ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T13:00:15Z [5,543,834ms] [Info] [omni.usd] UsdContext::addHydraEngineImp - engine uid: 1120
+2026-10-29T13:00:15Z [5,543,834ms] [Info] [omni.usd] [UsdContext] Set default Hydra Engine uid: 1120 type: rtx
+2026-10-29T13:00:15Z [5,543,834ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - engine to add ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T13:00:15Z [5,543,834ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - succesfully created engine uid: 1120
+2026-10-29T13:00:15Z [5,543,935ms] [Info] [rtx.scenedb] [MBVH]: Creating scene acceleration structures for context 1, device mask: 0x1
+2026-10-29T13:00:15Z [5,543,940ms] [Info] [omni.usd] UsdContext::addHydraEngineWithExistingInstanceDataImp - set default RTX engine: 1120
+2026-10-29T13:00:15Z [5,543,971ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T13:00:15Z [5,544,046ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:15Z [5,544,046ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:15Z [5,544,046ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T13:00:15Z [5,544,046ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:15Z [5,544,046ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:15Z [5,544,047ms] [Info] [omni.usd] UsdContext::createViewport - handle: 0, engine: 1120
+2026-10-29T13:00:15Z [5,544,090ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) assigned to device 0
+2026-10-29T13:00:15Z [5,544,090ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) switching to 1x1 layout
+2026-10-29T13:00:16Z [5,544,769ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 0
+2026-10-29T13:00:16Z [5,544,844ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) assigned to device 0
+2026-10-29T13:00:16Z [5,544,844ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) switching to 1x1 layout
+2026-10-29T13:00:16Z [5,545,099ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T13:00:16Z [5,545,100ms] [Info] [omni.usd] UsdContext::createViewport - engine type: 'rtx', tick rate: 120 , flags: 0 , device: 0
+2026-10-29T13:00:16Z [5,545,101ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:16Z [5,545,101ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:16Z [5,545,101ms] [Info] [omni.usd] UsdContext::createRunloopThreadForHydraEngineImpl - engine: ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T13:00:16Z [5,545,101ms] [Info] [omni.usd] [MBVH]: enableHydraengineMasking: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:16Z [5,545,101ms] [Info] [omni.usd] [MBVH]: raytracingMotion/enable: OFF, for indexForEngineInstance: 1
+2026-10-29T13:00:16Z [5,545,101ms] [Info] [omni.usd] UsdContext::createViewport - handle: 1, engine: 1120
+2026-10-29T13:00:16Z [5,545,108ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) assigned to device 0
+2026-10-29T13:00:16Z [5,545,108ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) switching to 1x1 layout
+2026-10-29T13:00:16Z [5,545,372ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) assigned to device 0
+2026-10-29T13:00:16Z [5,545,372ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) switching to 1x1 layout
+2026-10-29T13:00:24Z [5,553,030ms] [Info] [omni.usd] UsdContext::destroyViewport - handle: 1
+2026-10-29T13:00:24Z [5,553,138ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) assigned to device 0
+2026-10-29T13:00:24Z [5,553,138ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_96) switching to 1x1 layout
+2026-10-29T13:00:24Z [5,553,289ms] [Info] [omni.usd] UsdContext::destroyViewport - engine: ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1
+2026-10-29T13:00:24Z [5,553,293ms] [Info] [omni.rtx.materials] Destroying MdlShadeNode for prim: /WaterDiagnostic/Looks/ClearWater/Shader (rtx)
+2026-10-29T13:00:24Z [5,553,319ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context: 0x59249ea330f0
+2026-10-29T13:00:24Z [5,553,319ms] [Info] [omni.usd] UsdManager::releaseHydraEnginesForSpecificUsdContextImpl - usd context ptr: 0x59249ea330f0
+2026-10-29T13:00:24Z [5,553,319ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl
+2026-10-29T13:00:24Z [5,553,444ms] [Info] [omni.usd] UsdContext::removeAllHydraEnginesImpl - 
+2026-10-29T13:00:24Z [5,553,444ms] [Info] [omni.usd] UsdManager::destroyAndRemoveHydraEngine - engine uid: 1120
+2026-10-29T13:00:24Z [5,553,444ms] [Info] [omni.usd] UsdManager::destroyHydraEngineImpl - engine uid: 1120
+2026-10-29T13:00:24Z [5,553,444ms] [Info] [omni.usd] UsdContext::removeHydraEngineImpl - engine: 1120
+2026-10-29T13:00:24Z [5,553,444ms] [Warning] [omni.usd] UsdContext::removeHydraEngineImpl - found not in use hydra engine
+2026-10-29T13:00:24Z [5,553,444ms] [Info] [omni.usd] UsdManager::resetHydraEngineInstanceData - engine: ' uid: 1120 type: rtx flags: 0 tickRateInHz: 0 deviceMask: 1 creationIndex: 1'
+2026-10-29T13:00:24Z [5,553,445ms] [Info] [omni.usd] HydraEngineManager::releaseUnusedEngine - removed engine: 1120
+2026-10-29T13:00:25Z [5,553,562ms] [Info] [omni.usd] HydraEngineManager::removeEngine - called with uid: 1120
+2026-10-29T13:00:25Z [5,553,562ms] [Info] [omni.usd] HydraEngineManager::removeEngine - engine : 1120 completed
+2026-10-29T13:01:14Z [5,603,512ms] [Info] [omni.rtx.materials] Destroying MdlShadeNode for prim: /World/Looks/OceanWater/Shader (rtx)
+2026-10-29T13:01:14Z [5,603,526ms] [Info] [omni.rtx] IRenderSettingsContext destroying Usd value-cache for 9223026
+2026-10-29T13:01:14Z [5,603,528ms] [Warning] [carb] Plugin interface for a client: omni.hydratexture.plugin was already released.
+2026-10-29T13:01:15Z [5,603,588ms] [Info] [omni.usd] Transferring anon:0x74bdc35b4430
+
+2026-10-29T13:01:15Z [5,603,588ms] [Info] [omni.usd] anon:0x74bdc35b4430 transferred successfully in 0.00 seconds
+
+2026-10-29T13:01:15Z [5,603,591ms] [Info] [rtx.scenedb] [MBVH]: Creating scene acceleration structures for context 0, device mask: 0x1
+2026-10-29T13:01:15Z [5,603,613ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/menu_container.py", line 459, in __view_light_changed
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]:     ctx_key = _make_light_mode_setting_key(usd_context)
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0/omni/kit/viewport/menubar/lighting/utility.py", line 23, in _make_light_mode_setting_key
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = usd_context.get_stage()
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,614ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T13:01:15Z [5,603,618ms] [Error] [omni.kit.app._impl] [py stderr]: Traceback (most recent call last):
+2026-10-29T13:01:15Z [5,603,618ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 668, in __setting_changed
+2026-10-29T13:01:15Z [5,603,618ms] [Error] [omni.kit.app._impl] [py stderr]:     if _read_render_product_attr(self._viewport_api, USD_DEBUG_VIEW_TARGET) is None:
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 102, in _read_render_product_attr
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:     prim = _get_render_product_prim(viewport_api)
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 76, in _get_render_product_prim
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:     render_product_path = _get_render_product_path(viewport_api)
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100/omni/kit/viewport/menubar/render/renderer_menu_container.py", line 64, in _get_render_product_path
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:     stage = viewport_api.stage
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:             ^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100/omni/kit/widget/viewport/api.py", line 397, in stage
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:     return self.usd_context.get_stage()
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-29T13:01:15Z [5,603,619ms] [Error] [omni.kit.app._impl] [py stderr]: AttributeError: 'NoneType' object has no attribute 'get_stage'
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin] Found 1 CUDA device(s)
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin] Device 0: NVIDIA RTX A2000
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin]     Memory: 5797 MB
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin]     Compute Capability: 8.6
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin]     SM Count: 26
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin]     Integrated: No
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin] PhysXFoundation: CUDA device 0 found via Driver API.
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin] Using CUDA device ordinal 0.
+2026-10-29T13:01:15Z [5,603,621ms] [Info] [omni.physx.foundation.plugin] PhysXFoundation: Reusing existing CUDA context 0x5924652e1490 for device 0
+2026-10-29T13:01:15Z [5,603,627ms] [Info] [omni.usd.audio] updated world unit scale {1.00 => 0.01}
+2026-10-29T13:01:15Z [5,603,627ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Persp in anon:0x74bdc35b4430 to Sdf.SpecifierOver
+2026-10-29T13:01:15Z [5,603,628ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x74bdc35b4430 to Sdf.SpecifierOver
+2026-10-29T13:01:15Z [5,603,628ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x74bdc35b4430 to Sdf.SpecifierOver
+2026-10-29T13:01:15Z [5,603,629ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x74bdc35b4430 to Sdf.SpecifierOver
+2026-10-29T13:01:15Z [5,603,629ms] [Info] [omni.kit.widget.viewport.impl.utility] Skipping auto-frame for anonymous layer
+2026-10-29T13:01:15Z [5,603,659ms] [Info] [omni.kit.widget.cache_indicator.cache_state_menu] Changing UI to state: UIState.HUB_NOT_DETECTED
+2026-10-29T13:01:15Z [5,603,711ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0) assigned to device 0
+2026-10-29T13:01:15Z [5,603,711ms] [Info] [omni.rtx] View 0 (/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0) switching to 1x1 layout
+2026-10-29T13:01:15Z [5,604,290ms] [Info] [omni.kit.widget.cache_indicator.cache_state_menu] check_new_version: 2.4.0
+2026-10-29T13:01:15Z [5,604,290ms] [Info] [omni.kit.widget.cache_indicator.utils] omniverse.toml config file does not exist
+2026-10-29T13:01:15Z [5,604,290ms] [Info] [omni.kit.widget.cache_indicator.cache_state_menu] Changing UI to state: UIState.HUB_UPDATE_DETECTED
+2026-10-29T13:01:16Z [5,605,314ms] [Info] [omni.kit.app._impl] [py stdout]: [CRIS Render Service] Ocean animation stopped
+2026-10-29T13:01:17Z [5,605,550ms] [Info] [carb] `get_update_event_stream` is deprecated. Use Events 2.0. Callstack:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.pip_archive-0.0.0+698af100.lx64.cp312/pip_prebundle/fastapi/routing.py", line 289, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/exts/cris.madil.render_service/cris/madil/render_service/scene_setup.py", line 157, in setup_marine_scene
+    ocean_result = await start_ocean_animation(
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/exts/cris.madil.render_service/cris/madil/render_service/ocean.py", line 1197, in start_ocean_animation
+    .get_update_event_stream()
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/carb/__init__.py", line 108, in wrapped
+    obj.__name__, message, "".join(traceback.format_stack(limit=4))[:-1]
+2026-10-29T13:01:17Z [5,605,550ms] [Info] [omni.kit.app._impl] [py stdout]: [CRIS Render Service] Ocean animation started: /World/Ocean
+2026-10-29T13:01:17Z [5,605,555ms] [Info] [omni.kit.app._impl] [py stdout]: [CRIS Render Service] OmniSurface seawater bound: /World/Looks/OceanWater -> /World/Ocean
+2026-10-29T13:01:17Z [5,605,557ms] [Info] [omni.kit.app._impl] [py stdout]: [CRIS Render Service] Environment created: /World/Environment/Sky, /World/Environment/Sun
+2026-10-29T13:01:17Z [5,605,559ms] [Info] [omni.kit.app._impl] [py stdout]: [CRIS Render Service] Spawned cetacean Dolphin_001 from /home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd
+2026-10-29T13:01:17Z [5,605,560ms] [Info] [carb] `get_update_event_stream` is deprecated. Use Events 2.0. Callstack:   File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.pip_archive-0.0.0+698af100.lx64.cp312/pip_prebundle/fastapi/routing.py", line 289, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/exts/cris.madil.render_service/cris/madil/render_service/scene_setup.py", line 334, in setup_marine_scene
+    camera_result = await start_chase_camera(camera_data)
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/exts/cris.madil.render_service/cris/madil/render_service/camera.py", line 348, in start_chase_camera
+    .get_update_event_stream()
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/carb/__init__.py", line 108, in wrapped
+    obj.__name__, message, "".join(traceback.format_stack(limit=4))[:-1]
+2026-10-29T13:01:17Z [5,605,560ms] [Info] [omni.kit.app._impl] [py stdout]: [CRIS Marine Setup] Complete MARLIN marine scene created.
+2026-10-29T13:01:17Z [5,605,763ms] [Info] [omni.rtx] Setting mgpu copy backend to 'copyQueue'
+2026-10-29T13:01:17Z [5,606,179ms] [Info] [omni.rtx.materials] Destroying MdlShadeNode for prim: /World/Looks/OceanWater/Shader (rtx)

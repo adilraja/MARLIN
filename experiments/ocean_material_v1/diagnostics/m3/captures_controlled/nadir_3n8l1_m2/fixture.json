@@ -1,0 +1,100 @@
+{
+  "condition": "water",
+  "probe": "positive_depth",
+  "geometry": {
+    "water_bounds_m": [
+      [
+        -5,
+        -2,
+        -5
+      ],
+      [
+        5,
+        0,
+        5
+      ]
+    ],
+    "target_center_m": [
+      0,
+      -0.75,
+      0
+    ],
+    "target_size_m": [
+      0.18,
+      0.18
+    ],
+    "background_y_m": -1.8,
+    "target_inside_declared_bounds": true,
+    "closed": true,
+    "water_omitted_for_no_water_control": false,
+    "measured_target_world_size_m": [
+      0.18,
+      0.0,
+      0.18
+    ],
+    "boundary_edges": 0,
+    "face_normals": [
+      [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "opacity_override_authored": false
+  },
+  "parameters": {
+    "ocean_name": "Ocean",
+    "material_name": "OceanWater",
+    "ior": 1.333,
+    "roughness": 0.001,
+    "transmission": 1.0,
+    "base_weight": 0,
+    "base_color": [
+      0.02,
+      0.1,
+      0.13
+    ],
+    "transmission_color": [
+      1,
+      1,
+      1
+    ],
+    "transmission_depth": 100,
+    "scattering_color": [
+      0,
+      0,
+      0
+    ],
+    "scattering_anisotropy": 0,
+    "thin_walled": false
+  },
+  "ior_provenance": "Air=1.0, water=1.333; engineering assumptions, not measured seawater.",
+  "stage_meters_per_unit": 0.01,
+  "normal_detail": "none",
+  "waves": "none"
+}

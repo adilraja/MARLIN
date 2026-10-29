@@ -32,7 +32,8 @@ class CalibrationRequest(BaseModel):
     roll_deg: float = Field(default=0, ge=-45, le=45)
 
 
-async def _capture(config, stage_builder=build_stage, output_root=None, viewport_setup=None, rendered_frames=0):
+async def _capture(config, stage_builder=build_stage, output_root=None, viewport_setup=None, rendered_frames=0,
+                   extra_capture=None):
     from omni.kit.viewport.utility import create_viewport_window, capture_viewport_to_file
     from pxr import Usd
     context_name = 'marlin_calibration_' + uuid.uuid4().hex
@@ -79,10 +80,12 @@ async def _capture(config, stage_builder=build_stage, output_root=None, viewport
         for filename in ('warmup.png', 'rgb.png'):
             capture = capture_viewport_to_file(viewport, file_path=str(directory / filename))
             await capture.wait_for_result(completion_frames=5)
+        extra_metadata = await extra_capture(viewport, directory) if extra_capture is not None else {}
         if omni.usd.get_context().get_stage() != main_stage:
             raise RuntimeError('Default context stage changed during capture')
         metadata = config.metadata()
         metadata.update(record_projection(stage,viewport))
+        metadata.update(extra_metadata)
         metadata.update(usd_context=context_name, default_stage_retained=True,
                         scene_sha256=hashlib.sha256((directory/'scene.usda').read_bytes()).hexdigest(),
                         rendered_image='rgb.png', scene_file='scene.usda',

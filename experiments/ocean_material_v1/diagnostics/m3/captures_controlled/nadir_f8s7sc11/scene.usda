@@ -1,0 +1,299 @@
+#usda 1.0
+(
+    defaultPrim = "WaterDiagnostic"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "WaterDiagnostic"
+{
+    def Mesh "Target_00" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/Fiducial>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-9, -75, -9), (-9, -75, 9), (9, -75, 9), (9, -75, -9)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def "Looks"
+    {
+        def Material "Fiducial"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/Fiducial/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (10, 10, 10)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Black"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/Black/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "RedMarker"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/RedMarker/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (10, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "GreenMarker"
+        {
+            token outputs:surface.connect = </WaterDiagnostic/Looks/GreenMarker/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 10, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "ClearWater"
+        {
+            token outputs:mdl:surface.connect = </WaterDiagnostic/Looks/ClearWater/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurface.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface"
+                color3f inputs:diffuse_reflection_color = (0.02, 0.1, 0.13)
+                float inputs:diffuse_reflection_weight = 0
+                bool inputs:enable_specular_transmission = 1
+                float inputs:metalness = 0
+                color3f inputs:specular_reflection_color = (1, 1, 1)
+                float inputs:specular_reflection_ior = 1.333
+                float inputs:specular_reflection_roughness = 0.001
+                float inputs:specular_reflection_weight = 1
+                color3f inputs:specular_transmission_color = (0.6, 0.8, 0.9)
+                float inputs:specular_transmission_scatter_anisotropy = 0
+                color3f inputs:specular_transmission_scattering_color = (0, 0, 0)
+                float inputs:specular_transmission_scattering_depth = 100
+                float inputs:specular_transmission_weight = 1
+                bool inputs:thin_walled = 0
+                token outputs:out
+            }
+        }
+    }
+
+    def Mesh "Background" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/Black>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-480, -180, -480), (-480, -180, 480), (480, -180, 480), (480, -180, -480)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "RedMarker" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/RedMarker>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-300, 400, -400), (0, 400, -400), (0, 600, -400), (-300, 600, -400)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "GreenMarker" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </WaterDiagnostic/Looks/GreenMarker>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(0, 400, -400), (300, 400, -400), (300, 600, -400), (0, 600, -400)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def DomeLight "Dome"
+    {
+        color3f inputs:color = (0.03, 0.03, 0.03)
+        float inputs:intensity = 10
+    }
+
+    def Mesh "Water" (
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 1, 2, 3, 4, 7, 6, 5, 0, 4, 5, 1, 1, 5, 6, 2, 2, 6, 7, 3, 3, 7, 4, 0]
+        rel material:binding = </WaterDiagnostic/Looks/ClearWater>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(-500, -200, -500), (500, -200, -500), (500, -200, 500), (-500, -200, 500), (-500, 0, -500), (500, 0, -500), (500, 0, 500), (-500, 0, 500)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Camera "Camera" (
+        prepend apiSchemas = ["OmniRtxCameraAutoExposureAPI_1", "OmniRtxCameraExposureAPI_1"]
+    )
+    {
+        float2 clippingRange = (1, 2500)
+        float exposure = 0
+        float exposure:fStop = 1
+        float exposure:iso = 100
+        float exposure:responsivity = 1
+        float exposure:time = 1
+        float focalLength = 35
+        float fStop = 0
+        float horizontalAperture = 20.48
+        float horizontalApertureOffset = 0
+        bool omni:rtx:autoExposure:enabled = 0
+        token projection = "perspective"
+        float verticalAperture = 15.36
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (0, 300, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+}
+
+def "Render" (
+    hide_in_stage_window = true
+    no_delete = true
+)
+{
+    def "OmniverseKit"
+    {
+        def "HydraTextures" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            def RenderProduct "omni_kit_widget_viewport_ViewportTexture_69" (
+                prepend apiSchemas = ["OmniRtxSettingsCommonAdvancedAPI_1", "OmniRtxSettingsRtAdvancedAPI_1", "OmniRtxSettingsPtAdvancedAPI_1", "OmniRtxSettingsParticleFieldAPI_1", "OmniRtxPostColorGradingAPI_1", "OmniRtxPostChromaticAberrationAPI_1", "OmniRtxPostBloomPhysicalAPI_1", "OmniRtxPostMatteObjectAPI_1", "OmniRtxPostCompositingAPI_1", "OmniRtxPostDofAPI_1", "OmniRtxPostMotionBlurAPI_1", "OmniRtxPostTvNoiseAPI_1", "OmniRtxPostTonemapIrayReinhardAPI_1", "OmniRtxPostDebugSettingsAPI_1", "OmniRtxDebugSettingsAPI_1"]
+                hide_in_stage_window = true
+                no_delete = true
+            )
+            {
+                rel camera = </WaterDiagnostic/Camera>
+                token omni:rtx:ambientOcclusion:denoiserMode = "none"
+                token omni:rtx:background:source:texture:textureMode = "repeatMirrored"
+                token omni:rtx:background:source:type = "domeLight"
+                bool omni:rtx:debug:view:pixelDebug:enableFixedTextPos = 1
+                token omni:rtx:directLighting:sampledLighting:denoisingTechnique = "None"
+                bool omni:rtx:dlss:frameGeneration = 1
+                color3f omni:rtx:fog:color = (0.03, 0.16, 0.2)
+                float omni:rtx:fog:colorIntensity = 0.5
+                float omni:rtx:fog:distanceDensity = 0.04
+                bool omni:rtx:fog:enabled = 0
+                float omni:rtx:fog:endDist = 1800
+                float omni:rtx:fog:height:density = 0.08
+                float omni:rtx:fog:height:falloff = 0.025
+                float omni:rtx:fog:start:height = 0
+                bool omni:rtx:indirectDiffuse:denoiser:enabled = 0
+                bool omni:rtx:post:registeredCompositing:invertColorCorrection = 1
+                bool omni:rtx:post:registeredCompositing:invertToneMap = 1
+                token omni:rtx:post:tonemap:operator = "acesApproximation"
+                bool omni:rtx:pt:adaptiveSampling:filterError = 0
+                uint omni:rtx:pt:adaptiveSampling:fixedSppIterations = 2
+                bool omni:rtx:pt:fireflyFilter:enabled = 0
+                uint omni:rtx:pt:limits:maxBounces = 16
+                uint omni:rtx:pt:limits:maxGlossyBounces = 16
+                uint omni:rtx:pt:maxSamplesPerLaunch = 2073600
+                uint omni:rtx:pt:mgpu:maxPixelsPerRegionExponent = 12
+                bool omni:rtx:reflections:denoiser:enabled = 0
+                token omni:rtx:rendermode = "PathTracing"
+                color3f omni:rtx:rt:ambientLight:color = (0.1, 0.1, 0.1)
+                bool omni:rtx:rt:demoire = 0
+                bool omni:rtx:rt:lightcache:spatialCache:dontResolveConflicts = 1
+                int omni:rtx:rt:refractions:maxBounces = 8
+                int omni:rtx:rt:sss:samples = 1
+                bool omni:rtx:rtpt:fireflyFilter:enabled = 0
+                uint omni:rtx:rtpt:maxBounces = 8
+                uint omni:rtx:rtpt:maxSpecularAndTransmissionBounces = 8
+                uint omni:rtx:rtpt:maxVolumeBounces = 15
+                float omni:rtx:rtpt:modulatingRoughnessThreshold = 0.08
+                bool omni:rtx:scene:hydra:mdlMaterialWarmup = 1
+                rel orderedVars = [
+                    </Render/Vars/LdrColor>,
+                    </Render/Vars/MarlinMediumHdr>,
+                ]
+                custom bool overrideClipRange = 0
+                uniform int2 resolution = (512, 384)
+            }
+        }
+    }
+
+    def RenderSettings "OmniverseGlobalRenderSettings" (
+        prepend apiSchemas = ["OmniRtxSettingsGlobalRtAdvancedAPI_1", "OmniRtxSettingsGlobalPtAdvancedAPI_1"]
+        no_delete = true
+    )
+    {
+        rel products = </Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_69>
+    }
+
+    def "Vars"
+    {
+        def RenderVar "LdrColor" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            uniform string sourceName = "LdrColor"
+            uniform token sourceType = "raw"
+        }
+
+        def RenderVar "MarlinMediumHdr"
+        {
+            uniform token dataType = "color4h"
+            uniform string sourceName = "HdrColor"
+            uniform token sourceType = "raw"
+        }
+    }
+}
+
+over "OmniverseKit_Persp"
+{
+    float exposure:fStop = 5
+    float exposure:responsivity = 1.1026709
+    float exposure:time = 0.02
+}
+
