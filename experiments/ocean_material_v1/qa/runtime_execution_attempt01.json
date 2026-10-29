@@ -1,0 +1,4 @@
+{
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/qa/audit_in_kit.py\", line 172, in main\n    await asyncio.wait_for(audit(), timeout=300)\n  File \"/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/python/lib/python3.12/asyncio/tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/qa/audit_in_kit.py\", line 65, in audit\n    raise RuntimeError('Nonempty stage without Ocean: refusing scene reconstruction')\nRuntimeError: Nonempty stage without Ocean: refusing scene reconstruction\n"
+}

@@ -1,0 +1,39 @@
+{
+  "domain": "Saved 8-bit RGB display domain; not linear radiometry",
+  "resolution": [
+    1280,
+    720
+  ],
+  "limits": {
+    "mae_rgb_code_values": 1.0,
+    "p99_abs_rgb_code_values": 8.0
+  },
+  "pairs": [
+    {
+      "a": "baseline_01.png",
+      "b": "baseline_02.png",
+      "mae_rgb_code_values": 0.45941623263888887,
+      "p99_abs_rgb_code_values": 6.0,
+      "max_abs_rgb_code_values": 66,
+      "passed": true
+    },
+    {
+      "a": "baseline_01.png",
+      "b": "baseline_03.png",
+      "mae_rgb_code_values": 0.519541015625,
+      "p99_abs_rgb_code_values": 7.0,
+      "max_abs_rgb_code_values": 68,
+      "passed": true
+    },
+    {
+      "a": "baseline_02.png",
+      "b": "baseline_03.png",
+      "mae_rgb_code_values": 0.19993815104166668,
+      "p99_abs_rgb_code_values": 3.0,
+      "max_abs_rgb_code_values": 25,
+      "passed": true
+    }
+  ],
+  "repeatability_passed": true,
+  "image_count": 3
+}

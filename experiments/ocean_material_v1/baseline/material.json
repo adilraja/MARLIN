@@ -1,0 +1,332 @@
+{
+  "bound_material": "/World/Looks/OceanWater",
+  "effective_relationship": "/World/Ocean.material:binding",
+  "bindings_on_ocean_and_ancestors": [
+    {
+      "prim": "/World/Ocean",
+      "relationship": "material:binding",
+      "targets": [
+        "/World/Looks/OceanWater"
+      ],
+      "metadata": {
+        "custom": false,
+        "variability": "Sdf.VariabilityUniform"
+      }
+    }
+  ],
+  "material_prims": [
+    {
+      "path": "/World/Looks/OceanWater",
+      "type": "Material",
+      "attributes": [
+        {
+          "name": "outputs:displacement",
+          "type": "token",
+          "value": null,
+          "connections": [],
+          "authored": false,
+          "layers": []
+        },
+        {
+          "name": "outputs:mdl:surface",
+          "type": "token",
+          "value": null,
+          "connections": [
+            "/World/Looks/OceanWater/Shader.outputs:out"
+          ],
+          "authored": false,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "outputs:surface",
+          "type": "token",
+          "value": null,
+          "connections": [],
+          "authored": false,
+          "layers": []
+        },
+        {
+          "name": "outputs:volume",
+          "type": "token",
+          "value": null,
+          "connections": [],
+          "authored": false,
+          "layers": []
+        }
+      ]
+    },
+    {
+      "path": "/World/Looks/OceanWater/Shader",
+      "type": "Shader",
+      "attributes": [
+        {
+          "name": "info:id",
+          "type": "token",
+          "value": null,
+          "connections": [],
+          "authored": false,
+          "layers": []
+        },
+        {
+          "name": "info:implementationSource",
+          "type": "token",
+          "value": "sourceAsset",
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "info:mdl:sourceAsset",
+          "type": "asset",
+          "value": {
+            "authored": "OmniSurface.mdl",
+            "resolved": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl"
+          },
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "info:mdl:sourceAsset:subIdentifier",
+          "type": "token",
+          "value": "OmniSurface",
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:diffuse_reflection_color",
+          "type": "color3f",
+          "value": [
+            0.019999999552965164,
+            0.10000000149011612,
+            0.12999999523162842
+          ],
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:diffuse_reflection_weight",
+          "type": "float",
+          "value": 0.019999999552965164,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:enable_specular_transmission",
+          "type": "bool",
+          "value": true,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:metalness",
+          "type": "float",
+          "value": 0.0,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_reflection_color",
+          "type": "color3f",
+          "value": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_reflection_ior",
+          "type": "float",
+          "value": 1.3329999446868896,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_reflection_roughness",
+          "type": "float",
+          "value": 0.04500000178813934,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_reflection_weight",
+          "type": "float",
+          "value": 1.0,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_transmission_color",
+          "type": "color3f",
+          "value": [
+            0.7799999713897705,
+            0.9200000166893005,
+            0.949999988079071
+          ],
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_transmission_scatter_anisotropy",
+          "type": "float",
+          "value": 0.0,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_transmission_scattering_color",
+          "type": "color3f",
+          "value": [
+            0.004999999888241291,
+            0.019999999552965164,
+            0.029999999329447746
+          ],
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_transmission_scattering_depth",
+          "type": "float",
+          "value": 100.0,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:specular_transmission_weight",
+          "type": "float",
+          "value": 1.0,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "inputs:thin_walled",
+          "type": "bool",
+          "value": true,
+          "connections": [],
+          "authored": true,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        },
+        {
+          "name": "outputs:out",
+          "type": "token",
+          "value": null,
+          "connections": [],
+          "authored": false,
+          "layers": [
+            "anon:0x74bdf0001030:World0.usd"
+          ]
+        }
+      ]
+    }
+  ],
+  "geometry": [
+    {
+      "path": "/World/Ocean",
+      "points": 16641,
+      "faces": 16384,
+      "boundary_edges": 512,
+      "nonmanifold_edges": 0,
+      "orientation": "rightHanded",
+      "double_sided": true,
+      "normals_interpolation": "vertex",
+      "normal_y_range": [
+        0.9461248517036438,
+        0.9999994039535522
+      ],
+      "world_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_bounds_min": [
+        -8014.4306640625,
+        -39.7355842590332,
+        -8009.4248046875
+      ],
+      "world_bounds_max": [
+        8015.8798828125,
+        39.59180450439453,
+        8009.46728515625
+      ]
+    }
+  ],
+  "stage_units": {
+    "meters_per_unit": 0.01,
+    "authored": true,
+    "up_axis": "Y"
+  },
+  "limitation": "Authored/resolved USD values only; unauthored MDL defaults and shader distance scaling still require installed-definition checks."
+}
