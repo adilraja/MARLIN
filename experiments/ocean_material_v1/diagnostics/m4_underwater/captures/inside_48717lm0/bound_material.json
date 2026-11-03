@@ -1,0 +1,110 @@
+{
+  "material": "/World/Looks/OceanWaterEngineeringV1",
+  "prims": [
+    {
+      "path": "/World/Looks/OceanWaterEngineeringV1",
+      "attributes": {
+        "outputs:displacement": {
+          "value": "None",
+          "connections": []
+        },
+        "outputs:mdl:surface": {
+          "value": "None",
+          "connections": [
+            "/World/Looks/OceanWaterEngineeringV1/Shader.outputs:out"
+          ]
+        },
+        "outputs:surface": {
+          "value": "None",
+          "connections": []
+        },
+        "outputs:volume": {
+          "value": "None",
+          "connections": []
+        }
+      }
+    },
+    {
+      "path": "/World/Looks/OceanWaterEngineeringV1/Shader",
+      "attributes": {
+        "info:id": {
+          "value": "None",
+          "connections": []
+        },
+        "info:implementationSource": {
+          "value": "sourceAsset",
+          "connections": []
+        },
+        "info:mdl:sourceAsset": {
+          "value": "@OmniSurface.mdl@",
+          "connections": []
+        },
+        "info:mdl:sourceAsset:subIdentifier": {
+          "value": "OmniSurface",
+          "connections": []
+        },
+        "inputs:diffuse_reflection_color": {
+          "value": "(0.02, 0.1, 0.13)",
+          "connections": []
+        },
+        "inputs:diffuse_reflection_weight": {
+          "value": "0.0",
+          "connections": []
+        },
+        "inputs:enable_specular_transmission": {
+          "value": "True",
+          "connections": []
+        },
+        "inputs:metalness": {
+          "value": "0.0",
+          "connections": []
+        },
+        "inputs:specular_reflection_color": {
+          "value": "(1, 1, 1)",
+          "connections": []
+        },
+        "inputs:specular_reflection_ior": {
+          "value": "1.3329999446868896",
+          "connections": []
+        },
+        "inputs:specular_reflection_roughness": {
+          "value": "0.0010000000474974513",
+          "connections": []
+        },
+        "inputs:specular_reflection_weight": {
+          "value": "1.0",
+          "connections": []
+        },
+        "inputs:specular_transmission_color": {
+          "value": "(0.6, 0.8, 0.9)",
+          "connections": []
+        },
+        "inputs:specular_transmission_scatter_anisotropy": {
+          "value": "0.0",
+          "connections": []
+        },
+        "inputs:specular_transmission_scattering_color": {
+          "value": "(0.02, 0.02, 0.02)",
+          "connections": []
+        },
+        "inputs:specular_transmission_scattering_depth": {
+          "value": "100.0",
+          "connections": []
+        },
+        "inputs:specular_transmission_weight": {
+          "value": "1.0",
+          "connections": []
+        },
+        "inputs:thin_walled": {
+          "value": "False",
+          "connections": []
+        },
+        "outputs:out": {
+          "value": "None",
+          "connections": []
+        }
+      }
+    }
+  ],
+  "global_ptvol": true
+}

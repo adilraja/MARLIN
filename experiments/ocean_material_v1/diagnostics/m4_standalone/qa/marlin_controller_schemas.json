@@ -1,0 +1,580 @@
+{
+  "ChaseCameraDataModel": {
+    "properties": {
+      "target_name": {
+        "type": "string",
+        "title": "Target Name",
+        "default": "Dolphin_001"
+      },
+      "camera_name": {
+        "type": "string",
+        "title": "Camera Name",
+        "default": "DolphinChaseCamera"
+      },
+      "distance": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Distance",
+        "default": 1200.0
+      },
+      "height": {
+        "type": "number",
+        "title": "Height",
+        "default": 180.0
+      },
+      "side_offset": {
+        "type": "number",
+        "title": "Side Offset",
+        "default": 0.0
+      },
+      "look_ahead": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Look Ahead",
+        "default": 150.0
+      },
+      "look_height": {
+        "type": "number",
+        "title": "Look Height",
+        "default": 15.0
+      },
+      "responsiveness": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Responsiveness",
+        "default": 3.0
+      },
+      "aim_responsiveness": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Aim Responsiveness",
+        "default": 4.5
+      },
+      "documentary_mode": {
+        "type": "boolean",
+        "title": "Documentary Mode",
+        "default": true
+      },
+      "hold_duration": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Hold Duration",
+        "default": 4.0
+      },
+      "dead_zone": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Dead Zone",
+        "default": 30.0
+      },
+      "reaction_delay": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Reaction Delay",
+        "default": 0.8
+      },
+      "catch_up_speed": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Catch Up Speed",
+        "default": 14.0
+      },
+      "catch_up_acceleration": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Catch Up Acceleration",
+        "default": 8.0
+      },
+      "settle_distance": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Settle Distance",
+        "default": 12.0
+      },
+      "settle_duration": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Settle Duration",
+        "default": 1.2
+      },
+      "focal_length": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Focal Length",
+        "default": 35.0
+      },
+      "activate_viewport": {
+        "type": "boolean",
+        "title": "Activate Viewport",
+        "default": true
+      }
+    },
+    "type": "object",
+    "title": "ChaseCameraDataModel"
+  },
+  "ChaseCameraUpdateDataModel": {
+    "properties": {
+      "distance": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Distance"
+      },
+      "height": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Height"
+      },
+      "side_offset": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Side Offset"
+      },
+      "look_ahead": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Look Ahead"
+      },
+      "look_height": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Look Height"
+      },
+      "responsiveness": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Responsiveness"
+      },
+      "aim_responsiveness": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Aim Responsiveness"
+      },
+      "documentary_mode": {
+        "anyOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Documentary Mode"
+      },
+      "hold_duration": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Hold Duration"
+      },
+      "dead_zone": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Dead Zone"
+      },
+      "reaction_delay": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Reaction Delay"
+      },
+      "catch_up_speed": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Catch Up Speed"
+      },
+      "catch_up_acceleration": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Catch Up Acceleration"
+      },
+      "settle_distance": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Settle Distance"
+      },
+      "settle_duration": {
+        "anyOf": [
+          {
+            "type": "number",
+            "minimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Settle Duration"
+      },
+      "focal_length": {
+        "anyOf": [
+          {
+            "type": "number",
+            "exclusiveMinimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Focal Length"
+      }
+    },
+    "type": "object",
+    "title": "ChaseCameraUpdateDataModel"
+  },
+  "MarineSceneSetupDataModel": {
+    "properties": {
+      "underwater_cue": {
+        "type": "boolean",
+        "title": "Underwater Cue",
+        "description": "Enable subtle height fog below the ocean surface",
+        "default": true
+      },
+      "start_swimming": {
+        "type": "boolean",
+        "title": "Start Swimming",
+        "description": "Start dolphin swimming after constructing the scene",
+        "default": true
+      },
+      "start_chase_camera": {
+        "type": "boolean",
+        "title": "Start Chase Camera",
+        "description": "Follow the dolphin with a smooth active viewport camera",
+        "default": true
+      },
+      "camera_distance": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Camera Distance",
+        "default": 1200.0
+      },
+      "camera_height": {
+        "type": "number",
+        "title": "Camera Height",
+        "default": 180.0
+      },
+      "camera_side_offset": {
+        "type": "number",
+        "title": "Camera Side Offset",
+        "description": "Three-quarter documentary framing that keeps the dolphin's upright body orientation visible",
+        "default": 650.0
+      },
+      "camera_look_ahead": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Camera Look Ahead",
+        "default": 150.0
+      },
+      "camera_responsiveness": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Camera Responsiveness",
+        "default": 3.0
+      },
+      "camera_focal_length": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Camera Focal Length",
+        "default": 35.0
+      },
+      "dolphin_name": {
+        "type": "string",
+        "title": "Dolphin Name",
+        "default": "Dolphin_001"
+      },
+      "dolphin_asset": {
+        "type": "string",
+        "title": "Dolphin Asset",
+        "default": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd"
+      },
+      "dolphin_position": {
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array",
+        "maxItems": 3,
+        "minItems": 3,
+        "title": "Dolphin Position",
+        "default": [
+          0.0,
+          -20.0,
+          0.0
+        ]
+      },
+      "dolphin_rotation": {
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array",
+        "maxItems": 3,
+        "minItems": 3,
+        "title": "Dolphin Rotation",
+        "description": "World-space rotation; asset correction is applied separately",
+        "default": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "dolphin_scale": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Dolphin Scale",
+        "default": 100.0
+      },
+      "dolphin_speed": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Dolphin Speed",
+        "default": 5.0
+      },
+      "dolphin_heading": {
+        "type": "number",
+        "title": "Dolphin Heading",
+        "default": 0.0
+      },
+      "dolphin_depth": {
+        "type": "number",
+        "title": "Dolphin Depth",
+        "default": -20.0
+      },
+      "dolphin_depth_below_surface": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Dolphin Depth Below Surface",
+        "default": 20.0
+      }
+    },
+    "type": "object",
+    "title": "MarineSceneSetupDataModel"
+  },
+  "OceanAnimationDataModel": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "Ocean mesh prim name under /World",
+        "default": "Ocean"
+      },
+      "size": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Size",
+        "default": 16000.0
+      },
+      "resolution": {
+        "type": "integer",
+        "maximum": 128.0,
+        "minimum": 16.0,
+        "title": "Resolution",
+        "description": "Ocean grid resolution. Start with 64 for interactive animation.",
+        "default": 64
+      },
+      "wave_height": {
+        "type": "number",
+        "minimum": 0.0,
+        "title": "Wave Height",
+        "default": 40.0
+      },
+      "wave_length": {
+        "type": "number",
+        "exclusiveMinimum": 0.0,
+        "title": "Wave Length",
+        "default": 650.0
+      },
+      "choppiness": {
+        "type": "number",
+        "maximum": 1.5,
+        "minimum": 0.0,
+        "title": "Choppiness",
+        "default": 0.55
+      },
+      "speed": {
+        "type": "number",
+        "maximum": 5.0,
+        "minimum": 0.0,
+        "title": "Speed",
+        "description": "Wave animation speed multiplier",
+        "default": 1.0
+      },
+      "target_fps": {
+        "type": "number",
+        "maximum": 30.0,
+        "minimum": 1.0,
+        "title": "Target Fps",
+        "description": "How often the procedural geometry is recalculated",
+        "default": 20.0
+      },
+      "position": {
+        "prefixItems": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "number"
+          }
+        ],
+        "type": "array",
+        "maxItems": 3,
+        "minItems": 3,
+        "title": "Position",
+        "default": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "type": "object",
+    "title": "OceanAnimationDataModel",
+    "description": "Configuration for the live animated procedural ocean."
+  },
+  "OceanAnimationUpdateDataModel": {
+    "properties": {
+      "speed": {
+        "anyOf": [
+          {
+            "type": "number",
+            "maximum": 5.0,
+            "minimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Speed"
+      },
+      "choppiness": {
+        "anyOf": [
+          {
+            "type": "number",
+            "maximum": 1.5,
+            "minimum": 0.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Choppiness"
+      },
+      "target_fps": {
+        "anyOf": [
+          {
+            "type": "number",
+            "maximum": 30.0,
+            "minimum": 1.0
+          },
+          {
+            "type": "null"
+          }
+        ],
+        "title": "Target Fps"
+      }
+    },
+    "type": "object",
+    "title": "OceanAnimationUpdateDataModel"
+  }
+}

@@ -88,6 +88,9 @@ async def create_ocean(data: OceanDataModel):
     ocean_path = f"/World/{data.name}"
 
     # Replace a previous ocean with the same name.
+    from .ocean_medium import selected
+    if selected(stage.GetPrimAtPath(ocean_path)):
+        return {"ok": False, "error": "Restore the original water preset before replacing this ocean"}
     if stage.GetPrimAtPath(ocean_path):
         stage.RemovePrim(ocean_path)
 
@@ -415,6 +418,14 @@ def _author_omnisurface_inputs(shader, data):
     summary="Apply configurable NVIDIA OmniSurface seawater",
 )
 async def apply_ocean_material(data: OceanMaterialDataModel):
+    from .ocean_medium import selected
+    stage = omni.usd.get_context().get_stage()
+    if stage and selected(stage.GetPrimAtPath(f"/World/{data.ocean_name}")):
+        return {"ok": False, "error": "Select the original water preset before applying a different material"}
+    return bind_ocean_material(data)
+
+
+def bind_ocean_material(data: OceanMaterialDataModel):
     stage = omni.usd.get_context().get_stage()
 
     if stage is None:
@@ -954,6 +965,9 @@ def _update_animated_ocean(event):
         )
     )
 
+    from .ocean_medium import render_arrays
+    points, normals, extent, interpolation = render_arrays(ocean, points, normals, extent)
+
     ocean.GetPointsAttr().Set(
         points
     )
@@ -963,7 +977,7 @@ def _update_animated_ocean(event):
     )
 
     ocean.SetNormalsInterpolation(
-        UsdGeom.Tokens.vertex
+        interpolation
     )
 
     ocean.GetExtentAttr().Set(
@@ -1005,6 +1019,12 @@ async def start_ocean_animation(
             "ok": False,
             "error": f"Invalid ocean name: {data.name}",
         }
+
+    from .ocean_medium import validate_restart
+    try:
+        validate_restart(stage.GetPrimAtPath(f"/World/{data.name}"), data)
+    except ValueError as exc:
+        return {"ok": False, "error": str(exc)}
 
     # Stop an existing animation first.
     shutdown_ocean_animation()
@@ -1180,12 +1200,14 @@ async def start_ocean_animation(
         )
     )
 
+    from .ocean_medium import render_arrays
+    points, normals, extent, interpolation = render_arrays(ocean, points, normals, extent)
     ocean.GetPointsAttr().Set(points)
 
     ocean.CreateNormalsAttr().Set(normals)
 
     ocean.SetNormalsInterpolation(
-        UsdGeom.Tokens.vertex
+        interpolation
     )
 
     ocean.GetExtentAttr().Set(extent)

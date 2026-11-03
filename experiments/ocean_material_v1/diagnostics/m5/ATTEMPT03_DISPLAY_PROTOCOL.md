@@ -1,0 +1,15 @@
+# Prospective visible-image qualification and installed-mode comparison
+
+Attempt02 completed five valid native PNG/HDR/EXR captures and passed all state, projection and restoration checks. Its native PNGs were completely clipped to white, as in the sealed M4 fixture. Their zero PNG differences meet the numerical test but are visually uninformative and are not sufficient to qualify a useful RGB output. Its HDR differences remain diagnostic observations; no retrospective HDR acceptance threshold is introduced.
+
+Before collecting attempt03 images, declare this supported output configuration:
+
+- Preserve native float HdrColor NPZ and EXR and the complete 512 × 384 capture, camera, geometry, lighting, material, exposure, sampling and effect configuration. Also retain the native PNG to demonstrate the clipping limitation.
+- Produce an additional, explicitly derived RGB display image from every **new** HDR capture with the fixed mapping `round(255 * clip(rgb / 12000, 0, 1) ** (1/2.2))`, cast to uint8. Scale 12000 and gamma 2.2 reuse the earlier M3 display convention. There is no per-frame normalization, automatic exposure or fitted scale. Preserve the processor source hash before rendering.
+- Apply the unchanged full-RGB and central-ROI MAD ≤ 1 and p99 ≤ 8 (8-bit units) limits to both native PNG and this visible fixed-transform display output. Record maximum errors. Require nonconstant, unsaturated image content for the visible display gate. Scene, global settings, effective product/camera settings and camera matrix checks remain separate.
+- Collect a new baseline, two repeats and two fresh anonymous-layer disk reloads. Keep 64 rendered frames/30 seconds, per-capture 60 seconds, suite 300 seconds and 768 MiB pre-capture guards. The startup readiness correction remains separate, at three rendered frames/90 seconds. Preserve all earlier attempts.
+- The installed product's actual allowed token list is `RaytracedLighting`, `PathTracing`, `Real-Time Path-Tracing`, `Minimal`. Attempt02 incorrectly looked for `RealTimePathTracing`, so its skipped comparison does not establish mode unavailability. For attempt03, select the registered **`Real-Time Path-Tracing`** token for one optional comparison on the unchanged frozen scene. Record its actual effective mode; make no claim that it is Real-Time 2.0. No cross-mode identical-pixel gate applies. Preserve a failure if that mode cannot execute within the declared budget.
+
+The supported deliverable is native HDR/EXR with a deterministic display conversion. The native clipped PNG route remains unsuitable as useful RGB imagery under this exposure. This qualification does not resolve the inside-water camera defect, certify radiometric accuracy, validate full native HiDef/Sony capture or change the M4 status.
+
+A second checkpointed Kit restart loads the local revised audit and preserves the application source. It resets GPU history and reconstructed controller phase; report both restarts and the user's prior system reboot.

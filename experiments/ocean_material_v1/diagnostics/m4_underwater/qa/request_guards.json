@@ -1,0 +1,49 @@
+[
+  {
+    "request": {
+      "medium_probe": "flat_box"
+    },
+    "http_status": 200,
+    "response": {
+      "ok": false,
+      "error": "Native medium probes require a frozen follow-up capture with engineering_v1",
+      "render_attempted": false
+    }
+  },
+  {
+    "request": {
+      "underwater_followup": true,
+      "medium_probe": "flat_box",
+      "advance_live": true
+    },
+    "http_status": 200,
+    "response": {
+      "ok": false,
+      "error": "Native medium probes require a frozen follow-up capture with engineering_v1",
+      "render_attempted": false
+    }
+  },
+  {
+    "request": {
+      "underwater_followup": true,
+      "medium_probe": "unknown"
+    },
+    "http_status": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "literal_error",
+          "loc": [
+            "body",
+            "medium_probe"
+          ],
+          "msg": "Input should be 'none', 'double_sided', 'nonuniform', 'volume_output', 'volume_output_nonuniform', 'native_procedural_volume', 'native_varying_volume', 'flat_box', 'flat_box_clear' or 'flat_box_uncached'",
+          "input": "unknown",
+          "ctx": {
+            "expected": "'none', 'double_sided', 'nonuniform', 'volume_output', 'volume_output_nonuniform', 'native_procedural_volume', 'native_varying_volume', 'flat_box', 'flat_box_clear' or 'flat_box_uncached'"
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,144 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 0.01
+    upAxis = "Y"
+)
+
+def Xform "World"
+{
+    def Scope "Looks"
+    {
+        def Material "Water"
+        {
+            token outputs:mdl:surface.connect = </World/Looks/Water/Shader.outputs:out>
+
+            def Shader "Shader"
+            {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurface.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface"
+                color3f inputs:diffuse_reflection_color = (0.02, 0.1, 0.13)
+                float inputs:diffuse_reflection_weight = 0
+                bool inputs:enable_specular_transmission = 1
+                float inputs:metalness = 0
+                color3f inputs:specular_reflection_color = (1, 1, 1)
+                float inputs:specular_reflection_ior = 1.333
+                float inputs:specular_reflection_roughness = 0.001
+                float inputs:specular_reflection_weight = 1
+                color3f inputs:specular_transmission_color = (0.6, 0.8, 0.9)
+                float inputs:specular_transmission_scatter_anisotropy = 0
+                color3f inputs:specular_transmission_scattering_color = (0.02, 0.02, 0.02)
+                float inputs:specular_transmission_scattering_depth = 100
+                float inputs:specular_transmission_weight = 1
+                bool inputs:thin_walled = 0
+                token outputs:out
+            }
+        }
+
+        def Material "White"
+        {
+            token outputs:surface.connect = </World/Looks/White/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (10, 10, 10)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+
+        def Material "Black"
+        {
+            token outputs:surface.connect = </World/Looks/Black/Shader.outputs:surface>
+
+            def Shader "Shader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                float inputs:roughness = 1
+                color3f inputs:specularColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                token outputs:surface
+            }
+        }
+    }
+
+    def Mesh "Water" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        float3[] extent = [(1000, -500, -200), (1400, 0, 200)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 3, 3, 3, 3]
+        int[] faceVertexIndices = [0, 2, 3, 1, 2, 0, 4, 5, 3, 2, 5, 6, 1, 3, 6, 7, 0, 1, 7, 4, 8, 5, 4, 8, 6, 5, 8, 7, 6, 8, 4, 7]
+        rel material:binding = </World/Looks/Water>
+        normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (-1, 0, -0), (-1, 0, -0), (-1, 0, -0), (-1, 0, -0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (1, 0, -0), (1, 0, -0), (1, 0, -0), (1, 0, -0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (-0, -1, 0), (-0, -1, 0), (-0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, -0), (0, -1, -0), (0, -1, -0)] (
+            interpolation = "faceVarying"
+        )
+        point3f[] points = [(1000, 0, -200), (1400, 0, -200), (1000, 0, 200), (1400, 0, 200), (1000, -500, -200), (1000, -500, 200), (1400, -500, 200), (1400, -500, -200), (1200, -500, 0)]
+        uniform token subdivisionScheme = "none"
+        double3 xformOp:translate = (0, 0, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Camera "Camera" (
+        apiSchemas = ["OmniRtxCameraAutoExposureAPI_1", "OmniRtxCameraExposureAPI_1"]
+    )
+    {
+        float2 clippingRange = (1, 2500)
+        float exposure = 0
+        float exposure:fStop = 1
+        float exposure:iso = 100
+        float exposure:responsivity = 1
+        float exposure:time = 1
+        float focalLength = 35
+        float fStop = 0
+        float horizontalAperture = 20.48
+        float horizontalApertureOffset = 0
+        bool omni:rtx:autoExposure:enabled = 0
+        token projection = "perspective"
+        float verticalAperture = 15.36
+        float verticalApertureOffset = 0
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0, -1, 0), (0, 1, 0, 0), (1200, -50, 0, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+
+    def Mesh "Target" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </World/Looks/White>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(1191, -250, -9), (1191, -250, 9), (1209, -250, 9), (1209, -250, -9)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def Mesh "Background" (
+        apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        uniform bool doubleSided = 0
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        rel material:binding = </World/Looks/Black>
+        uniform token orientation = "rightHanded"
+        point3f[] points = [(1000, -330, -200), (1000, -330, 200), (1400, -330, 200), (1400, -330, -200)]
+        uniform token subdivisionScheme = "none"
+    }
+
+    def DomeLight "Dome"
+    {
+        color3f inputs:color = (0.03, 0.03, 0.03)
+        float inputs:intensity = 10
+    }
+}
+

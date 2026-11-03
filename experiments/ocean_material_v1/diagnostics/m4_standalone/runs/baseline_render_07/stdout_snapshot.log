@@ -1,0 +1,135 @@
+2026-10-30T17:39:11Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/baseline_render_07/kit_process.log
+[0.104s] [ext: omni.assets.plugins-0.0.0] startup
+[0.105s] [ext: omni.blobkey-1.1.2] startup
+[0.105s] [ext: omni.kit.async_engine-0.0.3] startup
+[0.156s] [ext: omni.client.lib-1.1.1] startup
+[0.165s] [ext: omni.client-1.3.0] startup
+[0.168s] [ext: omni.protobuf.lib-1.0.1] startup
+[0.169s] [ext: omni.grpc.lib-1.0.0] startup
+[0.173s] [ext: omni.metrics.core-0.0.3] startup
+[0.174s] [ext: omni.datastore-0.0.0] startup
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793381951.880437 2070741 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793381951.880462 2070741 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+[0.174s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[0.178s] [ext: omni.hsscclient-1.1.4] startup
+[0.178s] [ext: omni.stats-1.0.1] startup
+[0.179s] [ext: omni.ujitso.default-1.0.0] startup
+[0.182s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.437s] [ext: carb.windowing.plugins-1.0.1] startup
+[0.438s] [ext: omni.kit.renderer.init-1.0.1] startup
+2026-10-30T17:39:12Z [749ms] [Warning] [omni.rtx] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 9 7950X3D 16-Core Processor (RADV RAPHAEL_MENDOCINO)
+2026-10-30T17:39:12Z [749ms] [Warning] [omni.rtx] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 9 7950X3D 16-Core Processor (RADV RAPHAEL_MENDOCINO)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 595.91.07     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX A2000                 | Yes: 0 |     | 6138    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2531      | e488f6b1.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | AMD Ryzen 9 7950X3D 16-Core Pr.. |        |     | 42302   MB | 1002      | 0          |
+|     |                                  |        |     |            | 164e      | 00000000.. |
+|     |                                  |        |     |            | 12        |            |
+|=============================================================================================|
+| OS: 26.04.1 LTS (Resolute Raccoon) ubuntu, Version: 26.04.1, Kernel: 7.0.0-38-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12401010 (1.24.1.10)
+| Processor: AMD Ryzen 9 7950X3D 16-Core Processor
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 125883 | Free Memory: 113167
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2026-10-30T17:39:12Z [1,061ms] [Warning] [omni.rtx] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-10-30T17:39:12Z [1,070ms] [Warning] [omni.rtx] IOMMU is enabled.
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+Terminated
+[2.909s] [ext: omni.kit.pipapi-0.0.0] startup
+[2.911s] [ext: omni.kit.pip_archive-0.0.0] startup
+[2.911s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[2.912s] [ext: omni.usd.config-1.0.7] startup
+2026-10-30T17:39:14Z [2,890ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+[2.916s] [ext: omni.usd.libs-1.0.3] startup
+[2.984s] [ext: omni.iray.libs-0.0.1] startup
+[2.989s] [ext: omni.mdl-57.0.3] startup
+[3.056s] [ext: omni.mdl.neuraylib-0.2.22] startup
+[3.059s] [ext: omni.kit.usd.mdl-1.1.11] startup
+[3.158s] [ext: omni.usd.schema.anim-0.0.1] startup
+[3.172s] [ext: omni.usd.schema.audio-0.0.1] startup
+[3.174s] [ext: omni.usd.schema.geospatial-0.0.1] startup
+[3.176s] [ext: omni.usd_resolver-1.0.0] startup
+[3.179s] [ext: omni.usd.core-1.8.6] startup
+[3.182s] [ext: omni.usd.schema.omni_dome_light-1.0.0] startup
+[3.182s] [ext: omni.usd.schema.omni_projectors-1.0.0] startup
+[3.183s] [ext: omni.usd.schema.physical_lighting-0.1.0] startup
+[3.185s] [ext: omni.usd.schema.render_settings.rtx-1.0.2] startup
+[3.188s] [ext: omni.usd.schema.usd_particle_field-1.0.0] startup
+[3.188s] [ext: carb.audio-0.1.0] startup
+[3.197s] [ext: omni.activity.core-1.0.3] startup
+[3.199s] [ext: omni.kit.loop-default-0.2.2] startup
+[3.200s] [ext: omni.appwindow-1.2.2] startup
+[3.201s] [ext: omni.cubric-0.1.0] startup
+[3.202s] [ext: omni.graph.exec-0.9.6] startup
+[3.202s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[3.203s] [ext: omni.hydra.scene_delegate-0.3.5] startup
+[3.206s] [ext: usdrt.scenegraph-7.6.3] startup
+[3.228s] [ext: omni.hydra.usdrt_delegate-7.5.2] startup
+[3.233s] [ext: omni.index.libs-392300.31.0] startup
+[3.233s] [ext: omni.index-1.0.1] startup
+[3.234s] [ext: omni.ujitso.client-0.0.0] startup
+[3.234s] [ext: omni.usd.schema.playback-1.1.0] startup
+[3.235s] [ext: omni.volume-0.5.2] startup
+[3.239s] [ext: omni.hydra.rtx-1.0.4] startup
+2026-10-30T17:39:14Z [3,225ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+[3.267s] [ext: omni.kit.actions.core-1.0.0] startup
+[3.269s] [ext: omni.kit.audiodeviceenum-1.0.2] startup
+[3.270s] [ext: omni.kit.clipboard-1.1.1] startup
+[3.271s] [ext: omni.kit.commands-1.5.0] startup
+[3.276s] [ext: omni.kit.exec.core-0.13.5] startup
+[3.277s] [ext: omni.kit.renderer.core-1.2.2] startup
+[3.317s] [ext: omni.kit.renderer.capture-2.0.1] startup
+[3.320s] [ext: omni.kit.renderer.imgui-2.0.8] startup
+[3.367s] [ext: omni.kit.usd_undo-0.1.8] startup
+[3.367s] [ext: omni.ui-3.2.5] startup
+[3.376s] [ext: omni.kit.window.popup_dialog-2.0.26] startup
+[3.379s] [ext: omni.kit.widget.connection_manager-1.0.2] startup
+[3.386s] [ext: omni.timeline-1.1.0] startup
+[3.388s] [ext: omni.usd-1.16.0] startup
+[3.419s] [ext: omni.kit.helper.file_utils-0.1.10] startup
+[3.420s] [ext: omni.kit.hydra_texture-1.6.0] startup
+[3.423s] [ext: omni.kit.menu.core-1.2.1] startup
+[3.424s] [ext: omni.kit.menu.utils-2.2.6] startup
+[3.427s] [ext: omni.kit.notification_manager-1.0.13] startup
+[3.428s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[3.429s] [ext: omni.kit.widget.viewport-110.0.0] startup
+[3.432s] [ext: omni.ui.scene-2.0.3] startup
+[3.437s] [ext: omni.kit.viewport.window-110.0.0] startup
+[3.453s] [ext: omni.kit.viewport.utility-2.1.0] startup
+[3.454s] [ext: omni.kit.widget.path_field-2.0.13] startup
+[3.455s] [ext: omni.kit.widget.browser_bar-2.0.11] startup
+[3.455s] [ext: omni.kit.widget.context_menu-1.4.1] startup
+[3.457s] [ext: omni.kit.widget.filebrowser-2.13.6] startup
+[3.461s] [ext: omni.kit.widget.nucleus_connector-2.4.0] startup
+[3.461s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[3.464s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[3.464s] [ext: omni.kit.widget.searchable_combobox-1.0.7] startup
+[3.465s] [ext: omni.kit.widget.settings-2.0.0] startup
+[3.467s] [ext: omni.kit.window.filepicker-3.0.5] startup
+[3.478s] [ext: omni.kit.window.file_exporter-1.0.38] startup
+[3.480s] [ext: omni.kit.window.file_importer-1.1.22] startup
+[3.480s] [ext: omni.ocio-0.1.1] startup
+[3.481s] [ext: omni.rtx.window.settings-0.8.1] startup
+[3.485s] [ext: omni.rtx.settings.core-0.7.1] startup
+[3.487s] [ext: standalone-1.0.0] startup
+[4.236s] app ready
+CAPTURE inside_0500_clear [11336.0, 11336.0, 11336.0]
+CAPTURE inside_0500_absorption [0.00025367550551891327, 0.00025367550551891327, 0.00025367550551891327]
+CAPTURE inside_0500_engineering [0.00025367550551891327, 0.00025367550551891327, 0.00025367550551891327]
+CAPTURE above_1000_clear [11097.5, 11097.5, 11097.5]
+CAPTURE above_1000_absorption [6667.796875, 8885.15625, 9978.6875]
+CAPTURE above_1000_engineering [6556.8125, 8723.15625, 9818.90625]
+{"ok": true, "captures": 6, "status": "rendered_requires_independent_optical_analysis"}

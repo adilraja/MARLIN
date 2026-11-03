@@ -1,0 +1,455 @@
+2026-10-30T17:17:43Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/baseline_validate_01/kit_process.log
+2026-10-30T17:17:43Z [0ms] [Info] [carb.crashreporter-breakpad.plugin] crashreporter configured:
+    buildVersion: '110.2.0'
+    buildNumber: '342835'
+    buildHash: '698af100'
+    buildBranch: 'feature'
+    buildCi: 'gl'
+    buildMajor: '110'
+    buildMinor: '2'
+    buildPatch: '0'
+    buildConfig: 'release'
+    BuildGitlabJobID: '360905302'
+    buildGitlabJobStage: 'kit-build'
+    buildGitlabJobName: 'kit-build-release-linux-x86_64'
+    buildGitlabPipelineID: '57676005'
+    profilerCpuTscFrequency: '4192494456'
+    commandLine: '/home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/sdk-1102/kit /home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit --portable-root /home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable --no-window --/rtx-transient/resourcemanager/localTextureCachePath=/home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/texture_cache --/log/file=/home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/baseline_validate_01/kit_process.log --exec /home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate_in_kit.py'
+    runningInContainer: '0'
+    upload enabled: true
+2026-10-30T17:17:43Z [0ms] [Info] [carb] Plugin carb.profiler-mux.plugin is already a dependency of carb.profiler-cpu.plugin; not changing unload order
+2026-10-30T17:17:43Z [0ms] [Info] [omni.kit.app.plugin] App Name: 'validate', App Version: '1.0.0', Kit Version: '110.2.0+feature.342835.698af100.gl', Kernel Version: '210.2.5+release.14036.c700af7d.gl'
+2026-10-30T17:17:43Z [1ms] [Info] [omni.kit.app.plugin] Cmd: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/sdk-1102/kit /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit --portable-root /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable --no-window --/rtx-transient/resourcemanager/localTextureCachePath=/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/texture_cache --/log/file=/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/baseline_validate_01/kit_process.log --exec /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate_in_kit.py
+2026-10-30T17:17:43Z [1ms] [Info] [omni.kit.app.plugin] Applied configs: [/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/config/kit-core.json, /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit]
+2026-10-30T17:17:43Z [1ms] [Info] [omni.kit.app.plugin] Non-existent configs: [/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/omni_configs/privacy.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.gen.kit, /home/madil/Documents/Kit/shared/user.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/deps/user.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/deps/validate/user.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/deps/user.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/deps/validate/user.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/deps/user.toml, /home/madil/kit-app-template/experiments/ocean_material_v1/deps/validate/user.toml, /home/madil/kit-app-template/experiments/deps/user.toml, /home/madil/kit-app-template/experiments/deps/validate/user.toml, /home/madil/kit-app-template/deps/user.toml, /home/madil/kit-app-template/deps/validate/user.toml, /usr/share/NVIDIA Corporation/kit/kit.config.toml, /usr/share/NVIDIA Corporation/kit/validate/kit.config.toml]
+2026-10-30T17:17:43Z [1ms] [Info] [omni.kit.app.plugin] Portable Root: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable'
+2026-10-30T17:17:43Z [1ms] [Info] [omni.kit.app.plugin] Tokens:
+{
+    "exe-path": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "exe-filename": "kit",
+    "local-config-path": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "custom-config-path": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "cli-config-path": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "omni_config": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/omni_configs",
+    "omni_data": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data",
+    "omni_logs": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/logs",
+    "omni_cache": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/cache",
+    "omni_global_config": "/home/madil/.nvidia-omniverse/config",
+    "omni_global_data": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data",
+    "omni_global_logs": "/home/madil/.nvidia-omniverse/logs",
+    "omni_global_cache": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_cache/ov",
+    "temp": "/tmp/carb.7uMzUT",
+    "kit": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "drive": "/",
+    "app": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone",
+    "resources": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources",
+    "fonts": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/fonts",
+    "glyphs": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/glyphs",
+    "icons": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/icons",
+    "sounds": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/sounds",
+    "models": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/models",
+    "materials": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/materials",
+    "config": "release",
+    "platform": "linux-x86_64",
+    "bindings_ext": ".so",
+    "exe_ext": "",
+    "shell_ext": ".sh",
+    "lib_ext": ".so",
+    "lib_prefix": "lib",
+    "session_id": "10977917945206283665",
+    "omni_documents": "/home/madil/Documents",
+    "shared_documents": "/home/madil/Documents/Kit/shared",
+    "omni_program_data": "/usr/share",
+    "shared_program_data": "/usr/share/NVIDIA Corporation/kit",
+    "app_program_data": "/usr/share/NVIDIA Corporation/kit/validate",
+    "kit_version": "110.2.0+feature.342835.698af100.gl",
+    "usd_version": "25.11",
+    "python_version": "3.12",
+    "python": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/python/bin/python3",
+    "kit_version_short": "110.2",
+    "kit_version_major": "110",
+    "kit_version_minor": "2",
+    "kit_version_patch": "0",
+    "kit_git_hash": "698af100",
+    "app_version": "1.0.0",
+    "app_version_short": "1.0",
+    "app_name": "validate",
+    "app_filename": "validate",
+    "data": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0",
+    "logs": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/logs/Kit/validate/1.0",
+    "cache": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/cache/Kit/110.2/698af100",
+    "appcache": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/cache/Kit/110.2/698af100",
+    "cache_postfix": "Kit/110.2/698af100",
+    "app_documents": "/home/madil/Documents/Kit/apps/validate",
+    "documents": "/home/madil/Documents/Kit/apps/validate",
+    "start_timestamp": "20261030_171743",
+    "log_file": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/baseline_validate_01/kit_process.log"
+}
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Extension path: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3' doesn't exist.
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Creating a new dir for extension path: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3'
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] [ext manager] preferLocalVersions: 1
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Extension system targets:
+  kitHash: 698af100
+  config: release
+  python: cp312
+  usd: u7f41+stock+25.11+cxx11
+  platform: linux-x86_64
+  kit: 110.2.0
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit' (path type: 1, dev: 0)
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3' (path type: 4, dev: 0)
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extsPhysics' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/shared/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/apps/validate/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [2ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [2ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [4ms] [Info] [omni.ext.plugin] Registered 13 extension(s), 0 unsuitable:
+  [ext: omni.client.lib-1.1.1] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.client.lib)
+  [ext: omni.kit.async_engine-0.0.3] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.async_engine)
+  [ext: omni.kit.registry.nucleus-0.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.registry.nucleus)
+  [ext: omni.app.dev-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.kit)
+  [ext: omni.app.dev.nvcf-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.nvcf.kit)
+  [ext: omni.app.dev.xr.avp-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.xr.avp.kit)
+  [ext: omni.app.dev.xr.ipad-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.xr.ipad.kit)
+  [ext: omni.app.editor.base-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.editor.base.kit)
+  [ext: omni.app.empty-0.1.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.empty.kit)
+  [ext: omni.app.full-1.0.1] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.full.kit)
+  [ext: omni.app.hydra-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.hydra.kit)
+  [ext: omni.app.mini-0.1.1] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.mini.kit)
+  [ext: omni.app.viewport-1.0.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.viewport.kit)
+2026-10-30T17:17:43Z [4ms] [Info] [carb] Initializing plugin: carb.scripting-python.plugin (interfaces: [carb::scripting::IScripting v1.0]) (impl: carb.scripting-python.plugin)
+2026-10-30T17:17:43Z [4ms] [Info] [carb.scripting-python.plugin] Attempting to initialize Python interpreter. Failure of doing it will lead to the termination of the application.
+2026-10-30T17:17:43Z [10ms] [Info] [carb.scripting-python.plugin] Python interpreter was successfully initialized.
+2026-10-30T17:17:43Z [10ms] [Info] [carb] Initializing plugin: carb.variant.plugin (interfaces: [carb::variant::IVariant v0.1]) (impl: carb.variant.plugin)
+2026-10-30T17:17:43Z [77ms] [Info] [omni.kit.app._impl] python GC: gc.disable()
+2026-10-30T17:17:43Z [77ms] [Info] [omni.ext.plugin] [ext manager] preferLocalVersions: 1
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Processing exts enabling request: 'validate-1.0.0'
+2026-10-30T17:17:43Z [78ms] [Info] [omni.kit.app.plugin] [0.104s] Failed to solve some dependencies locally, syncing with extension registry...
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Failed to resolve extension dependencies. Failure hints:
+  * No versions of omni.usd.libs that satisfies: validate-1.0.0 depends on omni.usd.libs version *
+    - Available packages for omni.usd.libs version *:
+      (none found)
+  Synced registries:
+     (none)
+
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Enabling registry extension...
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Extension system targets:
+  kitHash: 698af100
+  config: release
+  python: cp312
+  usd: u7f41+stock+25.11+cxx11
+  platform: linux-x86_64
+  kit: 110.2.0
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit' (path type: 1, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3' (path type: 4, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extsPhysics' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/shared/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/apps/validate/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps' (path type: 0, dev: 0)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Processing exts enabling request: 'omni.kit.registry.nucleus'
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] Solver result: succeeded. nodes: 3. time: 0.008155 (ms) iterations: 4 backtracks: 0 cycles: 0 unitprops: 3
+Extensions dependency solver solution:
+[ext: omni.kit.registry.nucleus-0.0.0] deps:
+ -> 'omni.client.lib' = { version='^' } selected: [omni.client.lib-1.1.1]
+[ext: omni.client.lib-1.1.1] deps:
+ -> 'omni.kit.async_engine' = { version='^' } selected: [omni.kit.async_engine-0.0.3]
+[ext: omni.kit.async_engine-0.0.3] no deps
+  Synced registries:
+     (none)
+
+2026-10-30T17:17:43Z [78ms] [Info] [carb] Plugin carb.scripting-python.plugin is already a dependency of omni.kit.app.plugin; not changing unload order
+2026-10-30T17:17:43Z [78ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.kit.async_engine-0.0.3] (order: 0) Triggered by: omni.client.lib-1.1.1 (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.async_engine)
+2026-10-30T17:17:43Z [78ms] [Info] [omni.kit.app.plugin] [0.105s] [ext: omni.kit.async_engine-0.0.3] startup
+2026-10-30T17:17:43Z [79ms] [Info] [omni.ext._impl.utils] -> func:_refresh_cache took: 0.0009s
+2026-10-30T17:17:43Z [80ms] [Info] [omni.ext._impl._internal] Searching for classes derived from 'omni.ext.IExt' in 'omni.kit.async_engine' ('/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.async_engine')
+2026-10-30T17:17:43Z [80ms] [Info] [omni.ext._impl._internal] Found class `_AsyncEngineDriver` derived from `omni.ext.IExt` in module: 'omni.kit.async_engine' in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.async_engine'. Calling `on_startup`.
+2026-10-30T17:17:43Z [80ms] [Info] [omni.kit.async_engine.async_engine] policy: <asyncio.unix_events._UnixDefaultEventLoopPolicy object at 0x7c9c3e5e4fe0> from /exts/omni.kit.async_engine/event_loop_policy_unix = "os_default"
+2026-10-30T17:17:43Z [80ms] [Info] [omni.kit.async_engine.async_engine] loop:   <_UnixSelectorEventLoop running=False closed=False debug=False> from /exts/omni.kit.async_engine/event_loop_unix = "os_default"
+2026-10-30T17:17:43Z [80ms] [Info] [omni.ext.plugin] [ext: omni.kit.async_engine-0.0.3] started, startup time: 1 (ms)
+2026-10-30T17:17:43Z [80ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.client.lib-1.1.1] (order: 0) Triggered by: omni.kit.registry.nucleus-0.0.0 (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.client.lib)
+2026-10-30T17:17:43Z [80ms] [Info] [omni.kit.app.plugin] [0.107s] [ext: omni.client.lib-1.1.1] startup
+2026-10-30T17:17:43Z [86ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.client.lib/bin/libomniclient.so
+2026-10-30T17:17:43Z [89ms] [Info] [omni.ext._impl._internal] Searching for classes derived from 'omni.ext.IExt' in 'omni.client' ('/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.client.lib')
+2026-10-30T17:17:43Z [89ms] [Info] [omni.ext.plugin] [ext: omni.client.lib-1.1.1] started, startup time: 8 (ms)
+2026-10-30T17:17:43Z [89ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.kit.registry.nucleus-0.0.0] (order: -1000) Triggered by API/CLI/Config. (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.registry.nucleus)
+2026-10-30T17:17:43Z [89ms] [Info] [omni.kit.app.plugin] [0.116s] [ext: omni.kit.registry.nucleus-0.0.0] startup
+2026-10-30T17:17:43Z [104ms] [Info] [omni.ext._impl._internal] Searching for classes derived from 'omni.ext.IExt' in 'omni.kit.registry.nucleus' ('/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.registry.nucleus')
+2026-10-30T17:17:43Z [104ms] [Info] [omni.ext._impl._internal] Found class `RegistryProviderExt` derived from `omni.ext.IExt` in module: 'omni.kit.registry.nucleus' in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.registry.nucleus'. Calling `on_startup`.
+2026-10-30T17:17:43Z [104ms] [Info] [omni.kit.registry.nucleus.utils.s3_mock] S3 mock not enabled in settings
+2026-10-30T17:17:43Z [104ms] [Info] [omni.kit.registry.nucleus.utils.common] global cache path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2
+2026-10-30T17:17:43Z [104ms] [Info] [omni.kit.registry.nucleus.registry_manager] 'trusted' is not set for registry 'kit/prod/default' in '/exts/omni.kit.registry.nucleus/registries'
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/default] [v2] creating RegistryIndexV2(), index url: https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/110.2/shared/v2, index local cache: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/index/e18a4046
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/default] [v1] creating RegistryIndexV1(), index url: https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/110.2/shared/3
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.registry_manager] 'trusted' is not set for registry 'kit/prod/sdk' in '/exts/omni.kit.registry.nucleus/registries'
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] [v2] creating RegistryIndexV2(), index url: https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/sdk/110.2/698af100/v2, index local cache: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/index/7fa0c1e2
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] [v1] creating RegistryIndexV1(), index url: https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/sdk/110.2/698af100/3
+2026-10-30T17:17:43Z [105ms] [Info] [omni.ext.plugin] [ext: omni.kit.registry.nucleus-0.0.0] started, startup time: 15 (ms)
+2026-10-30T17:17:43Z [105ms] [Info] [omni.ext.plugin] Syncing extension registry...
+2026-10-30T17:17:43Z [105ms] [Info] [omni.ext.plugin] Syncing extension registry for provider 'kit/prod/default'.
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/default] sync_index called.
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/default] [v2] _ensure_synced(resync=False) called
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/default] [v2] Syncing index...
+2026-10-30T17:17:43Z [105ms] [Info] [omni.kit.registry.nucleus.index_v2.index_sync] trying to take index_sync lock on: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/index/e18a4046/registry.lock
+2026-10-30T17:17:43Z [106ms] [Info] [omni.kit.registry.nucleus.utils.http_utils] Checking HTTP reachability for https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/110.2/shared/v2/registry.gz (timeout=3.0)
+2026-10-30T17:17:44Z [742ms] [Info] [omni.kit.registry.nucleus.utils.omni_client_utils] omni.client.read_file: https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/110.2/shared/v2/registry.gz
+2026-10-30T17:17:45Z [1,354ms] [Info] [omni.kit.registry.nucleus.utils.omni_client_utils] read_file result: Result.OK
+2026-10-30T17:17:45Z [1,361ms] [Info] [omni.kit.registry.nucleus.utils.common] index synced. index_is_new: False
+2026-10-30T17:17:45Z [1,362ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/default] selected index version implementation: RegistryIndexV2
+2026-10-30T17:17:45Z [1,366ms] [Info] [omni.ext.plugin] Syncing extension registry for provider 'kit/prod/sdk'.
+2026-10-30T17:17:45Z [1,366ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] sync_index called.
+2026-10-30T17:17:45Z [1,366ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] [v2] _ensure_synced(resync=False) called
+2026-10-30T17:17:45Z [1,366ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] [v2] Syncing index...
+2026-10-30T17:17:45Z [1,366ms] [Info] [omni.kit.registry.nucleus.index_v2.index_sync] trying to take index_sync lock on: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/index/7fa0c1e2/registry.lock
+2026-10-30T17:17:45Z [1,366ms] [Info] [omni.kit.registry.nucleus.utils.http_utils] Checking HTTP reachability for https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/sdk/110.2/698af100/v2/registry.gz (timeout=3.0)
+2026-10-30T17:17:45Z [1,976ms] [Info] [omni.kit.registry.nucleus.utils.omni_client_utils] omni.client.read_file: https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/sdk/110.2/698af100/v2/registry.gz
+2026-10-30T17:17:45Z [2,136ms] [Info] [omni.kit.registry.nucleus.utils.omni_client_utils] read_file result: Result.OK
+2026-10-30T17:17:45Z [2,147ms] [Info] [omni.kit.registry.nucleus.utils.common] index synced. index_is_new: False
+2026-10-30T17:17:45Z [2,147ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] selected index version implementation: RegistryIndexV2
+2026-10-30T17:17:45Z [2,153ms] [Info] [omni.ext.plugin] Solver result: succeeded. nodes: 6. time: 2.20892 (ms) iterations: 22 backtracks: 0 cycles: 0 unitprops: 21
+Extensions dependency solver solution:
+[ext: validate-1.0.0] deps:
+ -> 'omni.usd.libs' = { version='^' } selected: [omni.usd.libs-1.0.3]
+[ext: omni.usd.libs-1.0.3] deps:
+ -> 'omni.usd.config' = { version='^' } selected: [omni.usd.config-1.0.7]
+[ext: omni.usd.config-1.0.7] deps:
+ -> 'omni.client' = { version='^' } selected: [omni.client-1.3.0]
+[ext: omni.client-1.3.0] deps:
+ -> 'omni.client.lib' = { version='^' } selected: [omni.client.lib-1.1.1]
+[ext: omni.client.lib-1.1.1] deps:
+ -> 'omni.kit.async_engine' = { version='^' } selected: [omni.kit.async_engine-0.0.3]
+[ext: omni.kit.async_engine-0.0.3] no deps
+  Synced registries:
+     - kit/prod/default    : found 309 packages 
+     - kit/prod/sdk        : found 394 packages 
+
+2026-10-30T17:17:45Z [2,153ms] [Info] [omni.ext.plugin] Pulling extension: [ext: omni.client-1.3.0] (order: 0) Triggered by: omni.usd.config-1.0.7
+2026-10-30T17:17:45Z [2,153ms] [Info] [omni.kit.app.plugin] [2.180s] Pulling extension: `omni.client-1.3.0` from the registry.
+2026-10-30T17:17:45Z [2,153ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] pull extension: omni.client-1.3.0+698af100.lx64.r in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3'
+2026-10-30T17:17:45Z [2,154ms] [Info] [omni.kit.app._impl] [py stdout]: [omni.kit.registry.nucleus] [tid: 137011976238976] creating a link: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.client-1.3.0+698af100.lx64.r -> /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/omni.client-848483420e940d58
+2026-10-30T17:17:45Z [2,156ms] [Info] [packman.link] Created symbolic link
+2026-10-30T17:17:45Z [2,177ms] [Info] [omni.kit.registry.nucleus.utils.common] -> func:pull_extension took: 0.0242s
+2026-10-30T17:17:45Z [2,177ms] [Info] [omni.kit.app.plugin] [2.204s] Extension: `omni.client-1.3.0` was installed.
+2026-10-30T17:17:45Z [2,177ms] [Info] [omni.ext.plugin] Pulling extension: [ext: omni.usd.config-1.0.7] (order: 0) Triggered by: omni.usd.libs-1.0.3
+2026-10-30T17:17:45Z [2,177ms] [Info] [omni.kit.app.plugin] [2.204s] Pulling extension: `omni.usd.config-1.0.7` from the registry.
+2026-10-30T17:17:45Z [2,177ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] pull extension: omni.usd.config-1.0.7+698af100 in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3'
+2026-10-30T17:17:45Z [2,178ms] [Info] [omni.kit.app._impl] [py stdout]: [omni.kit.registry.nucleus] [tid: 137011976238976] creating a link: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.config-1.0.7+698af100 -> /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/omni.usd.config-a052277c4e5fe0ec
+2026-10-30T17:17:45Z [2,178ms] [Info] [packman.link] Created symbolic link
+2026-10-30T17:17:46Z [2,199ms] [Info] [omni.kit.registry.nucleus.utils.common] -> func:pull_extension took: 0.0219s
+2026-10-30T17:17:46Z [2,199ms] [Info] [omni.kit.app.plugin] [2.226s] Extension: `omni.usd.config-1.0.7` was installed.
+2026-10-30T17:17:46Z [2,199ms] [Info] [omni.ext.plugin] Pulling extension: [ext: omni.usd.libs-1.0.3] (order: -1000) Triggered by: validate-1.0.0
+2026-10-30T17:17:46Z [2,199ms] [Info] [omni.kit.app.plugin] [2.226s] Pulling extension: `omni.usd.libs-1.0.3` from the registry.
+2026-10-30T17:17:46Z [2,199ms] [Info] [omni.kit.registry.nucleus.utils.common] [kit/prod/sdk] pull extension: omni.usd.libs-1.0.3+698af100.lx64.r.cp312 in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3'
+2026-10-30T17:17:46Z [2,200ms] [Info] [omni.kit.app._impl] [py stdout]: [omni.kit.registry.nucleus] [tid: 137011976238976] creating a link: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312 -> /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/omni.usd.libs-875f149948218b1b
+2026-10-30T17:17:46Z [2,200ms] [Info] [packman.link] Created symbolic link
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.kit.registry.nucleus.utils.common] -> func:pull_extension took: 0.0216s
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.kit.app.plugin] [2.248s] Extension: `omni.usd.libs-1.0.3` was installed.
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Extension system targets:
+  kitHash: 698af100
+  config: release
+  python: cp312
+  usd: u7f41+stock+25.11+cxx11
+  platform: linux-x86_64
+  kit: 110.2.0
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit' (path type: 1, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3' (path type: 4, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extsPhysics' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/shared/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/apps/validate/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,221ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,222ms] [Info] [omni.ext.plugin] Registered 3 extension(s), 0 unsuitable:
+  [ext: omni.client-1.3.0] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.client-1.3.0+698af100.lx64.r)
+  [ext: omni.usd.config-1.0.7] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.config-1.0.7+698af100)
+  [ext: omni.usd.libs-1.0.3] registered (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312)
+2026-10-30T17:17:46Z [2,222ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.client-1.3.0] (order: 0) Triggered by: omni.usd.config-1.0.7 (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.client-1.3.0+698af100.lx64.r)
+2026-10-30T17:17:46Z [2,222ms] [Info] [omni.kit.app.plugin] [2.249s] [ext: omni.client-1.3.0] startup
+2026-10-30T17:17:46Z [2,222ms] [Info] [carb] Registered plugin: omni.client.liveprocess.plugin (interfaces: [omni::ext::IExt v0.1]) (impl: omni.client.liveprocess.plugin)
+2026-10-30T17:17:46Z [2,223ms] [Info] [carb] Registered plugin: carb.omniclient.plugin (interfaces: [carb::omniclient::IOmniClient v2.72]) (impl: carb.omniclient.plugin)
+2026-10-30T17:17:46Z [2,223ms] [Info] [carb] Registered plugin: carb.datasource-omniclient.plugin (interfaces: [carb::datasource::IDataSource v1.1]) (impl: carb.datasource-omniclient.plugin)
+2026-10-30T17:17:46Z [2,223ms] [Info] [carb] Initializing plugin: omni.client.liveprocess.plugin (interfaces: [omni::ext::IExt v0.1]) (impl: omni.client.liveprocess.plugin)
+2026-10-30T17:17:46Z [2,223ms] [Info] [omni.ext.plugin] [ext: omni.client-1.3.0] Starting ext::IExt in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/xdg_data/ov/data/exts/v2/omni.client-848483420e940d58/bin/libomni.client.liveprocess.plugin.so'
+2026-10-30T17:17:46Z [2,223ms] [Info] [carb] Initializing plugin: carb.omniclient.plugin (interfaces: [carb::omniclient::IOmniClient v2.72]) (impl: carb.omniclient.plugin)
+2026-10-30T17:17:46Z [2,223ms] [Info] [omni.ext.plugin] [ext: omni.client-1.3.0] started, startup time: 0 (ms)
+2026-10-30T17:17:46Z [2,223ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.usd.config-1.0.7] (order: 0) Triggered by: omni.usd.libs-1.0.3 (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.config-1.0.7+698af100)
+2026-10-30T17:17:46Z [2,223ms] [Info] [omni.kit.app.plugin] [2.250s] [ext: omni.usd.config-1.0.7] startup
+2026-10-30T17:17:46Z [2,229ms] [Info] [omni.ext._impl.utils] -> func:_refresh_cache took: 0.0060s
+2026-10-30T17:17:46Z [2,231ms] [Info] [omni.ext._impl._internal] Searching for classes derived from 'omni.ext.IExt' in 'omni.usd_config' ('/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.config-1.0.7+698af100')
+2026-10-30T17:17:46Z [2,231ms] [Info] [omni.ext._impl._internal] Found class `Extension` derived from `omni.ext.IExt` in module: 'omni.usd_config' in '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.config-1.0.7+698af100'. Calling `on_startup`.
+2026-10-30T17:17:46Z [2,234ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+2026-10-30T17:17:46Z [2,234ms] [Info] [omni.ext.plugin] [ext: omni.usd.config-1.0.7] started, startup time: 11 (ms)
+2026-10-30T17:17:46Z [2,234ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.usd.libs-1.0.3] (order: -1000) Triggered by: validate-1.0.0 (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312)
+2026-10-30T17:17:46Z [2,234ms] [Info] [omni.kit.app.plugin] [2.261s] [ext: omni.usd.libs-1.0.3] startup
+2026-10-30T17:17:46Z [2,234ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_arch.so
+2026-10-30T17:17:46Z [2,235ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_python.so
+2026-10-30T17:17:46Z [2,235ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libtbb.so
+2026-10-30T17:17:46Z [2,236ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_tf.so
+2026-10-30T17:17:46Z [2,237ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_garch.so
+2026-10-30T17:17:46Z [2,238ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_work.so
+2026-10-30T17:17:46Z [2,238ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_js.so
+2026-10-30T17:17:46Z [2,238ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_trace.so
+2026-10-30T17:17:46Z [2,238ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_plug.so
+2026-10-30T17:17:46Z [2,239ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_gf.so
+2026-10-30T17:17:46Z [2,241ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_vt.so
+2026-10-30T17:17:46Z [2,241ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_ar.so
+2026-10-30T17:17:46Z [2,242ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hio.so
+2026-10-30T17:17:46Z [2,242ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_ts.so
+2026-10-30T17:17:46Z [2,247ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_sdf.so
+2026-10-30T17:17:46Z [2,247ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_glf.so
+2026-10-30T17:17:46Z [2,248ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hgi.so
+2026-10-30T17:17:46Z [2,248ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXCore.so
+2026-10-30T17:17:46Z [2,248ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXFormat.so
+2026-10-30T17:17:46Z [2,249ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXGenShader.so
+2026-10-30T17:17:46Z [2,249ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXGenMsl.so
+2026-10-30T17:17:46Z [2,249ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libtbbmalloc.so
+2026-10-30T17:17:46Z [2,249ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_sdr.so
+2026-10-30T17:17:46Z [2,249ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_kind.so
+2026-10-30T17:17:46Z [2,250ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_pcp.so
+2026-10-30T17:17:46Z [2,252ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usd.so
+2026-10-30T17:17:46Z [2,254ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdGeom.so
+2026-10-30T17:17:46Z [2,254ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdShade.so
+2026-10-30T17:17:46Z [2,254ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdHydra.so
+2026-10-30T17:17:46Z [2,255ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_vdf.so
+2026-10-30T17:17:46Z [2,256ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_ef.so
+2026-10-30T17:17:46Z [2,256ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_esf.so
+2026-10-30T17:17:46Z [2,256ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_exec.so
+2026-10-30T17:17:46Z [2,257ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_execGeom.so
+2026-10-30T17:17:46Z [2,257ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libosdCPU.so
+2026-10-30T17:17:46Z [2,257ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_pxOsd.so
+2026-10-30T17:17:46Z [2,257ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_geomUtil.so
+2026-10-30T17:17:46Z [2,257ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_cameraUtil.so
+2026-10-30T17:17:46Z [2,257ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hf.so
+2026-10-30T17:17:46Z [2,261ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hd.so
+2026-10-30T17:17:46Z [2,261ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hdar.so
+2026-10-30T17:17:46Z [2,262ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdLux.so
+2026-10-30T17:17:46Z [2,262ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdRender.so
+2026-10-30T17:17:46Z [2,263ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdVol.so
+2026-10-30T17:17:46Z [2,268ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdImaging.so
+2026-10-30T17:17:46Z [2,268ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libtbbmalloc_proxy.so
+2026-10-30T17:17:46Z [2,268ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_esfUsd.so
+2026-10-30T17:17:46Z [2,269ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_execUsd.so
+2026-10-30T17:17:46Z [2,270ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hdsi.so
+2026-10-30T17:17:46Z [2,271ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdValidation.so
+2026-10-30T17:17:46Z [2,271ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdShadeValidators.so
+2026-10-30T17:17:46Z [2,272ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdUtils.so
+2026-10-30T17:17:46Z [2,272ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdMedia.so
+2026-10-30T17:17:46Z [2,273ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdUtilsValidators.so
+2026-10-30T17:17:46Z [2,273ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXGenMdl.so
+2026-10-30T17:17:46Z [2,273ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hgiGL.so
+2026-10-30T17:17:46Z [2,273ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hgiInterop.so
+2026-10-30T17:17:46Z [2,274ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdUI.so
+2026-10-30T17:17:46Z [2,274ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdMtlx.so
+2026-10-30T17:17:46Z [2,275ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hdMtlx.so
+2026-10-30T17:17:46Z [2,276ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libosdGPU.so
+2026-10-30T17:17:46Z [2,276ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXRender.so
+2026-10-30T17:17:46Z [2,276ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXGenGlsl.so
+2026-10-30T17:17:46Z [2,279ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hdSt.so
+2026-10-30T17:17:46Z [2,279ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libImath-3_1.so
+2026-10-30T17:17:46Z [2,279ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libAlembic.so
+2026-10-30T17:17:46Z [2,281ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hdx.so
+2026-10-30T17:17:46Z [2,282ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdImagingGL.so
+2026-10-30T17:17:46Z [2,282ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_pegtl.so
+2026-10-30T17:17:46Z [2,282ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdRi.so
+2026-10-30T17:17:46Z [2,282ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_hdGp.so
+2026-10-30T17:17:46Z [2,283ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXRenderHw.so
+2026-10-30T17:17:46Z [2,283ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXRenderGlsl.so
+2026-10-30T17:17:46Z [2,284ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdBakeMtlx.so
+2026-10-30T17:17:46Z [2,285ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdSkel.so
+2026-10-30T17:17:46Z [2,285ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdSkelValidators.so
+2026-10-30T17:17:46Z [2,285ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdSemantics.so
+2026-10-30T17:17:46Z [2,286ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdSkelImaging.so
+2026-10-30T17:17:46Z [2,287ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdProc.so
+2026-10-30T17:17:46Z [2,287ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdProcImaging.so
+2026-10-30T17:17:46Z [2,288ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdAppUtils.so
+2026-10-30T17:17:46Z [2,288ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdGeomValidators.so
+2026-10-30T17:17:46Z [2,289ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdVolImaging.so
+2026-10-30T17:17:46Z [2,289ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_boost.so
+2026-10-30T17:17:46Z [2,289ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libz.so
+2026-10-30T17:17:46Z [2,289ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libImath.so
+2026-10-30T17:17:46Z [2,289ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXGenOsl.so
+2026-10-30T17:17:46Z [2,290ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdPhysics.so
+2026-10-30T17:17:46Z [2,290ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdPhysicsValidators.so
+2026-10-30T17:17:46Z [2,290ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libdraco.so
+2026-10-30T17:17:46Z [2,291ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libMaterialXRenderOsl.so
+2026-10-30T17:17:46Z [2,291ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/libusd_usdRiPxrImaging.so
+2026-10-30T17:17:46Z [2,292ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/usd/usdAbc.so
+2026-10-30T17:17:46Z [2,293ms] [Info] [omni.ext.plugin] Loaded the dynamic library from /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+698af100.lx64.r.cp312/bin/usd/usdDraco.so
+2026-10-30T17:17:46Z [2,294ms] [Info] [carb] Registered plugin: omni.usd-abi.plugin (interfaces: [omni::usd::IPathAbi v1.0],[omni::usd::IRenderProductPrimFactory v1.7],[omni::usd::IRenderSettings v0.2],[omni::usd::IRenderSettingsLegacy v0.2],[omni::usd::IResolverPathAbi v0.2],[omni::usd::ITokenAbi v1.0]) (impl: omni.usd-abi.plugin)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] [ext: omni.usd.libs-1.0.3] started, startup time: 59 (ms)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] About to startup: [ext: validate-1.0.0] (order: 0) Triggered by API/CLI/Config. (path: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.kit.app.plugin] [2.320s] [ext: validate-1.0.0] startup
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] [ext: validate-1.0.0] started, startup time: 0 (ms)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.kit.app.plugin] No run loop was found, quitting...
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] [ext manager] preferLocalVersions: 1
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Extension system targets:
+  kitHash: 698af100
+  config: release
+  python: cp312
+  usd: u7f41+stock+25.11+cxx11
+  platform: linux-x86_64
+  kit: 110.2.0
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit' (path type: 1, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/validate/1.0/exts/3' (path type: 4, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extsPhysics' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/shared/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/apps/validate/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/exts' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps' (path type: 0, dev: 0)
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.kit.app.plugin] Application auto-quits as it worked for the specified number of frames: 0
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.kit.app.plugin] Executing file: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate_in_kit.py
+2026-10-30T17:17:46Z [2,294ms] [Info] [omni.kit.app.plugin] Found a script to execute: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate_in_kit.py
+2026-10-30T17:17:46Z [2,505ms] [Info] [omni.kit.app._impl] [py stdout]: {
+  "ok": true,
+  "marlin_assets_required": false,
+  "rendering_performed": false
+}
+2026-10-30T17:17:46Z [2,506ms] [Info] [omni.kit.app.plugin] app started
+2026-10-30T17:17:46Z [2,506ms] [Info] [carb.crashreporter-breakpad.plugin] crashreporter configured:
+    buildVersion: '110.2.0'
+    buildNumber: '342835'
+    buildHash: '698af100'
+    buildBranch: 'feature'
+    buildCi: 'gl'
+    buildMajor: '110'
+    buildMinor: '2'
+    buildPatch: '0'
+    buildConfig: 'release'
+    BuildGitlabJobID: '360905302'
+    buildGitlabJobStage: 'kit-build'
+    buildGitlabJobName: 'kit-build-release-linux-x86_64'
+    buildGitlabPipelineID: '57676005'
+    profilerCpuTscFrequency: '4192494456'
+    commandLine: '/home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/sdk-1102/kit /home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate.kit --portable-root /home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable --no-window --/rtx-transient/resourcemanager/localTextureCachePath=/home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/texture_cache --/log/file=/home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/baseline_validate_01/kit_process.log --exec /home/<username>/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/validate_in_kit.py'
+    runningInContainer: '0'
+    appName: 'validate'
+    appVersion: '1.0.0'
+    appState: 'shutdown'
+    environmentName: 'default'
+    portableMode: '1'
+    userId: 'default'
+    autoloadExts: ''
+    carboniteSdkVersion: '210.2.5+release.14036.c700af7d.gl'
+    carboniteFrameworkVersion: '210.2.5+release.14036.c700af7d.gl'
+    enabled: false
+    uninstalling handler
+2026-10-30T17:17:46Z [2,507ms] [Info] [carb] Shutting down plugin omni.kit.app.plugin
+2026-10-30T17:17:46Z [2,507ms] [Info] [carb] Shutting down plugin omni.ext.plugin
+2026-10-30T17:17:46Z [2,507ms] [Info] [carb] Shutting down plugin omni.client.liveprocess.plugin
+2026-10-30T17:17:46Z [2,507ms] [Info] [carb] Shutting down plugin carb.omniclient.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.scripting-python.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.events.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.eventdispatcher.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.variant.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.tasking.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.crashreporter-breakpad.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin omni.observability-otel.plugin
+2026-10-30T17:17:46Z [2,508ms] [Info] [carb] Shutting down plugin carb.profiler-cpu.plugin
+2026-10-30T17:17:46Z [2,509ms] [Info] [carb] Shutting down plugin carb.dictionary.serializer-toml.plugin
+2026-10-30T17:17:46Z [2,509ms] [Info] [carb] Shutting down plugin carb.dictionary.serializer-json.plugin
+2026-10-30T17:17:46Z [2,509ms] [Info] [carb] Shutting down plugin carb.tokens.plugin
+2026-10-30T17:17:46Z [2,509ms] [Info] [carb] Shutting down plugin carb.profiler-mux.plugin
+2026-10-30T17:17:46Z [2,509ms] [Info] [carb] Shutting down plugin carb.settings.plugin
+2026-10-30T17:17:46Z [2,509ms] [Info] [carb] Shutting down plugin carb.dictionary.plugin

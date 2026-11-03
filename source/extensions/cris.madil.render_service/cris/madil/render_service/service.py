@@ -28,6 +28,8 @@ from . import hidef_marine as _hidef_marine
 from . import sony_api as _sony_api
 from . import water_diagnostics as _water_diagnostics
 from . import water_medium_diagnostics as _water_medium_diagnostics
+from . import ocean_medium as _ocean_medium
+from . import ocean_medium_diagnostics as _ocean_medium_diagnostics
 from .cetacean import shutdown_cetacean_swimming
 from .ocean import shutdown_ocean_animation
 from .water_material import RTX_WATER_SETTINGS

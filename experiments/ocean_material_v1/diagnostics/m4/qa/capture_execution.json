@@ -1,0 +1,4428 @@
+[
+  {
+    "request": {
+      "selection": "original",
+      "view": "nadir",
+      "phase_seconds": 0
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/nadir_lzadtkct",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_nadir_planar_target",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 0,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          236.31250000000003,
+          172.3125,
+          39.374999999999915,
+          39.375
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -1.0,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -1.0,
+                -0.09
+              ],
+              [
+                11.91,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                236.31250000000003,
+                172.3125
+              ],
+              [
+                236.31250000000003,
+                211.6875
+              ],
+              [
+                275.68749999999994,
+                211.6875
+              ],
+              [
+                275.68749999999994,
+                172.3125
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              236.31250000000003,
+              172.3125,
+              39.374999999999915,
+              39.375
+            ],
+            "local_gsd_xy_cm_px": [
+              0.45714285714275604,
+              0.4571428571428572
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          0.0
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0,
+            -1.0,
+            -0.0
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 10584.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "original",
+          "phase_seconds": 0,
+          "view": "nadir",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1071,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 0,
+        "integrated_geometry": {
+          "open_original_surface": true
+        },
+        "material": "/World/Looks/OceanWater",
+        "live_frames": [],
+        "scene_sha256": "7d683d80c858282d3f7691757c818d7540f5a0ebb7e35b822abb34078f40436a",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            6.661338147750939e-14,
+            -300.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1200.0,
+            0.0,
+            -300.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            6.661338147750939e-14,
+            -300.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 2.5439772440004162
+  },
+  {
+    "request": {
+      "selection": "original",
+      "view": "oblique",
+      "phase_seconds": 0
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_n22sgvnw",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 10536.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "original",
+          "phase_seconds": 0,
+          "view": "oblique",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1032,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 0,
+        "integrated_geometry": {
+          "open_original_surface": true
+        },
+        "material": "/World/Looks/OceanWater",
+        "live_frames": [],
+        "scene_sha256": "a7381946d8cd1d3a7cfb64aba7a97e9266e69e5f90061e342602694f21c3079d",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 2.383638704981422
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "nadir",
+      "phase_seconds": 0
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/nadir_7p5fwuxi",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_nadir_planar_target",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 0,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          236.31250000000003,
+          172.3125,
+          39.374999999999915,
+          39.375
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -1.0,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -1.0,
+                -0.09
+              ],
+              [
+                11.91,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                236.31250000000003,
+                172.3125
+              ],
+              [
+                236.31250000000003,
+                211.6875
+              ],
+              [
+                275.68749999999994,
+                211.6875
+              ],
+              [
+                275.68749999999994,
+                172.3125
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              236.31250000000003,
+              172.3125,
+              39.374999999999915,
+              39.375
+            ],
+            "local_gsd_xy_cm_px": [
+              0.45714285714275604,
+              0.4571428571428572
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          0.0
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0,
+            -1.0,
+            -0.0
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 10120.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 0,
+          "view": "nadir",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1032,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 0,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.931511008732514,
+          "minimum_outward_side_dot": 7328.8281634317655,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "14b87af74f54c642f4ed492c33ef19d43451ffea23405a55b6dd5a47a3277449",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            6.661338147750939e-14,
+            -300.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1200.0,
+            0.0,
+            -300.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            6.661338147750939e-14,
+            -300.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 4.096109380014241
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "oblique",
+      "phase_seconds": 0
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_f3h1u1um",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 9888.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 0,
+          "view": "oblique",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1064,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 0,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.931511008732514,
+          "minimum_outward_side_dot": 7328.8281634317655,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "a3280b1a0f4621178ce34dae49f5bd1d5b134e25be3b539310ae65bcd339c54e",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 4.350158223009203
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "oblique",
+      "phase_seconds": 0.5
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_e015hcrn",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 9840.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 0.5,
+          "view": "oblique",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1064,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 0.5,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9293977209924768,
+          "minimum_outward_side_dot": 7334.41270769347,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "9439a2097420aaaa8f14c06e43177187a880d37427dfb25727775c34d1e169f9",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 4.353651003999403
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "oblique",
+      "phase_seconds": 1
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_sf6386yi",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 9872.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 1,
+          "view": "oblique",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1064,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 1,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9301595811724539,
+          "minimum_outward_side_dot": 7450.434856427188,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "225c44cf1c633d021e224ed8d658f244a45c6d6f7fbf29fd4529eee821279c02",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 4.3004962720151525
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "oblique",
+      "phase_seconds": 2
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_tirjw_g1",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 9824.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 2,
+          "view": "oblique",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1059,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 2,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9292934296680639,
+          "minimum_outward_side_dot": 7509.724623892095,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "90972a2335234e8eb8ec5200bc2c3797c1a9868ba1434c3acf28ab9fecc56366",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 4.370790443994338
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "oblique",
+      "phase_seconds": 4
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_g802fewd",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 9688.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 4,
+          "view": "oblique",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1112,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 4,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9295885431089942,
+          "minimum_outward_side_dot": 7448.182280686127,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "d3829433395576e6dc9ddd0da9a917fa589aa305f57099f7b60db2bfcbee3a51",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 4.388497145992005
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "inside",
+      "phase_seconds": 1
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/inside_7o1tkwwm",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_nadir_planar_target",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 0.5,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 0,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.05714285714285715,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          98.50000000000026,
+          34.5,
+          314.99999999999955,
+          315.0
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -1.0,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -1.0,
+                -0.09
+              ],
+              [
+                11.91,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                98.50000000000026,
+                34.5
+              ],
+              [
+                98.50000000000026,
+                349.5
+              ],
+              [
+                413.4999999999998,
+                349.5
+              ],
+              [
+                413.4999999999998,
+                34.5
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              98.50000000000026,
+              34.5,
+              314.99999999999955,
+              315.0
+            ],
+            "local_gsd_xy_cm_px": [
+              0.05714285714297773,
+              0.05714285714285715
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          -0.5,
+          0.0
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0,
+            -1.0,
+            -0.0
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 0.0,
+          "maximum": 11336.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 1,
+          "view": "inside",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1112,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 1,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9301595811724539,
+          "minimum_outward_side_dot": 7450.434856427188,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "f51a12de0af924a7b04c8807dbff505d033ee43b46b97f9142222751de975430",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            -1.1102230246251565e-14,
+            50.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            -0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1200.0,
+            0.0,
+            50.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            -1.1102230246251565e-14,
+            50.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 3.235247980017448
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "exit",
+      "phase_seconds": 1
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/exit_r0l1_q9s",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_nadir_planar_target",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 0.5,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 0,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.05714285714285715,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          98.50000000000026,
+          34.5,
+          314.99999999999955,
+          315.0
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -1.0,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -1.0,
+                -0.09
+              ],
+              [
+                11.91,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                98.50000000000026,
+                34.5
+              ],
+              [
+                98.50000000000026,
+                349.5
+              ],
+              [
+                413.4999999999998,
+                349.5
+              ],
+              [
+                413.4999999999998,
+                34.5
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              98.50000000000026,
+              34.5,
+              314.99999999999955,
+              315.0
+            ],
+            "local_gsd_xy_cm_px": [
+              0.05714285714297773,
+              0.05714285714285715
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          -0.5,
+          0.0
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0,
+            -1.0,
+            -0.0
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 147.75
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 1,
+          "view": "exit",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1064,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 1,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9301595811724539,
+          "minimum_outward_side_dot": 7450.434856427188,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "e1d2022e62fe8932d126a9cc90b6fe213f8aacca80841c3b4e9546970cd560dd",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": true,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            -1.1102230246251565e-14,
+            -50.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -1200.0,
+            0.0,
+            -50.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            -1.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -1200.0,
+            -1.1102230246251565e-14,
+            -50.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 5.084318988985615
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "edge",
+      "phase_seconds": 1
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/edge_y3unb83x",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_nadir_planar_target",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 0,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          236.31250000000003,
+          172.3125,
+          39.374999999999915,
+          39.375
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -1.0,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -1.0,
+                -0.09
+              ],
+              [
+                11.91,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                0.09
+              ],
+              [
+                12.09,
+                -1.0,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                236.31250000000003,
+                172.3125
+              ],
+              [
+                236.31250000000003,
+                211.6875
+              ],
+              [
+                275.68749999999994,
+                211.6875
+              ],
+              [
+                275.68749999999994,
+                172.3125
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              236.31250000000003,
+              172.3125,
+              39.374999999999915,
+              39.375
+            ],
+            "local_gsd_xy_cm_px": [
+              0.45714285714275604,
+              0.4571428571428572
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          0.0
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          [
+            0,
+            -1.0,
+            -0.0
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 189.875
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 1,
+          "view": "edge",
+          "advance_live": false
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1112,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 1,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9301595811724539,
+          "minimum_outward_side_dot": 7450.434856427188,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [],
+        "scene_sha256": "e14a43a4a5d9364766f65870ccce3d3515fb52be1613af25ea551d3701ce84d6",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": true,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -7900.0,
+            6.661338147750939e-14,
+            -300.0,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            0.0,
+            0.0
+          ],
+          [
+            -7900.0,
+            0.0,
+            -300.0,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.220446049250313e-16,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -2.220446049250313e-16,
+            0.0
+          ],
+          [
+            -7900.0,
+            6.661338147750939e-14,
+            -300.0,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 6.180668146989774
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "view": "oblique",
+      "phase_seconds": 0,
+      "advance_live": true
+    },
+    "response": {
+      "ok": true,
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4/captures/oblique_ly3ov_xm",
+      "metadata": {
+        "schema_version": "1.1.0",
+        "test_kind": "engineering_oblique_planar_targets",
+        "scientific_camera_calibrated": false,
+        "config": {
+          "meters_per_scene_unit": 0.01,
+          "image_width_px": 512,
+          "image_height_px": 384,
+          "focal_length_mm": 35,
+          "pixel_pitch_um": 40,
+          "height_above_target_m": 4,
+          "target_width_m": 0.18,
+          "target_height_m": 0.18,
+          "target_plane_y_m": -1,
+          "pitch_deg": 40,
+          "roll_deg": 0
+        },
+        "gsd_cm_px": 0.4571428571428572,
+        "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+        "expected_bbox_xywh_px": [
+          240.74953883670057,
+          180.57349598570104,
+          30.50092232659884,
+          23.109035043446198
+        ],
+        "targets": [
+          {
+            "id": "Target_00",
+            "center_world_m": [
+              12.0,
+              -0.9999999999999996,
+              0.0
+            ],
+            "sample_image_px": [
+              256.0,
+              192.0
+            ],
+            "corners_world_m": [
+              [
+                11.91,
+                -0.9999999999999996,
+                -0.09
+              ],
+              [
+                11.91,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                0.09
+              ],
+              [
+                12.09,
+                -0.9999999999999996,
+                -0.09
+              ]
+            ],
+            "expected_polygon_px": [
+              [
+                241.0837583681497,
+                180.57349598570104
+              ],
+              [
+                240.74953883670057,
+                203.68253102914724
+              ],
+              [
+                271.2504611632994,
+                203.68253102914724
+              ],
+              [
+                270.9162416318503,
+                180.57349598570104
+              ]
+            ],
+            "expected_bbox_xywh_px": [
+              240.74953883670057,
+              180.57349598570104,
+              30.50092232659884,
+              23.109035043446198
+            ],
+            "local_gsd_xy_cm_px": [
+              0.5967576179806144,
+              0.779011923576034
+            ]
+          }
+        ],
+        "intrinsics_px": {
+          "fx": 875.0,
+          "fy": 875.0,
+          "cx": 256.0,
+          "cy": 192.0
+        },
+        "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+        "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+        "camera_position_m": [
+          12,
+          3,
+          3.3563985247091197
+        ],
+        "world_up": "Y",
+        "camera_basis_right_up_forward": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            -0.766044443118978
+          ],
+          [
+            0,
+            -0.766044443118978,
+            -0.6427876096865393
+          ]
+        ],
+        "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+        "seed": 0,
+        "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic",
+        "hdr_image": "hdr.exr",
+        "hdr_array": "hdr.npz",
+        "hdr_buffer": {
+          "aov": "HdrColor",
+          "format": "TextureFormat.RGBA16_SFLOAT",
+          "buffer_bytes": 1572864,
+          "width": 512,
+          "height": 384,
+          "buffer_type": "PyCapsule",
+          "dtype": "float32",
+          "minimum": 1.0,
+          "maximum": 9800.0
+        },
+        "hdr_domain": "Native HdrColor float AOV; absolute radiometric calibration unverified",
+        "request": {
+          "selection": "engineering_v1",
+          "phase_seconds": 0,
+          "view": "oblique",
+          "advance_live": true
+        },
+        "gpu_before": {
+          "device_index": 0,
+          "total_mib": 6138,
+          "free_mib": 1060,
+          "driver": "595.91.07"
+        },
+        "effective_phase_seconds": 2.4613829999999997,
+        "integrated_geometry": {
+          "boundary_edges": 0,
+          "nonmanifold_edges": 0,
+          "same_direction_shared_edges": 0,
+          "minimum_top_normal_y": 0.9297194042193713,
+          "minimum_outward_side_dot": 7480.15971177393,
+          "maximum_bottom_normal_y": -1.0,
+          "points": 17154,
+          "faces": 17408,
+          "duplicated_top_faces": 0,
+          "shared_top_seam_indices": true
+        },
+        "material": "/World/Looks/OceanWaterEngineeringV1",
+        "live_frames": [
+          {
+            "elapsed": 0.452995,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 0.6433139999999999,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 0.833884,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 1.136787,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 1.320428,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 1.5027009999999998,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 1.7968429999999997,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 1.9810689999999997,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 2.162949,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          },
+          {
+            "elapsed": 2.4613829999999997,
+            "binding": "/World/Looks/OceanWaterEngineeringV1",
+            "points": 17154
+          }
+        ],
+        "scene_sha256": "b4ab6ad53a3299c572adae4c72c7e39940e992aeba1798e928643d777440be80",
+        "renderer_instance_policy": "Existing live viewport; no second USD context or Hydra renderer",
+        "scientific_water_calibrated": false,
+        "camera_override": false,
+        "viewport_resolution": [
+          512,
+          384
+        ],
+        "capture_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "capture_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+        "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+        "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+        "actual_viewport_resolution": [
+          512,
+          384
+        ],
+        "ui_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865394,
+            0.7660444431189782,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189782,
+            0.6427876096865394,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865394,
+            -445.5584714210137,
+            1.0
+          ]
+        ],
+        "ui_projection_matrix": [
+          [
+            1.685656136312313,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "ui_projection_note": "ViewportAPI.projection describes the UI element; never use as capture-image intrinsics",
+        "render_product": {
+          "path": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+          "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+          "resolution": [
+            512,
+            384
+          ],
+          "pixel_aspect_ratio": 1.0,
+          "data_window_ndc": [
+            0.0,
+            0.0,
+            1.0,
+            1.0
+          ]
+        },
+        "projection_metadata_version": 2,
+        "actual_view_matrix": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6427876096865393,
+            0.7660444431189781,
+            0.0
+          ],
+          [
+            0.0,
+            -0.7660444431189781,
+            0.6427876096865393,
+            0.0
+          ],
+          [
+            -1200.0,
+            64.27876096865398,
+            -445.5584714210136,
+            1.0
+          ]
+        ],
+        "actual_projection_matrix": [
+          [
+            3.4179688263975567,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            4.557291768530075,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -1.0008003201280513,
+            -1.0
+          ],
+          [
+            0.0,
+            0.0,
+            -2.000800320128051,
+            0.0
+          ]
+        ],
+        "actual_matrix_alias_note": "Version 2: aliases for capture-camera matrices; version 1 stored UI matrices"
+      }
+    },
+    "elapsed_seconds": 6.614777552022133
+  }
+]

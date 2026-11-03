@@ -1,0 +1,76 @@
+{
+  "material": "/World/Looks/OceanWaterEngineeringV1",
+  "prims": [
+    {
+      "path": "/World/Looks/OceanWaterEngineeringV1",
+      "attributes": {
+        "outputs:displacement": {
+          "value": "None",
+          "connections": []
+        },
+        "outputs:mdl:surface": {
+          "value": "None",
+          "connections": [
+            "/World/Looks/OceanWaterEngineeringV1/Shader.outputs:out"
+          ]
+        },
+        "outputs:mdl:volume": {
+          "value": "None",
+          "connections": [
+            "/World/Looks/OceanWaterEngineeringV1/Shader.outputs:out"
+          ]
+        },
+        "outputs:surface": {
+          "value": "None",
+          "connections": []
+        },
+        "outputs:volume": {
+          "value": "None",
+          "connections": []
+        }
+      }
+    },
+    {
+      "path": "/World/Looks/OceanWaterEngineeringV1/Shader",
+      "attributes": {
+        "info:id": {
+          "value": "None",
+          "connections": []
+        },
+        "info:implementationSource": {
+          "value": "sourceAsset",
+          "connections": []
+        },
+        "info:mdl:sourceAsset": {
+          "value": "@OmniVolumeNoise.mdl@",
+          "connections": []
+        },
+        "info:mdl:sourceAsset:subIdentifier": {
+          "value": "OmniVolumePerlinNoise",
+          "connections": []
+        },
+        "inputs:color1": {
+          "value": "(0.5108256, 0.2231436, 0.1053605)",
+          "connections": []
+        },
+        "inputs:color2": {
+          "value": "(0.5108256, 0.2231436, 0.1053605)",
+          "connections": []
+        },
+        "inputs:volume_albedo": {
+          "value": "(0, 0, 0)",
+          "connections": []
+        },
+        "inputs:volume_density_scale": {
+          "value": "1.0",
+          "connections": []
+        },
+        "outputs:out": {
+          "value": "None",
+          "connections": []
+        }
+      }
+    }
+  ],
+  "global_ptvol": true
+}

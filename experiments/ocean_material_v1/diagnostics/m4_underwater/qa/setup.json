@@ -1,0 +1,109 @@
+{
+  "ok": true,
+  "message": "MARLIN marine scene created.",
+  "results": {
+    "ocean": {
+      "ok": true,
+      "ocean_path": "/World/Ocean",
+      "size": 16000.0,
+      "resolution": 128,
+      "vertices": 16641,
+      "speed": 0.7,
+      "target_fps": 15.0
+    },
+    "material": {
+      "ok": true,
+      "renderer": "NVIDIA OmniSurface",
+      "ocean_path": "/World/Ocean",
+      "material_path": "/World/Looks/OceanWater",
+      "roughness": 0.045,
+      "ior": 1.333,
+      "transmission": 1.0,
+      "base_weight": 0.02,
+      "base_color": [
+        0.02,
+        0.1,
+        0.13
+      ],
+      "transmission_color": [
+        0.78,
+        0.92,
+        0.95
+      ],
+      "transmission_depth": 100.0,
+      "scattering_color": [
+        0.005,
+        0.02,
+        0.03
+      ],
+      "scattering_anisotropy": 0.0,
+      "thin_walled": true
+    },
+    "environment": {
+      "ok": true,
+      "environment_path": "/World/Environment",
+      "sky_path": "/World/Environment/Sky",
+      "sun_path": "/World/Environment/Sun",
+      "sky_intensity": 500.0,
+      "sun_intensity": 5000.0,
+      "sun_rotation": [
+        -35.0,
+        25.0,
+        0.0
+      ]
+    },
+    "underwater_cue": {
+      "ok": true,
+      "enabled": true,
+      "surface_height": 0.0,
+      "settings": {
+        "/rtx/fog/enabled": true,
+        "/rtx/fog/fogColor": [
+          0.03,
+          0.16,
+          0.2
+        ],
+        "/rtx/fog/fogColorIntensity": 0.5,
+        "/rtx/fog/fogZup/enabled": false,
+        "/rtx/fog/fogStartHeight": 0.0,
+        "/rtx/fog/fogHeightDensity": 0.08,
+        "/rtx/fog/fogHeightFalloff": 0.025,
+        "/rtx/fog/fogStartDist": 0.0,
+        "/rtx/fog/fogEndDist": 1800.0,
+        "/rtx/fog/fogDistanceDensity": 0.04
+      }
+    },
+    "dolphin": {
+      "ok": true,
+      "name": "Dolphin_001",
+      "prim_path": "/World/Cetaceans/Dolphin_001",
+      "model_path": "/World/Cetaceans/Dolphin_001/Model",
+      "asset_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+      "source_prim": "/root",
+      "position": [
+        0.0,
+        -20.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "model_rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": 100.0
+    },
+    "swimming": {
+      "ok": true,
+      "started": false
+    },
+    "camera": {
+      "ok": true,
+      "started": false
+    }
+  }
+}

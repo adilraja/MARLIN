@@ -1,0 +1,38 @@
+[package]
+title = "Standalone camera-medium reproduction"
+version = "1.0.0"
+
+[dependencies]
+"omni.usd" = {}
+"omni.hydra.rtx" = {}
+"omni.kit.viewport.window" = {}
+"omni.kit.viewport.utility" = {}
+"omni.kit.renderer.capture" = {}
+"omni.rtx.settings.core" = {}
+
+[settings]
+app.window.title = "Isolated water-medium test"
+app.window.width = 512
+app.window.height = 384
+app.viewport.defaults.fillViewport = false
+app.viewport.defaults.width = 512
+app.viewport.defaults.height = 384
+app.content.emptyStageOnStart = true
+app.file.ignoreUnsavedOnExit = true
+app.settings.persistent = false
+renderer.multiGpu.enabled = false
+renderer.gpuEnumeration.glInterop.enabled = false
+rtx.ecoMode.enabled = false
+rtx.rendermode = "PathTracing"
+rtx.pathtracing.maxBounces = 16
+rtx.pathtracing.maxSpecularAndTransmissionBounces = 16
+rtx.pathtracing.spp = 1
+rtx.pathtracing.totalSpp = 512
+rtx.pathtracing.adaptiveSampling.enabled = false
+rtx.pathtracing.fireflyFilter.enabled = false
+rtx.rtpt.fireflyFilter.enabled = false
+rtx.fog.enabled = false
+rtx.post.histogram.enabled = false
+privacy.performance = false
+privacy.usage = false
+telemetry.enableAnonymousData = false

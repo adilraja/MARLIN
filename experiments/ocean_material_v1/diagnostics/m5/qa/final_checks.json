@@ -1,0 +1,46 @@
+[
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m5/qa",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_exact_match (test_compare_images.Measurements.test_exact_match) ... ok\ntest_inclusive_mean_limit (test_compare_images.Measurements.test_inclusive_mean_limit) ... ok\ntest_p99_can_fail_with_mean_below_limit (test_compare_images.Measurements.test_p99_can_fail_with_mean_below_limit) ... ok\ntest_peripheral_changes_do_not_disappear_in_roi (test_compare_images.Measurements.test_peripheral_changes_do_not_disappear_in_roi) ... ok\ntest_refuses_non_display_values (test_compare_images.Measurements.test_refuses_non_display_values) ... ok\ntest_refuses_resized_inputs (test_compare_images.Measurements.test_refuses_resized_inputs) ... ok\ntest_uint8_subtraction_does_not_wrap (test_compare_images.Measurements.test_uint8_subtraction_does_not_wrap) ... ok\ntest_clips_without_per_image_normalization (test_display_images.FixedDisplay.test_clips_without_per_image_normalization) ... ok\ntest_declared_scale_gamma_and_rounding (test_display_images.FixedDisplay.test_declared_scale_gamma_and_rounding) ... ok\ntest_refuses_nonfinite_and_wrong_dimensions (test_display_images.FixedDisplay.test_refuses_nonfinite_and_wrong_dimensions) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.037s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_renderer_snapshot.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_legacy_replay_verifies_saved_subset_and_reports_omissions (test_renderer_snapshot.RendererSnapshotTests.test_legacy_replay_verifies_saved_subset_and_reports_omissions) ... ok\ntest_preservation_check_stays_strict_for_current_keysets_and_types (test_renderer_snapshot.RendererSnapshotTests.test_preservation_check_stays_strict_for_current_keysets_and_types) ... ok\ntest_replay_of_replay_retains_original_uncertainty (test_renderer_snapshot.RendererSnapshotTests.test_replay_of_replay_retains_original_uncertainty) ... ok\ntest_roundtrip_restores_vectors_false_zero_and_absent_options (test_renderer_snapshot.RendererSnapshotTests.test_roundtrip_restores_vectors_false_zero_and_absent_options) ... ok\ntest_sampling_color_and_effect_settings_are_recorded_without_defaults (test_renderer_snapshot.RendererSnapshotTests.test_sampling_color_and_effect_settings_are_recorded_without_defaults) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.005s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m5/qa/verify_preparation.py"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"verified\": {\n    \"historical_pins\": 2342,\n    \"source_before\": 113\n  },\n  \"checkpoint_hash_verified\": true,\n  \"guard_refused_render\": true,\n  \"historical_settings_source_verified\": true,\n  \"full_milestone_complete\": false\n}\n",
+    "stderr": ""
+  }
+]

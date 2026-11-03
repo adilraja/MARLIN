@@ -1,0 +1,971 @@
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py
+index 059fd4d..1c5b06a 100644
+--- a/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py
+@@ -88,6 +88,9 @@ async def create_ocean(data: OceanDataModel):
+     ocean_path = f"/World/{data.name}"
+ 
+     # Replace a previous ocean with the same name.
++    from .ocean_medium import selected
++    if selected(stage.GetPrimAtPath(ocean_path)):
++        return {"ok": False, "error": "Restore the original water preset before replacing this ocean"}
+     if stage.GetPrimAtPath(ocean_path):
+         stage.RemovePrim(ocean_path)
+ 
+@@ -415,6 +418,14 @@ def _author_omnisurface_inputs(shader, data):
+     summary="Apply configurable NVIDIA OmniSurface seawater",
+ )
+ async def apply_ocean_material(data: OceanMaterialDataModel):
++    from .ocean_medium import selected
++    stage = omni.usd.get_context().get_stage()
++    if stage and selected(stage.GetPrimAtPath(f"/World/{data.ocean_name}")):
++        return {"ok": False, "error": "Select the original water preset before applying a different material"}
++    return bind_ocean_material(data)
++
++
++def bind_ocean_material(data: OceanMaterialDataModel):
+     stage = omni.usd.get_context().get_stage()
+ 
+     if stage is None:
+@@ -954,6 +965,9 @@ def _update_animated_ocean(event):
+         )
+     )
+ 
++    from .ocean_medium import render_arrays
++    points, normals, extent, interpolation = render_arrays(ocean, points, normals, extent)
++
+     ocean.GetPointsAttr().Set(
+         points
+     )
+@@ -963,7 +977,7 @@ def _update_animated_ocean(event):
+     )
+ 
+     ocean.SetNormalsInterpolation(
+-        UsdGeom.Tokens.vertex
++        interpolation
+     )
+ 
+     ocean.GetExtentAttr().Set(
+@@ -1006,6 +1020,12 @@ async def start_ocean_animation(
+             "error": f"Invalid ocean name: {data.name}",
+         }
+ 
++    from .ocean_medium import validate_restart
++    try:
++        validate_restart(stage.GetPrimAtPath(f"/World/{data.name}"), data)
++    except ValueError as exc:
++        return {"ok": False, "error": str(exc)}
++
+     # Stop an existing animation first.
+     shutdown_ocean_animation()
+ 
+@@ -1180,12 +1200,14 @@ async def start_ocean_animation(
+         )
+     )
+ 
++    from .ocean_medium import render_arrays
++    points, normals, extent, interpolation = render_arrays(ocean, points, normals, extent)
+     ocean.GetPointsAttr().Set(points)
+ 
+     ocean.CreateNormalsAttr().Set(normals)
+ 
+     ocean.SetNormalsInterpolation(
+-        UsdGeom.Tokens.vertex
++        interpolation
+     )
+ 
+     ocean.GetExtentAttr().Set(extent)
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py
+index 19950c6..6bf908d 100644
+--- a/source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py
+@@ -26,6 +26,7 @@ from .ocean import (
+     stop_ocean_animation,
+ )
+ from .underwater_api import UnderwaterCueDataModel, apply_underwater_cue
++from .ocean_medium import selected, preserve_renderer_after_setup
+ 
+ # =========================================================================
+ # CRIS Complete Marine Scene Setup
+@@ -186,9 +187,10 @@ async def setup_marine_scene(
+         thin_walled=True,
+     )
+ 
+-    material_result = await apply_ocean_material(
+-        material_data
+-    )
++    if selected(omni.usd.get_context().get_stage().GetPrimAtPath('/World/Ocean')):
++        material_result = {"ok": True, "preserved_selected_preset": "engineering_v1"}
++    else:
++        material_result = await apply_ocean_material(material_data)
+ 
+     results["material"] = material_result
+ 
+@@ -362,6 +364,7 @@ async def setup_marine_scene(
+             f"SELECTION clear warning: {exc}"
+         )
+ 
++    preserve_renderer_after_setup(omni.usd.get_context().get_stage())
+     print(
+         "[CRIS Marine Setup] "
+         "Complete MARLIN marine scene created."
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/service.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/service.py
+index 8036e6d..68f0595 100644
+--- a/source/extensions/cris.madil.render_service/cris/madil/render_service/service.py
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/service.py
+@@ -28,6 +28,8 @@ from . import hidef_marine as _hidef_marine
+ from . import sony_api as _sony_api
+ from . import water_diagnostics as _water_diagnostics
+ from . import water_medium_diagnostics as _water_medium_diagnostics
++from . import ocean_medium as _ocean_medium
++from . import ocean_medium_diagnostics as _ocean_medium_diagnostics
+ from .cetacean import shutdown_cetacean_swimming
+ from .ocean import shutdown_ocean_animation
+ from .water_material import RTX_WATER_SETTINGS
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py
+index b163979..79d6a61 100644
+--- a/source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py
+@@ -33,9 +33,10 @@ class MediumRequest(BaseModel):
+         extra = 'forbid'
+ 
+ 
+-def setup_medium_viewport(viewport, request):
++def setup_medium_viewport(viewport, request, hide_overlays=True):
+     from pxr import UsdRender
+-    hide_fixture_overlays(viewport)
++    if hide_overlays:
++        hide_fixture_overlays(viewport)
+     # The default product requests LdrColor only. Request HDR explicitly on
+     # this isolated product, without adding a renderer or another viewport.
+     stage = viewport.stage
+@@ -79,7 +80,8 @@ def setup_medium_viewport(viewport, request):
+     from pxr import Gf, UsdGeom
+     unit = request.meters_per_scene_unit
+     UsdGeom.Camera(camera).GetClippingRangeAttr().Set(Gf.Vec2f(.01 / unit, 25 / unit))
+-    stage.GetRootLayer().Save()
++    if not stage.GetRootLayer().anonymous:
++        stage.GetRootLayer().Save()
+ 
+ 
+ async def capture_hdr(viewport, directory):
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_enclosure.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_enclosure.py
+new file mode 100644
+index 0000000..517c51f
+--- /dev/null
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_enclosure.py
+@@ -0,0 +1,105 @@
++"""Render-only closure of the existing regular ocean grid; no wave model."""
++import math
++from functools import lru_cache
++import numpy as np
++
++
++def grid_topology(resolution):
++    n = resolution + 1
++    faces = []
++    for row in range(resolution):
++        for col in range(resolution):
++            i = row*n+col
++            faces.append([i, i+n, i+n+1, i+1])
++    return faces
++
++
++def perimeter(resolution):
++    n = resolution+1
++    return ([r*n for r in range(n)] +
++            [resolution*n+c for c in range(1,n)] +
++            [r*n+resolution for r in range(resolution-1,-1,-1)] +
++            list(range(resolution-1,0,-1)))
++
++
++def cross(a,b):
++    return (a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0])
++
++
++def face_normal(points,face):
++    a,b,c=(points[i] for i in face[:3])
++    v=cross(tuple(b[i]-a[i] for i in range(3)),tuple(c[i]-a[i] for i in range(3)))
++    length=math.sqrt(sum(x*x for x in v))
++    if length <= 1e-12:
++        raise ValueError('Degenerate enclosure face')
++    return tuple(x/length for x in v)
++
++
++def topology(resolution):
++    faces=grid_topology(resolution)
++    ring=perimeter(resolution)
++    count=(resolution+1)**2
++    centre=count+len(ring)
++    for i,a in enumerate(ring):
++        j=(i+1)%len(ring);b=ring[j]
++        faces.append([b,a,count+i,count+j])
++    for i in range(len(ring)):
++        faces.append([centre,count+(i+1)%len(ring),count+i])
++    return faces
++
++
++@lru_cache(maxsize=4)
++def top_normal_indices(resolution):
++    return np.array([i for face in grid_topology(resolution) for i in face],dtype=np.int32)
++
++
++def enclose(points,normals,resolution,bottom_y,faces=None,arrays=False):
++    """Append a bottom ring/centre and return independent corner normals."""
++    count=(resolution+1)**2
++    if len(points)!=count or len(normals)!=count:
++        raise ValueError('Expected the original regular-grid surface arrays')
++    source=np.asarray(points,dtype=np.float64)
++    normal_values=np.asarray(normals,dtype=np.float64)
++    if not math.isfinite(bottom_y) or not np.isfinite(source).all() or not np.isfinite(normal_values).all():
++        raise ValueError('Nonfinite enclosure coordinates')
++    if source[:,1].min() <= bottom_y:
++        raise ValueError('Enclosure bottom intersects the animated surface')
++    ring=perimeter(resolution)
++    lower=source[ring].copy();lower[:,1]=bottom_y
++    output=np.concatenate((source,lower,lower.mean(axis=0,keepdims=True)))
++    faces=topology(resolution) if faces is None else faces
++    top_count=resolution**2
++    boundary_faces=faces[top_count:]
++    triangles=output[np.array([face[:3] for face in boundary_faces])]
++    boundary_normals=np.cross(triangles[:,1]-triangles[:,0],triangles[:,2]-triangles[:,0])
++    lengths=np.linalg.norm(boundary_normals,axis=1)
++    if np.any(lengths<=1e-12):raise ValueError('Degenerate enclosure face')
++    boundary_normals/=lengths[:,None]
++    corners=np.concatenate((normal_values[top_normal_indices(resolution)],
++        np.repeat(boundary_normals,[len(face) for face in boundary_faces],axis=0)))
++    extent=[tuple(output.min(axis=0)),tuple(output.max(axis=0))]
++    if arrays:return output,corners,extent
++    return [tuple(p) for p in output], [tuple(n) for n in corners], extent
++
++
++def validate(points,faces,resolution):
++    from collections import Counter
++    directed=Counter((a,b) for face in faces for a,b in zip(face,face[1:]+face[:1]))
++    undirected=Counter()
++    for (a,b),n in directed.items():undirected[tuple(sorted((a,b)))]+=n
++    boundary=sum(n==1 for n in undirected.values())
++    nonmanifold=sum(n!=2 for n in undirected.values())
++    same_direction=sum(directed[(a,b)]!=directed[(b,a)] for a,b in undirected)
++    top=faces[:resolution**2]
++    top_up=min(face_normal(points,f)[1] for f in top)
++    side=faces[resolution**2:resolution**2+4*resolution]
++    centre=points[-1]
++    side_out=min(sum(face_normal(points,f)[i]*(sum(points[v][i] for v in f)/len(f)-centre[i])
++                     for i in (0,2)) for f in side)
++    bottom_down=max(face_normal(points,f)[1] for f in faces[-4*resolution:])
++    if boundary or nonmanifold or same_direction or top_up<=0 or side_out<=0 or bottom_down>=0:
++        raise ValueError('Closed-medium orientation/topology check failed')
++    return {'boundary_edges':boundary,'nonmanifold_edges':nonmanifold,
++            'same_direction_shared_edges':same_direction,'minimum_top_normal_y':top_up,
++            'minimum_outward_side_dot':side_out,'maximum_bottom_normal_y':bottom_down,
++            'points':len(points),'faces':len(faces),'duplicated_top_faces':0,'shared_top_seam_indices':True}
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium.py
+new file mode 100644
+index 0000000..d6f8d5d
+--- /dev/null
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium.py
+@@ -0,0 +1,249 @@
++"""Opt-in medium binding and a perimeter-only enclosure for MARLIN's ocean."""
++from functools import lru_cache
++import json
++import math
++from pathlib import Path
++from typing import Literal
++
++import omni.usd
++import numpy as np
++from pydantic import BaseModel, Field
++from pxr import Gf, Sdf, UsdGeom, UsdShade, Vt
++
++from .api import router
++from . import ocean
++from .ocean_enclosure import enclose, grid_topology, topology, validate
++
++KEY='marlin:waterMedium:config'
++MATERIAL='OceanWaterEngineeringV1'
++PRESET=Path(__file__).resolve().parents[3]/'config/ocean_medium_engineering_v1.json'
++
++
++def configuration(prim):
++    attr=prim.GetAttribute(KEY) if prim else None
++    value=attr.Get() if attr else None
++    return json.loads(value) if value else None
++
++
++def selected(prim):
++    return configuration(prim) is not None
++
++
++@lru_cache(maxsize=4)
++def cached_topology(resolution):
++    faces=topology(resolution)
++    return faces,[len(f) for f in faces],[i for f in faces for i in f]
++
++
++def render_arrays(mesh,points,normals,extent):
++    config=configuration(mesh.GetPrim())
++    if config is None:
++        return points,normals,extent,UsdGeom.Tokens.vertex
++    faces,counts,indices=cached_topology(config['resolution'])
++    if len(mesh.GetFaceVertexCountsAttr().Get()) != len(counts):
++        mesh.GetFaceVertexCountsAttr().Set(counts)
++        mesh.GetFaceVertexIndicesAttr().Set(indices)
++    p,n,e=enclose(points,normals,config['resolution'],config['bottom_y_units'],faces,arrays=True)
++    mesh.GetDoubleSidedAttr().Set(False)
++    return (Vt.Vec3fArray.FromNumpy(np.asarray(p,dtype=np.float32)),
++            Vt.Vec3fArray.FromNumpy(np.asarray(n,dtype=np.float32)),
++            [Gf.Vec3f(*v) for v in e],UsdGeom.Tokens.faceVarying)
++
++
++def author_frame(mesh,points,normals,extent):
++    points,normals,extent,interpolation=render_arrays(mesh,points,normals,extent)
++    mesh.GetPointsAttr().Set(points)
++    mesh.CreateNormalsAttr().Set(normals)
++    mesh.SetNormalsInterpolation(interpolation)
++    mesh.GetExtentAttr().Set(extent)
++
++
++def surface_arrays(mesh,config):
++    r=config['resolution'];n=(r+1)**2
++    points=list(mesh.GetPointsAttr().Get())[:n]
++    values=list(mesh.GetNormalsAttr().Get())
++    if mesh.GetNormalsInterpolation()==UsdGeom.Tokens.vertex:
++        normals=values[:n]
++    else:
++        normals=[None]*n;offset=0
++        for face in grid_topology(r):
++            for i in face:
++                normals[i]=values[offset];offset+=1
++    return points,normals,[Gf.Vec3f(*(min(p[i] for p in points) for i in range(3))),
++                           Gf.Vec3f(*(max(p[i] for p in points) for i in range(3)))]
++
++
++def restart_signature(state):
++    return dict(size=state['size'],resolution=state['resolution'],
++                wave_height=sum(w['amplitude'] for w in state['waves']),
++                wave_length=2*math.pi/state['waves'][0]['k'],choppiness=state['choppiness'],
++                position=list(state['position']))
++
++
++def validate_restart(prim,data):
++    config=configuration(prim)
++    if config:
++        for key,expected in config['restart_signature'].items():
++            actual=getattr(data,key)
++            if isinstance(expected,list):
++                equal=all(math.isclose(a,b,rel_tol=1e-8,abs_tol=1e-8) for a,b in zip(actual,expected))
++            else:equal=math.isclose(actual,expected,rel_tol=1e-8,abs_tol=1e-8)
++            if not equal:
++                raise ValueError('Select the original water preset before changing ocean '+key)
++
++
++def configure_renderer(stage,config):
++    import carb.settings
++    from .underwater_cue import UNDERWATER_CUE_REQUESTED_SETTING
++    from .camera import _active_viewport
++    viewport=_active_viewport()
++    if viewport is None:raise ValueError('An active viewport is required')
++    if viewport.resolution[0]*viewport.resolution[1]>512*384:
++        raise ValueError('M4 renderer configuration is qualified only at 512x384 or smaller; use configure_renderer=false for binding alone')
++    product=stage.GetPrimAtPath(viewport.render_product_path)
++    camera=stage.GetPrimAtPath(str(viewport.camera_path))
++    camera.ApplyAPI('OmniRtxCameraAutoExposureAPI_1')
++    changes=[(product,'omni:rtx:rendermode','PathTracing'),
++             (product,'omni:rtx:fog:enabled',False),
++             (product,'omni:rtx:pt:fireflyFilter:enabled',False),
++             (product,'omni:rtx:rtpt:fireflyFilter:enabled',False),
++             (camera,'omni:rtx:autoExposure:enabled',False)]
++    for prim,name,value in changes:
++        attr=prim.GetAttribute(name)
++        if not attr:raise ValueError('Missing installed render control: '+name)
++        identity=[str(prim.GetPath()),name]
++        if not any(x['identity']==identity for x in config['renderer_before']):
++            config['renderer_before'].append(dict(identity=identity,authored=attr.HasAuthoredValueOpinion(),value=attr.Get()))
++        attr.Set(value)
++    settings=carb.settings.get_settings()
++    if UNDERWATER_CUE_REQUESTED_SETTING not in config['global_before']:
++        config['global_before'][UNDERWATER_CUE_REQUESTED_SETTING]=settings.get(UNDERWATER_CUE_REQUESTED_SETTING)
++    settings.set(UNDERWATER_CUE_REQUESTED_SETTING,False)
++
++
++def preserve_renderer_after_setup(stage):
++    prim=stage.GetPrimAtPath('/World/Ocean');config=configuration(prim)
++    if config and config['configure_renderer']:
++        configure_renderer(stage,config)
++        prim.GetAttribute(KEY).Set(json.dumps(config))
++
++
++def restore_original(stage,mesh):
++    from .hidef_marine import restore_settings
++    config=configuration(mesh.GetPrim())
++    if not config:return {'ok':True,'selection':'original','already_original':True}
++    points,normals,extent=surface_arrays(mesh,config)
++    faces=grid_topology(config['resolution'])
++    mesh.GetPrim().GetAttribute(KEY).Set('')
++    mesh.GetFaceVertexCountsAttr().Set([4]*len(faces))
++    mesh.GetFaceVertexIndicesAttr().Set([i for f in faces for i in f])
++    author_frame(mesh,points,normals,extent)
++    mesh.GetDoubleSidedAttr().Set(config['original_double_sided'])
++    prim=mesh.GetPrim()
++    if config['original_binding_targets']:
++        rel=prim.CreateRelationship('material:binding')
++        rel.SetTargets([Sdf.Path(p) for p in config['original_binding_targets']])
++        strength=config['original_binding_strength']
++        if strength is None:rel.ClearMetadata('bindMaterialAs')
++        else:rel.SetMetadata('bindMaterialAs',strength)
++    else:prim.RemoveProperty('material:binding')
++    for record in config['renderer_before']:
++        path,name=record['identity'];p=stage.GetPrimAtPath(path)
++        if p:
++            attr=p.GetAttribute(name)
++            if attr:
++                if record['authored']:attr.Set(record['value'])
++                else:attr.Clear()
++    restore_settings(config['global_before'])
++    return {'ok':True,'selection':'original','restored_top_vertices':len(points),
++            'restored_top_faces':len(faces),'renderer_properties_restored':len(config['renderer_before'])}
++
++
++class PresetRequest(BaseModel):
++    selection: Literal['engineering_v1','original']='engineering_v1'
++    bottom_depth_m: float=Field(default=20,ge=2,le=100)
++    configure_renderer: bool=False
++    class Config:extra='forbid'
++
++
++def select_preset(stage,data):
++    if stage is None:raise ValueError('No live USD stage is open')
++    prim=stage.GetPrimAtPath('/World/Ocean');mesh=UsdGeom.Mesh(prim)
++    if not mesh:raise ValueError('Create the existing MARLIN ocean first')
++    if data.selection=='original':return restore_original(stage,mesh)
++    current=configuration(prim)
++    if current:
++        if not math.isclose(current['bottom_depth_m'],data.bottom_depth_m,rel_tol=1e-8):
++            raise ValueError('Select the original preset before changing enclosure depth')
++        if data.configure_renderer and not current['configure_renderer']:
++            configure_renderer(stage,current);current['configure_renderer']=True
++            prim.GetAttribute(KEY).Set(json.dumps(current))
++        return {'ok':True,'selection':'engineering_v1','already_selected':True,'configuration':current}
++    state=ocean._ocean_animation_state
++    if state is None or state['ocean_path']!='/World/Ocean':
++        raise ValueError('Start the existing ocean animation before selecting its medium')
++    resolution=state['resolution'];points=list(mesh.GetPointsAttr().Get());normals=list(mesh.GetNormalsAttr().Get())
++    expected=grid_topology(resolution)
++    if list(mesh.GetFaceVertexCountsAttr().Get())!=[4]*len(expected) or list(mesh.GetFaceVertexIndicesAttr().Get())!=[i for f in expected for i in f]:
++        raise ValueError('Ocean topology differs from the existing regular grid')
++    if mesh.GetNormalsInterpolation()!=UsdGeom.Tokens.vertex:raise ValueError('Expected original smooth vertex normals')
++    transform=UsdGeom.XformCache().GetLocalToWorldTransform(prim)
++    for row in range(3):
++        for col in range(4):
++            if abs(float(transform[row][col])-(1 if row==col else 0))>1e-8:
++                raise ValueError('The medium requires the existing translation-only ocean transform')
++    bound=sum(abs(state['choppiness']*w['amplitude']*w['k']) for w in state['waves'])
++    if bound>=1:raise ValueError('Wave horizontal derivative bound permits folding; medium not applied')
++    unit=UsdGeom.GetStageMetersPerUnit(stage)
++    if not 1e-6<=unit<=100:raise ValueError('Unsupported stage unit scale')
++    config=dict(version=1,preset='engineering_v1',resolution=resolution,
++                bottom_y_units=-data.bottom_depth_m/unit,bottom_depth_m=data.bottom_depth_m,
++                metres_per_unit=unit,horizontal_derivative_bound=bound,
++                restart_signature=restart_signature(state),original_double_sided=mesh.GetDoubleSidedAttr().Get(),
++                original_binding_targets=[str(p) for p in prim.GetRelationship('material:binding').GetTargets()],
++                original_binding_strength=prim.GetRelationship('material:binding').GetMetadata('bindMaterialAs'),
++                renderer_before=[],global_before={},configure_renderer=data.configure_renderer)
++    enclosed=enclose(points,normals,resolution,config['bottom_y_units'])
++    geometry=validate(enclosed[0],topology(resolution),resolution)
++    model=json.loads(PRESET.read_text())['material_parameters']
++    model.update(ocean_name='Ocean',material_name=MATERIAL,transmission_depth=1/unit)
++    material=ocean.OceanMaterialDataModel(**model)
++    # Validation above precedes mutations. Roll back ownership on any failure.
++    prim.CreateAttribute(KEY,Sdf.ValueTypeNames.String,custom=True).Set(json.dumps(config))
++    try:
++        result=ocean.bind_ocean_material(material)
++        if not result['ok']:raise ValueError(result.get('error','Material binding failed'))
++        author_frame(mesh,points,normals,mesh.GetExtentAttr().Get())
++        if data.configure_renderer:configure_renderer(stage,config)
++        prim.GetAttribute(KEY).Set(json.dumps(config))
++    except Exception:
++        prim.GetAttribute(KEY).Set(json.dumps(config));restore_original(stage,mesh);raise
++    return {'ok':True,'selection':'engineering_v1','material':result,'configuration':config,'geometry':geometry,
++            'scientific_water_calibrated':False,'tested_renderer':'PathTracing',
++            'camera_inside_qualified':False,
++            'qualification':'Above-water 512x384 integration checks passed; camera-inside attenuation remains unqualified'}
++
++
++@router.post('/scene/ocean/material/preset',summary='Select the opt-in engineering ocean medium or restore its original')
++async def ocean_medium_preset(data:PresetRequest):
++    from . import calibration_capture
++    if calibration_capture._busy:return {'ok':False,'error':'A capture is running'}
++    try:return select_preset(omni.usd.get_context().get_stage(),data)
++    except Exception as exc:return {'ok':False,'error':str(exc)}
++
++
++@router.get('/scene/ocean/material/preset/status',summary='Inspect the selected ocean medium and render enclosure')
++async def ocean_medium_status():
++    stage=omni.usd.get_context().get_stage()
++    prim=stage.GetPrimAtPath('/World/Ocean') if stage else None
++    config=configuration(prim)
++    if not config:
++        mesh=UsdGeom.Mesh(prim)
++        return {'ok':True,'selection':'original','vertices':len(mesh.GetPointsAttr().Get()) if mesh else None,
++                'faces':len(mesh.GetFaceVertexCountsAttr().Get()) if mesh else None}
++    mesh=UsdGeom.Mesh(prim)
++    try:
++        geometry=validate(list(mesh.GetPointsAttr().Get()),topology(config['resolution']),config['resolution'])
++        return {'ok':True,'selection':'engineering_v1','configuration':config,'geometry':geometry,
++                'bound_material':str(UsdShade.MaterialBindingAPI(prim).ComputeBoundMaterial()[0].GetPath())}
++    except Exception as exc:return {'ok':False,'error':str(exc),'configuration':config}
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py
+new file mode 100644
+index 0000000..6679a36
+--- /dev/null
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py
+@@ -0,0 +1,301 @@
++"""Fixed M4 checks on the existing ocean, using one existing viewport."""
++import asyncio
++import copy
++import gc
++import hashlib
++import json
++from pathlib import Path
++import tempfile
++from types import SimpleNamespace
++from typing import Literal
++
++import carb.settings
++import numpy as np
++import omni.kit.app
++import omni.usd
++from pydantic import BaseModel
++from pxr import Gf,Sdf,Usd,UsdGeom,UsdShade
++
++from .api import router
++from . import calibration_capture,capture_state,ocean,cetacean
++from .ocean_medium import configuration,select_preset,PresetRequest,author_frame,surface_arrays
++from .ocean_enclosure import topology,validate,grid_topology
++from .camera import _active_viewport
++from .hidef_marine import gpu_preflight,settings_record,restore_settings,freeze_stage
++from .water_diagnostics import DiagnosticCamera,mesh,emissive
++from .water_medium_diagnostics import capture_hdr,setup_medium_viewport,MediumRequest
++from .calibration_geometry import build_camera
++from .capture_projection import record_projection
++
++ROOT=Path(__file__).resolve().parents[6]/'experiments/ocean_material_v1/diagnostics/m4'
++DIAGNOSTIC='/World/MarlinOceanIntegrationDiagnostic'
++_batch_preview=None
++
++
++def write(path,value):path.write_text(json.dumps(value,indent=2)+'\n')
++
++
++class BatchPreviewRequest(BaseModel):
++    action:Literal['begin','end']
++    class Config:extra='forbid'
++
++
++@router.post('/scene/ocean/material/preset/diagnostic/batch-preview',summary='Hold the existing preview at the declared diagnostic size during a batch')
++async def batch_preview(data:BatchPreviewRequest):
++    global _batch_preview
++    if calibration_capture._busy:return {'ok':False,'error':'Another diagnostic is running'}
++    viewport=_active_viewport();stage=omni.usd.get_context().get_stage()
++    if viewport is None or stage is None:return {'ok':False,'error':'A live viewport is required'}
++    calibration_capture._busy=True;paused=capture_state.paused;capture_state.paused=True
++    try:
++        product=stage.GetPrimAtPath(viewport.render_product_path)
++        mode=product.GetAttribute('omni:rtx:rendermode')
++        if data.action=='end':
++            if _batch_preview is None:return {'ok':True,'already_ended':True}
++            saved=_batch_preview
++            if saved['mode_authored']:mode.Set(saved['mode'])
++            else:mode.Clear()
++            viewport.resolution=tuple(saved['resolution']);viewport.fill_frame=saved['fill_frame']
++            restore_settings(saved['settings']);_batch_preview=None
++            return {'ok':True,'restored_resolution':saved['resolution'],'restored_mode':saved['mode']}
++        if _batch_preview is not None:return {'ok':False,'error':'The diagnostic preview is already active'}
++        saved=dict(resolution=list(viewport.resolution),fill_frame=viewport.fill_frame,
++                   mode_authored=mode.HasAuthoredValueOpinion(),mode=mode.Get(),settings=settings_record())
++        viewport.fill_frame=False;viewport.resolution=(512,384)
++        for _ in range(30):await omni.kit.app.get_app().next_update_async()
++        try:gpu=gpu_preflight(768)
++        except Exception as exc:
++            viewport.resolution=tuple(saved['resolution']);viewport.fill_frame=saved['fill_frame']
++            return {'ok':False,'error':str(exc),'render_attempted':False}
++        mode.Set('PathTracing')
++        for _ in range(30):await omni.kit.app.get_app().next_update_async()
++        _batch_preview=saved
++        return {'ok':True,'resolution':list(viewport.resolution),'mode':mode.Get(),
++                'gpu_after_resize_before_mode':gpu,'previous_resolution':saved['resolution']}
++    finally:
++        capture_state.paused=paused;calibration_capture._busy=False
++
++
++@router.post('/scene/ocean/material/preset/diagnostic/regression',summary='Run fixed M4 geometry/sampler/controller equivalence checks')
++async def regression():
++    if calibration_capture._busy:return {'ok':False,'error':'A capture is running'}
++    stage=omni.usd.get_context().get_stage();state=ocean._ocean_animation_state
++    if stage is None or state is None:return {'ok':False,'error':'Start the existing marine scene first'}
++    surface=UsdGeom.Mesh(stage.GetPrimAtPath('/World/Ocean'))
++    if configuration(surface.GetPrim()):return {'ok':False,'error':'Select original before the regression transaction'}
++    calibration_capture._busy=True
++    paused=capture_state.paused;capture_state.paused=True
++    saved_ocean=copy.deepcopy(state)
++    old_swimmer=cetacean._cetacean_swim_state;old_subscription=cetacean._cetacean_swim_subscription
++    animal=stage.GetPrimAtPath('/World/Cetaceans/Dolphin_001')
++    saved_ops={a.GetName():a.Get() for a in animal.GetAttributes() if a.GetName().startswith('xformOp')}
++    directory=Path(tempfile.mkdtemp(prefix='regression_',dir=str(ROOT)))
++    result={}
++    try:
++        phases=[]
++        for phase in (0,.5,1,2,4):
++            state['elapsed']=phase
++            p,n,e=ocean._calculate_animated_ocean(state,phase)
++            author_frame(surface,p,n,e)
++            positions=[(0,0),(50,50),(-500,400),(3000,-2500)]
++            heights=[ocean._sample_ocean_surface_height(x,z) for x,z in positions]
++            choice=select_preset(stage,PresetRequest(configure_renderer=False))
++            assert choice['ok']
++            config=configuration(surface.GetPrim());arrays=surface_arrays(surface,config)
++            top_delta=float(np.max(np.abs(np.array(arrays[0])-np.array(p))))
++            normal_delta=float(np.max(np.abs(np.array(arrays[1])-np.array(n))))
++            sampler_delta=max(abs(a-ocean._sample_ocean_surface_height(x,z)) for (x,z),a in zip(positions,heights))
++            geometry=validate(list(surface.GetPointsAttr().Get()),topology(state['resolution']),state['resolution'])
++            assert top_delta<=1e-6 and normal_delta<=1e-6 and sampler_delta<=1e-8
++            phases.append(dict(phase_seconds=phase,top_vertex_max_error_units=top_delta,
++                top_normal_max_error=normal_delta,sampler_max_error_units=sampler_delta,geometry=geometry,
++                horizontal_derivative_bound=config['horizontal_derivative_bound']))
++            select_preset(stage,PresetRequest(selection='original'))
++            await omni.kit.app.get_app().next_update_async()
++        controllers=[]
++        for boundary_x in (0,2200):
++            trajectories=[]
++            for selection in ('original','engineering_v1'):
++                ocean._ocean_animation_state=copy.deepcopy(saved_ocean)
++                working=ocean._ocean_animation_state;working['elapsed']=0;working['accumulator']=0
++                p,n,e=ocean._calculate_animated_ocean(working,0);author_frame(surface,p,n,e)
++                UsdGeom.XformCommonAPI(animal).SetTranslate(Gf.Vec3d(boundary_x,-5,0))
++                started=await cetacean.start_cetacean_swimming(cetacean.CetaceanSwimDataModel(
++                    body_animation=False,follow_ocean_surface=True,depth_below_surface=25))
++                assert started['ok']
++                select_preset(stage,PresetRequest(selection=selection,configure_renderer=False))
++                capture_state.paused=False
++                trajectory=[]
++                for step in range(20):
++                    swimmer=cetacean._cetacean_swim_state
++                    swimmer['target_depth_below_surface']=25 if step<7 else 80 if step<14 else 10
++                    event=SimpleNamespace(payload={'dt':.3})
++                    ocean._update_animated_ocean(event);cetacean._update_cetacean_swimming(event)
++                    trajectory.append([swimmer[k] for k in ('x','z','current_y','current_depth_below_surface',
++                        'actual_depth_below_surface','heading','pitch','bank','boundary_avoidance')])
++                    if step%5==4:
++                        capture_state.paused=True
++                        await omni.kit.app.get_app().next_update_async()
++                        capture_state.paused=False
++                capture_state.paused=True
++                trajectories.append(trajectory)
++                select_preset(stage,PresetRequest(selection='original'))
++            delta=float(np.max(np.abs(np.array(trajectories[0],dtype=float)-np.array(trajectories[1],dtype=float))))
++            assert delta<=1e-8
++            controllers.append(dict(initial_x_units=boundary_x,steps=20,dt_seconds=.3,max_output_error_units=delta,
++                                    original=trajectories[0],engineering=trajectories[1]))
++        result={'ok':True,'phase_checks':phases,'controller_checks':controllers,
++                'controller':'Existing cetacean swimming update; dive/surface and boundary paths exercised',
++                'waves':'Existing ocean callback and sampler; no substitute wave/controller equations'}
++        write(directory/'result.json',result)
++        return {'ok':True,'directory':str(directory),'phase_count':len(phases),'controller_case_count':len(controllers)}
++    except Exception as exc:
++        result={'ok':False,'error':str(exc) or type(exc).__name__};write(directory/'result.json',result);return {**result,'directory':str(directory)}
++    finally:
++        capture_state.paused=True
++        if configuration(surface.GetPrim()):select_preset(stage,PresetRequest(selection='original'))
++        ocean._ocean_animation_state=saved_ocean
++        p,n,e=ocean._calculate_animated_ocean(saved_ocean,saved_ocean['elapsed']);author_frame(surface,p,n,e)
++        cetacean._cetacean_swim_subscription=old_subscription;cetacean._cetacean_swim_state=old_swimmer
++        for name,value in saved_ops.items():animal.GetAttribute(name).Set(value)
++        for attr in list(animal.GetAttributes()):
++            if attr.GetName().startswith('xformOp') and attr.GetName() not in saved_ops:animal.RemoveProperty(attr.GetName())
++        capture_state.paused=paused;calibration_capture._busy=False
++
++
++class CaptureRequest(BaseModel):
++    selection: Literal['original','engineering_v1']='engineering_v1'
++    phase_seconds: Literal[0,.5,1,2,4]=0
++    view: Literal['nadir','oblique','inside','exit','edge','outer_edge']='oblique'
++    advance_live: bool=False
++    class Config:extra='forbid'
++
++
++class OceanCamera(DiagnosticCamera):
++    def camera_position(self):
++        x,y,z=super().camera_position()
++        return x+12,y,z
++
++
++@router.post('/scene/ocean/material/preset/diagnostic/capture',summary='Capture the integrated ocean at fixed wave phases with one viewport')
++async def capture_integrated(data:CaptureRequest):
++    try:return await asyncio.wait_for(_capture_integrated(data),timeout=90)
++    except asyncio.TimeoutError:return {'ok':False,'error':'Bounded integration capture timed out; temporary layer/settings cleanup executed'}
++
++
++async def _capture_integrated(data):
++    if calibration_capture._busy:return {'ok':False,'error':'A capture is running','render_attempted':False}
++    if data.advance_live:
++        from . import camera as camera_control
++        if cetacean._cetacean_swim_state is not None or camera_control._chase_camera_state is not None:
++            return {'ok':False,'error':'Live-advance inspection requires chase and animal controllers stopped so the declared camera and animal pose remain fixed','render_attempted':False}
++    gc.collect()
++    try:gpu=gpu_preflight(768)
++    except Exception as exc:return {'ok':False,'error':str(exc),'render_attempted':False}
++    stage=omni.usd.get_context().get_stage();state=ocean._ocean_animation_state;viewport=_active_viewport()
++    if stage is None or state is None or viewport is None:return {'ok':False,'error':'An existing animated ocean and viewport are required'}
++    if stage.GetPrimAtPath(DIAGNOSTIC):return {'ok':False,'error':'Diagnostic namespace is already occupied'}
++    calibration_capture._busy=True;paused=capture_state.paused;capture_state.paused=True
++    before=settings_record();settings=carb.settings.get_settings()
++    old_camera=str(viewport.camera_path);old_resolution=tuple(viewport.resolution);old_fill=viewport.fill_frame
++    elapsed,accumulator=state['elapsed'],state['accumulator']
++    original_edit=stage.GetEditTarget();session=stage.GetSessionLayer()
++    root_layer=stage.GetRootLayer()
++    owned_paths=[DIAGNOSTIC,'/WaterDiagnostic','/Render/Vars/MarlinMediumHdr']
++    owned_before={p:bool(stage.GetPrimAtPath(p)) for p in owned_paths}
++    # Kit may author camera/product overrides directly on the root layer while
++    # UI callbacks run. Preserve the exact live specs as well as the overlay.
++    snapshot=Sdf.Layer.CreateAnonymous('marlin_m4_live_specs.usda')
++    saved_specs={}
++    for path in ('/World/Ocean',viewport.render_product_path,old_camera):
++        present=bool(root_layer.GetPrimAtPath(path));saved_specs[path]=present
++        if present:
++            Sdf.CreatePrimInLayer(snapshot,Sdf.Path(path).GetParentPath())
++            Sdf.CopySpec(root_layer,path,snapshot,path)
++    layer=Sdf.Layer.CreateAnonymous('marlin_m4_transaction.usda');session.subLayerPaths.insert(0,layer.identifier)
++    stage.SetEditTarget(layer)
++    root=ROOT/'captures';root.mkdir(exist_ok=True)
++    directory=Path(tempfile.mkdtemp(prefix=data.view+'_',dir=str(root)))
++    # Fixed installed guide settings, rather than changing any animal visibility.
++    guide_paths=[f'/persistent/app/viewport/{viewport.id}/guide/{name}/visible' for name in ('grid','axis','selection','boundingBox')]
++    guide_paths+=['/app/viewport/outline/enabled','/app/viewport/boundingBoxes/enabled']
++    guides={p:settings.get(p) for p in guide_paths}
++    try:
++        select_preset(stage,PresetRequest(selection='original'))
++        state['elapsed']=data.phase_seconds;state['accumulator']=0
++        surface=UsdGeom.Mesh(stage.GetPrimAtPath('/World/Ocean'))
++        p,n,e=ocean._calculate_animated_ocean(state,state['elapsed']);author_frame(surface,p,n,e)
++        unit=UsdGeom.GetStageMetersPerUnit(stage)
++        c=OceanCamera(meters_per_scene_unit=unit,image_width_px=512,image_height_px=384,
++            focal_length_mm=35,pixel_pitch_um=40,height_above_target_m=.5 if data.view in ('inside','exit') else 4,
++            target_plane_y_m=-1,target_width_m=.18,target_height_m=.18,pitch_deg=40 if data.view=='oblique' else 0)
++        camera=build_camera(stage,c,DIAGNOSTIC+'/Camera')
++        if data.view in ('exit','edge','outer_edge'):
++            matrix=camera.GetCamera(Usd.TimeCode.Default()).transform
++            if data.view=='exit':
++                matrix=Gf.Matrix4d(1)
++                for i,row in enumerate(((1,0,0),(0,0,1),(0,-1,0))):matrix.SetRow(i,Gf.Vec4d(*row,0))
++                matrix.SetRow(3,Gf.Vec4d(12/unit,-.5/unit,0,1))
++            else:matrix.SetRow(3,Gf.Vec4d((80 if data.view=='outer_edge' else 79)/unit,3/unit,0,1))
++            camera.MakeMatrixXform().Set(matrix)
++        target=mesh(stage,DIAGNOSTIC+'/Target',[(11.91,-1,-.09),(11.91,-1,.09),(12.09,-1,.09),(12.09,-1,-.09)],[[0,1,2,3]],unit)
++        emissive(stage,target,'M4Fiducial',(10,10,10))
++        background=mesh(stage,DIAGNOSTIC+'/Background',[(10,-1.8,-2),(10,-1.8,2),(14,-1.8,2),(14,-1.8,-2)],[[0,1,2,3]],unit)
++        emissive(stage,background,'M4Black',(0,0,0))
++        viewport.fill_frame=False;viewport.resolution=(512,384);viewport.camera_path=str(camera.GetPath())
++        for path in guide_paths:settings.set(path,False)
++        settings.set('/rtx/fog/enabled',False)
++        settings.set('/exts/cris.madil.render_service/underwaterCue/enabled',False)
++        for _ in range(30):await omni.kit.app.get_app().next_update_async()
++        stage.SetEditTarget(layer)
++        viewport.resolution=(512,384)
++        # M3 capture settings are applied only to the temporary diagnostic camera/product layer.
++        setup_medium_viewport(viewport,MediumRequest(renderer='PathTracing'),hide_overlays=False)
++        if data.selection=='engineering_v1':select_preset(stage,PresetRequest(configure_renderer=False))
++        live_frames=[]
++        if data.advance_live:
++            capture_state.paused=False
++            for _ in range(10):
++                await omni.kit.app.get_app().next_update_async()
++                live_frames.append({'elapsed':state['elapsed'],'binding':str(UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0].GetPath()),'points':len(surface.GetPointsAttr().Get())})
++            capture_state.paused=True
++        await asyncio.wait_for(viewport.wait_for_rendered_frames(64),timeout=30)
++        from omni.kit.viewport.utility import capture_viewport_to_file
++        for name in ('warmup.png','rgb.png'):
++            job=capture_viewport_to_file(viewport,file_path=str(directory/name));await job.wait_for_result(completion_frames=5)
++        hdr=await capture_hdr(viewport,directory)
++        frozen,count=freeze_stage(stage,Usd.TimeCode.Default());frozen.GetRootLayer().Export(str(directory/'scene.usdc'))
++        config=configuration(surface.GetPrim())
++        geometry=validate(list(surface.GetPointsAttr().Get()),topology(state['resolution']),state['resolution']) if config else {'open_original_surface':True}
++        metadata=dict(c.metadata(),**hdr,request=data.dict(),gpu_before=gpu,effective_phase_seconds=state['elapsed'],
++            integrated_geometry=geometry,material=str(UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0].GetPath()),
++            live_frames=live_frames,scene_sha256=hashlib.sha256((directory/'scene.usdc').read_bytes()).hexdigest(),
++            renderer_instance_policy='Existing live viewport; no second USD context or Hydra renderer',scientific_water_calibrated=False,
++            camera_override=data.view in ('edge','outer_edge','exit'),viewport_resolution=list(viewport.resolution))
++        metadata.update(record_projection(stage,viewport));write(directory/'metadata.json',metadata)
++        return {'ok':True,'directory':str(directory),'metadata':metadata}
++    except Exception as exc:
++        result={'ok':False,'error':str(exc) or type(exc).__name__,'directory':str(directory)};write(directory/'failure.json',result);return result
++    finally:
++        capture_state.paused=True
++        stage.SetEditTarget(original_edit);session.subLayerPaths.remove(layer.identifier)
++        viewport.camera_path=old_camera;viewport.resolution=old_resolution;viewport.fill_frame=old_fill
++        for path,present in saved_specs.items():
++            if present:Sdf.CopySpec(snapshot,path,root_layer,path)
++        for path,present in owned_before.items():
++            if not present:
++                for owner in (root_layer,session):
++                    with Usd.EditContext(stage,owner):stage.RemovePrim(path)
++        state['elapsed']=elapsed;state['accumulator']=accumulator
++        restore_settings(before);restore_settings(guides)
++        restored_attributes={}
++        for name in ('points','normals','faceVertexCounts','faceVertexIndices','doubleSided','marlin:waterMedium:config'):
++            path='/World/Ocean.'+name
++            old_spec=snapshot.GetAttributeAtPath(path);new_spec=root_layer.GetAttributeAtPath(path)
++            restored_attributes[name]=bool(old_spec and new_spec and old_spec.default==new_spec.default) if old_spec else not bool(new_spec)
++        write(directory/'restoration.json',dict(ocean_root_attributes_restored=restored_attributes,
++            camera_restored=str(viewport.camera_path)==old_camera,resolution_restored=tuple(viewport.resolution)==old_resolution,
++            fill_frame_restored=viewport.fill_frame==old_fill,
++            temporary_namespaces_removed=all(owned_before[p] or not stage.GetPrimAtPath(p) for p in owned_paths),
++            ocean_clock_restored=state['elapsed']==elapsed and state['accumulator']==accumulator))
++        capture_state.paused=paused;calibration_capture._busy=False
+diff --git a/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_ocean_enclosure.py b/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_ocean_enclosure.py
+new file mode 100644
+index 0000000..1fe29d0
+--- /dev/null
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_ocean_enclosure.py
+@@ -0,0 +1,51 @@
++import ast
++import math
++from pathlib import Path
++import sys
++import unittest
++
++sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
++from ocean_enclosure import enclose,grid_topology,topology,validate,perimeter
++
++
++class EnclosureTests(unittest.TestCase):
++    def fixture(self,r):
++        points=[(c, .2*math.sin(c*.3)*math.cos(z*.2),z) for z in range(r+1) for c in range(r+1)]
++        normals=[(.1,.98,.1)]*len(points)
++        return points,normals
++
++    def test_closed_boundary_at_small_and_production_resolutions(self):
++        for r in (2,8,128):
++            p,n=self.fixture(r);out,cn,extent=enclose(p,n,r,-20)
++            result=validate(out,topology(r),r)
++            self.assertEqual(result['boundary_edges'],0)
++            self.assertEqual(result['nonmanifold_edges'],0)
++            self.assertEqual(result['same_direction_shared_edges'],0)
++            self.assertEqual(len(out),(r+1)**2+4*r+1)
++            self.assertEqual(len(topology(r)),r*r+8*r)
++            self.assertEqual(extent[0][1],-20)
++
++    def test_surface_and_corner_normals_were_copied_without_change(self):
++        r=8;p,n=self.fixture(r);out,cn,_=enclose(p,n,r,-20)
++        self.assertEqual(out[:len(p)],p)
++        expected=[n[i] for face in grid_topology(r) for i in face]
++        self.assertEqual(cn[:4*r*r],expected)
++        self.assertEqual(topology(r)[:r*r],grid_topology(r))
++
++    def test_skirt_shared_surface_indices_and_vertical_projection(self):
++        r=8;p,n=self.fixture(r);out,_,_=enclose(p,n,r,-20)
++        for index,v in enumerate(perimeter(r)):
++            self.assertEqual((out[len(p)+index][0],out[len(p)+index][2]),(p[v][0],p[v][2]))
++
++    def test_orientation_validator_rejected_reversed_bottom(self):
++        p,n=self.fixture(8);out,_,_=enclose(p,n,8,-20);faces=topology(8);faces[-1]=list(reversed(faces[-1]))
++        with self.assertRaises(ValueError):validate(out,faces,8)
++
++    def test_unsafe_or_malformed_geometry_was_rejected(self):
++        p,n=self.fixture(8)
++        for bottom in (1,float('nan')):
++            with self.assertRaises(ValueError):enclose(p,n,8,bottom)
++        with self.assertRaises(ValueError):enclose(p[:-1],n,8,-20)
++
++
++if __name__=='__main__':unittest.main()
+diff --git a/source/extensions/cris.madil.render_service/config/ocean_medium_engineering_v1.json b/source/extensions/cris.madil.render_service/config/ocean_medium_engineering_v1.json
+new file mode 100644
+index 0000000..7343c12
+--- /dev/null
++++ b/source/extensions/cris.madil.render_service/config/ocean_medium_engineering_v1.json
+@@ -0,0 +1,84 @@
++{
++  "schema_version": 1,
++  "name": "MARLIN engineering medium v1",
++  "status": "Opt-in M4 render-medium configuration; M3 optical assumptions retained",
++  "scientific_water_calibrated": false,
++  "named_water_type": null,
++  "shader": {
++    "source_asset": "OmniSurface.mdl",
++    "subidentifier": "OmniSurface",
++    "binding_mechanism": "existing _author_omnisurface_inputs"
++  },
++  "meters_per_scene_unit": 0.01,
++  "physical_transmission_reference_distance_m": 1.0,
++  "material_parameters": {
++    "ocean_name": "Ocean",
++    "material_name": "OceanWater",
++    "ior": 1.333,
++    "roughness": 0.001,
++    "transmission": 1.0,
++    "base_weight": 0,
++    "base_color": [
++      0.02,
++      0.1,
++      0.13
++    ],
++    "transmission_color": [
++      0.6,
++      0.8,
++      0.9
++    ],
++    "transmission_depth": 100,
++    "scattering_color": [
++      0.02,
++      0.02,
++      0.02
++    ],
++    "scattering_anisotropy": 0,
++    "thin_walled": false
++  },
++  "native_distance_conversion": "native_distance = physical_reference_distance_m / meters_per_scene_unit; checked using equal physical geometry at stage units .01 and 1",
++  "renderer": {
++    "mode": "PathTracing",
++    "settled_rendered_frames": 64,
++    "image_size_px": [
++      512,
++      384
++    ],
++    "firefly_filter_enabled": false,
++    "fog_enabled": false,
++    "camera_auto_exposure_enabled": false,
++    "effective_settings_reference": "captures_controlled/nadir_4lurc9jj/effective_settings.json"
++  },
++  "model_coefficients_per_m_not_measured_water": {
++    "extinction_rgb": [
++      0.5306282510621704,
++      0.24294617861038947,
++      0.12516314295400605
++    ],
++    "absorption_rgb": [
++      0.4704937859162953,
++      0.20701102519850656,
++      0.10455455506372946
++    ],
++    "scattering_rgb": [
++      0.06013446514587506,
++      0.035935153411882914,
++      0.020608587890276586
++    ],
++    "provenance": "Derived from the inspected installed OmniShared MDL function and declared 1 m reference distance; not fitted to rendered pixels or field water"
++  },
++  "measurement_reference": "qa/measurements_final.json",
++  "limitations": [
++    "Requires a consistently oriented closed medium boundary; do not apply blindly to the current thin-walled open ocean",
++    "Scattering control changes extinction and its absorption/scattering split together",
++    "Validated at .25, .75, 1.25 m and 512x384 in the installed PathTracing renderer; larger scenes/resolutions and animated integration await M4/M5",
++    "Native LDR PNG clips bright fiducial; measurements use retained unclamped HdrColor, previews use a declared fixed transform"
++  ],
++  "source_preset": "experiments/ocean_material_v1/diagnostics/m3/engineering_medium_v1.json",
++  "capture_qualification": {
++    "above_water": "Passed declared M4 512x384 PathTracing integration checks",
++    "camera_inside": "Unqualified: neutral RGB in the inside-camera attenuation probe; no supported initial-medium control established",
++    "full_milestone_closed": false
++  }
++}

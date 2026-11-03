@@ -1,0 +1,15 @@
+{
+  "source": "hdr.npz",
+  "source_sha256": "63221daec8739c5eea59aff06fb75a91b506029819cc5e4a9537a50233891c26",
+  "output": "hdr_display.png",
+  "output_sha256": "649216c5e94f35adbb530ed71cb8bfc986c58b0ae9b3aac4cd4abb67b0dc8204",
+  "domain": "Derived RGB display of native HdrColor; native HDR and clipped native PNG retained",
+  "formula": "round(255 * clip(rgb/12000,0,1)**(1/2.2)) cast to uint8",
+  "scale": 12000,
+  "gamma": 2.2,
+  "auto_normalization": false,
+  "nonconstant": true,
+  "minimum": 11,
+  "maximum": 233,
+  "fraction_of_rgb_values_at_255": 0.0
+}

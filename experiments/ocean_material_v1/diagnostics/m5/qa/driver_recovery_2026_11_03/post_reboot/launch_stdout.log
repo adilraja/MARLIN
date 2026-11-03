@@ -1,0 +1,336 @@
+Loading user config located at: '/home/madil/.local/share/ov/data/Kit/cris.madil/0.1/user.config.json'
+2026-11-03T14:01:42Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m5/qa/driver_recovery_2026_11_03/post_reboot/kit_process.log
+[0.301s] [ext: omni.kit.async_engine-0.0.3] startup
+[0.698s] [ext: omni.activity.core-1.0.3] startup
+[0.702s] [ext: omni.activity.profiler-1.0.4] startup
+[0.705s] [ext: omni.assets.plugins-0.0.0] startup
+[0.711s] [ext: omni.blobkey-1.1.2] startup
+[0.712s] [ext: omni.client.lib-1.1.1] startup
+[0.768s] [ext: omni.client-1.3.0] startup
+[0.791s] [ext: omni.protobuf.lib-1.0.1] startup
+[0.798s] [ext: omni.grpc.lib-1.0.0] startup
+[0.822s] [ext: omni.metrics.core-0.0.3] startup
+[0.823s] [ext: omni.datastore-0.0.0] startup
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1793714503.108229  600250 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1793714503.108866  600250 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+[0.828s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[0.836s] [ext: omni.hsscclient-1.1.4] startup
+[0.837s] [ext: omni.stats-1.0.1] startup
+[0.840s] [ext: omni.ujitso.default-1.0.0] startup
+[0.851s] [ext: omni.gpu_foundation-0.0.0] startup
+[1.119s] [ext: carb.windowing.plugins-1.0.1] startup
+[1.127s] [ext: omni.kit.renderer.init-1.0.1] startup
+2026-11-03T14:01:43Z [1,388ms] [Warning] [omni.rtx] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 9 7950X3D 16-Core Processor (RADV RAPHAEL_MENDOCINO)
+2026-11-03T14:01:43Z [1,388ms] [Warning] [omni.rtx] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 9 7950X3D 16-Core Processor (RADV RAPHAEL_MENDOCINO)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 595.99.02     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX A2000                 | Yes: 0 |     | 6138    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2531      | e488f6b1.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | AMD Ryzen 9 7950X3D 16-Core Pr.. |        |     | 42302   MB | 1002      | 0          |
+|     |                                  |        |     |            | 164e      | 00000000.. |
+|     |                                  |        |     |            | 12        |            |
+|=============================================================================================|
+| OS: 26.04.1 LTS (Resolute Raccoon) ubuntu, Version: 26.04.1, Kernel: 7.0.0-42-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12401010 (1.24.1.10)
+| Processor: AMD Ryzen 9 7950X3D 16-Core Processor
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 125883 | Free Memory: 117616
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2026-11-03T14:01:44Z [1,736ms] [Warning] [omni.rtx] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-11-03T14:01:44Z [1,747ms] [Warning] [omni.rtx] IOMMU is enabled.
+[1.991s] [ext: omni.kit.pipapi-0.0.0] startup
+[1.993s] [ext: omni.kit.pip_archive-0.0.0] startup
+[1.994s] [ext: omni.kit.telemetry-0.5.2] startup
+[2.031s] [ext: omni.kit.loop-default-0.2.2] startup
+[2.032s] [ext: omni.kit.test-2.0.9] startup
+[2.145s] [ext: omni.materialx.libs-1.0.9] startup
+[2.163s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[2.165s] [ext: omni.usd.config-1.0.7] startup
+[2.174s] [ext: omni.usd.libs-1.0.3] startup
+[2.438s] [ext: omni.iray.libs-0.0.1] startup
+[2.509s] [ext: omni.mdl-57.0.3] startup
+[2.633s] [ext: omni.mdl.neuraylib-0.2.22] startup
+[2.641s] [ext: omni.kit.usd.mdl-1.1.11] startup
+[2.867s] [ext: omni.appwindow-1.2.2] startup
+[2.873s] [ext: omni.kit.renderer.core-1.2.2] startup
+[3.150s] [ext: omni.kit.renderer.capture-2.0.1] startup
+[3.158s] [ext: omni.kit.renderer.imgui-2.0.8] startup
+[3.231s] [ext: omni.ui-3.2.5] startup
+[3.255s] [ext: omni.kit.mainwindow-1.0.3] startup
+[3.258s] [ext: omni.usd.schema.metrics.assembler-110.1.0] startup
+[3.262s] [ext: omni.usd.schema.anim-0.0.1] startup
+[3.291s] [ext: omni.usd.schema.audio-0.0.1] startup
+[3.298s] [ext: omni.usd.schema.geospatial-0.0.1] startup
+[3.302s] [ext: carb.audio-0.1.0] startup
+[3.316s] [ext: omni.cubric-0.1.0] startup
+[3.318s] [ext: omni.graph.exec-0.9.6] startup
+[3.320s] [ext: omni.usd_resolver-1.0.0] startup
+[3.326s] [ext: omni.usd.core-1.8.6] startup
+[3.336s] [ext: omni.hydra.scene_delegate-0.3.5] startup
+[3.342s] [ext: usdrt.scenegraph-7.6.3] startup
+[3.408s] [ext: omni.hydra.usdrt_delegate-7.5.2] startup
+[3.423s] [ext: omni.kit.actions.core-1.0.0] startup
+[3.428s] [ext: omni.kit.audiodeviceenum-1.0.2] startup
+[3.431s] [ext: omni.kit.commands-1.5.0] startup
+[3.438s] [ext: omni.kit.exec.core-0.13.5] startup
+[3.441s] [ext: omni.kit.usd_undo-0.1.8] startup
+[3.442s] [ext: omni.kit.window.popup_dialog-2.0.26] startup
+[3.450s] [ext: omni.kit.widget.connection_manager-1.0.2] startup
+[3.459s] [ext: omni.timeline-1.1.0] startup
+[3.462s] [ext: omni.usd-1.16.0] startup
+[3.525s] [ext: omni.kit.asset_converter-6.0.1] startup
+2026-11-03T14:01:45Z [3,473ms] [Error] [omni.ext._impl._internal] Failed to import python module asset_converter_native_bindings from /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.asset_converter-6.0.1+110.1.1.lx64.r.cp312.u7f4. Error: libxml2.so.2: cannot open shared object file: No such file or directory. Traceback:
+Traceback (most recent call last):
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/_internal.py", line 212, in _custom_importer
+    return _import_public(ext_module.path, ext_module.name, reload_enabled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/carb/profiler/__init__.py", line 107, in wrapper
+    r = f(*args, **kwds)
+        ^^^^^^^^^^^^^^^^
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/_internal.py", line 111, in _import_public
+    module = import_module(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/carb/profiler/__init__.py", line 107, in wrapper
+    r = f(*args, **kwds)
+        ^^^^^^^^^^^^^^^^
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/custom_importer.py", line 107, in import_module
+    return importlib.import_module(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/python/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.asset_converter-6.0.1+110.1.1.lx64.r.cp312.u7f4/asset_converter_native_bindings/__init__.py", line 141, in <module>
+    ctypes.CDLL(os.path.join(_libs_dir, "libusd_convert_asset.so"))
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/python/lib/python3.12/ctypes/__init__.py", line 382, in __init__
+    self._handle = _dlopen(final_name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libxml2.so.2: cannot open shared object file: No such file or directory
+
+2026-11-03T14:01:45Z [3,473ms] [Error] [carb.scripting-python.plugin] Exception: Extension python module: 'asset_converter_native_bindings' in '/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.asset_converter-6.0.1+110.1.1.lx64.r.cp312.u7f4' failed to load.
+
+At:
+  /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/_internal.py(240): startup
+  /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/_internal.py(366): startup_extension
+  PythonExtension.cpp::startup()(2): <module>
+
+2026-11-03T14:01:45Z [3,473ms] [Error] [omni.ext.plugin] [ext: omni.kit.asset_converter-6.0.1] Failed to startup python extension.
+[3.595s] [ext: omni.usd.schema.omni_dome_light-1.0.0] startup
+[3.600s] [ext: omni.usd.schema.omni_projectors-1.0.0] startup
+[3.601s] [ext: omni.usd.schema.omnigraph-1.0.1] startup
+[3.612s] [ext: omni.usd.schema.physical_lighting-0.1.0] startup
+[3.616s] [ext: omni.usd.schema.physx-110.1.1] startup
+[3.679s] [ext: omni.usd.schema.render_settings.rtx-1.0.2] startup
+[3.686s] [ext: omni.usd.schema.usd_particle_field-1.0.0] startup
+[3.687s] [ext: omni.activity.pump-1.0.1] startup
+[3.689s] [ext: omni.inspect-1.0.2] startup
+[3.693s] [ext: omni.graph.core-3.1.3] startup
+[3.702s] [ext: omni.graph.tools-1.81.0] startup
+[3.743s] [ext: omni.graph-1.142.5] startup
+[3.800s] [ext: omni.kit.menu.core-1.2.1] startup
+[3.802s] [ext: omni.kit.menu.utils-2.2.6] startup
+[3.812s] [ext: omni.kit.notification_manager-1.0.13] startup
+[3.815s] [ext: omni.kit.usd.layers-2.6.1] startup
+[3.829s] [ext: omni.kit.primitive.mesh-1.1.0] startup
+[3.834s] [ext: omni.kit.stage_template.core-1.1.22] startup
+[3.835s] [ext: omni.kit.stage_templates-2.0.2] startup
+[3.840s] [ext: omni.anim.curve.core-1.6.0] startup
+[3.859s] [ext: omni.convexdecomposition-110.1.1] startup
+[3.863s] [ext: omni.graph.action_core-1.1.9] startup
+[3.868s] [ext: omni.graph.action_nodes_core-2.11.0] startup
+[3.872s] [ext: omni.kit.clipboard-1.1.1] startup
+[3.874s] [ext: omni.kit.helper.file_utils-0.1.10] startup
+[3.876s] [ext: omni.kit.widget.path_field-2.0.13] startup
+[3.878s] [ext: omni.kit.widget.browser_bar-2.0.11] startup
+[3.882s] [ext: omni.kit.widget.context_menu-1.4.1] startup
+[3.884s] [ext: omni.kit.widget.filebrowser-2.13.6] startup
+[3.891s] [ext: omni.kit.widget.nucleus_connector-2.4.0] startup
+[3.892s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[3.897s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[3.898s] [ext: omni.ui.scene-2.0.3] startup
+[3.910s] [ext: omni.kit.window.filepicker-3.0.5] startup
+[3.931s] [ext: omni.graph.action_nodes-2.11.0] startup
+[3.959s] [ext: omni.graph.action-2.10.2] startup
+[3.960s] [ext: omni.graph.image.core-0.6.1] startup
+[3.962s] [ext: omni.graph.image.nodes-1.3.2] startup
+[3.965s] [ext: omni.graph.nodes_core-2.11.0] startup
+[3.996s] [ext: omni.graph.nodes-2.12.0] startup
+[4.016s] [ext: omni.kit.context_menu-1.10.0] startup
+[4.020s] [ext: omni.kit.hotkeys.core-1.3.12] startup
+[4.021s] [ext: omni.kit.property.adapter.core-1.1.1] startup
+[4.024s] [ext: omni.kit.property.adapter.usd-1.0.5] startup
+[4.026s] [ext: omni.kit.widget.filter-1.1.5] startup
+[4.028s] [ext: omni.kit.widget.highlight_label-1.0.3] startup
+[4.029s] [ext: omni.kit.widget.searchfield-1.1.8] startup
+[4.031s] [ext: omni.kit.window.file_exporter-1.0.38] startup
+[4.036s] [ext: omni.kit.widget.stage-4.4.2] startup
+[4.053s] [ext: omni.kit.window.content_browser_registry-0.0.6] startup
+[4.054s] [ext: omni.kit.window.drop_support-1.0.8] startup
+[4.056s] [ext: omni.kit.window.file_importer-1.1.22] startup
+[4.058s] [ext: omni.kit.window.file-2.0.13] startup
+[4.062s] [ext: omni.kit.window.content_browser-3.1.10] startup
+[4.078s] [ext: omni.kit.window.property-1.15.2] startup
+[4.327s] [ext: omni.usd.schema.playback-1.1.0] startup
+[4.328s] [ext: omni.kit.property.usd-4.9.8] startup
+[4.346s] [ext: omni.kit.widget.text_editor-1.1.1] startup
+[4.349s] [ext: omni.graph.scriptnode-2.10.2] startup
+[4.363s] [ext: omni.hydra.engine.stats-1.0.5] startup
+[4.366s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[4.368s] [ext: omni.index.libs-392300.31.0] startup
+[4.368s] [ext: omni.index-1.0.1] startup
+[4.370s] [ext: omni.ujitso.client-0.0.0] startup
+[4.370s] [ext: omni.volume-0.5.2] startup
+[4.387s] [ext: omni.hydra.rtx-1.0.4] startup
+2026-11-03T14:01:46Z [4,391ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+[4.549s] [ext: omni.kit.hydra_texture-1.6.0] startup
+[4.558s] [ext: omni.kit.material.library-3.1.4] startup
+[4.566s] [ext: omni.kit.raycast.query-1.2.0] startup
+[4.572s] [ext: omni.kit.viewport.legacy_gizmos-1.0.24] startup
+[4.576s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[4.577s] [ext: omni.kit.viewport.scene_camera_model-1.0.7] startup
+[4.582s] [ext: omni.kit.widget.viewport-110.0.0] startup
+[4.588s] [ext: omni.kit.viewport.window-110.0.0] startup
+[4.611s] [ext: omni.kit.viewport.utility-2.1.0] startup
+[4.612s] [ext: omni.graph.ui_nodes-2.11.1] startup
+[4.653s] [ext: omni.kit.debug.python-1.0.2] startup
+[omni.kit.debug.python] Error running python debugger: Can't listen for client connections: [Errno 98] Address already in use
+[4.816s] [ext: omni.kit.widget.searchable_combobox-1.0.7] startup
+[4.818s] [ext: omni.kit.widget.settings-2.0.0] startup
+[4.821s] [ext: omni.kit.debug.settings-1.0.3] startup
+[4.825s] [ext: omni.kit.debug.vscode-0.1.7] startup
+[4.827s] [ext: omni.kit.window.commands-0.2.9] startup
+[4.829s] [ext: omni.kit.window.extensions-1.5.13] startup
+[4.839s] [ext: omni.kit.window.script_editor-2.0.9] startup
+[4.845s] [ext: omni.kit.dev.utilities.bundle-0.2.1] startup
+[4.847s] [ext: omni.kit.developer.bundle-0.2.0] startup
+[4.848s] [ext: omni.kit.manipulator.camera-110.1.0] startup
+[4.854s] [ext: omni.kit.manipulator.selector-1.1.4] startup
+[4.856s] [ext: omni.kit.window.preferences-1.8.5] startup
+[4.864s] [ext: omni.kit.manipulator.transform-107.0.0] startup
+[4.873s] [ext: omni.kit.widget.toolbar-2.1.0] startup
+[4.884s] [ext: omni.kit.manipulator.tool.snap-1.5.14] startup
+[4.892s] [ext: omni.kit.viewport.manipulator.transform-107.0.4] startup
+[4.894s] [ext: omni.kit.manipulator.prim.core-108.0.2] startup
+[4.903s] [ext: omni.kit.manipulator.prim.usd-107.0.3] startup
+[4.905s] [ext: omni.kit.manipulator.prim-108.0.0] startup
+[4.905s] [ext: omni.kit.manipulator.selection-110.0.0] startup
+[4.906s] [ext: omni.kit.menu.create-2.0.2] startup
+[4.909s] [ext: omni.kit.selection-0.1.6] startup
+[4.912s] [ext: omni.kit.menu.edit-2.0.11] startup
+[4.915s] [ext: omni.kit.menu.file-1.1.23] startup
+[4.969s] [ext: omni.kit.property.audio-1.0.16] startup
+[4.971s] [ext: omni.kit.property.camera-1.0.14] startup
+[4.972s] [ext: omni.kit.property.geometry-2.1.2] startup
+[4.980s] [ext: omni.kit.property.light-1.0.14] startup
+[4.994s] [ext: omni.kit.property.material-1.14.8] startup
+[5.008s] [ext: omni.kit.property.render-1.2.2] startup
+[5.010s] [ext: omni.kit.property.transform-1.6.11] startup
+[5.015s] [ext: omni.kit.property.bundle-1.5.2] startup
+[5.017s] [ext: omni.kit.usd.collect-3.0.6] startup
+[5.021s] [ext: omni.kit.widget.prompt-1.0.7] startup
+[5.024s] [ext: omni.kit.usdz_export-1.1.0] startup
+[5.027s] [ext: omni.kit.tool.asset_importer-6.0.2] startup
+2026-11-03T14:01:47Z [4,959ms] [Error] [omni.ext._impl.custom_importer] Failed to import python module omni.kit.tool.asset_importer. Error: cannot import name 'OmniClientWrapper' from 'omni.kit.asset_converter' (unknown location). Traceback:
+Traceback (most recent call last):
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/custom_importer.py", line 107, in import_module
+    return importlib.import_module(name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/python/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.tool.asset_importer-6.0.2+110.1.1/omni/kit/tool/asset_importer/__init__.py", line 1, in <module>
+    from .extension import AssetImporterExtension, is_supported_format, register_importer, remove_importer
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.tool.asset_importer-6.0.2+110.1.1/omni/kit/tool/asset_importer/extension.py", line 28, in <module>
+    from .builtin_importer import BuiltinImporter
+  File "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.tool.asset_importer-6.0.2+110.1.1/omni/kit/tool/asset_importer/builtin_importer.py", line 11, in <module>
+    from omni.kit.asset_converter import OmniClientWrapper
+ImportError: cannot import name 'OmniClientWrapper' from 'omni.kit.asset_converter' (unknown location)
+
+2026-11-03T14:01:47Z [4,959ms] [Error] [carb.scripting-python.plugin] Exception: Extension python module: 'omni.kit.tool.asset_importer' in '/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.tool.asset_importer-6.0.2+110.1.1' failed to load.
+
+At:
+  /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/_internal.py(240): startup
+  /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/py/omni/ext/_impl/_internal.py(366): startup_extension
+  PythonExtension.cpp::startup()(2): <module>
+
+2026-11-03T14:01:47Z [4,959ms] [Error] [omni.ext.plugin] [ext: omni.kit.tool.asset_importer-6.0.2] Failed to startup python extension.
+[5.170s] [ext: omni.kit.tool.collect-2.2.19] startup
+[5.175s] [ext: omni.kit.ui.actions-1.0.5] startup
+[5.189s] [ext: omni.kit.viewport.actions-110.1.0] startup
+[5.194s] [ext: omni.kit.viewport.menubar.core-110.0.1] startup
+[5.215s] [ext: omni.kit.viewport.menubar.camera-107.0.10] startup
+[5.224s] [ext: omni.kit.viewport.menubar.display-107.1.3] startup
+[5.226s] [ext: omni.kit.viewport.menubar.lighting-107.3.2] startup
+[5.230s] [ext: omni.kit.viewport.menubar.render-110.1.1] startup
+[5.234s] [ext: omni.kit.viewport.menubar.settings-110.0.1] startup
+[5.243s] [ext: omni.kit.viewport.ready-1.0.9] startup
+[5.244s] [ext: omni.kit.widget.cache_indicator-3.0.12] startup
+[5.340s] [ext: omni.kit.widget.stage_icons-1.0.8] startup
+2026-11-03T14:01:47Z [5,269ms] [Warning] [omni.kit.widget.cache_indicator.cache_state_menu] Unable to detect Omniverse Cache Server. File /home/madil/.nvidia-omniverse/config/omniverse.toml is not found. Consider installing it for better IO performance.
+[5.342s] [ext: omni.kit.window.console-1.1.9] startup
+[5.350s] [ext: omni.kit.window.stage-2.6.1] startup
+[5.354s] [ext: omni.kit.window.status_bar-0.1.11] startup
+[5.358s] [ext: omni.kit.window.toolbar-3.0.3] startup
+[5.361s] [ext: omni.ocio-0.1.1] startup
+[5.362s] [ext: omni.physx.gpu-110.1.1] startup
+[5.364s] [ext: omni.physx.foundation-110.1.1] startup
+[5.368s] [ext: omni.usdphysics-110.1.1] startup
+[5.372s] [ext: omni.physx.cooking-110.1.1] startup
+[5.379s] [ext: omni.physx-110.1.1] startup
+Warning: Possible version incompatibility. Attempting to load omni::fabric::IStageReaderWriter with version v0.16 against v0.14.
+[5.404s] [ext: omni.physx.stageupdate-110.1.1] startup
+[5.409s] [ext: omni.rtx.window.settings-0.8.1] startup
+[5.416s] [ext: omni.rtx.settings.core-0.7.1] startup
+[5.422s] [ext: omni.uiaudio-1.0.0] startup
+[5.426s] [ext: omni.usd.metrics.assembler-110.1.0] startup
+[5.432s] [ext: omni.usd.metrics.assembler.ui-110.1.0] startup
+[5.440s] [ext: omni.warp.core-1.14.0] startup
+[5.441s] [ext: omni.kit.menu.common-2.0.2] startup
+[5.444s] [ext: cris.madil-0.1.0] startup
+[5.444s] [ext: omni.services.facilities.base-1.0.5] startup
+[5.447s] [ext: omni.services.core-1.9.3] startup
+[5.735s] [ext: omni.services.transport.server.base-1.1.2] startup
+[5.737s] [ext: omni.services.transport.server.http-1.3.2] startup
+[5.761s] [ext: cris.madil.render_service-0.1.0] startup
+[CRIS Render Service] MyExtension startup : Local Docs -  http://localhost:8011/docs
+[6.612s] app ready
+2026-11-03T14:01:50Z [7,959ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Persp in anon:0x57df342fc860 to Sdf.SpecifierOver
+2026-11-03T14:01:50Z [7,960ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x57df342fc860 to Sdf.SpecifierOver
+2026-11-03T14:01:50Z [7,961ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x57df342fc860 to Sdf.SpecifierOver
+2026-11-03T14:01:50Z [7,961ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x57df342fc860 to Sdf.SpecifierOver
+2026-11-03T14:01:55Z [12,915ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Persp in anon:0x57df3a25d580 to Sdf.SpecifierOver
+2026-11-03T14:01:55Z [12,916ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Front in anon:0x57df3a25d580 to Sdf.SpecifierOver
+2026-11-03T14:01:55Z [12,916ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Top in anon:0x57df3a25d580 to Sdf.SpecifierOver
+2026-11-03T14:01:55Z [12,917ms] [Warning] [omni.kit.widget.viewport.impl.utility] Updated /OmniverseKit_Right in anon:0x57df3a25d580 to Sdf.SpecifierOver
+2026-11-03T14:01:55Z [13,016ms] [Warning] [omni.fabric.plugin] Warning: attribute evaluatedTranslations not found for bucket id 37
+
+2026-11-03T14:01:55Z [13,016ms] [Warning] [omni.usd] Encountered USD Warnings but USD Diagnostics are currently muted. To view USD Warnings, please set the '/persistent/app/usd/muteUsdDiagnostics' setting to false in Preferences page.
+[CRIS Render Service] Ocean animation stopped
+[CRIS Render Service] Ocean animation started: /World/Ocean
+[CRIS Render Service] OmniSurface seawater bound: /World/Looks/OceanWater -> /World/Ocean
+[CRIS Render Service] Environment created: /World/Environment/Sky, /World/Environment/Sun
+[CRIS Render Service] Spawned cetacean Dolphin_001 from /home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd
+[CRIS Marine Setup] Complete MARLIN marine scene created.
+[79.167s] RTX ready

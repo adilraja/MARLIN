@@ -1,0 +1,150 @@
+--- a/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py
++++ b/source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py
+@@ -19,7 +19,7 @@
+ from .api import router
+ from . import calibration_capture,capture_state,ocean,cetacean
+ from .ocean_medium import configuration,select_preset,PresetRequest,author_frame,surface_arrays
+-from .ocean_enclosure import topology,validate,grid_topology
++from .ocean_enclosure import topology,validate,grid_topology,enclose
+ from .camera import _active_viewport
+ from .hidef_marine import gpu_preflight,settings_record,restore_settings,freeze_stage
+ from .water_diagnostics import DiagnosticCamera,mesh,emissive
+@@ -33,6 +33,20 @@
+ 
+ 
+ def write(path,value):path.write_text(json.dumps(value,indent=2)+'\n')
++
++
++@router.get('/scene/ocean/material/preset/diagnostic/medium-capabilities',summary='Read registered native medium-related material and schema definitions')
++async def medium_capabilities():
++    from pxr import Plug,Sdr
++    types=[]
++    for plugin in Plug.Registry().GetAllPlugins():
++        for name,metadata in plugin.metadata.get('Types',{}).items():
++            if any(word in name.lower() for word in ('camera','volume','medium')):
++                types.append({'type':name,'plugin':plugin.name,'metadata':metadata})
++    registry=Sdr.Registry()
++    identifiers=[str(x) for x in registry.GetShaderNodeIdentifiers() if any(w in str(x).lower() for w in ('volume','fog'))]
++    return {'ok':True,'native_schema_types':types,'registered_volume_material_identifiers':identifiers,
++            'rtx_settings_tree':str(carb.settings.get_settings().get('/rtx'))}
+ 
+ 
+ class BatchPreviewRequest(BaseModel):
+@@ -168,6 +182,8 @@
+     phase_seconds: Literal[0,.5,1,2,4]=0
+     view: Literal['nadir','oblique','inside','exit','edge','outer_edge']='oblique'
+     advance_live: bool=False
++    underwater_followup: bool=False
++    medium_probe: Literal['none','double_sided','nonuniform','volume_output','volume_output_nonuniform','native_procedural_volume','native_varying_volume','flat_box','flat_box_clear','flat_box_uncached']='none'
+     class Config:extra='forbid'
+ 
+ 
+@@ -185,6 +201,8 @@
+ 
+ async def _capture_integrated(data):
+     if calibration_capture._busy:return {'ok':False,'error':'A capture is running','render_attempted':False}
++    if data.medium_probe!='none' and (not data.underwater_followup or data.advance_live or data.selection!='engineering_v1'):
++        return {'ok':False,'error':'Native medium probes require a frozen follow-up capture with engineering_v1','render_attempted':False}
+     if data.advance_live:
+         from . import camera as camera_control
+         if cetacean._cetacean_swim_state is not None or camera_control._chase_camera_state is not None:
+@@ -197,6 +215,7 @@
+     if stage.GetPrimAtPath(DIAGNOSTIC):return {'ok':False,'error':'Diagnostic namespace is already occupied'}
+     calibration_capture._busy=True;paused=capture_state.paused;capture_state.paused=True
+     before=settings_record();settings=carb.settings.get_settings()
++    probe_settings={'/rtx/pathtracing/ptvol/enabled':settings.get('/rtx/pathtracing/ptvol/enabled')}
+     old_camera=str(viewport.camera_path);old_resolution=tuple(viewport.resolution);old_fill=viewport.fill_frame
+     elapsed,accumulator=state['elapsed'],state['accumulator']
+     original_edit=stage.GetEditTarget();session=stage.GetSessionLayer()
+@@ -214,7 +233,8 @@
+             Sdf.CopySpec(root_layer,path,snapshot,path)
+     layer=Sdf.Layer.CreateAnonymous('marlin_m4_transaction.usda');session.subLayerPaths.insert(0,layer.identifier)
+     stage.SetEditTarget(layer)
+-    root=ROOT/'captures';root.mkdir(exist_ok=True)
++    evidence_root=ROOT.parent/'m4_underwater' if data.underwater_followup else ROOT
++    root=evidence_root/'captures';root.mkdir(parents=True,exist_ok=True)
+     directory=Path(tempfile.mkdtemp(prefix=data.view+'_',dir=str(root)))
+     # Fixed installed guide settings, rather than changing any animal visibility.
+     guide_paths=[f'/persistent/app/viewport/{viewport.id}/guide/{name}/visible' for name in ('grid','axis','selection','boundingBox')]
+@@ -252,6 +272,52 @@
+         # M3 capture settings are applied only to the temporary diagnostic camera/product layer.
+         setup_medium_viewport(viewport,MediumRequest(renderer='PathTracing'),hide_overlays=False)
+         if data.selection=='engineering_v1':select_preset(stage,PresetRequest(configure_renderer=False))
++        if data.medium_probe=='double_sided':surface.GetDoubleSidedAttr().Set(True)
++        if 'nonuniform' in data.medium_probe or data.medium_probe in ('native_procedural_volume','native_varying_volume'):
++            settings.set('/rtx/pathtracing/ptvol/enabled',True)
++            attr=stage.GetPrimAtPath(viewport.render_product_path).GetAttribute('omni:rtx:pt:ptvol:enabled')
++            if not attr:raise ValueError('Registered non-uniform-volume control is unavailable')
++            attr.Set(True)
++        if 'volume_output' in data.medium_probe:
++            material=UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0]
++            connection=material.GetSurfaceOutput('mdl').GetConnectedSource()
++            if not connection:raise ValueError('Existing MDL surface terminal has no shader source')
++            material.CreateVolumeOutput('mdl').ConnectToSource(*connection)
++        if data.medium_probe in ('native_procedural_volume','native_varying_volume'):
++            material=UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0]
++            shader=UsdShade.Shader.Get(stage,material.GetPath().AppendChild('Shader'))
++            for name in list(shader.GetInputs()):shader.GetPrim().RemoveProperty(name.GetFullName())
++            shader.SetSourceAsset('OmniVolumeNoise.mdl','mdl')
++            shader.SetSourceAssetSubIdentifier('OmniVolumePerlinNoise','mdl')
++            shader.CreateInput('volume_albedo',Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(.1 if data.medium_probe=='native_varying_volume' else 0))
++            shader.CreateInput('volume_density_scale',Sdf.ValueTypeNames.Float).Set(1.0)
++            for name in ('color1','color2'):
++                value=(.6,.3,.2) if name=='color2' and data.medium_probe=='native_varying_volume' else (.5108256,.2231436,.1053605)
++                shader.CreateInput(name,Sdf.ValueTypeNames.Color3f).Set(Gf.Vec3f(*value))
++            material.CreateVolumeOutput('mdl').ConnectToSource(shader.ConnectableAPI(),'out')
++        probe_resolution=state['resolution']
++        if data.medium_probe.startswith('flat_box'):
++            probe_resolution=1
++            p=[Gf.Vec3f(x/unit,0,z/unit) for z in (-2,2) for x in (10,14)]
++            p,n,e=enclose(p,[Gf.Vec3f(0,1,0)]*4,1,-3/unit)
++            faces=topology(1)
++            surface.GetPointsAttr().Set([Gf.Vec3f(*v) for v in p])
++            surface.GetNormalsAttr().Set([Gf.Vec3f(*v) for v in n])
++            surface.SetNormalsInterpolation(UsdGeom.Tokens.faceVarying)
++            surface.GetFaceVertexCountsAttr().Set([len(f) for f in faces])
++            surface.GetFaceVertexIndicesAttr().Set([i for f in faces for i in f])
++            surface.GetExtentAttr().Set([Gf.Vec3f(*v) for v in e])
++            if data.medium_probe=='flat_box_clear':
++                material=UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0]
++                shader=UsdShade.Shader.Get(stage,material.GetPath().AppendChild('Shader'))
++                shader.GetInput('specular_transmission_color').Set(Gf.Vec3f(1))
++                shader.GetInput('specular_transmission_scattering_color').Set(Gf.Vec3f(0))
++            if data.medium_probe=='flat_box_uncached':
++                product=stage.GetPrimAtPath(viewport.render_product_path)
++                for name in ('omni:rtx:pt:radianceCache:enabled','omni:rtx:pt:lightCache:enabled'):
++                    attr=product.GetAttribute(name)
++                    if not attr:raise ValueError('Registered caching control unavailable: '+name)
++                    attr.Set(False)
+         live_frames=[]
+         if data.advance_live:
+             capture_state.paused=False
+@@ -266,13 +332,18 @@
+         hdr=await capture_hdr(viewport,directory)
+         frozen,count=freeze_stage(stage,Usd.TimeCode.Default());frozen.GetRootLayer().Export(str(directory/'scene.usdc'))
+         config=configuration(surface.GetPrim())
+-        geometry=validate(list(surface.GetPointsAttr().Get()),topology(state['resolution']),state['resolution']) if config else {'open_original_surface':True}
++        geometry=validate(list(surface.GetPointsAttr().Get()),topology(probe_resolution),probe_resolution) if config else {'open_original_surface':True}
+         metadata=dict(c.metadata(),**hdr,request=data.dict(),gpu_before=gpu,effective_phase_seconds=state['elapsed'],
+             integrated_geometry=geometry,material=str(UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0].GetPath()),
+             live_frames=live_frames,scene_sha256=hashlib.sha256((directory/'scene.usdc').read_bytes()).hexdigest(),
+             renderer_instance_policy='Existing live viewport; no second USD context or Hydra renderer',scientific_water_calibrated=False,
+             camera_override=data.view in ('edge','outer_edge','exit'),viewport_resolution=list(viewport.resolution))
+         metadata.update(record_projection(stage,viewport));write(directory/'metadata.json',metadata)
++        bound=UsdShade.MaterialBindingAPI(surface.GetPrim()).ComputeBoundMaterial()[0]
++        write(directory/'bound_material.json',{'material':str(bound.GetPath()),'prims':[
++            {'path':str(prim.GetPath()),'attributes':{a.GetName():{'value':str(a.Get()),'connections':[str(p) for p in a.GetConnections()]} for a in prim.GetAttributes()}}
++            for prim in Usd.PrimRange(bound.GetPrim())],
++            'global_ptvol':settings.get('/rtx/pathtracing/ptvol/enabled')})
+         return {'ok':True,'directory':str(directory),'metadata':metadata}
+     except Exception as exc:
+         result={'ok':False,'error':str(exc) or type(exc).__name__,'directory':str(directory)};write(directory/'failure.json',result);return result
+@@ -287,7 +358,7 @@
+                 for owner in (root_layer,session):
+                     with Usd.EditContext(stage,owner):stage.RemovePrim(path)
+         state['elapsed']=elapsed;state['accumulator']=accumulator
+-        restore_settings(before);restore_settings(guides)
++        restore_settings(before);restore_settings(guides);restore_settings(probe_settings)
+         restored_attributes={}
+         for name in ('points','normals','faceVertexCounts','faceVertexIndices','doubleSided','marlin:waterMedium:config'):
+             path='/World/Ocean.'+name

@@ -1,0 +1,478 @@
+{
+  "same_mode_comparisons": {
+    "repeat_a": {
+      "state": {
+        "checks": {
+          "camera_matrices_within_1e_6": true,
+          "scene_input_hashes_equal": true,
+          "effective_camera_product_controls_equal": true,
+          "renderer_globals_equal": true
+        },
+        "all_state_checks_passed": true,
+        "maximum_matrix_differences": {
+          "capture_view_matrix": 0.0,
+          "capture_projection_matrix": 0.0
+        },
+        "changed_prims": [],
+        "changed_effective_controls": {
+          "camera": [],
+          "render_product": []
+        }
+      },
+      "display_image": {
+        "resolution": [
+          512,
+          384
+        ],
+        "roi_xyxy": [
+          128,
+          96,
+          384,
+          288
+        ],
+        "tolerances_8bit": {
+          "mean_absolute_difference": 1,
+          "p99_absolute_difference": 8
+        },
+        "comparisons": {
+          "full_rgb": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          }
+        },
+        "image_tolerance_passed": true,
+        "scene_camera_settings_equality": "Must be checked independently; image similarity alone does not establish it"
+      },
+      "native_hdr": {
+        "results": {
+          "full_rgb": {
+            "mean_absolute_difference": 0.43493590090009904,
+            "p99_absolute_difference": 2.921875,
+            "maximum_absolute_difference": 252.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.00786377497221114,
+            "reference_rgb_mean": [
+              40.562466422716774,
+              55.647331396738686,
+              69.71658070882161
+            ],
+            "candidate_rgb_mean": [
+              40.64110040664673,
+              55.73548436164856,
+              69.73686170578003
+            ]
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference": 0.8543789121839735,
+            "p99_absolute_difference": 24.0,
+            "maximum_absolute_difference": 252.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.005710765899169496,
+            "reference_rgb_mean": [
+              113.77488613128662,
+              154.2639249165853,
+              180.78657976786295
+            ],
+            "candidate_rgb_mean": [
+              113.82723426818848,
+              154.31841659545898,
+              180.80495039621988
+            ]
+          }
+        },
+        "acceptance": "Diagnostic only; no predeclared M5 HDR tolerance and no absolute radiometric calibration"
+      },
+      "passed": true
+    },
+    "repeat_b": {
+      "state": {
+        "checks": {
+          "camera_matrices_within_1e_6": true,
+          "scene_input_hashes_equal": true,
+          "effective_camera_product_controls_equal": true,
+          "renderer_globals_equal": true
+        },
+        "all_state_checks_passed": true,
+        "maximum_matrix_differences": {
+          "capture_view_matrix": 0.0,
+          "capture_projection_matrix": 0.0
+        },
+        "changed_prims": [],
+        "changed_effective_controls": {
+          "camera": [],
+          "render_product": []
+        }
+      },
+      "display_image": {
+        "resolution": [
+          512,
+          384
+        ],
+        "roi_xyxy": [
+          128,
+          96,
+          384,
+          288
+        ],
+        "tolerances_8bit": {
+          "mean_absolute_difference": 1,
+          "p99_absolute_difference": 8
+        },
+        "comparisons": {
+          "full_rgb": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          }
+        },
+        "image_tolerance_passed": true,
+        "scene_camera_settings_equality": "Must be checked independently; image similarity alone does not establish it"
+      },
+      "native_hdr": {
+        "results": {
+          "full_rgb": {
+            "mean_absolute_difference": 0.5197555621465048,
+            "p99_absolute_difference": 2.6875,
+            "maximum_absolute_difference": 336.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.009397340557118137,
+            "reference_rgb_mean": [
+              40.562466422716774,
+              55.647331396738686,
+              69.71658070882161
+            ],
+            "candidate_rgb_mean": [
+              40.657870848973594,
+              55.75468095143636,
+              69.7634638150533
+            ]
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference": 0.9679343435499403,
+            "p99_absolute_difference": 24.0,
+            "maximum_absolute_difference": 336.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.0064697833279266865,
+            "reference_rgb_mean": [
+              113.77488613128662,
+              154.2639249165853,
+              180.78657976786295
+            ],
+            "candidate_rgb_mean": [
+              113.85177564620972,
+              154.33752409617105,
+              180.81213982899985
+            ]
+          }
+        },
+        "acceptance": "Diagnostic only; no predeclared M5 HDR tolerance and no absolute radiometric calibration"
+      },
+      "passed": true
+    },
+    "reload_a": {
+      "state": {
+        "checks": {
+          "camera_matrices_within_1e_6": true,
+          "scene_input_hashes_equal": true,
+          "effective_camera_product_controls_equal": true,
+          "renderer_globals_equal": true
+        },
+        "all_state_checks_passed": true,
+        "maximum_matrix_differences": {
+          "capture_view_matrix": 0.0,
+          "capture_projection_matrix": 0.0
+        },
+        "changed_prims": [],
+        "changed_effective_controls": {
+          "camera": [],
+          "render_product": []
+        }
+      },
+      "display_image": {
+        "resolution": [
+          512,
+          384
+        ],
+        "roi_xyxy": [
+          128,
+          96,
+          384,
+          288
+        ],
+        "tolerances_8bit": {
+          "mean_absolute_difference": 1,
+          "p99_absolute_difference": 8
+        },
+        "comparisons": {
+          "full_rgb": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          }
+        },
+        "image_tolerance_passed": true,
+        "scene_camera_settings_equality": "Must be checked independently; image similarity alone does not establish it"
+      },
+      "native_hdr": {
+        "results": {
+          "full_rgb": {
+            "mean_absolute_difference": 0.09214296605851915,
+            "p99_absolute_difference": 0.3125,
+            "maximum_absolute_difference": 104.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.0016659731902028381,
+            "reference_rgb_mean": [
+              40.562466422716774,
+              55.647331396738686,
+              69.71658070882161
+            ],
+            "candidate_rgb_mean": [
+              40.56945125261942,
+              55.65849550565084,
+              69.73099438349406
+            ]
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference": 0.23572688632541233,
+            "p99_absolute_difference": 8.0,
+            "maximum_absolute_difference": 104.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.0015756253399366387,
+            "reference_rgb_mean": [
+              113.77488613128662,
+              154.2639249165853,
+              180.78657976786295
+            ],
+            "candidate_rgb_mean": [
+              113.79003715515137,
+              154.2884292602539,
+              180.81294186909994
+            ]
+          }
+        },
+        "acceptance": "Diagnostic only; no predeclared M5 HDR tolerance and no absolute radiometric calibration"
+      },
+      "passed": true
+    },
+    "reload_b": {
+      "state": {
+        "checks": {
+          "camera_matrices_within_1e_6": true,
+          "scene_input_hashes_equal": true,
+          "effective_camera_product_controls_equal": true,
+          "renderer_globals_equal": true
+        },
+        "all_state_checks_passed": true,
+        "maximum_matrix_differences": {
+          "capture_view_matrix": 0.0,
+          "capture_projection_matrix": 0.0
+        },
+        "changed_prims": [],
+        "changed_effective_controls": {
+          "camera": [],
+          "render_product": []
+        }
+      },
+      "display_image": {
+        "resolution": [
+          512,
+          384
+        ],
+        "roi_xyxy": [
+          128,
+          96,
+          384,
+          288
+        ],
+        "tolerances_8bit": {
+          "mean_absolute_difference": 1,
+          "p99_absolute_difference": 8
+        },
+        "comparisons": {
+          "full_rgb": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference_8bit": 0.0,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 0.0,
+            "mean_absolute_difference_normalized": 0.0,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          }
+        },
+        "image_tolerance_passed": true,
+        "scene_camera_settings_equality": "Must be checked independently; image similarity alone does not establish it"
+      },
+      "native_hdr": {
+        "results": {
+          "full_rgb": {
+            "mean_absolute_difference": 0.09178784158494738,
+            "p99_absolute_difference": 0.3125,
+            "maximum_absolute_difference": 104.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.0016595524304046378,
+            "reference_rgb_mean": [
+              40.562466422716774,
+              55.647331396738686,
+              69.71658070882161
+            ],
+            "candidate_rgb_mean": [
+              40.56924696763357,
+              55.658231337865196,
+              69.73069485028584
+            ]
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference": 0.23554457558525932,
+            "p99_absolute_difference": 8.0,
+            "maximum_absolute_difference": 104.0,
+            "mean_absolute_difference_divided_by_reference_mean_abs": 0.0015744067541978394,
+            "reference_rgb_mean": [
+              113.77488613128662,
+              154.2639249165853,
+              180.78657976786295
+            ],
+            "candidate_rgb_mean": [
+              113.79098590215047,
+              154.28985023498535,
+              180.81441402435303
+            ]
+          }
+        },
+        "acceptance": "Diagnostic only; no predeclared M5 HDR tolerance and no absolute radiometric calibration"
+      },
+      "passed": true
+    }
+  },
+  "dimensions_and_camera": {
+    "baseline": {
+      "saved_image": [
+        512,
+        384
+      ],
+      "render_product": [
+        512,
+        384
+      ],
+      "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+      "matches": true
+    },
+    "repeat_a": {
+      "saved_image": [
+        512,
+        384
+      ],
+      "render_product": [
+        512,
+        384
+      ],
+      "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+      "matches": true
+    },
+    "repeat_b": {
+      "saved_image": [
+        512,
+        384
+      ],
+      "render_product": [
+        512,
+        384
+      ],
+      "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+      "matches": true
+    },
+    "reload_a": {
+      "saved_image": [
+        512,
+        384
+      ],
+      "render_product": [
+        512,
+        384
+      ],
+      "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+      "matches": true
+    },
+    "reload_b": {
+      "saved_image": [
+        512,
+        384
+      ],
+      "render_product": [
+        512,
+        384
+      ],
+      "camera": "/World/MarlinOceanIntegrationDiagnostic/Camera",
+      "matches": true
+    }
+  },
+  "actual_fresh_layer_reloads_verified": true,
+  "reload_layer_identifiers": [
+    "anon:0x5c1f0f7e9cb0",
+    "anon:0x5c1f108feb00",
+    "anon:0x5c1f069979c0"
+  ],
+  "saved_scene_sha256": "7e512711502b1fff2f0eb66c16c7f170beedf113df9d0724e6235dd01e3d68bc",
+  "comparator_source": {
+    "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_marine.py",
+    "sha256": "ad861016111964fb2dc4056099cc5b3cc484135973544bfb2ce69e218d16dc40"
+  },
+  "mode_comparison": null,
+  "resources": {
+    "audit_result": {
+      "ok": true,
+      "image_analysis_pending": true,
+      "phase_note": "User reboot reset GPU history; standard ocean/chase controllers reconstructed after audit; swimming remained stopped."
+    },
+    "sampled_peak_used_mib": 2952,
+    "sampled_minimum_free_mib": 2846,
+    "sample_count": 61,
+    "sample_scope": "Startup through audit completion; approximately one sample per second, not exact allocation peak"
+  },
+  "capture_times_seconds": {
+    "baseline": 7.670469760001652,
+    "repeat_a": 7.899528625999665,
+    "repeat_b": 7.765059946999827,
+    "reload_a": 7.695352782000555,
+    "reload_b": 7.665853786000298
+  },
+  "actual_gpu_samples_measured": false,
+  "completed_rendered_frame_wait_per_image": 64,
+  "all_same_mode_checks_passed": true,
+  "above_water_m5_acceptance_passed": true,
+  "underwater_camera_qualified": false,
+  "m4_complete": false
+}

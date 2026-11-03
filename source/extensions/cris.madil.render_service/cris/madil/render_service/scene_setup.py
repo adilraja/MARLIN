@@ -26,6 +26,7 @@ from .ocean import (
     stop_ocean_animation,
 )
 from .underwater_api import UnderwaterCueDataModel, apply_underwater_cue
+from .ocean_medium import selected, preserve_renderer_after_setup
 
 # =========================================================================
 # CRIS Complete Marine Scene Setup
@@ -186,9 +187,10 @@ async def setup_marine_scene(
         thin_walled=True,
     )
 
-    material_result = await apply_ocean_material(
-        material_data
-    )
+    if selected(omni.usd.get_context().get_stage().GetPrimAtPath('/World/Ocean')):
+        material_result = {"ok": True, "preserved_selected_preset": "engineering_v1"}
+    else:
+        material_result = await apply_ocean_material(material_data)
 
     results["material"] = material_result
 
@@ -362,6 +364,7 @@ async def setup_marine_scene(
             f"SELECTION clear warning: {exc}"
         )
 
+    preserve_renderer_after_setup(omni.usd.get_context().get_stage())
     print(
         "[CRIS Marine Setup] "
         "Complete MARLIN marine scene created."

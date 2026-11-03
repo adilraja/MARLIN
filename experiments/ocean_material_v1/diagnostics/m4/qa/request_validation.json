@@ -1,0 +1,67 @@
+[
+  {
+    "request": {
+      "selection": "invalid"
+    },
+    "http_status": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "literal_error",
+          "loc": [
+            "body",
+            "selection"
+          ],
+          "msg": "Input should be 'engineering_v1' or 'original'",
+          "input": "invalid",
+          "ctx": {
+            "expected": "'engineering_v1' or 'original'"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "request": {
+      "selection": "engineering_v1",
+      "bottom_depth_m": -1
+    },
+    "http_status": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "body",
+            "bottom_depth_m"
+          ],
+          "msg": "Input should be greater than or equal to 2",
+          "input": -1,
+          "ctx": {
+            "ge": 2.0
+          }
+        }
+      ]
+    }
+  },
+  {
+    "request": {
+      "selection": "original",
+      "unexpected": true
+    },
+    "http_status": 422,
+    "response": {
+      "detail": [
+        {
+          "type": "extra_forbidden",
+          "loc": [
+            "body",
+            "unexpected"
+          ],
+          "msg": "Extra inputs are not permitted",
+          "input": true
+        }
+      ]
+    }
+  }
+]

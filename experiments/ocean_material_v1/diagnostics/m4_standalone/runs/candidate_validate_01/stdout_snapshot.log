@@ -1,0 +1,30 @@
+2026-10-30T17:17:42Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/runs/candidate_validate_01/kit_process.log
+[0.102s] Failed to solve some dependencies locally, syncing with extension registry...
+[0.103s] [ext: omni.kit.async_engine-0.0.6] startup
+[0.105s] [ext: omni.client.lib-1.1.1] startup
+[0.115s] [ext: omni.kit.registry.nucleus-0.0.0] startup
+I: Initializing Version 2.75.1-release.7540+gl.d3c5c5b8
+I: Client ID: 7E4EAF5C
+I: ThreadId(02) hub_client::client::Client::new Launching client mode=Shared with_cleaner=false cache_path=None cache_size=None
+I: ThreadId(03) launch self=Launcher { discovery_lock: RwLock { lock: RwLock { inner: File { fd: 26, path: "/tmp/hub-madil.lock", read: false, write: true } } }, mode: Shared, with_cleaner: false, config_file: "/tmp/hub-madil-3AFFDD73.config.json" } cmd="hub" "--mode=shared" "--write-config" "/tmp/hub-madil-3AFFDD73.config.json" "--"
+I: Not using Hub: Hub not found
+I: Successfully created Azure provider for https://ovextensionsprod.blob.core.windows.net
+[2.290s] Pulling extension: `omni.client-1.3.0` from the registry.
+[omni.kit.registry.nucleus] [tid: 134278920456064] creating a link: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_candidate/portable/data/Kit/validate/1.0/exts/3/omni.client-1.3.0+33a8249d.lx64.r -> /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_candidate/xdg_data/ov/data/exts/v2/omni.client-cc5ae09b3d5ad602
+[2.316s] Extension: `omni.client-1.3.0` was installed.
+[2.316s] Pulling extension: `omni.usd.config-1.0.8` from the registry.
+[omni.kit.registry.nucleus] [tid: 134278920456064] creating a link: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_candidate/portable/data/Kit/validate/1.0/exts/3/omni.usd.config-1.0.8+33a8249d -> /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_candidate/xdg_data/ov/data/exts/v2/omni.usd.config-3d1a1eaada059362
+[2.339s] Extension: `omni.usd.config-1.0.8` was installed.
+[2.339s] Pulling extension: `omni.usd.libs-1.0.3` from the registry.
+[omni.kit.registry.nucleus] [tid: 134278920456064] creating a link: /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_candidate/portable/data/Kit/validate/1.0/exts/3/omni.usd.libs-1.0.3+33a8249d.lx64.r.cp312 -> /home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_candidate/xdg_data/ov/data/exts/v2/omni.usd.libs-f9fe5afeacba36ca
+[2.362s] Extension: `omni.usd.libs-1.0.3` was installed.
+[2.363s] [ext: omni.client-1.3.0] startup
+[2.364s] [ext: omni.usd.config-1.0.8] startup
+2026-10-30T17:17:45Z [2,349ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+[2.375s] [ext: omni.usd.libs-1.0.3] startup
+[2.429s] [ext: validate-1.0.0] startup
+{
+  "ok": true,
+  "marlin_assets_required": false,
+  "rendering_performed": false
+}

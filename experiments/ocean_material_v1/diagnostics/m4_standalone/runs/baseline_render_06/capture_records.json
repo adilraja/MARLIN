@@ -1,0 +1,776 @@
+[
+  {
+    "case": {
+      "name": "inside_0500_clear",
+      "file": "scenes/inside_0500_clear.usda",
+      "view": "inside",
+      "condition": "clear",
+      "path_m": 0.5,
+      "initial": true,
+      "sha256": "15f72abd7a0f7d29d6bf56af8620d103d763a3267215231055e08ec425ac8319",
+      "capture_timeout_seconds": 240
+    },
+    "gpu_before": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 2850,
+      "free_mib": 2949,
+      "driver": "595.91.07"
+    },
+    "gpu_after": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3546,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "elapsed_seconds": 1.4686131780035794,
+    "actual_resolution": [
+      512,
+      384
+    ],
+    "rendered_frame_wait": 64,
+    "configured_samples_per_pixel_limit": 512,
+    "actually_accumulated_samples_measured": false,
+    "hdr": {
+      "format": "TextureFormat.RGBA16_SFLOAT",
+      "width": 512,
+      "height": 384,
+      "bytes": 1572864,
+      "dtype": "float32",
+      "minimum": 0.00025343894958496094,
+      "maximum": 1.0,
+      "centre_rgb": [
+        0.00025367923080921173,
+        0.00025367923080921173,
+        0.00025367923080921173
+      ]
+    },
+    "camera_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1200.0,
+        -50.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_viewport_view_matrix": [
+      [
+        1.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1200.0,
+        0.0,
+        50.0,
+        1.0
+      ]
+    ],
+    "actual_product_cameras": [
+      "/World/Camera"
+    ],
+    "actual_product_resolution": [
+      512,
+      384
+    ],
+    "source_scene_sha256": "15f72abd7a0f7d29d6bf56af8620d103d763a3267215231055e08ec425ac8319",
+    "captured_scene_sha256": "e7cf8c8b192af68c1d02b872f546bb865dfec273ce871550510ef38d5a8242b9",
+    "authored_product_controls": {
+      "omni:rtx:rendermode": "PathTracing",
+      "omni:rtx:fog:enabled": false,
+      "omni:rtx:pt:fireflyFilter:enabled": false,
+      "omni:rtx:rtpt:fireflyFilter:enabled": false,
+      "omni:rtx:pt:limits:maxBounces": 16,
+      "omni:rtx:pt:limits:maxGlossyBounces": 16,
+      "omni:rtx:pt:samplesPerPixel": 512,
+      "omni:rtx:pt:samplesPerIteration": 1,
+      "omni:rtx:pt:adaptiveSampling:enabled": false,
+      "omni:rtx:pt:denoising:enabled": true,
+      "omni:rtx:pt:showLights:enabled": true,
+      "omni:rtx:pt:pixelFilter:filter": "triangle",
+      "omni:rtx:pt:pixelFilter:radius": 1.0,
+      "omni:rtx:post:tonemap:operator": "acesApproximation"
+    },
+    "resolved_mdl": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+    "mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498",
+    "native_hdr_domain": "HdrColor; absolute radiometric calibration unverified",
+    "marlin_imports": false
+  },
+  {
+    "case": {
+      "name": "inside_0500_absorption",
+      "file": "scenes/inside_0500_absorption.usda",
+      "view": "inside",
+      "condition": "absorption",
+      "path_m": 0.5,
+      "initial": true,
+      "sha256": "52ecd0cfc6900ec0afcc25a35ead98c29c3c994c88c63b01649bfe07891b2a91",
+      "capture_timeout_seconds": 90
+    },
+    "gpu_before": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3546,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "gpu_after": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3545,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "elapsed_seconds": 1.3485507159784902,
+    "actual_resolution": [
+      512,
+      384
+    ],
+    "rendered_frame_wait": 64,
+    "configured_samples_per_pixel_limit": 512,
+    "actually_accumulated_samples_measured": false,
+    "hdr": {
+      "format": "TextureFormat.RGBA16_SFLOAT",
+      "width": 512,
+      "height": 384,
+      "bytes": 1572864,
+      "dtype": "float32",
+      "minimum": 0.00025343894958496094,
+      "maximum": 1.0,
+      "centre_rgb": [
+        0.00025368109345436096,
+        0.00025368109345436096,
+        0.00025368109345436096
+      ]
+    },
+    "camera_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1200.0,
+        -50.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_viewport_view_matrix": [
+      [
+        1.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1200.0,
+        0.0,
+        50.0,
+        1.0
+      ]
+    ],
+    "actual_product_cameras": [
+      "/World/Camera"
+    ],
+    "actual_product_resolution": [
+      512,
+      384
+    ],
+    "source_scene_sha256": "52ecd0cfc6900ec0afcc25a35ead98c29c3c994c88c63b01649bfe07891b2a91",
+    "captured_scene_sha256": "dce6793510ef3589303af6c211b9df63c568762de2acedf65ef0371d4b8465d3",
+    "authored_product_controls": {
+      "omni:rtx:rendermode": "PathTracing",
+      "omni:rtx:fog:enabled": false,
+      "omni:rtx:pt:fireflyFilter:enabled": false,
+      "omni:rtx:rtpt:fireflyFilter:enabled": false,
+      "omni:rtx:pt:limits:maxBounces": 16,
+      "omni:rtx:pt:limits:maxGlossyBounces": 16,
+      "omni:rtx:pt:samplesPerPixel": 512,
+      "omni:rtx:pt:samplesPerIteration": 1,
+      "omni:rtx:pt:adaptiveSampling:enabled": false,
+      "omni:rtx:pt:denoising:enabled": true,
+      "omni:rtx:pt:showLights:enabled": true,
+      "omni:rtx:pt:pixelFilter:filter": "triangle",
+      "omni:rtx:pt:pixelFilter:radius": 1.0,
+      "omni:rtx:post:tonemap:operator": "acesApproximation"
+    },
+    "resolved_mdl": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+    "mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498",
+    "native_hdr_domain": "HdrColor; absolute radiometric calibration unverified",
+    "marlin_imports": false
+  },
+  {
+    "case": {
+      "name": "inside_0500_engineering",
+      "file": "scenes/inside_0500_engineering.usda",
+      "view": "inside",
+      "condition": "engineering",
+      "path_m": 0.5,
+      "initial": true,
+      "sha256": "1b74148e60de3ba74532b600e38f4879bdc5a1deb938aefc2feaecc72a23286b",
+      "capture_timeout_seconds": 90
+    },
+    "gpu_before": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3545,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "gpu_after": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3545,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "elapsed_seconds": 1.311251632985659,
+    "actual_resolution": [
+      512,
+      384
+    ],
+    "rendered_frame_wait": 64,
+    "configured_samples_per_pixel_limit": 512,
+    "actually_accumulated_samples_measured": false,
+    "hdr": {
+      "format": "TextureFormat.RGBA16_SFLOAT",
+      "width": 512,
+      "height": 384,
+      "bytes": 1572864,
+      "dtype": "float32",
+      "minimum": 0.00025343894958496094,
+      "maximum": 1.0,
+      "centre_rgb": [
+        0.0002536782994866371,
+        0.0002536782994866371,
+        0.0002536782994866371
+      ]
+    },
+    "camera_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1200.0,
+        -50.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_viewport_view_matrix": [
+      [
+        1.0,
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1200.0,
+        0.0,
+        50.0,
+        1.0
+      ]
+    ],
+    "actual_product_cameras": [
+      "/World/Camera"
+    ],
+    "actual_product_resolution": [
+      512,
+      384
+    ],
+    "source_scene_sha256": "1b74148e60de3ba74532b600e38f4879bdc5a1deb938aefc2feaecc72a23286b",
+    "captured_scene_sha256": "615aae0385bf25aa5309ece01c5e83b7372bfc286eb72645877c3c3ed82c1768",
+    "authored_product_controls": {
+      "omni:rtx:rendermode": "PathTracing",
+      "omni:rtx:fog:enabled": false,
+      "omni:rtx:pt:fireflyFilter:enabled": false,
+      "omni:rtx:rtpt:fireflyFilter:enabled": false,
+      "omni:rtx:pt:limits:maxBounces": 16,
+      "omni:rtx:pt:limits:maxGlossyBounces": 16,
+      "omni:rtx:pt:samplesPerPixel": 512,
+      "omni:rtx:pt:samplesPerIteration": 1,
+      "omni:rtx:pt:adaptiveSampling:enabled": false,
+      "omni:rtx:pt:denoising:enabled": true,
+      "omni:rtx:pt:showLights:enabled": true,
+      "omni:rtx:pt:pixelFilter:filter": "triangle",
+      "omni:rtx:pt:pixelFilter:radius": 1.0,
+      "omni:rtx:post:tonemap:operator": "acesApproximation"
+    },
+    "resolved_mdl": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+    "mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498",
+    "native_hdr_domain": "HdrColor; absolute radiometric calibration unverified",
+    "marlin_imports": false
+  },
+  {
+    "case": {
+      "name": "above_1000_clear",
+      "file": "scenes/above_1000_clear.usda",
+      "view": "above",
+      "condition": "clear",
+      "path_m": 1,
+      "initial": true,
+      "sha256": "8a348f0e1f50f7a7baf5529e40625c6e09a8ca4e724823fad371d22d5236ebea",
+      "capture_timeout_seconds": 90
+    },
+    "gpu_before": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3545,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "gpu_after": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3545,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "elapsed_seconds": 1.3027195400209166,
+    "actual_resolution": [
+      512,
+      384
+    ],
+    "rendered_frame_wait": 64,
+    "configured_samples_per_pixel_limit": 512,
+    "actually_accumulated_samples_measured": false,
+    "hdr": {
+      "format": "TextureFormat.RGBA16_SFLOAT",
+      "width": 512,
+      "height": 384,
+      "bytes": 1572864,
+      "dtype": "float32",
+      "minimum": 0.06561279296875,
+      "maximum": 1.0,
+      "centre_rgb": [
+        0.0685873031616211,
+        0.0685873031616211,
+        0.0685873031616211
+      ]
+    },
+    "camera_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1200.0,
+        300.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_viewport_view_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1200.0,
+        0.0,
+        -300.0,
+        1.0
+      ]
+    ],
+    "actual_product_cameras": [
+      "/World/Camera"
+    ],
+    "actual_product_resolution": [
+      512,
+      384
+    ],
+    "source_scene_sha256": "8a348f0e1f50f7a7baf5529e40625c6e09a8ca4e724823fad371d22d5236ebea",
+    "captured_scene_sha256": "542648962f3e78bfbf4525f5a9adac447799341aaead890cf2fbe6a6720fcc2e",
+    "authored_product_controls": {
+      "omni:rtx:rendermode": "PathTracing",
+      "omni:rtx:fog:enabled": false,
+      "omni:rtx:pt:fireflyFilter:enabled": false,
+      "omni:rtx:rtpt:fireflyFilter:enabled": false,
+      "omni:rtx:pt:limits:maxBounces": 16,
+      "omni:rtx:pt:limits:maxGlossyBounces": 16,
+      "omni:rtx:pt:samplesPerPixel": 512,
+      "omni:rtx:pt:samplesPerIteration": 1,
+      "omni:rtx:pt:adaptiveSampling:enabled": false,
+      "omni:rtx:pt:denoising:enabled": true,
+      "omni:rtx:pt:showLights:enabled": true,
+      "omni:rtx:pt:pixelFilter:filter": "triangle",
+      "omni:rtx:pt:pixelFilter:radius": 1.0,
+      "omni:rtx:post:tonemap:operator": "acesApproximation"
+    },
+    "resolved_mdl": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+    "mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498",
+    "native_hdr_domain": "HdrColor; absolute radiometric calibration unverified",
+    "marlin_imports": false
+  },
+  {
+    "case": {
+      "name": "above_1000_absorption",
+      "file": "scenes/above_1000_absorption.usda",
+      "view": "above",
+      "condition": "absorption",
+      "path_m": 1,
+      "initial": true,
+      "sha256": "75cbf0708e24d2540532b2893c85c99209b95efcc93179207db7c7e37a3959d6",
+      "capture_timeout_seconds": 90
+    },
+    "gpu_before": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3545,
+      "free_mib": 2253,
+      "driver": "595.91.07"
+    },
+    "gpu_after": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3542,
+      "free_mib": 2256,
+      "driver": "595.91.07"
+    },
+    "elapsed_seconds": 1.3209569269965868,
+    "actual_resolution": [
+      512,
+      384
+    ],
+    "rendered_frame_wait": 64,
+    "configured_samples_per_pixel_limit": 512,
+    "actually_accumulated_samples_measured": false,
+    "hdr": {
+      "format": "TextureFormat.RGBA16_SFLOAT",
+      "width": 512,
+      "height": 384,
+      "bytes": 1572864,
+      "dtype": "float32",
+      "minimum": 0.06585693359375,
+      "maximum": 1.0,
+      "centre_rgb": [
+        0.0685889720916748,
+        0.0685889720916748,
+        0.0685889720916748
+      ]
+    },
+    "camera_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1200.0,
+        300.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_viewport_view_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1200.0,
+        0.0,
+        -300.0,
+        1.0
+      ]
+    ],
+    "actual_product_cameras": [
+      "/World/Camera"
+    ],
+    "actual_product_resolution": [
+      512,
+      384
+    ],
+    "source_scene_sha256": "75cbf0708e24d2540532b2893c85c99209b95efcc93179207db7c7e37a3959d6",
+    "captured_scene_sha256": "39059a9ec8aacd234e774b8338093c65eb56cb47a49da6d4bbb9722598f6b34c",
+    "authored_product_controls": {
+      "omni:rtx:rendermode": "PathTracing",
+      "omni:rtx:fog:enabled": false,
+      "omni:rtx:pt:fireflyFilter:enabled": false,
+      "omni:rtx:rtpt:fireflyFilter:enabled": false,
+      "omni:rtx:pt:limits:maxBounces": 16,
+      "omni:rtx:pt:limits:maxGlossyBounces": 16,
+      "omni:rtx:pt:samplesPerPixel": 512,
+      "omni:rtx:pt:samplesPerIteration": 1,
+      "omni:rtx:pt:adaptiveSampling:enabled": false,
+      "omni:rtx:pt:denoising:enabled": true,
+      "omni:rtx:pt:showLights:enabled": true,
+      "omni:rtx:pt:pixelFilter:filter": "triangle",
+      "omni:rtx:pt:pixelFilter:radius": 1.0,
+      "omni:rtx:post:tonemap:operator": "acesApproximation"
+    },
+    "resolved_mdl": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+    "mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498",
+    "native_hdr_domain": "HdrColor; absolute radiometric calibration unverified",
+    "marlin_imports": false
+  },
+  {
+    "case": {
+      "name": "above_1000_engineering",
+      "file": "scenes/above_1000_engineering.usda",
+      "view": "above",
+      "condition": "engineering",
+      "path_m": 1,
+      "initial": true,
+      "sha256": "e02a4be2ffeb21360d8778dfbd102bbd79ba15051079b03f3db776d82ab0f344",
+      "capture_timeout_seconds": 90
+    },
+    "gpu_before": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3542,
+      "free_mib": 2256,
+      "driver": "595.91.07"
+    },
+    "gpu_after": {
+      "name": "NVIDIA RTX A2000",
+      "total_mib": 6138,
+      "used_mib": 3544,
+      "free_mib": 2254,
+      "driver": "595.91.07"
+    },
+    "elapsed_seconds": 1.3252353230200242,
+    "actual_resolution": [
+      512,
+      384
+    ],
+    "rendered_frame_wait": 64,
+    "configured_samples_per_pixel_limit": 512,
+    "actually_accumulated_samples_measured": false,
+    "hdr": {
+      "format": "TextureFormat.RGBA16_SFLOAT",
+      "width": 512,
+      "height": 384,
+      "bytes": 1572864,
+      "dtype": "float32",
+      "minimum": 0.06585693359375,
+      "maximum": 1.0,
+      "centre_rgb": [
+        0.0685884952545166,
+        0.0685884952545166,
+        0.0685884952545166
+      ]
+    },
+    "camera_transform": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1200.0,
+        300.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_viewport_view_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.0
+      ],
+      [
+        -1200.0,
+        0.0,
+        -300.0,
+        1.0
+      ]
+    ],
+    "actual_product_cameras": [
+      "/World/Camera"
+    ],
+    "actual_product_resolution": [
+      512,
+      384
+    ],
+    "source_scene_sha256": "e02a4be2ffeb21360d8778dfbd102bbd79ba15051079b03f3db776d82ab0f344",
+    "captured_scene_sha256": "1a7ec60397fe1876f51904912c12d001d5424851a8a090434b454608fc999aed",
+    "authored_product_controls": {
+      "omni:rtx:rendermode": "PathTracing",
+      "omni:rtx:fog:enabled": false,
+      "omni:rtx:pt:fireflyFilter:enabled": false,
+      "omni:rtx:rtpt:fireflyFilter:enabled": false,
+      "omni:rtx:pt:limits:maxBounces": 16,
+      "omni:rtx:pt:limits:maxGlossyBounces": 16,
+      "omni:rtx:pt:samplesPerPixel": 512,
+      "omni:rtx:pt:samplesPerIteration": 1,
+      "omni:rtx:pt:adaptiveSampling:enabled": false,
+      "omni:rtx:pt:denoising:enabled": true,
+      "omni:rtx:pt:showLights:enabled": true,
+      "omni:rtx:pt:pixelFilter:filter": "triangle",
+      "omni:rtx:pt:pixelFilter:radius": 1.0,
+      "omni:rtx:post:tonemap:operator": "acesApproximation"
+    },
+    "resolved_mdl": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+    "mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498",
+    "native_hdr_domain": "HdrColor; absolute radiometric calibration unverified",
+    "marlin_imports": false
+  }
+]

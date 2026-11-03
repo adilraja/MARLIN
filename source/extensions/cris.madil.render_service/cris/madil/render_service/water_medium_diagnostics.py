@@ -33,9 +33,10 @@ class MediumRequest(BaseModel):
         extra = 'forbid'
 
 
-def setup_medium_viewport(viewport, request):
+def setup_medium_viewport(viewport, request, hide_overlays=True):
     from pxr import UsdRender
-    hide_fixture_overlays(viewport)
+    if hide_overlays:
+        hide_fixture_overlays(viewport)
     # The default product requests LdrColor only. Request HDR explicitly on
     # this isolated product, without adding a renderer or another viewport.
     stage = viewport.stage
@@ -79,7 +80,8 @@ def setup_medium_viewport(viewport, request):
     from pxr import Gf, UsdGeom
     unit = request.meters_per_scene_unit
     UsdGeom.Camera(camera).GetClippingRangeAttr().Set(Gf.Vec2f(.01 / unit, 25 / unit))
-    stage.GetRootLayer().Save()
+    if not stage.GetRootLayer().anonymous:
+        stage.GetRootLayer().Save()
 
 
 async def capture_hdr(viewport, directory):

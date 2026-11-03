@@ -1,0 +1,40 @@
+{
+  "recorded_utc": "2026-11-03T11:14:25.375649+00:00",
+  "status": "GPU_execution_pending_driver_consistency",
+  "host": "madil-CRIS-UL",
+  "loaded_driver": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  595.91.07  Release Build  (dvs-builder@U22-I3-B08-02-2)  Wed Jul 29 03:01:16 UTC 2026\nGCC version:  gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) \n",
+  "gpu_probe": {
+    "returncode": 18,
+    "stdout": "Failed to initialize NVML: Driver/library version mismatch\nNVML library version: 595.99\n",
+    "stderr": ""
+  },
+  "attempts": [
+    {
+      "id": "preparation_attempt01",
+      "stage": "GPU environment query after successful checkpoint",
+      "result": "failed",
+      "error": "subprocess.CalledProcessError: nvidia-smi returned non-zero exit status 18",
+      "render_attempted": false
+    },
+    {
+      "id": "guarded_capture_attempt01",
+      "request": {
+        "selection": "engineering_v1",
+        "phase_seconds": 0,
+        "view": "oblique"
+      },
+      "response": {
+        "ok": false,
+        "error": "Command '['nvidia-smi', '--query-gpu=index,memory.total,memory.free,driver_version', '--format=csv,noheader,nounits']' returned non-zero exit status 18.",
+        "render_attempted": false
+      }
+    }
+  ],
+  "current_free_mib": null,
+  "sampled_peak_used_mib": null,
+  "capture_elapsed_seconds": null,
+  "measured_gpu_sample_count": null,
+  "render_attempted": false,
+  "process_restarted": false,
+  "sampling_or_material_changed": false
+}

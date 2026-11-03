@@ -1,0 +1,318 @@
+{
+  "final_runs": {
+    "baseline_render_09": {
+      "runtime_build": "110.2.0+feature.342835.698af100.gl",
+      "comparison_qualified": true,
+      "initial_inside_optical_checks_passed": false,
+      "tests": [
+        {
+          "view": "above",
+          "path_m": 1,
+          "clear_channel_relative_spread": 0.0,
+          "clear_neutral_passed": true,
+          "absorption_relative_to_clear_rgb": [
+            0.6006831943205073,
+            0.8002015521769605,
+            0.8985623925031598
+          ],
+          "beer_prediction_rgb": [
+            0.6,
+            0.8,
+            0.9
+          ],
+          "absolute_ratio_error_rgb": [
+            0.000683194320507341,
+            0.00020155217696049554,
+            0.0014376074968401875
+          ],
+          "inside_absorption_passed": null,
+          "engineering_blue_red_ratio": 1.4973984712592447,
+          "engineering_chromatic_attenuation_passed": true
+        },
+        {
+          "view": "inside",
+          "path_m": 0.5,
+          "clear_channel_relative_spread": 0.0,
+          "clear_neutral_passed": true,
+          "absorption_relative_to_clear_rgb": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "beer_prediction_rgb": [
+            0.7745966692414834,
+            0.8944271909999159,
+            0.9486832980505138
+          ],
+          "absolute_ratio_error_rgb": [
+            0.2254033307585166,
+            0.10557280900008414,
+            0.05131670194948623
+          ],
+          "inside_absorption_passed": false,
+          "engineering_blue_red_ratio": 1.0,
+          "engineering_chromatic_attenuation_passed": false
+        }
+      ],
+      "means": {
+        "inside_0500_clear": [
+          11336.0,
+          11336.0,
+          11336.0
+        ],
+        "inside_0500_absorption": [
+          11336.0,
+          11336.0,
+          11336.0
+        ],
+        "inside_0500_engineering": [
+          11336.0,
+          11336.0,
+          11336.0
+        ],
+        "above_1000_clear": [
+          11101.34375,
+          11101.34375,
+          11101.34375
+        ],
+        "above_1000_absorption": [
+          6668.390625,
+          8883.3125,
+          9975.25
+        ],
+        "above_1000_engineering": [
+          6555.640625,
+          8721.6875,
+          9816.40625
+        ]
+      },
+      "minimum_pre_capture_free_mib": 2041,
+      "minimum_sampled_free_mib": 2013,
+      "peak_sampled_used_mib": 3785,
+      "process_seconds": 75.38173575900146,
+      "water_mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498"
+    },
+    "candidate_render_03": {
+      "runtime_build": "110.4.1+production.392751.33a8249d.gl",
+      "comparison_qualified": true,
+      "initial_inside_optical_checks_passed": false,
+      "tests": [
+        {
+          "view": "above",
+          "path_m": 1,
+          "clear_channel_relative_spread": 0.0,
+          "clear_neutral_passed": true,
+          "absorption_relative_to_clear_rgb": [
+            0.6007836933236873,
+            0.8003468068156547,
+            0.8987729456903905
+          ],
+          "beer_prediction_rgb": [
+            0.6,
+            0.8,
+            0.9
+          ],
+          "absolute_ratio_error_rgb": [
+            0.0007836933236873289,
+            0.00034680681565468774,
+            0.0012270543096095654
+          ],
+          "inside_absorption_passed": null,
+          "engineering_blue_red_ratio": 1.4975330711476582,
+          "engineering_chromatic_attenuation_passed": true
+        },
+        {
+          "view": "inside",
+          "path_m": 0.5,
+          "clear_channel_relative_spread": 0.0,
+          "clear_neutral_passed": true,
+          "absorption_relative_to_clear_rgb": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "beer_prediction_rgb": [
+            0.7745966692414834,
+            0.8944271909999159,
+            0.9486832980505138
+          ],
+          "absolute_ratio_error_rgb": [
+            0.2254033307585166,
+            0.10557280900008414,
+            0.05131670194948623
+          ],
+          "inside_absorption_passed": false,
+          "engineering_blue_red_ratio": 1.0,
+          "engineering_chromatic_attenuation_passed": false
+        }
+      ],
+      "means": {
+        "inside_0500_clear": [
+          11336.0,
+          11336.0,
+          11336.0
+        ],
+        "inside_0500_absorption": [
+          11336.0,
+          11336.0,
+          11336.0
+        ],
+        "inside_0500_engineering": [
+          11336.0,
+          11336.0,
+          11336.0
+        ],
+        "above_1000_clear": [
+          11101.28125,
+          11101.28125,
+          11101.28125
+        ],
+        "above_1000_absorption": [
+          6669.46875,
+          8884.875,
+          9977.53125
+        ],
+        "above_1000_engineering": [
+          6555.46875,
+          8721.65625,
+          9817.03125
+        ]
+      },
+      "minimum_pre_capture_free_mib": 2037,
+      "minimum_sampled_free_mib": 2034,
+      "peak_sampled_used_mib": 3764,
+      "process_seconds": 50.945772808016045,
+      "water_mdl_sha256": "f69e5d0c80194df2972d29f58635e7c23ada1844c7ed763e089287371fe67498"
+    }
+  },
+  "common_source_hashes": {
+    "capture_in_kit.py": "6cac6c7d71aad51bf6b4dca117e6c614358d0da9ba8aaf8458148637d5c78b79",
+    "standalone.kit": "5cbeee87c55efafbfe635c00fbdd76a6494bdce707aa26388b339b578de4283b",
+    "scene_manifest.json": "f823b295c2b7930c3d8fc17d8c3629312a1a44c17890faca1c5dad178b8cc6a2"
+  },
+  "capture_inventory": [
+    {
+      "run": "baseline_render_01",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 215.5307095659955
+      }
+    },
+    {
+      "run": "baseline_render_02",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 46.7419799240015
+      }
+    },
+    {
+      "run": "baseline_render_03",
+      "captures": 2,
+      "classification": "dry_geometry_camera_control",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 48.738456332997885
+      }
+    },
+    {
+      "run": "baseline_render_04",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 61.10263862501597
+      }
+    },
+    {
+      "run": "baseline_render_05",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 25.658932613005163
+      }
+    },
+    {
+      "run": "baseline_render_06",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 15.986887581006158
+      }
+    },
+    {
+      "run": "baseline_render_07",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 45.038154453999596
+      }
+    },
+    {
+      "run": "baseline_render_08",
+      "captures": 6,
+      "classification": "supporting_positive_control_run",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 45.67743679598789
+      }
+    },
+    {
+      "run": "baseline_render_09",
+      "captures": 6,
+      "classification": "final_matched_comparison",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 75.38173575900146
+      }
+    },
+    {
+      "run": "candidate_render_01",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 136.04568418700364
+      }
+    },
+    {
+      "run": "candidate_render_02",
+      "captures": 6,
+      "classification": "exploratory_unqualified",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 44.47837141199852
+      }
+    },
+    {
+      "run": "candidate_render_03",
+      "captures": 6,
+      "classification": "final_matched_comparison",
+      "exit": {
+        "exit_code": 0,
+        "elapsed_seconds": 50.945772808016045
+      }
+    }
+  ],
+  "total_retained_captures": 68,
+  "final_comparison_captures": 12,
+  "underwater_fix_qualified": false,
+  "distance_sweep_executed": false,
+  "milestone_4_complete": false,
+  "marlin_restoration": {
+    "camera_restored": true,
+    "resolution_restored": true,
+    "fill_frame_restored": true,
+    "renderer_settings_restored": true,
+    "display_options_restored": true,
+    "renderer_setting_count": 73,
+    "procedural_phase": "Reconstructed after the explicitly approved temporary process closure"
+  },
+  "marlin_original_executable_verified": true
+}

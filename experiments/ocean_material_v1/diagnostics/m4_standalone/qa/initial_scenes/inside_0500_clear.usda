@@ -1,0 +1,108 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = .01
+    upAxis = "Y"
+)
+def Xform "World" {
+    def Mesh "Water" (prepend apiSchemas = ["MaterialBindingAPI"]) {
+        uniform token subdivisionScheme = "none"
+        uniform token orientation = "rightHanded"
+        bool doubleSided = false
+        point3f[] points = [(-200, 0, -200), (200, 0, -200), (200, 0, 200), (-200, 0, 200), (-200, -500, -200), (200, -500, -200), (200, -500, 200), (-200, -500, 200)]
+        int[] faceVertexCounts = [4, 4, 4, 4, 4, 4]
+        int[] faceVertexIndices = [0, 3, 2, 1, 1, 2, 6, 5, 2, 3, 7, 6, 3, 0, 4, 7, 0, 1, 5, 4, 4, 5, 6, 7]
+        normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (1, 0, 0), (0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (-1, 0, 0), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, 0, -1), (0, -1, 0), (0, -1, 0), (0, -1, 0), (0, -1, 0)] (interpolation = "faceVarying")
+        rel material:binding = </World/Looks/Water>
+    }
+    def Mesh "Target" (prepend apiSchemas = ["MaterialBindingAPI"]) {
+        uniform token subdivisionScheme = "none"
+        uniform token orientation = "rightHanded"
+        bool doubleSided = false
+        point3f[] points = [(-9, -100.0, -9), (-9, -100.0, 9), (9, -100.0, 9), (9, -100.0, -9)]
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0)] (interpolation = "faceVarying")
+        rel material:binding = </World/Looks/White>
+    }
+    def Mesh "Background" (prepend apiSchemas = ["MaterialBindingAPI"]) {
+        uniform token subdivisionScheme = "none"
+        uniform token orientation = "rightHanded"
+        bool doubleSided = false
+        point3f[] points = [(-190, -180.0, -190), (-190, -180.0, 190), (190, -180.0, 190), (190, -180.0, -190)]
+        int[] faceVertexCounts = [4]
+        int[] faceVertexIndices = [0, 1, 2, 3]
+        normal3f[] normals = [(0, 1, 0), (0, 1, 0), (0, 1, 0), (0, 1, 0)] (interpolation = "faceVarying")
+        rel material:binding = </World/Looks/Black>
+    }
+
+    def Camera "Camera" (
+        prepend apiSchemas = ["OmniRtxCameraAutoExposureAPI_1", "OmniRtxCameraExposureAPI_1"]
+    ) {
+        float focalLength = 35
+        float horizontalAperture = 20.48
+        float verticalAperture = 15.36
+        float2 clippingRange = (1, 2500)
+        float exposure = 0
+        float exposure:time = 1
+        float exposure:fStop = 1
+        float exposure:iso = 100
+        float exposure:responsivity = 1
+        bool omni:rtx:autoExposure:enabled = false
+        matrix4d xformOp:transform = ((1,0,0,0),(0,0,-1,0),(0,1,0,0),(0,-50.0,0,1))
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+    }
+    def DomeLight "Dome" {
+        color3f inputs:color = (.25, .35, .45)
+        float inputs:intensity = 500
+    }
+    def Scope "Looks" {
+        def Material "Water" {
+            token outputs:mdl:surface.connect = </World/Looks/Water/Shader.outputs:out>
+            token outputs:mdl:volume.connect = </World/Looks/Water/Shader.outputs:out>
+            def Shader "Shader" {
+                uniform token info:implementationSource = "sourceAsset"
+                uniform asset info:mdl:sourceAsset = @OmniSurface.mdl@
+                uniform token info:mdl:sourceAsset:subIdentifier = "OmniSurface"
+                float inputs:diffuse_reflection_weight = 0
+                float inputs:metalness = 0
+                float inputs:specular_reflection_weight = 1
+                color3f inputs:specular_reflection_color = (1,1,1)
+                float inputs:specular_reflection_roughness = .001
+                float inputs:specular_reflection_ior = 1.333
+                bool inputs:enable_specular_transmission = true
+                float inputs:specular_transmission_weight = 1
+                color3f inputs:specular_transmission_color = (1, 1, 1)
+                float inputs:specular_transmission_scattering_depth = 100
+                color3f inputs:specular_transmission_scattering_color = (0, 0, 0)
+                float inputs:specular_transmission_scatter_anisotropy = 0
+                bool inputs:thin_walled = false
+                token outputs:out
+            }
+        }
+        def Material "White" {
+            token outputs:surface.connect = </World/Looks/White/Shader.outputs:surface>
+            def Shader "Shader" {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:specularColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (10, 10, 10)
+                int inputs:useSpecularWorkflow = 1
+                float inputs:roughness = 1
+                token outputs:surface
+            }
+        }
+        def Material "Black" {
+            token outputs:surface.connect = </World/Looks/Black/Shader.outputs:surface>
+            def Shader "Shader" {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0, 0, 0)
+                color3f inputs:specularColor = (0, 0, 0)
+                color3f inputs:emissiveColor = (0, 0, 0)
+                int inputs:useSpecularWorkflow = 1
+                float inputs:roughness = 1
+                token outputs:surface
+            }
+        }
+    }
+}

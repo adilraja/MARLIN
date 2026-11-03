@@ -1,0 +1,39 @@
+{
+  "previous_failure_log": "qa/resource_and_failure_log.json",
+  "driver_mismatch_resolved": true,
+  "host_reboot_performed_by": "user",
+  "checkpointed_kit_restarts": 2,
+  "attempts": [
+    {
+      "attempt": "01",
+      "sampled_peak_used_mib": 2290,
+      "sampled_minimum_free_mib": 3508,
+      "sample_count": 79,
+      "sample_scope": "Startup through audit completion; approximately one sample per second, not exact allocation peak",
+      "result": "startup_frame_timeout",
+      "qualification": "No accepted capture"
+    },
+    {
+      "attempt": "02",
+      "sampled_peak_used_mib": 2952,
+      "sampled_minimum_free_mib": 2846,
+      "sample_count": 61,
+      "sample_scope": "Startup through audit completion; approximately one sample per second, not exact allocation peak",
+      "result": "completed",
+      "qualification": "Native PNG clipped; mode token lookup corrected later"
+    },
+    {
+      "attempt": "03",
+      "sampled_peak_used_mib": 3025,
+      "sampled_minimum_free_mib": 2774,
+      "sample_count": 67,
+      "sample_scope": "Startup through audit completion; approximately one sample per second, not exact allocation peak",
+      "result": "completed",
+      "qualification": "Qualified HDR plus fixed visible display"
+    }
+  ],
+  "final_gpu": "NVIDIA RTX A2000, 6138, 2822, 2976, 595.99.02\n",
+  "scientific_water_calibrated": false,
+  "permanent_memory_fix_claimed": false,
+  "native_ldr_png_qualified": false
+}
