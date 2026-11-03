@@ -1,0 +1,46 @@
+{
+  "up_axis": "Y",
+  "meters_per_unit": 0.01,
+  "current_existing_ocean_size_units": 16000,
+  "resolution": 128,
+  "top_vertices": 16641,
+  "top_quad_faces": 16384,
+  "closed_vertices": 17154,
+  "closed_quad_faces": 17408,
+  "bottom_depth_m": 20,
+  "horizontal_derivative_bound": 0.3856116377333708,
+  "requirements": [
+    "Use the existing grid, wave equations, sampler and translation-only ocean transform",
+    "Consistently oriented closed side/bottom medium boundary; original top points and sampler retained",
+    "Select original before changing ocean geometry/unit convention"
+  ],
+  "configuration": {
+    "version": 1,
+    "preset": "engineering_v1",
+    "resolution": 128,
+    "bottom_y_units": -2000.0,
+    "bottom_depth_m": 20,
+    "metres_per_unit": 0.01,
+    "horizontal_derivative_bound": 0.3856116377333708,
+    "restart_signature": {
+      "size": 16000.0,
+      "resolution": 128,
+      "wave_height": 40.0,
+      "wave_length": 650.0,
+      "choppiness": 0.55,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "original_double_sided": true,
+    "original_binding_targets": [
+      "/World/Looks/OceanWater"
+    ],
+    "original_binding_strength": null,
+    "renderer_before": [],
+    "global_before": {},
+    "configure_renderer": false
+  }
+}

@@ -1,0 +1,236 @@
+[
+  {
+    "module": "camera_math",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_camera_math.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_accelerated_motion_respects_acceleration_and_no_overshoot (test_camera_math.CameraMathTests.test_accelerated_motion_respects_acceleration_and_no_overshoot) ... ok\ntest_chase_camera_normalizes_horizontal_forward (test_camera_math.CameraMathTests.test_chase_camera_normalizes_horizontal_forward) ... ok\ntest_chase_camera_sits_behind_heading_zero (test_camera_math.CameraMathTests.test_chase_camera_sits_behind_heading_zero) ... ok\ntest_damp_point_moves_toward_target (test_camera_math.CameraMathTests.test_damp_point_moves_toward_target) ... ok\ntest_damping_is_frame_rate_independent (test_camera_math.CameraMathTests.test_damping_is_frame_rate_independent) ... ok\ntest_documentary_camera_holds_then_delays (test_camera_math.CameraMathTests.test_documentary_camera_holds_then_delays) ... ok\ntest_documentary_camera_runs_full_state_cycle (test_camera_math.CameraMathTests.test_documentary_camera_runs_full_state_cycle) ... ok\ntest_horizontal_error_ignores_wave_height (test_camera_math.CameraMathTests.test_horizontal_error_ignores_wave_height) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "module": "calibration_geometry",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_calibration_geometry.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_authored_usd_projection_in_both_unit_conventions (test_calibration_geometry.CalibrationTests.test_authored_usd_projection_in_both_unit_conventions) ... skipped 'Requires pxr; run in Blender'\ntest_expected_projection (test_calibration_geometry.CalibrationTests.test_expected_projection) ... ok\ntest_missing_invalid_and_cropped_inputs (test_calibration_geometry.CalibrationTests.test_missing_invalid_and_cropped_inputs) ... ok\ntest_oblique_authored_camera_matches_independent_projection (test_calibration_geometry.CalibrationTests.test_oblique_authored_camera_matches_independent_projection) ... skipped 'Requires pxr; run in Blender'\ntest_oblique_ray_projection_and_gsd (test_calibration_geometry.CalibrationTests.test_oblique_ray_projection_and_gsd) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK (skipped=2)\n"
+  },
+  {
+    "module": "hidef_camera",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_hidef_camera.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_nominal_not_actual_oblique_gsd (test_hidef_camera.HiDefTests.test_nominal_not_actual_oblique_gsd) ... ok\ntest_pose_is_cross_track_tilt_not_optical_roll (test_hidef_camera.HiDefTests.test_pose_is_cross_track_tilt_not_optical_roll) ... ok\ntest_preview_preserves_footprint_not_sampling (test_hidef_camera.HiDefTests.test_preview_preserves_footprint_not_sampling) ... ok\ntest_projection_roundtrip (test_hidef_camera.HiDefTests.test_projection_roundtrip) ... ok\ntest_provenance_and_native_sensitivity (test_hidef_camera.HiDefTests.test_provenance_and_native_sensitivity) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.004s\n\nOK\n"
+  },
+  {
+    "module": "camera_evidence",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_camera_evidence.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_independent_consistency_calculations (test_camera_evidence.CameraEvidenceTests.test_independent_consistency_calculations) ... ok\ntest_paper_nominal_and_provenance_categories (test_camera_evidence.CameraEvidenceTests.test_paper_nominal_and_provenance_categories) ... ok\ntest_paper_review_distinguishes_pitch_from_yaw_inference (test_camera_evidence.CameraEvidenceTests.test_paper_review_distinguishes_pitch_from_yaw_inference) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "module": "renderer_snapshot",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_renderer_snapshot.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_legacy_replay_verifies_saved_subset_and_reports_omissions (test_renderer_snapshot.RendererSnapshotTests.test_legacy_replay_verifies_saved_subset_and_reports_omissions) ... ok\ntest_preservation_check_stays_strict_for_current_keysets_and_types (test_renderer_snapshot.RendererSnapshotTests.test_preservation_check_stays_strict_for_current_keysets_and_types) ... ok\ntest_replay_of_replay_retains_original_uncertainty (test_renderer_snapshot.RendererSnapshotTests.test_replay_of_replay_retains_original_uncertainty) ... ok\ntest_roundtrip_restores_vectors_false_zero_and_absent_options (test_renderer_snapshot.RendererSnapshotTests.test_roundtrip_restores_vectors_false_zero_and_absent_options) ... ok\ntest_sampling_color_and_effect_settings_are_recorded_without_defaults (test_renderer_snapshot.RendererSnapshotTests.test_sampling_color_and_effect_settings_are_recorded_without_defaults) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.006s\n\nOK\n"
+  },
+  {
+    "module": "cetacean_motion",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_cetacean_motion.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_every_gallery_species_has_a_motion_profile (test_cetacean_motion.CetaceanMotionTests.test_every_gallery_species_has_a_motion_profile) ... ok\ntest_forward_heading_accounts_for_opposite_tail_ends (test_cetacean_motion.CetaceanMotionTests.test_forward_heading_accounts_for_opposite_tail_ends) ... ok\ntest_forward_heading_handles_horizontal_x_aligned_assets (test_cetacean_motion.CetaceanMotionTests.test_forward_heading_handles_horizontal_x_aligned_assets) ... ok\ntest_only_rigged_digital_life_asset_uses_skeletal_backend (test_cetacean_motion.CetaceanMotionTests.test_only_rigged_digital_life_asset_uses_skeletal_backend) ... ok\ntest_torso_stays_rigid_and_tail_reaches_full_envelope (test_cetacean_motion.CetaceanMotionTests.test_torso_stays_rigid_and_tail_reaches_full_envelope) ... ok\ntest_wave_is_dorsoventral_and_periodic (test_cetacean_motion.CetaceanMotionTests.test_wave_is_dorsoventral_and_periodic) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "module": "movement",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_movement.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_move_toward_does_not_overshoot (test_movement.MovementTests.test_move_toward_does_not_overshoot) ... ok\ntest_move_toward_treats_negative_delta_as_zero (test_movement.MovementTests.test_move_toward_treats_negative_delta_as_zero) ... ok\ntest_natural_attitude_clamps_turn_bank (test_movement.MovementTests.test_natural_attitude_clamps_turn_bank) ... ok\ntest_natural_attitude_pitches_into_vertical_motion (test_movement.MovementTests.test_natural_attitude_pitches_into_vertical_motion) ... ok\ntest_normalize_heading_wraps_both_directions (test_movement.MovementTests.test_normalize_heading_wraps_both_directions) ... ok\ntest_turn_toward_stops_at_target (test_movement.MovementTests.test_turn_toward_stops_at_target) ... ok\ntest_turn_toward_uses_shortest_path_across_zero (test_movement.MovementTests.test_turn_toward_uses_shortest_path_across_zero) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "module": "baked_animation",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_baked_animation.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_authored_cycle_contains_full_rig_and_frame_range (test_baked_animation.BakedDolphinAnimationTests.test_authored_cycle_contains_full_rig_and_frame_range) ... ok\ntest_tail_joints_change_during_cycle (test_baked_animation.BakedDolphinAnimationTests.test_tail_joints_change_during_cycle) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.002s\n\nOK\n"
+  },
+  {
+    "module": "cetacean_gallery",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_cetacean_gallery.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_every_gallery_usd_exists (test_cetacean_gallery.CetaceanGalleryTests.test_every_gallery_usd_exists) ... ok\ntest_gallery_contains_every_converted_model (test_cetacean_gallery.CetaceanGalleryTests.test_gallery_contains_every_converted_model) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.005s\n\nOK\n"
+  },
+  {
+    "module": "ocean_enclosure",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_ocean_enclosure.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_closed_boundary_at_small_and_production_resolutions (test_ocean_enclosure.EnclosureTests.test_closed_boundary_at_small_and_production_resolutions) ... ok\ntest_orientation_validator_rejected_reversed_bottom (test_ocean_enclosure.EnclosureTests.test_orientation_validator_rejected_reversed_bottom) ... ok\ntest_skirt_shared_surface_indices_and_vertical_projection (test_ocean_enclosure.EnclosureTests.test_skirt_shared_surface_indices_and_vertical_projection) ... ok\ntest_surface_and_corner_normals_were_copied_without_change (test_ocean_enclosure.EnclosureTests.test_surface_and_corner_normals_were_copied_without_change) ... ok\ntest_unsafe_or_malformed_geometry_was_rejected (test_ocean_enclosure.EnclosureTests.test_unsafe_or_malformed_geometry_was_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.138s\n\nOK\n"
+  },
+  {
+    "module": "water_material",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_water_material.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_absorption_and_scattering_are_authored (test_water_material.WaterMaterialTests.test_absorption_and_scattering_are_authored) ... ok\ntest_defaults_author_physical_water_transmission (test_water_material.WaterMaterialTests.test_defaults_author_physical_water_transmission) ... ok\ntest_thin_walled_remains_configurable_for_open_surface (test_water_material.WaterMaterialTests.test_thin_walled_remains_configurable_for_open_surface) ... ok\ntest_validation_settings_prevent_zero_bounce_refraction (test_water_material.WaterMaterialTests.test_validation_settings_prevent_zero_bounce_refraction) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+  },
+  {
+    "module": "underwater_cue",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_underwater_cue.py",
+      "-v"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "test_underwater_cue (unittest.loader._FailedTest.test_underwater_cue) ... ERROR\n\n======================================================================\nERROR: test_underwater_cue (unittest.loader._FailedTest.test_underwater_cue)\n----------------------------------------------------------------------\nImportError: Failed to import test module: test_underwater_cue\nTraceback (most recent call last):\n  File \"/usr/lib/python3.14/unittest/loader.py\", line 426, in _find_test_path\n    module = self._get_module_from_name(name)\n  File \"/usr/lib/python3.14/unittest/loader.py\", line 367, in _get_module_from_name\n    __import__(name)\n    ~~~~~~~~~~^^^^^^\n  File \"/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_underwater_cue.py\", line 3, in <module>\n    from underwater_cue import (\n    ...<5 lines>...\n    )\nModuleNotFoundError: No module named 'underwater_cue'\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nFAILED (errors=1)\n"
+  },
+  {
+    "module": "gentle_environment",
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "/home/madil/kit-app-template/source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+      "-p",
+      "test_gentle_environment.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_gentle_waves_and_diffuse_sky (test_gentle_environment.GentleEnvironmentTests.test_gentle_waves_and_diffuse_sky) ... ok\ntest_no_actor_camera_or_exposure_control (test_gentle_environment.GentleEnvironmentTests.test_no_actor_camera_or_exposure_control) ... ok\ntest_phase_reset_and_stage_guard_documented (test_gentle_environment.GentleEnvironmentTests.test_phase_reset_and_stage_guard_documented) ... ok\ntest_restore_scope_excludes_animals (test_gentle_environment.GentleEnvironmentTests.test_restore_scope_excludes_animals) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n"
+  }
+]

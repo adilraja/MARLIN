@@ -1,0 +1,22 @@
+[
+  {
+    "pid": 804677,
+    "argv": [
+      "zenity",
+      "--no-wrap",
+      "--no-markup",
+      "--title",
+      "IOMMU Enabled",
+      "--text",
+      "An input-output memory management unit (IOMMU) appears to be enabled on this system.\nOn bare-metal Linux systems, CUDA and the display driver do not support IOMMU-enabled PCIe peer to peer memory copy.\nIf you are on a bare-metal Linux system, please disable the IOMMU. Otherwise you risk image corruption and program instability.\nThis typically can be controlled via BIOS settings (Intel Virtualization Technology for Directed I/O (VT-d) or AMD I/O Virtualization Technology (AMD-Vi)) and kernel parameters (iommu, intel_iommu, amd_iommu).\nOn aarch64, iommu.passthrough=0 can be used to disable the IOMMU passthrough. On Linux kernel >= 6.11, the IOMMU settings are ignored. For ARM datacenter systems please refer to https://docs.nvidia.com/dccpu/generic-linux-install-guide/appendix-b.html\nNote that in virtual machines with GPU pass-through (vGPU) the IOMMU needs to be enabled.\nSince we can not reliably detect whether this system is bare-metal or a virtual machine, we show this warning in any case when an IOMMU appears to be enabled.",
+      "--icon-name",
+      "dialog-warning",
+      "--info"
+    ],
+    "ancestors": [
+      804676,
+      804446
+    ],
+    "action": "Dismiss owned informational notice only; no IOMMU/host/render setting changed"
+  }
+]

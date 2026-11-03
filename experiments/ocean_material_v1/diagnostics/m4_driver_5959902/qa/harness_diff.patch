@@ -1,0 +1,11 @@
+--- experiments/ocean_material_v1/diagnostics/m4_standalone/capture_in_kit.py
++++ experiments/ocean_material_v1/diagnostics/m4_driver_5959902/qa/capture_in_kit.py
+@@ -173,7 +173,7 @@
+             'source_scene_sha256':case['sha256'],'captured_scene_sha256':hashlib.sha256((folder/'captured_scene.usdc').read_bytes()).hexdigest(),
+             'authored_product_controls':authored,'resolved_mdl':resolved,
+             'persistent_stage_source_values_checked':True,'changed_source_attributes':changed,
+-            'mdl_sha256':hashlib.sha256(Path(resolved).read_bytes()).hexdigest() if resolved and Path(resolved).is_file() else None,
++            'mdl_sha256':None,  # Generated/runtime vendor files are not inspected for this retest.
+             'native_hdr_domain':'HdrColor; absolute radiometric calibration unverified','marlin_imports':False}
+     write(folder/'metadata.json',record)
+     return record

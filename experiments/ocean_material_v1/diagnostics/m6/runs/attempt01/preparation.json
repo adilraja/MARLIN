@@ -1,0 +1,266 @@
+{
+  "initial_animal": {
+    "identity_sha256": "0a49e81994e9778bb6a926cc16e42303d7414a9dc7b7471ceff87161784b2c58",
+    "world_bounds_min": [
+      -40.812936425209045,
+      -53.011301281761035,
+      -184.0379319281337
+    ],
+    "world_bounds_max": [
+      41.85645282268524,
+      30.70139186415267,
+      74.60812320902583
+    ],
+    "root_xform_ops": {
+      "xformOp:rotateXYZ": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xformOp:scale": [
+        100.0,
+        100.0,
+        100.0
+      ],
+      "xformOp:translate": [
+        0.0,
+        -20.0,
+        0.0
+      ],
+      "xformOpOrder": [
+        "xformOp:translate",
+        "xformOp:rotateXYZ",
+        "xformOp:scale"
+      ]
+    }
+  },
+  "world_units_m": 0.01,
+  "frozen_sampled_attributes": 0,
+  "ocean_phase_seconds": 0,
+  "frozen_ocean_y_range_units": [
+    -39.59845733642578,
+    39.61088180541992
+  ],
+  "centre_surface_height_units": 5.19886545242916,
+  "pose_y_shifts_units": {
+    "above": 117.62218690187822,
+    "intersecting": 16.353820161233344,
+    "below": -95.29984920057845
+  },
+  "camera_framing_trials": [
+    {
+      "height_m": 6.466151378428988,
+      "boxes": {
+        "above": [
+          200.12905143807507,
+          -17.078899450727363,
+          311.87094856192493,
+          262.7602705360305
+        ],
+        "intersecting": [
+          206.10796456207325,
+          65.0336527465443,
+          305.8920354379268,
+          327.9880556092367
+        ],
+        "below": [
+          211.37334470224386,
+          140.4482012211042,
+          300.62665529775614,
+          386.49271568384637
+        ]
+      }
+    },
+    {
+      "height_m": 7.436074085193336,
+      "boxes": {
+        "above": [
+          209.26913609952635,
+          11.076782005213033,
+          302.73086390047365,
+          252.07014579904302
+        ],
+        "intersecting": [
+          213.52637582279607,
+          80.82841211634361,
+          298.47362417720393,
+          309.1841733649064
+        ],
+        "below": [
+          217.40318933101108,
+          146.36414840732408,
+          294.5968106689889,
+          361.8965563733984
+        ]
+      }
+    },
+    {
+      "height_m": 8.551485197972335,
+      "boxes": {
+        "above": [
+          216.66861668767837,
+          35.33822950500393,
+          295.33138331232163,
+          243.17856057596694
+        ],
+        "intersecting": [
+          219.7285315013566,
+          94.74223621548015,
+          292.2714684986434,
+          293.1064848454755
+        ],
+        "below": [
+          222.59398874493786,
+          151.68460846286317,
+          289.40601125506214,
+          340.3252309534152
+        ]
+      }
+    }
+  ],
+  "camera_config": {
+    "schema_version": "1.1.0",
+    "test_kind": "engineering_oblique_planar_targets",
+    "scientific_camera_calibrated": false,
+    "config": {
+      "meters_per_scene_unit": 0.01,
+      "image_width_px": 512,
+      "image_height_px": 384,
+      "focal_length_mm": 35,
+      "pixel_pitch_um": 40,
+      "height_above_target_m": 8.551485197972335,
+      "target_width_m": 1.2932302756857976,
+      "target_height_m": 1.2932302756857976,
+      "target_plane_y_m": 0,
+      "pitch_deg": 40,
+      "roll_deg": 0
+    },
+    "gsd_cm_px": 0.9773125940539812,
+    "gsd_note": "Reference nadir GSD at vertical height; use per-target directional GSD for oblique geometry.",
+    "expected_bbox_xywh_px": [
+      203.3564635815076,
+      154.56791136632586,
+      105.28707283698478,
+      77.75937717319175
+    ],
+    "targets": [
+      {
+        "id": "Target_00",
+        "center_world_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sample_image_px": [
+          256.0,
+          192.0
+        ],
+        "corners_world_m": [
+          [
+            -0.6466151378428988,
+            0.0,
+            -0.6466151378428988
+          ],
+          [
+            -0.6466151378428988,
+            0.0,
+            0.6466151378428988
+          ],
+          [
+            0.6466151378428988,
+            0.0,
+            0.6466151378428988
+          ],
+          [
+            0.6466151378428988,
+            0.0,
+            -0.6466151378428988
+          ]
+        ],
+        "expected_polygon_px": [
+          [
+            207.1358786426698,
+            154.56791136632586
+          ],
+          [
+            203.3564635815076,
+            232.3272885395176
+          ],
+          [
+            308.6435364184924,
+            232.3272885395176
+          ],
+          [
+            304.8641213573302,
+            154.56791136632586
+          ]
+        ],
+        "expected_bbox_xywh_px": [
+          203.3564635815076,
+          154.56791136632586,
+          105.28707283698478,
+          77.75937717319175
+        ],
+        "local_gsd_xy_cm_px": [
+          1.2757909842343051,
+          1.665427233376171
+        ]
+      }
+    ],
+    "intrinsics_px": {
+      "fx": 875.0,
+      "fy": 875.0,
+      "cx": 256.0,
+      "cy": 192.0
+    },
+    "projection": "ideal perspective, square pixels, zero distortion, no aperture offset",
+    "image_coordinates": "top-left edge origin; pixel centers at (column+0.5,row+0.5)",
+    "camera_position_m": [
+      0,
+      8.551485197972335,
+      7.175548075636555
+    ],
+    "world_up": "Y",
+    "camera_basis_right_up_forward": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.6427876096865393,
+        -0.766044443118978
+      ],
+      [
+        0,
+        -0.766044443118978,
+        -0.6427876096865393
+      ]
+    ],
+    "pose_convention": "Engineering only: pitch tilts optical axis toward world -Z from nadir; positive roll rotates camera right toward unrolled up. Not PI HiDef convention.",
+    "seed": 0,
+    "randomisation": "none; deterministic geometry, RGB not guaranteed bitwise deterministic"
+  },
+  "camera_physical_far_m": 34.20594079188934,
+  "dependencies": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+      "authored_path": "OmniSurface.mdl",
+      "sha256": null,
+      "status": "runtime_or_unresolved"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "status": "local_hashed"
+    }
+  ]
+}

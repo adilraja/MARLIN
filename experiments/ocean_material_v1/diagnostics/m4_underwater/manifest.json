@@ -1,0 +1,1226 @@
+{
+  "kind": "ocean_material_m4_underwater_camera_followup",
+  "recorded_at_utc": "2026-10-30T12:15:00.476943+00:00",
+  "base_commit": "9346a0244ef358c90c9579da660b11a7e7f83850",
+  "status": "native_material_probes_and_flat_enclosure_reproduced_unresolved_inside_medium_attenuation",
+  "camera_inside_attenuation_resolved": false,
+  "full_milestone_complete": false,
+  "successful_capture_requests": 15,
+  "inside_views": 12,
+  "above_water_controls": 3,
+  "minimum_observed_pre_request_free_mib": 891,
+  "gpu_guard_mib": 768,
+  "controlled_restarts_this_followup": 1,
+  "production_water_preset_changed": false,
+  "original_scene_and_settings_restored": true,
+  "previous_pinned_evidence_files_unchanged": 1286,
+  "report": "experiments/ocean_material_v1/reports/M4_UNDERWATER_CAMERA_FOLLOWUP.md",
+  "support_draft": "NVIDIA_SUPPORT_CASE.md",
+  "support_draft_sent": false,
+  "source_patch": "qa/followup_source_changes.patch",
+  "source_provenance": "qa/source_provenance.json",
+  "source_pins": [
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py",
+      "bytes": 34467,
+      "sha256": "3e8cc37bbd0cc93c7eade03386cf7442fdb98288ca1b742710c4873e9d37d940"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py",
+      "bytes": 10376,
+      "sha256": "ffb12b170423064f7e7c00a5865e34aac16fb16389098a01b331bcf57267f8e1"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py",
+      "bytes": 6771,
+      "sha256": "d02aff09cdc034e45bc7d490b0a1e2f748679a0647b060f60bbe0c889942ff00"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py",
+      "bytes": 11755,
+      "sha256": "007c5fe418c588a18afcfa295dd2b28692e6f1e1f0c33f4984b819ff19fb18a0"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_enclosure.py",
+      "bytes": 4550,
+      "sha256": "9c13039340ef06377ca1102087872ae3963a0bc5dd6befe69edf30fc0581b410"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium.py",
+      "bytes": 12728,
+      "sha256": "fd256dac19b0a2b4b908391e6690103d7b11d63df6d7853985c15281afeed25f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py",
+      "bytes": 25162,
+      "sha256": "1154e43349f69890e622301c2e8053baca9b3fe48417a63b1e085e670d206986"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_ocean_enclosure.py",
+      "bytes": 2181,
+      "sha256": "446e95bf9499991da9f61e0fb5782f4efba22656c057dec0a00e368ae1d713d6"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/ocean_medium_engineering_v1.json",
+      "bytes": 2947,
+      "sha256": "02cea7a20707222dd01134716b933b2838fb8e2546c9d28029557e2a1a458d0a"
+    }
+  ],
+  "files": [
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/.gitattributes",
+      "bytes": 45,
+      "sha256": "59f890c72d7046da920aff21c0fabdce0ea9e42999ea2642cd5a3f19575b3038"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/.gitignore",
+      "bytes": 72,
+      "sha256": "4c389a265710624bf30cd32f5c63cb4158cabf9a166fd7aa45a8bfd4d3e3d5be"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/NVIDIA_SUPPORT_CASE.md",
+      "bytes": 3801,
+      "sha256": "7f1020ce3c5c4fc8d19c9640a9ecc94fb768888d743350a3f01680daa82d5bdc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/PLAN.md",
+      "bytes": 1837,
+      "sha256": "dc261c77fe4bf5d834609f71c915d3d9dad2a762ebabfe881ae75a5a8e009a10"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/README.md",
+      "bytes": 2716,
+      "sha256": "863a0552cef6873ba5a843ff0e47ce7d6b8ad747e7e738fc7324721796cb1c2f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/bound_material.json",
+      "bytes": 2951,
+      "sha256": "7b8b2641ab8687ca6a0bb0372d7f79d7c26c1836714a4130fbe1812460e3c628"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "0c6af0e074934f5b27bdc455e79542292813c6ca50729f0b6d01d425f08e4511"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/hdr.exr",
+      "bytes": 13253,
+      "sha256": "4760b77f3d1c8fdc0bdb46ff7857dd6abe4a3cde25c44cdc94a8ad53e8cc39e3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/hdr.npz",
+      "bytes": 8698,
+      "sha256": "4a0ba07d63222576edfb1ab8a2d5736f25d7f237e0ab0fa994771e148d06dd69"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/metadata.json",
+      "bytes": 6807,
+      "sha256": "ea6969284fb36c768e2a0a161ab95ccdae51041e080e91b63b43dd3e67ac794f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/rgb.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/scene.usdc",
+      "bytes": 4058310,
+      "sha256": "26a235c72a50ffad60a11fad1b8748042c94da2c23bbce41055b97507cf5be4d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_133t5ycr/warmup.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/bound_material.json",
+      "bytes": 2950,
+      "sha256": "9b0327992c106d9f20353a3ee6c1404a5434dfe6bcfd600bfc5e5307b1e2cd99"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/effective_settings.json",
+      "bytes": 51344,
+      "sha256": "9674c3f350122aadf0e330c9e84ffdeb9fe50591eacefb8763f7bc0e3bbb8ef9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/hdr.exr",
+      "bytes": 12832,
+      "sha256": "9f1bd3b29ade862069393c60ad93e9040b4170b9e425363752f997d23b5e7f70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/hdr.npz",
+      "bytes": 9507,
+      "sha256": "8de38ce9a240407d81ff8d4ac6418100a5b00a57c8a560913080d39b772d6a11"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/metadata.json",
+      "bytes": 6844,
+      "sha256": "81f75fa4ab0dfa040a5dda863f2105237e227e787b3235e4095ac2c5d2692cd2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/scene.usdc",
+      "bytes": 5097922,
+      "sha256": "a1f56a3c761c50d8599843bfabe923a38749e60359cb211da0c9631641094a37"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_48717lm0/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "03d5cc301f69aa37c3cc03920e2bb116adb96bb50a4b4dbba31e2993bd2df77c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/hdr.exr",
+      "bytes": 12832,
+      "sha256": "cd534ae633710d0c66b07d783138f47ed3083db96b3ce65a6a6f5b303ae7c8f0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/hdr.npz",
+      "bytes": 9507,
+      "sha256": "8de38ce9a240407d81ff8d4ac6418100a5b00a57c8a560913080d39b772d6a11"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/metadata.json",
+      "bytes": 6837,
+      "sha256": "4161390b7b2d8b17a6bbdbf75222f1648a6d42d35d552cb76a695e17cd2ebd14"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/scene.usdc",
+      "bytes": 5097900,
+      "sha256": "fb237b05ba3f90b0542240f7f1c2a63c2672c71b2c7bb729f85bfc4770750df0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_94mj0dkk/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "03d5cc301f69aa37c3cc03920e2bb116adb96bb50a4b4dbba31e2993bd2df77c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/hdr.exr",
+      "bytes": 13219,
+      "sha256": "77fdd3aea09eead5933e6908fa334e675d5f83afee924086f775b4d48f5ca019"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/hdr.npz",
+      "bytes": 8627,
+      "sha256": "4c7ec68b71978b73fbe2e62f3df60daf551caf234861cfe4a5801ae15079cfb7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/metadata.json",
+      "bytes": 6846,
+      "sha256": "d573e6dddec977b422b719a5e7f58ac2fc6eb2df9145770d2adefeaefcacedba"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/scene.usdc",
+      "bytes": 5097941,
+      "sha256": "5496d49c79812296338b2e4ec086c075854364332662489fc3aa372ecd636cfa"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_cjhn92di/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/bound_material.json",
+      "bytes": 2951,
+      "sha256": "7b8b2641ab8687ca6a0bb0372d7f79d7c26c1836714a4130fbe1812460e3c628"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/effective_settings.json",
+      "bytes": 51347,
+      "sha256": "ddcdc835b17b887841563a7f4270b2e30c36e34fa77a11155ed4be0bd82baa32"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/hdr.exr",
+      "bytes": 13213,
+      "sha256": "412791d54e5cd834e1233f2318e6a406d7023596feea8fee5af719d9cd36afa2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/hdr.npz",
+      "bytes": 8629,
+      "sha256": "4a0ad0f49b7b54568d407ad834620e88b71424e5cb9a3908218e2ecd3343c5af"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/metadata.json",
+      "bytes": 6816,
+      "sha256": "6af8735aed89664855a6af190dff0732c58f253b3659ee0a0d05dfc2064640de"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/scene.usdc",
+      "bytes": 4058349,
+      "sha256": "ced19ac5000525808b8385267b0e6330fe9ce61d69b60102d0f8705bbf30b5ef"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_hpalzjlf/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/effective_settings.json",
+      "bytes": 51344,
+      "sha256": "2d27e7760c2431a93582b53d1f71a97efcfdfc0487fb60437181cda5b0e6a197"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/hdr.exr",
+      "bytes": 12832,
+      "sha256": "bc267d03c5b47da0d86bd66dbd8d0c28615619b8db0b9a86abf600de3436b0a7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/hdr.npz",
+      "bytes": 9507,
+      "sha256": "8de38ce9a240407d81ff8d4ac6418100a5b00a57c8a560913080d39b772d6a11"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/metadata.json",
+      "bytes": 6843,
+      "sha256": "c7bafcff735895ac8714eea26ab154f035f8761d96c3ffe4d531de7fd0cc19c9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/scene.usdc",
+      "bytes": 5097925,
+      "sha256": "ca0470d500711450007116b93fecb7b4734e804362b7f47f899f7b6fad3ab249"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_j8el3n1u/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/bound_material.json",
+      "bytes": 2936,
+      "sha256": "28c08a5e3744e8d4739dd7417379a3b487f4dae67e92d3512da465f355d69939"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "0c6af0e074934f5b27bdc455e79542292813c6ca50729f0b6d01d425f08e4511"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/hdr.exr",
+      "bytes": 12876,
+      "sha256": "71cc31605ac6d6fbce80161fdf203ee39e2a7a860d88c88bcef274aaa339b335"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/hdr.npz",
+      "bytes": 9518,
+      "sha256": "36c9c01d1344a4099d9e39f9b76221e35538526ba43818c9bef1ab62b68c40c2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/metadata.json",
+      "bytes": 6813,
+      "sha256": "c8102bce8f653f5c93afd3b4327edcf7d731c1ceae3d6bd462ae6ce16a1bae11"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/rgb.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/scene.usdc",
+      "bytes": 4058276,
+      "sha256": "181bd2194973ba8d2c282c3aa2905e1f956c9d85a486e17b1d787abb3bb59cfb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_jtlb1lf0/warmup.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/effective_settings.json",
+      "bytes": 51344,
+      "sha256": "2d27e7760c2431a93582b53d1f71a97efcfdfc0487fb60437181cda5b0e6a197"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/hdr.exr",
+      "bytes": 12832,
+      "sha256": "7138d8defdb70e639387e63d496a6996ad2afb4a393b4e579fba2bd1887adc68"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/hdr.npz",
+      "bytes": 9507,
+      "sha256": "8de38ce9a240407d81ff8d4ac6418100a5b00a57c8a560913080d39b772d6a11"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/metadata.json",
+      "bytes": 6857,
+      "sha256": "d2f5fb8eae21d3ff5221bd4adda63ac6c59c376336c719ad721ca0031906a763"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/scene.usdc",
+      "bytes": 5097971,
+      "sha256": "909f94d7de3520aacf80f2909b6b61e3b4e0b9b03d801b1d86f48a2668c55f09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_pjnkl51j/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "6fad073e8e3cff0e5d3cc5550ec0e8694be2629d02b895c825c57e1f92613665"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/hdr.exr",
+      "bytes": 12854,
+      "sha256": "977d5a55236c0b403a3b5928581066f61a25264504ea7cc0981365397bc80f27"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/hdr.npz",
+      "bytes": 9499,
+      "sha256": "b4ee3617d00f391c4ca17eff2435d5e9258a40ae3ab5398109bbbf9f2360cc65"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/metadata.json",
+      "bytes": 6857,
+      "sha256": "9ad024274aa0546a2aa452f2581be059f8de06b39988e1d49d84ae1341f85bf1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/rgb.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/scene.usdc",
+      "bytes": 5098055,
+      "sha256": "e61d0f0c49e324015bbf00f1880bd021508d24b4534cf016a84dd1dc28f4d1cd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_rnul3nnn/warmup.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "03d5cc301f69aa37c3cc03920e2bb116adb96bb50a4b4dbba31e2993bd2df77c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/hdr.exr",
+      "bytes": 12832,
+      "sha256": "d118bc82624969faf71f20ab1ce37968b993794bb1960d19bc6fd8a0c541ae51"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/hdr.npz",
+      "bytes": 9507,
+      "sha256": "8de38ce9a240407d81ff8d4ac6418100a5b00a57c8a560913080d39b772d6a11"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/metadata.json",
+      "bytes": 6845,
+      "sha256": "3c06fd63a2eca16eb5cc29dec0c97e058242ac42fdd4d027c39c79b87a9ccdfc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/rgb.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/scene.usdc",
+      "bytes": 5097900,
+      "sha256": "739e56c3e17c7c42ecc2771bdde6b19f50daf20a515fac55d3db131c7f413fba"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_s4sym_cl/warmup.png",
+      "bytes": 8128,
+      "sha256": "e02fba4ccba5c9079af390fddff4bed17398ef509d461dd2b1a4f9badd99aebf"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/bound_material.json",
+      "bytes": 1926,
+      "sha256": "7f063fd330048f943104e19ab266a85a0bf104c797a6320e4ed98e385fb228bc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/effective_settings.json",
+      "bytes": 51344,
+      "sha256": "f1f53ddd0e908f31c96062e9c3d8e2f5ea328062f0d1de321f4b496587df92b3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/hdr.exr",
+      "bytes": 13252,
+      "sha256": "a2b4d72e3034bfd0e96a1291f62940c8e8c92d971adf4461e2739c9573710747"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/hdr.npz",
+      "bytes": 8651,
+      "sha256": "af05eaa2acae3f4baac7d8d3ae7b4df9a873908b050ff1f3961a55535fefd18d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/metadata.json",
+      "bytes": 6855,
+      "sha256": "febe4063aaed8282d38d8f470a2aea37b2406f212ac94d36ef9590f39b070dc4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/rgb.png",
+      "bytes": 8140,
+      "sha256": "d162426860402790b70f24957848d64310849a66dbf877d66cdddaeb8fcc7855"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/scene.usdc",
+      "bytes": 5098099,
+      "sha256": "7d887efbf96169186d22bafba47655dd087b0b149a69841ce5869d9f72ce64f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_va55_9uq/warmup.png",
+      "bytes": 8140,
+      "sha256": "d162426860402790b70f24957848d64310849a66dbf877d66cdddaeb8fcc7855"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/bound_material.json",
+      "bytes": 1938,
+      "sha256": "6cc6dbabae1e8d54e081f943df218e8ceb041fa6ec809d899b34f66c5d89ad6b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/effective_settings.json",
+      "bytes": 51344,
+      "sha256": "9674c3f350122aadf0e330c9e84ffdeb9fe50591eacefb8763f7bc0e3bbb8ef9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/hdr.exr",
+      "bytes": 12896,
+      "sha256": "32044d76c48ab958bc4f72918a30d9fcae644e23df2bb9ff993deeb503d3af17"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/hdr.npz",
+      "bytes": 8654,
+      "sha256": "2597576352d0fa8bf287b554ff5c8f8d0773e7d1f83446f3d8e2bda86496beb3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "7aec69760ff84a20d4dbb2016f9763894c7c917a77f04d6c504cb44b5628ad1b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/metadata.json",
+      "bytes": 6858,
+      "sha256": "ecb85f78c3d3deb7080a933942805931fc8a1d89b2280bcff3c94730dd742a1d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/rgb.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/scene.usdc",
+      "bytes": 5098050,
+      "sha256": "3c7866b6cf69d436ef50eaf100e479c0e26bc7720fa7bbae6ced278efe853133"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/inside_vwi8c6oq/warmup.png",
+      "bytes": 8140,
+      "sha256": "7f1e1665a9e7f29bfa5cb32639fe6ebc9f16ec3a3255da6c958b2cd0ac1f4895"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/bound_material.json",
+      "bytes": 1926,
+      "sha256": "7f063fd330048f943104e19ab266a85a0bf104c797a6320e4ed98e385fb228bc"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/effective_settings.json",
+      "bytes": 51344,
+      "sha256": "2bc3a1f89b00177fd2c6d5dba9599f5dc0d61072043d05e688a0a0877fdc29ac"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/hdr.exr",
+      "bytes": 485015,
+      "sha256": "eba6cf9e729118daf2feb65e3d660791087d99c86673b890e95e98b744d8359a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/hdr.npz",
+      "bytes": 1024411,
+      "sha256": "5b2e5ab93dd516782fb18b4d06374e50a37db891b02bb1750c2f62892cf044fb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "f96efaf5d8c9924fa09dbceef014696e39f7357c010dc5bdf681864ebc89269a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/metadata.json",
+      "bytes": 6878,
+      "sha256": "e2e42dcae051b94774141e2bd674abb62d4a95ceadef4904b4c146700e32c7d7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/rgb.png",
+      "bytes": 8120,
+      "sha256": "305ded04b680cc7dadcbaab915533324a2a11ea5e6041b50b0cb80bf2832fb6e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/scene.usdc",
+      "bytes": 5098099,
+      "sha256": "7eefca48406cdd26b29712f855cd241718380d8a59c49c7d457bbb058540a6f7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_0n2w46ld/warmup.png",
+      "bytes": 8121,
+      "sha256": "9591b10af1b645f35928ea233e19e0f676e338bce1918210194311a1a92521fa"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/bound_material.json",
+      "bytes": 2951,
+      "sha256": "7b8b2641ab8687ca6a0bb0372d7f79d7c26c1836714a4130fbe1812460e3c628"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "a8c81e37394882027822b376de2e8a89b6fe2f09cf281ef456d165e3f05bce91"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/hdr.exr",
+      "bytes": 336369,
+      "sha256": "93da4e1215975e4a2b39849ba5bbdc5738c9ebe8beb2b583d3aff76cbc6ec1af"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/hdr.npz",
+      "bytes": 668942,
+      "sha256": "cc3902bc99ae3a87e3c92f001e1b7a9d60b84e67248b004cfe326ae9f8ee33c0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/hdr_buffer.json",
+      "bytes": 218,
+      "sha256": "9f3ded61e583f883f51d601800282a347747ffd6aaa6e158fa3cfaecd5c9f37a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/metadata.json",
+      "bytes": 6829,
+      "sha256": "82f4db4159bd37f73b2addd75e26f0fb32d8133078a1001a44ac553042c9c4c4"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/rgb.png",
+      "bytes": 8108,
+      "sha256": "43479b5deca15c68ee4c533c60be018a01e90bd7f5c53a5bee8b7f09f7d01c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/scene.usdc",
+      "bytes": 4058310,
+      "sha256": "f5904adee33020195595836434e7fd6a4609a2302fc094ca36103aa02c56ee1a"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_4vfjbu3t/warmup.png",
+      "bytes": 8108,
+      "sha256": "43479b5deca15c68ee4c533c60be018a01e90bd7f5c53a5bee8b7f09f7d01c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/aov_inventory.json",
+      "bytes": 197,
+      "sha256": "542a823741e182cdf580b149334d2e284c0690fb32576882900e878c6ce83d70"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/bound_material.json",
+      "bytes": 2936,
+      "sha256": "28c08a5e3744e8d4739dd7417379a3b487f4dae67e92d3512da465f355d69939"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/effective_settings.json",
+      "bytes": 51345,
+      "sha256": "a8c81e37394882027822b376de2e8a89b6fe2f09cf281ef456d165e3f05bce91"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/hdr.exr",
+      "bytes": 247484,
+      "sha256": "fa18a6e41d6de40798966e104a912fd0bbde6ff6d399ab8e0f9148acf1738c8d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/hdr.npz",
+      "bytes": 342100,
+      "sha256": "c033d66d094bba9df956364bfbd3c29eee9faf26d3ef9b4f427b8ec1ff5a91e0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/hdr_buffer.json",
+      "bytes": 219,
+      "sha256": "6b6605fe3d87d3db592a6411f374094db68fdc05738bd94d59700af33c4000d6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/metadata.json",
+      "bytes": 6836,
+      "sha256": "ab185f54a8f09bd622c3eebd319dc82f5499dbd2c78090ea8c26ba041c28756c"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/restoration.json",
+      "bytes": 372,
+      "sha256": "c41c884b3f3e70f76e5e42a333bacf5bc0544d40b8c54c7ce07ff6e88bca7e36"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/rgb.png",
+      "bytes": 8108,
+      "sha256": "43479b5deca15c68ee4c533c60be018a01e90bd7f5c53a5bee8b7f09f7d01c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/scene.usdc",
+      "bytes": 4058276,
+      "sha256": "b8c3ee772b6226243cb9e839eeb699476a720adaa16940cf87cbbdfe0e2ce230"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/captures/nadir_bzmkgh2g/warmup.png",
+      "bytes": 8108,
+      "sha256": "43479b5deca15c68ee4c533c60be018a01e90bd7f5c53a5bee8b7f09f7d01c09"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/comparisons/flat_enclosure_controls.png",
+      "bytes": 72085,
+      "sha256": "589112f4a4fdc18b9309a79553689f017604273e23a8281094b361d64dc11699"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/analyse_followup.py",
+      "bytes": 7177,
+      "sha256": "4a7aa7eb2db56a24df7e66db73e4a016fd2d018346606ea023f353a46d53ecd0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/before_checkpoint.json",
+      "bytes": 4476,
+      "sha256": "1ad61e119890bf99c433a0625c1c8bf6f2184c8a48cdebd28aa68cb7ab6ee111"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/before_source.py",
+      "bytes": 19514,
+      "sha256": "e154867f5fc0858acaa0ea48a9d532d198ff717e898b513d3be9519c1e087802"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_checkpoint.json",
+      "bytes": 4476,
+      "sha256": "fda6b6162a207eed04c90fac9a53604de3477f23df391c08c88929067976ff2f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_material.json",
+      "bytes": 531,
+      "sha256": "36008f82f8afb950e46d1b1a4169d90ad9a3a98591679a27b30a7c8e99e44a28"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_medium_capabilities.json",
+      "bytes": 40653,
+      "sha256": "601f2eda58731b122bab97958abb45b0ffbb6571f8dc3a45fb88f3ffc7f31329"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_preset.json",
+      "bytes": 83,
+      "sha256": "7bed22a862c3a7c81f2c269802f6b3ff37a767a8e82482054307a2b04f891d01"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_restore_checkpoint.json",
+      "bytes": 140,
+      "sha256": "9babbb31bddb8cfeb5a5779e526eed3b0b80ea5dde25dadb9a0dbf41ee7f74bb"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_restore_live.json",
+      "bytes": 3579,
+      "sha256": "36f946816cdd6c0cea25d70086eb32f7c935c775b0d0fd68ee09100518f2d809"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/final_source.py",
+      "bytes": 25162,
+      "sha256": "1154e43349f69890e622301c2e8053baca9b3fe48417a63b1e085e670d206986"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/followup_source_changes.patch",
+      "bytes": 10806,
+      "sha256": "1cbaaa3f828bbdc1342136fb1117eb9009a405f68eaf8f8c26835a1441d72874"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/historical_evidence_integrity.json",
+      "bytes": 294,
+      "sha256": "48f332d3e69818be82e5d2617d353631b6a7c58152ba40196e510c4aca3179f9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/kit_restart_01/kit_process_snapshot.log",
+      "bytes": 1244959,
+      "sha256": "e22b9e92d0f38907394c47ed3085fc4d34f2ed632eff7e081bfadf58b1f7cd60"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/kit_restart_01/launch.json",
+      "bytes": 378,
+      "sha256": "ff9a0a1d7caf851b84271511049e925e8778bc2e442f416530d164113f082b68"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/kit_restart_01/launch_stdout_snapshot.log",
+      "bytes": 27046,
+      "sha256": "167ec514aa6319add14c8d4a2ddec58c66a33062c173f9f79ed110e363cc9d9f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/kit_restart_01/shutdown.json",
+      "bytes": 487,
+      "sha256": "5b03888a5ce77be78e5c8cb6df1f11274af2b8488013c00a965747ab4b4cc651"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/log_snapshots.json",
+      "bytes": 1188,
+      "sha256": "c889e8a28ab0bafdb00e3e17a91b2b4aac8e55337ce1b3b910e38bb34e23b76d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/native_medium_capabilities.json",
+      "bytes": 40653,
+      "sha256": "e3dcd1c4b6249e4c86d854fe0c431955957077fedbe7b2f7b8c08a1d2fa9ecc0"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/native_medium_settings.json",
+      "bytes": 1278,
+      "sha256": "0c8a2fc8ba99124136b1f3cf7ab49e5ae45560addcac9b9a99de6c1cda2a56b9"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/native_volume_definitions.json",
+      "bytes": 669,
+      "sha256": "3b82d70389fa9fd86293e521638b80c102c592d8947c9ea5ac439e660b63af16"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/offline_tests.json",
+      "bytes": 5608,
+      "sha256": "94517d9f9387a4f604a9f0a1dd76e484df5142a2bbcb9690e33a3c482b08e1b6"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/pre_restart_checkpoint.json",
+      "bytes": 4476,
+      "sha256": "2bb93c14543cc5e4c9e63cc3aa3a249047bc3fc7e43133cfefe0fd3b557069c3"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/pre_restart_kit_log_snapshot.log",
+      "bytes": 1720102,
+      "sha256": "0c22b7e5c659dc5da89ae3b5a445669c8cd345164c19488323b957439716e261"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_after_restart_begin.json",
+      "bytes": 361,
+      "sha256": "1bd4ee8ee67bc6c4723f3eb61528c98ec5a2e1ba844409ada57cd965efc81d1d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_after_restart_end.json",
+      "bytes": 181,
+      "sha256": "dcf50032bc3e4cec0168a1b1977320f130280b4d0a6028f3173c609d52eeb770"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_begin.json",
+      "bytes": 266,
+      "sha256": "d2f357f57f9c0daa5c3738e6caff72b3b2ed61a3f0faa447c0f5621d51d095f5"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_both_begin.json",
+      "bytes": 232,
+      "sha256": "fdecb71c3aa2365b1700ba803b0cd706dc2efd79c37bfe8e06ec95ed53884223"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_end.json",
+      "bytes": 109,
+      "sha256": "8568a79291f6de3cd4f5691297daed8226b61a306e0ceba495ed6ead41d74e80"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_flat_begin.json",
+      "bytes": 361,
+      "sha256": "a08a87b90f21ee53384f8bbcd449476ab57f30265b790378e2bfa9b04ec106b1"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_flat_end.json",
+      "bytes": 181,
+      "sha256": "dcf50032bc3e4cec0168a1b1977320f130280b4d0a6028f3173c609d52eeb770"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_native_volume_begin.json",
+      "bytes": 360,
+      "sha256": "7d2d2620384aff53e4468c65fa13c82ef31119cd17d9e8ca8c14f60e2d5cd639"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_native_volume_end.json",
+      "bytes": 181,
+      "sha256": "dcf50032bc3e4cec0168a1b1977320f130280b4d0a6028f3173c609d52eeb770"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_varying_begin.json",
+      "bytes": 361,
+      "sha256": "29191c40df26bcf3bf44ec245c2c87858c13395536af07a17966040db50ac3cd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/preview_varying_end.json",
+      "bytes": 181,
+      "sha256": "dcf50032bc3e4cec0168a1b1977320f130280b4d0a6028f3173c609d52eeb770"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_after_restart_native_procedural_volume.json",
+      "bytes": 8645,
+      "sha256": "f46c090b08d48cbee7e7bd2d6ad593c88de1d46f1cca6833f36fb3556dfb40c7"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_after_restart_nonuniform.json",
+      "bytes": 8617,
+      "sha256": "a9314c291748321d9f1a99803ab06b17ff7d85b84dedede77bc161725ebf6a0b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_double_sided.json",
+      "bytes": 8659,
+      "sha256": "8b69dd814dcd3696dc0418622df2224bcd07f6d2151991112f16dabea2c59a6d"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_flat_box_clear_inside.json",
+      "bytes": 8590,
+      "sha256": "daf9a59da59120f545b392e8581aca54d6c4d5c7ff48fa0acdd84203a1b26565"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_flat_box_clear_nadir.json",
+      "bytes": 8611,
+      "sha256": "75a902e04eacfd22e46d1adb35a775f3840188486f112ab6bb8c0e0ad7974a75"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_flat_box_inside.json",
+      "bytes": 8578,
+      "sha256": "7e47a982b579acb99d469fe54f33b98fc24957ea47abe5dfae4519530a180040"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_flat_box_nadir.json",
+      "bytes": 8598,
+      "sha256": "064df63c9a0b636bade88d3c8a5ba9c705d72fe1377f3e92657706c0d6cda815"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_flat_box_uncached_inside.json",
+      "bytes": 8596,
+      "sha256": "798136f285ad12d1b09bec243fcdcdb05f96a3ac201b95ab47ee41d4e9833b12"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_native_procedural_volume.json",
+      "bytes": 8644,
+      "sha256": "f0f71b626dd50360aafdb1eb86c9ae98eac09e57d3db92445fd2f2933507172f"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_none.json",
+      "bytes": 8645,
+      "sha256": "172586c40971fb59332c78fed6d7ba629c5b05c9f7410ff53614eb8b1f7909dd"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_nonuniform.json",
+      "bytes": 8657,
+      "sha256": "3b5988dbc3c98cbbbb4f63ee3203fafcb14a7bda574c21242dbd452333d12053"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_validation.json",
+      "bytes": 10431,
+      "sha256": "9c5e382fedcf322ab718cdddf6f6c9e648cd2db483ea07ac587c8e4307f944ad"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_varying_inside.json",
+      "bytes": 8639,
+      "sha256": "075b78aaa9309d5418b54cbc49a9b6b9c62678d1282b85f183b814124bfa9216"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_varying_nadir.json",
+      "bytes": 8660,
+      "sha256": "3cf57e1b70381527bd4e2471d443b3f4373f3a87a80596337b55654392414bb2"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_volume_output.json",
+      "bytes": 8662,
+      "sha256": "3550de87cb0e2261a40abec01f9827baa31321ef6200cdc44ce63b36161ae060"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/probe_volume_output_nonuniform.json",
+      "bytes": 8684,
+      "sha256": "2378a9a860e234f82d17f0479e234703bea0e2994f1ba9ee40b541976c90355b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/request_guards.json",
+      "bytes": 1391,
+      "sha256": "5e21873f5d18042b230fb6d8f157600d4432c669f4e54ff1d5b1358f1f4dbf64"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/restart_kit.py",
+      "bytes": 2192,
+      "sha256": "4ad1c6221611215d04013e7af2601d5da723e1e4c6a01eaddaad6f569ffc7d7b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/restoration_validation.json",
+      "bytes": 281,
+      "sha256": "5ff2caa137132eb35b6c8b1f4f70e36dc1ac55eb159aba26339d9165b48a7a0b"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/restore_after_restart.json",
+      "bytes": 185,
+      "sha256": "1efda309bf0cab30acd435333e88dba6a1344d6aa50b9ee243e2cd4d7bf42247"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/setup.json",
+      "bytes": 2482,
+      "sha256": "8f3acb84ce88f7132258f383c1df7a8ca59bcc212c5a1ffe7f6abfc15a931d7e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/setup_after_restart.json",
+      "bytes": 2797,
+      "sha256": "70b2082a2da354f0fc92ac398db6a80c8032f1a50353eb1b62bab22a8807097e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/setup_both_controls.json",
+      "bytes": 2797,
+      "sha256": "70b2082a2da354f0fc92ac398db6a80c8032f1a50353eb1b62bab22a8807097e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/setup_flat.json",
+      "bytes": 2797,
+      "sha256": "70b2082a2da354f0fc92ac398db6a80c8032f1a50353eb1b62bab22a8807097e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/setup_native_volume.json",
+      "bytes": 2797,
+      "sha256": "70b2082a2da354f0fc92ac398db6a80c8032f1a50353eb1b62bab22a8807097e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/setup_varying.json",
+      "bytes": 2797,
+      "sha256": "70b2082a2da354f0fc92ac398db6a80c8032f1a50353eb1b62bab22a8807097e"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/source_provenance.json",
+      "bytes": 525,
+      "sha256": "09c667092a62ed818395f97bb7fee4b352e162ac9eb7dd17cba069705f568080"
+    },
+    {
+      "path": "experiments/ocean_material_v1/diagnostics/m4_underwater/qa/verify_package.py",
+      "bytes": 904,
+      "sha256": "6388881aee9d4f955193920617a006221dda1753ac77c8d5b76e47516391ffba"
+    },
+    {
+      "path": "experiments/ocean_material_v1/reports/M4_UNDERWATER_CAMERA_FOLLOWUP.md",
+      "bytes": 8722,
+      "sha256": "f90fb3c63cc6062ad3821f305a41ade52fc368bdfa9cff2aa017bb4a6c56a802"
+    }
+  ],
+  "mutable_logs": [
+    "qa/kit_restart_01/kit_process.log",
+    "qa/kit_restart_01/launch_stdout.log"
+  ],
+  "sealed_logs": "qa/log_snapshots.json",
+  "limitations": [
+    "Initial-medium behaviour remains an inference from local observations, not a universal statement about NVIDIA RTX capabilities",
+    "Compatibility probes used native procedural shaders with different interfaces; none was adopted as an equivalent water preset",
+    "Native display PNG saturation; numeric comparisons used retained HdrColor float samples",
+    "Captured requests span additive source reloads; final and exact pre-follow-up source are retained, not a claimed common hash for every request",
+    "Referenced original marine assets, installed MDL/Kit runtime and external scene checkpoint directories are not independently bundled",
+    "No successful optical fix or distance-sweep qualification was demonstrated"
+  ],
+  "human_review_inferred": false,
+  "later_milestones_completed": false
+}

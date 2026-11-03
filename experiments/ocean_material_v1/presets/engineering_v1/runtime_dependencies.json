@@ -1,0 +1,103 @@
+{
+  "dependencies": [
+    {
+      "path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/mdl/core/Base/OmniSurface.mdl",
+      "authored_path": "OmniSurface.mdl",
+      "sha256": null,
+      "status": "runtime_or_unresolved"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe",
+      "status": "local_hashed"
+    },
+    {
+      "path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "authored_path": "/home/madil/kit-app-template/assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13",
+      "status": "local_hashed"
+    }
+  ],
+  "water_material_texture_assets": [],
+  "mdl_source_asset": "OmniSurface.mdl",
+  "mdl_subidentifier": "OmniSurface",
+  "runtime_vendor_files_inspected": false,
+  "preset_choice": {
+    "ok": true,
+    "selection": "engineering_v1",
+    "material": {
+      "ok": true,
+      "renderer": "NVIDIA OmniSurface",
+      "ocean_path": "/World/Ocean",
+      "material_path": "/World/Looks/OceanWaterEngineeringV1",
+      "roughness": 0.001,
+      "ior": 1.333,
+      "transmission": 1.0,
+      "base_weight": 0.0,
+      "base_color": [
+        0.02,
+        0.1,
+        0.13
+      ],
+      "transmission_color": [
+        0.6,
+        0.8,
+        0.9
+      ],
+      "transmission_depth": 100.0,
+      "scattering_color": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "scattering_anisotropy": 0.0,
+      "thin_walled": false
+    },
+    "configuration": {
+      "version": 1,
+      "preset": "engineering_v1",
+      "resolution": 128,
+      "bottom_y_units": -2000.0,
+      "bottom_depth_m": 20,
+      "metres_per_unit": 0.01,
+      "horizontal_derivative_bound": 0.3856116377333708,
+      "restart_signature": {
+        "size": 16000.0,
+        "resolution": 128,
+        "wave_height": 40.0,
+        "wave_length": 650.0,
+        "choppiness": 0.55,
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "original_double_sided": true,
+      "original_binding_targets": [
+        "/World/Looks/OceanWater"
+      ],
+      "original_binding_strength": null,
+      "renderer_before": [],
+      "global_before": {},
+      "configure_renderer": false
+    },
+    "geometry": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "minimum_top_normal_y": 0.9315110087325138,
+      "minimum_outward_side_dot": 7328.828163431039,
+      "maximum_bottom_normal_y": -1.0,
+      "points": 17154,
+      "faces": 17408,
+      "duplicated_top_faces": 0,
+      "shared_top_seam_indices": true
+    },
+    "scientific_water_calibrated": false,
+    "tested_renderer": "PathTracing",
+    "camera_inside_qualified": false,
+    "qualification": "Above-water 512x384 integration checks passed; camera-inside attenuation remains unqualified"
+  }
+}

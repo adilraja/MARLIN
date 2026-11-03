@@ -1,0 +1,318 @@
+{
+  "pair_invariants": {
+    "above": {
+      "checks": {
+        "animal_identical": true,
+        "camera_matrices_within_1e_6": true,
+        "effective_camera_product_equal": true,
+        "global_settings_equal": true,
+        "top_ocean_unchanged": true,
+        "changed_scene_prims_confined_to_water": true,
+        "direct_geometric_bbox_unchanged": true
+      },
+      "changed_scene_prims": [
+        "/World/Ocean"
+      ],
+      "direct_geometric_bbox_xyxy_px": [
+        216.66861668767837,
+        35.33822950500393,
+        295.33138331232163,
+        243.17856057596694
+      ],
+      "review_log_box_mean_absolute_difference_8bit": 57.65727671451356,
+      "review_log_box_p99_difference_8bit": 109.0,
+      "annotation_interpretation": "The direct projected geometric box is unchanged while water-dependent visible pixels differ. This is not a visible-mask, contour-displacement or annotation-validity measurement."
+    },
+    "intersecting": {
+      "checks": {
+        "animal_identical": true,
+        "camera_matrices_within_1e_6": true,
+        "effective_camera_product_equal": true,
+        "global_settings_equal": true,
+        "top_ocean_unchanged": true,
+        "changed_scene_prims_confined_to_water": true,
+        "direct_geometric_bbox_unchanged": true
+      },
+      "changed_scene_prims": [
+        "/World/Ocean"
+      ],
+      "direct_geometric_bbox_xyxy_px": [
+        219.7285315013566,
+        94.74223621548015,
+        292.2714684986434,
+        293.1064848454755
+      ],
+      "review_log_box_mean_absolute_difference_8bit": 59.024572072072075,
+      "review_log_box_p99_difference_8bit": 86.0,
+      "annotation_interpretation": "The direct projected geometric box is unchanged while water-dependent visible pixels differ. This is not a visible-mask, contour-displacement or annotation-validity measurement."
+    },
+    "below": {
+      "checks": {
+        "animal_identical": true,
+        "camera_matrices_within_1e_6": true,
+        "effective_camera_product_equal": true,
+        "global_settings_equal": true,
+        "top_ocean_unchanged": true,
+        "changed_scene_prims_confined_to_water": true,
+        "direct_geometric_bbox_unchanged": true
+      },
+      "changed_scene_prims": [
+        "/World/Ocean"
+      ],
+      "direct_geometric_bbox_xyxy_px": [
+        222.59398874493786,
+        151.6846084628632,
+        289.40601125506214,
+        340.3252309534152
+      ],
+      "review_log_box_mean_absolute_difference_8bit": 62.52902476780186,
+      "review_log_box_p99_difference_8bit": 87.0,
+      "annotation_interpretation": "The direct projected geometric box is unchanged while water-dependent visible pixels differ. This is not a visible-mask, contour-displacement or annotation-validity measurement."
+    }
+  },
+  "reload_and_rollback": {
+    "reload_intersecting": {
+      "checks": {
+        "animal_identical": true,
+        "camera_matrix_within_1e_6": true,
+        "effective_controls_equal": true,
+        "global_settings_equal": true,
+        "material_binding_equal": true,
+        "ocean_vertex_count_equal": true,
+        "scene_input_hashes_equal": true
+      },
+      "image": {
+        "resolution": [
+          512,
+          384
+        ],
+        "roi_xyxy": [
+          128,
+          96,
+          384,
+          288
+        ],
+        "tolerances_8bit": {
+          "mean_absolute_difference": 1,
+          "p99_absolute_difference": 8
+        },
+        "comparisons": {
+          "full_rgb": {
+            "mean_absolute_difference_8bit": 0.04570176866319445,
+            "p99_absolute_difference_8bit": 1.0,
+            "maximum_absolute_difference_8bit": 26.0,
+            "mean_absolute_difference_normalized": 0.00017922262220860567,
+            "p99_absolute_difference_normalized": 0.00392156862745098,
+            "passed": true
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference_8bit": 0.1104736328125,
+            "p99_absolute_difference_8bit": 2.0,
+            "maximum_absolute_difference_8bit": 26.0,
+            "mean_absolute_difference_normalized": 0.0004332299325980392,
+            "p99_absolute_difference_normalized": 0.00784313725490196,
+            "passed": true
+          }
+        },
+        "image_tolerance_passed": true,
+        "scene_camera_settings_equality": "Must be checked independently; image similarity alone does not establish it"
+      },
+      "view_picking_identity": {
+        "reference": "10172534858793929162",
+        "candidate": "6930758660756584125"
+      },
+      "comparison_scope": "Only process/view picking identity excluded from RGB/HDR control equality; raw inventories retained",
+      "passed": true
+    },
+    "rollback_intersecting": {
+      "checks": {
+        "animal_identical": true,
+        "camera_matrix_within_1e_6": true,
+        "effective_controls_equal": true,
+        "global_settings_equal": true,
+        "material_binding_equal": true,
+        "ocean_vertex_count_equal": true,
+        "scene_input_hashes_equal": true
+      },
+      "image": {
+        "resolution": [
+          512,
+          384
+        ],
+        "roi_xyxy": [
+          128,
+          96,
+          384,
+          288
+        ],
+        "tolerances_8bit": {
+          "mean_absolute_difference": 1,
+          "p99_absolute_difference": 8
+        },
+        "comparisons": {
+          "full_rgb": {
+            "mean_absolute_difference_8bit": 0.007381863064236111,
+            "p99_absolute_difference_8bit": 0.0,
+            "maximum_absolute_difference_8bit": 8.0,
+            "mean_absolute_difference_normalized": 2.8948482604847494e-05,
+            "p99_absolute_difference_normalized": 0.0,
+            "passed": true
+          },
+          "fixed_central_roi": {
+            "mean_absolute_difference_8bit": 0.021728515625,
+            "p99_absolute_difference_8bit": 1.0,
+            "maximum_absolute_difference_8bit": 8.0,
+            "mean_absolute_difference_normalized": 8.520986519607843e-05,
+            "p99_absolute_difference_normalized": 0.00392156862745098,
+            "passed": true
+          }
+        },
+        "image_tolerance_passed": true,
+        "scene_camera_settings_equality": "Must be checked independently; image similarity alone does not establish it"
+      },
+      "view_picking_identity": {
+        "reference": "10172534858793929162",
+        "candidate": "6930758660756584125"
+      },
+      "comparison_scope": "Only process/view picking identity excluded from RGB/HDR control equality; raw inventories retained",
+      "passed": true
+    }
+  },
+  "independent_dimensions": {
+    "original_above": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/attempt01/original_above/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": true,
+      "animal_identity_unchanged": true
+    },
+    "engineering_above": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/attempt01/engineering_above/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": false,
+      "animal_identity_unchanged": true
+    },
+    "original_intersecting": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/attempt01/original_intersecting/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": true,
+      "animal_identity_unchanged": true
+    },
+    "engineering_intersecting": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/attempt01/engineering_intersecting/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": false,
+      "animal_identity_unchanged": true
+    },
+    "original_below": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/attempt01/original_below/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": true,
+      "animal_identity_unchanged": true
+    },
+    "engineering_below": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/attempt01/engineering_below/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": true,
+      "animal_identity_unchanged": true
+    },
+    "reload_intersecting": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/reload_process01/reload_intersecting/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": false,
+      "animal_identity_unchanged": true
+    },
+    "rollback_intersecting": {
+      "png": [
+        512,
+        384
+      ],
+      "hdr": [
+        384,
+        512,
+        3
+      ],
+      "exr": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/runs/reload_process01/rollback_intersecting/hdr.exr: OpenEXR image data, version 2, storage: scanline, compression: zip, dataWindow: (0 0)-(511 383), displayWindow: (0 0)-(511 383), lineOrder: increasing y",
+      "native_png_all_white": true,
+      "animal_identity_unchanged": true
+    }
+  },
+  "all_pair_invariants_passed": true,
+  "all_reload_rollback_checks_passed": true,
+  "material_only_claim_scope": "Animal/camera/lights/top-water invariant; water material and required side/bottom enclosure differ",
+  "primary_display": "Fixed M5 gamma mapping from native HDR, scale 12000 and gamma 2.2",
+  "human_review_display": "Additional fixed log1p HDR mapping / log1p(12000); not native RGB",
+  "visible_mask_validation": false,
+  "annotation_definitions_changed": false,
+  "human_review_status": "pending",
+  "reviewer": "MAR",
+  "failed_in_process_reload_preserved": true,
+  "reload_qualification": "Fresh process; original in-process attach did not complete",
+  "capture_directories": {
+    "original_above": "runs/attempt01/original_above",
+    "engineering_above": "runs/attempt01/engineering_above",
+    "original_intersecting": "runs/attempt01/original_intersecting",
+    "engineering_intersecting": "runs/attempt01/engineering_intersecting",
+    "original_below": "runs/attempt01/original_below",
+    "engineering_below": "runs/attempt01/engineering_below",
+    "reload_intersecting": "runs/reload_process01/reload_intersecting",
+    "rollback_intersecting": "runs/reload_process01/rollback_intersecting"
+  },
+  "m4_complete": false,
+  "full_sprint_complete": false
+}

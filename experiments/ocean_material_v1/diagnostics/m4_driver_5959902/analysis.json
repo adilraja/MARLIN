@@ -1,0 +1,135 @@
+{
+  "valid_capture_run": true,
+  "above_water_target_positive_control_passed": true,
+  "emissive_target_positive_controls_passed": true,
+  "above_water_absorption_control_passed": true,
+  "qualified_for_version_comparison": true,
+  "runtime_build": "110.2.0+feature.342835.698af100.gl",
+  "records": [
+    {
+      "case": "inside_0500_clear",
+      "mean_hdr_rgb": [
+        11336.0,
+        11336.0,
+        11336.0
+      ],
+      "elapsed_seconds": 90.64584712499891,
+      "source_scene_sha256": "15f72abd7a0f7d29d6bf56af8620d103d763a3267215231055e08ec425ac8319",
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_driver_5959902/run_01/inside_0500_clear"
+    },
+    {
+      "case": "inside_0500_absorption",
+      "mean_hdr_rgb": [
+        11336.0,
+        11336.0,
+        11336.0
+      ],
+      "elapsed_seconds": 6.535026033001486,
+      "source_scene_sha256": "52ecd0cfc6900ec0afcc25a35ead98c29c3c994c88c63b01649bfe07891b2a91",
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_driver_5959902/run_01/inside_0500_absorption"
+    },
+    {
+      "case": "inside_0500_engineering",
+      "mean_hdr_rgb": [
+        11336.0,
+        11336.0,
+        11336.0
+      ],
+      "elapsed_seconds": 6.601393764000022,
+      "source_scene_sha256": "1b74148e60de3ba74532b600e38f4879bdc5a1deb938aefc2feaecc72a23286b",
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_driver_5959902/run_01/inside_0500_engineering"
+    },
+    {
+      "case": "above_1000_clear",
+      "mean_hdr_rgb": [
+        11103.9375,
+        11103.9375,
+        11103.9375
+      ],
+      "elapsed_seconds": 6.783109030999185,
+      "source_scene_sha256": "8a348f0e1f50f7a7baf5529e40625c6e09a8ca4e724823fad371d22d5236ebea",
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_driver_5959902/run_01/above_1000_clear"
+    },
+    {
+      "case": "above_1000_absorption",
+      "mean_hdr_rgb": [
+        6668.3125,
+        8883.6875,
+        9976.34375
+      ],
+      "elapsed_seconds": 6.759840721999353,
+      "source_scene_sha256": "75cbf0708e24d2540532b2893c85c99209b95efcc93179207db7c7e37a3959d6",
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_driver_5959902/run_01/above_1000_absorption"
+    },
+    {
+      "case": "above_1000_engineering",
+      "mean_hdr_rgb": [
+        6555.796875,
+        8722.59375,
+        9817.3125
+      ],
+      "elapsed_seconds": 7.72058122099952,
+      "source_scene_sha256": "e02a4be2ffeb21360d8778dfbd102bbd79ba15051079b03f3db776d82ab0f344",
+      "directory": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_driver_5959902/run_01/above_1000_engineering"
+    }
+  ],
+  "tests": [
+    {
+      "view": "above",
+      "path_m": 1,
+      "clear_channel_relative_spread": 0.0,
+      "clear_neutral_passed": true,
+      "absorption_relative_to_clear_rgb": [
+        0.6005358459555451,
+        0.8000484062522867,
+        0.8984509999268278
+      ],
+      "beer_prediction_rgb": [
+        0.6,
+        0.8,
+        0.9
+      ],
+      "absolute_ratio_error_rgb": [
+        0.0005358459555451223,
+        4.8406252286636864e-05,
+        0.0015490000731722686
+      ],
+      "inside_absorption_passed": null,
+      "engineering_blue_red_ratio": 1.4975010188978743,
+      "engineering_chromatic_attenuation_passed": true
+    },
+    {
+      "view": "inside",
+      "path_m": 0.5,
+      "clear_channel_relative_spread": 0.0,
+      "clear_neutral_passed": true,
+      "absorption_relative_to_clear_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "beer_prediction_rgb": [
+        0.7745966692414834,
+        0.8944271909999159,
+        0.9486832980505138
+      ],
+      "absolute_ratio_error_rgb": [
+        0.2254033307585166,
+        0.10557280900008414,
+        0.05131670194948623
+      ],
+      "inside_absorption_passed": false,
+      "engineering_blue_red_ratio": 1.0,
+      "engineering_chromatic_attenuation_passed": false
+    }
+  ],
+  "initial_inside_optical_checks_passed": false,
+  "distance_sweep_complete": false,
+  "distance_sweep_passed": false,
+  "m4_animated_integration_completed": false,
+  "analysis_provenance": {
+    "source": "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/analyse_comparison.py",
+    "source_sha256": "6ad9ecc5c6bf76f4e6b1a703243d51e7283b041d532e01de6d2467f8e6d2cf02",
+    "only_change": "Serialize output directory as absolute path, enabling analysis outside the historical root; optical math unchanged"
+  }
+}
