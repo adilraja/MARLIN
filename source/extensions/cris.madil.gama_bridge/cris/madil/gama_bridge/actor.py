@@ -59,7 +59,8 @@ class IsolatedActor:
         UsdGeom.XformCommonAPI(model).SetRotate(Gf.Vec3f(-90, 0, 0))
         calibration = self._calibrate(model, units, profile)
         root.GetPrim().SetCustomDataByKey("marlin:calibration_profile", calibration["profile"])
-        root.GetPrim().SetCustomDataByKey("marlin:axial_length_m", calibration["axial_length_m"])
+        if "axial_length_m" in calibration:
+            root.GetPrim().SetCustomDataByKey("marlin:axial_length_m", calibration["axial_length_m"])
         stage.GetSessionLayer().subLayerPaths.insert(0, layer.identifier)
         self.stage, self.layer, self.units = stage, layer, units
         self.token = secrets.token_urlsafe(24)

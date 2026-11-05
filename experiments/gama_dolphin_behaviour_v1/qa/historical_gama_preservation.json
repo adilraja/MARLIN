@@ -1,0 +1,51 @@
+{
+  "recorded_utc": "2026-11-05T11:29:18.201716+00:00",
+  "reports": [
+    {
+      "manifest": "experiments/gama_marlin_v1/qa/milestone_3_manifest.json",
+      "manifest_sha256": "498683096153fa52de772a31faf7caa66c94640d0acad084edd3aaae72a27f9e",
+      "checked": 27,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "experiments/gama_marlin_v1/qa/milestone_7_manifest.json",
+      "manifest_sha256": "d2e4f7179b6c6cb1e4de8124f796fa96d56466b919a1f30abe6b39af7dbd0715",
+      "checked": 4827,
+      "errors": [
+        {
+          "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_capture.py",
+          "reason": "hash mismatch"
+        },
+        {
+          "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py",
+          "reason": "hash mismatch"
+        },
+        {
+          "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py",
+          "reason": "hash mismatch"
+        },
+        {
+          "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py",
+          "reason": "hash mismatch"
+        }
+      ],
+      "passed": false
+    },
+    {
+      "manifest": "experiments/gama_marlin_v1/qa/milestone_8_manifest.json",
+      "manifest_sha256": "16a51dbd84bbe4ca31f0ad26dcbce318722072dd0cb12f6adc2fc872d244adfa",
+      "checked": 119,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "manifest": "experiments/gama_marlin_v1/qa/sprint_closeout_01/closeout_manifest.json",
+      "manifest_sha256": "acc191ca34fe3c032e0db425120991a4d266bf8d88b8faba8aeddbc9aa524f71",
+      "checked": 57,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "passed": false
+}

@@ -1,0 +1,12 @@
+{
+  "m1": {
+    "returncode": 0,
+    "stdout": "{\n  \"verified\": {\n    \"files\": 80,\n    \"external_inputs\": 33,\n    \"checkpoint_artifacts\": 4\n  },\n  \"source_files_verified_at_baseline_commit\": 250,\n  \"current_source_changes_since_m1\": [\n    \"source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py\",\n    \"source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py\"\n  ],\n  \"technical_audit_ready\": true,\n  \"gate_a\": \"accepted\",\n  \"milestone_1_accepted\": true,\n  \"later_milestones_started_by_m1\": false,\n  \"historical_m7_literal_source_pin_check\": \"four preexisting version mismatches retained; non-source outputs verified\"\n}\n",
+    "stderr": ""
+  },
+  "water_m6": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/qa/verify_package.py\", line 49, in <module>\n    main()\n    ~~~~^^\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/qa/verify_package.py\", line 23, in main\n    counts={key:check(manifest[key]) for key in ('files','source_pins','checkpoint_artifacts')}\n                ~~~~~^^^^^^^^^^^^^^^\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/qa/verify_package.py\", line 17, in check\n    assert len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256'],str(path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: /home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py\n"
+  }
+}

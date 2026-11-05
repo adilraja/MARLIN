@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-05T13:40:07.795612+00:00",
+  "original_result": "restored_stage_comparison.json",
+  "original_outcome": "failed because the initial allowlist omitted animated ocean normals",
+  "evidence": "ocean.py:823-905 computes smooth normals along with points and extent; 961-984 authors all three on every ocean update",
+  "amendment": "Permit exactly Ocean.points, Ocean.normals and Ocean.extent after the explicitly declared ocean controller reconstruction. No other prim/property exception.",
+  "numeric_tolerances_changed": false,
+  "tolerance_sha256": "4cf158b3c563ec3e55e6dd5cdbd8b3252509483064bf325bd0767c70c286eb47",
+  "new_result": "restored_stage_comparison_attempt02.json"
+}

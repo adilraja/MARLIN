@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "prims_before": 38,
+  "prims_after": 38,
+  "missing": [],
+  "extra": [],
+  "differences": [
+    {
+      "path": "/World/Ocean",
+      "property": "attr:extent"
+    },
+    {
+      "path": "/World/Ocean",
+      "property": "attr:normals"
+    },
+    {
+      "path": "/World/Ocean",
+      "property": "attr:points"
+    }
+  ],
+  "unexpected": [
+    {
+      "path": "/World/Ocean",
+      "property": "attr:normals"
+    }
+  ],
+  "allowed_difference": "Only regenerated ocean points/extent after restarting its controller. Camera/settings separately verified."
+}

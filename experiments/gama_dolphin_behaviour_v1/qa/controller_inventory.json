@@ -1,0 +1,135 @@
+{
+  "scope": "M1 observed runtime plus source audit; no controllers modified",
+  "controllers": [
+    {
+      "mechanism": "single_swimmer",
+      "module": "cetacean.py",
+      "entry_points": [
+        "start_cetacean_swimming",
+        "_update_cetacean_swimming"
+      ],
+      "active": false,
+      "writes": [
+        "world_translation",
+        "heading",
+        "vertical_follow_and_dive",
+        "pitch",
+        "bank",
+        "shared_timeline"
+      ],
+      "target": "/World/Cetaceans/<name>",
+      "clock": "update_event_dt",
+      "finding": "Competing world/pose owner if used alongside GAMA for the same animal"
+    },
+    {
+      "mechanism": "gallery",
+      "module": "cetacean_gallery.py",
+      "entry_points": [
+        "start_gallery_swimming",
+        "_update_gallery_swimming"
+      ],
+      "active": false,
+      "writes": [
+        "gallery_world_transforms",
+        "procedural_mesh_points",
+        "shared_timeline"
+      ],
+      "target": "/World/Cetaceans/<gallery_name>",
+      "clock": "update_event_dt",
+      "finding": "No active entries; Model 61A is catalogue-capable but this baseline has no gallery motion"
+    },
+    {
+      "mechanism": "gama_v1",
+      "module": "actor.py",
+      "entry_points": [
+        "IsolatedActor.acquire",
+        "IsolatedActor.apply"
+      ],
+      "active": false,
+      "writes": [
+        "private_root_translation",
+        "private_root_heading"
+      ],
+      "target": "/MarlinGamaFixture/Bottlenose_001",
+      "clock": "received_simulation_state",
+      "finding": "Different allowlisted USD; shallow_swim only; optional extension not enabled"
+    },
+    {
+      "mechanism": "gama_v2",
+      "module": "actor_v2.py",
+      "entry_points": [
+        "PorpoiseActor.acquire",
+        "PorpoiseActor.apply"
+      ],
+      "active": false,
+      "writes": [
+        "private_porpoise_root_translation",
+        "private_porpoise_root_heading"
+      ],
+      "target": "/MarlinGamaPorpoise/Porpoise_001",
+      "clock": "received_simulation_state",
+      "finding": "Fixed harbour-porpoise contract and static pose; optional extension not enabled"
+    },
+    {
+      "mechanism": "authored_skeleton_animation",
+      "module": "skeletal_animation.py",
+      "entry_points": [
+        "bind_baked_skeletal_animation"
+      ],
+      "active": false,
+      "writes": [
+        "joint_pose_if_bound"
+      ],
+      "target": "bound_skeleton",
+      "clock": "USD_timeline_after_binding",
+      "finding": "Existing helper and matching bake; no animation prim or time samples in selected USD/live baseline"
+    },
+    {
+      "mechanism": "ocean",
+      "module": "ocean.py",
+      "entry_points": [
+        "_update_animated_ocean"
+      ],
+      "active": true,
+      "writes": [
+        "ocean_points",
+        "ocean_normals",
+        "ocean_extent"
+      ],
+      "target": "/World/Ocean",
+      "clock": "update_event_dt",
+      "finding": "Surface sampler can feed autonomous following; no direct animal writes"
+    },
+    {
+      "mechanism": "chase",
+      "module": "camera.py",
+      "entry_points": [
+        "_update_chase_camera"
+      ],
+      "active": true,
+      "writes": [
+        "camera_transform"
+      ],
+      "target": "/World/Cameras/DolphinChaseCamera",
+      "clock": "update_event_dt",
+      "finding": "HOLD on stationary target; no animal pose ownership"
+    },
+    {
+      "mechanism": "explicit_scene_api",
+      "module": "cetacean.py / scene_setup.py",
+      "entry_points": [
+        "spawn_cetacean",
+        "transform_cetacean",
+        "setup_marine_scene"
+      ],
+      "active": "on_request_only",
+      "writes": [
+        "named_animal_transform",
+        "replace_named_animal"
+      ],
+      "target": "/World/Cetaceans/<name>",
+      "clock": "explicit_HTTP_request",
+      "finding": "Do not invoke for a bridge-owned experimental instance during a later run"
+    }
+  ]
+}

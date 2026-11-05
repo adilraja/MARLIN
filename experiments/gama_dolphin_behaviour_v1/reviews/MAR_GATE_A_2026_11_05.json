@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "gate": "A",
+  "evidence_version": "m1_audit_v1",
+  "reviewer": "MAR",
+  "status": "accepted",
+  "decision_date": "2026-11-05",
+  "recorded_utc": "2026-11-05T13:21:53.526292+00:00",
+  "acceptance_received": true,
+  "source": "Explicit user reply in this chat to the Gate A review question",
+  "question_item_id": "[\"request_user_input_async\",\"call_5191952886d242399e99bd8da0e5a58b\",0]",
+  "question": "Gate A requires a named reviewer to accept the proposed scope before behaviour or animation changes. Please review the packet at /home/madil/kit-app-template/experiments/gama_dolphin_behaviour_v1/reviews/GATE_A_REVIEW.md. May I record MAR\u2019s acceptance of m1_audit_v1 and its bounded implementation proposal?",
+  "response_verbatim": "Accept Gate A as MAR",
+  "accepted_scope": "M1 asset/controller audit and the bounded implementation proposal in IMPLEMENTATION_PROPOSAL.md",
+  "bindings": [
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/baseline_manifest.json",
+      "bytes": 72587,
+      "sha256": "2ab36a7474a01e8ef64d74cc27d0272cfc32966a5ecc81572f732a3c4d3f7511"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/IMPLEMENTATION_PROPOSAL.md",
+      "bytes": 5503,
+      "sha256": "bb51c9fc744c20f867095941162b50b94a6d7d6f41ca75992a984de0b5d63182"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/M1_ASSET_AND_CONTROLLER_AUDIT.md",
+      "bytes": 16621,
+      "sha256": "b27d580b170b49caf20928fbd9b3be30cdb138ae055981f4459173b72fa16626"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/reviews/GATE_A_REVIEW.md",
+      "bytes": 3240,
+      "sha256": "1d05c038fe7c247132d01d60c913125de83bdb3110da1223276e238056b18fdc"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/specification/source_document.md",
+      "bytes": 32873,
+      "sha256": "cd7514ee774a27ba5416337a05a46d0d23ced4bb49abd06edfe0e5eb310d76d0"
+    }
+  ],
+  "milestone_1_accepted": true,
+  "conditions": [
+    "Preserve the exact Model 61A asset, existing engineering scale/material and accepted water preset.",
+    "Reuse the existing rig, baked swim-cycle data and bridge lifecycle within the reviewed bounded scope.",
+    "Follow the sprint milestone order and subsequent Gates B, C and D; M2 must define the ownership/time contract and lock tolerances.",
+    "Return for a separate scope decision if substantial asset work or rig replacement becomes necessary."
+  ],
+  "biological_approval": false,
+  "final_animation_visual_acceptance": false,
+  "later_milestones_started_by_this_record": false
+}

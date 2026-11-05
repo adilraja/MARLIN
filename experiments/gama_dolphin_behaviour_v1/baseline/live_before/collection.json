@@ -1,0 +1,10 @@
+{
+  "scope": "M1 read-only inventory; optional existing frozen-checkpoint endpoint only",
+  "schema_paths": 69,
+  "gama_routes": [],
+  "writes_to_runtime": [
+    "POST /debug/scene/checkpoint"
+  ],
+  "new_behaviour_or_animation_implemented": false,
+  "caveat": "HTTP observations bracket the frozen scene; controller phases are not atomically serialized by the checkpoint endpoint."
+}

@@ -1,0 +1,1668 @@
+{
+  "schema_version": 1,
+  "sprint": "MARLIN \u2014 GAMA\u2013Omniverse Bottlenose Dolphin Behaviour and Animation",
+  "milestone": "M2 \u2014 Define and test movement ownership and simulation time",
+  "created_utc": "2026-11-05T13:42:13.893615+00:00",
+  "base_commit": "09186b3b9b63e02c367027f9e083e00c4c154f07",
+  "source_tree": "Uncommitted M2 working tree; exact bytes pinned below; seven new/modified implementation/test files copied into source_snapshot",
+  "gate_a": "accepted_by_MAR",
+  "tolerance_sha256": "4cf158b3c563ec3e55e6dd5cdbd8b3252509483064bf325bd0767c70c286eb47",
+  "files": [
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/M2_STATE_OWNERSHIP_AND_TIME_CONTRACT.md",
+      "bytes": 15666,
+      "sha256": "312734b1a8d1996265a568e3cf810e15eec1a05271ba0946c32ca967613c1be1"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/acceptance_tolerances.json",
+      "bytes": 979,
+      "sha256": "4cf158b3c563ec3e55e6dd5cdbd8b3252509483064bf325bd0767c70c286eb47"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/fixtures/m2/invalid_steps.json",
+      "bytes": 15688,
+      "sha256": "ccff8930b3b6ae6940a40c076f14c5fa1fa3dfe83cf2efbb112fffda341c673b"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/fixtures/m2/valid_step_0.json",
+      "bytes": 839,
+      "sha256": "1753453f0d4bebe44b4a1f2c6872751509c51d4f7f50d451f0a57f8831631108"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/fixtures/m2/valid_step_1.json",
+      "bytes": 840,
+      "sha256": "b2f8bd117bf5d0491672d3c4a404e5a3eaec1b87d8b512ad0afbf8e7b6fe1632"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/attempt01_stage_compare_source.py",
+      "bytes": 2029,
+      "sha256": "d6eeef19c2ee820414f30883271ba7bf17ab960c1aec89a7ee18da94b6ce9ec3"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/compare_restored_stage.py",
+      "bytes": 2223,
+      "sha256": "b770c68dd7497622c00369ae0e4ec782254c7239f98d3b8134060ef03f1502dc"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/cpu_attempt_01.json",
+      "bytes": 267,
+      "sha256": "4ddf63f84979414981236d70c2967f7fd7609e456dffb9a21793d83f7129c70e"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/cpu_attempt_02.json",
+      "bytes": 1554,
+      "sha256": "66ac272678433355bafef9652105b44885bec65a54b0e24e8af6e5a78e4cd488"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/cpu_attempt_02_inputs.json",
+      "bytes": 995,
+      "sha256": "49bac64be7c3dccf8016750f5e2be0371233ab7afe97a7547c1378f7f3629a9c"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/legacy_regressions.json",
+      "bytes": 1773,
+      "sha256": "99cd9fee253f2517c9afe5600bf8ede46813d90c61c9bb2fe2edbc0adb1b704a"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/chase_after.json",
+      "bytes": 1017,
+      "sha256": "ef7da9700ab698350b2176e94e6c58c3ed32da7df2882d3bd35dee484be18ec8"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/gallery_after.json",
+      "bytes": 109,
+      "sha256": "ee2a3a308f84d8836930f3e7826fe0ce01149dfc56e2c347182a98a7293f87b5"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/http_calls.json",
+      "bytes": 444016,
+      "sha256": "2b315aa9cfb010544c83f9fbcfb1006d55eaf2e14e7b35261988473453633647"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/inspection_after.json",
+      "bytes": 2966,
+      "sha256": "af4805d80cea6ed4b70a2dba90c956042c39f7e6493839d0a5a5614cb32585ed"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/material_after.json",
+      "bytes": 531,
+      "sha256": "36008f82f8afb950e46d1b1a4169d90ad9a3a98591679a27b30a7c8e99e44a28"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/ocean_after.json",
+      "bytes": 186,
+      "sha256": "8ba02e5d2c21dc93b51a8c629ccc503a9d8a96da9ea93b34eeda15dfc7425d08"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/openapi.json",
+      "bytes": 149207,
+      "sha256": "0e0adb449a68de7a5ddd1d666b1b888404b2853c5fd77d86a8af08ca1addcbf6"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/preset_after.json",
+      "bytes": 83,
+      "sha256": "7bed22a862c3a7c81f2c269802f6b3ff37a767a8e82482054307a2b04f891d01"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/results.json",
+      "bytes": 16174,
+      "sha256": "d20a1285169ca3a5bb71a987012b5fdee3ba1b2d456130a618d4b4d908a6d14b"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_attempt_01/swim_after.json",
+      "bytes": 23,
+      "sha256": "b657c7672c7f543430ee22a3f466632ed9c76802681e502380b26fa920897eb3"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/chase.json",
+      "bytes": 1019,
+      "sha256": "f837e1e7467ef8f36b4c1bb56b9b9224cbe2a2eca0443c25b3b1520601cd0972"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/checkpoint.json",
+      "bytes": 4476,
+      "sha256": "cef001151398cd411e927e431922547bc64a5f0d38ef80d85c1d1901cfdb2a73"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/gallery.json",
+      "bytes": 109,
+      "sha256": "ee2a3a308f84d8836930f3e7826fe0ce01149dfc56e2c347182a98a7293f87b5"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/inspection.json",
+      "bytes": 2964,
+      "sha256": "6f160d549824c4b9f996b4c6dc4e51f0c71048a51f98c617f36a5d226c973a35"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/material.json",
+      "bytes": 531,
+      "sha256": "36008f82f8afb950e46d1b1a4169d90ad9a3a98591679a27b30a7c8e99e44a28"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/metadata.json",
+      "bytes": 4325,
+      "sha256": "8b2e6c67a3fefa63f498854763b9693dab715e920c7c4e055f3a1f89870f378c"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/ocean.json",
+      "bytes": 187,
+      "sha256": "e88bdf2723453ea45bdfbbad6954d25b24063568455b988e4a294d622e9195b6"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/openapi.json",
+      "bytes": 118016,
+      "sha256": "e9977ac4f9ba4b991e3aab1c86ac3556289487c4047d2e26024c0ee4f58e7333"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/preset.json",
+      "bytes": 83,
+      "sha256": "7bed22a862c3a7c81f2c269802f6b3ff37a767a8e82482054307a2b04f891d01"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/scene.usdc",
+      "bytes": 4453397,
+      "sha256": "60d87c4aac12d373d5700cfb836f529a285e21053b5ec9c546a87bcab4c360fa"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_before/swim.json",
+      "bytes": 23,
+      "sha256": "b657c7672c7f543430ee22a3f466632ed9c76802681e502380b26fa920897eb3"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_contract_test.py",
+      "bytes": 9400,
+      "sha256": "9cba470d6ea48266db2d1d4d5574eec2edd1702cc4879567d9bea7c73b2ef463"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_final/checkpoint.json",
+      "bytes": 4476,
+      "sha256": "b71b3c47b039a7575851a357842cc4ed794747c4b0782d56668bd7d21a6733fb"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_final/gpu.json",
+      "bytes": 113,
+      "sha256": "1630bcf6767809b34190bf91b03c2abb92e09f1bb209123d76181242477d97a5"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_final/metadata.json",
+      "bytes": 4325,
+      "sha256": "a5a0667ef01c8a81a5cccc8e949299f591f90832285e9b58865ff0d074eea5b3"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_final/scene.usdc",
+      "bytes": 4453397,
+      "sha256": "e4f48fc7744069da39b28269ef127f974a9fdc7e35ec9f9473b02d8d2a325c5a"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/chase_restart.json",
+      "bytes": 970,
+      "sha256": "540df632ad16f0f9daeba1e5f5437814fc85ac719469c3b2a5b0e6083ec14953"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/checkpoint_after.json",
+      "bytes": 4476,
+      "sha256": "941f7e07cc216a408c958548c8b413a6204e4ae105f2b9611d5eecb1a9d0544d"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/checkpoint_restore.json",
+      "bytes": 140,
+      "sha256": "28288cf6b642ceb9a625422ce222d5479f68e5ee04e28baf058027cc3bc1426d"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/done.json",
+      "bytes": 309,
+      "sha256": "6b97eec0d7d2ff3b4e16145216f56a9c6f5fa17671442386589790f24f7d4079"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/frozen_restored_checkpoint.json",
+      "bytes": 4476,
+      "sha256": "7c424e9b79f0c6aec3d37a7ec7a587cba783f9cee7ebb40f98285755c8f25ac2"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/launch.json",
+      "bytes": 573,
+      "sha256": "9834fc5667d3c08c403c6aa77515811a225c2cc10ead52866b711c5abc8e8c3a"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/ocean_restart.json",
+      "bytes": 148,
+      "sha256": "5525368653a22b5e31b0aa16e3cbd5ca1c86f3968aa367e7d0c7aa2ed698133f"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/live_restart/old_process.json",
+      "bytes": 524,
+      "sha256": "d6f0d873960b2cfc7129ccb0ee98b8a63f43bcd1f950f8c9b8003fb86b08f03e"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/locked_plan.json",
+      "bytes": 1067,
+      "sha256": "e91b22a540c28ee888defdd16c9a7e1dbc41da6f2eb52985b9f1bf33c25ffaef"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/pre_work_git.json",
+      "bytes": 1332,
+      "sha256": "b67b5b6e08a6978269569a9f8bc520f32b0cc05cda26bfc4d043e7a18919612a"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/preservation_disposition.json",
+      "bytes": 1291,
+      "sha256": "e0c31b0ca468e550cb8fb584295c5d3d47feaf3d70e3b34d44725a6a9bda39b5"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/preservation_raw.json",
+      "bytes": 1691,
+      "sha256": "5c59dbdf4e6ee577c4c17daae7cccddae41f5199cbe628202a5a97a4d4d0f039"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/restore_live_in_kit.py",
+      "bytes": 3035,
+      "sha256": "f7c3afb5dbca313d314642060c41abc0d4716472ce07b75dd2d7b8c2a567b5c5"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/restored_stage_comparison.json",
+      "bytes": 578,
+      "sha256": "e4a0b8716046bc457788e25be7f22747e2f343a1a87a682a26d13259a4163e64"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/restored_stage_comparison_attempt02.json",
+      "bytes": 507,
+      "sha256": "b3b042efe782383e5f45e5b8663f22b2f2d73f5c9c364debbeeebcfca2d1bdc9"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/schema_verification.json",
+      "bytes": 209,
+      "sha256": "af327ab7752edb7fd720399afbf2a264e13eb188e1338100b7045abbee1c5ca1"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/source/extensions/cris.madil.gama_bridge/config/model61a_engineering_v1.json",
+      "bytes": 1128,
+      "sha256": "245417dc9b76cea6f40ab256e3562bb83064672d1266710940225af187e23c86"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "bytes": 7993,
+      "sha256": "b0d72710e859a0a1e2b85450d3173fc7dc6dd848ac6bb641ec2524e249e70c3d"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v3.py",
+      "bytes": 10618,
+      "sha256": "89f3230ce2709f9c2df7e74e433cdd2bd473a2e90a8ff7becbeed88b952c2901"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v3.py",
+      "bytes": 8133,
+      "sha256": "e6f47e946b7489ced35c83f4b5706c7b2031d83dfcd52f8d97936e4cfcc04d53"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "bytes": 12540,
+      "sha256": "73dbbe862786b23acbd47dc5f6ca1ffd9aaca894bb634d7b4dc11a5ed01e9794"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/routes_v3.py",
+      "bytes": 1825,
+      "sha256": "28520a13591f75a0f1682a92d3cc1be385fe6ae4242af67047a8d1f0db43ace3"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/source_snapshot/tools/test_gama_v3.py",
+      "bytes": 13948,
+      "sha256": "74d159833affe3cfd48a0f6daaad1ecacc089a7e39d139cb682c1feafdebad0a"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/stage_comparison_amendment.json",
+      "bytes": 696,
+      "sha256": "7fb674adda545e874674271bd29823e4f357d5d23ed4419856b8c7eb0034b994"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/syntax_check.json",
+      "bytes": 989,
+      "sha256": "cdfbbf8af7e17577ca0ac87f4155cf9d607d8809417c16e48558f2558129fd29"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/verify_package.py",
+      "bytes": 3506,
+      "sha256": "c2cfa1556d5b240cdd8d8f74b4e03981215e329425f59eac9c52712e57f03108"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m2/verify_preservation.py",
+      "bytes": 2773,
+      "sha256": "dc5ed8195e595220d519b64de62c518499fc407f64bb8e3f19e1cba5aa264a41"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/state_schema_v3.json",
+      "bytes": 4201,
+      "sha256": "09c57cbba2df8d93464c825c0573378f8a651e8796bcd8157a03287f6022678b"
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "integrations/gama/BOTTLENOSE_CALIBRATION.md",
+      "bytes": 3663,
+      "sha256": "2e412bfd3a89b5b0a2dce524ff3af320953e12c42aef88fee2403abbc484b927"
+    },
+    {
+      "path": "integrations/gama/CAPTURE_VERIFICATION.md",
+      "bytes": 4402,
+      "sha256": "1ee8340585778560c718b4e084b14dff46a86b8fc06d38e2985319617a15bc4e"
+    },
+    {
+      "path": "integrations/gama/COUNTERFACTUAL_VERIFICATION.md",
+      "bytes": 3453,
+      "sha256": "2f9ec26306415402724b5e534813bdd5e9629330feb01c7add3e4929d8f1b9d7"
+    },
+    {
+      "path": "integrations/gama/DATASET_CAPTURE_V2.md",
+      "bytes": 6564,
+      "sha256": "e32143c6932078be03f227294073b77c692222c0207e24db1e7a1c5dea3d904b"
+    },
+    {
+      "path": "integrations/gama/GEMINI.md",
+      "bytes": 2294,
+      "sha256": "9f3ff66994c66a8fa578ee2131dcb6d10a8dd22b6014618b37df3aedb8730f00"
+    },
+    {
+      "path": "integrations/gama/LIVE_COMMUNICATION.md",
+      "bytes": 5189,
+      "sha256": "9ffe996025e47b529b3354cd0224523fac1386bbe6f82ba619919ee4358f0f30"
+    },
+    {
+      "path": "integrations/gama/PAIRED_CAPTURE_V2.md",
+      "bytes": 5367,
+      "sha256": "882b298bbca00d25609247ebfa9cc5df6204acad2f61587c137994b0f7d12b36"
+    },
+    {
+      "path": "integrations/gama/PORPOISE_RECORD_FIRST.md",
+      "bytes": 7628,
+      "sha256": "1ca23dcd13e1692da202a0b5b5b1753c58c84cbb741bb2f81f406591793f37f7"
+    },
+    {
+      "path": "integrations/gama/PORPOISE_REPLAY_V2.md",
+      "bytes": 4863,
+      "sha256": "49f8be74323f3af992ddf6ef85b61cb24f0deebff8a59af3e355dc1da086081d"
+    },
+    {
+      "path": "integrations/gama/README.md",
+      "bytes": 8586,
+      "sha256": "a08aa0aa4ccf2ed5258eb14d9ce7c192bbe2c8460ec29d1dade6bec3de87913d"
+    },
+    {
+      "path": "integrations/gama/STATE_CONTRACT_V2.md",
+      "bytes": 13527,
+      "sha256": "b9c8f95ec3797bd4e33d298ba68cfdb495ae10055f4b837793c5046ae1c30d9b"
+    },
+    {
+      "path": "integrations/gama/VERIFICATION.md",
+      "bytes": 3061,
+      "sha256": "621f048bfebf9a26b7ad35378cb138010675ec22535ad1fa528a4475988fdfe3"
+    },
+    {
+      "path": "integrations/gama/examples/step_v1.json",
+      "bytes": 308,
+      "sha256": "51e8494e2358a59a87c0c40aef223a3f54455546b9bd0da31484067f73f74621"
+    },
+    {
+      "path": "integrations/gama/examples/step_v2.json",
+      "bytes": 468,
+      "sha256": "f91c1c1eb247b48766a80a6a01079e1736b27fbdc8141923649f2382b209337a"
+    },
+    {
+      "path": "integrations/gama/porpoise_behaviour.gaml",
+      "bytes": 5934,
+      "sha256": "fff5b482af65152789d161c2a00af61680c05bd9a8f0d2b53f83072ddc03020f"
+    },
+    {
+      "path": "integrations/gama/requirements-live.txt",
+      "bytes": 19,
+      "sha256": "9ec828179a682425537349fb41440b48a47b1ef006b7b3e1d1542566d3ec6943"
+    },
+    {
+      "path": "integrations/gama/step_v1.schema.json",
+      "bytes": 1720,
+      "sha256": "9c5d51604213455aa10c4b29732c8696603b7b1a70a60d29c64872e9b28692b8"
+    },
+    {
+      "path": "integrations/gama/step_v2.schema.json",
+      "bytes": 2102,
+      "sha256": "5d778134ce0c0f2ffba6b74394263a8ab7e53d341de9808ba0d069c34141dd52"
+    },
+    {
+      "path": "integrations/gama/trajectory.gaml",
+      "bytes": 893,
+      "sha256": "132956f625344cad34bc25db49774fac6a8c3c9c3d354405bd1853db863188d4"
+    },
+    {
+      "path": "integrations/gama/trajectory.xml",
+      "bytes": 535,
+      "sha256": "bfb168fefbde488390a0aced83e04a852084f4b588664f64b5548743234ca264"
+    },
+    {
+      "path": "integrations/gama/trajectory_live.gaml",
+      "bytes": 345,
+      "sha256": "49b22e074c05fb6da95c455da60dd1bc90d253c36370c8251a8db7b1bbd1f82c"
+    },
+    {
+      "path": "source/GEMINI.md",
+      "bytes": 1936,
+      "sha256": "2fde562a68114977cbb49b9c0d0c35e0597590450e077c662d03e1d72af9ccc9"
+    },
+    {
+      "path": "source/apps/cris.madil.kit",
+      "bytes": 7105,
+      "sha256": "5aa567d42623bc84cdf33e2c2079d870cb02c8f9ae5cfcccab2f356f79616dd5"
+    },
+    {
+      "path": "source/apps/cris.madil_nvcf.kit",
+      "bytes": 4346,
+      "sha256": "f0e3c3c306d1b4fee72a8570150b213446aadddd0931ce0af05d8d1c7a948ccb"
+    },
+    {
+      "path": "source/apps/cris.madil_streaming.kit",
+      "bytes": 3342,
+      "sha256": "0c976714b63bb2fb7a9e4232c684c6357875e317d6a084cb7a18b54d327e4e9a"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/config/bottlenose_calibration_v1.json",
+      "bytes": 2246,
+      "sha256": "6961771df257b80b0dab6cad1319076d2cb7def5e98d41a2b7b070dbbaf2174d"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/config/extension.toml",
+      "bytes": 359,
+      "sha256": "b49e2a14a2ff24e3e7af43e3ba6428696dda4cad8a41e5751907a46b99618dd0"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/config/model61a_engineering_v1.json",
+      "bytes": 1128,
+      "sha256": "245417dc9b76cea6f40ab256e3562bb83064672d1266710940225af187e23c86"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/__init__.py",
+      "bytes": 120,
+      "sha256": "7142da410307ab9ee89c01a3205470d5ef6a3e37ac269efde1f9915b5374c774"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "bytes": 7993,
+      "sha256": "b0d72710e859a0a1e2b85450d3173fc7dc6dd848ac6bb641ec2524e249e70c3d"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v2.py",
+      "bytes": 11027,
+      "sha256": "769f900b4b095ec25d6baf2ae4e3e689bec24b44167fa6853285f11e3ce63263"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor_v3.py",
+      "bytes": 10618,
+      "sha256": "89f3230ce2709f9c2df7e74e433cdd2bd473a2e90a8ff7becbeed88b952c2901"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/calibration.py",
+      "bytes": 2687,
+      "sha256": "d86ba20e1147c2c49efe27f38f5769d61705b4935ac5b4c572d406fc412aa637"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/counterfactual.py",
+      "bytes": 4864,
+      "sha256": "fdfefc7358cd07de7e884b174d1c27463d4e376f89c2f95e712a5506559b8297"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_state_v2.py",
+      "bytes": 14951,
+      "sha256": "196bcc78a6c2910cbb4df2e557ef90d7525b2122f6c57ebb850982d70182a716"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/dataset_v2.py",
+      "bytes": 285,
+      "sha256": "7799aa2a8fa473cbc872da1c331d1e93344d04e8f23153fe98ff7178127b0791"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange.py",
+      "bytes": 6578,
+      "sha256": "ddc5a20b8e83f3e14fa9356b3d485115e8f4ae22ccf03f200c573d8f9981ced1"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v2.py",
+      "bytes": 6161,
+      "sha256": "0d577fa94345bf7d252ff624d49a53f75b7d72c400b4789def69df20a2815e3c"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v3.py",
+      "bytes": 8133,
+      "sha256": "e6f47e946b7489ced35c83f4b5706c7b2031d83dfcd52f8d97936e4cfcc04d53"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "bytes": 12540,
+      "sha256": "73dbbe862786b23acbd47dc5f6ca1ffd9aaca894bb634d7b4dc11a5ed01e9794"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/marine_check.py",
+      "bytes": 3633,
+      "sha256": "37222aa2f56188256c143ed187c42e62f4021f98a78349ee3ce508ba3953789e"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_state_v2.py",
+      "bytes": 12512,
+      "sha256": "bda0d34a4a3c1e4525fce67f48c9ddddc1d407295a31cd0fd91db7e7fa04af17"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_transaction_v2.py",
+      "bytes": 21905,
+      "sha256": "4496594603e11a9ff26ae4b564f9b48a04f4bce3fb92b2343b664d080452984b"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/paired_v2.py",
+      "bytes": 9222,
+      "sha256": "c753bca236e9045da9ef3a5b0682bc884f2f71dd0cfbde310ab53d7416f4b913"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/routes_v3.py",
+      "bytes": 1825,
+      "sha256": "28520a13591f75a0f1682a92d3cc1be385fe6ae4242af67047a8d1f0db43ace3"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/stage_coordinates.py",
+      "bytes": 2281,
+      "sha256": "f1d9e00ee369b8026aa5e727a3e52f51bf2b90b508a5e35574b9a5d71873250d"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/visual_v2.py",
+      "bytes": 9563,
+      "sha256": "0930661f0a1edd804848dddbd69afd8fc9ae8505c98a6ecf9eaec11eca646ee1"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/GEMINI.md",
+      "bytes": 4130,
+      "sha256": "5e0e99edd1cdaca5161b780782b5ce567a108fea2b6192d233e0aaa5c1dc3745"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/.~lock.CAMERA_EVIDENCE.md#",
+      "bytes": 100,
+      "sha256": "33ad7a97fbf9398a5bd5adb49dd5c7b15af55ef783ddb6e408eeef804d2fa120"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/BARTLETT_VALIDATION.md",
+      "bytes": 7379,
+      "sha256": "6b0ae24cc64cd4fce11fe54f4da208b60daec40ac12634b3b1bd5614b4525792"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/CALIBRATION_TARGET.md",
+      "bytes": 7530,
+      "sha256": "b16d4a698e7583ea77f3fa3d2cd908dc36894a715c17bf2625298557fdc8a180"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/CAMERA_EVIDENCE.md",
+      "bytes": 5250,
+      "sha256": "e1ae9490a60e8fd4645f3740177b45c557167f2d2d2db5ca6b827c1c84b9cbdd"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/HIDEF_IMPLEMENTATION.md",
+      "bytes": 6488,
+      "sha256": "ef4a791f17bf4c23613d694c83b7796b516c78b4031c1214653cf5e87a381ab8"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/SCENE_SETUP.md",
+      "bytes": 1668,
+      "sha256": "f34e15c0e95472b02c8cdef2cfe4ad1e1a83e66bd533913431c0f46a2a0b6186"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/SURVEY_READINESS.md",
+      "bytes": 8207,
+      "sha256": "ba658d82396f006d7127f46d25683b0d2a4b18107cecf3ee194b946f54ca592d"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/SURVEY_README.md",
+      "bytes": 3125,
+      "sha256": "3b079a965c0631576632768273eca5d45bfa0d4335755beeb7499c2e33905a5d"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/bartlett_geometry_v1.json",
+      "bytes": 681,
+      "sha256": "b3a2fb382f218c240cb5b4cf0ebc9de4ea05ab3df7a5a996591bdbc7c3711bca"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/bartlett_validation_targets_v1.json",
+      "bytes": 498,
+      "sha256": "a99b2ada20394715f8c51622ca171b0168d40914afbd9c91816ab0a95a936902"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/calibration_oblique_v1.json",
+      "bytes": 282,
+      "sha256": "e1799097613b048589ee95dd99409ed07f1694b1fd36a4dc0a465cc5ba5d15c8"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/calibration_target_v1.json",
+      "bytes": 243,
+      "sha256": "020adf40abbde6483bbe2aa504fa1a7fee99d4f79e994f212d40e11971da0786"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/camera_hardware_evidence_v1.json",
+      "bytes": 4759,
+      "sha256": "7970d19a9c89cd55bb66352a24d0ace26b020575f28ba59265adb2da6066f4c8"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/compare_cleaned_birds.py",
+      "bytes": 2532,
+      "sha256": "d36e4845656654aa9bbb24186bfbfb554dc24f9467a991de401c99a8ddf3ebf7"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/extension.toml",
+      "bytes": 447,
+      "sha256": "5d2b72b94b420864990402f730b935fca931ab6a63c71c38fb5498a7ff8bddda"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/fly_petrel.py",
+      "bytes": 2122,
+      "sha256": "959c88948d8fdf1bac53b9476d47a19c2689881218f5337add8c8098b9bc2562"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/ocean_medium_engineering_v1.json",
+      "bytes": 2947,
+      "sha256": "02cea7a20707222dd01134716b933b2838fb8e2546c9d28029557e2a1a458d0a"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/rebuild_scene.py",
+      "bytes": 3985,
+      "sha256": "b7c2952b15940fd60b7f40b96eb2bbea88d5a2968479dd9274156084dda5cc99"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/survey_environment_v1.json",
+      "bytes": 1561,
+      "sha256": "ea35ccdc358b4407fd5027c8ffc8aa105aa7c252a41dd2ad606a0e0c9e0f943f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config/survey_v1.json",
+      "bytes": 4622,
+      "sha256": "f8b67c9a8521a3522112592be9191da46debbf5a9f1f6287f8311164de6b44ff"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/config.extension.toml",
+      "bytes": 393,
+      "sha256": "13a193dbec53dfc0dc304c0cb75c77998d85d34addcbc439792d8e538c1f35e6"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/__init__.py",
+      "bytes": 574,
+      "sha256": "5542e446be96bec5a2ecd635a9ab08954846a4070d816eff40315d7dd995b76f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/api.py",
+      "bytes": 168,
+      "sha256": "7a418e9d884ca7a2d047fe4547a9a93742f54cf30116804ae6e09b77dbb5df8d"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/bartlett_geometry.py",
+      "bytes": 5091,
+      "sha256": "741cad9548608693f91380db9543d6de8d4bf47b96cf05bb6c26c133dec0c262"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_capture.py",
+      "bytes": 5481,
+      "sha256": "4b4e6faec88f8d7562fd88f8a9e0859d567af8e84ac2de6f0938b27eb8f92461"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/calibration_geometry.py",
+      "bytes": 9978,
+      "sha256": "56908d2d2bbe3efa5c80f82723e8ee62d9cf0bb27761bc80f2e6fc9da98a147c"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/camera.py",
+      "bytes": 15100,
+      "sha256": "df09b25ff91475a8b053655b60813b5e037dbadbc852240afdc8376b4b6913dc"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/camera_math.py",
+      "bytes": 5261,
+      "sha256": "daa47feded36e3aeb9d2205fb9841b7c4efac0d1a286801895f0c133ba88b4df"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/capture_projection.py",
+      "bytes": 4884,
+      "sha256": "1ac66e44d62a31da3747691702f90bf82f10adf3af3772c11656f83f149a5021"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/capture_state.py",
+      "bytes": 98,
+      "sha256": "3f2353e95ff673b4c87844a51058e1dd43c46935cb2c054cb8f622c2432e9dab"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/cetacean.py",
+      "bytes": 33242,
+      "sha256": "96c0be5afd568542616bb43d7abc698754cf9313832328105b24ab9fd8fe394e"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/cetacean_gallery.py",
+      "bytes": 20777,
+      "sha256": "49744e0f8b18d1e62ec42a8fb961135b85478c451fd555a7954bfb56b713a687"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/cetacean_motion.py",
+      "bytes": 4265,
+      "sha256": "73b60898bfaa4f446dcbd4d250741899a11a5838202ae9d66e9da73edeed5011"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/config.py",
+      "bytes": 472,
+      "sha256": "fb093faf523d56a8b0b06b1d5a556decf6332e27caea60d9924acb80f59e66a6"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/environment.py",
+      "bytes": 8732,
+      "sha256": "c9885d27786c48a99bb853c24867665017aa0bd4902ca1db39aa924aef537c3c"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/extension.py",
+      "bytes": 2464,
+      "sha256": "47032b731eee2c6a01bd3b59087d63ecd7af1fb9156f073b7d3720dcf4227731"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/gentle_environment.py",
+      "bytes": 6329,
+      "sha256": "3e215e9aa7163e88e3afaeff6d7dcc25c2cfce5ddbc85f71d03de0db45731132"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_api.py",
+      "bytes": 1390,
+      "sha256": "0fbe24dd16dc05e922cd8def16a8216d5fa957bfa785bd568b9aa65989694e22"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_camera.py",
+      "bytes": 4463,
+      "sha256": "2f00c98e11d195226e12dfce66a7c2140431efa31bebf78b812faba94f9fc3c5"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_maps.py",
+      "bytes": 3601,
+      "sha256": "c27e832a92a66c33e67561a26031e4079f02c594fa61f04f51718a18262774d7"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/hidef_marine.py",
+      "bytes": 27435,
+      "sha256": "ad861016111964fb2dc4056099cc5b3cc484135973544bfb2ce69e218d16dc40"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/movement.py",
+      "bytes": 1741,
+      "sha256": "cbb251d2b15e574b3f0cea1ff7d782e23a32d94b48b0badb8f3542ec348105d0"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/native_tiles.py",
+      "bytes": 9606,
+      "sha256": "1ed26c4733c18fb8b23f5405753f8d8bbc5495691ac1899af4e50d6645127de7"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py",
+      "bytes": 34467,
+      "sha256": "3e8cc37bbd0cc93c7eade03386cf7442fdb98288ca1b742710c4873e9d37d940"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_enclosure.py",
+      "bytes": 4550,
+      "sha256": "9c13039340ef06377ca1102087872ae3963a0bc5dd6befe69edf30fc0581b410"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium.py",
+      "bytes": 12728,
+      "sha256": "fd256dac19b0a2b4b908391e6690103d7b11d63df6d7853985c15281afeed25f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean_medium_diagnostics.py",
+      "bytes": 25162,
+      "sha256": "1154e43349f69890e622301c2e8053baca9b3fe48417a63b1e085e670d206986"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/petrel_api.py",
+      "bytes": 3296,
+      "sha256": "6e082094fdc9deb591b880acbd7071a0b29d099e224531ebd17d1ddf603f3f53"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/petrel_playback.py",
+      "bytes": 7262,
+      "sha256": "003e74c7e171b2e5c18568b564fd4e4b37bea20ad1540014566190a2ec29e5a4"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/scene_diagnostics.py",
+      "bytes": 7226,
+      "sha256": "8966b60c15310b549bb7376cec38492efab9a13d6955b9661f84d2520b336bac"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/scene_setup.py",
+      "bytes": 10376,
+      "sha256": "ffb12b170423064f7e7c00a5865e34aac16fb16389098a01b331bcf57267f8e1"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/sdk_tile_capture.py",
+      "bytes": 7842,
+      "sha256": "48409fbe48a98e3f5df227c9e9362857eb05c6ef7faea77a1fc5b5b3ca17c26e"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py",
+      "bytes": 6771,
+      "sha256": "d02aff09cdc034e45bc7d490b0a1e2f748679a0647b060f60bbe0c889942ff00"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py.backup",
+      "bytes": 2530,
+      "sha256": "12fb37ac45f7b553c274bba01e8e2ce08622c6609f66b855e4ce3f4c19321e2b"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py.before_animation",
+      "bytes": 33312,
+      "sha256": "bb6035ea89f3c4d757034f679850498401e3a03916f24675633a046046d65cf3"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py.before_environment",
+      "bytes": 24648,
+      "sha256": "4ca932cc3bc09519b342845758b7b2127abc7dc2d55962e45a9a8bb12992e7f7"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py.before_ocean",
+      "bytes": 5466,
+      "sha256": "0c66525f77a65297d43e818768161cbb1e34a088e8d65cf66a48d1de6446c703"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py.before_smooth_normals",
+      "bytes": 30761,
+      "sha256": "318dace6b47c0fad7cec6ed0265be06f2b0402523c5b1a0c89a39be19cc2900f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/service.py.before_water",
+      "bytes": 19523,
+      "sha256": "8bceae888636ecf915d54d389efd2bd9b2f5f85ec00b6359b7d82c706081b1f6"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py",
+      "bytes": 5241,
+      "sha256": "499f8a0167293cd38457c79bcd772daa7b8e78d559a037042114de57e088f504"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/sony_api.py",
+      "bytes": 955,
+      "sha256": "5148fb88f03510791e6918ed5f7c84f32bb928841e9d6939a91c466f9142261a"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/sony_camera.py",
+      "bytes": 4576,
+      "sha256": "aa07e8eb489b7f85be1f92b3911c4ee83c9a7f8238f5d5534ef050a0a1f0b59c"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/survey_environment.py",
+      "bytes": 3529,
+      "sha256": "64c5e083ecf5ff0841a7ad15f1174f3d840d8f166d02b8b3162e9015900ffee5"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/survey_gallery.py",
+      "bytes": 8334,
+      "sha256": "005fb920247f85d039debae8ca35f54ac7d06316d3a1ae42fff9aa0e3cd8e718"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/survey_spec.py",
+      "bytes": 9096,
+      "sha256": "15ad60a00579811092e0b0078897ac56f4f812ac4c3193e1e948a046ee1b3a1b"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_baked_animation.py",
+      "bytes": 1204,
+      "sha256": "4224de05e8e3a5b1941a6724e1326e3403bce1d0aff3d335009bc8df59a82024"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_bartlett_geometry.py",
+      "bytes": 3043,
+      "sha256": "966fb2d693db70c9985085f52e4cc6cb09bd4211422899a4717f94e33c5e01f6"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_calibration_geometry.py",
+      "bytes": 4323,
+      "sha256": "8225a8bb98254229357aaebd05caa73d9d5a10802f79ddbcb1653c251cb2fd48"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_camera_evidence.py",
+      "bytes": 3108,
+      "sha256": "3709cb2e245cfb9261abef09c45e0a64870c707c9925dfa0351c5eaf72abb708"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_camera_math.py",
+      "bytes": 3783,
+      "sha256": "ed4e23cf94f2b4b981065ba61bbef2e5dc4b20e15db45cfb3a855da08c8fb678"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_cetacean_gallery.py",
+      "bytes": 1411,
+      "sha256": "ad3100dde8775fdfdf66dbd4ee4d1d3b0d6d864d24efc42375b0367bb3982dac"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_cetacean_motion.py",
+      "bytes": 2528,
+      "sha256": "4dc647bee3845389bd9a1458c5232b103d30aa622f092d254460fea77bb2d4bf"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_gentle_environment.py",
+      "bytes": 1698,
+      "sha256": "092697e5a344bc0e44dc2143543b629c3d114f4bf586fdf108a54b022c77bc0e"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_hidef_camera.py",
+      "bytes": 2350,
+      "sha256": "6dd1c1d3b90fbd254c5c7d8e6719fff58aa2b424edbdc3e46e345deb61a5eed2"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_movement.py",
+      "bytes": 1496,
+      "sha256": "55e0c370dc679fbd0698ce531f1c14a9ffedb00e01b1d2350374afe9879a1e2e"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_ocean_enclosure.py",
+      "bytes": 2181,
+      "sha256": "446e95bf9499991da9f61e0fb5782f4efba22656c057dec0a00e368ae1d713d6"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_petrel_playback.py",
+      "bytes": 4701,
+      "sha256": "07741dcd77e9acfe836188afb4c6aa7e422687426abed378295bfa6576b0217f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_renderer_snapshot.py",
+      "bytes": 7912,
+      "sha256": "0dadbe31fe117bd3906ea8e58051c3b06c0721a359999a4e5e9e3c1187cff0cf"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_survey_gallery.py",
+      "bytes": 1174,
+      "sha256": "5599a952efb352e3bb2ead1d473d16950e8591f788a589758bf710757de72efa"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_survey_spec.py",
+      "bytes": 3905,
+      "sha256": "fe191f2d136e69ec7fa41a82d84572125fcea049cfd6bb17ee59a93b8ac23ed9"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_underwater_cue.py",
+      "bytes": 2100,
+      "sha256": "af3cd361cb4c339af7e5933ae98e0c15c943c6b6720f01d3363e69c6f1a22cd9"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/tests/test_water_material.py",
+      "bytes": 2134,
+      "sha256": "4ec996bff095eafd3c09f30a7b3d0110ea84eae16e46420ecd605b24277a81ff"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/underwater_api.py",
+      "bytes": 3537,
+      "sha256": "a7c9e578a26311e18ae6484a7b20ab04eacefdef05029b2a64b8de635eee3ea1"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/underwater_cue.py",
+      "bytes": 2147,
+      "sha256": "e527950f77db3de5e57af2334b45790b2333f21e5d2a7b49c075be6e22acf43b"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_diagnostics.py",
+      "bytes": 12143,
+      "sha256": "37749e494407177fc587e661623210f218abcedb8dd68f7e3fb061954135f47f"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_material.py",
+      "bytes": 2158,
+      "sha256": "989a62289312d79727a6aed876d21dbb6f34ad402bdc51de0b9af08a07f22a39"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/water_medium_diagnostics.py",
+      "bytes": 11755,
+      "sha256": "007c5fe418c588a18afcfa295dd2b28692e6f1e1f0c33f4984b819ff19fb18a0"
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/premake5.lua",
+      "bytes": 291,
+      "sha256": "4c6971c3884071a25259b11acdec09c29b8205a0c7acb250c4cbbfb6ca3446e8"
+    },
+    {
+      "path": "source/rendered_template_metadata.json",
+      "bytes": 440,
+      "sha256": "07c3ea486f6662d4ba52b0760ab46131ded5692bac5bc4bb3d3eb63640b6f06f"
+    },
+    {
+      "path": "tools/GEMINI.md",
+      "bytes": 2990,
+      "sha256": "0e0a0e0833b9d982071321d7a9f6b2cf04234c092f28ffd91b0c5e4fbc414600"
+    },
+    {
+      "path": "tools/VERSION.md",
+      "bytes": 8,
+      "sha256": "dcd57827549fa1f2b190fde69eeaf6416b8a2257fbd6c833517aae0afeea9526"
+    },
+    {
+      "path": "tools/aggregate_gama_dataset_v2.py",
+      "bytes": 17498,
+      "sha256": "8effbf8b9dd03c337e6c1e1ae47ba08733b6d43d3c63f646689f411c5de82ff0"
+    },
+    {
+      "path": "tools/analyse_gama_counterfactual.py",
+      "bytes": 6252,
+      "sha256": "2fff8d6c9c0f7927dd56c9b826c4893be68c2ac10e963caa727de62dab6459a9"
+    },
+    {
+      "path": "tools/analyse_tile_diagnostics.py",
+      "bytes": 4711,
+      "sha256": "0687259e621c1dbe7b8f8d5e09cb52dd9d8eea91f77bd7c3c062fbe5c1a318ad"
+    },
+    {
+      "path": "tools/analyze_gama_porpoise.py",
+      "bytes": 15523,
+      "sha256": "d4d9d4ce74f2d11af3384b8ec4cfeae23a275416be99f762df0bfef0ce8ed1c2"
+    },
+    {
+      "path": "tools/audit_hidef_camera.py",
+      "bytes": 8298,
+      "sha256": "b22e19b8b3985d5d881b6e2ab55b698ac9a541ee48439262b8e258ce6e8884dd"
+    },
+    {
+      "path": "tools/bake_dolphin_animation.py",
+      "bytes": 3946,
+      "sha256": "40d843552845301197fcffc0d4549441251022bbf5e411bc31a33a75fef56729"
+    },
+    {
+      "path": "tools/build_gama_porpoise_demo.py",
+      "bytes": 18305,
+      "sha256": "74f8c00c9abcdec74d70b97cef1fdc2f5bb55daee5d945d033a8f9c801a25463"
+    },
+    {
+      "path": "tools/calibrate_porpoise.py",
+      "bytes": 7135,
+      "sha256": "9ee51b2197407d5499cd96bf26efbcb95dfc788a3f23d771fc232323e04d12a3"
+    },
+    {
+      "path": "tools/capture_calibration_target.py",
+      "bytes": 6923,
+      "sha256": "af1b735c00b253029940bc18721d2c1bb06a9e271419652f4e12ab1f72c725ce"
+    },
+    {
+      "path": "tools/capture_gama_dataset_pending_v2.py",
+      "bytes": 25257,
+      "sha256": "aa8e816606e910e616169a2075877ee18d43c5070a51f134900612ec050f53ca"
+    },
+    {
+      "path": "tools/capture_gama_dataset_v2.py",
+      "bytes": 60165,
+      "sha256": "3ba11da3e85ebbe3a82f3bee6e3fec9fd95d3ff6dde7b8afd6675524f38e0725"
+    },
+    {
+      "path": "tools/capture_hidef_marine.py",
+      "bytes": 2321,
+      "sha256": "4cb2416c29e4d4b1cb2dd3e09286e101725df59e52f2d4b1b35a62a29c672cb0"
+    },
+    {
+      "path": "tools/capture_sony_marine.py",
+      "bytes": 182,
+      "sha256": "cbd5212257c180f45f76a59af49cf90fbd0823a15036002f619c3cc57264af53"
+    },
+    {
+      "path": "tools/clean_bird_working_copies.py",
+      "bytes": 6582,
+      "sha256": "dfa88e294b1750262bc57561aaa374a773dbbc911c226273f856496322e5f6c8"
+    },
+    {
+      "path": "tools/containers/Dockerfile",
+      "bytes": 3538,
+      "sha256": "9b9566df187e8f6a7aa7ade100d07f60c4e3268e8a6fc3ed5cf0c2e351f5fb60"
+    },
+    {
+      "path": "tools/containers/entrypoint.sh",
+      "bytes": 4293,
+      "sha256": "7233ec9d17a27eceb6bca0fd8fa95af705c62844bae4986d5f5206266d0aa9ec"
+    },
+    {
+      "path": "tools/containers/upload_kit_artifacts.py",
+      "bytes": 24793,
+      "sha256": "b02349066726390b2aa98f9dbc26f4e0bf9601d5c73c11ad955d5fbd34c2b000"
+    },
+    {
+      "path": "tools/control_petrel_playback.py",
+      "bytes": 952,
+      "sha256": "f3c9a8f481db365e0c9789312f3b39d59acd6c22920d6e347a0d4061be119326"
+    },
+    {
+      "path": "tools/convert_cetaceans.sh",
+      "bytes": 1357,
+      "sha256": "770a348b70089e6bd2a0b3fe87c4fa21d81e8c61f420eb7eabc800b7257b7bb7"
+    },
+    {
+      "path": "tools/deps/kit-sdk-deps.packman.xml",
+      "bytes": 1469,
+      "sha256": "64bcb2925983de3f86ab7644514aa17234c77a4f3b5c7fef32393c5fccfd966a"
+    },
+    {
+      "path": "tools/deps/kit-sdk.packman.xml",
+      "bytes": 273,
+      "sha256": "ed8be335f449a3aa769710c9e313cef255addc767170b57ec365639a84084ccf"
+    },
+    {
+      "path": "tools/deps/pip.toml",
+      "bytes": 1542,
+      "sha256": "17c2dcadd57081fb4ea3c210b8110f36fe169f43bbb153ad77574b34b32e4bb4"
+    },
+    {
+      "path": "tools/deps/repo-deps.packman.xml",
+      "bytes": 1417,
+      "sha256": "ed7b05f8cc3f6eef7c7e40ac65761e5a274f32d9c4bf906c994db91d9565402a"
+    },
+    {
+      "path": "tools/deps/user.toml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/export_gama_dataset_v2.py",
+      "bytes": 13485,
+      "sha256": "4ae35d54a0efd8c242a91319404d9949460dc6cafd45cebd3316277aa9c75a88"
+    },
+    {
+      "path": "tools/fix_guillemot_preview_material.py",
+      "bytes": 1927,
+      "sha256": "e2e1dcab6b2f3562f440fdcb1acfaae5a9dba4a098783701da6397836d5ab333"
+    },
+    {
+      "path": "tools/gama_live.py",
+      "bytes": 9735,
+      "sha256": "debe8a1b98ec1c5be457347d2e37fccc69f0e18c5fedf372a1acfcb5ddb0d974"
+    },
+    {
+      "path": "tools/gama_porpoise.py",
+      "bytes": 15984,
+      "sha256": "6585d102d7a91b5f8d43166f92e634d2b0e3e529b3ee114670e7697954bedc96"
+    },
+    {
+      "path": "tools/gama_trajectory.py",
+      "bytes": 5660,
+      "sha256": "924e5c75acc919bafb66cab19e9ddbe1edd3d627fed5276d2ce4d17d789a3730"
+    },
+    {
+      "path": "tools/gltf_to_usd.py",
+      "bytes": 3644,
+      "sha256": "2742296d9c4aa41dbf8fbb7eb5d6b9a9baee297522770a8100653d70a16c6821"
+    },
+    {
+      "path": "tools/inspect_gama_bottlenose.py",
+      "bytes": 1715,
+      "sha256": "02266f0da01dbcabc13b08e4da3634caccdd949de1783cffa43f8cd433543488"
+    },
+    {
+      "path": "tools/inspect_petrel.py",
+      "bytes": 4918,
+      "sha256": "5244041170e6a901d7d9cfb7582a55de5c1e479578aea89a47da3a26fcc960ea"
+    },
+    {
+      "path": "tools/inspect_porpoise.py",
+      "bytes": 3738,
+      "sha256": "75417b58857d22e8ba56ada6b4e2f55a5a2d6427062fca2bff06f7b04462041b"
+    },
+    {
+      "path": "tools/package.bat",
+      "bytes": 43,
+      "sha256": "472e22beaf077db7a2eef2b76b52f2f9dc4d010f844f212250618197048b6643"
+    },
+    {
+      "path": "tools/package.sh",
+      "bytes": 110,
+      "sha256": "ff81c9c02d77592980f7c20229c63f6461729697ab6357c0c447ba15dddb40de"
+    },
+    {
+      "path": "tools/packman/bootstrap/configure.ps1",
+      "bytes": 28404,
+      "sha256": "cd603fee4bf959ecc42f5fb5e255fd28517f2d245a8d411b1a3f2c8c7314e1ae"
+    },
+    {
+      "path": "tools/packman/bootstrap/install_package.py",
+      "bytes": 6575,
+      "sha256": "d4281e0fee9bb28fd6b5069d9a1c0e3609d29c25aae5d0eb6df902156fe6e675"
+    },
+    {
+      "path": "tools/packman/config.packman.xml",
+      "bytes": 210,
+      "sha256": "2383b8546ceed6a9ba93c3e4537bfdacc2c721405a58124f2e22f503a28d7c0f"
+    },
+    {
+      "path": "tools/packman/packman",
+      "bytes": 7678,
+      "sha256": "48810e559c081937b5ff280e2adec342b281fb664c79ddc92119fb13bff1a065"
+    },
+    {
+      "path": "tools/packman/packman.cmd",
+      "bytes": 3588,
+      "sha256": "d03c344045f076612f311e3912c0010c2f1cac036e12cd782a53734e256045f6"
+    },
+    {
+      "path": "tools/packman/packmanconf.py",
+      "bytes": 5158,
+      "sha256": "9f6cd101fb30c0c1c1592d810c078901a4057cd529613e5c6b14e21fc4cfa700"
+    },
+    {
+      "path": "tools/packman/python.bat",
+      "bytes": 1067,
+      "sha256": "9bdbb49f2f2dae2e7b79c3bcad52864733ca017f5539dfc74284316e26b6e816"
+    },
+    {
+      "path": "tools/packman/python.sh",
+      "bytes": 1283,
+      "sha256": "0e4945cae1dfb30be0c4e3e3ba2bc1af767d2158427ac82da5cf8e926a30ded6"
+    },
+    {
+      "path": "tools/plot_gama_bottlenose.py",
+      "bytes": 2317,
+      "sha256": "3889ddbd288b5286a0ecd80e73cbadf4ae60cfc71b939c0beef21a27b279449b"
+    },
+    {
+      "path": "tools/plot_gama_porpoise_m5.py",
+      "bytes": 17654,
+      "sha256": "9dcf1c5be546d4a9b9dec9e51fa61323a3917275e82707a43444b3f3c8663d39"
+    },
+    {
+      "path": "tools/preview_petrel_rig.py",
+      "bytes": 2621,
+      "sha256": "812e90b268c47cb4a99868c482cc6b34298b0472b33012c1c20c7d05ad188ada"
+    },
+    {
+      "path": "tools/preview_porpoise_in_kit.py",
+      "bytes": 4580,
+      "sha256": "f33b8f585bf907a4d26bfe2ac56c6241651f752a76367b013ccf462f937b5887"
+    },
+    {
+      "path": "tools/repoman/airgap/__init__.py",
+      "bytes": 956,
+      "sha256": "f634cf6fdbae2169226918c33cc1ec86824a34d6e999ced7ed8b1f5aff665155"
+    },
+    {
+      "path": "tools/repoman/airgap/api.py",
+      "bytes": 13639,
+      "sha256": "346ac1ca75b293bbc6ba44f2b3441e0683123e06bb42f5a3e3286c815fa59e90"
+    },
+    {
+      "path": "tools/repoman/airgap/cache_clear.py",
+      "bytes": 5201,
+      "sha256": "a4a750892474391ef45c126a44e741e0e1b99727db1bf0083ac4d693f3e3933c"
+    },
+    {
+      "path": "tools/repoman/airgap/inject.py",
+      "bytes": 3007,
+      "sha256": "48de7237f2345bbac92124e6d2dc473628ab2ee287452501688f7c737f62b7b0"
+    },
+    {
+      "path": "tools/repoman/airgap/network.py",
+      "bytes": 3750,
+      "sha256": "5d5215bbf4b4cd0d8f83f345c031ea2f55635fcedacc37b7d1daef74d4ad9798"
+    },
+    {
+      "path": "tools/repoman/airgap/precache_exts.py",
+      "bytes": 2692,
+      "sha256": "941a2006692380a5adee3c89e294cab2b5cd48daf0480b7b77264b040019a351"
+    },
+    {
+      "path": "tools/repoman/airgap/types.py",
+      "bytes": 3539,
+      "sha256": "e4a3b7231deee449407e842b784b08df27576eadf429e533ec5bce334146c43c"
+    },
+    {
+      "path": "tools/repoman/airgap_tool.py",
+      "bytes": 7994,
+      "sha256": "a71b43d952224f397c595bfbfecf1302b9600f2babd266227b01ff9ead5fff59"
+    },
+    {
+      "path": "tools/repoman/generate_etm_files.py",
+      "bytes": 7845,
+      "sha256": "eef8ac79c835cea1ef277965d5cfd68144e0149c4124dc916ea2338e5c1f3647"
+    },
+    {
+      "path": "tools/repoman/get_kit_kernel_hash.py",
+      "bytes": 2777,
+      "sha256": "03294e1101f70e6fc8ad2935f2cd96365c47351abd1919718841c249c79305d2"
+    },
+    {
+      "path": "tools/repoman/poetry.lock",
+      "bytes": 632,
+      "sha256": "64a593ca483b76c823dedd407d4b9c78156919da9a672e4ad38989d61e02d93c"
+    },
+    {
+      "path": "tools/repoman/post_build.py",
+      "bytes": 26527,
+      "sha256": "54497fcbe206dfe8837eb2eb837ea0425acb8c0a1ff6ce754116a9e62b4d11f8"
+    },
+    {
+      "path": "tools/repoman/repoman.py",
+      "bytes": 1651,
+      "sha256": "b5799c51b6f066e6ede6b17c614dabeff7a2f655682d2ad780086197b8d1f5b8"
+    },
+    {
+      "path": "tools/repoman/repoman_bootstrapper.py",
+      "bytes": 12315,
+      "sha256": "ac621c88ad6cffac5bb92999e2cc5c663da11856d29af690a4fe6381508f3930"
+    },
+    {
+      "path": "tools/repoman/requirements.txt",
+      "bytes": 240,
+      "sha256": "e4d76f4771a36f0f87140696132da186575cd40717d5b11f02205fdcfbb88720"
+    },
+    {
+      "path": "tools/repoman/resolve_version_locks.py",
+      "bytes": 44725,
+      "sha256": "a73dae6ea2f369275c32687f2520a67657dae1f4bdffc15c0bf7b75a866ae69a"
+    },
+    {
+      "path": "tools/repoman/scripts/kit_precache_airgap.py",
+      "bytes": 4500,
+      "sha256": "92129a32cc63597cfdbef88cb297b3c032e6be211f6d2c4da85fce82a9c493d7"
+    },
+    {
+      "path": "tools/repoman/tests/conftest.py",
+      "bytes": 2684,
+      "sha256": "c903a4b4b2d713b08dbb9fb3795192c798a7266edad6242d9d067014be4242de"
+    },
+    {
+      "path": "tools/repoman/tests/test_dump_resolved_dependencies.py",
+      "bytes": 7934,
+      "sha256": "5b7edb14bb33fb68898b8a4d49c0aa4c8c39e6eccb8ce26ceb7963587c9018ce"
+    },
+    {
+      "path": "tools/repoman/tests/test_generate_etm_files.py",
+      "bytes": 3177,
+      "sha256": "9cab7c4ab99ef236c835e1047fe6e9091d8afb19953422d9879f376b039a77a5"
+    },
+    {
+      "path": "tools/repoman/tests/test_pipeline_release.py",
+      "bytes": 28093,
+      "sha256": "b4d4659b555ee8e689dcb8ffc492741b96bd92d42fc888e10fd117a5b6546ca3"
+    },
+    {
+      "path": "tools/repoman/tests/test_publish_dry_run.py",
+      "bytes": 1244,
+      "sha256": "4fa89de540bd21cd9ce31900505e0f30617db0c19396e538655228ad14840a02"
+    },
+    {
+      "path": "tools/repoman/tests/test_publish_filename_parsing.py",
+      "bytes": 2273,
+      "sha256": "67d35061f46ab176755a441c44fdfe729e49170d0c76b78709de901d21393a32"
+    },
+    {
+      "path": "tools/repoman/tests/test_resolve_version_locks.py",
+      "bytes": 18524,
+      "sha256": "b5272239ff08e86b6d02145263dcc6023c62c13f845ff63c89769e7b495765dc"
+    },
+    {
+      "path": "tools/repoman/tests/test_verify_release_readiness.py",
+      "bytes": 1566,
+      "sha256": "7d3d4f2f7bf0256b0fbfff27ccc6d8968701a2d14b595634c16fad6bb5d8b2bc"
+    },
+    {
+      "path": "tools/repoman/tests/test_version_locks_common.py",
+      "bytes": 11460,
+      "sha256": "3175937c8101d6c3bab4a53fcfd8efd8dd4d8dd17b3a5d9ec82d666eb463411c"
+    },
+    {
+      "path": "tools/repoman/update_version_locks.py",
+      "bytes": 13494,
+      "sha256": "9e942446ca50052778d9d670c918c957148974c41ccca9ca78e4456c167df786"
+    },
+    {
+      "path": "tools/repoman/verify_deps.py",
+      "bytes": 3669,
+      "sha256": "9600c461abe78661444d611a9489c62c0a2c3e20855aca45ca9116304a762590"
+    },
+    {
+      "path": "tools/repoman/verify_kat_packages.py",
+      "bytes": 13865,
+      "sha256": "c361fc2704f4e2c846520149f427dc6e967f0d08f934f800a302c7d7417a86b6"
+    },
+    {
+      "path": "tools/repoman/verify_release_readiness.py",
+      "bytes": 17179,
+      "sha256": "0ec3e1068e3cd03a1022bff4d6b4648771cef204f93edbecad30e9668d8f02fc"
+    },
+    {
+      "path": "tools/repoman/version_locks_common.py",
+      "bytes": 24588,
+      "sha256": "6df47a06854d5d459cd6902cc3a26a02a5f5354f498a41c04b3306034abed9fd"
+    },
+    {
+      "path": "tools/review_hidef_marine.py",
+      "bytes": 4977,
+      "sha256": "5675f6a22b85623fb91f7fd4cb90618fe840a88990a7ba381fe9ae36c32e0704"
+    },
+    {
+      "path": "tools/review_porpoise_top.py",
+      "bytes": 1422,
+      "sha256": "24a3fde430951ed396929eb7f23b07b21d6dd61f82d4e7f93c19216a363f6942"
+    },
+    {
+      "path": "tools/rig_petrel.py",
+      "bytes": 10920,
+      "sha256": "408f3cb7335d97a14cf66394f4bd1d2410b68bc4ff7c1540f5d057d3b9d3a8b7"
+    },
+    {
+      "path": "tools/run_gama_porpoise_m5.py",
+      "bytes": 7849,
+      "sha256": "8cf8ff09b23a4157526633734355f6872b01d44b85c02291547d673d3830c7de"
+    },
+    {
+      "path": "tools/test_capture_projection.py",
+      "bytes": 4289,
+      "sha256": "b7ce8159afe3ff534040905cee15954f7494e51fe319ad38ef88b45f3819f7cd"
+    },
+    {
+      "path": "tools/test_gama_actor.py",
+      "bytes": 6318,
+      "sha256": "875da8f880cae8833b2648a85ccbe1797f7cced3bafb7b7c6c14b64c2668f97e"
+    },
+    {
+      "path": "tools/test_gama_actor_v2.py",
+      "bytes": 25626,
+      "sha256": "1eb92d5936546f1de7a8d75657ba006d58ca9cefa418817e859bf2d88537b14f"
+    },
+    {
+      "path": "tools/test_gama_capture_preflight.py",
+      "bytes": 1769,
+      "sha256": "b8928f62f9b8da6be634ee69bc4c1335940b4402ab8688d00ca6447e0ccd41d4"
+    },
+    {
+      "path": "tools/test_gama_counterfactual.py",
+      "bytes": 1023,
+      "sha256": "61b25f7e2dc9b97b449422dd98b78b1a218ff0ed125c8b9ce36e61c87bd3b728"
+    },
+    {
+      "path": "tools/test_gama_dataset_client.py",
+      "bytes": 36187,
+      "sha256": "3824210fbc376dc55b7bcd2ff6b00a29c88b766a01b8c5f8eb50f9045ab53586"
+    },
+    {
+      "path": "tools/test_gama_dataset_pending.py",
+      "bytes": 20923,
+      "sha256": "6ea9907ded505876b316263bdf6edba9d117ac530de459fb1ec51b769080960c"
+    },
+    {
+      "path": "tools/test_gama_dataset_routes.py",
+      "bytes": 2989,
+      "sha256": "009ae50eec727a0470e07ecf5c56b2b33bb435e4a311672d27da471575edfe1a"
+    },
+    {
+      "path": "tools/test_gama_dataset_state.py",
+      "bytes": 14106,
+      "sha256": "50b19da8b753963f298988afaed258fe2e0006a14385e75552cf7f1ad53b3968"
+    },
+    {
+      "path": "tools/test_gama_dataset_transaction.py",
+      "bytes": 13669,
+      "sha256": "5f4327f83177360adaf83466326fab609710f106abc1301e03f383aa13f537f1"
+    },
+    {
+      "path": "tools/test_gama_exchange.py",
+      "bytes": 7569,
+      "sha256": "e9d8fae8ef310d2f7f12c4802f5677f11cfec12d7096f7ec5d89f754856774b9"
+    },
+    {
+      "path": "tools/test_gama_exchange_v2.py",
+      "bytes": 20276,
+      "sha256": "fd262f086636b1f3352c7836135b519d1211756478ba27e07ac845c0f578c214"
+    },
+    {
+      "path": "tools/test_gama_live.py",
+      "bytes": 2173,
+      "sha256": "fa0f3e47cade2025c979b65419b34055807f019c3179894ce52002ad48e72177"
+    },
+    {
+      "path": "tools/test_gama_paired_state.py",
+      "bytes": 16830,
+      "sha256": "688c4e0660dfa5f1ede4a9255d9f4542a1e0e51e18080be5f41ca3400e299565"
+    },
+    {
+      "path": "tools/test_gama_paired_transaction.py",
+      "bytes": 23361,
+      "sha256": "49f6fc9271aff515531a1124d32358ecc4f351b24503cd66d0ff60e671d32e51"
+    },
+    {
+      "path": "tools/test_gama_porpoise.py",
+      "bytes": 7409,
+      "sha256": "be1dd9d9dcf6db33d7eb98aa125e4a1a2b752ac2ff5639ef465b3b3d0da596dc"
+    },
+    {
+      "path": "tools/test_gama_porpoise_analysis.py",
+      "bytes": 9709,
+      "sha256": "a67c903a01ecc9f4c1eb1a1e21d1ad739bb3646673a12d7a1e3cb9ab73294c99"
+    },
+    {
+      "path": "tools/test_gama_v2_stage.py",
+      "bytes": 8352,
+      "sha256": "046502a88097f637ad2f7c91c11adee4b3cb8bdb7b962eb43f7c527f451138b6"
+    },
+    {
+      "path": "tools/test_gama_v3.py",
+      "bytes": 13948,
+      "sha256": "74d159833affe3cfd48a0f6daaad1ecacc089a7e39d139cb682c1feafdebad0a"
+    },
+    {
+      "path": "tools/test_hidef_marine.py",
+      "bytes": 8812,
+      "sha256": "102b20e67fe88249be2115b1d67856c8684e7570b52fb2fe5d5025164436af16"
+    },
+    {
+      "path": "tools/test_native_tiles.py",
+      "bytes": 4444,
+      "sha256": "6b7d74ca1e50f17ca9770c38f6e3448f811772c7231c37c3999408f04462537c"
+    },
+    {
+      "path": "tools/test_sony_camera.py",
+      "bytes": 3719,
+      "sha256": "9156df214039a6689e3e5e1ea183e36c9d1f3e2df26a3fe203114c9a96b9f79a"
+    },
+    {
+      "path": "tools/test_tile_diagnostics.py",
+      "bytes": 2847,
+      "sha256": "b46f35022322d765c52cd0e7751de0145f73abc82ac93affd99bd0747552c155"
+    },
+    {
+      "path": "tools/validate_bartlett_camera.py",
+      "bytes": 6696,
+      "sha256": "91a9c8f13666c655b900895b3b335c8814da6719564cc379dd215cde99346f02"
+    },
+    {
+      "path": "tools/validate_hidef_reconstruction.py",
+      "bytes": 2550,
+      "sha256": "7e211b54c27ec6fda1fec1b18ef00a080010a393520bae460cb95269d45603f6"
+    },
+    {
+      "path": "tools/validate_petrel_usd.py",
+      "bytes": 3947,
+      "sha256": "45588f905b3d58831e0036670d4b75df574c3ff1b766b5f98ec2067ed972dbac"
+    },
+    {
+      "path": "tools/verify_capture_projection.py",
+      "bytes": 4960,
+      "sha256": "ae0cdc16a7fa2e3ec1082aad75dc16e303d6f4441792887347a69538052839d4"
+    },
+    {
+      "path": "tools/verify_gama_capture.py",
+      "bytes": 8771,
+      "sha256": "8459d55f6632b97b3ee07c66ee8bf20e77197f335139856f5af3647b57fbceae"
+    },
+    {
+      "path": "tools/verify_gama_m8_demo.py",
+      "bytes": 5311,
+      "sha256": "fe9b491e575ad1280052275623ead3f318a1e03b80c5438cb2dd2451c6821e57"
+    },
+    {
+      "path": "tools/verify_gama_marine.py",
+      "bytes": 4214,
+      "sha256": "dbcb75cc260974c3ca2ed225c16c726b82c5d506b0744f62c6a3784db6f9b0d8"
+    },
+    {
+      "path": "tools/verify_gama_paired_live.py",
+      "bytes": 32316,
+      "sha256": "baa8db9cd0dc1585d6ade4b95a6c2596794d129f27ede2d9c5d95e4a7eb4f741"
+    },
+    {
+      "path": "tools/verify_gama_porpoise_live.py",
+      "bytes": 12380,
+      "sha256": "cf865ab59457a0f76388bff4c62a418c1145d0add6ba32d32839e1d57d850493"
+    },
+    {
+      "path": "tools/verify_tile_diagnostic.py",
+      "bytes": 2680,
+      "sha256": "d18c2f2cbf1ebfac90d2d032e889fae9b6b64034620bda3a85c4d16e50c63084"
+    }
+  ],
+  "checkpoint_artifacts": [
+    {
+      "path": "artifacts/scene_checkpoints/checkpoint_b00kdhw8/scene.usdc",
+      "bytes": 4453397,
+      "sha256": "60d87c4aac12d373d5700cfb836f529a285e21053b5ec9c546a87bcab4c360fa"
+    },
+    {
+      "path": "artifacts/scene_checkpoints/checkpoint_b00kdhw8/metadata.json",
+      "bytes": 4325,
+      "sha256": "8b2e6c67a3fefa63f498854763b9693dab715e920c7c4e055f3a1f89870f378c"
+    },
+    {
+      "path": "artifacts/scene_checkpoints/checkpoint_1j9vou37/scene.usdc",
+      "bytes": 4453397,
+      "sha256": "e4f48fc7744069da39b28269ef127f974a9fdc7e35ec9f9473b02d8d2a325c5a"
+    },
+    {
+      "path": "artifacts/scene_checkpoints/checkpoint_1j9vou37/metadata.json",
+      "bytes": 4325,
+      "sha256": "a5a0667ef01c8a81a5cccc8e949299f591f90832285e9b58865ff0d074eea5b3"
+    }
+  ],
+  "asset_dependencies": [
+    {
+      "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+      "bytes": 4049975,
+      "sha256": "ab9d77b06378b834231ec4f815f4f0eb532f7b1623cb401c37079ccddd0e5c93"
+    },
+    {
+      "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+      "bytes": 7495724,
+      "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe"
+    },
+    {
+      "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+      "bytes": 5598959,
+      "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13"
+    },
+    {
+      "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/source/license.txt",
+      "bytes": 760,
+      "sha256": "3edddd50d656b7820514220c6c3f5654a81b4afb8fc5b66e1bd7cfb05afd63c8"
+    }
+  ],
+  "append_only_logs_excluded": [
+    "qa/m2/live_restart/kit_process.log",
+    "qa/m2/live_restart/launcher.log"
+  ],
+  "mutable_verification_excluded": [
+    "qa/m2/final_verification.json"
+  ],
+  "new_gama_model_executed": false,
+  "body_animation_integrated": false,
+  "milestone_2_complete": true
+}

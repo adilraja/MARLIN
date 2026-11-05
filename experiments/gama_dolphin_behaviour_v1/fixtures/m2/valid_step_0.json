@@ -1,0 +1,35 @@
+{
+  "schema_version": "3.0",
+  "model_version": "m2_manual_fixture_v1",
+  "run_id": "m2_engineering",
+  "step_index": 0,
+  "simulation_time_s": 0.0,
+  "simulation_step_s": 1.0,
+  "seed": 17,
+  "agents": [
+    {
+      "agent_id": "Bottlenose_001",
+      "species": "bottlenose_dolphin",
+      "behavioural_state": "steady_swim",
+      "horizontal_position_m": [
+        3.0,
+        7.0
+      ],
+      "heading_deg": 0.0,
+      "pitch_deg": 0.0,
+      "roll_deg": 0.0,
+      "speed_mps": 1.0,
+      "vertical_velocity_mps": 0.0,
+      "vertical_reference": "mean_sea_level",
+      "depth_m": 0.8,
+      "state_entry_time_s": 0.0,
+      "transition_duration_s": 2.0,
+      "animation_clock": {
+        "version": "constant_rate_v1",
+        "epoch_time_s": 0.0,
+        "epoch_phase_cycles": 0.25,
+        "rate_hz": 0.8
+      }
+    }
+  ]
+}

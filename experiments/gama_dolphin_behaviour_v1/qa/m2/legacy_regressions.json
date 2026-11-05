@@ -1,0 +1,52 @@
+[
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "tools/test_gama_exchange.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.006s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/usr/bin/python3",
+      "-B",
+      "tools/test_gama_exchange_v2.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 0.003s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+      "-B",
+      "tools/test_gama_actor.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.450s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+      "-B",
+      "tools/test_gama_actor_v2.py"
+    ],
+    "returncode": 0,
+    "stdout": "{\"composed_transform_comparisons\": 55, \"heading_tolerance_deg\": 0.0001, \"maximum_heading_error_deg\": 3.6397059375303797e-06, \"maximum_position_error_m\": 1.2560739669470201e-15, \"position_tolerance_m\": 1e-05}\n",
+    "stderr": "........................\n----------------------------------------------------------------------\nRan 24 tests in 0.306s\n\nOK\n"
+  },
+  {
+    "command": [
+      "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+      "-B",
+      "tools/test_gama_v2_stage.py"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.026s\n\nOK\n"
+  }
+]

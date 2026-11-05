@@ -1,0 +1,19 @@
+{
+  "prepared_utc": "2026-11-05T13:26:56.963620+00:00",
+  "tolerance_sha256": "4cf158b3c563ec3e55e6dd5cdbd8b3252509483064bf325bd0767c70c286eb47",
+  "scope": "M2 contract, owned static Model 61A and simulation-time controls; hand-authored fixtures only",
+  "tests": [
+    "valid and invalid complete schema",
+    "cardinal headings and composed Rz(roll)*Rx(-pitch)*Ry(heading) matrices",
+    "unit conversions at 1 and 0.01 metres per unit",
+    "depth relative to fixed mean Y=0 without wave following",
+    "zero speed and frozen animation phase",
+    "shortest-arc heading wrap and bracket-only interpolation",
+    "duplicate, stale, gap, run change and missing-message holds",
+    "pause/resume/reset without wall-clock advancement",
+    "private-layer acquire/release, conflicting pose writer, capture gate and foreign-stage cleanup",
+    "unchanged calibration and static skinned body; no bound animation or root-motion source",
+    "legacy v1/v2 regressions and live Kit Services lifecycle/coexistence"
+  ],
+  "new_gama_model_or_animation_integration": false
+}

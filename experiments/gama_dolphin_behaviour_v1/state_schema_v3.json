@@ -1,0 +1,164 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "3.0"
+    },
+    "model_version": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"
+    },
+    "step_index": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "simulation_time_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "simulation_step_s": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "agent_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"
+          },
+          "species": {
+            "const": "bottlenose_dolphin"
+          },
+          "behavioural_state": {
+            "enum": [
+              "steady_swim",
+              "turn",
+              "descent",
+              "submerged_swim",
+              "ascent"
+            ]
+          },
+          "horizontal_position_m": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "heading_deg": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMaximum": 360
+          },
+          "pitch_deg": {
+            "type": "number",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "roll_deg": {
+            "type": "number",
+            "minimum": -180,
+            "maximum": 180
+          },
+          "speed_mps": {
+            "type": "number",
+            "minimum": 0
+          },
+          "vertical_velocity_mps": {
+            "type": "number"
+          },
+          "vertical_reference": {
+            "const": "mean_sea_level"
+          },
+          "depth_m": {
+            "type": "number",
+            "minimum": 0
+          },
+          "state_entry_time_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "transition_duration_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "animation_clock": {
+            "type": "object",
+            "properties": {
+              "version": {
+                "const": "constant_rate_v1"
+              },
+              "epoch_time_s": {
+                "type": "number",
+                "minimum": 0
+              },
+              "epoch_phase_cycles": {
+                "type": "number",
+                "minimum": 0,
+                "exclusiveMaximum": 1
+              },
+              "rate_hz": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "version",
+              "epoch_time_s",
+              "epoch_phase_cycles",
+              "rate_hz"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "agent_id",
+          "species",
+          "behavioural_state",
+          "horizontal_position_m",
+          "heading_deg",
+          "pitch_deg",
+          "roll_deg",
+          "speed_mps",
+          "vertical_velocity_mps",
+          "vertical_reference",
+          "depth_m",
+          "state_entry_time_s",
+          "transition_duration_s",
+          "animation_clock"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "model_version",
+    "run_id",
+    "step_index",
+    "simulation_time_s",
+    "simulation_step_s",
+    "seed",
+    "agents"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MARLIN M2 v3 single Model 61A state",
+  "description": "exchange_v3.validate_step additionally enforces finite numbers, clock t=index*dt (1e-9 s), state-entry/epoch <= t, frozen phase at zero speed, and StepBuffer continuity/order/run rules. JSON Schema alone is not the complete acceptance contract."
+}

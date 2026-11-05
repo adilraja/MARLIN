@@ -1,0 +1,617 @@
+{
+  "passed": true,
+  "checks": {
+    "checkpoint_restored_before_testing": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "checks": {
+          "camera": true,
+          "resolution": true,
+          "fill_frame": true,
+          "renderer_settings": true,
+          "display_options": true
+        },
+        "phase": "Reconstructed ocean/chase; not an exact previous accumulator resume",
+        "new_animals_spawned": false,
+        "new_animation_bound": false
+      }
+    },
+    "v1_v2_preserved_and_v3_present": {
+      "passed": true,
+      "actual": null
+    },
+    "starts_unowned": {
+      "passed": true,
+      "actual": null
+    },
+    "acquire": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "ownership_token": "aGxD_-lNiZDcOsHH4Q_Rmfkye1cr5M0A",
+        "actor_path": "/MarlinGamaBottlenose/Bottlenose_001",
+        "agent_id": "Bottlenose_001",
+        "species": "bottlenose_dolphin",
+        "meters_per_scene_unit": 0.01,
+        "calibration": {
+          "profile": "model61a_existing_engineering_v1",
+          "asset": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+          "meters_per_native_unit": 1.0,
+          "model_rotation_deg_xyz": [
+            -90,
+            0,
+            0
+          ],
+          "basis": "Preserved M1/accepted-water engineering transform; no anatomical length or biological calibration was inferred.",
+          "biological_calibration_verified": false
+        },
+        "body_pose_mapping": "static_rest_pose_m2",
+        "rendered": false
+      }
+    },
+    "no_autonomous_subscription": {
+      "passed": true,
+      "actual": null
+    },
+    "second_owner_rejected": {
+      "passed": true,
+      "actual": null
+    },
+    "cardinal_step_0": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": false,
+        "rendered": false,
+        "applied": true,
+        "frame": {
+          "schema_version": "3.0",
+          "model_version": "m2_manual_fixture_v1",
+          "run_id": "m2_engineering",
+          "seed": 17,
+          "evaluation_time_s": 0.0,
+          "bracket_step_indices": [
+            0,
+            0
+          ],
+          "transition_progress": 0.0,
+          "animation_phase_cycles": 0.25,
+          "agent": {
+            "agent_id": "Bottlenose_001",
+            "species": "bottlenose_dolphin",
+            "behavioural_state": "steady_swim",
+            "horizontal_position_m": [
+              3.0,
+              7.0
+            ],
+            "heading_deg": 0.0,
+            "pitch_deg": 0.0,
+            "roll_deg": 0.0,
+            "speed_mps": 1.0,
+            "vertical_velocity_mps": 0.0,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 0.8,
+            "state_entry_time_s": 0.0,
+            "transition_duration_s": 2.0,
+            "animation_clock": {
+              "version": "constant_rate_v1",
+              "epoch_time_s": 0.0,
+              "epoch_phase_cycles": 0.25,
+              "rate_hz": 0.8
+            }
+          },
+          "body_pose_mapping": "static_rest_pose_m2",
+          "rendered": false
+        }
+      }
+    },
+    "composed_mapping_0": {
+      "passed": true,
+      "actual": {
+        "position_error_m": 0.0,
+        "heading_error_deg": 0.0
+      }
+    },
+    "static_body_0": {
+      "passed": true,
+      "actual": null
+    },
+    "cardinal_step_90": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": false,
+        "rendered": false,
+        "applied": true,
+        "frame": {
+          "schema_version": "3.0",
+          "model_version": "m2_manual_fixture_v1",
+          "run_id": "m2_engineering",
+          "seed": 17,
+          "evaluation_time_s": 1.0,
+          "bracket_step_indices": [
+            0,
+            1
+          ],
+          "transition_progress": 0.5,
+          "animation_phase_cycles": 0.050000000000000044,
+          "agent": {
+            "agent_id": "Bottlenose_001",
+            "species": "bottlenose_dolphin",
+            "behavioural_state": "steady_swim",
+            "horizontal_position_m": [
+              4.0,
+              6.0
+            ],
+            "heading_deg": 90.0,
+            "pitch_deg": 0.0,
+            "roll_deg": 0.0,
+            "speed_mps": 1.0,
+            "vertical_velocity_mps": 0.0,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 1.8,
+            "state_entry_time_s": 0.0,
+            "transition_duration_s": 2.0,
+            "animation_clock": {
+              "version": "constant_rate_v1",
+              "epoch_time_s": 0.0,
+              "epoch_phase_cycles": 0.25,
+              "rate_hz": 0.8
+            }
+          },
+          "body_pose_mapping": "static_rest_pose_m2",
+          "rendered": false
+        }
+      }
+    },
+    "composed_mapping_90": {
+      "passed": true,
+      "actual": {
+        "position_error_m": 0.0,
+        "heading_error_deg": 0.0
+      }
+    },
+    "static_body_90": {
+      "passed": true,
+      "actual": null
+    },
+    "cardinal_step_180": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": false,
+        "rendered": false,
+        "applied": true,
+        "frame": {
+          "schema_version": "3.0",
+          "model_version": "m2_manual_fixture_v1",
+          "run_id": "m2_engineering",
+          "seed": 17,
+          "evaluation_time_s": 2.0,
+          "bracket_step_indices": [
+            1,
+            2
+          ],
+          "transition_progress": 1.0,
+          "animation_phase_cycles": 0.8500000000000001,
+          "agent": {
+            "agent_id": "Bottlenose_001",
+            "species": "bottlenose_dolphin",
+            "behavioural_state": "steady_swim",
+            "horizontal_position_m": [
+              5.0,
+              5.0
+            ],
+            "heading_deg": 180.0,
+            "pitch_deg": 0.0,
+            "roll_deg": 0.0,
+            "speed_mps": 1.0,
+            "vertical_velocity_mps": 0.0,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 2.8,
+            "state_entry_time_s": 0.0,
+            "transition_duration_s": 2.0,
+            "animation_clock": {
+              "version": "constant_rate_v1",
+              "epoch_time_s": 0.0,
+              "epoch_phase_cycles": 0.25,
+              "rate_hz": 0.8
+            }
+          },
+          "body_pose_mapping": "static_rest_pose_m2",
+          "rendered": false
+        }
+      }
+    },
+    "composed_mapping_180": {
+      "passed": true,
+      "actual": {
+        "position_error_m": 4.440892098500626e-16,
+        "heading_error_deg": 0.0
+      }
+    },
+    "static_body_180": {
+      "passed": true,
+      "actual": null
+    },
+    "cardinal_step_270": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": false,
+        "rendered": false,
+        "applied": true,
+        "frame": {
+          "schema_version": "3.0",
+          "model_version": "m2_manual_fixture_v1",
+          "run_id": "m2_engineering",
+          "seed": 17,
+          "evaluation_time_s": 3.0,
+          "bracket_step_indices": [
+            2,
+            3
+          ],
+          "transition_progress": 1.0,
+          "animation_phase_cycles": 0.6500000000000004,
+          "agent": {
+            "agent_id": "Bottlenose_001",
+            "species": "bottlenose_dolphin",
+            "behavioural_state": "steady_swim",
+            "horizontal_position_m": [
+              6.0,
+              4.0
+            ],
+            "heading_deg": 270.0,
+            "pitch_deg": 0.0,
+            "roll_deg": 0.0,
+            "speed_mps": 1.0,
+            "vertical_velocity_mps": 0.0,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 3.8,
+            "state_entry_time_s": 0.0,
+            "transition_duration_s": 2.0,
+            "animation_clock": {
+              "version": "constant_rate_v1",
+              "epoch_time_s": 0.0,
+              "epoch_phase_cycles": 0.25,
+              "rate_hz": 0.8
+            }
+          },
+          "body_pose_mapping": "static_rest_pose_m2",
+          "rendered": false
+        }
+      }
+    },
+    "composed_mapping_270": {
+      "passed": true,
+      "actual": {
+        "position_error_m": 4.440892098500626e-16,
+        "heading_error_deg": 0.0
+      }
+    },
+    "static_body_270": {
+      "passed": true,
+      "actual": null
+    },
+    "duplicate_no_scene_write": {
+      "passed": true,
+      "actual": {
+        "ok": true,
+        "accepted": true,
+        "duplicate": true,
+        "rendered": false,
+        "applied": false,
+        "frame": {
+          "schema_version": "3.0",
+          "model_version": "m2_manual_fixture_v1",
+          "run_id": "m2_engineering",
+          "seed": 17,
+          "evaluation_time_s": 3.0,
+          "bracket_step_indices": [
+            2,
+            3
+          ],
+          "transition_progress": 1.0,
+          "animation_phase_cycles": 0.6500000000000004,
+          "agent": {
+            "agent_id": "Bottlenose_001",
+            "species": "bottlenose_dolphin",
+            "behavioural_state": "steady_swim",
+            "horizontal_position_m": [
+              6.0,
+              4.0
+            ],
+            "heading_deg": 270.0,
+            "pitch_deg": 0.0,
+            "roll_deg": 0.0,
+            "speed_mps": 1.0,
+            "vertical_velocity_mps": 0.0,
+            "vertical_reference": "mean_sea_level",
+            "depth_m": 3.8,
+            "state_entry_time_s": 0.0,
+            "transition_duration_s": 2.0,
+            "animation_clock": {
+              "version": "constant_rate_v1",
+              "epoch_time_s": 0.0,
+              "epoch_phase_cycles": 0.25,
+              "rate_hz": 0.8
+            }
+          },
+          "body_pose_mapping": "static_rest_pose_m2",
+          "rendered": false
+        }
+      }
+    },
+    "atomic_reject_stale": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "Stale/out-of-order/missing step: contiguous delivery required; pose held",
+        "rendered": false
+      }
+    },
+    "atomic_reject_gap": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "Stale/out-of-order/missing step: contiguous delivery required; pose held",
+        "rendered": false
+      }
+    },
+    "atomic_reject_wrong_agent": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "agent_id changed within the run",
+        "rendered": false
+      }
+    },
+    "atomic_reject_unknown_version": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "schema_version must be '3.0'",
+        "rendered": false
+      }
+    },
+    "atomic_reject_invalid_clock": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "simulation clock must equal step_index * simulation_step_s",
+        "rendered": false
+      }
+    },
+    "atomic_reject_zero_dt": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "simulation_step_s must be positive",
+        "rendered": false
+      }
+    },
+    "atomic_reject_negative_depth": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "depth_m must be finite and >= 0",
+        "rendered": false
+      }
+    },
+    "atomic_reject_absolute_y": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "agent: missing fields []; unknown fields ['world_y_m']",
+        "rendered": false
+      }
+    },
+    "atomic_reject_wrong_datum": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "Only fixed mean sea level Y=0 is supported",
+        "rendered": false
+      }
+    },
+    "atomic_reject_boolean_speed": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "speed_mps must be a finite number (not a boolean/string)",
+        "rendered": false
+      }
+    },
+    "atomic_reject_heading_360": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "heading_deg is outside its mathematical angle domain",
+        "rendered": false
+      }
+    },
+    "atomic_reject_future_entry": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "state entry cannot be in the future",
+        "rendered": false
+      }
+    },
+    "atomic_reject_bad_state": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "Unknown v3 behavioural_state",
+        "rendered": false
+      }
+    },
+    "atomic_reject_phase_one": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "Animation epoch must be <= simulation time and phase must be < 1",
+        "rendered": false
+      }
+    },
+    "atomic_reject_zero_speed_moving_phase": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "The v3 zero-speed policy requires a frozen phase (rate_hz=0)",
+        "rendered": false
+      }
+    },
+    "atomic_reject_missing_horizontal": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "horizontal_position_m must be [x,z]",
+        "rendered": false
+      }
+    },
+    "atomic_reject_extra_agent": {
+      "passed": true,
+      "actual": {
+        "ok": false,
+        "error": "Exactly one bottlenose agent is required",
+        "rendered": false
+      }
+    },
+    "wrong_token": {
+      "passed": true,
+      "actual": null
+    },
+    "reset_ok": {
+      "passed": true,
+      "actual": null
+    },
+    "reset_holds_pose_and_phase": {
+      "passed": true,
+      "actual": null
+    },
+    "wrap_left": {
+      "passed": true,
+      "actual": null
+    },
+    "wrap_right": {
+      "passed": true,
+      "actual": null
+    },
+    "evaluate_0": {
+      "passed": true,
+      "actual": null
+    },
+    "evaluate_0.25": {
+      "passed": true,
+      "actual": null
+    },
+    "evaluate_0.5": {
+      "passed": true,
+      "actual": null
+    },
+    "evaluate_0.75": {
+      "passed": true,
+      "actual": null
+    },
+    "evaluate_1": {
+      "passed": true,
+      "actual": null
+    },
+    "query_order_1": {
+      "passed": true,
+      "actual": null
+    },
+    "query_order_0.5": {
+      "passed": true,
+      "actual": null
+    },
+    "query_order_0": {
+      "passed": true,
+      "actual": null
+    },
+    "query_order_0.75": {
+      "passed": true,
+      "actual": null
+    },
+    "query_order_0.25": {
+      "passed": true,
+      "actual": null
+    },
+    "interpolation_wrap_and_phase": {
+      "passed": true,
+      "actual": {
+        "position_error_m": 0.0,
+        "heading_error_deg": 0.0,
+        "phase_error_cycles": 0.0
+      }
+    },
+    "pause": {
+      "passed": true,
+      "actual": null
+    },
+    "paused_step_rejected": {
+      "passed": true,
+      "actual": null
+    },
+    "paused_evaluate_rejected": {
+      "passed": true,
+      "actual": null
+    },
+    "pause_wall_clock_hold": {
+      "passed": true,
+      "actual": null
+    },
+    "resume": {
+      "passed": true,
+      "actual": null
+    },
+    "resume_no_jump": {
+      "passed": true,
+      "actual": null
+    },
+    "missing_freeze_report": {
+      "passed": true,
+      "actual": null
+    },
+    "outside_bracket_freezes": {
+      "passed": true,
+      "actual": null
+    },
+    "zero_speed_phase_frozen": {
+      "passed": true,
+      "actual": null
+    },
+    "ocean_continues_independently": {
+      "passed": true,
+      "actual": null
+    },
+    "water_unchanged_during_actor_test": {
+      "passed": true,
+      "actual": null
+    },
+    "legacy_actors_remain_unowned": {
+      "passed": true,
+      "actual": null
+    },
+    "release": {
+      "passed": true,
+      "actual": null
+    },
+    "demonstration_animal_unchanged": {
+      "passed": true,
+      "actual": null
+    },
+    "owned_layer_removed": {
+      "passed": true,
+      "actual": null
+    }
+  },
+  "tolerance_sha256": "4cf158b3c563ec3e55e6dd5cdbd8b3252509483064bf325bd0767c70c286eb47",
+  "scope": "live Kit Services + composed USD state; hand-authored fixtures, no image identity or body animation claim"
+}

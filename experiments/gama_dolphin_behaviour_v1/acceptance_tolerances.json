@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "protocol": "bottlenose_m2_v1",
+  "status": "locked_before_acceptance_execution",
+  "prepared_utc": "2026-11-05T13:26:56.963620+00:00",
+  "position_error_m": 1e-05,
+  "circular_heading_error_deg": 0.0001,
+  "orientation_matrix_absolute_error": 1e-08,
+  "simulation_time_error_s": 1e-09,
+  "animation_phase_error_cycles": 1e-09,
+  "transition_progress_absolute_error": 1e-09,
+  "model_scale_relative_error": 1e-07,
+  "paused_or_rejected_state": "exact USD layer/pose equality",
+  "static_body_pose": "exact fingerprint equality; M2 does not bind animation",
+  "rationale": "Double-precision root matrices and clocks with conservative angle/position allowances; fixed calibration uses float32 USD scale. These are engineering precision gates, not biological limits.",
+  "future_movement_bounds": "M3 must declare scenario speed/acceleration/turn/depth bounds before its acceptance runs; M2 validates finite fields and mathematical angle domains only."
+}
