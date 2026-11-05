@@ -1,0 +1,22 @@
+{
+  "id": "render_camera_math",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_camera_math.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 8,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_accelerated_motion_respects_acceleration_and_no_overshoot (test_camera_math.CameraMathTests.test_accelerated_motion_respects_acceleration_and_no_overshoot) ... ok\ntest_chase_camera_normalizes_horizontal_forward (test_camera_math.CameraMathTests.test_chase_camera_normalizes_horizontal_forward) ... ok\ntest_chase_camera_sits_behind_heading_zero (test_camera_math.CameraMathTests.test_chase_camera_sits_behind_heading_zero) ... ok\ntest_damp_point_moves_toward_target (test_camera_math.CameraMathTests.test_damp_point_moves_toward_target) ... ok\ntest_damping_is_frame_rate_independent (test_camera_math.CameraMathTests.test_damping_is_frame_rate_independent) ... ok\ntest_documentary_camera_holds_then_delays (test_camera_math.CameraMathTests.test_documentary_camera_holds_then_delays) ... ok\ntest_documentary_camera_runs_full_state_cycle (test_camera_math.CameraMathTests.test_documentary_camera_runs_full_state_cycle) ... ok\ntest_horizontal_error_ignores_wave_height (test_camera_math.CameraMathTests.test_horizontal_error_ignores_wave_height) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.000s\n\nOK\n",
+  "wall_s": 0.042107855988433585,
+  "utc": "2026-11-05T18:18:38.794975+00:00"
+}

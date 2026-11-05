@@ -1,0 +1,22 @@
+{
+  "id": "render_cetacean_motion",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_cetacean_motion.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 6,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_every_gallery_species_has_a_motion_profile (test_cetacean_motion.CetaceanMotionTests.test_every_gallery_species_has_a_motion_profile) ... ok\ntest_forward_heading_accounts_for_opposite_tail_ends (test_cetacean_motion.CetaceanMotionTests.test_forward_heading_accounts_for_opposite_tail_ends) ... ok\ntest_forward_heading_handles_horizontal_x_aligned_assets (test_cetacean_motion.CetaceanMotionTests.test_forward_heading_handles_horizontal_x_aligned_assets) ... ok\ntest_only_rigged_digital_life_asset_uses_skeletal_backend (test_cetacean_motion.CetaceanMotionTests.test_only_rigged_digital_life_asset_uses_skeletal_backend) ... ok\ntest_torso_stays_rigid_and_tail_reaches_full_envelope (test_cetacean_motion.CetaceanMotionTests.test_torso_stays_rigid_and_tail_reaches_full_envelope) ... ok\ntest_wave_is_dorsoventral_and_periodic (test_cetacean_motion.CetaceanMotionTests.test_wave_is_dorsoventral_and_periodic) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n",
+  "wall_s": 0.04010812100023031,
+  "utc": "2026-11-05T18:18:38.976697+00:00"
+}

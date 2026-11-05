@@ -1,0 +1,22 @@
+{
+  "id": "render_cetacean_gallery",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_cetacean_gallery.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 2,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_every_gallery_usd_exists (test_cetacean_gallery.CetaceanGalleryTests.test_every_gallery_usd_exists) ... ok\ntest_gallery_contains_every_converted_model (test_cetacean_gallery.CetaceanGalleryTests.test_gallery_contains_every_converted_model) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.006s\n\nOK\n",
+  "wall_s": 0.044274973013671115,
+  "utc": "2026-11-05T18:18:39.068531+00:00"
+}

@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-05T18:27:37.237049+00:00",
+  "sources": [
+    {
+      "path": "integrations/gama/bottlenose_constrained_v1.gaml",
+      "bytes": 11120,
+      "sha256": "fe7e18edc28c4845cba48bd9f8c4049688171bd3edee98d982f11074c3c68f04"
+    },
+    {
+      "path": "tools/gama_bottlenose.py",
+      "bytes": 10314,
+      "sha256": "e764f7a706cf1123001a43adda3f3dcc88266cc85175837a8253a71a3013894b"
+    },
+    {
+      "path": "tools/analyze_gama_bottlenose.py",
+      "bytes": 10404,
+      "sha256": "521a803c6629a38bae54986ed5f0bc77a52ebd73e8ee07b342b1d595e513d06d"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/config/m3_parameters_v1.json",
+      "bytes": 4771,
+      "sha256": "badc52944d4cf50236932159df68dcba1748ea2b2f240e4b89ba62b48e540729"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/animation/m4_controller_v1.json",
+      "bytes": 1095,
+      "sha256": "5773e931b937c473a817aaacbec6e9d357541f1fcb05b709b905b41f724f2373"
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/config/model61a_engineering_v1.json",
+      "bytes": 1128,
+      "sha256": "245417dc9b76cea6f40ab256e3562bb83064672d1266710940225af187e23c86"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/asset_provenance.json",
+      "bytes": 2373,
+      "sha256": "162da55a68bba66b6e5e93965133f6e83d148b403c288d0a56ac2ea408b3b5ff"
+    }
+  ],
+  "behaviour_parameters": {
+    "step": 0.25,
+    "start_x_m": -10.0,
+    "start_z_m": -15.0,
+    "initial_heading_deg": 350.0,
+    "steady_s": 10.0,
+    "turn_s": 12.0,
+    "descent_s": 16.0,
+    "submerged_s": 10.0,
+    "ascent_s": 16.0,
+    "final_steady_s": 10.0,
+    "initial_depth_m": 0.2,
+    "target_depth_m": 3.2,
+    "cruise_speed_mps": 0.8,
+    "turn_angle_deg": 75.0,
+    "speed_ramp_s": 4.0,
+    "stationary_hold_s": 2.0,
+    "turn_spread_deg": 10.0,
+    "depth_spread_m": 0.4,
+    "speed_spread_mps": 0.1,
+    "animation_rate_hz": 0.8,
+    "initial_phase_cycles": 0.25
+  },
+  "behaviour_parameter_evidence": {
+    "step": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "start_x_m": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "start_z_m": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "initial_heading_deg": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "steady_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "turn_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "descent_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "submerged_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "ascent_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "final_steady_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "initial_depth_m": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "target_depth_m": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "cruise_speed_mps": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "turn_angle_deg": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "speed_ramp_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "stationary_hold_s": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "turn_spread_deg": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "depth_spread_m": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "speed_spread_mps": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "animation_rate_hz": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    },
+    "initial_phase_cycles": {
+      "status": "engineering_test_assumption",
+      "basis": "Bounded software and trajectory demonstration; not reviewed biological evidence"
+    }
+  },
+  "asset_profile": {
+    "profile": "model61a_existing_engineering_v1",
+    "asset": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+    "meters_per_native_unit": 1.0,
+    "model_rotation_deg_xyz": [
+      -90,
+      0,
+      0
+    ],
+    "basis": "Preserved M1/accepted-water engineering transform; no anatomical length or biological calibration was inferred.",
+    "biological_calibration_verified": false,
+    "dependencies": [
+      {
+        "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+        "sha256": "ab9d77b06378b834231ec4f815f4f0eb532f7b1623cb401c37079ccddd0e5c93"
+      },
+      {
+        "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_baseColor.png",
+        "sha256": "59cb0c053a9cdd6b78fb0a07700151d38873831ca27b2375c334bd655cd6f8fe"
+      },
+      {
+        "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/textures/Dolphin_Body_normal.png",
+        "sha256": "da011fe6ad8c34b5938d930da602fe078339c78cede3142f668947fce81f6d13"
+      },
+      {
+        "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/source/license.txt",
+        "sha256": "3edddd50d656b7820514220c6c3f5654a81b4afb8fc5b66e1bd7cfb05afd63c8"
+      }
+    ]
+  },
+  "animation_policy": {
+    "version": "model61a_baked_cycle_m4_v1",
+    "clip": "assets/cetaceans/bottlenose_dolphin/animation/swim_cycle.json",
+    "clip_sha256": "0967ddc35a35568b62476d1c73fee3ae1f612d4b2956bcdeaffa45d26f5cb260",
+    "interpolation": "periodic_normalized_quaternion_cubic_v1",
+    "full_cycle_speed_mps": 0.7,
+    "amplitude_blend": "quintic_0_to_1_of_clamped_horizontal_speed",
+    "synthetic_root": "identity; no world locomotion from joints",
+    "main_joint": "retained existing rotation; existing constant near-zero translation",
+    "state_mapping": {
+      "steady_swim": "existing local trunk/tail/fluke cycle + recorded root attitude",
+      "turn": "existing local trunk/tail/fluke cycle + recorded root attitude",
+      "descent": "existing local trunk/tail/fluke cycle + recorded root attitude",
+      "submerged_swim": "existing local trunk/tail/fluke cycle + recorded root attitude",
+      "ascent": "existing local trunk/tail/fluke cycle + recorded root attitude"
+    },
+    "manoeuvre_specific_pose": "limited: no new banking, asymmetric steering or dive-specific joint offsets",
+    "biological_approval": false
+  },
+  "biology": {
+    "status": "provisional",
+    "expert_biological_acceptance": false,
+    "behavioural_literature_values_claimed": false,
+    "anatomical_pose_validation_claimed": false,
+    "assessment": "All behavioural values and timing were declared engineering assumptions. The inherited asset/cycle and engineering transform do not establish specimen dimensions, natural manoeuvres, propulsion, activity frequencies or survey validity."
+  },
+  "asset_provenance": "Preserved DigitalLife3D Model 61A source/model/texture/licence and original compatible bake; M1 source-equivalence/rig inspection and subsequent byte pins retained.",
+  "calibration": "Fixed orientation and engineering scale were preserved; no biological or specimen calibration was inferred.",
+  "manoeuvre_limits": "The same local cycle continues through turns, descent and ascent; no bespoke bank, asymmetric stroke, dive-body or breathing pose was added.",
+  "stochastic_provenance": "Eight actual M3 runs and 2376 samples; retained reference/repeat and seeds 1,42,184729 with their realised choices. M6 replayed existing records and did not generate a new animal-behaviour dataset."
+}

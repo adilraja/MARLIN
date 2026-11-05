@@ -1,0 +1,22 @@
+{
+  "id": "render_calibration_geometry",
+  "command": [
+    "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_calibration_geometry.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 5,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_authored_usd_projection_in_both_unit_conventions (test_calibration_geometry.CalibrationTests.test_authored_usd_projection_in_both_unit_conventions) ... ok\ntest_expected_projection (test_calibration_geometry.CalibrationTests.test_expected_projection) ... ok\ntest_missing_invalid_and_cropped_inputs (test_calibration_geometry.CalibrationTests.test_missing_invalid_and_cropped_inputs) ... ok\ntest_oblique_authored_camera_matches_independent_projection (test_calibration_geometry.CalibrationTests.test_oblique_authored_camera_matches_independent_projection) ... ok\ntest_oblique_ray_projection_and_gsd (test_calibration_geometry.CalibrationTests.test_oblique_ray_projection_and_gsd) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.036s\n\nOK\n",
+  "wall_s": 0.26816927900654264,
+  "utc": "2026-11-05T18:18:39.021259+00:00"
+}

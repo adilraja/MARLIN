@@ -1,0 +1,22 @@
+{
+  "id": "render_hidef_camera",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_hidef_camera.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 5,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_nominal_not_actual_oblique_gsd (test_hidef_camera.HiDefTests.test_nominal_not_actual_oblique_gsd) ... ok\ntest_pose_is_cross_track_tilt_not_optical_roll (test_hidef_camera.HiDefTests.test_pose_is_cross_track_tilt_not_optical_roll) ... ok\ntest_preview_preserves_footprint_not_sampling (test_hidef_camera.HiDefTests.test_preview_preserves_footprint_not_sampling) ... ok\ntest_projection_roundtrip (test_hidef_camera.HiDefTests.test_projection_roundtrip) ... ok\ntest_provenance_and_native_sensitivity (test_hidef_camera.HiDefTests.test_provenance_and_native_sensitivity) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.004s\n\nOK\n",
+  "wall_s": 0.045807804010109976,
+  "utc": "2026-11-05T18:18:38.840969+00:00"
+}

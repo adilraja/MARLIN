@@ -1,0 +1,22 @@
+{
+  "id": "render_gentle_environment",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_gentle_environment.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 4,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_gentle_waves_and_diffuse_sky (test_gentle_environment.GentleEnvironmentTests.test_gentle_waves_and_diffuse_sky) ... ok\ntest_no_actor_camera_or_exposure_control (test_gentle_environment.GentleEnvironmentTests.test_no_actor_camera_or_exposure_control) ... ok\ntest_phase_reset_and_stage_guard_documented (test_gentle_environment.GentleEnvironmentTests.test_phase_reset_and_stage_guard_documented) ... ok\ntest_restore_scope_excludes_animals (test_gentle_environment.GentleEnvironmentTests.test_restore_scope_excludes_animals) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.000s\n\nOK\n",
+  "wall_s": 0.043793863005703315,
+  "utc": "2026-11-05T18:18:39.195919+00:00"
+}

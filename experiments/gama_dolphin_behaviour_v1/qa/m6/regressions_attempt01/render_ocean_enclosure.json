@@ -1,0 +1,22 @@
+{
+  "id": "render_ocean_enclosure",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_ocean_enclosure.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 5,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_closed_boundary_at_small_and_production_resolutions (test_ocean_enclosure.EnclosureTests.test_closed_boundary_at_small_and_production_resolutions) ... ok\ntest_orientation_validator_rejected_reversed_bottom (test_ocean_enclosure.EnclosureTests.test_orientation_validator_rejected_reversed_bottom) ... ok\ntest_skirt_shared_surface_indices_and_vertical_projection (test_ocean_enclosure.EnclosureTests.test_skirt_shared_surface_indices_and_vertical_projection) ... ok\ntest_surface_and_corner_normals_were_copied_without_change (test_ocean_enclosure.EnclosureTests.test_surface_and_corner_normals_were_copied_without_change) ... ok\ntest_unsafe_or_malformed_geometry_was_rejected (test_ocean_enclosure.EnclosureTests.test_unsafe_or_malformed_geometry_was_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.152s\n\nOK\n",
+  "wall_s": 0.2792583830014337,
+  "utc": "2026-11-05T18:18:39.341763+00:00"
+}

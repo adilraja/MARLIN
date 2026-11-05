@@ -1,0 +1,22 @@
+{
+  "id": "render_renderer_snapshot",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_renderer_snapshot.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 5,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_legacy_replay_verifies_saved_subset_and_reports_omissions (test_renderer_snapshot.RendererSnapshotTests.test_legacy_replay_verifies_saved_subset_and_reports_omissions) ... ok\ntest_preservation_check_stays_strict_for_current_keysets_and_types (test_renderer_snapshot.RendererSnapshotTests.test_preservation_check_stays_strict_for_current_keysets_and_types) ... ok\ntest_replay_of_replay_retains_original_uncertainty (test_renderer_snapshot.RendererSnapshotTests.test_replay_of_replay_retains_original_uncertainty) ... ok\ntest_roundtrip_restores_vectors_false_zero_and_absent_options (test_renderer_snapshot.RendererSnapshotTests.test_roundtrip_restores_vectors_false_zero_and_absent_options) ... ok\ntest_sampling_color_and_effect_settings_are_recorded_without_defaults (test_renderer_snapshot.RendererSnapshotTests.test_sampling_color_and_effect_settings_are_recorded_without_defaults) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.006s\n\nOK\n",
+  "wall_s": 0.05385905998991802,
+  "utc": "2026-11-05T18:18:38.936413+00:00"
+}

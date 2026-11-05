@@ -1,0 +1,22 @@
+{
+  "id": "render_camera_evidence",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_camera_evidence.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 3,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_independent_consistency_calculations (test_camera_evidence.CameraEvidenceTests.test_independent_consistency_calculations) ... ok\ntest_paper_nominal_and_provenance_categories (test_camera_evidence.CameraEvidenceTests.test_paper_nominal_and_provenance_categories) ... ok\ntest_paper_review_distinguishes_pitch_from_yaw_inference (test_camera_evidence.CameraEvidenceTests.test_paper_review_distinguishes_pitch_from_yaw_inference) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+  "wall_s": 0.041106741002295166,
+  "utc": "2026-11-05T18:18:38.882339+00:00"
+}

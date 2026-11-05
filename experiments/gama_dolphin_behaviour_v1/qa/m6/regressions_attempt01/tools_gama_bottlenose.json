@@ -1,0 +1,16 @@
+{
+  "id": "tools_gama_bottlenose",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "tools/test_gama_bottlenose.py",
+    "experiments/gama_dolphin_behaviour_v1/qa/m6/regressions_attempt01/result_gama_bottlenose.json"
+  ],
+  "returncode": 0,
+  "tests": 9,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_continuous_control_values_at_all_boundaries (__main__.BottlenoseAcceptance.test_continuous_control_values_at_all_boundaries) ... ok\ntest_disconnected_label_was_rejected (__main__.BottlenoseAcceptance.test_disconnected_label_was_rejected) ... ok\ntest_gap_and_phase_jump_were_rejected (__main__.BottlenoseAcceptance.test_gap_and_phase_jump_were_rejected) ... ok\ntest_incoherent_attitude_was_rejected (__main__.BottlenoseAcceptance.test_incoherent_attitude_was_rejected) ... ok\ntest_position_teleport_was_rejected (__main__.BottlenoseAcceptance.test_position_teleport_was_rejected) ... ok\ntest_repeated_random_draws_were_rejected (__main__.BottlenoseAcceptance.test_repeated_random_draws_were_rejected) ... ok\ntest_retained_actual_reference_passed (__main__.BottlenoseAcceptance.test_retained_actual_reference_passed) ... ok\ntest_wrong_vertical_velocity_was_rejected (__main__.BottlenoseAcceptance.test_wrong_vertical_velocity_was_rejected) ... ok\ntest_zero_speed_retained_defined_heading (__main__.BottlenoseAcceptance.test_zero_speed_retained_defined_heading) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.044s\n\nOK\n",
+  "wall_s": 0.095183198020095,
+  "utc": "2026-11-05T18:18:42.270430+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "render_movement",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+    "-p",
+    "test_movement.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests": 7,
+  "skipped": 0,
+  "stdout": "",
+  "stderr": "test_move_toward_does_not_overshoot (test_movement.MovementTests.test_move_toward_does_not_overshoot) ... ok\ntest_move_toward_treats_negative_delta_as_zero (test_movement.MovementTests.test_move_toward_treats_negative_delta_as_zero) ... ok\ntest_natural_attitude_clamps_turn_bank (test_movement.MovementTests.test_natural_attitude_clamps_turn_bank) ... ok\ntest_natural_attitude_pitches_into_vertical_motion (test_movement.MovementTests.test_natural_attitude_pitches_into_vertical_motion) ... ok\ntest_normalize_heading_wraps_both_directions (test_movement.MovementTests.test_normalize_heading_wraps_both_directions) ... ok\ntest_turn_toward_stops_at_target (test_movement.MovementTests.test_turn_toward_stops_at_target) ... ok\ntest_turn_toward_uses_shortest_path_across_zero (test_movement.MovementTests.test_turn_toward_uses_shortest_path_across_zero) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.000s\n\nOK\n",
+  "wall_s": 0.047320316021796316,
+  "utc": "2026-11-05T18:18:39.024152+00:00"
+}

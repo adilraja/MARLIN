@@ -1,0 +1,341 @@
+{
+  "protocol": "bottlenose_m6_closeout_v1",
+  "locked_utc": "2026-11-05T18:18:38.554472+00:00",
+  "source_commit": "3c6e2630ea3cc091b2de9604c5a6c9972bc14232",
+  "numerical_criteria": "Unchanged M2/M3/M4 tolerance records; no new biological or visual numerical score",
+  "regressions": [
+    {
+      "id": "render_camera_math",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_camera_math.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_calibration_geometry",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_calibration_geometry.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_hidef_camera",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_hidef_camera.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_camera_evidence",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_camera_evidence.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_renderer_snapshot",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_renderer_snapshot.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_cetacean_motion",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_cetacean_motion.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_movement",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_movement.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_baked_animation",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_baked_animation.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_cetacean_gallery",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_cetacean_gallery.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_ocean_enclosure",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_ocean_enclosure.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_water_material",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_water_material.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_underwater_cue",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_underwater_cue.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "render_gentle_environment",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/tests",
+        "-p",
+        "test_gentle_environment.py",
+        "-v"
+      ]
+    },
+    {
+      "id": "tools_gama_exchange",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_exchange.py"
+      ]
+    },
+    {
+      "id": "tools_gama_exchange_v2",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_exchange_v2.py"
+      ]
+    },
+    {
+      "id": "tools_gama_actor",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor.py"
+      ]
+    },
+    {
+      "id": "tools_gama_actor_v2",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_actor_v2.py"
+      ]
+    },
+    {
+      "id": "tools_gama_v2_stage",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_v2_stage.py"
+      ]
+    },
+    {
+      "id": "tools_gama_live",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_live.py"
+      ]
+    },
+    {
+      "id": "tools_capture_projection",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_capture_projection.py"
+      ]
+    },
+    {
+      "id": "tools_hidef_marine",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_hidef_marine.py"
+      ]
+    },
+    {
+      "id": "tools_sony_camera",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_sony_camera.py"
+      ]
+    },
+    {
+      "id": "tools_gama_v3",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_v3.py",
+        "experiments/gama_dolphin_behaviour_v1/qa/m6/regressions_attempt01/result_gama_v3.json"
+      ]
+    },
+    {
+      "id": "tools_gama_animated_v3",
+      "command": [
+        "/home/madil/opt/blender-5.0.1-linux-x64/5.0/python/bin/python3.11",
+        "-B",
+        "tools/test_gama_animated_v3.py",
+        "experiments/gama_dolphin_behaviour_v1/qa/m6/regressions_attempt01/result_gama_animated_v3.json"
+      ]
+    },
+    {
+      "id": "tools_gama_bottlenose",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "tools/test_gama_bottlenose.py",
+        "experiments/gama_dolphin_behaviour_v1/qa/m6/regressions_attempt01/result_gama_bottlenose.json"
+      ]
+    },
+    {
+      "id": "qualified_hdr_display",
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "experiments/ocean_material_v1/diagnostics/m5/qa/test_display_images.py"
+      ]
+    }
+  ],
+  "canonical_render_module_path": "source/extensions/cris.madil.render_service/cris/madil/render_service",
+  "live_workload": {
+    "ocean_phase_cases": 5,
+    "ocean_controller_trajectories": 2,
+    "coexistence_seconds": 4,
+    "standard_animal": "/World/Cetaceans/Dolphin_001",
+    "private_animal": "/MarlinGamaBottlenose/Bottlenose_001",
+    "private_reference_times_s": [
+      6,
+      6.25
+    ],
+    "assertion": "Standard ocean/swimmer/chase advance while private owner root/body/phase hold without an explicit update; release actor, stop temporary controllers, restore complete baseline and settings.",
+    "cleanup": "Restore exact pre-work checkpoint and originally stopped controller states; no source or shared-asset deletion."
+  },
+  "assessments": {
+    "engineering": "pending execution",
+    "visual": "pending Gate D named review",
+    "biological": "provisional; engineering assumptions and asset cycle, no biological expert approval",
+    "research_capture": "not qualified by this sprint"
+  },
+  "gate_d": {
+    "status": "pending",
+    "proposed_reviewer": "MAR",
+    "acceptance_received": false
+  },
+  "exclusions": [
+    "No new dataset/ML/species work",
+    "No water-material redesign or inside-camera qualification",
+    "No installed SDK/library edits",
+    "No repoman/build or unrelated survey/dataset-transaction test campaign"
+  ]
+}
