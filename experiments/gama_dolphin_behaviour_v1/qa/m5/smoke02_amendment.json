@@ -1,0 +1,10 @@
+{
+  "first_capture_held_exactly": true,
+  "commanded_state_held": true,
+  "settling_changes": [
+    "/projection/ui_view_matrix"
+  ],
+  "smoke02_failure": "Pause check reused the full UI-containing record immediately after a new seek; no pose drift was established by that failing assertion.",
+  "correction": "Compare exact controlled state, including authored capture-camera matrices and projection, while retaining but excluding only asynchronously updated UI viewport matrix metadata. Apply this consistently to interruption checks.",
+  "numerical_tolerances_changed": false
+}

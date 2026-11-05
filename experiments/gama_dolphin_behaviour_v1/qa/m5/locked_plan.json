@@ -1,0 +1,144 @@
+{
+  "protocol": "bottlenose_m5_v1",
+  "locked_utc": "2026-11-05T17:38:58.326735+00:00",
+  "source_commit": "143d404c175e389f4f18788ed524fa55f04bc450",
+  "reference": {
+    "path": "experiments/gama_dolphin_behaviour_v1/trajectories/m3_ref_a01/trajectory.json",
+    "bytes": 293029,
+    "sha256": "e000fcc44694e3cec4a1ce84616d45ad7ea86901eab64985c365fce73b434efa"
+  },
+  "m4_manifest": {
+    "path": "experiments/gama_dolphin_behaviour_v1/m4_manifest.json",
+    "bytes": 546986,
+    "sha256": "34731f140c6194b88250590faf03623e3bf8aea68ee3bc873d61aa66e47c0750"
+  },
+  "gate_c_acceptance": {
+    "path": "experiments/gama_dolphin_behaviour_v1/reviews/MAR_GATE_C_2026_11_05_acceptance_manifest.json",
+    "bytes": 1352,
+    "sha256": "2e177d8656bfc004794c45c90f0c521c3bfe6f9dddf23471c38451b790113246"
+  },
+  "acceptance": {
+    "path": "experiments/gama_dolphin_behaviour_v1/animation/m4_acceptance_v1.json",
+    "bytes": 1080,
+    "sha256": "a47693d2e705f20141926037ba55e4c0aaf0446ae83ec5e0a11a89e20da3644d"
+  },
+  "snapshot_times_s": [
+    0,
+    6,
+    9.75,
+    10,
+    10.25,
+    16,
+    21.75,
+    22,
+    22.25,
+    30,
+    37.75,
+    38,
+    38.25,
+    42,
+    47.75,
+    48,
+    48.25,
+    56,
+    63.75,
+    64,
+    64.25,
+    70,
+    74
+  ],
+  "reorder_times_s": [
+    70,
+    6,
+    56,
+    30,
+    42,
+    16,
+    0,
+    74,
+    22,
+    38,
+    48,
+    64,
+    10
+  ],
+  "fresh_process_times_s": [
+    6,
+    16,
+    30,
+    42,
+    56,
+    70
+  ],
+  "video": {
+    "first_s": 0,
+    "last_exclusive_s": 74,
+    "fps": 5,
+    "frames": 370,
+    "normal_speed": true,
+    "edited_windows": false,
+    "reason": "Bounded full-sequence engineering review, chosen before capture; not survey-quality or high-frame-rate motion analysis."
+  },
+  "capture": {
+    "resolution": [
+      512,
+      384
+    ],
+    "minimum_free_gpu_mib": 768,
+    "settle_snapshot_frames": 64,
+    "settle_video_frames": 3,
+    "settle_timeout_s": 30,
+    "image_timeout_s": 60,
+    "startup_render_frames": 3,
+    "startup_timeout_s": 90,
+    "renderer": "PathTracing",
+    "configured_spp": 512,
+    "actual_samples_measured": false,
+    "primary_display": "round(255*clip(rgb/12000,0,1)**(1/2.2))",
+    "review_display": "round(255*clip(log1p(max(rgb,0))/log1p(12000),0,1))",
+    "no_per_image_normalization": true,
+    "exposure_profile": {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m4/native_capture_v2.json",
+      "bytes": 379,
+      "sha256": "e94aaefa0a0116a0ef212c5fbc4debfb46887ec768ae581f30fbf56278cf0f8e"
+    }
+  },
+  "ocean": {
+    "policy": "Same deterministic frozen phase zero for both schedules, seeks and fresh-process comparisons; no autonomous wave advancement during capture.",
+    "configuration": {
+      "size": 16000.0,
+      "resolution": 128,
+      "speed": 0.7,
+      "choppiness": 0.55,
+      "target_fps": 15.0,
+      "name": "Ocean",
+      "wave_height": 40.0,
+      "wave_length": 650.0,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "schedules": {
+    "A": "Monotonic union of video and snapshot times; root/body frozen during native capture.",
+    "B": "Same simulation timestamps with extra 0/1/5 update waits, alternating; deterministic prefix replay for seeks."
+  },
+  "seek_policy": "Reset and replay actual accepted GAMA prefix through ceil(t/0.25), then evaluate inside retained two-step bracket; not stateless random access.",
+  "criteria": {
+    "numerical_tolerances": "Unchanged M4 acceptance file pinned above",
+    "held_state": "Exact root/joint/phase/buffer/camera/ocean/lighting equality while no explicit advance is commanded",
+    "frozen_scene": "Full USD plus explicit source prefix, two-state buffer, animation controls, effective renderer, ocean and lighting state",
+    "rgb_identity": "Not inferred from matching state; observed differences reported separately"
+  },
+  "lifecycle": [
+    "pause",
+    "resume_without_jump",
+    "missing_state_freeze",
+    "reset_holds_pose",
+    "controlled_stop_and_remove",
+    "baseline_restoration"
+  ],
+  "scope": "M5 engineering demonstration only; accepted manoeuvre limits and separate underwater-camera optical issue retained; no M6/Gate D acceptance or Git commit."
+}

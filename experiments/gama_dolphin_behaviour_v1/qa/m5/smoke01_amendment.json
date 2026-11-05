@@ -1,0 +1,12 @@
+{
+  "failure": "Combined before/after state equality failed; initial harness did not persist the two operands.",
+  "diagnosis": "Viewport UI projection/view metadata can update after an authored camera change; animal-state movement is not assumed resolved without a retained comparison.",
+  "remedy": "Record pre-settle and post-settle states, require exact commanded root/body/buffer/phase/capture-camera agreement throughout settling, then exact complete state throughout HDR capture.",
+  "numerical_criteria_changed": false,
+  "original_protocol_preserved": true,
+  "display_amendment": "Added one standard global Reinhard review rendering because ordinary native HDR was far below the emitter-fixture scale of 12000; preserved primary and log conversion unchanged.",
+  "source_snapshots": [
+    "native_m5_attempt01_source.py",
+    "host_launch_attempt01_source.py"
+  ]
+}

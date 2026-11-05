@@ -1,0 +1,747 @@
+{
+  "status": "passed",
+  "run_id": "fresh01",
+  "mode": "fresh",
+  "pid": 1624932,
+  "scope": "M5 engineering state/capture evidence; no biological/optical qualification or RGB identity inference",
+  "runtime": {
+    "build": "110.2.0+feature.342835.698af100.gl",
+    "pid": 1624932
+  },
+  "media_directory": "/home/madil/kit-app-template/artifacts/gama_dolphin_behaviour_v1/m5/fresh01",
+  "records": [],
+  "captures": [
+    {
+      "label": "fresh_0070_00",
+      "simulation_time_s": 70,
+      "snapshot": true,
+      "state_sha256": "febff7b91e66adde8ea8fa4e0558cef6469911821c483514eac3461341d30647",
+      "held_exactly": true
+    },
+    {
+      "label": "fresh_0056_00",
+      "simulation_time_s": 56,
+      "snapshot": true,
+      "state_sha256": "0578b11b9006c1048aaa3ac3cae460b512a2ecec26e912b29cebd86f9d999111",
+      "held_exactly": true
+    },
+    {
+      "label": "fresh_0042_00",
+      "simulation_time_s": 42,
+      "snapshot": true,
+      "state_sha256": "08e97d94100e7e9a9e4de7abca329ac13f8365395d1956a0f38520ea68ee1254",
+      "held_exactly": true
+    },
+    {
+      "label": "fresh_0030_00",
+      "simulation_time_s": 30,
+      "snapshot": true,
+      "state_sha256": "e690064e0abb0de7f8d146520a40554924d26e96f0518eee8ac26caa102c170e",
+      "held_exactly": true
+    },
+    {
+      "label": "fresh_0016_00",
+      "simulation_time_s": 16,
+      "snapshot": true,
+      "state_sha256": "77fe6940ad54936e93ecd90f7f5a6dc64ad2ff3673df8ae0b7ee9a6c78e08212",
+      "held_exactly": true
+    },
+    {
+      "label": "fresh_0006_00",
+      "simulation_time_s": 6,
+      "snapshot": true,
+      "state_sha256": "15801257c763caf115dc7fbc226a4f04c76b7635ba6faff5562961e4ea47cbf7",
+      "held_exactly": true
+    }
+  ],
+  "gpu": [
+    {
+      "device_index": 0,
+      "total_mib": 6138,
+      "free_mib": 1661,
+      "driver": "595.99.02"
+    }
+  ],
+  "checks": {
+    "pause_holds_root_body_buffer_phase_camera": true,
+    "paused_evaluate_rejected": true,
+    "resume_without_jump": true,
+    "missing_state_freeze": true,
+    "missing_step_rejected_without_partial_mutation": true,
+    "controlled_reset_holds_pose_phase": true,
+    "controlled_stop_removes_owned_actor": true
+  },
+  "comparisons": [
+    {
+      "label": "fresh_process_prefix_replay",
+      "simulation_time_s": 70.0,
+      "root_matrix_error": 0.0,
+      "joint_matrix_error": 0.0,
+      "phase_error": 0.0,
+      "weight_error": 0.0,
+      "camera_matrix_error": 0.0,
+      "agent_equal": true,
+      "environment_equal": true,
+      "body_equal": true,
+      "passed": true
+    },
+    {
+      "label": "fresh_process_prefix_replay",
+      "simulation_time_s": 56.0,
+      "root_matrix_error": 0.0,
+      "joint_matrix_error": 0.0,
+      "phase_error": 0.0,
+      "weight_error": 0.0,
+      "camera_matrix_error": 0.0,
+      "agent_equal": true,
+      "environment_equal": true,
+      "body_equal": true,
+      "passed": true
+    },
+    {
+      "label": "fresh_process_prefix_replay",
+      "simulation_time_s": 42.0,
+      "root_matrix_error": 0.0,
+      "joint_matrix_error": 0.0,
+      "phase_error": 0.0,
+      "weight_error": 0.0,
+      "camera_matrix_error": 0.0,
+      "agent_equal": true,
+      "environment_equal": true,
+      "body_equal": true,
+      "passed": true
+    },
+    {
+      "label": "fresh_process_prefix_replay",
+      "simulation_time_s": 30.0,
+      "root_matrix_error": 0.0,
+      "joint_matrix_error": 0.0,
+      "phase_error": 0.0,
+      "weight_error": 0.0,
+      "camera_matrix_error": 0.0,
+      "agent_equal": true,
+      "environment_equal": true,
+      "body_equal": true,
+      "passed": true
+    },
+    {
+      "label": "fresh_process_prefix_replay",
+      "simulation_time_s": 16.0,
+      "root_matrix_error": 0.0,
+      "joint_matrix_error": 0.0,
+      "phase_error": 0.0,
+      "weight_error": 0.0,
+      "camera_matrix_error": 0.0,
+      "agent_equal": true,
+      "environment_equal": true,
+      "body_equal": true,
+      "passed": true
+    },
+    {
+      "label": "fresh_process_prefix_replay",
+      "simulation_time_s": 6.0,
+      "root_matrix_error": 0.0,
+      "joint_matrix_error": 0.0,
+      "phase_error": 0.0,
+      "weight_error": 0.0,
+      "camera_matrix_error": 0.0,
+      "agent_equal": true,
+      "environment_equal": true,
+      "body_equal": true,
+      "passed": true
+    }
+  ],
+  "preset": {
+    "ok": true,
+    "selection": "engineering_v1",
+    "material": {
+      "ok": true,
+      "renderer": "NVIDIA OmniSurface",
+      "ocean_path": "/World/Ocean",
+      "material_path": "/World/Looks/OceanWaterEngineeringV1",
+      "roughness": 0.001,
+      "ior": 1.333,
+      "transmission": 1.0,
+      "base_weight": 0.0,
+      "base_color": [
+        0.02,
+        0.1,
+        0.13
+      ],
+      "transmission_color": [
+        0.6,
+        0.8,
+        0.9
+      ],
+      "transmission_depth": 100.0,
+      "scattering_color": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "scattering_anisotropy": 0.0,
+      "thin_walled": false
+    },
+    "configuration": {
+      "version": 1,
+      "preset": "engineering_v1",
+      "resolution": 128,
+      "bottom_y_units": -2000.0,
+      "bottom_depth_m": 20,
+      "metres_per_unit": 0.01,
+      "horizontal_derivative_bound": 0.3856116377333708,
+      "restart_signature": {
+        "size": 16000.0,
+        "resolution": 128,
+        "wave_height": 40.0,
+        "wave_length": 650.0,
+        "choppiness": 0.55,
+        "position": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "original_double_sided": true,
+      "original_binding_targets": [
+        "/World/Looks/OceanWater"
+      ],
+      "original_binding_strength": null,
+      "renderer_before": [
+        {
+          "identity": [
+            "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+            "omni:rtx:rendermode"
+          ],
+          "authored": true,
+          "value": "RealTimePathTracing"
+        },
+        {
+          "identity": [
+            "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+            "omni:rtx:fog:enabled"
+          ],
+          "authored": true,
+          "value": true
+        },
+        {
+          "identity": [
+            "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+            "omni:rtx:pt:fireflyFilter:enabled"
+          ],
+          "authored": false,
+          "value": true
+        },
+        {
+          "identity": [
+            "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+            "omni:rtx:rtpt:fireflyFilter:enabled"
+          ],
+          "authored": false,
+          "value": true
+        },
+        {
+          "identity": [
+            "/MarlinM5ReviewCamera",
+            "omni:rtx:autoExposure:enabled"
+          ],
+          "authored": false,
+          "value": false
+        }
+      ],
+      "global_before": {
+        "/exts/cris.madil.render_service/underwaterCue/enabled": true
+      },
+      "configure_renderer": true
+    },
+    "geometry": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "same_direction_shared_edges": 0,
+      "minimum_top_normal_y": 0.9315110087325138,
+      "minimum_outward_side_dot": 7328.828163431039,
+      "maximum_bottom_normal_y": -1.0,
+      "points": 17154,
+      "faces": 17408,
+      "duplicated_top_faces": 0,
+      "shared_top_seam_indices": true
+    },
+    "scientific_water_calibrated": false,
+    "tested_renderer": "PathTracing",
+    "camera_inside_qualified": false,
+    "qualification": "Above-water 512x384 integration checks passed; camera-inside attenuation remains unqualified"
+  },
+  "environment": {
+    "ocean_geometry": {
+      "points": "e1a3c5091e6cf314b351dcaf98c7a709718a7efe83b86bf0abcc757fad0c3004",
+      "normals": "bd1e5194f99de628862f0a42728dd1c0019c89350c01e0c17649917a3aca8dbb",
+      "extent": "18cf9fb68504fa585251b335f04420dd960c4f263eed80a2fc19c01a129b4d6c",
+      "faceVertexCounts": "56dbf579f0008574274a10c7d14c818de056dd3c9019c0ac350d7f2bf2885a4c",
+      "faceVertexIndices": "d482df8824e188fa94c7dc26e922d4f0d7cfbac59099d7831d95a25d5c277b52"
+    },
+    "lighting": {
+      "/World/Environment/Sky": {
+        "collection:lightLink": null,
+        "collection:lightLink:expansionRule": "expandPrims",
+        "collection:lightLink:includeRoot": true,
+        "collection:lightLink:membershipExpression": null,
+        "collection:shadowLink": null,
+        "collection:shadowLink:expansionRule": "expandPrims",
+        "collection:shadowLink:includeRoot": true,
+        "collection:shadowLink:membershipExpression": null,
+        "guideRadius": 100000.0,
+        "inputs:color": [
+          0.44999998807907104,
+          0.6499999761581421,
+          1.0
+        ],
+        "inputs:colorTemperature": 6500.0,
+        "inputs:diffuse": 1.0,
+        "inputs:enableColorTemperature": false,
+        "inputs:exposure": 1.0,
+        "inputs:intensity": 500.0,
+        "inputs:normalize": false,
+        "inputs:specular": 1.0,
+        "inputs:texture:file": null,
+        "inputs:texture:format": "automatic",
+        "light:materialSyncMode": "noMaterialResponse",
+        "light:shaderId": "DomeLight",
+        "omni:rtx:domeLight:groundTextureScale": 0.0,
+        "omni:rtx:domeLight:mode": "infinite",
+        "omni:rtx:domeLight:radius": 100.0,
+        "omni:rtx:domeLight:size": [
+          200.0,
+          200.0,
+          200.0
+        ],
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOpOrder": null
+      },
+      "/World/Environment/Sun": {
+        "collection:lightLink": null,
+        "collection:lightLink:expansionRule": "expandPrims",
+        "collection:lightLink:includeRoot": true,
+        "collection:lightLink:membershipExpression": null,
+        "collection:shadowLink": null,
+        "collection:shadowLink:expansionRule": "expandPrims",
+        "collection:shadowLink:includeRoot": true,
+        "collection:shadowLink:membershipExpression": null,
+        "inputs:angle": 0.5299999713897705,
+        "inputs:color": [
+          1.0,
+          0.9200000166893005,
+          0.7799999713897705
+        ],
+        "inputs:colorTemperature": 6500.0,
+        "inputs:diffuse": 1.0,
+        "inputs:enableColorTemperature": false,
+        "inputs:exposure": 0.0,
+        "inputs:intensity": 5000.0,
+        "inputs:normalize": false,
+        "inputs:specular": 1.0,
+        "light:materialSyncMode": "noMaterialResponse",
+        "light:shaderId": "DistantLight",
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOp:rotateXYZ": [
+          -35.0,
+          25.0,
+          0.0
+        ],
+        "xformOpOrder": [
+          "xformOp:rotateXYZ"
+        ]
+      },
+      "/Environment/defaultLight": {
+        "collection:lightLink": null,
+        "collection:lightLink:expansionRule": "expandPrims",
+        "collection:lightLink:includeRoot": true,
+        "collection:lightLink:membershipExpression": null,
+        "collection:shadowLink": null,
+        "collection:shadowLink:expansionRule": "expandPrims",
+        "collection:shadowLink:includeRoot": true,
+        "collection:shadowLink:membershipExpression": null,
+        "inputs:angle": 1.0,
+        "inputs:color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "inputs:colorTemperature": 6500.0,
+        "inputs:diffuse": 1.0,
+        "inputs:enableColorTemperature": false,
+        "inputs:exposure": 1.5,
+        "inputs:intensity": 3000.0,
+        "inputs:normalize": true,
+        "inputs:shaping:cone:angle": 180.0,
+        "inputs:shaping:cone:softness": 0.0,
+        "inputs:shaping:focus": 0.0,
+        "inputs:shaping:focusTint": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "inputs:shaping:ies:angleScale": 0.0,
+        "inputs:shaping:ies:file": null,
+        "inputs:shaping:ies:normalize": false,
+        "inputs:specular": 1.0,
+        "light:materialSyncMode": "noMaterialResponse",
+        "light:shaderId": "DistantLight",
+        "omni:rtx:usdluxVersion": 2505,
+        "purpose": "default",
+        "visibility": "inherited",
+        "xformOp:rotateXYZ": [
+          315.0,
+          0.0,
+          0.0
+        ],
+        "xformOp:scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "xformOp:translate": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "xformOpOrder": [
+          "xformOp:translate",
+          "xformOp:rotateXYZ",
+          "xformOp:scale"
+        ]
+      }
+    },
+    "ocean_phase_s": 0.0,
+    "timeline_paused": true
+  },
+  "units": 0.01,
+  "body_fingerprint": "e5a7ee226872b79b8a16007d9d96ab4660c7cf485bc4b3b77a60b8aace11776d",
+  "renderer_settings": {
+    "/exts/cris.madil.render_service/underwaterCue/enabled": false,
+    "/rtx/fog/enabled": true,
+    "/rtx/fog/fogColor": [
+      0.029999999329447746,
+      0.1599999964237213,
+      0.20000000298023224
+    ],
+    "/rtx/fog/fogColorIntensity": 0.5,
+    "/rtx/fog/fogDistanceDensity": 0.03999999910593033,
+    "/rtx/fog/fogEndDist": 1800.0,
+    "/rtx/fog/fogHeightDensity": 0.07999999821186066,
+    "/rtx/fog/fogHeightFalloff": 0.02500000037252903,
+    "/rtx/fog/fogStartDist": 0.0,
+    "/rtx/fog/fogStartHeight": 0.0,
+    "/rtx/fog/fogZup/enabled": false,
+    "/rtx/pathtracing/aa/filterRadius": 1.0,
+    "/rtx/pathtracing/aa/op": 1,
+    "/rtx/pathtracing/adaptiveSampling/enabled": false,
+    "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+    "/rtx/pathtracing/cached/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/enabled": true,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+    "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+    "/rtx/pathtracing/fractionalCutoutOpacity": true,
+    "/rtx/pathtracing/lightcache/cached/enabled": true,
+    "/rtx/pathtracing/maxBounces": 16,
+    "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+    "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+    "/rtx/pathtracing/optixDenoiser/enabled": true,
+    "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+    "/rtx/pathtracing/spp": 1,
+    "/rtx/pathtracing/totalSpp": 512,
+    "/rtx/post/aa/op": 3,
+    "/rtx/post/chromaticAberration/enabled": false,
+    "/rtx/post/colorcorr/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/enabled": false,
+    "/rtx/post/colorcorr/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorcorr/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorcorr/saturation": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/blackpoint": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/contrast": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/enabled": false,
+    "/rtx/post/colorgrad/gain": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/gamma": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/lift": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/multiply": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/colorgrad/offset": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "/rtx/post/colorgrad/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/dlss/execMode": 3,
+    "/rtx/post/dof/enabled": false,
+    "/rtx/post/histogram/enabled": false,
+    "/rtx/post/lensFlares/enabled": false,
+    "/rtx/post/motionblur/enabled": false,
+    "/rtx/post/tonemap/cameraShutter": 50.0,
+    "/rtx/post/tonemap/cm2Factor": 1.0,
+    "/rtx/post/tonemap/colorMode": 0,
+    "/rtx/post/tonemap/dither": 0.0,
+    "/rtx/post/tonemap/enableSrgbToGamma": true,
+    "/rtx/post/tonemap/exposureBias": null,
+    "/rtx/post/tonemap/fNumber": 5.0,
+    "/rtx/post/tonemap/filmIso": 100.0,
+    "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+    "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+    "/rtx/post/tonemap/op": 6,
+    "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+    "/rtx/post/tonemap/whitepoint": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "/rtx/post/tonemap/wrapValue": 0.0,
+    "/rtx/post/tvNoise/enabled": false,
+    "/rtx/raytracing/fractionalCutoutOpacity": false,
+    "/rtx/reflections/enabled": true,
+    "/rtx/rendermode": "RealTimePathTracing",
+    "/rtx/resetPtAccumOnAnimTimeChange": false,
+    "/rtx/rtpt/maxBounces": 8,
+    "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+    "/rtx/translucency/enabled": true,
+    "/rtx/translucency/maxRefractionBounces": 8
+  },
+  "capture_profile": {
+    "version": "native_capture_v2",
+    "exposure_time_s": 0.2,
+    "exposure_fstop": 8.0,
+    "exposure_iso": 100.0,
+    "exposure_responsivity": 1.0,
+    "reason": "Fixed diagnostic exposure, 100 times the exploratory dark smoke03 exposure; selected for visual review only, with timeline frozen and no radiometric/sensor or motion-blur claim. Effective values are retained per image."
+  },
+  "ocean_configuration": {
+    "size": 16000.0,
+    "resolution": 128,
+    "speed": 0.7,
+    "choppiness": 0.55,
+    "target_fps": 15.0,
+    "name": "Ocean",
+    "wave_height": 40.0,
+    "wave_length": 650.0,
+    "position": [
+      0,
+      0,
+      0
+    ]
+  },
+  "frozen_ocean_phase_s": 0.0,
+  "resolution": [
+    512,
+    384
+  ],
+  "restoration": {
+    "stage": true,
+    "camera": true,
+    "resolution": true,
+    "fill": true,
+    "settings": true,
+    "timeline": true,
+    "ocean_stopped": true,
+    "actor_removed": true
+  },
+  "wall_s": 40.30446504999418,
+  "final_checkpoint": {
+    "ok": true,
+    "checkpoint_id": "checkpoint_18g_oh6u",
+    "directory": "/home/madil/kit-app-template/artifacts/scene_checkpoints/checkpoint_18g_oh6u",
+    "schema_version": 1,
+    "scene_sha256": "2b26432e38c314b02becfdff2b3fc83520319f29ee01db2e7406cd80c9990045",
+    "camera": "/World/Cameras/DolphinChaseCamera",
+    "resolution": [
+      1280,
+      720
+    ],
+    "fill_frame": false,
+    "renderer_settings": {
+      "/exts/cris.madil.render_service/underwaterCue/enabled": true,
+      "/rtx/fog/enabled": true,
+      "/rtx/fog/fogColor": [
+        0.03,
+        0.16,
+        0.2
+      ],
+      "/rtx/fog/fogColorIntensity": 0.5,
+      "/rtx/fog/fogDistanceDensity": 0.04,
+      "/rtx/fog/fogEndDist": 1800.0,
+      "/rtx/fog/fogHeightDensity": 0.08,
+      "/rtx/fog/fogHeightFalloff": 0.025,
+      "/rtx/fog/fogStartDist": 0.0,
+      "/rtx/fog/fogStartHeight": 0.0,
+      "/rtx/fog/fogZup/enabled": false,
+      "/rtx/pathtracing/aa/filterRadius": 1.0,
+      "/rtx/pathtracing/aa/op": 1,
+      "/rtx/pathtracing/adaptiveSampling/enabled": false,
+      "/rtx/pathtracing/adaptiveSampling/targetError": 0.0010000000474974513,
+      "/rtx/pathtracing/cached/enabled": true,
+      "/rtx/pathtracing/fireflyFilter/enabled": true,
+      "/rtx/pathtracing/fireflyFilter/maxIntensityPerSample": null,
+      "/rtx/pathtracing/fireflyFilter/maxIntensityPerSampleDiffuse": null,
+      "/rtx/pathtracing/fractionalCutoutOpacity": true,
+      "/rtx/pathtracing/lightcache/cached/enabled": true,
+      "/rtx/pathtracing/maxBounces": 16,
+      "/rtx/pathtracing/maxSpecularAndTransmissionBounces": 16,
+      "/rtx/pathtracing/optixDenoiser/blendFactor": 0.0,
+      "/rtx/pathtracing/optixDenoiser/enabled": true,
+      "/rtx/pathtracing/optixDenoiser/temporalMode/enabled": false,
+      "/rtx/pathtracing/spp": 1,
+      "/rtx/pathtracing/totalSpp": 512,
+      "/rtx/post/aa/op": 3,
+      "/rtx/post/chromaticAberration/enabled": false,
+      "/rtx/post/colorcorr/contrast": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/enabled": false,
+      "/rtx/post/colorcorr/gain": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/gamma": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorcorr/offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorcorr/saturation": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/blackpoint": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/contrast": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/enabled": false,
+      "/rtx/post/colorgrad/gain": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/gamma": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/lift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/multiply": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/colorgrad/offset": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "/rtx/post/colorgrad/whitepoint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/dlss/execMode": 3,
+      "/rtx/post/dof/enabled": false,
+      "/rtx/post/histogram/enabled": false,
+      "/rtx/post/lensFlares/enabled": false,
+      "/rtx/post/motionblur/enabled": false,
+      "/rtx/post/tonemap/cameraShutter": 50.0,
+      "/rtx/post/tonemap/cm2Factor": 1.0,
+      "/rtx/post/tonemap/colorMode": 0,
+      "/rtx/post/tonemap/dither": 0.0,
+      "/rtx/post/tonemap/enableSrgbToGamma": true,
+      "/rtx/post/tonemap/exposureBias": null,
+      "/rtx/post/tonemap/fNumber": 5.0,
+      "/rtx/post/tonemap/filmIso": 100.0,
+      "/rtx/post/tonemap/maxWhiteLuminance": 10.0,
+      "/rtx/post/tonemap/ocio/cfgFilePath": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/rendering-data/runtime/ov-0.1.0.ocio",
+      "/rtx/post/tonemap/op": 6,
+      "/rtx/post/tonemap/whiteScale": 40.20000076293945,
+      "/rtx/post/tonemap/whitepoint": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "/rtx/post/tonemap/wrapValue": 0.0,
+      "/rtx/post/tvNoise/enabled": false,
+      "/rtx/raytracing/fractionalCutoutOpacity": false,
+      "/rtx/reflections/enabled": true,
+      "/rtx/rendermode": "RealTimePathTracing",
+      "/rtx/resetPtAccumOnAnimTimeChange": false,
+      "/rtx/rtpt/maxBounces": 8,
+      "/rtx/rtpt/maxSpecularAndTransmissionBounces": 8,
+      "/rtx/translucency/enabled": true,
+      "/rtx/translucency/maxRefractionBounces": 8
+    },
+    "display_options": null,
+    "timeline_seconds": 0.0,
+    "frozen_sampled_attributes": 0,
+    "limitations": "Frozen visual state with external asset dependencies; controller/animation phase is not serialized."
+  }
+}
