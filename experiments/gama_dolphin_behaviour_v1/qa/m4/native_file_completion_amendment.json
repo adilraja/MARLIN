@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-05T15:11:06.550564+00:00",
+  "failed_job": "smoke04",
+  "failure": "Capture completion callback returned before a unique PNG file existed; the PNG appeared after the failed immediate file check.",
+  "remedy": "Wait asynchronously for the complete PNG IEND chunk before hashing or advancing to another pose. Retain the partial failed job; camera profile v2 produced visible body pixels.",
+  "numeric_pose_tolerances_changed": false,
+  "retry_job": "smoke05"
+}

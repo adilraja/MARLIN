@@ -1,0 +1,29 @@
+{
+  "status": "failed",
+  "job": {
+    "job_id": "smoke01",
+    "mode": "smoke"
+  },
+  "media_directory": "/home/madil/kit-app-template/artifacts/gama_dolphin_behaviour_v1/m4/smoke01",
+  "frames": [],
+  "gpu": [
+    {
+      "device_index": 0,
+      "total_mib": 6138,
+      "free_mib": 1687,
+      "driver": "595.99.02"
+    }
+  ],
+  "restoration": {
+    "stage": true,
+    "camera": true,
+    "resolution": true,
+    "fill_frame": true,
+    "settings": true,
+    "timeline": true
+  },
+  "scope": "Native preview, frozen ocean phase 0; explicit recorded GAMA state; no RGB/radiometric/sample-count certification",
+  "dry_geometry_diagnostic": false,
+  "error": "'NoneType' object does not support item assignment",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/gama_dolphin_behaviour_v1/qa/m4/native_worker.py\", line 89, in execute\n    local_ocean=copy.deepcopy(ocean._ocean_animation_state);local_ocean['elapsed']=0.;local_ocean['accumulator']=0.\n                                                            ~~~~~~~~~~~^^^^^^^^^^^\nTypeError: 'NoneType' object does not support item assignment\n"
+}

@@ -1,0 +1,17 @@
+{
+  "utc": "2026-11-05T15:18:09.264408+00:00",
+  "observations": {
+    "xrandr": {
+      "returncode": 0,
+      "stdout": "Screen 0: minimum 16 x 16, current 0 x 0, maximum 32767 x 32767\n",
+      "stderr": ""
+    },
+    "xdpyinfo": {
+      "returncode": 0,
+      "stdout": "name of display:    :0\n  dimensions:    0x0 pixels (0x0 millimeters)\n  resolution:    -2147483648x-2147483648 dots per inch",
+      "stderr": ""
+    }
+  },
+  "conclusion": "The XWayland display reports 0x0 and no outputs. App window settings are valid but the actual X display cannot provide a drawable surface. This explains 65516x65478 swapchain dimensions; no driver reinstall is indicated by this evidence.",
+  "next": "Try documented no-window native rendering while preserving the checkpoint; leave system display configuration unchanged."
+}

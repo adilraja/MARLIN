@@ -1,0 +1,28 @@
+{
+  "protocol": "model61a_m4_v1",
+  "locked_utc": "2026-11-05T14:50:22.861525+00:00",
+  "root_position_error_m": 1e-05,
+  "root_matrix_component_error": 1e-08,
+  "joint_matrix_component_error": 2e-06,
+  "skinned_vertex_repeat_error_m": 2e-06,
+  "phase_error_cycles": 1e-09,
+  "loop_rotation_continuity_deg": 0.001,
+  "loop_derivative_difference_deg_per_cycle": 0.05,
+  "loop_probe_phase": 1e-06,
+  "fixed_calibration_relative_error": 1e-07,
+  "pose_attributes_paused_or_rejected": "exact composed TRS and owned layer equality",
+  "mesh_authoring": "exact source point/topology/material/scale identity",
+  "gross_deformation": {
+    "edge_length_ratio": [
+      0.5,
+      1.5
+    ],
+    "triangle_area_ratio": [
+      0.25,
+      4.0
+    ],
+    "face_normal_dot_minimum": 0.0,
+    "degenerate_rest_area_m2": 1e-12
+  },
+  "interpretation": "Float32 authored joint rotations/translations and half-precision USD scales; deterministic within-runtime comparisons. Gross geometric guards and human inspection do not certify biological motion or exhaustive self-intersection absence."
+}

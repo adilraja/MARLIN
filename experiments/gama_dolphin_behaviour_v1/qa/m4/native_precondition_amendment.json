@@ -1,0 +1,11 @@
+{
+  "utc": "2026-11-05T15:01:46.493405+00:00",
+  "failed_job": "smoke01",
+  "failure": "The pre-work scene had ocean and chase already stopped. Native preparation required an existing ocean state and dereferenced None before any image capture.",
+  "pre_work_controllers": "Both stopped, as preserved in live_before; no claim that M4 stopped them.",
+  "remedy": "Temporarily start the existing ocean from its recorded M2 parameters for the native jobs; capture freezes a disposable stage copy. Stop the temporary controller and restore checkpoint_4fde7e3u and its original viewport/settings after the jobs.",
+  "controller_or_asset_source_changed": false,
+  "numerical_tolerances_changed": false,
+  "failed_source_sha256": "23842c1aca85014bd452c14090dc1561a34530f046eda6380af87e73bbff1608",
+  "retry_job": "smoke02"
+}

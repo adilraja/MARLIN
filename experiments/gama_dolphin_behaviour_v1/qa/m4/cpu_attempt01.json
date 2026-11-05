@@ -1,0 +1,34 @@
+{
+  "passed": false,
+  "tests": 7,
+  "failures": [],
+  "errors": [
+    [
+      "test_bound_default_pose_and_independent_timeline (__main__.AnimatedUSD.test_bound_default_pose_and_independent_timeline)",
+      "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/tools/test_gama_animated_v3.py\", line 72, in test_bound_default_pose_and_independent_timeline\n    query=UsdSkel.AnimQuery(self.owner.pose.animation)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: This class cannot be instantiated from Python\n"
+    ]
+  ],
+  "metrics": [
+    {
+      "test": "61 actual UsdSkel phase samples",
+      "vertices": 21504,
+      "triangles": 40208,
+      "degenerate_rest_triangles_excluded": 0,
+      "peaks": {
+        "max_vertex_change_m": 0.41428328606768483,
+        "edge_ratio_min": 0.7783147164563291,
+        "edge_ratio_max": 1.3225476501245321,
+        "area_ratio_min": 0.7328597471682013,
+        "area_ratio_max": 1.379707820201954,
+        "face_normal_dot_min": 0.7104669873102214
+      },
+      "failed_phases": []
+    },
+    {
+      "test": "periodic loop",
+      "angle_across_probe_deg": 0.00014953474336020452,
+      "derivative_difference_deg_per_cycle": 0.00026007692719451077
+    }
+  ],
+  "tolerance_sha256": "a47693d2e705f20141926037ba55e4c0aaf0446ae83ec5e0a11a89e20da3644d"
+}

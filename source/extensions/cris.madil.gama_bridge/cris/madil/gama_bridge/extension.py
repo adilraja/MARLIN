@@ -13,6 +13,7 @@ class GamaBridgeExtension(omni.ext.IExt):
         self._actor = None
         self._actor_v2 = None
         self._actor_v3 = None
+        self._animated_actor_v3 = None
         self._router = ServiceAPIRouter(tags=["MARLIN GAMA preview exchange"])
 
         @self._router.post("/integration/gama/validate")
@@ -259,6 +260,14 @@ class GamaBridgeExtension(omni.ext.IExt):
 
         from .routes_v3 import register
         register(self._router, actor_v3, context)
+        def animated_actor_v3():
+            if self._animated_actor_v3 is None:
+                from .actor_animated_v3 import AnimatedBottlenoseActor
+                self._animated_actor_v3 = AnimatedBottlenoseActor()
+            return self._animated_actor_v3
+
+        from .routes_animated_v3 import register as register_animated
+        register_animated(self._router, animated_actor_v3, context)
         main.register_router(self._router)
 
     def on_shutdown(self):
@@ -269,5 +278,7 @@ class GamaBridgeExtension(omni.ext.IExt):
             self._actor_v2.close()
         if self._actor_v3 is not None:
             self._actor_v3.close()
+        if self._animated_actor_v3 is not None:
+            self._animated_actor_v3.close()
         self._buffer.reset()
         self._buffer_v2.reset()

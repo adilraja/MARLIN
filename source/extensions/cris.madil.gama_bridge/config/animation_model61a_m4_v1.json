@@ -1,0 +1,19 @@
+{
+  "version": "model61a_baked_cycle_m4_v1",
+  "clip": "assets/cetaceans/bottlenose_dolphin/animation/swim_cycle.json",
+  "clip_sha256": "0967ddc35a35568b62476d1c73fee3ae1f612d4b2956bcdeaffa45d26f5cb260",
+  "interpolation": "periodic_normalized_quaternion_cubic_v1",
+  "full_cycle_speed_mps": 0.7,
+  "amplitude_blend": "quintic_0_to_1_of_clamped_horizontal_speed",
+  "synthetic_root": "identity; no world locomotion from joints",
+  "main_joint": "retained existing rotation; existing constant near-zero translation",
+  "state_mapping": {
+    "steady_swim": "existing local trunk/tail/fluke cycle + recorded root attitude",
+    "turn": "existing local trunk/tail/fluke cycle + recorded root attitude",
+    "descent": "existing local trunk/tail/fluke cycle + recorded root attitude",
+    "submerged_swim": "existing local trunk/tail/fluke cycle + recorded root attitude",
+    "ascent": "existing local trunk/tail/fluke cycle + recorded root attitude"
+  },
+  "manoeuvre_specific_pose": "limited: no new banking, asymmetric steering or dive-specific joint offsets",
+  "biological_approval": false
+}

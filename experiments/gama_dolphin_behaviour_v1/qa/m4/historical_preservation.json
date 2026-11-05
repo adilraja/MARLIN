@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "earlier_sealed_evidence_preserved": true,
+  "historical_source_versions_verified": {
+    "m1": {
+      "commit": "09186b3",
+      "verified": {
+        "files": 80,
+        "external_inputs": 33,
+        "checkpoint_artifacts": 4,
+        "source_pins_verified_at_commit": 250
+      },
+      "current_source_differences": [
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py"
+      ]
+    },
+    "m2": {
+      "commit": "ac9022d",
+      "verified": {
+        "files": 65,
+        "asset_dependencies": 4,
+        "checkpoint_artifacts": 4,
+        "source_pins_verified_at_commit": 255
+      },
+      "current_source_differences": [
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py"
+      ]
+    },
+    "m3": {
+      "commit": "4af84ab",
+      "verified": {
+        "files": 145,
+        "source_pins_verified_at_commit": 260
+      },
+      "current_source_differences": [
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py"
+      ]
+    },
+    "water_m5": {
+      "commit": "09186b3",
+      "verified": {
+        "files": 206,
+        "checkpoint_artifacts": 8,
+        "source_pins_verified_at_commit": 113
+      },
+      "current_source_differences": [
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py"
+      ]
+    },
+    "water_m6": {
+      "commit": "09186b3",
+      "verified": {
+        "files": 182,
+        "checkpoint_artifacts": 3,
+        "source_pins_verified_at_commit": 113
+      },
+      "current_source_differences": [
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py"
+      ]
+    }
+  },
+  "gate_b_acceptance_files": 4,
+  "gate_b_bindings": 12,
+  "current_source_disposition": "M4 added opt-in animated routes and normalized the shared bake quaternion converter; old literal current-source verifiers correctly no longer match. Their prior evidence/source seals were preserved, not rewritten."
+}

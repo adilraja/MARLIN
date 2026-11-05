@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-05T15:16:23.715873+00:00",
+  "failed_launch": "live_restart_attempt03",
+  "failed_job": "smoke05",
+  "failure": "Startup log requested a 65516 x 65478 swapchain, then reported ERROR_OUT_OF_DEVICE_MEMORY and uninitialized backbuffers; no native images were delivered.",
+  "observed_free_gpu_mib": 1720,
+  "remedy": "Set explicit app and persistent startup window dimensions/maximized state via documented CLI settings, disable saved-size-on-exit for this diagnostic launch, and reload the preserved checkpoint.",
+  "installation_or_asset_files_changed": false,
+  "pose_tolerances_changed": false,
+  "documentation": [
+    "https://docs.omniverse.nvidia.com/kit/docs/omni.appwindow/1.1.8/SETTINGS.html",
+    "https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/configuring.html"
+  ],
+  "retry_job": "smoke06"
+}

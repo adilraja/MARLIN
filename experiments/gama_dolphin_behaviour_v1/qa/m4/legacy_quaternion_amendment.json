@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-05T15:11:06.550484+00:00",
+  "failed_result": "cpu_attempt03.json",
+  "diagnosis": "A rounded bake quaternion had scalar=1 but vector x=-0.0003103828. Constructing Gf.Rotation without normalizing discarded that small intended rotation; maximum knot matrix difference was 0.00062076555.",
+  "remedy": "Normalize finite, nonzero bake quaternions in the shared rest-relative conversion before constructing Gf.Rotation. The preserved bake and asset bytes were not changed.",
+  "numeric_tolerances_changed": false,
+  "retry": "cpu_attempt04.json"
+}

@@ -1,0 +1,12 @@
+{
+  "utc": "2026-11-05T15:05:18.955493+00:00",
+  "excluded_job": "smoke02",
+  "capture_lifecycle": "passed; scene/viewport/settings restored",
+  "visual_qualification": "failed: all six native LDR images were constant white and could not show the animal",
+  "cause_to_test": "Diagnostic exposure inherited time=1 s and fstop=1 under daylight; physical diagnostic camera exposure must be explicit.",
+  "remedy": "Load a local versioned capture profile and record effective camera exposure; repeat a small native batch, retain the prior raw captures and source.",
+  "controller_or_asset_changed": false,
+  "numerical_pose_tolerances_changed": false,
+  "first_worker_source_sha256": "23842c1aca85014bd452c14090dc1561a34530f046eda6380af87e73bbff1608",
+  "retry_job": "smoke03"
+}

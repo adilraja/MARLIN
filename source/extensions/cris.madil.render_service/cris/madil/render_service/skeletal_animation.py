@@ -10,6 +10,22 @@ def _normalized_bone_name(name: str) -> str:
     return name.replace(".", "_")
 
 
+def baked_joint_local(rest_transform, translation, rotation, scale):
+    """Convert one existing rest-relative bake sample to USD joint-local space."""
+    relative = Gf.Transform()
+    relative.SetTranslation(Gf.Vec3d(*translation))
+    quaternion = Gf.Quatd(rotation[0], Gf.Vec3d(*rotation[1:]))
+    # Float32 bake rounding can leave w=1 with a small nonzero vector part.
+    # Normalize before Gf.Rotation so that intended small rotations survive.
+    length = quaternion.GetLength()
+    if not 0 < length < float('inf'):
+        raise ValueError('Baked quaternion must be finite and nonzero')
+    quaternion.Normalize()
+    relative.SetRotation(Gf.Rotation(quaternion))
+    relative.SetScale(Gf.Vec3d(*scale))
+    return relative.GetMatrix() * Gf.Matrix4d(rest_transform)
+
+
 def bind_baked_skeletal_animation(
     stage,
     cetacean_path: str,
@@ -112,27 +128,10 @@ def bind_baked_skeletal_animation(
             rotation = sample["rotations"][index]
             scale = sample["scales"][index]
 
-            rest_relative = Gf.Transform()
-            rest_relative.SetTranslation(Gf.Vec3d(*translation))
-            rest_relative.SetRotation(
-                Gf.Rotation(
-                    Gf.Quatd(
-                        rotation[0],
-                        Gf.Vec3d(
-                            rotation[1],
-                            rotation[2],
-                            rotation[3],
-                        ),
-                    )
-                )
-            )
-            rest_relative.SetScale(Gf.Vec3d(*scale))
-
             # OpenUSD defines rest-relative transforms such that:
             # restRelative * restTransform = jointLocalTransform.
             local_transforms.append(
-                rest_relative.GetMatrix()
-                * Gf.Matrix4d(rest_transforms[index])
+                baked_joint_local(rest_transforms[index], translation, rotation, scale)
             )
 
         authored = animation.SetTransforms(

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-11-05T15:29:29.712374+00:00",
+  "finding": "The inherited M2 frame contained its old static_rest_pose_m2 descriptive hint, while the actual animated status/pose_controls and composed joints correctly showed existing_baked_cycle_m4_v1.",
+  "correction": "Override the returned evaluated-frame mapping label in the animated subclass; add explicit body_animation_evaluated=true. Preserve raw native capture sidecars and source snapshot; numerical root, phase and joint evaluation are unchanged.",
+  "capture_source_sha256": "60aae4195857e83991b84841df1ac94cb2a06b73aaa457d500565183d9e05285",
+  "pose_math_or_tolerances_changed": false,
+  "required_validation": "Rerun CPU/API checks; compare retained native numeric poses against the corrected evaluator."
+}
