@@ -1,0 +1,13 @@
+{
+  "passed": false,
+  "tests": 9,
+  "failures": [],
+  "errors": [
+    [
+      "test_disconnected_label_was_rejected (__main__.BottlenoseAcceptance.test_disconnected_label_was_rejected)",
+      "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/tools/test_gama_bottlenose.py\", line 39, in test_disconnected_label_was_rejected\n    self.assertFalse(self.evaluate(s)['passed'])\n                     ~~~~~~~~~~~~~^^^\n  File \"/home/madil/kit-app-template/tools/test_gama_bottlenose.py\", line 21, in evaluate\n    def evaluate(self,s=None,d=None):return analysis.analyze(s or self.states,d or self.diagnostics,self.config,self.tol,False)\n                                            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/madil/kit-app-template/tools/analyze_gama_bottlenose.py\", line 59, in analyze\n    if buffer.accept(state)['duplicate']:raise ValueError('Duplicate recorded state')\n       ~~~~~~~~~~~~~^^^^^^^\n  File \"/home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/exchange_v3.py\", line 145, in accept\n    raise ValueError('New state entry precedes the previous snapshot')\nValueError: New state entry precedes the previous snapshot\n"
+    ]
+  ],
+  "actual_gama_input": "trajectories/m3_ref_a01",
+  "test_source_sha256": "002bdddc5fc7f768547a9393517b688de95caf79e8cca05180d22f9d064b397f"
+}

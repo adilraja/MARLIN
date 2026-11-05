@@ -1,0 +1,45 @@
+{
+  "protocol": "bottlenose_m3_v1",
+  "locked_utc": "2026-11-05T13:58:53.488384+00:00",
+  "m2_tolerance_sha256": "4cf158b3c563ec3e55e6dd5cdbd8b3252509483064bf325bd0767c70c286eb47",
+  "position_error_m": 1e-05,
+  "heading_error_deg": 0.0001,
+  "time_error_s": 1e-09,
+  "phase_error_cycles": 1e-09,
+  "velocity_error_mps": 1e-08,
+  "attitude_error_deg": 0.0001,
+  "numeric_bound_slack": 1e-09,
+  "repeated_run": "exact canonical state and realised-choice bytes; excluded only run_id",
+  "bounds": {
+    "horizontal_speed_mps": [
+      0,
+      1.0
+    ],
+    "speed_3d_mps": [
+      0,
+      1.1
+    ],
+    "horizontal_acceleration_mps2": 0.5,
+    "vector_acceleration_mps2": 0.6,
+    "heading_rate_deg_s": 15.0,
+    "heading_acceleration_deg_s2": 4.0,
+    "vertical_speed_mps": 0.45,
+    "vertical_acceleration_mps2": 0.1,
+    "pitch_abs_deg": 35.0,
+    "pitch_rate_deg_s": 8.0,
+    "roll_abs_deg": 0.0,
+    "x_m": [
+      -80,
+      80
+    ],
+    "z_m": [
+      -80,
+      80
+    ],
+    "depth_m": [
+      0,
+      4
+    ]
+  },
+  "justification": "Engineering precision inherited from M2; movement bounds chosen before execution above analytic quintic envelopes for the entire declared parameter box. No physiological interpretation. Position checks follow the declared trapezoidal horizontal and analytic vertical schemes; instantaneous velocity is not equated with a secant."
+}

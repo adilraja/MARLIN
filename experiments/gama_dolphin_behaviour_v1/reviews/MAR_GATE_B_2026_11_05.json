@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "gate": "B",
+  "evidence_version": "bottlenose_constrained_v1",
+  "reviewer": "MAR",
+  "status": "accepted",
+  "decision_date": "2026-11-05",
+  "recorded_utc": "2026-11-05T14:13:31.369464+00:00",
+  "acceptance_received": true,
+  "source": "Explicit user reply in this chat to the Gate B trajectory review question",
+  "question_item_id": "[\"request_user_input_async\",\"call_46c0944bd82c43a19680d8a94296c54f\",0]",
+  "question": "Gate B requires a named review before M4 body-animation work. Please review the trajectory plots and packet at /home/madil/kit-app-template/experiments/gama_dolphin_behaviour_v1/reviews/GATE_B_REVIEW.md. May I record MAR’s acceptance of these constrained, reproducible M3 trajectories as engineering inputs for animation integration, without biological or rendered-body approval?",
+  "response_verbatim": "Accept Gate B as MAR",
+  "accepted_scope": "The exact constrained, reproducible reference and seeded M3 trajectories as engineering inputs for M4 body-animation integration",
+  "bindings": [
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/m3_manifest.json",
+      "bytes": 82061,
+      "sha256": "b093fe8ba6a3dd3619091a4b5134ad105ca137c49be07c56301f7202fab4876a"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/reviews/GATE_B_REVIEW.md",
+      "bytes": 4143,
+      "sha256": "ff3f7abdee46d3c47962e03b2491c10fea26480ce58d64f48860d29526e60799"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/M3_MOVEMENT_MODEL_AND_PARAMETER_REGISTER.md",
+      "bytes": 13620,
+      "sha256": "75b80a0bda6ccff7f81efa801adc0d0da0a53a6baa42c9f84472bc678f50174e"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/M3_REPRODUCTION.md",
+      "bytes": 3358,
+      "sha256": "d17cfdce82acd4f6cc691f285f40bc55e0beb4d3476eee389fd6494ced61cb2d"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/config/m3_parameters_v1.json",
+      "bytes": 4771,
+      "sha256": "badc52944d4cf50236932159df68dcba1748ea2b2f240e4b89ba62b48e540729"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/config/m3_acceptance_v1.json",
+      "bytes": 1380,
+      "sha256": "1314c2d409550871bcc1421151088e93116952c3999a08ba25f35396965f1478"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m3/locked_plan.json",
+      "bytes": 729,
+      "sha256": "4cf1054e77a31b2a8a034e46482cc59d44a8f2c6d949158cefef78329e507c55"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m3/campaign_analysis.json",
+      "bytes": 15239,
+      "sha256": "d9abc40d126ff968e931f3b54442d492b3a295d2bb205978db482cf1ce5dd836"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m3/figures/movement_overview.png",
+      "bytes": 228384,
+      "sha256": "9b05268ea400e9020ec83e30707416b9dbc2c1e24a639d019f2bccd3e6e9bc11"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m3/figures/position_and_states.png",
+      "bytes": 140191,
+      "sha256": "772c73e089e110a3121594bb49ba113499ca774f5b6fd1853f9246a34e6d106b"
+    },
+    {
+      "path": "experiments/gama_dolphin_behaviour_v1/qa/m3/figures/attitude_and_constraints.png",
+      "bytes": 362375,
+      "sha256": "267b5964c27ced56baa3d8c1f2330b29bbb3cc92b1dea56ceefed8ebdbeeacc6"
+    },
+    {
+      "path": "Sprints/CurrentSprint/MARLIN_GAMA_BOTTLENOSE_BEHAVIOUR_ANIMATION_SPRINT_SPECIFICATION.md",
+      "bytes": 32873,
+      "sha256": "cd7514ee774a27ba5416337a05a46d0d23ced4bb49abd06edfe0e5eb310d76d0"
+    }
+  ],
+  "superseded_review_state_sha256": "a0edddc52b468dab5bc0cbb4396f3eaaf37c604f54a68f204cc230d452a96dcc",
+  "milestone_3_accepted": true,
+  "conditions": [
+    "Preserve the reviewed Model 61A asset, engineering calibration, accepted water work and M2 ownership/time contract.",
+    "Reuse the existing inspected rig and baked swim-cycle path within Gate A scope.",
+    "Demonstrate coordinated local body motion; root attitude and recorded phase alone do not satisfy M4.",
+    "Obtain Gate C review of the supported motion/pose mapping before the integrated demonstration and retain Gate D closeout review.",
+    "Return for a separate scope decision if substantial asset work or rig replacement becomes necessary."
+  ],
+  "biological_approval": false,
+  "final_animation_visual_acceptance": false,
+  "milestone_4_started_by_this_record": false
+}
