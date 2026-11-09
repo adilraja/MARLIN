@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/cris.madil.kit.sh",
+    "--no-window",
+    "--/app/window/enabled=false",
+    "--/app/extensions/registryEnabled=false",
+    "--/app/extensions/syncRegistryOnStartup=false",
+    "--/app/settings/loadUserConfig=false",
+    "--/app/settings/saveUserConfig=false",
+    "--/app/settings/persistent=false",
+    "--portable",
+    "--portable-root=/tmp/marlin_above_water_m1_runtime_profile",
+    "--/log/file=/home/madil/kit-app-template/experiments/above_water_annotation_v1/baseline/runtime_probe.log",
+    "--exec",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/qa/m1/query_runtime.py"
+  ],
+  "timeout_s": 120,
+  "purpose": "Read-only installed Kit/extension metadata; no annotator enablement, captures or live scene restoration"
+}

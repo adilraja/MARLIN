@@ -1,0 +1,107 @@
+{
+  "version": "above_water_acceptance_v1",
+  "status": "proposed_for_gate_a_locked_before_candidate_runs",
+  "reference_basis": "Engineering limits selected before new candidate renders; not optical or sensor certification",
+  "geometry": {
+    "camera_fiducial_max_error_px": 1,
+    "dry_wrong_core_pixels": 0,
+    "dry_reference_boundary_band_px": 1,
+    "native_box_max_edge_error_px": 1,
+    "mask_derived_box_error_px": 0,
+    "empty_control_target_pixels": 0,
+    "stale_bundles": 0,
+    "mapping_errors": 0,
+    "flat_clear_oblique_transmitted_landmark_max_error_px": 2
+  },
+  "replay": {
+    "root_position_error_m": 1e-05,
+    "root_matrix_component_error": 1e-08,
+    "joint_matrix_component_error": 2e-06,
+    "skinned_vertex_repeat_error_m": 2e-06,
+    "phase_error_cycles": 1e-09
+  },
+  "environment": {
+    "camera_matrix_component_error": 1e-08,
+    "ocean_point_max_error_m": 2e-06,
+    "normal_component_error": 2e-06,
+    "wave_phase_error_s": 1e-09,
+    "topology_exact": true,
+    "material_and_light_parameters_exact": true,
+    "allowed_volatile": [
+      "native numeric ID with valid retained mapping",
+      "render-product viewPickingId",
+      "process/frame counter values"
+    ]
+  },
+  "label_repeat": {
+    "remapped_mask_min_iou": 0.995,
+    "max_box_edge_error_px": 1,
+    "wrong_pixels_outside_one_pixel_boundary_band": 0,
+    "empty_mask_equality": "Both empty -> equal; only one empty -> fail"
+  },
+  "rgb_repeat": {
+    "regions": [
+      "whole RGB image",
+      "union of corresponding primary/repeat direct boxes expanded by 8 px, clipped to image"
+    ],
+    "display_mae_max_levels": 2,
+    "display_p99_abs_error_max_levels": 12,
+    "fraction_rgb_components_abs_error_over_32_max": 0.001,
+    "hdr_relative_mae_max": 0.05,
+    "hdr_p99_absolute_error_over_primary_p99_max": 0.1,
+    "denominator_floor": 1e-06,
+    "maximum_error": "Always report; not an equality claim",
+    "no_per_capture_fitting": true
+  },
+  "marine_review": {
+    "required_rows": [
+      "marine_wave_0_A_exposed_nadir",
+      "marine_wave_0_B_exposed_oblique",
+      "marine_wave_0_B_interface_nadir",
+      "marine_wave_0_A_interface_oblique",
+      "marine_wave_0_A_submerged_nadir",
+      "marine_wave_0_B_submerged_oblique",
+      "marine_wave_1p25_B_exposed_nadir",
+      "marine_wave_1p25_A_exposed_oblique",
+      "marine_wave_1p25_A_interface_nadir",
+      "marine_wave_1p25_B_interface_oblique",
+      "marine_wave_1p25_B_submerged_nadir",
+      "marine_wave_1p25_A_submerged_oblique"
+    ],
+    "reviewer_marks": "Confident body foreground F, definite non-body background B, uncertain U on fixed display; body reflections excluded",
+    "uncertainty_max_fraction_of_F_union_U": 0.2,
+    "missed_confident_body_max_fraction_of_F": 0.02,
+    "labelled_definite_background_max_fraction_of_F": 0.02,
+    "require_nonempty_F_for_positive_qualification": true,
+    "boundary_report_px": 2,
+    "independent_clear_fiducial_uses_analytic_reference": true,
+    "ambiguous_or_empty_positive": "Unqualified/ambiguous, not a manufactured absence or passed mask"
+  },
+  "resources": {
+    "resolution_px": [
+      512,
+      384
+    ],
+    "maximum_render_products": 1,
+    "minimum_free_gpu_before_allocation_mib": 2048,
+    "minimum_free_gpu_during_capture_mib": 768,
+    "guard_rule": "Use stricter current guard if raised; the 2048 MiB admission threshold is a conservative proposal, not a measured annotator allocation",
+    "capture_timeout_s": 90,
+    "settling_delivered_frames": 64,
+    "settling_timeout_s": 45,
+    "transaction_timeout_s": 600,
+    "startup_timeout_s": 120,
+    "cleanup_timeout_s": 30,
+    "max_delivered_settle_frames": 128,
+    "max_rendered_bundles_per_transaction": 6,
+    "minimum_free_disk_bytes": 10737418240,
+    "maximum_incremental_evidence_bytes": 5368709120,
+    "baseline_capture_budget": 4,
+    "attempt_cap": 144,
+    "reserve": 24
+  },
+  "dry_reference": "Analytic plane/cube ray intersection and independent triangle raster cross-check, not native-mask/native-box agreement alone",
+  "failures": "No tolerance relaxation after seeing candidate result. Amend at review gate before new acceptance version; preserve original failure.",
+  "dependency_stop": "If native provider is not locally available, stop before package installation or an unqualified fallback; prepare exact official dependency proposal for separate review",
+  "lifecycle_stop": "Resolve finite startup/shutdown and clean owned-product teardown before capture; retained M1 probe timeout is not a passed lifecycle test"
+}

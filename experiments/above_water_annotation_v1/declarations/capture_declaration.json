@@ -1,0 +1,1649 @@
+{
+  "version": "above_water_capture_declaration_v1",
+  "proposed_at_gate_a": true,
+  "execution_authorised": false,
+  "created_utc": "2026-11-09T11:36:06.016638+00:00",
+  "source_poses": [
+    {
+      "id": "A",
+      "simulation_time_s": 6.0,
+      "source_run": "m3_ref_a01",
+      "phase": 0.25000000000000006,
+      "weight": 1.0,
+      "source_index": 24,
+      "state": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00030/state.json",
+        "bytes": 32898,
+        "sha256": "59fa4ccd93120a166d890f2f6197035dfc83d957a32165fa7bc705b941255359"
+      },
+      "scene": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00030/scene.usdc",
+        "bytes": 5099937,
+        "sha256": "f328aa6ab4e520a2e2b5c399feb0a10bb4b13870d734aa6dd45d3cb6a48981bc"
+      },
+      "evaluated_skin": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00030/skin.npz",
+        "bytes": 453775,
+        "sha256": "989e2398de6855ebe3cd5a1f3b3b555c1d5e2600a9bdb347c7c7711294d417fe"
+      },
+      "vertices": 21504,
+      "root_matrix": [
+        [
+          0.984807753012208,
+          0.0,
+          0.1736481776669304,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.1736481776669304,
+          0.0,
+          0.984807753012208,
+          0.0
+        ],
+        [
+          -1027.7837084267092,
+          -20.0,
+          -1342.4307595180464,
+          1.0
+        ]
+      ],
+      "body_fingerprint": "e5a7ee226872b79b8a16007d9d96ab4660c7cf485bc4b3b77a60b8aace11776d",
+      "source_bounds_m": {
+        "minimum": [
+          -10.661205984335439,
+          -0.5891490135547978,
+          -15.028018608470068
+        ],
+        "maximum": [
+          -9.660239442020911,
+          0.23436337932665396,
+          -12.697516076813674
+        ]
+      },
+      "anchor_xz_m": [
+        -10.277837084267091,
+        -13.424307595180466
+      ],
+      "placement_y_offsets_m": {
+        "exposed": 1.2391490135547978,
+        "interface": 0.1773928171140719,
+        "submerged": -0.884363379326654
+      },
+      "guaranteed_interface_vertex_clearance_m": 0.011756196440725841,
+      "translation_policy": "Only recorded Y offset; original X/Z, root attitude, scale and evaluated body pose retained"
+    },
+    {
+      "id": "B",
+      "simulation_time_s": 30.0,
+      "source_run": "m3_ref_a01",
+      "phase": 0.45000000000000007,
+      "weight": 1.0,
+      "source_index": 120,
+      "state": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00150/state.json",
+        "bytes": 33143,
+        "sha256": "de13aa1416ed63f935b53cfd344b8d432203fd5a197cfedf3cdfad92ab0e7c6e"
+      },
+      "scene": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00150/scene.usdc",
+        "bytes": 5099966,
+        "sha256": "51cda49b2f039642c8917da164c93f6389ffad04274e5a71b2dd76ed6beb750e"
+      },
+      "evaluated_skin": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00150/skin.npz",
+        "bytes": 472166,
+        "sha256": "f07e93c8ea071f73dd95de62e31454ac25a3462b72cdf26b68d8963dafbdbe03"
+      },
+      "vertices": 21504,
+      "root_matrix": [
+        [
+          0.4226182617406993,
+          0.0,
+          -0.90630778703665,
+          0.0
+        ],
+        [
+          0.3646249468439151,
+          0.9154994973592417,
+          0.17002740506767683,
+          0.0
+        ],
+        [
+          0.8297243234848198,
+          -0.4023191150504482,
+          0.38690680619844664,
+          0.0
+        ],
+        [
+          -112.35871691094685,
+          -170.0,
+          -5.798207814814983,
+          1.0
+        ]
+      ],
+      "body_fingerprint": "e5a7ee226872b79b8a16007d9d96ab4660c7cf485bc4b3b77a60b8aace11776d",
+      "source_bounds_m": {
+        "minimum": [
+          -2.712461153887378,
+          -2.1286958489688037,
+          -1.0308897354046753
+        ],
+        "maximum": [
+          -0.5578945361013233,
+          -1.0393137326186705,
+          0.22239036501237297
+        ]
+      },
+      "anchor_xz_m": [
+        -1.1235871691094685,
+        -0.05798207814814983
+      ],
+      "placement_y_offsets_m": {
+        "exposed": 2.7786958489688036,
+        "interface": 1.5840047907937371,
+        "submerged": 0.3893137326186705
+      },
+      "guaranteed_interface_vertex_clearance_m": 0.14469105817506656,
+      "translation_policy": "Only recorded Y offset; original X/Z, root attitude, scale and evaluated body pose retained"
+    }
+  ],
+  "cameras": [
+    {
+      "id": "A_nadir",
+      "pose": "A",
+      "view": "nadir",
+      "position_m": [
+        -10.277837084267091,
+        8,
+        -13.424307595180466
+      ],
+      "look_at_m": [
+        -10.277837084267091,
+        0,
+        -13.424307595180466
+      ],
+      "pitch_from_nadir_deg": 0,
+      "roll_deg": 0,
+      "focal_length_mm": 35,
+      "horizontal_aperture_mm": 30.72,
+      "vertical_aperture_mm": 23.04,
+      "resolution_px": [
+        512,
+        384
+      ],
+      "fx_px": 583.3333333333334,
+      "fy_px": 583.3333333333334,
+      "cx_px": 256,
+      "cy_px": 192,
+      "near_m": 0.01,
+      "far_m": 50,
+      "fstop": 0,
+      "pixel_aspect": 1,
+      "data_window_ndc": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "zero_distortion_engineering_assumption": true,
+      "minimum_camera_height_over_global_wave_envelope_m": 7.6
+    },
+    {
+      "id": "A_oblique",
+      "pose": "A",
+      "view": "oblique",
+      "position_m": [
+        -10.277837084267091,
+        8,
+        -6.711510545762226
+      ],
+      "look_at_m": [
+        -10.277837084267091,
+        0,
+        -13.424307595180466
+      ],
+      "pitch_from_nadir_deg": 40,
+      "roll_deg": 0,
+      "focal_length_mm": 35,
+      "horizontal_aperture_mm": 30.72,
+      "vertical_aperture_mm": 23.04,
+      "resolution_px": [
+        512,
+        384
+      ],
+      "fx_px": 583.3333333333334,
+      "fy_px": 583.3333333333334,
+      "cx_px": 256,
+      "cy_px": 192,
+      "near_m": 0.01,
+      "far_m": 50,
+      "fstop": 0,
+      "pixel_aspect": 1,
+      "data_window_ndc": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "zero_distortion_engineering_assumption": true,
+      "minimum_camera_height_over_global_wave_envelope_m": 7.6
+    },
+    {
+      "id": "B_nadir",
+      "pose": "B",
+      "view": "nadir",
+      "position_m": [
+        -1.1235871691094685,
+        8,
+        -0.05798207814814983
+      ],
+      "look_at_m": [
+        -1.1235871691094685,
+        0,
+        -0.05798207814814983
+      ],
+      "pitch_from_nadir_deg": 0,
+      "roll_deg": 0,
+      "focal_length_mm": 35,
+      "horizontal_aperture_mm": 30.72,
+      "vertical_aperture_mm": 23.04,
+      "resolution_px": [
+        512,
+        384
+      ],
+      "fx_px": 583.3333333333334,
+      "fy_px": 583.3333333333334,
+      "cx_px": 256,
+      "cy_px": 192,
+      "near_m": 0.01,
+      "far_m": 50,
+      "fstop": 0,
+      "pixel_aspect": 1,
+      "data_window_ndc": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "zero_distortion_engineering_assumption": true,
+      "minimum_camera_height_over_global_wave_envelope_m": 7.6
+    },
+    {
+      "id": "B_oblique",
+      "pose": "B",
+      "view": "oblique",
+      "position_m": [
+        -1.1235871691094685,
+        8,
+        6.654814971270089
+      ],
+      "look_at_m": [
+        -1.1235871691094685,
+        0,
+        -0.05798207814814983
+      ],
+      "pitch_from_nadir_deg": 40,
+      "roll_deg": 0,
+      "focal_length_mm": 35,
+      "horizontal_aperture_mm": 30.72,
+      "vertical_aperture_mm": 23.04,
+      "resolution_px": [
+        512,
+        384
+      ],
+      "fx_px": 583.3333333333334,
+      "fy_px": 583.3333333333334,
+      "cx_px": 256,
+      "cy_px": 192,
+      "near_m": 0.01,
+      "far_m": 50,
+      "fstop": 0,
+      "pixel_aspect": 1,
+      "data_window_ndc": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "zero_distortion_engineering_assumption": true,
+      "minimum_camera_height_over_global_wave_envelope_m": 7.6
+    }
+  ],
+  "water_conditions": [
+    {
+      "id": "dry",
+      "medium": "none",
+      "phase_s": null
+    },
+    {
+      "id": "clear_flat",
+      "medium": "private clear clone: transmission_colour=[1,1,1], scattering=[0,0,0]",
+      "phase_s": 0
+    },
+    {
+      "id": "engineering_flat",
+      "medium": "engineering_v1; private flat top and matching closed boundary",
+      "phase_s": 0
+    },
+    {
+      "id": "wave_0",
+      "medium": "engineering_v1; existing wave configuration",
+      "phase_s": 0
+    },
+    {
+      "id": "wave_1p25",
+      "medium": "engineering_v1; existing wave configuration",
+      "phase_s": 1.25
+    }
+  ],
+  "ocean_configuration": {
+    "size": 16000.0,
+    "resolution": 128,
+    "speed": 0.7,
+    "choppiness": 0.55,
+    "target_fps": 15.0,
+    "name": "Ocean",
+    "wave_height": 40.0,
+    "wave_length": 650.0,
+    "position": [
+      0,
+      0,
+      0
+    ]
+  },
+  "dry_fixture_geometry": {
+    "fiducial": "1 m opaque square on Y=0, plus 4 corner/centre landmarks",
+    "partial_occluder": "Opaque rectangle in camera-facing plane at 3 m camera depth, covering left half of projected fiducial; analytic ray-plane reference",
+    "full_occluder": "Same depth, covers fiducial plus 8 px projected margin",
+    "image_clipped": "Fixture translated to place its centre on right image edge",
+    "out_of_frame": "Fixture translated to put its nearest projected edge at least 16 px outside image",
+    "fixture_transform_rule": "Record exact world corners from audited camera basis before rendering; no threshold fitted to output"
+  },
+  "marine": [
+    {
+      "id": "marine_dry_A_exposed_nadir",
+      "block": "marine",
+      "water": "dry",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_A_exposed_oblique",
+      "block": "marine",
+      "water": "dry",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_A_interface_nadir",
+      "block": "marine",
+      "water": "dry",
+      "pose": "A",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_A_interface_oblique",
+      "block": "marine",
+      "water": "dry",
+      "pose": "A",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_A_submerged_nadir",
+      "block": "marine",
+      "water": "dry",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_A_submerged_oblique",
+      "block": "marine",
+      "water": "dry",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_B_exposed_nadir",
+      "block": "marine",
+      "water": "dry",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_B_exposed_oblique",
+      "block": "marine",
+      "water": "dry",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_B_interface_nadir",
+      "block": "marine",
+      "water": "dry",
+      "pose": "B",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_B_interface_oblique",
+      "block": "marine",
+      "water": "dry",
+      "pose": "B",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_B_submerged_nadir",
+      "block": "marine",
+      "water": "dry",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_dry_B_submerged_oblique",
+      "block": "marine",
+      "water": "dry",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_A_exposed_nadir",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_A_exposed_oblique",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_A_interface_nadir",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "A",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_A_interface_oblique",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "A",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_A_submerged_nadir",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_A_submerged_oblique",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_B_exposed_nadir",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_B_exposed_oblique",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_B_interface_nadir",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "B",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_B_interface_oblique",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "B",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_B_submerged_nadir",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_clear_flat_B_submerged_oblique",
+      "block": "marine",
+      "water": "clear_flat",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_A_exposed_nadir",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_A_exposed_oblique",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_A_interface_nadir",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "A",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_A_interface_oblique",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "A",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_A_submerged_nadir",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_A_submerged_oblique",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_B_exposed_nadir",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_B_exposed_oblique",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_B_interface_nadir",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "B",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_B_interface_oblique",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "B",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_B_submerged_nadir",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_engineering_flat_B_submerged_oblique",
+      "block": "marine",
+      "water": "engineering_flat",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_A_exposed_nadir",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_A_exposed_oblique",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_A_interface_nadir",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "A",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_A_interface_oblique",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "A",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_A_submerged_nadir",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_A_submerged_oblique",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_B_exposed_nadir",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_B_exposed_oblique",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_B_interface_nadir",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "B",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_B_interface_oblique",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "B",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_B_submerged_nadir",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_0_B_submerged_oblique",
+      "block": "marine",
+      "water": "wave_0",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_A_exposed_nadir",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_A_exposed_oblique",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "A",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 1.2391490135547978,
+      "family": "pose_A_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_A_interface_nadir",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "A",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_A_interface_oblique",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "A",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": 0.1773928171140719,
+      "family": "pose_A_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_A_submerged_nadir",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "A_nadir",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_A_submerged_oblique",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "A",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "A_oblique",
+      "y_offset_m": -0.884363379326654,
+      "family": "pose_A_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_B_exposed_nadir",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_B_exposed_oblique",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "B",
+      "placement": "exposed",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 2.7786958489688036,
+      "family": "pose_B_exposed",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_B_interface_nadir",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "B",
+      "placement": "interface",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_B_interface_oblique",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "B",
+      "placement": "interface",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 1.5840047907937371,
+      "family": "pose_B_interface",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_B_submerged_nadir",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "nadir",
+      "camera": "B_nadir",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "marine_wave_1p25_B_submerged_oblique",
+      "block": "marine",
+      "water": "wave_1p25",
+      "pose": "B",
+      "placement": "submerged",
+      "view": "oblique",
+      "camera": "B_oblique",
+      "y_offset_m": 0.3893137326186705,
+      "family": "pose_B_submerged",
+      "status": "planned_not_executed"
+    }
+  ],
+  "dry": [
+    {
+      "id": "dry_fiducial_visible_nadir",
+      "block": "dry",
+      "fixture": "fiducial_visible",
+      "view": "nadir",
+      "family": "dry_fixture_fiducial_visible",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_visible_oblique",
+      "block": "dry",
+      "fixture": "fiducial_visible",
+      "view": "oblique",
+      "family": "dry_fixture_fiducial_visible",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_half_occluded_nadir",
+      "block": "dry",
+      "fixture": "fiducial_half_occluded",
+      "view": "nadir",
+      "family": "dry_fixture_fiducial_half_occluded",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_half_occluded_oblique",
+      "block": "dry",
+      "fixture": "fiducial_half_occluded",
+      "view": "oblique",
+      "family": "dry_fixture_fiducial_half_occluded",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_fully_occluded_nadir",
+      "block": "dry",
+      "fixture": "fiducial_fully_occluded",
+      "view": "nadir",
+      "family": "dry_fixture_fiducial_fully_occluded",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_fully_occluded_oblique",
+      "block": "dry",
+      "fixture": "fiducial_fully_occluded",
+      "view": "oblique",
+      "family": "dry_fixture_fiducial_fully_occluded",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_image_clipped_nadir",
+      "block": "dry",
+      "fixture": "fiducial_image_clipped",
+      "view": "nadir",
+      "family": "dry_fixture_fiducial_image_clipped",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_image_clipped_oblique",
+      "block": "dry",
+      "fixture": "fiducial_image_clipped",
+      "view": "oblique",
+      "family": "dry_fixture_fiducial_image_clipped",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_out_of_frame_nadir",
+      "block": "dry",
+      "fixture": "fiducial_out_of_frame",
+      "view": "nadir",
+      "family": "dry_fixture_fiducial_out_of_frame",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_fiducial_out_of_frame_oblique",
+      "block": "dry",
+      "fixture": "fiducial_out_of_frame",
+      "view": "oblique",
+      "family": "dry_fixture_fiducial_out_of_frame",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_target_absent_nadir",
+      "block": "dry",
+      "fixture": "target_absent",
+      "view": "nadir",
+      "family": "dry_fixture_target_absent",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_target_absent_oblique",
+      "block": "dry",
+      "fixture": "target_absent",
+      "view": "oblique",
+      "family": "dry_fixture_target_absent",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_animal_A_nadir",
+      "block": "dry",
+      "fixture": "animal_A",
+      "view": "nadir",
+      "family": "dry_fixture_animal_A",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_animal_A_oblique",
+      "block": "dry",
+      "fixture": "animal_A",
+      "view": "oblique",
+      "family": "dry_fixture_animal_A",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_animal_B_nadir",
+      "block": "dry",
+      "fixture": "animal_B",
+      "view": "nadir",
+      "family": "dry_fixture_animal_B",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "dry_animal_B_oblique",
+      "block": "dry",
+      "fixture": "animal_B",
+      "view": "oblique",
+      "family": "dry_fixture_animal_B",
+      "status": "planned_not_executed"
+    }
+  ],
+  "repeat": [
+    {
+      "id": "repeat_marine_dry_A_exposed_nadir",
+      "block": "repeat",
+      "primary": "marine_dry_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_dry_B_submerged_oblique",
+      "block": "repeat",
+      "primary": "marine_dry_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_clear_flat_A_exposed_nadir",
+      "block": "repeat",
+      "primary": "marine_clear_flat_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_clear_flat_B_submerged_oblique",
+      "block": "repeat",
+      "primary": "marine_clear_flat_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_engineering_flat_A_exposed_nadir",
+      "block": "repeat",
+      "primary": "marine_engineering_flat_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_engineering_flat_B_submerged_oblique",
+      "block": "repeat",
+      "primary": "marine_engineering_flat_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_wave_0_A_exposed_nadir",
+      "block": "repeat",
+      "primary": "marine_wave_0_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_wave_0_B_submerged_oblique",
+      "block": "repeat",
+      "primary": "marine_wave_0_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_wave_1p25_A_exposed_nadir",
+      "block": "repeat",
+      "primary": "marine_wave_1p25_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_wave_1p25_B_submerged_oblique",
+      "block": "repeat",
+      "primary": "marine_wave_1p25_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_wave_0_A_interface_oblique",
+      "block": "repeat",
+      "primary": "marine_wave_0_A_interface_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "repeat_marine_wave_1p25_B_interface_nadir",
+      "block": "repeat",
+      "primary": "marine_wave_1p25_B_interface_nadir",
+      "status": "planned_not_executed"
+    }
+  ],
+  "fresh_process": [
+    {
+      "id": "reload_marine_dry_A_exposed_nadir",
+      "block": "fresh_process",
+      "primary": "marine_dry_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_dry_B_submerged_oblique",
+      "block": "fresh_process",
+      "primary": "marine_dry_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_clear_flat_A_exposed_nadir",
+      "block": "fresh_process",
+      "primary": "marine_clear_flat_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_clear_flat_B_submerged_oblique",
+      "block": "fresh_process",
+      "primary": "marine_clear_flat_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_engineering_flat_A_exposed_nadir",
+      "block": "fresh_process",
+      "primary": "marine_engineering_flat_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_engineering_flat_B_submerged_oblique",
+      "block": "fresh_process",
+      "primary": "marine_engineering_flat_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_wave_0_A_exposed_nadir",
+      "block": "fresh_process",
+      "primary": "marine_wave_0_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_wave_0_B_submerged_oblique",
+      "block": "fresh_process",
+      "primary": "marine_wave_0_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_wave_1p25_A_exposed_nadir",
+      "block": "fresh_process",
+      "primary": "marine_wave_1p25_A_exposed_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_wave_1p25_B_submerged_oblique",
+      "block": "fresh_process",
+      "primary": "marine_wave_1p25_B_submerged_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_wave_0_A_interface_oblique",
+      "block": "fresh_process",
+      "primary": "marine_wave_0_A_interface_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "reload_marine_wave_1p25_B_interface_nadir",
+      "block": "fresh_process",
+      "primary": "marine_wave_1p25_B_interface_nadir",
+      "status": "planned_not_executed"
+    }
+  ],
+  "synchronisation": [
+    {
+      "id": "sync_00_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 6,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_00_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 6,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_01_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 10,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_01_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 10,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_02_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 16,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_02_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 16,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_03_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 22,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_03_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 22,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_04_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 30,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_04_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 30,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_05_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 38.25,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_05_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 38.25,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_06_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 56,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_06_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 56,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 0,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_07_nadir",
+      "block": "synchronisation",
+      "sample_time_s": 64.25,
+      "view": "nadir",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "sync_07_oblique",
+      "block": "synchronisation",
+      "sample_time_s": 64.25,
+      "view": "oblique",
+      "source_run": "m3_ref_a01",
+      "water": "dry",
+      "frozen_ocean_reference_phase_s": 1.25,
+      "family": "m3_ref_a01_sync",
+      "status": "planned_not_executed"
+    }
+  ],
+  "marine_absent": [
+    {
+      "id": "absent_engineering_flat_nadir",
+      "block": "marine_absent",
+      "water": "engineering_flat",
+      "view": "nadir",
+      "counterpart": "marine_engineering_flat_A_interface_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "absent_engineering_flat_oblique",
+      "block": "marine_absent",
+      "water": "engineering_flat",
+      "view": "oblique",
+      "counterpart": "marine_engineering_flat_A_interface_oblique",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "absent_wave_1p25_nadir",
+      "block": "marine_absent",
+      "water": "wave_1p25",
+      "view": "nadir",
+      "counterpart": "marine_wave_1p25_A_interface_nadir",
+      "status": "planned_not_executed"
+    },
+    {
+      "id": "absent_wave_1p25_oblique",
+      "block": "marine_absent",
+      "water": "wave_1p25",
+      "view": "oblique",
+      "counterpart": "marine_wave_1p25_A_interface_oblique",
+      "status": "planned_not_executed"
+    }
+  ],
+  "marine_sentinel_ids": [
+    "marine_clear_flat_A_exposed_nadir",
+    "marine_clear_flat_B_submerged_oblique",
+    "marine_dry_A_exposed_nadir",
+    "marine_dry_B_submerged_oblique",
+    "marine_engineering_flat_A_exposed_nadir",
+    "marine_engineering_flat_B_submerged_oblique",
+    "marine_wave_0_A_exposed_nadir",
+    "marine_wave_0_A_interface_oblique",
+    "marine_wave_0_A_submerged_nadir",
+    "marine_wave_0_B_exposed_oblique",
+    "marine_wave_0_B_interface_nadir",
+    "marine_wave_0_B_submerged_oblique",
+    "marine_wave_1p25_A_exposed_nadir",
+    "marine_wave_1p25_A_exposed_oblique",
+    "marine_wave_1p25_A_interface_nadir",
+    "marine_wave_1p25_A_submerged_oblique",
+    "marine_wave_1p25_B_exposed_nadir",
+    "marine_wave_1p25_B_interface_nadir",
+    "marine_wave_1p25_B_interface_oblique",
+    "marine_wave_1p25_B_submerged_nadir",
+    "marine_wave_1p25_B_submerged_oblique"
+  ],
+  "marine_named_review_ids": [
+    "marine_wave_0_A_exposed_nadir",
+    "marine_wave_0_B_exposed_oblique",
+    "marine_wave_0_B_interface_nadir",
+    "marine_wave_0_A_interface_oblique",
+    "marine_wave_0_A_submerged_nadir",
+    "marine_wave_0_B_submerged_oblique",
+    "marine_wave_1p25_B_exposed_nadir",
+    "marine_wave_1p25_A_exposed_oblique",
+    "marine_wave_1p25_A_interface_nadir",
+    "marine_wave_1p25_B_interface_oblique",
+    "marine_wave_1p25_B_submerged_nadir",
+    "marine_wave_1p25_A_submerged_oblique"
+  ],
+  "planned_bundles": 120,
+  "reserve_bundles": 24,
+  "total_attempt_cap": 144,
+  "m1_new_captures": 0,
+  "reserved_diagnostics": [
+    {
+      "id": "flat_fiducial_dry_nadir",
+      "count": 1
+    },
+    {
+      "id": "flat_fiducial_dry_oblique",
+      "count": 1
+    },
+    {
+      "id": "flat_fiducial_clear_flat_nadir",
+      "count": 1
+    },
+    {
+      "id": "flat_fiducial_clear_flat_oblique",
+      "count": 1
+    },
+    {
+      "id": "flat_fiducial_engineering_flat_nadir",
+      "count": 1
+    },
+    {
+      "id": "flat_fiducial_engineering_flat_oblique",
+      "count": 1
+    }
+  ],
+  "attempt_accounting": "Any started capture consumes an attempt; retained metadata failures without rendering consume no bundle. Diagnostics/retries consume reserve, including future repeated setup failures after capture starts.",
+  "no_split_or_training": true
+}

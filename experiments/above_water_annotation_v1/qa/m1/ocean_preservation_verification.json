@@ -1,0 +1,63 @@
+{
+  "legacy_verifier_passed": false,
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/qa/verify_package.py\", line 49, in <module>\n    main()\n    ~~~~^^\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/qa/verify_package.py\", line 23, in main\n    counts={key:check(manifest[key]) for key in ('files','source_pins','checkpoint_artifacts')}\n                ~~~~~^^^^^^^^^^^^^^^\n  File \"/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m6/qa/verify_package.py\", line 17, in check\n    assert len(data)==item['bytes'] and hashlib.sha256(data).hexdigest()==item['sha256'],str(path)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: /home/madil/kit-app-template/source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py\n",
+  "immutable_ocean_evidence_and_preset_verified": true,
+  "pins": {
+    "files": {
+      "verified": 182,
+      "mismatches": []
+    },
+    "source_pins": {
+      "verified": 110,
+      "mismatches": [
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+        "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+        "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py"
+      ]
+    },
+    "checkpoint_artifacts": {
+      "verified": 3,
+      "mismatches": []
+    },
+    "preset_files": {
+      "verified": 16,
+      "mismatches": []
+    },
+    "preset_local_asset_dependencies": {
+      "verified": 4,
+      "mismatches": []
+    }
+  },
+  "superseded_source_pins": [
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/actor.py",
+      "current_sha256": "b0d72710e859a0a1e2b85450d3173fc7dc6dd848ac6bb641ec2524e249e70c3d",
+      "matches_later_accepted_bottlenose_pin": true,
+      "history": [
+        "ac9022d Completed bottlenose M2 ownership and simulation-time contract",
+        "d9f05e9 Completed GAMA\u2013MARLIN Milestone 4: verified state transfer, ownership and recovery"
+      ]
+    },
+    {
+      "path": "source/extensions/cris.madil.gama_bridge/cris/madil/gama_bridge/extension.py",
+      "current_sha256": "2145551b1eb829111f370715561463953113d2f57370eb0a08aeb82c5a599a97",
+      "matches_later_accepted_bottlenose_pin": true,
+      "history": [
+        "143d404 Completed bottlenose M4 body animation and recorded Gate C acceptance",
+        "ac9022d Completed bottlenose M2 ownership and simulation-time contract"
+      ]
+    },
+    {
+      "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/skeletal_animation.py",
+      "current_sha256": "07ec1d6a2893db2316ef4af1176720449e465b15a32b05c1c4044a19160376b5",
+      "matches_later_accepted_bottlenose_pin": true,
+      "history": [
+        "143d404 Completed bottlenose M4 body animation and recorded Gate C acceptance",
+        "adc9f42 feat: improve dolphin swimming, camera, and ocean visuals"
+      ]
+    }
+  ],
+  "interpretation": "Three historical ocean source pins were superseded by the accepted bottlenose M2/M4 commits; current bytes match that later accepted package. Do not change earlier seals or revert accepted source. This is not a newly passed legacy ocean verifier."
+}

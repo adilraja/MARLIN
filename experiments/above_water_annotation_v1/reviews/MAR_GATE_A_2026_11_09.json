@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "gate": "A",
+  "status": "accepted",
+  "reviewer": "MAR",
+  "accepted": true,
+  "acceptance_received": true,
+  "decision_date": "2026-11-09",
+  "recorded_utc": "2026-11-09T11:49:11.473006+00:00",
+  "evidence_version": "above_water_m1_audit_v1",
+  "response_verbatim": "Accept Gate A as MAR",
+  "acceptance_source": "Explicit user reply to the Gate A review question in this chat",
+  "technical_manifest_sha256": "9f8c4b4f5a0a0d41ba5f1531213608267f5ea1705f256af154fb34ce7c2008b5",
+  "bindings": [
+    {
+      "path": "experiments/above_water_annotation_v1/manifest.json",
+      "bytes": 8385,
+      "sha256": "9f8c4b4f5a0a0d41ba5f1531213608267f5ea1705f256af154fb34ce7c2008b5"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/GATE_A_REVIEW.md",
+      "bytes": 4635,
+      "sha256": "fcd9f50ff501495044b4d685ab170fd1561a00836260857a36c3d47c82665bff"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/gate_a_review_at_seal.json",
+      "bytes": 463,
+      "sha256": "e5fa653c8b660f579eb1c9dd70fc808b76887a70300ef4cc777362b1310f15f2"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/baseline/sprint_status_at_gate_a_preparation.json",
+      "bytes": 529,
+      "sha256": "87b3849d3730ae52d6197fc908757c6cf8f156cfae47fe69f598028905adeeb3"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/M1_CAPTURE_ANNOTATION_AUDIT.md",
+      "bytes": 15700,
+      "sha256": "75bd5776d21286ed0c029e516bf82d44aaeb4b5092941c133943801df1a5f50c"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/contracts/capture_contract.json",
+      "bytes": 4807,
+      "sha256": "2960c30b281b893a5fd5eb80fb9b94b1830162c977c347b0e732d435a653e1bc"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/contracts/acceptance_plan.json",
+      "bytes": 4550,
+      "sha256": "9742905632f407ffd98b1e8b4b5aff1887ff426998494e3e81e9fb04a788fb57"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/declarations/capture_declaration.json",
+      "bytes": 46150,
+      "sha256": "ad0214bde503e3199eac25867691f2e0d25d254dc48f8c5843e2930055d7e508"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reports/IMPLEMENTATION_PROPOSAL.md",
+      "bytes": 5469,
+      "sha256": "fd03f260fc45b82d1ec87898f4ba452102bf3533a74c4b94b200e04b6e03e39d"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/REPRODUCTION_AND_ROLLBACK.md",
+      "bytes": 3913,
+      "sha256": "8f9bef8538004d89a02b25cbe3e389ee257866f162f31e0157ce280729df64ac"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/qa/m1/verification.json",
+      "bytes": 1206,
+      "sha256": "0bc336a909c43066c070829da42e63fd18304a299f8036d3777288f9c665bd02"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/gate_a_verification_before_acceptance_2026_11_09.json",
+      "bytes": 1206,
+      "sha256": "0bc336a909c43066c070829da42e63fd18304a299f8036d3777288f9c665bd02"
+    }
+  ],
+  "accepted_scope": "M1 audit and bounded implementation proposal, including the declared capture/annotation contract, workload, thresholds and isolated native-provider/clean-lifecycle feasibility step",
+  "retained_limitations": [
+    "Native segmentation provider not registered in this installation/profile",
+    "Probe process shutdown timed out; no clean lifecycle established",
+    "No same-frame HDR/EXR/annotation capture path currently verified",
+    "Marine annotation/refraction support untested"
+  ],
+  "milestone_1_complete": true,
+  "milestone_2_started_by_this_record": false,
+  "stop_before_any_required_new_dependency_installation": true,
+  "new_dependency_installation_authorised": false,
+  "main_runtime_upgrade_authorised": false,
+  "capture_campaign_authorised_before_prerequisites": false,
+  "biological_approval": false,
+  "optical_approval": false,
+  "research_capture_approval": false,
+  "ml_training_approval": false,
+  "separate_ocean_material_m4": "open"
+}

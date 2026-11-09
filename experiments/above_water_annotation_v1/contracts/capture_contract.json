@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "status": "proposed_gate_a_not_implemented",
+  "target": {
+    "instance_key": "Bottlenose_001",
+    "class_name": "bottlenose_dolphin_model61a_engineering",
+    "planned_owned_root": "/MarlinGamaBottlenose/Bottlenose_001",
+    "scope": "Existing v3 owned namespace in a private frozen scene; one animal; unrelated wildlife excluded",
+    "asset": {
+      "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/usd/model_61a_-_bottlenose_dolphin.usd",
+      "bytes": 4049975,
+      "sha256": "ab9d77b06378b834231ec4f815f4f0eb532f7b1623cb401c37079ccddd0e5c93"
+    },
+    "license": {
+      "path": "assets/cetaceans/model_61a_-_bottlenose_dolphin/source/license.txt",
+      "bytes": 760,
+      "sha256": "3edddd50d656b7820514220c6c3f5654a81b4afb8fc5b66e1bd7cfb05afd63c8"
+    },
+    "source_meshes": [
+      "/MarlinGamaBottlenose/Bottlenose_001/Model/Sketchfab_model/root/GLTF_SceneRootNode/Armature_20/GLTF_created_0/Object_7/Object_0",
+      "/MarlinGamaBottlenose/Bottlenose_001/Model/Sketchfab_model/root/GLTF_SceneRootNode/Armature_20/GLTF_created_0/Object_8/Object_1"
+    ],
+    "mesh_audit": "Two skinned meshes / 21504 vertices / 40208 faces / one 20-joint skeleton; no Icosphere present in the accepted composed asset. Revalidate composition in private fixture.",
+    "calibration": {
+      "model_rotation_deg_xyz": [
+        -90,
+        0,
+        0
+      ],
+      "scale_at_scene_unit_001": 100,
+      "biological_size_calibration": false
+    }
+  },
+  "required_products": [
+    "hdr_linear_float_array",
+    "hdr_exr",
+    "fixed_reinhard_display",
+    "direct_amodal_geometry_box",
+    "native_instance_mask",
+    "mask_derived_tight_box"
+  ],
+  "optional_diagnostic_products": [
+    "native_tight_box"
+  ],
+  "image_coordinates": {
+    "origin": "top-left pixel edge",
+    "pixel_centres": "(column+.5,row+.5)",
+    "mask_dtype": "uint32 raw IDs",
+    "mask_box": "[xmin,ymin,xmax_exclusive,ymax_exclusive]",
+    "empty_box": null,
+    "raw_native_coordinates": "Retain unchanged; inclusivity must be established with M2 fixtures before conversion"
+  },
+  "direct_geometry": {
+    "source": "Evaluated skinned render-purpose triangles with complete transforms at one simulation time",
+    "clipping": "Homogeneous frustum/near clipping required for crossing triangles; reject unsupported cases explicitly",
+    "occlusion": false,
+    "refraction": false,
+    "world_aabb_box": "Separate provenance/name if used as diagnostic"
+  },
+  "identity": {
+    "native_numeric_ids_stable": false,
+    "required_mapping": [
+      "native_id",
+      "owned_instance_key",
+      "prim_path",
+      "semantic_labels",
+      "render_product",
+      "frame_or_locked_state_key"
+    ],
+    "inherited_labels": "Record actual mesh mappings; union only IDs resolving to the two owned render meshes, never all objects of the same class; no segmentation provider enablement occurred in M1"
+  },
+  "state_fields": [
+    "scene_present",
+    "direct_frustum_intersection",
+    "native_target_pixel_count",
+    "identity_mapping_valid",
+    "reviewed_body_appearance",
+    "uncertainty_region",
+    "product_qualification",
+    "failure_reason"
+  ],
+  "null_policy": "Unavailable/unsupported results are null plus status/reason; never fake empty mask, zero visibility or physical absence",
+  "body_appearance": "Direct and qualified transmitted/refracted body only; exclude reflections/shadows/glints/caustics/wakes",
+  "display": "round(255*(max(rgb,0)/(1+max(rgb,0)))**(1/2.2)) with one fixed mapping; alpha excluded from RGB metrics",
+  "synchronisation": {
+    "preferred": "One product, one frame and immutable stage for HDR/EXR/mask; native frame key retained where supported",
+    "existing_gap": "capture_hdr schedules inventory, float buffer and EXR separately; frame_info is received but discarded by existing inventory helper",
+    "fallback": "Immutable state hash plus alternating-state stale-frame test; weaker guarantee explicitly reviewed, no fabricated frame IDs",
+    "time_owner": "Explicit accepted simulation time; no timeline, network or settling-clock advancement",
+    "native_ids": "Per-frame mapping normalized to instance identity for comparison only"
+  },
+  "bundle_required": [
+    "schema_version",
+    "declaration_sha256",
+    "source_commit",
+    "source_pins",
+    "attempt_id",
+    "fixture_family",
+    "source_run_and_sample",
+    "root_joint_skin_state",
+    "ocean_phase_and_points",
+    "camera_and_product",
+    "renderer_settings",
+    "hdr_domain_and_display",
+    "raw_native_outputs",
+    "id_mappings",
+    "converted_boxes",
+    "presence_uncertainty_qualification",
+    "resources",
+    "files_sha256"
+  ],
+  "compatibility": "Existing HTTP endpoint schemas and previous annotations remain unchanged; no endpoint added during M1"
+}

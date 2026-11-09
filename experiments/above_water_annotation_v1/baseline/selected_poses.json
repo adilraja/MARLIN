@@ -1,0 +1,161 @@
+{
+  "created_utc": "2026-11-09T11:36:06.016638+00:00",
+  "poses": [
+    {
+      "id": "A",
+      "simulation_time_s": 6.0,
+      "source_run": "m3_ref_a01",
+      "phase": 0.25000000000000006,
+      "weight": 1.0,
+      "source_index": 24,
+      "state": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00030/state.json",
+        "bytes": 32898,
+        "sha256": "59fa4ccd93120a166d890f2f6197035dfc83d957a32165fa7bc705b941255359"
+      },
+      "scene": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00030/scene.usdc",
+        "bytes": 5099937,
+        "sha256": "f328aa6ab4e520a2e2b5c399feb0a10bb4b13870d734aa6dd45d3cb6a48981bc"
+      },
+      "evaluated_skin": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00030/skin.npz",
+        "bytes": 453775,
+        "sha256": "989e2398de6855ebe3cd5a1f3b3b555c1d5e2600a9bdb347c7c7711294d417fe"
+      },
+      "vertices": 21504,
+      "root_matrix": [
+        [
+          0.984807753012208,
+          0.0,
+          0.1736481776669304,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          -0.1736481776669304,
+          0.0,
+          0.984807753012208,
+          0.0
+        ],
+        [
+          -1027.7837084267092,
+          -20.0,
+          -1342.4307595180464,
+          1.0
+        ]
+      ],
+      "body_fingerprint": "e5a7ee226872b79b8a16007d9d96ab4660c7cf485bc4b3b77a60b8aace11776d",
+      "source_bounds_m": {
+        "minimum": [
+          -10.661205984335439,
+          -0.5891490135547978,
+          -15.028018608470068
+        ],
+        "maximum": [
+          -9.660239442020911,
+          0.23436337932665396,
+          -12.697516076813674
+        ]
+      },
+      "anchor_xz_m": [
+        -10.277837084267091,
+        -13.424307595180466
+      ],
+      "placement_y_offsets_m": {
+        "exposed": 1.2391490135547978,
+        "interface": 0.1773928171140719,
+        "submerged": -0.884363379326654
+      },
+      "guaranteed_interface_vertex_clearance_m": 0.011756196440725841,
+      "translation_policy": "Only recorded Y offset; original X/Z, root attitude, scale and evaluated body pose retained"
+    },
+    {
+      "id": "B",
+      "simulation_time_s": 30.0,
+      "source_run": "m3_ref_a01",
+      "phase": 0.45000000000000007,
+      "weight": 1.0,
+      "source_index": 120,
+      "state": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00150/state.json",
+        "bytes": 33143,
+        "sha256": "de13aa1416ed63f935b53cfd344b8d432203fd5a197cfedf3cdfad92ab0e7c6e"
+      },
+      "scene": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00150/scene.usdc",
+        "bytes": 5099966,
+        "sha256": "51cda49b2f039642c8917da164c93f6389ffad04274e5a71b2dd76ed6beb750e"
+      },
+      "evaluated_skin": {
+        "path": "artifacts/gama_dolphin_behaviour_v1/m5/primary02/frame_00150/skin.npz",
+        "bytes": 472166,
+        "sha256": "f07e93c8ea071f73dd95de62e31454ac25a3462b72cdf26b68d8963dafbdbe03"
+      },
+      "vertices": 21504,
+      "root_matrix": [
+        [
+          0.4226182617406993,
+          0.0,
+          -0.90630778703665,
+          0.0
+        ],
+        [
+          0.3646249468439151,
+          0.9154994973592417,
+          0.17002740506767683,
+          0.0
+        ],
+        [
+          0.8297243234848198,
+          -0.4023191150504482,
+          0.38690680619844664,
+          0.0
+        ],
+        [
+          -112.35871691094685,
+          -170.0,
+          -5.798207814814983,
+          1.0
+        ]
+      ],
+      "body_fingerprint": "e5a7ee226872b79b8a16007d9d96ab4660c7cf485bc4b3b77a60b8aace11776d",
+      "source_bounds_m": {
+        "minimum": [
+          -2.712461153887378,
+          -2.1286958489688037,
+          -1.0308897354046753
+        ],
+        "maximum": [
+          -0.5578945361013233,
+          -1.0393137326186705,
+          0.22239036501237297
+        ]
+      },
+      "anchor_xz_m": [
+        -1.1235871691094685,
+        -0.05798207814814983
+      ],
+      "placement_y_offsets_m": {
+        "exposed": 2.7786958489688036,
+        "interface": 1.5840047907937371,
+        "submerged": 0.3893137326186705
+      },
+      "guaranteed_interface_vertex_clearance_m": 0.14469105817506656,
+      "translation_policy": "Only recorded Y offset; original X/Z, root attitude, scale and evaluated body pose retained"
+    }
+  ],
+  "waveform_bound_source": {
+    "path": "source/extensions/cris.madil.render_service/cris/madil/render_service/ocean.py",
+    "bytes": 34467,
+    "sha256": "3e8cc37bbd0cc93c7eade03386cf7442fdb98288ca1b742710c4873e9d37d940"
+  },
+  "wave_absolute_height_bound_m": 0.4,
+  "wave_bound_reason": "Existing four amplitudes sum to wave_height=40 scene units at .01 m/unit; this conservative global bound also bounds interpolated top triangles",
+  "clearance_note": "Vertex signs are guaranteed by the envelope for these proposed placements. M2/M3 must still verify actual render-purpose triangles, enclosure and surface exposure after construction."
+}

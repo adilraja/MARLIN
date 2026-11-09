@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "audit_prepared_gate_a_pending",
+  "reviewer": null,
+  "gate_a_accepted": false,
+  "contract_version": "1.0.0",
+  "source_head": "ba75626bae6b5d4ddf1b4423ffaf241f5338a2a9",
+  "new_rendered_bundles": 0,
+  "annotations_enabled": false,
+  "production_implementation_changed": false,
+  "metadata_probe": "Returned build/USD/224 registered extensions; no Replicator/SyntheticData entry; later hit 120 s shutdown deadline and owned group was terminated",
+  "unresolved": [
+    "Native segmentation provider not registered in this installation/profile",
+    "Probe process shutdown timed out; no clean lifecycle established",
+    "No same-frame HDR/EXR/annotation capture path currently verified",
+    "Marine annotation/refraction support untested"
+  ],
+  "proposal": "After Gate A, first perform isolated native-provider feasibility and clean lifecycle checks. No package install or main runtime upgrade is included in Gate A acceptance; bring a concrete dependency proposal if required.",
+  "separate_ocean_material_m4": "open"
+}

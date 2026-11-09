@@ -1,0 +1,53 @@
+{
+  "recorded_utc": "2026-11-09T11:34:58.852536+00:00",
+  "gpu": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=name,memory.total,memory.used,memory.free,driver_version",
+      "--format=csv,noheader,nounits"
+    ],
+    "exit_code": 0,
+    "stdout": "NVIDIA RTX A2000, 6138, 3414, 2385, 595.99.02\n",
+    "stderr": ""
+  },
+  "kit_processes": {
+    "command": [
+      "ps",
+      "-C",
+      "kit",
+      "-o",
+      "pid,comm,args"
+    ],
+    "exit_code": 1,
+    "stdout": "    PID COMMAND         COMMAND\n",
+    "stderr": ""
+  },
+  "api": {
+    "command": [
+      "curl",
+      "--silent",
+      "--show-error",
+      "--max-time",
+      "5",
+      "http://localhost:8011/openapi.json"
+    ],
+    "exit_code": 7,
+    "stdout": "",
+    "stderr": "curl: (7) Failed to connect to localhost port 8011 after 0 ms: Could not connect to server\n"
+  },
+  "kernel_driver": "NVRM version: NVIDIA UNIX Open Kernel Module for x86_64  595.99.02  Release Build  (dvs-builder@U22-I3-AF05-06-2)  Wed Aug 26 05:20:50 UTC 2026\nGCC version:  gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) \n",
+  "kernel": "7.0.0-42-generic",
+  "disk_bytes": {
+    "total": 528408043520,
+    "used": 374333591552,
+    "free": 127157559296
+  },
+  "display_session": {
+    "XDG_SESSION_TYPE": "wayland",
+    "WAYLAND_DISPLAY": "wayland-0",
+    "DISPLAY": ":0"
+  },
+  "no_existing_process_stopped": true,
+  "checkpoint_created": false,
+  "live_scene_or_controller_state": "Not observable: no reachable service at default port; probe used its own private default stage, never restored a historical scene"
+}
