@@ -1,0 +1,5 @@
+{
+  "id": "flat_fiducial_dry_nadir",
+  "passed": false,
+  "error": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/diagnostics01/worker.py\", line 228, in capture\n    await rep.orchestrator.step_async(rt_subframes=1, delta_time=0.0, pause_timeline=True)\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312/omni/replicator/core/scripts/orchestrator.py\", line 1725, in step_async\n    await _next_render_update_async()\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312/omni/replicator/core/scripts/orchestrator.py\", line 1561, in _next_render_update_async\n    return await future\n           ^^^^^^^^^^^^\nasyncio.exceptions.CancelledError\n"
+}

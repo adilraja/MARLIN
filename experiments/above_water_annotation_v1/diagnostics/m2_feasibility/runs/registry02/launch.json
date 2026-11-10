@@ -1,0 +1,46 @@
+{
+  "recorded_utc": "2026-11-09T14:19:35.661944+00:00",
+  "pid": 1059482,
+  "command": [
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/kit/kit",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/registry02/registry.kit",
+    "--ext-folder",
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/exts",
+    "--ext-folder",
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache",
+    "--no-window",
+    "--portable",
+    "--portable-root=/tmp/marlin_above_water_m2_registry02/portable",
+    "--/app/extensions/registryEnabled=false",
+    "--/app/extensions/syncRegistryOnStartup=false",
+    "--/app/settings/loadUserConfig=false",
+    "--/app/settings/saveUserConfig=false",
+    "--/app/settings/persistent=false",
+    "--/app/file/ignoreUnsavedOnExit=true",
+    "--/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_above_water_m2_registry02/textures",
+    "--/log/file=/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/registry02/kit_process.log",
+    "--exec",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/registry02/query_provider.py"
+  ],
+  "profile": "/tmp/marlin_above_water_m2_registry02",
+  "gpu_before": {
+    "name": "NVIDIA RTX A2000",
+    "driver": "595.99.02",
+    "total_mib": 6138,
+    "free_mib": 2373
+  },
+  "desktop_connection_inherited": true,
+  "headless_environment": {
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": "wayland-0",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "GDK_BACKEND": null
+  },
+  "disk_free_bytes": 126412316672,
+  "existing_kit_before": "",
+  "source_sha256": {
+    "launch_probe.py": "14471b039b2257067bed45824293d9b9fd335f07cfcac12e86e75318f4a4e72e",
+    "query_provider.py": "2d53c1a7917ac34d485c5aa8711a39203b52eb65e01fdb7b63e6724115d017e8",
+    "registry.kit": "94fb69ba0e4d69f14dd91010ec92d3ac7de365f2036b55c69b5890931df2c797"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "recorded_utc": "2026-11-09T15:51:55.015326+00:00",
+  "gpu": {
+    "command": [
+      "nvidia-smi",
+      "--query-gpu=name,driver_version,memory.total,memory.free",
+      "--format=csv,noheader,nounits"
+    ],
+    "returncode": 0,
+    "stdout": "NVIDIA RTX A2000, 595.99.02, 6138, 2216\n",
+    "stderr": ""
+  },
+  "kit_processes": {
+    "command": [
+      "ps",
+      "-C",
+      "kit",
+      "-o",
+      "pid=,args="
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "service": {
+    "command": [
+      "curl",
+      "--max-time",
+      "4",
+      "-sS",
+      "http://localhost:8011/openapi.json",
+      "-o",
+      "/dev/null",
+      "-w",
+      "%{http_code}"
+    ],
+    "returncode": 7,
+    "stdout": "000",
+    "stderr": "curl: (7) Failed to connect to localhost port 8011 after 0 ms: Could not connect to server\n"
+  },
+  "disk_free_bytes": 126307643392,
+  "proposed_dependency_destination_exists": false,
+  "new_dependencies_installed": false,
+  "provider_activated": false,
+  "rendered_bundle_attempts": 0
+}

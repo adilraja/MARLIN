@@ -1,0 +1,386 @@
+{
+  "status": "PROPOSED ONLY \u2014 no action executed",
+  "approval_required": true,
+  "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1",
+  "quarantine": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine",
+  "extensions": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions",
+  "profile": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/profile",
+  "dependency_store_cap_bytes": 2147483648,
+  "archive_phase_global_timeout_seconds": 600,
+  "actions": [
+    {
+      "package_id": "omni.pip.compute-1.9.2+110.1.2.lx64.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.compute-1.9.2+110.1.2.lx64.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"e5d3cd23eb919c11112d1deb26c4246b-12\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.compute-1.9.2+110.1.2.lx64.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.pip.compute-1.9.2%2B110.1.2.lx64.cp312.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 100341083,
+        "etag": "\"e5d3cd23eb919c11112d1deb26c4246b-12\"",
+        "s3_version_id": "JNK5TUmHycGxT3Br0wHf7gndHTp9g2Jb",
+        "central_directory_sha256": "db4ed80e3ba346fb74c3d30db75671d7d25cc22043b660b9b0678c290fdf091a",
+        "eocd_sha256": "161647329b362e806981658cef2779ed68be9f76b4f9f54382d50bbfc88b2a44",
+        "expanded_bytes": 293328314,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.compute-1.9.2+110.1.2.lx64.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.pip.compute-1.9.2+110.1.2.lx64.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.compute-1.9.2+110.1.2.lx64.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.compute-1.9.2+110.1.2.lx64.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.pip.cloud-1.5.4+110.1.2.lx64.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.cloud-1.5.4+110.1.2.lx64.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"dd83bd6b25910e21da28c3a2c4707d05-4\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.cloud-1.5.4+110.1.2.lx64.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.pip.cloud-1.5.4%2B110.1.2.lx64.cp312.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 29520088,
+        "etag": "\"dd83bd6b25910e21da28c3a2c4707d05-4\"",
+        "s3_version_id": ".QXndpHZ3XylpwXeO3uVCdCeNrD9cnlz",
+        "central_directory_sha256": "6bffe141253b8a4fd2a564f60327932f1e1bff9ed16a03c6400962ea83eb124b",
+        "eocd_sha256": "d64dd3b69f6d0c702bdeb216d4042a5eb893b6a5435548aa52895be38ecef155",
+        "expanded_bytes": 66989785,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.cloud-1.5.4+110.1.2.lx64.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.pip.cloud-1.5.4+110.1.2.lx64.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.cloud-1.5.4+110.1.2.lx64.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.pip.cloud-1.5.4+110.1.2.lx64.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"f2909b7c818b54c77333b059de2c56d2\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.usd.schema.omni_sensors-456f11b6a574a4e3.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 616473,
+        "etag": "\"f2909b7c818b54c77333b059de2c56d2\"",
+        "s3_version_id": "Qwu8j9tG_2SM9Uu_UsZETQ71yjYzEbXl",
+        "central_directory_sha256": "b0bfcb0ba0b54f364b00fe024e420e9385fe1d29ced89f947d2d64cb568361e6",
+        "eocd_sha256": "5adb813032c485b9b18a131d58533da14a3a297d40658eb656dd4ea908e570f9",
+        "expanded_bytes": 2632577,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"9f4c46bc391a646c0a54270d65658179\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.usd.schema.semantics-691abf6450299539.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 69204,
+        "etag": "\"9f4c46bc391a646c0a54270d65658179\"",
+        "s3_version_id": "A2F24xsPcTJzOTFcg.FHNSCi3jSUU4ZQ",
+        "central_directory_sha256": "fd3a672260459430265fe128562bcc458dfd462760a79a5454ac9bc00584bc7f",
+        "eocd_sha256": "07614f1b57a2cc69c8ceeb06ee228c2cfaac9d3a43e52d9ffdb1923046a7493f",
+        "expanded_bytes": 260106,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"0d77c3556b933910727c11cd0ea6a365-2\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.physics-110.1.1%2B110.1.0.lx64.r.cp312.u7f4.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 10993270,
+        "etag": "\"0d77c3556b933910727c11cd0ea6a365-2\"",
+        "s3_version_id": "u11vrC8XJOkUpLTuJFYuK3VsJTvmUbOS",
+        "central_directory_sha256": "cc2b5769bc2fc279b08d07890503ab31bb066784331bb5be2557ea119e638800",
+        "eocd_sha256": "01e12c7e6093fb2cffad53d9ce7671e3f0b6636cd87ab01d735cf82449c3fcb1",
+        "expanded_bytes": 36638598,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"1cd1d73a4c6c3669c19f007c99ffab91\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.physics.physx-110.1.1%2B110.1.0.lx64.r.cp312.u7f4.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 2005576,
+        "etag": "\"1cd1d73a4c6c3669c19f007c99ffab91\"",
+        "s3_version_id": "F4GEteJMt8ZffephvzSyJuK2euZr_y2E",
+        "central_directory_sha256": "657fc47c7bb47a165c31c62299430a0878af5d21276aa2c933e041e6337da375",
+        "eocd_sha256": "231ea21b73b82cd98cc6ce7aa6a4a456795506db86c51ee3e82e680c16c9b47c",
+        "expanded_bytes": 6831756,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"59dc0dddbcec8129e3c80a4065619f28\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.physics.stageupdate-110.1.1%2B110.1.0.lx64.r.cp312.u7f4.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 2027229,
+        "etag": "\"59dc0dddbcec8129e3c80a4065619f28\"",
+        "s3_version_id": "7yLZsv0x8mnEOYiNqhrk43_082UtNkpG",
+        "central_directory_sha256": "dba632c600b408dde2c953dd43f47da4da714a3a9d75eb15a8dc0cdfe13813e9",
+        "eocd_sha256": "3553ddb9f2f9f56d959393fb214d3e361040aa14a4eef0f463e3b25ae6ce09cb",
+        "expanded_bytes": 6880991,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.syntheticdata-0.6.15+698af100.lx64.r.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.syntheticdata-0.6.15+698af100.lx64.r.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"e6dff52f469679b903a98abb476382c6-2\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.syntheticdata-0.6.15+698af100.lx64.r.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.syntheticdata-d92b1a7ab64faa8b.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 16560928,
+        "etag": "\"e6dff52f469679b903a98abb476382c6-2\"",
+        "s3_version_id": "kNbEyF9HeS2VEY8oed.LtCiXhfIBOVbZ",
+        "central_directory_sha256": "aec04e04187ba15d8d9e4f18c80092f242730986fbdf5262e239f285233b8e9d",
+        "eocd_sha256": "22b4ef60f0c2608b5c062be958b70d37673f7ba81c645da5cb623624cc6a886f",
+        "expanded_bytes": 24432462,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.syntheticdata-0.6.15+698af100.lx64.r.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.syntheticdata-0.6.15+698af100.lx64.r.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.syntheticdata-0.6.15+698af100.lx64.r.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.syntheticdata-0.6.15+698af100.lx64.r.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"ac8cede3e6d307fa3a5116956aa6a20a\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.replicator.nv-1.1.1%2B110.2.0.lx64.r.cp312.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 3154204,
+        "etag": "\"ac8cede3e6d307fa3a5116956aa6a20a\"",
+        "s3_version_id": ".OyR3GsQwzt81NnzlCOBsVMIQ9v2WCgD",
+        "central_directory_sha256": "e647ec3b38a99abfb52d5408ad69c45d564ae7e168b5186e60646130b21db2b0",
+        "eocd_sha256": "213f8809664590b36b0dc6b4a22a2d30ad3fb4e6aa1ca17e939cdfa155949036",
+        "expanded_bytes": 7747056,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.videoencoding-0.2.1+698af100.lx64.r.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.videoencoding-0.2.1+698af100.lx64.r.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"74105e68f66b6f3f78d06c6af8b27bbc\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.videoencoding-0.2.1+698af100.lx64.r.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.videoencoding-e90c9a0398108048.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 375373,
+        "etag": "\"74105e68f66b6f3f78d06c6af8b27bbc\"",
+        "s3_version_id": "Sl1lJjlGKtG_PVsjTDKD0gbvjzhfVj1i",
+        "central_directory_sha256": "baf42dbf7fc1769443a293e5b3ce501bf4660fca010d80eb9c55f7a6cda2f135",
+        "eocd_sha256": "f03f8fba612d4f664c90b13a89feff8d33ddb6e9e5d9d93a6719e7eaaf0f0b0c",
+        "expanded_bytes": 1125944,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.videoencoding-0.2.1+698af100.lx64.r.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.videoencoding-0.2.1+698af100.lx64.r.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.videoencoding-0.2.1+698af100.lx64.r.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.videoencoding-0.2.1+698af100.lx64.r.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    },
+    {
+      "package_id": "omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312",
+      "archive": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312.zip",
+      "proposed_download_argv": [
+        "curl",
+        "--fail",
+        "--location",
+        "--proto",
+        "=https",
+        "--max-time",
+        "180",
+        "--header",
+        "If-Match: \"e41710909b72c5a7c3f3f683be4c621e-16\"",
+        "--output",
+        "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312.zip.part",
+        "https://d4i3qtqj3r0z5.cloudfront.net/omni.replicator.core-1.13.27%2B110.1.1.lx64.r.cp312.zip"
+      ],
+      "verification_before_unpack": {
+        "expected_archive_bytes": 130670658,
+        "etag": "\"e41710909b72c5a7c3f3f683be4c621e-16\"",
+        "s3_version_id": "xpe32RU5uGWVkbwQxjFMZ4IJk9vlikPE",
+        "central_directory_sha256": "4f000aab038463ad1e7b3f366d2fd8aebddca1f9bc4d4edad4c492201ae77935",
+        "eocd_sha256": "f2e0e5c327f9258abc2da87c3ab9c71d49f51f9eeec13a187b67a4bf80f07276",
+        "expanded_bytes": 172819877,
+        "zip_crc_test_required": true,
+        "record_full_archive_sha256": true
+      },
+      "proposed_kit_call": "omni.ext.unpack_extension('/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312.zip', '/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions', ext_id='omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312', skip_security_checks=False)",
+      "proposed_atomic_rename": {
+        "source": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312.zip.part",
+        "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/quarantine/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312.zip",
+        "only_after_archive_verification": true
+      }
+    }
+  ]
+}

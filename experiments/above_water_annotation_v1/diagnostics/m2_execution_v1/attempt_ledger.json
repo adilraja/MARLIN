@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "prior_ledger_sha256": "4ccaaf83e08bb25c6f4b6d1c906b37080f57748c97d52f442e91965a54b9a093",
+  "total_cap": 144,
+  "reserve_cap": 24,
+  "planned": 120,
+  "attempts": [
+    {
+      "attempt_id": "attempt_001",
+      "declaration_id": "flat_fiducial_dry_nadir",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/diagnostics01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_001",
+      "started_utc": "2026-11-10T12:22:16.422504+00:00",
+      "status": "failed",
+      "reason": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/diagnostics01/worker.py\", line 228, in capture\n    await rep.orchestrator.step_async(rt_subframes=1, delta_time=0.0, pause_timeline=True)\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312/omni/replicator/core/scripts/orchestrator.py\", line 1725, in step_async\n    await _next_render_update_async()\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1/extensions/omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312/omni/replicator/core/scripts/orchestrator.py\", line 1561, in _next_render_update_async\n    return await future\n           ^^^^^^^^^^^^\nasyncio.exceptions.CancelledError\n",
+      "finished_utc": "2026-11-10T12:23:46.245894+00:00"
+    },
+    {
+      "attempt_id": "attempt_002",
+      "declaration_id": "flat_fiducial_dry_nadir",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/diagnostics02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_002",
+      "started_utc": "2026-11-10T12:25:35.533390+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:25:36.976969+00:00"
+    },
+    {
+      "attempt_id": "attempt_003",
+      "declaration_id": "flat_fiducial_dry_oblique",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/diagnostics02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_003",
+      "started_utc": "2026-11-10T12:25:37.183565+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:26:09.202314+00:00"
+    },
+    {
+      "attempt_id": "attempt_004",
+      "declaration_id": "flat_fiducial_dry_nadir",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/mapping01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_004",
+      "started_utc": "2026-11-10T12:27:13.747240+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:27:15.760764+00:00"
+    },
+    {
+      "attempt_id": "attempt_005",
+      "declaration_id": "dry_fiducial_visible_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_005",
+      "started_utc": "2026-11-10T12:28:20.252253+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:28:21.860837+00:00"
+    },
+    {
+      "attempt_id": "attempt_006",
+      "declaration_id": "dry_fiducial_visible_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_006",
+      "started_utc": "2026-11-10T12:28:22.102245+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:28:53.941614+00:00"
+    },
+    {
+      "attempt_id": "attempt_007",
+      "declaration_id": "dry_fiducial_half_occluded_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_007",
+      "started_utc": "2026-11-10T12:28:54.138530+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:28:55.935112+00:00"
+    },
+    {
+      "attempt_id": "attempt_008",
+      "declaration_id": "dry_fiducial_half_occluded_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_008",
+      "started_utc": "2026-11-10T12:28:56.186727+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:29:28.079881+00:00"
+    },
+    {
+      "attempt_id": "attempt_009",
+      "declaration_id": "dry_fiducial_fully_occluded_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_009",
+      "started_utc": "2026-11-10T12:29:28.306643+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:29:30.352881+00:00"
+    },
+    {
+      "attempt_id": "attempt_010",
+      "declaration_id": "dry_fiducial_fully_occluded_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_010",
+      "started_utc": "2026-11-10T12:29:30.564339+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:29:32.463623+00:00"
+    },
+    {
+      "attempt_id": "attempt_011",
+      "declaration_id": "dry_fiducial_image_clipped_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_011",
+      "started_utc": "2026-11-10T12:30:02.241076+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:30:03.847264+00:00"
+    },
+    {
+      "attempt_id": "attempt_012",
+      "declaration_id": "dry_fiducial_image_clipped_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_012",
+      "started_utc": "2026-11-10T12:30:04.039832+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:30:06.147130+00:00"
+    },
+    {
+      "attempt_id": "attempt_013",
+      "declaration_id": "dry_fiducial_out_of_frame_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_013",
+      "started_utc": "2026-11-10T12:30:06.336757+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:30:08.370243+00:00"
+    },
+    {
+      "attempt_id": "attempt_014",
+      "declaration_id": "dry_fiducial_out_of_frame_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_014",
+      "started_utc": "2026-11-10T12:30:08.572953+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:30:10.554976+00:00"
+    },
+    {
+      "attempt_id": "attempt_015",
+      "declaration_id": "dry_target_absent_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry02",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_015",
+      "started_utc": "2026-11-10T12:30:10.753309+00:00",
+      "status": "failed",
+      "reason": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/dry02/worker.py\", line 251, in capture\n    mask = renderer_native['data']; assert mask.shape == (384,512) and mask.dtype == np.uint32\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "finished_utc": "2026-11-10T12:30:12.680346+00:00"
+    },
+    {
+      "attempt_id": "attempt_016",
+      "declaration_id": "dry_target_absent_nadir",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/absent01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_016",
+      "started_utc": "2026-11-10T12:31:19.737580+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:31:22.223021+00:00"
+    },
+    {
+      "attempt_id": "attempt_017",
+      "declaration_id": "dry_target_absent_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/absent01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_017",
+      "started_utc": "2026-11-10T12:31:22.411416+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:31:24.973648+00:00"
+    },
+    {
+      "attempt_id": "attempt_018",
+      "declaration_id": "dry_animal_A_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry03",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_018",
+      "started_utc": "2026-11-10T12:31:54.039202+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:31:56.795771+00:00"
+    },
+    {
+      "attempt_id": "attempt_019",
+      "declaration_id": "dry_animal_A_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry03",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_019",
+      "started_utc": "2026-11-10T12:31:57.303615+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:31:59.451183+00:00"
+    },
+    {
+      "attempt_id": "attempt_020",
+      "declaration_id": "dry_animal_B_nadir",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry03",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_020",
+      "started_utc": "2026-11-10T12:32:00.050973+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:32:02.235938+00:00"
+    },
+    {
+      "attempt_id": "attempt_021",
+      "declaration_id": "dry_animal_B_oblique",
+      "reserve": false,
+      "run": "diagnostics/m2_execution_v1/runs/dry03",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_021",
+      "started_utc": "2026-11-10T12:32:02.783774+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:32:05.010487+00:00"
+    },
+    {
+      "attempt_id": "attempt_022",
+      "declaration_id": "stale_A1_visible",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/stale01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_022",
+      "started_utc": "2026-11-10T12:33:47.692626+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:33:49.761242+00:00"
+    },
+    {
+      "attempt_id": "attempt_023",
+      "declaration_id": "stale_B_out_of_frame",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/stale01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_023",
+      "started_utc": "2026-11-10T12:33:49.961184+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:33:51.851260+00:00"
+    },
+    {
+      "attempt_id": "attempt_024",
+      "declaration_id": "stale_A2_visible",
+      "reserve": true,
+      "run": "diagnostics/m2_execution_v1/runs/stale01",
+      "folder": "diagnostics/m2_execution_v1/captures/attempt_024",
+      "started_utc": "2026-11-10T12:33:52.070863+00:00",
+      "status": "captured_pending_independent_validation",
+      "reason": null,
+      "finished_utc": "2026-11-10T12:33:54.112804+00:00"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+2026-11-10T12:15:13Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/kit_process.log
+2026-11-10T12:15:13Z [0ms] [Info] [carb.crashreporter-breakpad.plugin] crashreporter configured:
+    buildVersion: '110.2.0'
+    buildNumber: '342835'
+    buildHash: '698af100'
+    buildBranch: 'feature'
+    buildCi: 'gl'
+    buildMajor: '110'
+    buildMinor: '2'
+    buildPatch: '0'
+    buildConfig: 'release'
+    BuildGitlabJobID: '360905302'
+    buildGitlabJobStage: 'kit-build'
+    buildGitlabJobName: 'kit-build-release-linux-x86_64'
+    buildGitlabPipelineID: '57676005'
+    profilerCpuTscFrequency: '4192532984'
+    commandLine: '/home/<username>/kit-app-template/_build/linux-x86_64/release/kit/kit /home/<username>/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.kit --ext-folder /home/<username>/kit-app-template/_build/linux-x86_64/release/exts --ext-folder /home/<username>/kit-app-template/_build/linux-x86_64/release/extscache --no-window --portable --portable-root=/tmp/marlin_annotation_execution_unpack01/portable --/app/extensions/registryEnabled=false --/app/extensions/syncRegistryOnStartup=false --/app/settings/loadUserConfig=false --/app/settings/saveUserConfig=false --/app/settings/persistent=false --/app/file/ignoreUnsavedOnExit=true --/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_annotation_execution_unpack01/textures --/log/file=/home/<username>/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/kit_process.log --exec /home/<username>/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/worker.py'
+    runningInContainer: '0'
+    upload enabled: true
+2026-11-10T12:15:13Z [0ms] [Info] [carb] Plugin carb.profiler-mux.plugin is already a dependency of carb.profiler-cpu.plugin; not changing unload order
+2026-11-10T12:15:13Z [0ms] [Info] [omni.kit.app.plugin] App Name: 'app', App Version: '1.0.0', Kit Version: '110.2.0+feature.342835.698af100.gl', Kernel Version: '210.2.5+release.14036.c700af7d.gl'
+2026-11-10T12:15:13Z [0ms] [Info] [omni.kit.app.plugin] Cmd: /home/madil/kit-app-template/_build/linux-x86_64/release/kit/kit /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.kit --ext-folder /home/madil/kit-app-template/_build/linux-x86_64/release/exts --ext-folder /home/madil/kit-app-template/_build/linux-x86_64/release/extscache --no-window --portable --portable-root=/tmp/marlin_annotation_execution_unpack01/portable --/app/extensions/registryEnabled=false --/app/extensions/syncRegistryOnStartup=false --/app/settings/loadUserConfig=false --/app/settings/saveUserConfig=false --/app/settings/persistent=false --/app/file/ignoreUnsavedOnExit=true --/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_annotation_execution_unpack01/textures --/log/file=/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/kit_process.log --exec /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/worker.py
+2026-11-10T12:15:13Z [0ms] [Info] [omni.kit.app.plugin] Applied configs: [/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/kernel/config/kit-core.json, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.kit]
+2026-11-10T12:15:13Z [0ms] [Info] [omni.kit.app.plugin] Non-existent configs: [/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/omni_configs/privacy.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.gen.kit, /home/madil/Documents/Kit/shared/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/deps/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/deps/app/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/deps/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/deps/app/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/deps/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/deps/app/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/deps/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/deps/app/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/deps/user.toml, /home/madil/kit-app-template/experiments/above_water_annotation_v1/deps/app/user.toml, /usr/share/NVIDIA Corporation/kit/kit.config.toml, /usr/share/NVIDIA Corporation/kit/app/kit.config.toml]
+2026-11-10T12:15:13Z [0ms] [Info] [omni.kit.app.plugin] Portable Root: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release'
+2026-11-10T12:15:13Z [0ms] [Info] [omni.kit.app.plugin] Tokens:
+{
+    "exe-path": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "exe-filename": "kit",
+    "local-config-path": "/home/madil/kit-app-template",
+    "custom-config-path": "/home/madil/kit-app-template",
+    "cli-config-path": "/home/madil/kit-app-template",
+    "omni_config": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/omni_configs",
+    "omni_data": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/data",
+    "omni_logs": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/logs",
+    "omni_cache": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/cache",
+    "omni_global_config": "/home/madil/.nvidia-omniverse/config",
+    "omni_global_data": "/tmp/marlin_annotation_execution_unpack01/xdg_data/ov/data",
+    "omni_global_logs": "/home/madil/.nvidia-omniverse/logs",
+    "omni_global_cache": "/tmp/marlin_annotation_execution_unpack01/xdg_cache/ov",
+    "temp": "/tmp/carb.pyEiZH",
+    "kit": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release",
+    "drive": "/",
+    "app": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01",
+    "resources": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources",
+    "fonts": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/fonts",
+    "glyphs": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/glyphs",
+    "icons": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/icons",
+    "sounds": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/sounds",
+    "models": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/models",
+    "materials": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/resources/materials",
+    "config": "release",
+    "platform": "linux-x86_64",
+    "bindings_ext": ".so",
+    "exe_ext": "",
+    "shell_ext": ".sh",
+    "lib_ext": ".so",
+    "lib_prefix": "lib",
+    "session_id": "2130382596384060297",
+    "omni_documents": "/home/madil/Documents",
+    "shared_documents": "/home/madil/Documents/Kit/shared",
+    "omni_program_data": "/usr/share",
+    "shared_program_data": "/usr/share/NVIDIA Corporation/kit",
+    "app_program_data": "/usr/share/NVIDIA Corporation/kit/app",
+    "kit_version": "110.2.0+feature.342835.698af100.gl",
+    "usd_version": "25.11",
+    "python_version": "3.12",
+    "python": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/python/bin/python3",
+    "kit_version_short": "110.2",
+    "kit_version_major": "110",
+    "kit_version_minor": "2",
+    "kit_version_patch": "0",
+    "kit_git_hash": "698af100",
+    "app_version": "1.0.0",
+    "app_version_short": "1.0",
+    "app_name": "app",
+    "app_filename": "app",
+    "data": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/data/Kit/app/1.0",
+    "logs": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/logs/Kit/app/1.0",
+    "cache": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/cache/Kit/110.2/698af100",
+    "appcache": "/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/cache/Kit/110.2/698af100",
+    "cache_postfix": "Kit/110.2/698af100",
+    "app_documents": "/home/madil/Documents/Kit/apps/app",
+    "documents": "/home/madil/Documents/Kit/apps/app",
+    "start_timestamp": "20261110_121513",
+    "log_file": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/kit_process.log"
+}
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Extension path: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/data/Kit/app/1.0/exts/3' doesn't exist.
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Creating a new dir for extension path: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/data/Kit/app/1.0/exts/3'
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Extension path: '/home/madil/Documents/Kit/apps/app/exts' doesn't exist.
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] [ext manager] preferLocalVersions: 1
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Extension system targets:
+  kitHash: 698af100
+  config: release
+  python: cp312
+  usd: u7f41+stock+25.11+cxx11
+  platform: linux-x86_64
+  kit: 110.2.0
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.kit' (path type: 1, dev: 0)
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/data/Kit/app/1.0/exts/3' (path type: 4, dev: 0)
+2026-11-10T12:15:13Z [1ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/_build/linux-x86_64/release/extscache' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [3ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/kit-app-template/_build/linux-x86_64/release/exts' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [3ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extsPhysics' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [3ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/Documents/Kit/shared/exts' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [3ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [4ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/exts' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [4ms] [Info] [omni.ext.plugin] Searching for extensions in: '/home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps' (path type: 0, dev: 0)
+2026-11-10T12:15:13Z [7ms] [Info] [omni.ext.plugin] Registered 223 extension(s), 0 unsuitable:
+  [ext: carb.audio-0.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/carb.audio-0.1.0+698af100.lx64.r.cp312)
+  [ext: carb.windowing.plugins-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/carb.windowing.plugins-1.0.1+698af100.lx64.r)
+  [ext: omni.activity.core-1.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.activity.core-1.0.3+698af100.lx64.r.cp312)
+  [ext: omni.activity.profiler-1.0.4] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.activity.profiler-1.0.4+698af100.lx64.r.cp312)
+  [ext: omni.activity.pump-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.activity.pump-1.0.1+698af100.lx64.r.cp312)
+  [ext: omni.anim.curve.core-1.6.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.anim.curve.core-1.6.0+110.0.0.lx64.r.cp312.u7f4)
+  [ext: omni.appwindow-1.2.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.appwindow-1.2.2+698af100.lx64.r.cp312)
+  [ext: omni.assets.plugins-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.assets.plugins-0.0.0+698af100.lx64.r)
+  [ext: omni.blobkey-1.1.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.blobkey-1.1.2+698af100.lx64.r)
+  [ext: omni.client-1.3.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.client-1.3.0+698af100.lx64.r)
+  [ext: omni.cloud.open_stage-1.0.11] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.cloud.open_stage-1.0.11)
+  [ext: omni.convexdecomposition-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.convexdecomposition-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.cubric-0.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.cubric-0.1.0+698af100.lx64.r)
+  [ext: omni.datastore-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.datastore-0.0.0+698af100.lx64.r)
+  [ext: omni.gpu_foundation-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.gpu_foundation-0.0.0+698af100.lx64.r.cp312)
+  [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.gpu_foundation.shadercache.vulkan-1.0.0+698af100.lx64.r)
+  [ext: omni.gpucompute.plugins-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.gpucompute.plugins-0.0.0+698af100.lx64.r)
+  [ext: omni.graph-1.142.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph-1.142.5+698af100.lx64.r.cp312)
+  [ext: omni.graph.action-2.10.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.action-2.10.2+110.0.0)
+  [ext: omni.graph.action_core-1.1.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.action_core-1.1.9+698af100.lx64.r.cp312)
+  [ext: omni.graph.action_nodes-2.11.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.action_nodes-2.11.0+110.0.0.lx64.r.cp312.u7f4)
+  [ext: omni.graph.action_nodes_core-2.11.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.action_nodes_core-2.11.0+110.0.0.lx64.r.cp312.u7f4)
+  [ext: omni.graph.core-3.1.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.core-3.1.3+698af100.lx64.r)
+  [ext: omni.graph.exec-0.9.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.exec-0.9.6+698af100.lx64.r)
+  [ext: omni.graph.image.core-0.6.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.image.core-0.6.1+698af100.lx64.r)
+  [ext: omni.graph.image.nodes-1.3.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.image.nodes-1.3.2+698af100.lx64.r)
+  [ext: omni.graph.nodes-2.12.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.nodes-2.12.0+110.0.0.lx64.r.cp312.u7f4)
+  [ext: omni.graph.nodes_core-2.11.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.nodes_core-2.11.0+110.0.0.lx64.r.cp312.u7f4)
+  [ext: omni.graph.scriptnode-2.10.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.scriptnode-2.10.2+110.0.0)
+  [ext: omni.graph.tools-1.81.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.tools-1.81.0+698af100)
+  [ext: omni.graph.ui_nodes-2.11.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.graph.ui_nodes-2.11.1+110.0.0.lx64.r.cp312.u7f4)
+  [ext: omni.grpc.lib-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.grpc.lib-1.0.0+698af100.lx64.r)
+  [ext: omni.hsscclient-1.1.4] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.hsscclient-1.1.4+698af100.lx64.r.cp312)
+  [ext: omni.hydra.engine.stats-1.0.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.hydra.engine.stats-1.0.5+698af100.lx64.r.cp312)
+  [ext: omni.hydra.rtx-1.0.4] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.hydra.rtx-1.0.4+698af100.lx64.r)
+  [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.hydra.rtx.shadercache.vulkan-1.0.0+698af100.lx64.r)
+  [ext: omni.hydra.scene_delegate-0.3.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.hydra.scene_delegate-0.3.5+698af100.lx64.r)
+  [ext: omni.hydra.usdrt_delegate-7.5.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.hydra.usdrt_delegate-7.5.2+698af100.lx64.r.cp312)
+  [ext: omni.index-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.index-1.0.1+698af100.lx64.r)
+  [ext: omni.index.libs-392300.31.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.index.libs-392300.31.0+698af100.lx64.r)
+  [ext: omni.inspect-1.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.inspect-1.0.2+698af100.lx64.r.cp312)
+  [ext: omni.iray.libs-0.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.iray.libs-0.0.1+698af100.lx64.r)
+  [ext: omni.kit.actions.core-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.actions.core-1.0.0+698af100.lx64.r.cp312)
+  [ext: omni.kit.asset_converter-6.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.asset_converter-6.0.1+110.1.1.lx64.r.cp312.u7f4)
+  [ext: omni.kit.audiodeviceenum-1.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.audiodeviceenum-1.0.2+698af100.lx64.r.cp312)
+  [ext: omni.kit.clipboard-1.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.clipboard-1.1.1+698af100.lx64.r.cp312)
+  [ext: omni.kit.commands-1.5.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.commands-1.5.0+698af100.lx64.r.cp312)
+  [ext: omni.kit.context_menu-1.10.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.context_menu-1.10.0+698af100)
+  [ext: omni.kit.debug.python-1.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.debug.python-1.0.2+698af100.lx64.r.cp312)
+  [ext: omni.kit.debug.settings-1.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.debug.settings-1.0.3)
+  [ext: omni.kit.debug.vscode-0.1.7] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.debug.vscode-0.1.7+698af100)
+  [ext: omni.kit.dev.utilities.bundle-0.2.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.dev.utilities.bundle-0.2.1)
+  [ext: omni.kit.developer.bundle-0.2.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.developer.bundle-0.2.0)
+  [ext: omni.kit.exec.core-0.13.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.exec.core-0.13.5+698af100.lx64.r.cp312)
+  [ext: omni.kit.helper.file_utils-0.1.10] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.helper.file_utils-0.1.10+698af100)
+  [ext: omni.kit.hotkeys.core-1.3.12] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.hotkeys.core-1.3.12+698af100)
+  [ext: omni.kit.hydra_texture-1.6.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.hydra_texture-1.6.0+698af100.lx64.r.cp312)
+  [ext: omni.kit.livestream.app-10.2.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.livestream.app-10.2.0+110.1.2.lx64.r.cp312)
+  [ext: omni.kit.livestream.core-10.3.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.livestream.core-10.3.0+110.1.2.lx64.r.cp312)
+  [ext: omni.kit.livestream.webrtc-10.5.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.livestream.webrtc-10.5.0+110.1.2.lx64.r.cp312)
+  [ext: omni.kit.loop-default-0.2.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.loop-default-0.2.2+698af100.lx64.r)
+  [ext: omni.kit.mainwindow-1.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.mainwindow-1.0.3+698af100)
+  [ext: omni.kit.manipulator.camera-110.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.camera-110.1.0+698af100)
+  [ext: omni.kit.manipulator.prim-108.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.prim-108.0.0+698af100)
+  [ext: omni.kit.manipulator.prim.core-108.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.prim.core-108.0.2+698af100)
+  [ext: omni.kit.manipulator.prim.usd-107.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.prim.usd-107.0.3+698af100)
+  [ext: omni.kit.manipulator.selection-110.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.selection-110.0.0+698af100)
+  [ext: omni.kit.manipulator.selector-1.1.4] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.selector-1.1.4+698af100)
+  [ext: omni.kit.manipulator.tool.snap-1.5.14] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.tool.snap-1.5.14+698af100)
+  [ext: omni.kit.manipulator.transform-107.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.manipulator.transform-107.0.0+698af100)
+  [ext: omni.kit.material.library-3.1.4] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.material.library-3.1.4+698af100)
+  [ext: omni.kit.menu.common-2.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.menu.common-2.0.2+698af100)
+  [ext: omni.kit.menu.core-1.2.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.menu.core-1.2.1+698af100)
+  [ext: omni.kit.menu.create-2.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.menu.create-2.0.2+698af100)
+  [ext: omni.kit.menu.edit-2.0.11] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.menu.edit-2.0.11+698af100)
+  [ext: omni.kit.menu.file-1.1.23] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.menu.file-1.1.23+698af100)
+  [ext: omni.kit.menu.utils-2.2.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.menu.utils-2.2.6+698af100)
+  [ext: omni.kit.notification_manager-1.0.13] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.notification_manager-1.0.13+698af100)
+  [ext: omni.kit.pip_archive-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.pip_archive-0.0.0+698af100.lx64.cp312)
+  [ext: omni.kit.pipapi-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.pipapi-0.0.0+698af100)
+  [ext: omni.kit.primitive.mesh-1.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.primitive.mesh-1.1.0+698af100)
+  [ext: omni.kit.property.adapter.core-1.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.adapter.core-1.1.1+698af100)
+  [ext: omni.kit.property.adapter.usd-1.0.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.adapter.usd-1.0.5+698af100)
+  [ext: omni.kit.property.audio-1.0.16] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.audio-1.0.16+698af100)
+  [ext: omni.kit.property.bundle-1.5.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.bundle-1.5.2+698af100)
+  [ext: omni.kit.property.camera-1.0.14] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.camera-1.0.14+698af100)
+  [ext: omni.kit.property.geometry-2.1.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.geometry-2.1.2+698af100)
+  [ext: omni.kit.property.light-1.0.14] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.light-1.0.14+698af100)
+  [ext: omni.kit.property.material-1.14.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.material-1.14.8+698af100)
+  [ext: omni.kit.property.render-1.2.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.render-1.2.2+698af100)
+  [ext: omni.kit.property.transform-1.6.11] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.transform-1.6.11+698af100)
+  [ext: omni.kit.property.usd-4.9.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.property.usd-4.9.8+698af100)
+  [ext: omni.kit.raycast.query-1.2.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.raycast.query-1.2.0+698af100.lx64.r.cp312)
+  [ext: omni.kit.renderer.capture-2.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.renderer.capture-2.0.1+698af100.lx64.r.cp312)
+  [ext: omni.kit.renderer.core-1.2.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.renderer.core-1.2.2+698af100.lx64.r.cp312)
+  [ext: omni.kit.renderer.imgui-2.0.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.renderer.imgui-2.0.8+698af100.lx64.r.cp312)
+  [ext: omni.kit.renderer.init-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.renderer.init-1.0.1+698af100.lx64.r)
+  [ext: omni.kit.selection-0.1.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.selection-0.1.6+698af100)
+  [ext: omni.kit.stage_template.core-1.1.22] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.stage_template.core-1.1.22+698af100)
+  [ext: omni.kit.stage_templates-2.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.stage_templates-2.0.2+698af100)
+  [ext: omni.kit.telemetry-0.5.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.telemetry-0.5.2+698af100.lx64.r.cp312)
+  [ext: omni.kit.test-2.0.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.test-2.0.9+698af100.lx64.r.cp312)
+  [ext: omni.kit.tool.asset_importer-6.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.tool.asset_importer-6.0.2+110.1.1)
+  [ext: omni.kit.tool.collect-2.2.19] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.tool.collect-2.2.19+698af100)
+  [ext: omni.kit.ui.actions-1.0.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.ui.actions-1.0.5+698af100)
+  [ext: omni.kit.usd.collect-3.0.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.usd.collect-3.0.6+698af100)
+  [ext: omni.kit.usd.layers-2.6.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.usd.layers-2.6.1+698af100.lx64.r.cp312)
+  [ext: omni.kit.usd.mdl-1.1.11] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.usd.mdl-1.1.11+698af100.lx64.r.cp312)
+  [ext: omni.kit.usd_undo-0.1.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.usd_undo-0.1.8+698af100)
+  [ext: omni.kit.usdz_export-1.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.usdz_export-1.1.0+698af100)
+  [ext: omni.kit.viewport.actions-110.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.actions-110.1.0+698af100)
+  [ext: omni.kit.viewport.legacy_gizmos-1.0.24] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.legacy_gizmos-1.0.24+698af100.lx64.r.cp312)
+  [ext: omni.kit.viewport.manipulator.transform-107.0.4] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.manipulator.transform-107.0.4+698af100)
+  [ext: omni.kit.viewport.menubar.camera-107.0.10] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.camera-107.0.10+698af100)
+  [ext: omni.kit.viewport.menubar.core-110.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.core-110.0.1+698af100)
+  [ext: omni.kit.viewport.menubar.display-107.1.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.display-107.1.3+698af100)
+  [ext: omni.kit.viewport.menubar.lighting-107.3.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.lighting-107.3.2+107.3.0)
+  [ext: omni.kit.viewport.menubar.render-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.render-110.1.1+698af100)
+  [ext: omni.kit.viewport.menubar.settings-110.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.menubar.settings-110.0.1+698af100)
+  [ext: omni.kit.viewport.ready-1.0.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.ready-1.0.9+698af100)
+  [ext: omni.kit.viewport.registry-104.0.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.registry-104.0.6+698af100)
+  [ext: omni.kit.viewport.scene_camera_model-1.0.7] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.scene_camera_model-1.0.7+698af100.lx64.r.cp312)
+  [ext: omni.kit.viewport.utility-2.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.utility-2.1.0+698af100)
+  [ext: omni.kit.viewport.window-110.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.viewport.window-110.0.0+698af100)
+  [ext: omni.kit.widget.browser_bar-2.0.11] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.browser_bar-2.0.11+698af100)
+  [ext: omni.kit.widget.cache_indicator-3.0.12] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.cache_indicator-3.0.12+698af100)
+  [ext: omni.kit.widget.connection_manager-1.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.connection_manager-1.0.2+698af100)
+  [ext: omni.kit.widget.context_menu-1.4.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.context_menu-1.4.1+698af100)
+  [ext: omni.kit.widget.filebrowser-2.13.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.filebrowser-2.13.6+698af100)
+  [ext: omni.kit.widget.filter-1.1.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.filter-1.1.5+698af100)
+  [ext: omni.kit.widget.highlight_label-1.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.highlight_label-1.0.3+698af100)
+  [ext: omni.kit.widget.nucleus_connector-2.4.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.nucleus_connector-2.4.0+698af100)
+  [ext: omni.kit.widget.options_button-1.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.options_button-1.0.3+698af100)
+  [ext: omni.kit.widget.options_menu-1.1.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.options_menu-1.1.6+698af100)
+  [ext: omni.kit.widget.path_field-2.0.13] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.path_field-2.0.13+698af100)
+  [ext: omni.kit.widget.prompt-1.0.7] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.prompt-1.0.7+698af100)
+  [ext: omni.kit.widget.searchable_combobox-1.0.7] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.searchable_combobox-1.0.7+698af100)
+  [ext: omni.kit.widget.searchfield-1.1.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.searchfield-1.1.8+698af100)
+  [ext: omni.kit.widget.settings-2.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.settings-2.0.0+698af100)
+  [ext: omni.kit.widget.stage-4.4.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.stage-4.4.2+698af100)
+  [ext: omni.kit.widget.stage_icons-1.0.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.stage_icons-1.0.8+698af100)
+  [ext: omni.kit.widget.text_editor-1.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.text_editor-1.1.1+698af100.lx64.r.cp312)
+  [ext: omni.kit.widget.toolbar-2.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.toolbar-2.1.0+698af100)
+  [ext: omni.kit.widget.viewport-110.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.widget.viewport-110.0.0+698af100)
+  [ext: omni.kit.window.commands-0.2.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.commands-0.2.9+698af100)
+  [ext: omni.kit.window.console-1.1.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.console-1.1.9+698af100.lx64.r.cp312)
+  [ext: omni.kit.window.content_browser-3.1.10] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.content_browser-3.1.10+698af100)
+  [ext: omni.kit.window.content_browser_registry-0.0.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.content_browser_registry-0.0.6+698af100)
+  [ext: omni.kit.window.drop_support-1.0.8] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.drop_support-1.0.8+698af100)
+  [ext: omni.kit.window.extensions-1.5.13] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.extensions-1.5.13+698af100)
+  [ext: omni.kit.window.file-2.0.13] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.file-2.0.13+698af100)
+  [ext: omni.kit.window.file_exporter-1.0.38] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.file_exporter-1.0.38+698af100)
+  [ext: omni.kit.window.file_importer-1.1.22] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.file_importer-1.1.22+698af100)
+  [ext: omni.kit.window.filepicker-3.0.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.filepicker-3.0.5+698af100)
+  [ext: omni.kit.window.popup_dialog-2.0.26] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.popup_dialog-2.0.26+698af100)
+  [ext: omni.kit.window.preferences-1.8.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.preferences-1.8.5+698af100)
+  [ext: omni.kit.window.property-1.15.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.property-1.15.2+698af100)
+  [ext: omni.kit.window.script_editor-2.0.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.script_editor-2.0.9+698af100)
+  [ext: omni.kit.window.stage-2.6.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.stage-2.6.1+698af100)
+  [ext: omni.kit.window.status_bar-0.1.11] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.status_bar-0.1.11+698af100.lx64.r.cp312)
+  [ext: omni.kit.window.toolbar-3.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.window.toolbar-3.0.3+698af100)
+  [ext: omni.materialx.libs-1.0.9] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.materialx.libs-1.0.9+698af100.lx64.r.cp312)
+  [ext: omni.mdl-57.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.mdl-57.0.3+698af100.lx64.r.cp312)
+  [ext: omni.mdl.neuraylib-0.2.22] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.mdl.neuraylib-0.2.22+698af100.lx64.r.cp312)
+  [ext: omni.metrics.core-0.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.metrics.core-0.0.3+698af100.lx64.r)
+  [ext: omni.ocio-0.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.ocio-0.1.1+698af100.lx64.r.cp312)
+  [ext: omni.physx-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.physx.cooking-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.physx.cooking-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.physx.foundation-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.physx.foundation-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.physx.gpu-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.physx.gpu-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.physx.stageupdate-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.physx.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.protobuf.lib-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.protobuf.lib-1.0.1+698af100.lx64.r)
+  [ext: omni.rtx.settings.core-0.7.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.rtx.settings.core-0.7.1+698af100)
+  [ext: omni.rtx.window.settings-0.8.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.rtx.window.settings-0.8.1+698af100.lx64.r.cp312)
+  [ext: omni.services.core-1.9.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.services.core-1.9.3)
+  [ext: omni.services.facilities.base-1.0.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.services.facilities.base-1.0.5)
+  [ext: omni.services.livestream.session-10.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.services.livestream.session-10.1.0+110.1.2)
+  [ext: omni.services.transport.server.base-1.1.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.services.transport.server.base-1.1.2)
+  [ext: omni.services.transport.server.http-1.3.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.services.transport.server.http-1.3.2)
+  [ext: omni.stats-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.stats-1.0.1+698af100.lx64.r.cp312)
+  [ext: omni.timeline-1.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.timeline-1.1.0+698af100.lx64.r.cp312)
+  [ext: omni.ui-3.2.5] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.ui-3.2.5+698af100.lx64.r.cp312)
+  [ext: omni.ui.scene-2.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.ui.scene-2.0.3+698af100.lx64.r.cp312)
+  [ext: omni.uiaudio-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.uiaudio-1.0.0+698af100.lx64.r.cp312)
+  [ext: omni.ujitso.client-0.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.ujitso.client-0.0.0+698af100.lx64.r)
+  [ext: omni.ujitso.default-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.ujitso.default-1.0.0+698af100.lx64.r.cp312)
+  [ext: omni.usd-1.16.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd-1.16.0+698af100.lx64.r.cp312)
+  [ext: omni.usd.config-1.0.7] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.config-1.0.7+698af100)
+  [ext: omni.usd.core-1.8.6] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.core-1.8.6+698af100.lx64.r)
+  [ext: omni.usd.libs-1.0.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.libs-1.0.3+698af100.lx64.r.cp312)
+  [ext: omni.usd.metrics.assembler-110.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.metrics.assembler-110.1.0+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.usd.metrics.assembler.ui-110.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.metrics.assembler.ui-110.1.0+110.1.0.cp312.u7f4)
+  [ext: omni.usd.schema.anim-0.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.anim-0.0.1+698af100.lx64.r.cp312)
+  [ext: omni.usd.schema.audio-0.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.audio-0.0.1+698af100.lx64.r.cp312)
+  [ext: omni.usd.schema.geospatial-0.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.geospatial-0.0.1+698af100.lx64.r.cp312)
+  [ext: omni.usd.schema.metrics.assembler-110.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.metrics.assembler-110.1.0+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.usd.schema.omni_dome_light-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.omni_dome_light-1.0.0+698af100)
+  [ext: omni.usd.schema.omni_projectors-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.omni_projectors-1.0.0+698af100)
+  [ext: omni.usd.schema.omnigraph-1.0.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.omnigraph-1.0.1+698af100.lx64.r.cp312)
+  [ext: omni.usd.schema.physical_lighting-0.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.physical_lighting-0.1.0+698af100.lx64.r.cp312)
+  [ext: omni.usd.schema.physx-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.usd.schema.playback-1.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.playback-1.1.0+698af100)
+  [ext: omni.usd.schema.render_settings.rtx-1.0.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.render_settings.rtx-1.0.2+698af100)
+  [ext: omni.usd.schema.usd_particle_field-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd.schema.usd_particle_field-1.0.0+698af100)
+  [ext: omni.usd_resolver-1.0.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usd_resolver-1.0.0+698af100.lx64.r.cp312)
+  [ext: omni.usdphysics-110.1.1] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.usdphysics-110.1.1+110.1.0.lx64.r.cp312.u7f4)
+  [ext: omni.volume-0.5.2] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.volume-0.5.2+698af100.lx64.r.cp312)
+  [ext: omni.warp.core-1.14.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.warp.core-1.14.0+lx64)
+  [ext: usdrt.scenegraph-7.6.3] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/usdrt.scenegraph-7.6.3+698af100.lx64.r.cp312)
+  [ext: cris.madil.render_service-0.1.0] registered (path: /home/madil/kit-app-template/_build/linux-x86_64/release/exts/cris.madil.render_service)
+  [ext: omni.client.lib-1.1.1] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.client.lib)
+  [ext: omni.kit.async_engine-0.0.3] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.async_engine)
+  [ext: omni.kit.registry.nucleus-0.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/extscore/omni.kit.registry.nucleus)
+  [ext: omni.app.dev-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.kit)
+  [ext: omni.app.dev.nvcf-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.nvcf.kit)
+  [ext: omni.app.dev.xr.avp-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.xr.avp.kit)
+  [ext: omni.app.dev.xr.ipad-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.dev.xr.ipad.kit)
+  [ext: omni.app.editor.base-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.editor.base.kit)
+  [ext: omni.app.empty-0.1.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.empty.kit)
+  [ext: omni.app.full-1.0.1] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.full.kit)
+  [ext: omni.app.hydra-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.hydra.kit)
+  [ext: omni.app.mini-0.1.1] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.mini.kit)
+  [ext: omni.app.viewport-1.0.0] registered (path: /home/madil/.cache/packman/chk/kit-kernel/110.2.0+feature.manylinux_2_35_x86_64.release/apps/omni.app.viewport.kit)
+2026-11-10T12:15:13Z [8ms] [Info] [carb] Initializing plugin: carb.scripting-python.plugin (interfaces: [carb::scripting::IScripting v1.0]) (impl: carb.scripting-python.plugin)
+2026-11-10T12:15:13Z [8ms] [Info] [carb.scripting-python.plugin] Attempting to initialize Python interpreter. Failure of doing it will lead to the termination of the application.
+2026-11-10T12:15:13Z [14ms] [Info] [carb.scripting-python.plugin] Python interpreter was successfully initialized.
+2026-11-10T12:15:13Z [14ms] [Info] [carb] Initializing plugin: carb.variant.plugin (interfaces: [carb::variant::IVariant v0.1]) (impl: carb.variant.plugin)
+2026-11-10T12:15:14Z [77ms] [Info] [omni.kit.app._impl] python GC: gc.disable()
+2026-11-10T12:15:14Z [78ms] [Info] [omni.ext.plugin] [ext manager] preferLocalVersions: 1
+2026-11-10T12:15:14Z [78ms] [Info] [omni.ext.plugin] Processing exts enabling request: 'app-1.0.0'
+2026-11-10T12:15:14Z [78ms] [Info] [omni.ext.plugin] Solver result: succeeded. nodes: 2. time: 0.029606 (ms) iterations: 3 backtracks: 0 cycles: 0 unitprops: 2
+Extensions dependency solver solution:
+[ext: app-1.0.0] deps:
+ -> 'omni.kit.loop' = { version='=0.2.2' tag='default' } selected: [omni.kit.loop-default-0.2.2]
+[ext: omni.kit.loop-default-0.2.2] no deps
+  Synced registries:
+     (none)
+
+2026-11-10T12:15:14Z [78ms] [Info] [omni.ext.plugin] About to startup: [ext: omni.kit.loop-default-0.2.2] (order: 0) Triggered by: app-1.0.0 (path: /home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.kit.loop-default-0.2.2+698af100.lx64.r)
+2026-11-10T12:15:14Z [78ms] [Info] [omni.kit.app.plugin] [0.103s] [ext: omni.kit.loop-default-0.2.2] startup
+2026-11-10T12:15:14Z [78ms] [Info] [carb] Registered plugin: omni.kit.loop-default.plugin (interfaces: [omni::ext::IExt v0.1]) (impl: omni.kit.loop-default.plugin)
+2026-11-10T12:15:14Z [78ms] [Info] [carb] Initializing plugin: omni.kit.loop-default.plugin (interfaces: [omni::ext::IExt v0.1]) (impl: omni.kit.loop-default.plugin)
+2026-11-10T12:15:14Z [79ms] [Info] [omni.ext.plugin] [ext: omni.kit.loop-default-0.2.2] Starting ext::IExt in '/home/madil/.local/share/ov/data/exts/v2/omni.kit.loop-default-9cd5ec20bb699a7e/bin/libomni.kit.loop-default.plugin.so'
+2026-11-10T12:15:14Z [79ms] [Info] [carb] Plugin omni.kit.loop-default.plugin is already a dependency of omni.kit.app.plugin; not changing unload order
+2026-11-10T12:15:14Z [79ms] [Info] [omni.ext.plugin] [ext: omni.kit.loop-default-0.2.2] started, startup time: 0 (ms)
+2026-11-10T12:15:14Z [79ms] [Info] [omni.ext.plugin] About to startup: [ext: app-1.0.0] (order: 0) Triggered by API/CLI/Config. (path: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.kit)
+2026-11-10T12:15:14Z [79ms] [Info] [omni.kit.app.plugin] [0.103s] [ext: app-1.0.0] startup
+2026-11-10T12:15:14Z [79ms] [Info] [omni.ext.plugin] [ext: app-1.0.0] started, startup time: 0 (ms)
+2026-11-10T12:15:14Z [79ms] [Info] [omni.kit.app.plugin] app started
+2026-11-10T12:15:14Z [88ms] [Info] [omni.kit.app.plugin] [0.112s] app ready
+2026-11-10T12:15:14Z [88ms] [Info] [omni.kit.app._impl] python GC: gc.enable()
+2026-11-10T12:15:14Z [88ms] [Info] [omni.kit.app.plugin] Executing file: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/worker.py
+2026-11-10T12:15:14Z [88ms] [Info] [omni.kit.app.plugin] Found a script to execute: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/worker.py
+2026-11-10T12:15:14Z [91ms] [Error] [omni.kit.app._impl] [py stderr]: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/worker.py:47: DeprecationWarning: There is no current event loop
+  asyncio.ensure_future(main())
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb.crashreporter-breakpad.plugin] crashreporter configured:
+    buildVersion: '110.2.0'
+    buildNumber: '342835'
+    buildHash: '698af100'
+    buildBranch: 'feature'
+    buildCi: 'gl'
+    buildMajor: '110'
+    buildMinor: '2'
+    buildPatch: '0'
+    buildConfig: 'release'
+    BuildGitlabJobID: '360905302'
+    buildGitlabJobStage: 'kit-build'
+    buildGitlabJobName: 'kit-build-release-linux-x86_64'
+    buildGitlabPipelineID: '57676005'
+    profilerCpuTscFrequency: '4192532984'
+    commandLine: '/home/<username>/kit-app-template/_build/linux-x86_64/release/kit/kit /home/<username>/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/app.kit --ext-folder /home/<username>/kit-app-template/_build/linux-x86_64/release/exts --ext-folder /home/<username>/kit-app-template/_build/linux-x86_64/release/extscache --no-window --portable --portable-root=/tmp/marlin_annotation_execution_unpack01/portable --/app/extensions/registryEnabled=false --/app/extensions/syncRegistryOnStartup=false --/app/settings/loadUserConfig=false --/app/settings/saveUserConfig=false --/app/settings/persistent=false --/app/file/ignoreUnsavedOnExit=true --/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_annotation_execution_unpack01/textures --/log/file=/home/<username>/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/kit_process.log --exec /home/<username>/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack01/worker.py'
+    runningInContainer: '0'
+    appName: 'app'
+    appVersion: '1.0.0'
+    appState: 'shutdown'
+    environmentName: 'default'
+    portableMode: '1'
+    userId: 'default'
+    autoloadExts: ''
+    carboniteSdkVersion: '210.2.5+release.14036.c700af7d.gl'
+    carboniteFrameworkVersion: '210.2.5+release.14036.c700af7d.gl'
+    enabled: false
+    uninstalling handler
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin omni.kit.app.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin omni.ext.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin omni.kit.loop-default.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.scripting-python.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.events.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.eventdispatcher.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.variant.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.tasking.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.crashreporter-breakpad.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin omni.observability-otel.plugin
+2026-11-10T12:17:13Z [119,998ms] [Info] [carb] Shutting down plugin carb.profiler-cpu.plugin
+2026-11-10T12:17:13Z [119,999ms] [Info] [carb] Shutting down plugin carb.dictionary.serializer-toml.plugin
+2026-11-10T12:17:13Z [119,999ms] [Info] [carb] Shutting down plugin carb.dictionary.serializer-json.plugin
+2026-11-10T12:17:13Z [119,999ms] [Info] [carb] Shutting down plugin carb.tokens.plugin
+2026-11-10T12:17:13Z [119,999ms] [Info] [carb] Shutting down plugin carb.profiler-mux.plugin
+2026-11-10T12:17:13Z [119,999ms] [Info] [carb] Shutting down plugin carb.settings.plugin
+2026-11-10T12:17:13Z [119,999ms] [Info] [carb] Shutting down plugin carb.dictionary.plugin

@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "captures": 0,
+  "checks": {
+    "missing_product": {
+      "passed": true,
+      "error": "Capture render product is missing"
+    },
+    "wrong_camera": {
+      "passed": true,
+      "error": "Explicit render product camera/resolution differs from request"
+    },
+    "wrong_resolution": {
+      "passed": true,
+      "error": "Explicit render product camera/resolution differs from request"
+    },
+    "non_square_pixels": {
+      "passed": true,
+      "error": "Non-square render-product pixels are unsupported"
+    },
+    "cropped_product": {
+      "passed": true,
+      "error": "Cropped render product is unsupported"
+    },
+    "aspect_mismatch": {
+      "passed": true,
+      "error": "Capture camera aperture and image aspect disagree; conformed projection is not validated (aperture=23.040000915527344 x 23.040000915527344, image=512 x 384)"
+    },
+    "missing_authored_camera": {
+      "passed": true,
+      "error": "Capture camera is missing"
+    }
+  },
+  "valid_product": {
+    "capture_view_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "capture_projection_matrix": [
+      [
+        3.2552084060929105,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        4.34027760531064,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.000002000002,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        -2.000002000002,
+        0.0
+      ]
+    ],
+    "capture_projection_source": "Authored USD camera frustum, matching full-image aspect and square pixels; not the UI projection",
+    "matrix_convention": "USD/Gf row-vector world * view * projection; NDC x/y [-1,1], image origin top-left",
+    "capture_projection_validation": "geometry_checked; raster validation recorded separately",
+    "projection_metadata_version": 2,
+    "actual_view_matrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "actual_projection_matrix": [
+      [
+        3.2552084060929105,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        4.34027760531064,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        -1.000002000002,
+        -1.0
+      ],
+      [
+        0.0,
+        0.0,
+        -2.000002000002,
+        0.0
+      ]
+    ],
+    "render_product": {
+      "path": "/Render/ContractProduct",
+      "camera": "/Camera",
+      "resolution": [
+        512,
+        384
+      ],
+      "pixel_aspect_ratio": 1.0,
+      "data_window_ndc": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "owned_product_removed": true,
+  "stage_closed": true
+}

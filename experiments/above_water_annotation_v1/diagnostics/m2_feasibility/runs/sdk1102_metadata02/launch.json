@@ -1,0 +1,46 @@
+{
+  "recorded_utc": "2026-11-09T14:29:00.748464+00:00",
+  "pid": 1101415,
+  "command": [
+    "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/sdk-1102/kit",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata02/metadata.kit",
+    "--ext-folder",
+    "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/profile_baseline/portable/data/Kit/standalone/1.0/exts/3",
+    "--no-window",
+    "--portable",
+    "--portable-root=/tmp/marlin_above_water_m2_sdk1102_metadata02/portable",
+    "--/app/extensions/registryEnabled=false",
+    "--/app/extensions/syncRegistryOnStartup=false",
+    "--/app/extensions/registryCache=/tmp/marlin_above_water_m2_sdk1102_metadata02/extensions",
+    "--/app/settings/loadUserConfig=false",
+    "--/app/settings/saveUserConfig=false",
+    "--/app/settings/persistent=false",
+    "--/app/file/ignoreUnsavedOnExit=true",
+    "--/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_above_water_m2_sdk1102_metadata02/textures",
+    "--/log/file=/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata02/kit_process.log",
+    "--exec",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata02/query_provider.py"
+  ],
+  "profile": "/tmp/marlin_above_water_m2_sdk1102_metadata02",
+  "gpu_before": {
+    "name": "NVIDIA RTX A2000",
+    "driver": "595.99.02",
+    "total_mib": 6138,
+    "free_mib": 2372
+  },
+  "runtime_scope": "existing_sdk1102",
+  "desktop_connection_inherited": true,
+  "headless_environment": {
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": "wayland-0",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "GDK_BACKEND": null
+  },
+  "disk_free_bytes": 126372970496,
+  "existing_kit_before": "",
+  "source_sha256": {
+    "launch_probe.py": "53a8594da5ba1974d21dfc3c74a54e604d3180d514ffe2de2bd4f1865382564b",
+    "query_provider.py": "1731d73f248d501135a8877f0452496f4ecaf0bc3e629e71acfd1d08d00f737a",
+    "metadata.kit": "1191bc2c9d2d9f62a11efcfc205b14b534b9d49ebaba59db98ad75e76fe9572e"
+  }
+}

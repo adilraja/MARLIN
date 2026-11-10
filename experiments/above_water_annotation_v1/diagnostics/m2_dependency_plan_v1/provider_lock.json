@@ -1,0 +1,2843 @@
+{
+  "schema_version": 1,
+  "candidate_id": "above_water_annotation_provider_1102_v1",
+  "recorded_utc": "2026-11-09T15:47:43.453481+00:00",
+  "scope": "Metadata-compatible isolated provider candidate; not installed or runtime-qualified",
+  "runtime": {
+    "version": "110.2.0",
+    "build": "110.2.0+feature.342835.698af100.gl",
+    "kit_hash": "698af100",
+    "platform": "linux-x86_64",
+    "python": "cp312",
+    "config": "release"
+  },
+  "resolver": {
+    "source_run": "capture_profile_solve01",
+    "success": true,
+    "add_enabled": false,
+    "input": [
+      "omni.replicator.core-1.13.27",
+      "omni.usd-1.16.0",
+      "omni.graph.core-3.1.3",
+      "omni.hydra.rtx-1.0.4",
+      "omni.kit.renderer.capture-2.0.1",
+      "omni.kit.loop-default-0.2.2",
+      "omni.kit.viewport.window-110.0.0",
+      "omni.kit.viewport.utility-2.1.0",
+      "omni.rtx.settings.core-0.7.1"
+    ],
+    "raw_solutions_sha256": "6ba90eee4585eee1f81ab30393bf7915eeb28c8bb3614fbb9b4ecae975a64065"
+  },
+  "provider": "omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312",
+  "native_backend": "omni.syntheticdata-0.6.15+698af100.lx64.r.cp312",
+  "nodes": [
+    {
+      "id": "omni.assets.plugins-0.0.0",
+      "name": "omni.assets.plugins",
+      "package_id": "omni.assets.plugins-0.0.0+698af100.lx64.r",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.blobkey-1.1.2",
+      "name": "omni.blobkey",
+      "package_id": "omni.blobkey-1.1.2+698af100.lx64.r",
+      "version": "1.1.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.async_engine-0.0.3",
+      "name": "omni.kit.async_engine",
+      "package_id": "omni.kit.async_engine-0.0.3",
+      "version": "0.0.3",
+      "already_installed": true,
+      "registry": null,
+      "target": {}
+    },
+    {
+      "id": "omni.client.lib-1.1.1",
+      "name": "omni.client.lib",
+      "package_id": "omni.client.lib-1.1.1+lx64.r.cp312",
+      "version": "1.1.1",
+      "already_installed": true,
+      "registry": null,
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.client-1.3.0",
+      "name": "omni.client",
+      "package_id": "omni.client-1.3.0+698af100.lx64.r",
+      "version": "1.3.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.protobuf.lib-1.0.1",
+      "name": "omni.protobuf.lib",
+      "package_id": "omni.protobuf.lib-1.0.1+698af100.lx64.r",
+      "version": "1.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.grpc.lib-1.0.0",
+      "name": "omni.grpc.lib",
+      "package_id": "omni.grpc.lib-1.0.0+698af100.lx64.r",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.metrics.core-0.0.3",
+      "name": "omni.metrics.core",
+      "package_id": "omni.metrics.core-0.0.3+698af100.lx64.r",
+      "version": "0.0.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.datastore-0.0.0",
+      "name": "omni.datastore",
+      "package_id": "omni.datastore-0.0.0+698af100.lx64.r",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.gpu_foundation.shadercache.vulkan-1.0.0",
+      "name": "omni.gpu_foundation.shadercache.vulkan",
+      "package_id": "omni.gpu_foundation.shadercache.vulkan-1.0.0+698af100.lx64.r",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.hsscclient-1.1.4",
+      "name": "omni.hsscclient",
+      "package_id": "omni.hsscclient-1.1.4+698af100.lx64.r.cp312",
+      "version": "1.1.4",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.stats-1.0.1",
+      "name": "omni.stats",
+      "package_id": "omni.stats-1.0.1+698af100.lx64.r.cp312",
+      "version": "1.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.ujitso.default-1.0.0",
+      "name": "omni.ujitso.default",
+      "package_id": "omni.ujitso.default-1.0.0+698af100.lx64.r.cp312",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.gpu_foundation-0.0.0",
+      "name": "omni.gpu_foundation",
+      "package_id": "omni.gpu_foundation-0.0.0+698af100.lx64.r.cp312",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "carb.windowing.plugins-1.0.1",
+      "name": "carb.windowing.plugins",
+      "package_id": "carb.windowing.plugins-1.0.1+698af100.lx64.r",
+      "version": "1.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.renderer.init-1.0.1",
+      "name": "omni.kit.renderer.init",
+      "package_id": "omni.kit.renderer.init-1.0.1+698af100.lx64.r",
+      "version": "1.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.pipapi-0.0.0",
+      "name": "omni.kit.pipapi",
+      "package_id": "omni.kit.pipapi-0.0.0+698af100",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.pip_archive-0.0.0",
+      "name": "omni.kit.pip_archive",
+      "package_id": "omni.kit.pip_archive-0.0.0+698af100.lx64.cp312",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.loop-default-0.2.2",
+      "name": "omni.kit.loop-default",
+      "package_id": "omni.kit.loop-default-0.2.2+698af100.lx64.r",
+      "version": "0.2.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.test-2.0.9",
+      "name": "omni.kit.test",
+      "package_id": "omni.kit.test-2.0.9+698af100.lx64.r.cp312",
+      "version": "2.0.9",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.gpucompute.plugins-0.0.0",
+      "name": "omni.gpucompute.plugins",
+      "package_id": "omni.gpucompute.plugins-0.0.0+698af100.lx64.r",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.config-1.0.7",
+      "name": "omni.usd.config",
+      "package_id": "omni.usd.config-1.0.7+698af100",
+      "version": "1.0.7",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.libs-1.0.3",
+      "name": "omni.usd.libs",
+      "package_id": "omni.usd.libs-1.0.3+698af100.lx64.r.cp312",
+      "version": "1.0.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.iray.libs-0.0.1",
+      "name": "omni.iray.libs",
+      "package_id": "omni.iray.libs-0.0.1+698af100.lx64.r",
+      "version": "0.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.mdl-57.0.3",
+      "name": "omni.mdl",
+      "package_id": "omni.mdl-57.0.3+698af100.lx64.r.cp312",
+      "version": "57.0.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.mdl.neuraylib-0.2.22",
+      "name": "omni.mdl.neuraylib",
+      "package_id": "omni.mdl.neuraylib-0.2.22+698af100.lx64.r.cp312",
+      "version": "0.2.22",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.usd.mdl-1.1.11",
+      "name": "omni.kit.usd.mdl",
+      "package_id": "omni.kit.usd.mdl-1.1.11+698af100.lx64.r.cp312",
+      "version": "1.1.11",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.pip.compute-1.9.2",
+      "name": "omni.pip.compute",
+      "package_id": "omni.pip.compute-1.9.2+110.1.2.lx64.cp312",
+      "version": "1.9.2",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.2"
+        ]
+      }
+    },
+    {
+      "id": "omni.pip.cloud-1.5.4",
+      "name": "omni.pip.cloud",
+      "package_id": "omni.pip.cloud-1.5.4+110.1.2.lx64.cp312",
+      "version": "1.5.4",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.2"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.anim-0.0.1",
+      "name": "omni.usd.schema.anim",
+      "package_id": "omni.usd.schema.anim-0.0.1+698af100.lx64.r.cp312",
+      "version": "0.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.audio-0.0.1",
+      "name": "omni.usd.schema.audio",
+      "package_id": "omni.usd.schema.audio-0.0.1+698af100.lx64.r.cp312",
+      "version": "0.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.geospatial-0.0.1",
+      "name": "omni.usd.schema.geospatial",
+      "package_id": "omni.usd.schema.geospatial-0.0.1+698af100.lx64.r.cp312",
+      "version": "0.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd_resolver-1.0.0",
+      "name": "omni.usd_resolver",
+      "package_id": "omni.usd_resolver-1.0.0+698af100.lx64.r.cp312",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.core-1.8.6",
+      "name": "omni.usd.core",
+      "package_id": "omni.usd.core-1.8.6+698af100.lx64.r",
+      "version": "1.8.6",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.omni_dome_light-1.0.0",
+      "name": "omni.usd.schema.omni_dome_light",
+      "package_id": "omni.usd.schema.omni_dome_light-1.0.0+698af100",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.omni_projectors-1.0.0",
+      "name": "omni.usd.schema.omni_projectors",
+      "package_id": "omni.usd.schema.omni_projectors-1.0.0+698af100",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.omni_sensors-0.0.0",
+      "name": "omni.usd.schema.omni_sensors",
+      "package_id": "omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312",
+      "version": "0.0.0",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.omnigraph-1.0.1",
+      "name": "omni.usd.schema.omnigraph",
+      "package_id": "omni.usd.schema.omnigraph-1.0.1+698af100.lx64.r.cp312",
+      "version": "1.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.physical_lighting-0.1.0",
+      "name": "omni.usd.schema.physical_lighting",
+      "package_id": "omni.usd.schema.physical_lighting-0.1.0+698af100.lx64.r.cp312",
+      "version": "0.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.physx-110.1.1",
+      "name": "omni.usd.schema.physx",
+      "package_id": "omni.usd.schema.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.render_settings.rtx-1.0.2",
+      "name": "omni.usd.schema.render_settings.rtx",
+      "package_id": "omni.usd.schema.render_settings.rtx-1.0.2+698af100",
+      "version": "1.0.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.semantics-0.0.0",
+      "name": "omni.usd.schema.semantics",
+      "package_id": "omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312",
+      "version": "0.0.0",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.usd_particle_field-1.0.0",
+      "name": "omni.usd.schema.usd_particle_field",
+      "package_id": "omni.usd.schema.usd_particle_field-1.0.0+698af100",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "carb.audio-0.1.0",
+      "name": "carb.audio",
+      "package_id": "carb.audio-0.1.0+698af100.lx64.r.cp312",
+      "version": "0.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.activity.core-1.0.3",
+      "name": "omni.activity.core",
+      "package_id": "omni.activity.core-1.0.3+698af100.lx64.r.cp312",
+      "version": "1.0.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.appwindow-1.2.2",
+      "name": "omni.appwindow",
+      "package_id": "omni.appwindow-1.2.2+698af100.lx64.r.cp312",
+      "version": "1.2.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.actions.core-1.0.0",
+      "name": "omni.kit.actions.core",
+      "package_id": "omni.kit.actions.core-1.0.0+698af100.lx64.r.cp312",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.commands-1.5.0",
+      "name": "omni.kit.commands",
+      "package_id": "omni.kit.commands-1.5.0+698af100.lx64.r.cp312",
+      "version": "1.5.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.convexdecomposition-110.1.1",
+      "name": "omni.convexdecomposition",
+      "package_id": "omni.convexdecomposition-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.cubric-0.1.0",
+      "name": "omni.cubric",
+      "package_id": "omni.cubric-0.1.0+698af100.lx64.r",
+      "version": "0.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.exec-0.9.6",
+      "name": "omni.graph.exec",
+      "package_id": "omni.graph.exec-0.9.6+698af100.lx64.r",
+      "version": "0.9.6",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.hydra.scene_delegate-0.3.5",
+      "name": "omni.hydra.scene_delegate",
+      "package_id": "omni.hydra.scene_delegate-0.3.5+698af100.lx64.r",
+      "version": "0.3.5",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "usdrt.scenegraph-7.6.3",
+      "name": "usdrt.scenegraph",
+      "package_id": "usdrt.scenegraph-7.6.3+698af100.lx64.r.cp312",
+      "version": "7.6.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.hydra.usdrt_delegate-7.5.2",
+      "name": "omni.hydra.usdrt_delegate",
+      "package_id": "omni.hydra.usdrt_delegate-7.5.2+698af100.lx64.r.cp312",
+      "version": "7.5.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.inspect-1.0.2",
+      "name": "omni.inspect",
+      "package_id": "omni.inspect-1.0.2+698af100.lx64.r.cp312",
+      "version": "1.0.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.audiodeviceenum-1.0.2",
+      "name": "omni.kit.audiodeviceenum",
+      "package_id": "omni.kit.audiodeviceenum-1.0.2+698af100.lx64.r.cp312",
+      "version": "1.0.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.exec.core-0.13.5",
+      "name": "omni.kit.exec.core",
+      "package_id": "omni.kit.exec.core-0.13.5+698af100.lx64.r.cp312",
+      "version": "0.13.5",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.renderer.core-1.2.2",
+      "name": "omni.kit.renderer.core",
+      "package_id": "omni.kit.renderer.core-1.2.2+698af100.lx64.r.cp312",
+      "version": "1.2.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.renderer.capture-2.0.1",
+      "name": "omni.kit.renderer.capture",
+      "package_id": "omni.kit.renderer.capture-2.0.1+698af100.lx64.r.cp312",
+      "version": "2.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.renderer.imgui-2.0.8",
+      "name": "omni.kit.renderer.imgui",
+      "package_id": "omni.kit.renderer.imgui-2.0.8+698af100.lx64.r.cp312",
+      "version": "2.0.8",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.usd_undo-0.1.8",
+      "name": "omni.kit.usd_undo",
+      "package_id": "omni.kit.usd_undo-0.1.8+698af100",
+      "version": "0.1.8",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.ui-3.2.5",
+      "name": "omni.ui",
+      "package_id": "omni.ui-3.2.5+698af100.lx64.r.cp312",
+      "version": "3.2.5",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.window.popup_dialog-2.0.26",
+      "name": "omni.kit.window.popup_dialog",
+      "package_id": "omni.kit.window.popup_dialog-2.0.26+698af100",
+      "version": "2.0.26",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.connection_manager-1.0.2",
+      "name": "omni.kit.widget.connection_manager",
+      "package_id": "omni.kit.widget.connection_manager-1.0.2+698af100",
+      "version": "1.0.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.timeline-1.1.0",
+      "name": "omni.timeline",
+      "package_id": "omni.timeline-1.1.0+698af100.lx64.r.cp312",
+      "version": "1.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd-1.16.0",
+      "name": "omni.usd",
+      "package_id": "omni.usd-1.16.0+698af100.lx64.r.cp312",
+      "version": "1.16.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.core-3.1.3",
+      "name": "omni.graph.core",
+      "package_id": "omni.graph.core-3.1.3+698af100.lx64.r",
+      "version": "3.1.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.tools-1.81.0",
+      "name": "omni.graph.tools",
+      "package_id": "omni.graph.tools-1.81.0+698af100",
+      "version": "1.81.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph-1.142.5",
+      "name": "omni.graph",
+      "package_id": "omni.graph-1.142.5+698af100.lx64.r.cp312",
+      "version": "1.142.5",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.action_core-1.1.9",
+      "name": "omni.graph.action_core",
+      "package_id": "omni.graph.action_core-1.1.9+698af100.lx64.r.cp312",
+      "version": "1.1.9",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.action_nodes_core-2.11.0",
+      "name": "omni.graph.action_nodes_core",
+      "package_id": "omni.graph.action_nodes_core-2.11.0+110.0.0.lx64.r.cp312.u7f4",
+      "version": "2.11.0",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.0.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.clipboard-1.1.1",
+      "name": "omni.kit.clipboard",
+      "package_id": "omni.kit.clipboard-1.1.1+698af100.lx64.r.cp312",
+      "version": "1.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.helper.file_utils-0.1.10",
+      "name": "omni.kit.helper.file_utils",
+      "package_id": "omni.kit.helper.file_utils-0.1.10+698af100",
+      "version": "0.1.10",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.menu.core-1.2.1",
+      "name": "omni.kit.menu.core",
+      "package_id": "omni.kit.menu.core-1.2.1+698af100",
+      "version": "1.2.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.notification_manager-1.0.13",
+      "name": "omni.kit.notification_manager",
+      "package_id": "omni.kit.notification_manager-1.0.13+698af100",
+      "version": "1.0.13",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.path_field-2.0.13",
+      "name": "omni.kit.widget.path_field",
+      "package_id": "omni.kit.widget.path_field-2.0.13+698af100",
+      "version": "2.0.13",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.browser_bar-2.0.11",
+      "name": "omni.kit.widget.browser_bar",
+      "package_id": "omni.kit.widget.browser_bar-2.0.11+698af100",
+      "version": "2.0.11",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.context_menu-1.4.1",
+      "name": "omni.kit.widget.context_menu",
+      "package_id": "omni.kit.widget.context_menu-1.4.1+698af100",
+      "version": "1.4.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.filebrowser-2.13.6",
+      "name": "omni.kit.widget.filebrowser",
+      "package_id": "omni.kit.widget.filebrowser-2.13.6+698af100",
+      "version": "2.13.6",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.nucleus_connector-2.4.0",
+      "name": "omni.kit.widget.nucleus_connector",
+      "package_id": "omni.kit.widget.nucleus_connector-2.4.0+698af100",
+      "version": "2.4.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.options_menu-1.1.6",
+      "name": "omni.kit.widget.options_menu",
+      "package_id": "omni.kit.widget.options_menu-1.1.6+698af100",
+      "version": "1.1.6",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.options_button-1.0.3",
+      "name": "omni.kit.widget.options_button",
+      "package_id": "omni.kit.widget.options_button-1.0.3+698af100",
+      "version": "1.0.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.ui.scene-2.0.3",
+      "name": "omni.ui.scene",
+      "package_id": "omni.ui.scene-2.0.3+698af100.lx64.r.cp312",
+      "version": "2.0.3",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.window.filepicker-3.0.5",
+      "name": "omni.kit.window.filepicker",
+      "package_id": "omni.kit.window.filepicker-3.0.5+698af100",
+      "version": "3.0.5",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.action_nodes-2.11.0",
+      "name": "omni.graph.action_nodes",
+      "package_id": "omni.graph.action_nodes-2.11.0+110.0.0.lx64.r.cp312.u7f4",
+      "version": "2.11.0",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.0.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.action-2.10.2",
+      "name": "omni.graph.action",
+      "package_id": "omni.graph.action-2.10.2+110.0.0",
+      "version": "2.10.2",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "kit": [
+          "110.0.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.image.core-0.6.1",
+      "name": "omni.graph.image.core",
+      "package_id": "omni.graph.image.core-0.6.1+698af100.lx64.r",
+      "version": "0.6.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.image.nodes-1.3.2",
+      "name": "omni.graph.image.nodes",
+      "package_id": "omni.graph.image.nodes-1.3.2+698af100.lx64.r",
+      "version": "1.3.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.nodes_core-2.11.0",
+      "name": "omni.graph.nodes_core",
+      "package_id": "omni.graph.nodes_core-2.11.0+110.0.0.lx64.r.cp312.u7f4",
+      "version": "2.11.0",
+      "already_installed": true,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.0.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.nodes-2.12.0",
+      "name": "omni.graph.nodes",
+      "package_id": "omni.graph.nodes-2.12.0+110.0.0.lx64.r.cp312.u7f4",
+      "version": "2.12.0",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.0.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.graph.scriptnode-2.10.2",
+      "name": "omni.graph.scriptnode",
+      "package_id": "omni.graph.scriptnode-2.10.2+110.0.0",
+      "version": "2.10.2",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "kit": [
+          "110.0.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.hydra.engine.stats-1.0.5",
+      "name": "omni.hydra.engine.stats",
+      "package_id": "omni.hydra.engine.stats-1.0.5+698af100.lx64.r.cp312",
+      "version": "1.0.5",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.hydra.rtx.shadercache.vulkan-1.0.0",
+      "name": "omni.hydra.rtx.shadercache.vulkan",
+      "package_id": "omni.hydra.rtx.shadercache.vulkan-1.0.0+698af100.lx64.r",
+      "version": "1.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.index.libs-392300.31.0",
+      "name": "omni.index.libs",
+      "package_id": "omni.index.libs-392300.31.0+698af100.lx64.r",
+      "version": "392300.31.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.index-1.0.1",
+      "name": "omni.index",
+      "package_id": "omni.index-1.0.1+698af100.lx64.r",
+      "version": "1.0.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.ujitso.client-0.0.0",
+      "name": "omni.ujitso.client",
+      "package_id": "omni.ujitso.client-0.0.0+698af100.lx64.r",
+      "version": "0.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.usd.schema.playback-1.1.0",
+      "name": "omni.usd.schema.playback",
+      "package_id": "omni.usd.schema.playback-1.1.0+698af100",
+      "version": "1.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.volume-0.5.2",
+      "name": "omni.volume",
+      "package_id": "omni.volume-0.5.2+698af100.lx64.r.cp312",
+      "version": "0.5.2",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.hydra.rtx-1.0.4",
+      "name": "omni.hydra.rtx",
+      "package_id": "omni.hydra.rtx-1.0.4+698af100.lx64.r",
+      "version": "1.0.4",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.hydra_texture-1.6.0",
+      "name": "omni.kit.hydra_texture",
+      "package_id": "omni.kit.hydra_texture-1.6.0+698af100.lx64.r.cp312",
+      "version": "1.6.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.menu.utils-2.2.6",
+      "name": "omni.kit.menu.utils",
+      "package_id": "omni.kit.menu.utils-2.2.6+698af100",
+      "version": "2.2.6",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.usd.layers-2.6.1",
+      "name": "omni.kit.usd.layers",
+      "package_id": "omni.kit.usd.layers-2.6.1+698af100.lx64.r.cp312",
+      "version": "2.6.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.primitive.mesh-1.1.0",
+      "name": "omni.kit.primitive.mesh",
+      "package_id": "omni.kit.primitive.mesh-1.1.0+698af100",
+      "version": "1.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.viewport.registry-104.0.6",
+      "name": "omni.kit.viewport.registry",
+      "package_id": "omni.kit.viewport.registry-104.0.6+698af100",
+      "version": "104.0.6",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.viewport-110.0.0",
+      "name": "omni.kit.widget.viewport",
+      "package_id": "omni.kit.widget.viewport-110.0.0+698af100",
+      "version": "110.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.viewport.window-110.0.0",
+      "name": "omni.kit.viewport.window",
+      "package_id": "omni.kit.viewport.window-110.0.0+698af100",
+      "version": "110.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.viewport.utility-2.1.0",
+      "name": "omni.kit.viewport.utility",
+      "package_id": "omni.kit.viewport.utility-2.1.0+698af100",
+      "version": "2.1.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.searchable_combobox-1.0.7",
+      "name": "omni.kit.widget.searchable_combobox",
+      "package_id": "omni.kit.widget.searchable_combobox-1.0.7+698af100",
+      "version": "1.0.7",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.widget.settings-2.0.0",
+      "name": "omni.kit.widget.settings",
+      "package_id": "omni.kit.widget.settings-2.0.0+698af100",
+      "version": "2.0.0",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.window.file_exporter-1.0.38",
+      "name": "omni.kit.window.file_exporter",
+      "package_id": "omni.kit.window.file_exporter-1.0.38+698af100",
+      "version": "1.0.38",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.kit.window.file_importer-1.1.22",
+      "name": "omni.kit.window.file_importer",
+      "package_id": "omni.kit.window.file_importer-1.1.22+698af100",
+      "version": "1.1.22",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    },
+    {
+      "id": "omni.ocio-0.1.1",
+      "name": "omni.ocio",
+      "package_id": "omni.ocio-0.1.1+698af100.lx64.r.cp312",
+      "version": "0.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.physics-110.1.1",
+      "name": "omni.physics",
+      "package_id": "omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.physx.gpu-110.1.1",
+      "name": "omni.physx.gpu",
+      "package_id": "omni.physx.gpu-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.physx.foundation-110.1.1",
+      "name": "omni.physx.foundation",
+      "package_id": "omni.physx.foundation-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.usdphysics-110.1.1",
+      "name": "omni.usdphysics",
+      "package_id": "omni.usdphysics-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.physx.cooking-110.1.1",
+      "name": "omni.physx.cooking",
+      "package_id": "omni.physx.cooking-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.physx-110.1.1",
+      "name": "omni.physx",
+      "package_id": "omni.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.physics.physx-110.1.1",
+      "name": "omni.physics.physx",
+      "package_id": "omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.physics.stageupdate-110.1.1",
+      "name": "omni.physics.stageupdate",
+      "package_id": "omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.syntheticdata-0.6.15",
+      "name": "omni.syntheticdata",
+      "package_id": "omni.syntheticdata-0.6.15+698af100.lx64.r.cp312",
+      "version": "0.6.15",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.replicator.nv-1.1.1",
+      "name": "omni.replicator.nv",
+      "package_id": "omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312",
+      "version": "1.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.2.0"
+        ]
+      }
+    },
+    {
+      "id": "omni.videoencoding-0.2.1",
+      "name": "omni.videoencoding",
+      "package_id": "omni.videoencoding-0.2.1+698af100.lx64.r.cp312",
+      "version": "0.2.1",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.warp.core-1.14.0",
+      "name": "omni.warp.core",
+      "package_id": "omni.warp.core-1.14.0+lx64",
+      "version": "1.14.0",
+      "already_installed": true,
+      "registry": "kit/prod/default",
+      "target": {
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.replicator.core-1.13.27",
+      "name": "omni.replicator.core",
+      "package_id": "omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312",
+      "version": "1.13.27",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.1"
+        ]
+      }
+    },
+    {
+      "id": "omni.rtx.window.settings-0.8.1",
+      "name": "omni.rtx.window.settings",
+      "package_id": "omni.rtx.window.settings-0.8.1+698af100.lx64.r.cp312",
+      "version": "0.8.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      }
+    },
+    {
+      "id": "omni.rtx.settings.core-0.7.1",
+      "name": "omni.rtx.settings.core",
+      "package_id": "omni.rtx.settings.core-0.7.1+698af100",
+      "version": "0.7.1",
+      "already_installed": true,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ]
+      }
+    }
+  ],
+  "new_packages": [
+    {
+      "id": "omni.pip.compute-1.9.2",
+      "name": "omni.pip.compute",
+      "package_id": "omni.pip.compute-1.9.2+110.1.2.lx64.cp312",
+      "version": "1.9.2",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.2"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.pip.compute-1.9.2%2B110.1.2.lx64.cp312.zip",
+      "archive_bytes": 100341083,
+      "expanded_bytes": 293328314,
+      "etag": "\"e5d3cd23eb919c11112d1deb26c4246b-12\"",
+      "s3_version_id": "JNK5TUmHycGxT3Br0wHf7gndHTp9g2Jb",
+      "central_directory_sha256": "db4ed80e3ba346fb74c3d30db75671d7d25cc22043b660b9b0678c290fdf091a",
+      "central_directory_offset": 100147117,
+      "central_directory_bytes": 193944,
+      "eocd_sha256": "161647329b362e806981658cef2779ed68be9f76b4f9f54382d50bbfc88b2a44",
+      "entry_count": 2054,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.pip.cloud-1.5.4",
+      "name": "omni.pip.cloud",
+      "package_id": "omni.pip.cloud-1.5.4+110.1.2.lx64.cp312",
+      "version": "1.5.4",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.2"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.pip.cloud-1.5.4%2B110.1.2.lx64.cp312.zip",
+      "archive_bytes": 29520088,
+      "expanded_bytes": 66989785,
+      "etag": "\"dd83bd6b25910e21da28c3a2c4707d05-4\"",
+      "s3_version_id": ".QXndpHZ3XylpwXeO3uVCdCeNrD9cnlz",
+      "central_directory_sha256": "6bffe141253b8a4fd2a564f60327932f1e1bff9ed16a03c6400962ea83eb124b",
+      "central_directory_offset": 29137791,
+      "central_directory_bytes": 382275,
+      "eocd_sha256": "d64dd3b69f6d0c702bdeb216d4042a5eb893b6a5435548aa52895be38ecef155",
+      "entry_count": 3664,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.usd.schema.omni_sensors-0.0.0",
+      "name": "omni.usd.schema.omni_sensors",
+      "package_id": "omni.usd.schema.omni_sensors-0.0.0+698af100.lx64.r.cp312",
+      "version": "0.0.0",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.usd.schema.omni_sensors-456f11b6a574a4e3.zip",
+      "archive_bytes": 616473,
+      "expanded_bytes": 2632577,
+      "etag": "\"f2909b7c818b54c77333b059de2c56d2\"",
+      "s3_version_id": "Qwu8j9tG_2SM9Uu_UsZETQ71yjYzEbXl",
+      "central_directory_sha256": "b0bfcb0ba0b54f364b00fe024e420e9385fe1d29ced89f947d2d64cb568361e6",
+      "central_directory_offset": 614462,
+      "central_directory_bytes": 1989,
+      "eocd_sha256": "5adb813032c485b9b18a131d58533da14a3a297d40658eb656dd4ea908e570f9",
+      "entry_count": 28,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.usd.schema.semantics-0.0.0",
+      "name": "omni.usd.schema.semantics",
+      "package_id": "omni.usd.schema.semantics-0.0.0+698af100.lx64.r.cp312",
+      "version": "0.0.0",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.usd.schema.semantics-691abf6450299539.zip",
+      "archive_bytes": 69204,
+      "expanded_bytes": 260106,
+      "etag": "\"9f4c46bc391a646c0a54270d65658179\"",
+      "s3_version_id": "A2F24xsPcTJzOTFcg.FHNSCi3jSUU4ZQ",
+      "central_directory_sha256": "fd3a672260459430265fe128562bcc458dfd462760a79a5454ac9bc00584bc7f",
+      "central_directory_offset": 67464,
+      "central_directory_bytes": 1718,
+      "eocd_sha256": "07614f1b57a2cc69c8ceeb06ee228c2cfaac9d3a43e52d9ffdb1923046a7493f",
+      "entry_count": 25,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.physics-110.1.1",
+      "name": "omni.physics",
+      "package_id": "omni.physics-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.physics-110.1.1%2B110.1.0.lx64.r.cp312.u7f4.zip",
+      "archive_bytes": 10993270,
+      "expanded_bytes": 36638598,
+      "etag": "\"0d77c3556b933910727c11cd0ea6a365-2\"",
+      "s3_version_id": "u11vrC8XJOkUpLTuJFYuK3VsJTvmUbOS",
+      "central_directory_sha256": "cc2b5769bc2fc279b08d07890503ab31bb066784331bb5be2557ea119e638800",
+      "central_directory_offset": 10991097,
+      "central_directory_bytes": 2151,
+      "eocd_sha256": "01e12c7e6093fb2cffad53d9ce7671e3f0b6636cd87ab01d735cf82449c3fcb1",
+      "entry_count": 29,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.physics.physx-110.1.1",
+      "name": "omni.physics.physx",
+      "package_id": "omni.physics.physx-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.physics.physx-110.1.1%2B110.1.0.lx64.r.cp312.u7f4.zip",
+      "archive_bytes": 2005576,
+      "expanded_bytes": 6831756,
+      "etag": "\"1cd1d73a4c6c3669c19f007c99ffab91\"",
+      "s3_version_id": "F4GEteJMt8ZffephvzSyJuK2euZr_y2E",
+      "central_directory_sha256": "657fc47c7bb47a165c31c62299430a0878af5d21276aa2c933e041e6337da375",
+      "central_directory_offset": 2004305,
+      "central_directory_bytes": 1249,
+      "eocd_sha256": "231ea21b73b82cd98cc6ce7aa6a4a456795506db86c51ee3e82e680c16c9b47c",
+      "entry_count": 19,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.physics.stageupdate-110.1.1",
+      "name": "omni.physics.stageupdate",
+      "package_id": "omni.physics.stageupdate-110.1.1+110.1.0.lx64.r.cp312.u7f4",
+      "version": "110.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/default",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "usd": [
+          "u7f41+stock+25.11+cxx11"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.0"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.physics.stageupdate-110.1.1%2B110.1.0.lx64.r.cp312.u7f4.zip",
+      "archive_bytes": 2027229,
+      "expanded_bytes": 6880991,
+      "etag": "\"59dc0dddbcec8129e3c80a4065619f28\"",
+      "s3_version_id": "7yLZsv0x8mnEOYiNqhrk43_082UtNkpG",
+      "central_directory_sha256": "dba632c600b408dde2c953dd43f47da4da714a3a9d75eb15a8dc0cdfe13813e9",
+      "central_directory_offset": 2025687,
+      "central_directory_bytes": 1520,
+      "eocd_sha256": "3553ddb9f2f9f56d959393fb214d3e361040aa14a4eef0f463e3b25ae6ce09cb",
+      "entry_count": 21,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.syntheticdata-0.6.15",
+      "name": "omni.syntheticdata",
+      "package_id": "omni.syntheticdata-0.6.15+698af100.lx64.r.cp312",
+      "version": "0.6.15",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.syntheticdata-d92b1a7ab64faa8b.zip",
+      "archive_bytes": 16560928,
+      "expanded_bytes": 24432462,
+      "etag": "\"e6dff52f469679b903a98abb476382c6-2\"",
+      "s3_version_id": "kNbEyF9HeS2VEY8oed.LtCiXhfIBOVbZ",
+      "central_directory_sha256": "aec04e04187ba15d8d9e4f18c80092f242730986fbdf5262e239f285233b8e9d",
+      "central_directory_offset": 16532299,
+      "central_directory_bytes": 28607,
+      "eocd_sha256": "22b4ef60f0c2608b5c062be958b70d37673f7ba81c645da5cb623624cc6a886f",
+      "entry_count": 283,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.replicator.nv-1.1.1",
+      "name": "omni.replicator.nv",
+      "package_id": "omni.replicator.nv-1.1.1+110.2.0.lx64.r.cp312",
+      "version": "1.1.1",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.2.0"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.replicator.nv-1.1.1%2B110.2.0.lx64.r.cp312.zip",
+      "archive_bytes": 3154204,
+      "expanded_bytes": 7747056,
+      "etag": "\"ac8cede3e6d307fa3a5116956aa6a20a\"",
+      "s3_version_id": ".OyR3GsQwzt81NnzlCOBsVMIQ9v2WCgD",
+      "central_directory_sha256": "e647ec3b38a99abfb52d5408ad69c45d564ae7e168b5186e60646130b21db2b0",
+      "central_directory_offset": 3148311,
+      "central_directory_bytes": 5871,
+      "eocd_sha256": "213f8809664590b36b0dc6b4a22a2d30ad3fb4e6aa1ca17e939cdfa155949036",
+      "entry_count": 66,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.videoencoding-0.2.1",
+      "name": "omni.videoencoding",
+      "package_id": "omni.videoencoding-0.2.1+698af100.lx64.r.cp312",
+      "version": "0.2.1",
+      "already_installed": false,
+      "registry": "kit/prod/sdk",
+      "target": {
+        "kitHash": [
+          "698af100"
+        ],
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.videoencoding-e90c9a0398108048.zip",
+      "archive_bytes": 375373,
+      "expanded_bytes": 1125944,
+      "etag": "\"74105e68f66b6f3f78d06c6af8b27bbc\"",
+      "s3_version_id": "Sl1lJjlGKtG_PVsjTDKD0gbvjzhfVj1i",
+      "central_directory_sha256": "baf42dbf7fc1769443a293e5b3ce501bf4660fca010d80eb9c55f7a6cda2f135",
+      "central_directory_offset": 373973,
+      "central_directory_bytes": 1378,
+      "eocd_sha256": "f03f8fba612d4f664c90b13a89feff8d33ddb6e9e5d9d93a6719e7eaaf0f0b0c",
+      "entry_count": 19,
+      "full_archive_sha256": null
+    },
+    {
+      "id": "omni.replicator.core-1.13.27",
+      "name": "omni.replicator.core",
+      "package_id": "omni.replicator.core-1.13.27+110.1.1.lx64.r.cp312",
+      "version": "1.13.27",
+      "already_installed": false,
+      "registry": "kit/prod/110shared-metadata",
+      "target": {
+        "config": [
+          "release"
+        ],
+        "python": [
+          "cp312"
+        ],
+        "platform": [
+          "linux-x86_64"
+        ],
+        "kit": [
+          "110.1.1"
+        ]
+      },
+      "archive_url": "https://d4i3qtqj3r0z5.cloudfront.net/omni.replicator.core-1.13.27%2B110.1.1.lx64.r.cp312.zip",
+      "archive_bytes": 130670658,
+      "expanded_bytes": 172819877,
+      "etag": "\"e41710909b72c5a7c3f3f683be4c621e-16\"",
+      "s3_version_id": "xpe32RU5uGWVkbwQxjFMZ4IJk9vlikPE",
+      "central_directory_sha256": "4f000aab038463ad1e7b3f366d2fd8aebddca1f9bc4d4edad4c492201ae77935",
+      "central_directory_offset": 130586694,
+      "central_directory_bytes": 83942,
+      "eocd_sha256": "f2e0e5c327f9258abc2da87c3ab9c71d49f51f9eeec13a187b67a4bf80f07276",
+      "entry_count": 839,
+      "full_archive_sha256": null
+    }
+  ],
+  "total_selected": 127,
+  "reuse_existing": 116,
+  "additions": 11,
+  "replacements": [],
+  "resources": {
+    "archive_bytes": 296334086,
+    "expanded_bytes": 619687466,
+    "dependency_store_cap_bytes": 2147483648,
+    "private_profile_allowance_bytes": 2147483648,
+    "minimum_free_disk_bytes": 10737418240,
+    "gpu_admission_free_mib": 2048,
+    "gpu_floor_free_mib": 768
+  },
+  "destination": "/home/madil/kit-app-template/experiments/above_water_annotation_v1/dependencies/native_provider_1102_v1",
+  "installation_performed": false,
+  "provider_activated": false,
+  "archive_file_payloads_downloaded": false,
+  "archive_checksums": {
+    "full_archive_sha256": "Pending approved quarantine download; must be recorded before unpacking",
+    "object_identity": "Official archive URL, opaque ETag, S3 version ID and ZIP directory/EOCD SHA256 are pinned",
+    "independent_vendor_whole_archive_sha256_available": false
+  },
+  "gates": {
+    "named_dependency_review": "pending",
+    "installation_authorised": false,
+    "dry_validation": "not_started",
+    "gate_b": "not_ready"
+  }
+}

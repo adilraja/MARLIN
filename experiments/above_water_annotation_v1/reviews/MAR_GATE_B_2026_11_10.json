@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "gate": "B",
+  "status": "accepted",
+  "accepted": true,
+  "acceptance_received": true,
+  "reviewer": "MAR",
+  "decision_date": "2026-11-10",
+  "recorded_utc": "2026-11-10T13:13:59.061253+00:00",
+  "candidate_id": "above_water_m2_dry_validation_v2",
+  "sprint": "MARLIN \u2014 Above-Water Capture and Annotation Validation",
+  "milestone_name": "M2 \u2014 Validate dry-scene geometry and native annotations",
+  "response_verbatim": "Accept Gate B as MAR",
+  "acceptance_source": "Explicit user reply to the named Gate B V2 question in this chat",
+  "technical_manifest_sha256": "46fec1a6a0db5d43838b560506782cc59b0fa75abedcb095074148b0164b889e",
+  "original_technical_manifest_sha256": "26ee535a43d99977618707e8af1c11f37b76f981db0a7d83ae304f309fccd4be",
+  "review_packet_sha256": "6255d2917a3d7da9be7b67236b74e58c742bdfa35fe977f2a8268543c52336ce",
+  "bindings": [
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/revision_v2/manifest.json",
+      "bytes": 1534,
+      "sha256": "46fec1a6a0db5d43838b560506782cc59b0fa75abedcb095074148b0164b889e"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/revision_v2/manifest.sha256",
+      "bytes": 80,
+      "sha256": "ed3c2a4e6e76e52d8a2bea5e44e560b2fe7a06ae39b7ebb89fff2056b9346fb6"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/manifest.json",
+      "bytes": 166420,
+      "sha256": "26ee535a43d99977618707e8af1c11f37b76f981db0a7d83ae304f309fccd4be"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/manifest.sha256",
+      "bytes": 80,
+      "sha256": "653ccb32f14b93b082127683ade7ef11e647ecf0cd208e5eea2d08383fe63888"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/GATE_B_REVIEW_V2.md",
+      "bytes": 2775,
+      "sha256": "6255d2917a3d7da9be7b67236b74e58c742bdfa35fe977f2a8268543c52336ce"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/gate_b_review_v2.json",
+      "bytes": 472,
+      "sha256": "d7c49de010fa89ac633890285af6bc2ee24e1e447a6cc28ab9d0a6389ba1295a"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reports/M2_DRY_ANNOTATION_VALIDATION_V2.md",
+      "bytes": 10120,
+      "sha256": "96661a7a42326074a2b0dee0ce73fb1d9239dbc0328f9e46c270392509d7119b"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/dry_validation_summary.json",
+      "bytes": 18375,
+      "sha256": "b6a4faaacf0ce3f1f8d92aba286d8340498700a85aef6e3159d074ff1a15c1fc"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/stale_validation.json",
+      "bytes": 1392,
+      "sha256": "c425fd0aa7dae6c9a067b5f0a833cf7accce0313457a34cc6ddb7eae62d5cd20"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/frozen_pose_verification.json",
+      "bytes": 1353,
+      "sha256": "561b1337531ec19e2a11500e52d3a47fc5cce8cfc7ecde5152ef822383b7689b"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/native_annotation_qualification.json",
+      "bytes": 374,
+      "sha256": "b003ac821d2ce31876c83b285f7332b389ae2f90eff0798b02baafe180c1cd40"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/attempt_ledger.json",
+      "bytes": 12118,
+      "sha256": "5f28c5aa2c10a47054bdfe1e4cf5487a6206bfa3a52dfdce2c408fe137e21a10"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/MAR_M2_DEPENDENCY_APPROVAL_2026_11_10.json",
+      "bytes": 2103,
+      "sha256": "d868d77aee08854429ac713c58279b2d3bbfccd2c4d742d8ebc26fce264776c0"
+    },
+    {
+      "path": "experiments/above_water_annotation_v1/reviews/gate_b_verification_before_acceptance_2026_11_10.json",
+      "bytes": 854,
+      "sha256": "56e1e868bd38a54e4c0854a72825e5aef40c8409a18cf77430245eff48f4660b"
+    }
+  ],
+  "accepted_scope": "Bounded dry engineering evidence for camera projection, opaque geometry/occlusion/identity, native renderer-instance masks and boxes, frozen-pose replay and immutable-state/stale-frame assurance; development native-ID API explicitly included",
+  "retained_limitations": [
+    "Selected instance_id_segmentation is a hidden/development NVIDIA API, cross-checked with native SDK ID/path/semantic mappings",
+    "Standard instance_segmentation prim paths remain empty and unqualified",
+    "A completely geometry-empty product remains unavailable; target-absent controls used a distinctly labelled non-target background",
+    "Per-AOV frame IDs are unavailable; native timing plus immutable state and the alternating diagnostic provide the reviewed weaker assurance",
+    "The vendor Fabric interface compatibility warning and differing embedded SDK publish labels remain documented; no blanket ABI or production-provider support is claimed"
+  ],
+  "milestone_2_complete": true,
+  "gate_b_prerequisite_for_M3_satisfied": true,
+  "milestone_3_started_by_this_record": false,
+  "marine_labels_qualified": false,
+  "standard_instance_API_qualified": false,
+  "geometry_empty_products_supported": false,
+  "per_AOV_frame_ID_guarantee": false,
+  "biological_approval": false,
+  "optical_approval": false,
+  "research_capture_approval": false,
+  "ml_training_approval": false,
+  "main_MARLIN_installation_changed": false,
+  "separate_ocean_material_m4": "open",
+  "sprint_closed": false
+}

@@ -1,0 +1,44 @@
+{
+  "recorded_utc": "2026-11-09T14:27:58.957626+00:00",
+  "pid": 1096591,
+  "command": [
+    "/home/madil/kit-app-template/experiments/ocean_material_v1/diagnostics/m4_standalone/work/sdk-1102/kit",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata01/metadata.kit",
+    "--no-window",
+    "--portable",
+    "--portable-root=/tmp/marlin_above_water_m2_sdk1102_metadata01/portable",
+    "--/app/extensions/registryEnabled=false",
+    "--/app/extensions/syncRegistryOnStartup=false",
+    "--/app/extensions/registryCache=/tmp/marlin_above_water_m2_sdk1102_metadata01/extensions",
+    "--/app/settings/loadUserConfig=false",
+    "--/app/settings/saveUserConfig=false",
+    "--/app/settings/persistent=false",
+    "--/app/file/ignoreUnsavedOnExit=true",
+    "--/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_above_water_m2_sdk1102_metadata01/textures",
+    "--/log/file=/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata01/kit_process.log",
+    "--exec",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata01/query_provider.py"
+  ],
+  "profile": "/tmp/marlin_above_water_m2_sdk1102_metadata01",
+  "gpu_before": {
+    "name": "NVIDIA RTX A2000",
+    "driver": "595.99.02",
+    "total_mib": 6138,
+    "free_mib": 2372
+  },
+  "runtime_scope": "existing_sdk1102",
+  "desktop_connection_inherited": true,
+  "headless_environment": {
+    "DISPLAY": ":0",
+    "WAYLAND_DISPLAY": "wayland-0",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "GDK_BACKEND": null
+  },
+  "disk_free_bytes": 126387576832,
+  "existing_kit_before": "",
+  "source_sha256": {
+    "launch_probe.py": "81737aac5c3c28503ac2765b5270bc2089495b24c700dae3b44041bc7dabda40",
+    "query_provider.py": "1731d73f248d501135a8877f0452496f4ecaf0bc3e629e71acfd1d08d00f737a",
+    "metadata.kit": "1191bc2c9d2d9f62a11efcfc205b14b534b9d49ebaba59db98ad75e76fe9572e"
+  }
+}

@@ -1,0 +1,55 @@
+"""Provider import and owned empty-stage lifecycle only; zero capture attempts."""
+import asyncio, json, os, traceback
+from pathlib import Path
+import carb.settings
+import omni.kit.app
+import omni.usd
+OUT=Path(os.environ["ANNOTATION_EXECUTION_OUTPUT"])
+def save(n,d): (OUT/n).write_text(json.dumps(d,indent=2,default=str)+"\n")
+async def main():
+ app=omni.kit.app.get_app(); result=dict(passed=False,captures=0)
+ try:
+  while not app.is_app_ready(): await app.next_update_async()
+  save("ready.json",dict(app_ready=True))
+  import omni.replicator.core as rep
+  import omni.syntheticdata as sd
+  from pxr import Semantics
+  result["replicator_file"]=rep.__file__
+  result["annotator_registry_methods"]=[x for x in dir(rep.AnnotatorRegistry) if not x.startswith("__")]
+  result["semantics_api"]=[x for x in dir(Semantics) if "API" in x]
+  m=app.get_extension_manager()
+  result["enabled_packages"]=[dict(id=e["id"],package_id=m.get_extension_dict(e["id"]).get("package",{}).get("id")) for e in m.get_extensions() if e["enabled"]]
+  result["enabled_inventory"]=[m.get_extension_dict(e["id"]) for e in m.get_extensions() if e["enabled"]]
+  assert not carb.settings.get_settings().get("/app/extensions/registryEnabled")
+  ctx=omni.usd.get_context(); assert ctx.get_stage() is None
+  from omni.kit.viewport.utility import get_active_viewport_window
+  window=get_active_viewport_window()
+  result["default_viewport_destroyed"] = window is not None
+  if window is not None: window.destroy()
+  for _ in range(2): await app.next_update_async()
+  await ctx.new_stage_async()
+  from pxr import UsdGeom
+  stage=ctx.get_stage()
+  camera=UsdGeom.Camera.Define(stage,"/Camera")
+  rp=rep.create.render_product("/Camera",(512,384),name="AnnotationLifecycle")
+  registered=rep.AnnotatorRegistry.get_registered_annotators()
+  result["registered_annotators"]=registered
+  annos=[]
+  for name in ["HdrColor","instance_segmentation","bounding_box_2d_tight","rpFabricTime"]:
+   assert name in registered, name
+   a=rep.AnnotatorRegistry.get_annotator(name);a.attach(rp);annos.append(a)
+  result["render_product"] = rp.path
+  result["all_products"] = [str(p.GetPath()) for p in stage.TraverseAll() if p.IsA(__import__("pxr",fromlist=["UsdRender"]).UsdRender.Product)]
+  result["render_product_count"] = sum(1 for p in stage.TraverseAll() if p.IsA(__import__("pxr",fromlist=["UsdRender"]).UsdRender.Product))
+  assert result["render_product_count"]==1
+  for _ in range(4): await app.next_update_async()
+  for a in reversed(annos): a.detach(rp)
+  rp.destroy()
+  result["render_product_destroyed"]=not bool(stage.GetPrimAtPath(result["render_product"]))
+  await ctx.close_stage_async()
+  result["stage_closed"]=ctx.get_stage() is None
+  result["passed"]=result["stage_closed"]
+ except BaseException: result["error"]=traceback.format_exc(); print(result["error"],flush=True)
+ finally:
+  save("result.json",result);app.post_quit(0 if result["passed"] else 1)
+asyncio.ensure_future(main())

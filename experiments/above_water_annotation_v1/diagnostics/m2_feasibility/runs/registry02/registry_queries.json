@@ -1,0 +1,44 @@
+{
+  "providers": [
+    {
+      "name": "kit/prod/default"
+    },
+    {
+      "name": "kit/prod/sdk"
+    }
+  ],
+  "configured_registries": [
+    {
+      "name": "kit/prod/default",
+      "url": "https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/110.2/shared"
+    },
+    {
+      "name": "kit/prod/sdk",
+      "url": "https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/sdk/110.2/698af100"
+    }
+  ],
+  "queries": {
+    "omni.replicator.core": {
+      "versions": [],
+      "packages": []
+    },
+    "omni.syntheticdata": {
+      "versions": [],
+      "packages": []
+    }
+  },
+  "pulls_attempted": false,
+  "metadata_sync_result": false,
+  "solver_metadata_only": {
+    "omni.replicator.core": [
+      false,
+      [],
+      "Failed to resolve extension dependencies. Failure hints:\n  * No versions of omni.replicator.core that satisfies: [enable list] depends on omni.replicator.core version *\n    - Available packages for omni.replicator.core version *:\n      (none found)\n  Synced registries:\n     - kit/prod/default    : found 0 packages (couldn't connect or empty)\n     - kit/prod/sdk        : found 0 packages (couldn't connect or empty)\n"
+    ],
+    "omni.syntheticdata": [
+      false,
+      [],
+      "Failed to resolve extension dependencies. Failure hints:\n  * No versions of omni.syntheticdata that satisfies: [enable list] depends on omni.syntheticdata version *\n    - Available packages for omni.syntheticdata version *:\n      (none found)\n  Synced registries:\n     - kit/prod/default    : found 0 packages (couldn't connect or empty)\n     - kit/prod/sdk        : found 0 packages (couldn't connect or empty)\n"
+    ]
+  }
+}

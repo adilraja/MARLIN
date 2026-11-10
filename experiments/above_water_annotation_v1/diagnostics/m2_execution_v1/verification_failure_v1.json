@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-11-10T12:39:27.438014+00:00",
+  "command": "/usr/bin/python3 -B experiments/above_water_annotation_v1/qa/m2_execution_v1/verify_execution.py",
+  "returncode": 1,
+  "observed_error": "AssertionError at the selected-capture transaction clean_exit assertion (line 54)",
+  "affected_transaction": "dry02",
+  "reason": "clean_exit combines worker acceptance and process lifecycle; worker deliberately returned failure after four valid cleaned captures and the geometry-empty fifth case",
+  "resolution": "V2 verifies per-case success and owned cleanup, no forced termination, and deliberate exit status; all failed cases remain failed"
+}

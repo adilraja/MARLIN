@@ -1,0 +1,190 @@
+2026-11-10T12:17:42Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/provider01/kit_process.log
+[0.107s] [ext: omni.assets.plugins-0.0.0] startup
+[0.108s] [ext: omni.blobkey-1.1.2] startup
+[0.108s] [ext: omni.kit.async_engine-0.0.3] startup
+[0.266s] [ext: omni.client.lib-1.1.1] startup
+[0.275s] [ext: omni.client-1.3.0] startup
+[0.279s] [ext: omni.protobuf.lib-1.0.1] startup
+[0.280s] [ext: omni.grpc.lib-1.0.0] startup
+[0.284s] [ext: omni.metrics.core-0.0.3] startup
+[0.284s] [ext: omni.datastore-0.0.0] startup
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1794313062.530207 2665665 descriptor_database.cc:633] File already exists in database: grpc/health/v1/health.proto
+W0000 00:00:1794313062.530233 2665665 message.cc:301] Protobuf GeneratedMessageFactory: File is already registered: grpc/health/v1/health.proto
+[0.285s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[0.288s] [ext: omni.hsscclient-1.1.4] startup
+[0.289s] [ext: omni.stats-1.0.1] startup
+[0.290s] [ext: omni.ujitso.default-1.0.0] startup
+[0.292s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.513s] [ext: carb.windowing.plugins-1.0.1] startup
+[0.513s] [ext: omni.kit.renderer.init-1.0.1] startup
+2026-11-10T12:17:42Z [526ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-11-10T12:17:43Z [871ms] [Warning] [omni.rtx] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 9 7950X3D 16-Core Processor (RADV RAPHAEL_MENDOCINO)
+2026-11-10T12:17:43Z [872ms] [Warning] [omni.rtx] Skipping unsupported non-NVIDIA GPU: AMD Ryzen 9 7950X3D 16-Core Processor (RADV RAPHAEL_MENDOCINO)
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 595.99.02     | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA RTX A2000                 | Yes: 0 |     | 6138    MB | 10de      | 0          |
+|     |                                  |        |     |            | 2531      | e488f6b1.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | AMD Ryzen 9 7950X3D 16-Core Pr.. |        |     | 42302   MB | 1002      | 0          |
+|     |                                  |        |     |            | 164e      | 00000000.. |
+|     |                                  |        |     |            | 12        |            |
+|=============================================================================================|
+| OS: 26.04.1 LTS (Resolute Raccoon) ubuntu, Version: 26.04.1, Kernel: 7.0.0-42-generic
+| Processor: AMD Ryzen 9 7950X3D 16-Core Processor
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 125883 | Free Memory: 111503
+| Total Page/Swap (MB): 8191 | Free Page/Swap: 8191
+|---------------------------------------------------------------------------------------------|
+2026-11-10T12:17:43Z [1,205ms] [Warning] [omni.rtx] CPU performance profile is set to powersave. This profile sets the CPU to the lowest frequency reducing performance.
+2026-11-10T12:17:43Z [1,214ms] [Warning] [omni.rtx] IOMMU is enabled.
+Warning: --icon-name is deprecated and will be removed in a future version of zenity; Treating as --icon.
+
+(zenity:2665878): Gtk-WARNING **: 12:17:43.625: Failed to open display
+[1.382s] [ext: omni.kit.pipapi-0.0.0] startup
+[1.384s] [ext: omni.kit.pip_archive-0.0.0] startup
+[1.384s] [ext: omni.kit.loop-default-0.2.2] startup
+[1.385s] [ext: omni.kit.test-2.0.9] startup
+[1.439s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[1.439s] [ext: omni.usd.config-1.0.7] startup
+2026-11-10T12:17:43Z [1,418ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+[1.443s] [ext: omni.usd.libs-1.0.3] startup
+[1.512s] [ext: omni.iray.libs-0.0.1] startup
+[1.516s] [ext: omni.mdl-57.0.3] startup
+[1.581s] [ext: omni.mdl.neuraylib-0.2.22] startup
+[1.584s] [ext: omni.kit.usd.mdl-1.1.11] startup
+[1.684s] [ext: omni.pip.compute-1.9.2] startup
+[1.684s] [ext: omni.pip.cloud-1.5.4] startup
+[1.687s] [ext: omni.usd.schema.anim-0.0.1] startup
+[1.702s] [ext: omni.usd.schema.audio-0.0.1] startup
+[1.704s] [ext: omni.usd.schema.geospatial-0.0.1] startup
+[1.706s] [ext: omni.usd_resolver-1.0.0] startup
+[1.708s] [ext: omni.usd.core-1.8.6] startup
+[1.711s] [ext: omni.usd.schema.omni_dome_light-1.0.0] startup
+[1.712s] [ext: omni.usd.schema.omni_projectors-1.0.0] startup
+[1.712s] [ext: omni.usd.schema.omni_sensors-0.0.0] startup
+[1.719s] [ext: omni.usd.schema.omnigraph-1.0.1] startup
+[1.723s] [ext: omni.usd.schema.physical_lighting-0.1.0] startup
+[1.725s] [ext: omni.usd.schema.physx-110.1.1] startup
+[1.750s] [ext: omni.usd.schema.render_settings.rtx-1.0.2] startup
+[1.753s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.755s] [ext: omni.usd.schema.usd_particle_field-1.0.0] startup
+[1.756s] [ext: carb.audio-0.1.0] startup
+[1.763s] [ext: omni.activity.core-1.0.3] startup
+[1.765s] [ext: omni.appwindow-1.2.2] startup
+[1.767s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.768s] [ext: omni.kit.commands-1.5.0] startup
+[1.771s] [ext: omni.convexdecomposition-110.1.1] startup
+[1.773s] [ext: omni.cubric-0.1.0] startup
+[1.773s] [ext: omni.graph.exec-0.9.6] startup
+[1.774s] [ext: omni.hydra.scene_delegate-0.3.5] startup
+[1.777s] [ext: usdrt.scenegraph-7.6.3] startup
+[1.799s] [ext: omni.hydra.usdrt_delegate-7.5.2] startup
+[1.804s] [ext: omni.inspect-1.0.2] startup
+[1.805s] [ext: omni.kit.audiodeviceenum-1.0.2] startup
+[1.806s] [ext: omni.kit.exec.core-0.13.5] startup
+[1.808s] [ext: omni.kit.renderer.core-1.2.2] startup
+2026-11-10T12:17:44Z [1,796ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-11-10T12:17:44Z [1,796ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[1.836s] [ext: omni.kit.renderer.capture-2.0.1] startup
+[1.839s] [ext: omni.kit.renderer.imgui-2.0.8] startup
+2026-11-10T12:17:44Z [1,818ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-11-10T12:17:44Z [1,818ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-11-10T12:17:44Z [1,819ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-11-10T12:17:44Z [1,819ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+[1.885s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.885s] [ext: omni.ui-3.2.5] startup
+[1.894s] [ext: omni.kit.window.popup_dialog-2.0.26] startup
+[1.897s] [ext: omni.kit.widget.connection_manager-1.0.2] startup
+[1.902s] [ext: omni.timeline-1.1.0] startup
+[1.904s] [ext: omni.usd-1.16.0] startup
+[1.935s] [ext: omni.graph.core-3.1.3] startup
+[1.938s] [ext: omni.graph.tools-1.81.0] startup
+[1.959s] [ext: omni.graph-1.142.5] startup
+[1.996s] [ext: omni.graph.action_core-1.1.9] startup
+[1.999s] [ext: omni.graph.action_nodes_core-2.11.0] startup
+[2.003s] [ext: omni.kit.clipboard-1.1.1] startup
+[2.004s] [ext: omni.kit.helper.file_utils-0.1.10] startup
+[2.006s] [ext: omni.kit.menu.core-1.2.1] startup
+[2.007s] [ext: omni.kit.notification_manager-1.0.13] startup
+[2.009s] [ext: omni.kit.widget.path_field-2.0.13] startup
+[2.010s] [ext: omni.kit.widget.browser_bar-2.0.11] startup
+[2.011s] [ext: omni.kit.widget.context_menu-1.4.1] startup
+[2.013s] [ext: omni.kit.widget.filebrowser-2.13.6] startup
+[2.017s] [ext: omni.kit.widget.nucleus_connector-2.4.0] startup
+[2.017s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[2.020s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[2.021s] [ext: omni.ui.scene-2.0.3] startup
+[2.026s] [ext: omni.kit.window.filepicker-3.0.5] startup
+[2.064s] [ext: omni.graph.action_nodes-2.11.0] startup
+[2.089s] [ext: omni.graph.action-2.10.2] startup
+[2.091s] [ext: omni.graph.image.core-0.6.1] startup
+[2.092s] [ext: omni.graph.image.nodes-1.3.2] startup
+[2.092s] [ext: omni.graph.nodes_core-2.11.0] startup
+[2.097s] [ext: omni.graph.nodes-2.12.0] startup
+[2.103s] [ext: omni.graph.scriptnode-2.10.2] startup
+[2.112s] [ext: omni.hydra.engine.stats-1.0.5] startup
+[2.114s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[2.115s] [ext: omni.index.libs-392300.31.0] startup
+[2.115s] [ext: omni.index-1.0.1] startup
+[2.115s] [ext: omni.ujitso.client-0.0.0] startup
+[2.116s] [ext: omni.usd.schema.playback-1.1.0] startup
+[2.116s] [ext: omni.volume-0.5.2] startup
+[2.120s] [ext: omni.hydra.rtx-1.0.4] startup
+2026-11-10T12:17:44Z [2,110ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+[2.154s] [ext: omni.kit.hydra_texture-1.6.0] startup
+[2.158s] [ext: omni.kit.menu.utils-2.2.6] startup
+[2.162s] [ext: omni.kit.usd.layers-2.6.1] startup
+[2.170s] [ext: omni.kit.primitive.mesh-1.1.0] startup
+[2.173s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[2.173s] [ext: omni.kit.widget.viewport-110.0.0] startup
+[2.177s] [ext: omni.kit.viewport.window-110.0.0] startup
+[2.194s] [ext: omni.kit.viewport.utility-2.1.0] startup
+[2.195s] [ext: omni.kit.widget.searchable_combobox-1.0.7] startup
+[2.196s] [ext: omni.kit.widget.settings-2.0.0] startup
+[2.198s] [ext: omni.kit.window.file_exporter-1.0.38] startup
+[2.200s] [ext: omni.kit.window.file_importer-1.1.22] startup
+[2.201s] [ext: omni.ocio-0.1.1] startup
+[2.202s] [ext: omni.physics-110.1.1] startup
+[2.205s] [ext: omni.physx.gpu-110.1.1] startup
+[2.206s] [ext: omni.physx.foundation-110.1.1] startup
+[2.207s] [ext: omni.usdphysics-110.1.1] startup
+[2.209s] [ext: omni.physx.cooking-110.1.1] startup
+[2.212s] [ext: omni.physx-110.1.1] startup
+Warning: Possible version incompatibility. Attempting to load omni::fabric::IStageReaderWriter with version v0.16 against v0.14.
+[2.220s] [ext: omni.physics.physx-110.1.1] startup
+[2.222s] [ext: omni.physics.stageupdate-110.1.1] startup
+[2.225s] [ext: omni.syntheticdata-0.6.15] startup
+2026-11-10T12:17:44Z [2,241ms] [Error] [omni.syntheticdata.scripts.extension] SyntheticData extension needs at least a stageFrameHistoryCount of 3
+[2.295s] [ext: omni.replicator.nv-1.1.1] startup
+[2.303s] [ext: omni.videoencoding-0.2.1] startup
+[2.309s] [ext: omni.warp.core-1.14.0] startup
+[2.530s] [ext: omni.replicator.core-1.13.27] startup
+2026-11-10T12:17:44Z [2,567ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, Driver 13.2
+   Devices:
+     "cpu"      : "CPU"
+     "cuda:0"   : "NVIDIA RTX A2000" (6 GiB, sm_86, mempool enabled)
+   Kernel cache:
+     /tmp/marlin_annotation_execution_provider01/xdg_cache/warp/1.14.0
+2026-11-10T12:17:45Z [3,160ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+[4.083s] [ext: omni.rtx.window.settings-0.8.1] startup
+[4.087s] [ext: omni.rtx.settings.core-0.7.1] startup
+[4.090s] [ext: app-1.0.0] startup
+[4.128s] app ready
+2026-11-10T12:17:46Z [4,181ms] [Error] [asyncio] Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<main() done, defined at /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/provider01/worker.py:9> exception=UnboundLocalError("cannot access local variable 'omni' where it is not associated with a value")>
+Traceback (most recent call last):
+  File "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/provider01/worker.py", line 10, in main
+    app=omni.kit.app.get_app(); result=dict(passed=False,captures=0)
+        ^^^^
+UnboundLocalError: cannot access local variable 'omni' where it is not associated with a value

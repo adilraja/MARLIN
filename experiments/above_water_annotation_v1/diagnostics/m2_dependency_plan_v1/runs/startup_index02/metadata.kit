@@ -1,0 +1,22 @@
+[package]
+title = "Above-water annotation dependency metadata only"
+version = "1.0.0"
+
+[dependencies]
+"omni.kit.loop-default" = { version = "0.2.2", exact = true }
+"omni.kit.registry.nucleus" = { version = "0.0.0", exact = true }
+
+[settings]
+app.window.enabled = false
+app.settings.loadUserConfig = false
+app.settings.saveUserConfig = false
+app.settings.persistent = false
+app.extensions.registryEnabled = true
+app.extensions.syncRegistryOnStartup = false
+app.extensions.preferLocalVersions = true
+app.extensions.mkdirExtFolders = false
+app.extensions.fsWatcherEnabled = false
+app.file.ignoreUnsavedOnExit = true
+privacy.performance = false
+privacy.usage = false
+telemetry.enableAnonymousData = false

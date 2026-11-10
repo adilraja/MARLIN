@@ -1,0 +1,33 @@
+{
+  "recorded_utc": "2026-11-10T12:17:27.498529+00:00",
+  "pid": 2664649,
+  "command": [
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/kit/kit",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack02/app.kit",
+    "--ext-folder",
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/exts",
+    "--ext-folder",
+    "/home/madil/kit-app-template/_build/linux-x86_64/release/extscache",
+    "--no-window",
+    "--portable",
+    "--portable-root=/tmp/marlin_annotation_execution_unpack02/portable",
+    "--/app/extensions/registryEnabled=false",
+    "--/app/extensions/syncRegistryOnStartup=false",
+    "--/app/settings/loadUserConfig=false",
+    "--/app/settings/saveUserConfig=false",
+    "--/app/settings/persistent=false",
+    "--/app/file/ignoreUnsavedOnExit=true",
+    "--/rtx-transient/resourcemanager/localTextureCachePath=/tmp/marlin_annotation_execution_unpack02/textures",
+    "--/log/file=/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack02/kit_process.log",
+    "--exec",
+    "/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_execution_v1/runs/unpack02/worker.py"
+  ],
+  "profile": "/tmp/marlin_annotation_execution_unpack02",
+  "existing_kit_before": "",
+  "gpu_before": null,
+  "source_sha256": {
+    "app.kit": "e2bf27c0f19bab1d94cc6b1587bc7955799e8d084fe8fcd726e97d78d8bb1cfd",
+    "worker.py": "09f78a119b4a622adfc1382a74991ded1b20267d2cfc877dc6e9e575b3335931",
+    "launch.py": "2bc2f96cd6fc5c05fd20a6cbd1140cc72587d49b6bca9fc973e116afa792045d"
+  }
+}

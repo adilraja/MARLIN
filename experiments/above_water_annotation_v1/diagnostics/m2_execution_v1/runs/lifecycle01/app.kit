@@ -1,0 +1,41 @@
+[package]
+title = "Reviewed isolated annotation capture candidate"
+version = "1.0.0"
+
+[dependencies]
+"omni.graph.core" = { version = "=3.1.3" }
+"omni.hydra.rtx" = { version = "=1.0.4" }
+"omni.kit.loop-default" = { version = "=0.2.2" }
+"omni.kit.renderer.capture" = { version = "=2.0.1" }
+"omni.kit.viewport.utility" = { version = "=2.1.0" }
+"omni.kit.viewport.window" = { version = "=110.0.0" }
+"omni.physics" = { version = "=110.1.1" }
+"omni.physics.physx" = { version = "=110.1.1" }
+"omni.physics.stageupdate" = { version = "=110.1.1" }
+"omni.pip.cloud" = { version = "=1.5.4" }
+"omni.pip.compute" = { version = "=1.9.2" }
+"omni.replicator.core" = { version = "=1.13.27" }
+"omni.replicator.nv" = { version = "=1.1.1" }
+"omni.rtx.settings.core" = { version = "=0.7.1" }
+"omni.syntheticdata" = { version = "=0.6.15" }
+"omni.usd" = { version = "=1.16.0" }
+"omni.usd.schema.omni_sensors" = { version = "=0.0.0" }
+"omni.usd.schema.semantics" = { version = "=0.0.0" }
+"omni.videoencoding" = { version = "=0.2.1" }
+
+[settings]
+app.extensions.registryEnabled = false
+app.extensions.syncRegistryOnStartup = false
+app.settings.persistent = false
+app.settings.loadUserConfig = false
+app.settings.saveUserConfig = false
+app.file.ignoreUnsavedOnExit = true
+app.window.enabled = false
+renderer.multiGpu.enabled = false
+renderer.gpuEnumeration.glInterop.enabled = false
+app.viewport.defaults.width = 512
+app.viewport.defaults.height = 384
+
+app.settings.fabricDefaultStageFrameHistoryCount = 3
+rtx.ecoMode.enabled = false
+omni.replicator.captureOnPlay = false

@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-11-09T15:37:44.668786+00:00",
+  "build_version": "110.2.0+feature.342835.698af100.gl",
+  "scope": "Metadata only; no provider activation",
+  "content_pull_calls": 0,
+  "captures": 0,
+  "providers": [
+    {
+      "name": "kit/prod/default"
+    },
+    {
+      "name": "kit/prod/sdk"
+    }
+  ],
+  "registries": [
+    {
+      "name": "kit/prod/default",
+      "url": "https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/110.2/shared"
+    },
+    {
+      "name": "kit/prod/sdk",
+      "url": "https://ovextensionsprod.blob.core.windows.net/exts/kit/prod/sdk/110.2/698af100"
+    }
+  ],
+  "sync_result": true,
+  "passed": false,
+  "error": "get_registry_extension_dict(): incompatible function arguments. The following argument types are supported:\n    1. (self: omni.ext._extensions.ExtensionManager, ext_id: str) -> carb.dictionary._dictionary.Item\n\nInvoked with: <omni.ext._extensions.ExtensionManager object at 0x78676e9f07b0>, {'id': 'omni.assets.plugins-0.0.0', 'package_id': 'omni.assets.plugins-0.0.0+698af100.lx64.r', 'version': (0, 0, 0, '', '698af100.lx64.r'), 'enabled': False, 'name': 'omni.assets.plugins', 'title': 'Assets plugins bundle', 'path': '/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.assets.plugins-0.0.0+698af100.lx64.r'}",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_dependency_plan_v1/runs/startup_index01/query_metadata.py\", line 52, in main\n    metadata = {eid: manager.get_registry_extension_dict(eid)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: get_registry_extension_dict(): incompatible function arguments. The following argument types are supported:\n    1. (self: omni.ext._extensions.ExtensionManager, ext_id: str) -> carb.dictionary._dictionary.Item\n\nInvoked with: <omni.ext._extensions.ExtensionManager object at 0x78676e9f07b0>, {'id': 'omni.assets.plugins-0.0.0', 'package_id': 'omni.assets.plugins-0.0.0+698af100.lx64.r', 'version': (0, 0, 0, '', '698af100.lx64.r'), 'enabled': False, 'name': 'omni.assets.plugins', 'title': 'Assets plugins bundle', 'path': '/home/madil/kit-app-template/_build/linux-x86_64/release/extscache/omni.assets.plugins-0.0.0+698af100.lx64.r'}\n",
+  "installed_package_ids_unchanged": true,
+  "enabled_ids_unchanged": true,
+  "content_destination_empty": true
+}

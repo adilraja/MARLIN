@@ -1,0 +1,11 @@
+2026-11-09T14:27:58Z [Info] [carb] Logging to file: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata01/kit_process.log
+2026-11-09T14:27:59Z [75ms] [Error] [omni.ext.plugin] Failed to resolve extension dependencies. Failure hints:
+  * No versions of omni.kit.loop that satisfies: metadata-1.0.0 depends on omni.kit.loop-default version *
+    - Available packages for omni.kit.loop-default version *:
+      (none found)
+  Synced registries:
+     (none)
+
+2026-11-09T14:27:59Z [75ms] [Error] [omni.kit.app.plugin] Exiting app because of dependency solver failure...
+2026-11-09T14:27:59Z [78ms] [Error] [omni.kit.app._impl] [py stderr]: /home/madil/kit-app-template/experiments/above_water_annotation_v1/diagnostics/m2_feasibility/runs/sdk1102_metadata01/query_provider.py:133: DeprecationWarning: There is no current event loop
+  _m2_query_task = asyncio.ensure_future(main())

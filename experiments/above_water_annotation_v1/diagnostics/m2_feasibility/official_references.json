@@ -1,0 +1,55 @@
+{
+  "checked_date": "2026-11-09",
+  "references": [
+    {
+      "id": "extension_manager",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/kit-manual/110.1.2/omni.ext/omni.ext.ExtensionManager.html",
+      "observed": "Installed-package and registry metadata queries; pull/enable/install APIs are separate and are not used for annotation dependencies."
+    },
+    {
+      "id": "kit_configuration",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/kit-manual/latest/guide/configuring.html",
+      "observed": "Official ignoreUnsavedOnExit setting and command-line configuration."
+    },
+    {
+      "id": "kit_1102_registry",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/kit-registry-reference/latest/110.2/110.2.0/sdk.html",
+      "observed": "Official Kit 110.2.0 SDK reference identifies build hash 698af100 and lists SyntheticData; the page links to 0.6.15 documentation, which is not a complete binary package pin."
+    },
+    {
+      "id": "shared_1102",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/kit-registry-reference/latest/110.2/shared.html",
+      "observed": "110.2 shared registry listing; no Replicator core match observed on this page."
+    },
+    {
+      "id": "shared_110",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/kit-registry-reference/latest/110/shared.html",
+      "observed": "Separate 110 shared listing mentions Replicator core 1.13.27; this does not prove compatibility with this 110.2 installation."
+    },
+    {
+      "id": "syntheticdata",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/omni.syntheticdata/0.6.15/Overview.html",
+      "observed": "NVIDIA directs end-user applications to Replicator rather than direct legacy SyntheticData APIs."
+    },
+    {
+      "id": "iommu_dialog",
+      "url": "https://docs.omniverse.nvidia.com/dsx/latest/troubleshooting.html",
+      "observed": "Documents a blocking IOMMU/zenity information dialog during renderer initialization. No suggested system-level change was made here."
+    },
+    {
+      "id": "gtk_headless_environment",
+      "url": "https://docs.gtk.org/gtk4/running.html",
+      "observed": "GDK_BACKEND selects the GTK display backend; set only for this isolated diagnostic child."
+    },
+    {
+      "id": "gtk_wayland",
+      "url": "https://docs.gtk.org/gtk4/wayland.html",
+      "observed": "XDG_RUNTIME_DIR locates the Wayland socket; unsetting WAYLAND_DISPLAY alone is insufficient to isolate a child from the default socket."
+    },
+    {
+      "id": "normal_quit",
+      "url": "https://docs.omniverse.nvidia.com/kit/docs/kit-manual/110.1.5/omni.kit.app/omni.kit.app.IApp.html",
+      "observed": "is_app_ready and normal post_quit APIs; no forced os._exit or uncancellable quit is used."
+    }
+  ]
+}
